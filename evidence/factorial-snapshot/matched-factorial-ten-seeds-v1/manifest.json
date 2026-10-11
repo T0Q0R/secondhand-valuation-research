@@ -1,0 +1,83 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/matched-factorial-ten-seeds-v1",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026,
+      101,
+      211,
+      307,
+      401,
+      503,
+      601,
+      701
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1,
+    "initial_epochs": 6,
+    "feedback_epochs": 6,
+    "factorial_primary_budget": 0.1
+  },
+  "config_sha256": "dc1f072df3794ce8df8c94113af5215d2b06d272d0cd8e607e13d718804facfd",
+  "source_hashes": {
+    "run_matched_factorial.py": "1bcdab7632aa57ad88e6e237bb2d8636eadb1cf246df0600c44be40e8d27d08c",
+    "matched_factorial_training.py": "a21a29a58378801d26e80520e38982ae5e49a19f297029b40f96074111502c16",
+    "matched_factorial_crossfit.py": "ae410d4674458f4f6ffc90bb53b651e84a239a541e1f6f935549fee2549e8503",
+    "matched_factorial_evaluation.py": "4f7b35ae64151c44682acafaaac2118f1b9dac09a6593e95d2f1cd50325b37f8",
+    "matched_feedback_loss.py": "95f1296d7458dbbcdd81ed1fb8f6f38bdf69949a269018f2173a99da17ad2738",
+    "minimax_market.py": "3bf5eaafc904b6d11cdfe0b7c67d800f82a9c994c7dbf78b2d07c1e976875758",
+    "public_minimax_allocation.py": "00dbf947203b8557eaf0d208334e4baea0c627fb4a33159d4e08786d12d5f620",
+    "cdm_mechanism.py": "9e205c5a717a225e722dcdf4aae75b453ef9ad6b97da9ce7eab78479e120cb8b",
+    "savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7"
+  },
+  "scope": "new matched initial-objective/acquisition/feedback/allocation intervention; full-loop cross-fit; not original SAV fits"
+}

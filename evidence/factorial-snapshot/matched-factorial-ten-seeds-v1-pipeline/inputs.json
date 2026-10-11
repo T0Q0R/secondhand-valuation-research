@@ -1,0 +1,24 @@
+{
+  "run": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/matched-factorial-ten-seeds-v1",
+  "manifest_sha256": "5c6f29cf592c4b903e3b41e03043b4ee2fd73432ac1a54cd0cd3959094d32f2d",
+  "code": {
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/analyze_matched_factorial.py": "2b6440e95097f25f268fa921fa524a6795019d353a09d6e02aa0922c946e0c01",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/audit_matched_factorial_fits.py": "29423840127e066821a3007ddd68dc9b58852b7319880e45e8caeec8580de14d",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/audit_matched_factorial_results.py": "97f20235b8122cc465f9b9e63c319fcd48a73484bbf9f945b770daa333d738b7",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/audit_minimax_response.py": "b7d5dc80317c97ccad5bdefa9fb944a27698d479f754e201943d8712d35bd8c1",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/cdm_mechanism.py": "9e205c5a717a225e722dcdf4aae75b453ef9ad6b97da9ce7eab78479e120cb8b",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/check_matched_factorial_statistics.py": "c0c1002a52e94df00e5c3fc07ddc0131cbecab0c5b0557b1d8fe7543f3923ca7",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/complete_factorial_pipeline.py": "bba4f8fcc9231cfca48452bdd0cd7ee3cb913e461bc111157e6bf571c39df2e0",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/matched_factorial_crossfit.py": "ae410d4674458f4f6ffc90bb53b651e84a239a541e1f6f935549fee2549e8503",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/matched_factorial_evaluation.py": "4f7b35ae64151c44682acafaaac2118f1b9dac09a6593e95d2f1cd50325b37f8",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/matched_factorial_training.py": "a21a29a58378801d26e80520e38982ae5e49a19f297029b40f96074111502c16",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/matched_feedback_loss.py": "95f1296d7458dbbcdd81ed1fb8f6f38bdf69949a269018f2173a99da17ad2738",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/minimax_market.py": "3bf5eaafc904b6d11cdfe0b7c67d800f82a9c994c7dbf78b2d07c1e976875758",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/public_minimax_allocation.py": "00dbf947203b8557eaf0d208334e4baea0c627fb4a33159d4e08786d12d5f620",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/run_matched_factorial.py": "1bcdab7632aa57ad88e6e237bb2d8636eadb1cf246df0600c44be40e8d27d08c",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8"
+  },
+  "fit_reuse": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/matched-factorial-ten-seeds-v1-fit-audit-prefix-v2"
+}

@@ -1,0 +1,41 @@
+% Follow-up protocol text; partial results have separately bound completion scope.
+\subsection{Equal Tuning Allowances and Retrained Data-Size Sensitivity}
+
+The fixed-parameter study is supplemented by retraining at caps of 1,000,
+2,500, and 5,000 training records; the last cap uses all 4,774 available JUCars
+training records. The evaluation membership and ordering remain fixed across
+caps, and training subsets follow a label-independent hash order. Each size
+includes robust/no-feedback, suppression-feedback SAV, and ordinary-benefit
+SAV, both at the fixed gap weight $0.5$ and with a selected weight. All six
+capacity fractions are retained rather than selecting the favorable size or
+capacity from evaluation outcomes. The robust/no-feedback candidate uses
+suppression-output acquisition. A separate 324-cell extension recomputes
+ordinary-benefit candidate objectives and choices, refits selected static
+estimators when required, and constructs its own outer-prediction targets and
+deployable heads. Both studies retain the same three trials and twelve
+residual epochs. Only their independently audited completed cohorts are
+reported as evidence.
+
+Each method receives the same three gap-weight trials, $\{0.25,0.5,1.0\}$,
+and the same twelve total residual epochs. This is an equal trial allowance
+for the specified parameter, not an exhaustive architecture or hyperparameter
+search. At each outer training fold, 20\% of its records form an internal
+tuning-validation set using a fixed identifier hash. Candidate estimators and
+feedback-guidance heads fit the remaining 80\%, with a nested 70/30 split.
+The selection objective is the sum of honest and attacked squared transformed
+price loss at the prespecified 10\% capacity. Ties follow grid order.
+
+The selected method is refitted on the complete outer training fold before
+predicting the outer-held-out records. Those records cannot enter parameter
+selection or the fitted feedback loop. Deployment repeats the training-internal
+selection on the allowed full training sample, then refits using its 70/30
+split. Each deployable action head uses its corresponding collected outer
+predictions. Fold-specific parameter choices and the larger deployment sample
+produce a prediction-distribution mismatch, which is reported as a limitation.
+
+Candidate models, validation state predictions, public action scores,
+allocations, losses, and all choices are preserved. Shared backbone fitting
+time and residual-method fitting time are recorded separately. Measurements on
+the shared workstation do not establish controlled hardware speedups. Earlier
+source validation outcomes were already observed, so this follow-up is
+retrospective development and not a newly confirmatory experiment.

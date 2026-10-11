@@ -1,0 +1,267 @@
+\section{Results: Completed Development Evidence}
+The scheduled main study has completed all three sources and all three
+training seeds: 558 evaluation cells, independently audited from
+protocol-v2 listing outcomes. This is retrospective development evidence,
+not a new confirmatory test. Follow-up tuning and direct-comparator
+audits have separate completion status and are reported within their
+verified scopes below.
+Earlier development-v1 numbers are withdrawn as deployability evidence
+because that implementation used a private simulation mask for query
+eligibility. Protocol v2 corrects that information error.
+
+\begin{table*}[t]
+\centering
+\caption{Complete three-source development at 10\% capacity. Inflation is
+the mean positive log-quote gap, averaged over three training seeds;
+parentheses give its sample standard deviation across seeds. Price errors
+use each source's native price units and are not pooled across sources.
+Methods within each source share the evaluation cohort.}
+\label{tab:synthetic_development}
+\begin{tabular}{llrrr}
+\toprule
+Source & Method & Inflation (SD) & Honest MAE & Attack MAE\\
+\midrule
+Synthetic & Mask + benefit & .04963 (.00186) & 3503.62 & 4242.44\\
+ & Robust, no feedback & .01339 (.00119) & 3568.22 & 3634.80\\
+ & SAV + benefit output & .01928 (.00333) & 3546.75 & 3752.06\\
+ & SAV-Val & .02075 (.00167) & 3522.46 & 3754.03\\
+\midrule
+JUCars & Mask + benefit & .01933 (.00243) & 6875.38 & 6883.06\\
+ & Robust, no feedback & .01154 (.00044) & 7081.70 & 7078.81\\
+ & SAV + benefit output & .01811 (.00209) & 7059.94 & 7046.86\\
+ & SAV-Val & .01549 (.00128) & 7084.77 & 7073.94\\
+\midrule
+MUCars & Mask + benefit & .04612 (.00089) & 27281.98 & 28282.98\\
+ & Robust, no feedback & .00774 (.00108) & 27578.04 & 27793.87\\
+ & SAV + benefit output & .00753 (.00044) & 26958.21 & 27124.56\\
+ & SAV-Val & .00689 (.00030) & 27147.41 & 27311.95\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+On the synthetic market, full SAV-Val has 58.19\% less positive inflation than the mask-augmented
+predictor with ordinary-benefit acquisition. Its honest MAE is 0.54\%
+higher. That comparison alone could suggest progress, but the matched
+and stronger controls give a different assessment. SAV-Val has 7.63\%
+more inflation than its ordinary-benefit-output variant. The paired
+reference-minus-full difference is $-0.00147$, with a conditional
+95\% batch interval $[-0.00394,0.00104]$. Thus the primary component
+contrast does not establish an advantage for the suppression output in
+this synthetic setting.
+
+The robust/no-feedback control has the lowest inflation among these
+four synthetic methods. SAV-Val's inflation is 54.94\% higher, while its honest
+MAE is 1.28\% lower. The paired reference-minus-full inflation difference
+is $-0.00736$, with interval $[-0.00982,-0.00514]$. Attacked MAE also
+favors the simpler control. These results support a limited trade-off,
+not an overall improvement by adding the full feedback mechanism.
+The interval uses the ten shared evaluation batches after averaging
+paired contrasts across fitted seeds; it is not a confidence interval
+over new training datasets or real seller populations.
+
+Remaining unilateral regret is zero for both full SAV-Val and the
+robust/no-feedback control in the saved synthetic 10\% cells, within
+the numerical tolerance used by the independent audit. This concerns
+the returned finite-game reports and unilateral moves only. It is not
+a proof of a unique or globally optimal equilibrium. Other controls
+have nonzero remaining regret and nonconverged batches, so their
+reported outcomes should also be considered alongside the saved
+unilateral envelopes rather than interpreted as exact worst-case
+solutions.
+
+The JUCars primary component contrast favors the suppression-output
+variant: SAV-Val has 14.45\% less inflation than its ordinary-benefit
+counterpart, with honest MAE 0.35\% higher. The reference-minus-full
+difference is $0.00262$, with conditional batch interval
+$[0.00140,0.00379]$. This source-specific result does not reverse the
+synthetic finding or establish an advantage over the simpler robust
+control. Relative to robust/no-feedback, SAV-Val has 34.23\% more
+inflation; the reference-minus-full difference is $-0.00395$, with
+interval $[-0.00558,-0.00249]$. Its honest MAE is 0.04\% higher.
+The attacked-MAE means differ only slightly (Table~\ref{tab:synthetic_development});
+the trade-off must remain visible rather than attributing all differences
+to the action score.
+
+MUCars gives a different comparison. Full SAV-Val has 10.92\% less
+inflation than robust/no-feedback and 1.56\% lower honest MAE. The
+reference-minus-full inflation difference is $0.000845$, with conditional
+batch interval $[0.000383,0.001242]$. Its ordinary-benefit component
+contrast is also positive: 8.45\% less inflation, with difference
+$0.000636$ and interval $[0.000426,0.000896]$, while honest MAE is
+0.70\% higher. This component improvement is below the prespecified
+10\% magnitude criterion. The complete main study therefore supports
+source-dependent gains, not a uniform advantage of feedback or of the
+suppression output. At the primary capacity, all three MUCars SAV-Val
+and robust/no-feedback fits have zero remaining unilateral regret within
+the audit tolerance; this remains a finite-game diagnostic.
+
+\input{sections/robust_benefit_reference_results}
+
+\subsection{All preset verification capacities}
+Figure~\ref{fig:capacity} retains all six capacities fixed before this
+run. The comparison with robust/no-feedback depends on both source
+and capacity. On the synthetic cohort, SAV-Val has 11.92\% less
+inflation at 30\% capacity; the reference-minus-full difference is
+$0.00136$, with an exploratory conditional batch interval
+$[0.00085,0.00202]$. At 20\%, the difference is close to zero and its
+interval crosses zero. On JUCars, full SAV-Val has higher inflation
+than the robust control at every preset capacity, including 30\%.
+On MUCars, the reference-minus-full inflation difference is positive
+at all six capacities, including zero, with conditional intervals above
+zero. The zero-query difference is consistent with an estimator-level
+effect and cannot be attributed to acquiring additional fields.
+These are unadjusted descriptive frontier comparisons. They do not
+replace the prespecified 10\% primary comparison or establish a
+general transition point.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figures/capacity_frontiers.pdf}
+\caption{All preset capacity curves for the completed three-seed cohorts.
+Top: source means and sample standard deviations across three training
+seeds. Bottom: robust/no-feedback minus SAV-Val inflation, with unadjusted
+95\% shared-batch intervals conditional on the fitted models; positive
+differences favor SAV-Val. Paired contrasts are averaged over seeds before
+resampling the ten shared batches. The dotted vertical line marks the
+prespecified 10\% primary capacity. These retrospective development
+frontiers include all three scheduled sources.}
+\label{fig:capacity}
+\end{figure*}
+
+\subsection{Restricted numerical SMI domain diagnostic}
+Separate from the full-field study, we fit deterministic linear SVRs
+on year, mileage, and fiscal power (synthetic/MUCars) or seats (JUCars). Only mileage
+can be withheld; there are no verification queries. Full and reduced
+models use identical estimator-training rows with recorded mileage,
+training-only feature and log-target normalization, $C=1$, and
+$\epsilon=0.15$. The two-stage SMI equations~\cite{zhang2020strategic}
+are evaluated with free, normalized nonnegative, and normalized unit-box
+missing-coordinate domains. Strict consistency is required for all
+retained coefficient signs. This convention and the domains are declared
+adaptations, not an official Weka reproduction. Known validation inputs
+are not clipped to the training range. We enumerate both seller reports
+exactly and independently check the LP outputs with an analytic
+one-coordinate solution. The full/reduced fits use 3,356 synthetic,
+2,677 JUCars, and 3,500 MUCars records respectively.
+
+\begin{table*}[t]
+\centering
+\caption{Restricted one-field numerical diagnosis: one deterministic fit
+per source and 1,000 evaluation records. MAE is in native source price
+units. Outside is the fraction of imputed mileage coordinates outside the
+estimator-training normalized range. There were no solver fallbacks in
+these completed cells. These methods are not directly compared with the
+full-field, shared-budget SAV-Val study.}
+\label{tab:numeric_smi}
+\begin{tabular}{llrrr}
+\toprule
+Source & Method/domain & Honest MAE & Inflation & Outside\\
+\midrule
+Synthetic & Median SVR & 9328.99 & .02868 & 0\\
+ & SMI / free & 9621.74 & 0 & 1\\
+ & SMI / nonnegative & 9621.74 & 0 & 1\\
+ & SMI / unit box & 9398.70 & $2.18\!\times\!10^{-6}$ & 0\\
+\midrule
+JUCars & Median SVR & 8568.44 & .01911 & 0\\
+ & SMI / free & 9045.97 & 0 & 1\\
+ & SMI / nonnegative & 8595.09 & 0 & 0\\
+ & SMI / unit box & 8595.09 & 0 & 0\\
+\midrule
+MUCars & Median SVR & 49767.58 & .00394 & 0\\
+ & SMI / free & 49767.58 & 0 & 1\\
+ & SMI / nonnegative & 49767.58 & 0 & 1\\
+ & SMI / unit box & 49767.58 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:numeric_smi} shows why variable domains and prediction
+error must accompany incentive metrics. Free-domain SMI eliminates
+positive inflation on these cohorts but increases honest MAE on
+synthetic and Jordanian records. On JUCars, its mean signed log bias is
+$-0.44095$, versus $-0.20506$ for the nonnegative domain and $-0.18022$
+for median SVR. The free and nonnegative synthetic imputations all lie
+outside the training range. Unit-box SMI has one profitable synthetic
+withholding report among 1,000 listings, with mean inflation
+$2.18\times10^{-6}$. Its recorded normalized mileage is $1.00403$;
+withholding permits an imputation of $1$ under a negative mileage
+coefficient. A bounded imputation domain is not a guarantee
+for an unbounded evaluation-input domain. These restricted observations
+do not establish a general SMI guarantee or a full-market SAV-Val
+advantage.
+
+\input{sections/cdm_development_results}
+\input{sections/equal_tuning_development_results}
+\input{sections/equal_benefit_reference_results}
+\input{sections/saved_model_diagnostics}
+\input{sections/direct_comparator_results}
+\input{sections/resource_transfer_results}
+
+\input{sections/cdm_deviation_generalization}
+
+\section{Discussion and Limitations}
+\subsection{What the current comparison establishes}
+The completed evidence demonstrates that a method can improve on a basic
+masked predictor and still lose to a simpler robust control in two sources,
+while improving on that robust control in a third. It does not establish
+why the feedback loop's effect differs by source. Approximate training
+responses, target distribution changes, and fixed hyperparameters are
+possible explanations to investigate, not experimentally confirmed
+causes. The current full design should therefore remain a candidate
+pending prospective source evaluation and final evidence review; completed
+source/size retraining does not establish a general gain.
+
+Positive quote inflation alone also has a structural limitation. For
+any reported record, taking the maximum raw quote over all further
+withholding patterns produces a disclosure-monotone quote: additional
+withholding shrinks that set, so it cannot raise the maximum. This can
+eliminate measured positive inflation while raising honest quotes and
+honest error. The completed generic envelope control exposes that
+trade-off in Table~\ref{tab:closure_tradeoffs}. It is not claimed as a
+novel algorithm or a prior strategic-classification implementation.
+
+\subsection{Limits of source and behavioral evidence}
+The public outcomes are asking prices. A model that predicts them
+accurately may reproduce sellers' pricing preferences rather than
+estimate realized sale value. Source records do not provide observed
+concealment labels, query outcomes from physical inspections, or
+measured seller utilities. Restoring a recorded field is an artificial
+replay; original values may themselves be inaccurate. The stipulated
+attacker cannot fabricate values, change the listing identifier, choose
+its peers or manipulate other recorded features. Results do not extend
+automatically to those behaviors or to other second-hand product classes.
+
+The processed public validation cohorts were used during historical
+development. Their retrospective status remains even if current fits
+exclude evaluation labels. Capped samples and ten batches per source
+also restrict representativeness and uncertainty estimation. The
+training/evaluation duplicate control lacks original advertisement
+identifiers. These limitations call for prospective independent data
+and real query costs before marketplace deployment.
+
+\subsection{Comparator scope and completed retraining}
+Equation-level and full-field SMI adaptations are independently audited,
+with explicit domains, discrete groups and fallback boundaries. The full
+ACO-1 adaptation, saved-model sensitivities, technical strata, common-report
+transfer and public inference diagnostic are also independently checked.
+Ordinary acquisition controls remain separate from these declared
+adaptations; none is an official unchanged classification reproduction.
+Equal-allowance tuning and size retraining cover all 972 evaluation cells.
+The completed fixed-setting ordinary-benefit robust reference and its separate
+allowance extension are reported explicitly. Benefit-specific selection and
+refitting cover all 324 cells, with all 27 cases and 54 deployment heads
+independently checked. The completed comparisons remain heterogeneous.
+Prospective source evaluation, real query costs and observed seller utility
+are outside the available evidence. Nested target generation adds offline
+cost that must be weighed against any measured acquisition gain.
+
+\section{Provisional Conclusion}
+We implement and audit a budgeted verification protocol with publicly
+observable query eligibility, capacity-consuming failed replay, nested
+target generation and seller responses to the deployed allocation.
+The complete main study favors a simpler no-feedback control on strategic
+quote inflation in two sources and favors SAV-Val on MUCars;
+attacked-error differences also depend on the source. The full algorithm's
+general empirical increment remains unresolved. The follow-up evidence
+does not support a universal advantage, deployment
+recommendation or journal-acceptance claim.

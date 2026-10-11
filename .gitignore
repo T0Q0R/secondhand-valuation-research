@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv*/
+.env*
+.DS_Store
+outputs/
+**/outputs/
+artifacts/
+*.joblib
+*.pt
+*.pth
+*.npz
+*.zip
+*.log
+*.aux
+*.synctex.gz

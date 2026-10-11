@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "exact_cases": 26,
+  "context_rule_allocations": 15922,
+  "exact_context_item_rows": 257274,
+  "mutations_rejected": {
+    "fixed_active_item": "1",
+    "uniform_weights": "2/5"
+  },
+  "scope": "same constructed family; fixed weights over B+1 context-aware rules attain context optimum; no real-data or novelty guarantee",
+  "files": {
+    "checker_snapshot.py": "32016260eb01a4d98b59f3d2f17849c7954198c01fb41ac42e3fedf839586ef5",
+    "cases.json": "609b529741b436e806f31983c17b67fdb2429a9680566533c1589a34653229fe",
+    "input_binding.json": "76ce28939b5096949eec8d21543f3752a867b9c8c7e69e540f5648f6ea9188cb"
+  }
+}

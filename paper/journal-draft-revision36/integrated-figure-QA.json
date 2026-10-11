@@ -1,0 +1,30 @@
+{
+  "status": "completed_with_raw_caption_parser_findings_preserved",
+  "current_supplement_sha256": "48ce577683b53793afa6f98a17334a40a2ae6ad7b8fa2805e81cf1fc178d9ca6",
+  "audited_two_page_pdf_sha256": "89f941a23d34e034e2fba8d5dea9d0dad81ad75f550e229667b68f1b132daa76",
+  "current_pages": [
+    21,
+    22
+  ],
+  "text_and_native_raster_identity_to_audited_pdf": true,
+  "raw_collision_summary": {
+    "fail": 8,
+    "warn": 0,
+    "contained_fill_overlays": 0,
+    "contained_image_overlays": 0
+  },
+  "corrected_collision_summary": {
+    "fail": 0,
+    "warn": 0,
+    "contained_fill_overlays": 0,
+    "contained_image_overlays": 0
+  },
+  "corrected_parser_sha256": "2edbaa6b742c8c3aa71345473ed876562d1df3fd5c0fa83f3b4c29bce27a8510",
+  "actual_overlap_negative_probe_receipt_sha256": "785593686f3f48fde1c3a1908085ea135d8f373d6be313a942a5fafbbbcbab6f",
+  "minimum_integrated_figure_font_pt": 6.97384786605835,
+  "scope": "Raw aggregation reports8caption collisions; corrected line parser passes. No claim that raw integrated audit passes.",
+  "unchanged_integrated_page_proof": {
+    "prior_document_sha256": "c7ece1c6d56174d93f5001c3ac49159c0fbaf94d3bfd2f5e333060e89f9e6e5d",
+    "both_current_pages_text_and_native_raster_exact": true
+  }
+}

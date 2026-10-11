@@ -1,0 +1,7 @@
+component_id,name,role,input_format,output_format,is_novel,replaceable_by,ablation_priority,notes
+COMP-1,Mask-aware CatBoost,Common advertised-price backbone,Reported fields and missing indicators,Log-price,no,Native CatBoost,medium,Numeric mileage aliases and fuel aliases excluded
+COMP-2,Post-reveal suppression head,Estimate removable upward quote gap,Reported state before-price action identity,Expected suppression score,yes,Ordinary squared-log-loss benefit head,high,Candidate novelty only; target labels separated from deployable inputs
+COMP-3,Capacity-aware seller simulator,Search reports accounting for verification,True recorded values and deployable policy,Mask and remaining unilateral regret,no,Preaudit price maximization,high,Threat-model environment; not claimed globally optimal
+COMP-4,Feedback residual estimator,Fit prices at policy-dependent final states,Estimator records seller response frozen policy scores,Updated price estimator,yes,Static price-gap residual,high,Alternating surrogate optimization; no convergence theorem
+COMP-5,Upward-gap and anchor loss,Control price inflation while preserving honest accuracy,Final honest and target log-prices,Training objective,no,Zero gap-penalty weight,high,Accuracy and downward bias must accompany uplift metrics
+COMP-6,Hard-cap allocator,Choose at most one reveal per listing,Pre-action merits and batch capacity,Query assignments,no,No queries,low,Discrete policy refreshed per epoch; no policy-gradient claim

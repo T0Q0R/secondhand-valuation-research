@@ -1,0 +1,23 @@
+{
+  "status": "selected-source-union-audited",
+  "sources": [
+    "synthetic",
+    "jucars",
+    "mucars"
+  ],
+  "training_seeds_per_source": 10,
+  "audited_cells": 1860,
+  "listing_outcomes": 1860000,
+  "seconds": 11.868866205215454,
+  "all_source_coverage": true,
+  "files": {
+    "paired_batch_matrices.npz": "60e2adc62ed114af86188cfbc40b02a496714eaae38f9214b33c1d52907934a6",
+    "all_seed_summary.csv": "5c0d2fef7132128d7e540c47e5b48d50eb2e04c23bcc28c32ed8812d40f48434",
+    "primary_contrasts.csv": "bd3b55266dc5a0e5979f6afea8f65bf4f0e719b82e37e3bb65d2818b77de560c",
+    "report.md": "f1932c381327d145e1e276d09c79e9ffa5204714b0705f58f2e00ed8e838c306",
+    "method_capacity_mean_sd.csv": "e176716cf6aa0661b4a882ddfe47098f6bfb8355759b42a0e93eac964662ef6b",
+    "manifest.json": "eccc152da48e6cf8f61e9d9025dce090ca8a37106771976a64cbafc966ca5f83",
+    "metric_checks.csv": "9c8d88c7761ddb2c6f26984c6e65f26ef4eb6e55a700cdb9b0227519e6db8e21",
+    "input_binding.json": "de774717a95e1334aa8eae0002b3344a36d05c6af4b33920c80e18ce6d3e6a7f"
+  }
+}

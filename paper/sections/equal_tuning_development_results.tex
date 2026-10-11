@@ -1,0 +1,73 @@
+\subsection{Equal-allowance tuning and size retraining}
+The independently audited follow-up retains 9 complete three-seed source/cap cohorts and 972 final evaluation cells. All nine scheduled source/cap cohorts and all 972 evaluation cells are independently audited. Table~\ref{tab:equal_tuning_development} retains the three tuned methods at the primary capacity. Fixed-weight versions and every preset capacity remain in the associated audit and contrast outputs.
+
+\begin{table*}[t]
+\centering
+\caption{Every completed three-seed source/size cohort after equal three-trial allowances,
+at 10\% verification capacity. Means use three training seeds and the same
+1,000 evaluation listings at every cap. Tuning selects honest plus attacked
+squared log loss inside training folds, rather than minimizing uplift alone.
+All nine scheduled source/cap cohorts are complete and independently audited.}
+\label{tab:equal_tuning_development}
+\begin{tabular}{lrlrrr}
+\toprule
+Source & Training cap & Tuned method & Inflation & Honest MAE & Attack MAE\\
+\midrule
+Synthetic & 1000 & Robust, no feedback & 0.01121 & 3937.99 & 4033.31\\
+ &  & SAV + benefit output & 0.01469 & 3942.56 & 4120.77\\
+ &  & SAV-Val & 0.01921 & 3902.46 & 4137.45\\
+\midrule
+Synthetic & 2500 & Robust, no feedback & 0.01386 & 3606.63 & 3669.80\\
+ &  & SAV + benefit output & 0.01348 & 3601.19 & 3706.48\\
+ &  & SAV-Val & 0.01790 & 3600.74 & 3753.64\\
+\midrule
+Synthetic & 5000 & Robust, no feedback & 0.01910 & 3530.14 & 3685.92\\
+ &  & SAV + benefit output & 0.01433 & 3551.61 & 3659.43\\
+ &  & SAV-Val & 0.01809 & 3541.78 & 3745.14\\
+\midrule
+JUCars & 1000 & Robust, no feedback & 0.00680 & 6962.61 & 6958.75\\
+ &  & SAV + benefit output & 0.00550 & 6961.08 & 6956.38\\
+ &  & SAV-Val & 0.00538 & 6959.43 & 6954.92\\
+\midrule
+JUCars & 2500 & Robust, no feedback & 0.01079 & 6985.52 & 6976.39\\
+ &  & SAV + benefit output & 0.00865 & 6977.20 & 6970.41\\
+ &  & SAV-Val & 0.00866 & 6966.07 & 6961.63\\
+\midrule
+JUCars & 5000 & Robust, no feedback & 0.00826 & 7008.73 & 7000.31\\
+ &  & SAV + benefit output & 0.01244 & 7041.13 & 7030.07\\
+ &  & SAV-Val & 0.01097 & 7003.56 & 6994.50\\
+\midrule
+MUCars & 1000 & Robust, no feedback & 0.00901 & 31573.54 & 31623.98\\
+ &  & SAV + benefit output & 0.00846 & 31478.84 & 31562.14\\
+ &  & SAV-Val & 0.00830 & 31644.91 & 31682.27\\
+\midrule
+MUCars & 2500 & Robust, no feedback & 0.00865 & 28126.15 & 28425.48\\
+ &  & SAV + benefit output & 0.00841 & 27828.02 & 27978.40\\
+ &  & SAV-Val & 0.00698 & 27663.99 & 27806.81\\
+\midrule
+MUCars & 5000 & Robust, no feedback & 0.00715 & 27444.54 & 27656.87\\
+ &  & SAV + benefit output & 0.00633 & 26860.26 & 26939.22\\
+ &  & SAV-Val & 0.00564 & 27021.60 & 27150.16\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The complete Synthetic cohort uses configured cap 1,000. Against the tuned static suppression-output control, inflation is 71.34\% higher, with reference-minus-SAV interval $[-0.00993,-0.00593]$. Honest and attacked MAE changes are -0.90\% and +2.58\%; their paired error intervals exclude zero. Against the tuned feedback benefit-output variant, inflation is 30.75\% higher, with reference-minus-SAV interval $[-0.00648,-0.00244]$. Honest and attacked MAE changes are -1.02\% and +0.40\%; their paired error intervals include zero in at least one metric.
+
+The complete Synthetic cohort uses configured cap 2,500. Against the tuned static suppression-output control, inflation is 29.20\% higher, with reference-minus-SAV interval $[-0.00609,-0.00209]$. Honest and attacked MAE changes are -0.16\% and +2.28\%; their paired error intervals include zero in at least one metric. Against the tuned feedback benefit-output variant, inflation is 32.82\% higher, with reference-minus-SAV interval $[-0.00556,-0.00338]$. Honest and attacked MAE changes are -0.01\% and +1.27\%; their paired error intervals include zero in at least one metric.
+
+The complete Synthetic cohort uses configured cap 5,000. Against the tuned static suppression-output control, inflation is 5.26\% lower, with reference-minus-SAV interval $[-0.00111,0.00310]$. Honest and attacked MAE changes are +0.33\% and +1.61\%; their paired error intervals include zero in at least one metric. Against the tuned feedback benefit-output variant, inflation is 26.21\% higher, with reference-minus-SAV interval $[-0.00658,-0.00109]$. Honest and attacked MAE changes are -0.28\% and +2.34\%; their paired error intervals include zero in at least one metric.
+
+The complete JUCars cohort uses configured cap 1,000. Against the tuned static suppression-output control, inflation is 20.94\% lower, with reference-minus-SAV interval $[0.00100,0.00186]$. Honest and attacked MAE changes are -0.05\% and -0.05\%; their paired error intervals include zero in at least one metric. Against the tuned feedback benefit-output variant, inflation is 2.19\% lower, with reference-minus-SAV interval $[-0.00027,0.00047]$. Honest and attacked MAE changes are -0.02\% and -0.02\%; their paired error intervals include zero in at least one metric.
+
+The complete JUCars cohort uses configured cap 2,500. Against the tuned static suppression-output control, inflation is 19.79\% lower, with reference-minus-SAV interval $[0.00157,0.00280]$. Honest and attacked MAE changes are -0.28\% and -0.21\%; their paired error intervals include zero in at least one metric. Against the tuned feedback benefit-output variant, inflation is 0.16\% higher, with reference-minus-SAV interval $[-0.00082,0.00078]$. Honest and attacked MAE changes are -0.16\% and -0.13\%; their paired error intervals include zero in at least one metric.
+
+The complete JUCars cohort uses configured cap 5,000. Against the tuned static suppression-output control, inflation is 32.71\% higher, with reference-minus-SAV interval $[-0.00368,-0.00157]$. Honest and attacked MAE changes are -0.07\% and -0.08\%; their paired error intervals include zero in at least one metric. Against the tuned feedback benefit-output variant, inflation is 11.83\% lower, with reference-minus-SAV interval $[0.00095,0.00197]$. Honest and attacked MAE changes are -0.53\% and -0.51\%; their paired error intervals exclude zero.
+
+The complete MUCars cohort uses configured cap 1,000. Against the tuned static suppression-output control, inflation is 7.92\% lower, with reference-minus-SAV interval $[0.00050,0.00093]$. Honest and attacked MAE changes are +0.23\% and +0.18\%; their paired error intervals include zero in at least one metric. Against the tuned feedback benefit-output variant, inflation is 1.91\% lower, with reference-minus-SAV interval $[-0.00004,0.00036]$. Honest and attacked MAE changes are +0.53\% and +0.38\%; their paired error intervals exclude zero.
+
+The complete MUCars cohort uses configured cap 2,500. Against the tuned static suppression-output control, inflation is 19.25\% lower, with reference-minus-SAV interval $[0.00116,0.00225]$. Honest and attacked MAE changes are -1.64\% and -2.18\%; their paired error intervals exclude zero. Against the tuned feedback benefit-output variant, inflation is 16.98\% lower, with reference-minus-SAV interval $[0.00116,0.00171]$. Honest and attacked MAE changes are -0.59\% and -0.61\%; their paired error intervals exclude zero.
+
+The complete MUCars cohort uses configured cap 5,000. Against the tuned static suppression-output control, inflation is 21.00\% lower, with reference-minus-SAV interval $[0.00101,0.00191]$. Honest and attacked MAE changes are -1.54\% and -1.83\%; their paired error intervals exclude zero. Against the tuned feedback benefit-output variant, inflation is 10.76\% lower, with reference-minus-SAV interval $[0.00033,0.00103]$. Honest and attacked MAE changes are +0.60\% and +0.78\%; their paired error intervals include zero in at least one metric.
+
+Equal allowances do not establish a consistent full-method advantage. Tuning minimizes honest plus attacked squared log loss; a chosen setting can improve accuracy while increasing inflation. No objective, trial grid, primary capacity or reference identity was changed after observing outcomes. These conditional, unadjusted intervals concern fitted models and historical validation batches. Every scheduled source/cap cohort, negative finding and honest-error tradeoff is retained.

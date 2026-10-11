@@ -1,0 +1,17 @@
+{
+  "status": "completed_exact_finite_checks",
+  "score_vectors": 27,
+  "exact_pair_budget_cases": 2916,
+  "active_set_change_cases": 510,
+  "lp_and_production_comparisons": 108,
+  "maximum_production_probability_error": 3.3306690738754696e-16,
+  "maximum_lp_objective_error": 0.0,
+  "boundary_scales": 12,
+  "scope": "constructed exact arithmetic and numerical implementation checks; analytic proof separate; no empirical attribution or first-result claim",
+  "allocator_sha256": "00dbf947203b8557eaf0d208334e4baea0c627fb4a33159d4e08786d12d5f620",
+  "files": {
+    "boundary_cases.json": "a31eb725117ac5b5ac1918c18e5ca61cddb89b9e98893a6de7a6e9e6835fbf03",
+    "checker_snapshot.py": "3b2113fea9f616cd6da64f95f5a61bbae092de4afcb7cbab1b63065337e6faca",
+    "exact_pairs.csv": "3e78107e35c9c8bc9ed8205c5f9453808eba7a740072f787c9bc0cd40b028ed8"
+  }
+}

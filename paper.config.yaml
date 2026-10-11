@@ -1,0 +1,12 @@
+project_dir: .
+paper_dir: paper
+runtime:
+  python: ../.venv-gdfs/bin/python
+  seeds: [13, 42, 2026]
+manuscript:
+  engine: tectonic
+  main: paper/main.tex
+  bibliography: paper/ref.bib
+authorization:
+  scope: algorithm implementation, experiment execution, and Q3-oriented manuscript
+  date: 2026-10-05

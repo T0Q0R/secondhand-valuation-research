@@ -1,0 +1,117 @@
+% Included candidate section. The fixed-estimator nine-pair study is audited;
+% full-estimator CDM cross-fitting and utility extensions remain separate open work.
+% Negative strong-control comparisons are retained. Not a finished paper.
+\section{Counterfactual Deviation-Constrained Mixture Verification}
+\label{sec:cdm_candidate}
+
+We consider a batch of $n$ listings with a shared capacity of $B$ single-field
+queries. A seller may withhold originally available optional attributes but
+cannot change recorded values, listing identifiers, or other sellers' reports.
+The platform commits to a distribution over complete verification rules before
+reports are submitted, and draws one rule after reports are locked. Sellers
+know the rules and their probabilities, but not the realized draw. We initially
+fix the valuation estimator to isolate verification-policy design.
+
+Let $\Pi=\{\pi_1,\ldots,\pi_K\}$ be a finite bank of rules. Each rule maps the
+public batch to at most $B$ queries, with at most one query per listing.
+Eligibility depends on public missingness; the platform does not know whether
+a missing value was withheld or originally unavailable. A failed query consumes
+a slot. In our recorded-value replay, verification restores an originally
+recorded value and does not authenticate that value or perform physical
+inspection.
+
+For a unilateral deviation $d=(x_i,h,r_{-i})$, let
+$q_{ik}(h;r_{-i})$ denote seller $i$'s final quote under rule $\pi_k$. The
+allocation is recomputed for both the deviating and truthful reports; peers'
+reports are held fixed, rather than fixing the original query schedule. With
+seller utility $u$ and withholding cost $\kappa$, define the signed payoff
+\begin{equation}
+D_{dk}=u\!\left(q_{ik}(h;r_{-i})\right)
+       -u\!\left(q_{ik}(\varnothing;r_{-i})\right)-\kappa|h|.
+\label{eq:cdm_signed_deviation}
+\end{equation}
+The payoff in Eq.~\eqref{eq:cdm_signed_deviation} uses $u(q)=\log(1+q)$ in
+our first source-development protocol, consistent with
+the estimator's transformed target, and $\kappa=0$. This preference assumption
+differs from maximizing expected currency quotation and requires a separate
+sensitivity analysis. The seller selects a report before the private draw;
+therefore its best response maximizes expected utility, not the expectation of
+draw-specific best responses.
+
+Let $E_k$ be the honest currency mean absolute error of rule $k$ on a disjoint
+probability-calibration sample, and let $\mathcal{D}$ be a finite calibration
+set of types, peer profiles, and legal unilateral deviations.
+Equation~\eqref{eq:cdm_finite_calibration} bounds these stored deviations:
+\begin{align}
+\min_{\alpha,t}\quad &t \nonumber\\
+\text{s.t.}\quad &\sum_{k=1}^K\alpha_kD_{dk}\leq t,
+                   && d\in\mathcal{D},\nonumber\\
+&\sum_{k=1}^K\alpha_kE_k\leq E_{\mathrm{ref}}+\delta,\nonumber\\
+&\sum_{k=1}^K\alpha_k=1,\qquad\alpha_k\geq0,\quad t\geq0.
+\label{eq:cdm_finite_calibration}
+\end{align}
+Signed payoffs are averaged before positive truncation. This differs from
+averaging the positive part of each rule's payoff. The estimator and rule bank
+remain fixed during this optimization.
+
+\paragraph{Finite guarantees.}
+Every execution respects the hard capacity because it selects one feasible
+rule. If all deviations in $\mathcal{D}$ are evaluated exactly, a feasible
+solution bounds their expected unilateral gain by $t$. An exact optimum has
+no greater finite-set worst gain than any feasible pure rule in $\Pi$, since
+each such rule is a feasible simplex vertex. These statements do not extend
+automatically to unseen types, unenumerated peer reports, collusion, strategic
+identifier changes, or a global market equilibrium.
+
+We use violated-row generation for the fixed finite rule bank. Each iteration
+solves a restricted linear program and separates against every stored payoff
+row. Termination is checked against the complete finite matrix. Expanding the
+rule bank through learned responses would require a separate approximation
+analysis; it is not implemented in this first development protocol. Randomized
+auditing and response-oracle optimization are established approaches, so their
+use alone does not establish novelty~\cite{jain2011doubleoracle,ebrahimi2026audit}.
+The proposed research question concerns
+their usefulness for continuous valuation with public withholding, failed
+field replay, and shared batch capacity.
+
+\paragraph{An inactive constraint in recorded-value replay.}
+With one fixed estimator and honest reports containing all originally available
+fields, queries can only fail on originally unavailable fields. Thus all rules
+have the same honest quote and $E_k$ is constant. The honest-error cap does not
+discriminate among rules in this experiment. We retain and report this property
+rather than attributing an empirical benefit to an inactive constraint. A
+multi-estimator or physical-reveal extension would have different information
+and accuracy tradeoffs and needs its own evidence.
+
+\paragraph{Evaluation distinction.}
+For fixed returned reports we report both
+$[\mathbb{E}_\pi u(q_i)-u(q_i^{\mathrm{hon}})]_+$ and
+$\mathbb{E}_\pi[u(q_i)-u(q_i^{\mathrm{hon}})]_+$. Currency attack error is
+$\mathbb{E}_\pi|q_i-p_i|$, where $p_i$ is the advertised price in currency
+units; applying the inverse target transform to expected
+log quotation does not yield the same quantity. Private simulation draws
+select one complete rule per batch and leave seller reports fixed. Unilateral
+response search uses multiple starts, detects cycles, and reports remaining
+deviation regret rather than asserting a unique or globally optimal response.
+
+\paragraph{First implementation and cohort separation.}
+The bank contains twelve complete rules: no acquisition, suppression, ordinary
+benefit, before-query risk, four constant-field priorities, and four identifier
+hash priorities. All fitted ranking rules receive the same public missingness.
+For each fixed parent estimator, the estimator partition is approximately
+70\% of training records; the unused 30\% is split equally between fresh
+head fitting and mixture-probability calibration. These two roles and the
+source evaluation records are disjoint. This first mechanism study does not
+cross-fit the complete CDM selection process; it cannot inherit the
+parent SAV head's outer-target guarantee merely by reusing a price estimator.
+
+Five calibration peer profiles are retained: honest reports, no-query
+price-maximizing reports, a fixed random profile, and reports responding to
+suppression or benefit allocation. Every legal single-seller concealment is
+enumerated against each fixed profile, and both counterfactual allocations
+are recomputed. The first implementation uses a fixed bank and row generation;
+it does not learn additional policy columns. Evaluation uses four starts and
+twenty response sweeps. Twenty predetermined common simulation uniforms per
+batch select complete private rules after the reports are fixed. They do not
+allow sellers to respond to a realized draw, and cannot certify unseen-peer
+or whole-game incentive compatibility.

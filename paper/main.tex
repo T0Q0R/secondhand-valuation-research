@@ -1,0 +1,53 @@
+\RequirePackage[T1]{fontenc}
+\documentclass[10pt,journal]{IEEEtran}
+\usepackage{amsmath,amssymb,booktabs,graphicx,url}
+\title{Budgeted Verification against Strategic Withholding in Second-Hand Valuation}
+\author{Yuchen Tang, Fengqin You, and Xin Pang\\
+School of Computer Science and Artificial Intelligence,\\
+Nanjing University of Science and Technology ZiJin College, Nanjing, China\\
+Contact: \texttt{tyc63744@gmail.com}\thanks{Working draft. English author names and the department translation are provisional.}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We investigate
+budgeted recorded-value verification against strategic withholding in
+advertised used-vehicle valuation. SAV-Val combines a mask-aware predictor,
+a learned query score for suppressing positive quote inflation, and
+policy-aware residual training. A nested target-generation protocol keeps
+outer-held-out outcomes outside their corresponding fitting loops. Query
+selection uses publicly missing fields, and failed replay consumes capacity.
+The complete three-source, three-seed main study yields source-dependent
+results. At 10\% capacity, SAV-Val reduces positive log-quote inflation
+by 10.92\% relative to a suppression-output robust predictor without feedback
+on MUCars, and by 11.42\% relative to its separately evaluated ordinary-benefit
+acquisition counterpart,
+but has higher inflation on the synthetic and Jordanian cohorts. Its
+suppression output improves its ordinary-benefit counterpart by 14.45\%
+on JUCars and 8.45\% on MUCars, with no established synthetic advantage.
+We also implement CDM-Val, a distribution over complete verification
+rules calibrated against finite unilateral-deviation rows. The audited
+three-source results do not establish a consistent advantage
+over a simple risk rule. The adapted ACO control and common-report transfer
+further limit claims of a consistent advantage. Complete equal-allowance
+retraining retains all nine source/size cohorts and source-dependent outcomes.
+The results concern stipulated seller responses and advertised prices,
+not observed fraud, transaction values or physical inspection.
+\end{abstract}
+\input{sections/introduction_related}
+\input{sections/method_protocol_v2}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/sav_val_overview.pdf}
+\caption{Offline nested target construction, deployment fitting and online
+allocation. Held-out source outcomes form targets after their corresponding
+fitted loops; they never enter deployment inputs. Teacher and deployment
+fitting sample sizes differ. All runtime scores use public reports.}
+\label{fig:overview}
+\end{figure*}
+\input{sections/cdm_method_candidate}
+\input{sections/setup_development}
+\input{sections/results_development}
+\input{sections/data_code_availability}
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+\end{document}

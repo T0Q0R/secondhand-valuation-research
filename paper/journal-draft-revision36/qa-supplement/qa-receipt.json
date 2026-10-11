@@ -1,0 +1,232 @@
+{
+  "status": "compiled_rendered_and_visually_reviewed_development",
+  "pdf": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/paper/journal-draft-revision36/supplement.pdf",
+  "pdf_sha256": "48ce577683b53793afa6f98a17334a40a2ae6ad7b8fa2805e81cf1fc178d9ca6",
+  "pages": 22,
+  "log_sha256": "650f0c492b3cff95ffa1cbfb10620eb11e8b9474d9492d95db4931084c11ba25",
+  "renderer_sha256": "afa9eae88f8e57006bd6089f3556ed99731f7e32b978fb341972e5c7ce528235",
+  "all_extracted_word_bounds_within_page": true,
+  "all_fonts_embedded": true,
+  "font_unicode_limitations": [
+    "NOMARO+CMEX10                        Type 1C           Builtin          yes yes no      50  0"
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "words": 620,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 2,
+      "words": 538,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 3,
+      "words": 788,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 4,
+      "words": 738,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 5,
+      "words": 418,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 6,
+      "words": 750,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 7,
+      "words": 789,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 8,
+      "words": 690,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 9,
+      "words": 537,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 10,
+      "words": 408,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 11,
+      "words": 479,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 12,
+      "words": 385,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 13,
+      "words": 511,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 14,
+      "words": 564,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 15,
+      "words": 516,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 16,
+      "words": 462,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 17,
+      "words": 399,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 18,
+      "words": 521,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 19,
+      "words": 565,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 20,
+      "words": 792,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 21,
+      "words": 193,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 22,
+      "words": 195,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    }
+  ],
+  "render_hashes": {
+    "page-15.png": "592405c4103b30fa4d77d8ad2452cc54a8ccbe6a71060bd5bd3e79d55fe06e5a",
+    "page-01.png": "b43a9d00835336158ef03122e24031e9152d0885c89db07dcbde1a1dcc9681fe",
+    "page-14.png": "b0a767741ad98ce65e0280c8a6d1c87fb4ecc52a3796601eb5cdbdf13b57b515",
+    "page-02.png": "df004568e1fa268d82a3cab3e7b917f257ab5ddc73736c45c242a8fd2637268a",
+    "page-16.png": "2347e6bf771ff5f080bb1fdbba091178da9a165f09b9dfb6ebe3cc1d0cf0761e",
+    "page-17.png": "17e35b3b80b15cc289d0c968a779263729c00dffe1934ed94e6c02c89c43483e",
+    "page-03.png": "f09ad2b697913b8695b2eeff7dc3cae6a6c844f3a94f8258bec7797db5354ba5",
+    "page-07.png": "39c9056b7fd318c210a2a2720947d4004f6a4ff839010beb7ac4fe4902c3405a",
+    "page-13.png": "fcb9643a45c843eaed1e9f198561ebe7cbf3468e1d11f7eccaf4df5be4d81ea6",
+    "page-12.png": "8ca1bccf798a07d948b640ecfe592c69a6c92525b7480ae14c57de80aa54e646",
+    "page-06.png": "41c7353538c2dd6d9c5f17f078b8c0d88d6fb5963656e7763cfe9b39c3d22d7a",
+    "page-10.png": "6fa1a0e41cdb623d35ba4a453089690e88dd48589a056512ef4897512f5ce374",
+    "page-04.png": "7e18db5a520c258b359b6fbc7966ef8867a3447c11725b830a663ae516db2583",
+    "page-05.png": "9a99ccf2d74b2f19ce02e55f52a567c42c340cee830c47d540dd9295e2e3ca2e",
+    "page-11.png": "4dcb3df79195ab12b7fddda7604d280ef417b545baedba3979a2a77c6f13b91e",
+    "contact-3.png": "a7b01a541fb32168161b7b4a5374752764c7e80a31882816442c260cb942ae3e",
+    "contact-2.png": "31c4db2e52f581f614146cfb9cc3c5de19919d4b94f1a9f649a67ba4f0c42962",
+    "contact-1.png": "7c333fe73528614ba0d1623400df460e611a7d21dd379c282972407d035fca3d",
+    "page-08.png": "c1432082ac772af32ad60cc3114b72e94772d9b12a2bc9c8ffff98148cf2369a",
+    "page-20.png": "74ecd383929a44ea35d3d2bee79138c6df284425bd613448ec4dd3bda182c8a8",
+    "page-21.png": "1e710086f0e283de0700de85148972275d5c15a096d413b6f90481e229a1a6f2",
+    "page-09.png": "4b6d5f1a637ce7c8ba61952e9068005a9ba6d017f42bdd44f47bcc96c6e1525f",
+    "page-22.png": "b2241ecbf5d9c8870908b6c2fb9b3a7b1509843e56362cdced5ed410ba4cef4d",
+    "page-19.png": "9c9f30d3c1a48afb41de2e31c30adedb13a87d7b37e85c32fcaf6cd6d966df11",
+    "page-18.png": "797616c98e28504bb16865110118f4abe24478f116560ac0a0ea8855da25c68a"
+  },
+  "scope": "saved development artifact; neither experiment completion nor journal acceptance",
+  "visual_review": {
+    "all_current_pages_accounted_for": true,
+    "changed_pages_freshly_inspected": [
+      20
+    ],
+    "unchanged_pages_bound_to_completed_prior_review": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22
+    ],
+    "prior_review_receipt_sha256": "938352525067885c3a71eed054a4f0bcb112b3ab38d422f654de17c4e1d5f990",
+    "page_identity_receipt_sha256": "82c65294fac86bdbb1fb90dd4f42993b81322f54aa645874993b0775cd59d3fd",
+    "observed_clipping": false,
+    "observed_table_figure_overlap": false,
+    "scope": "Only three reference pages freshly inspected;59 exact raster identities bind prior completed review. No science prose, table, formula or figure changes. Final author/venue facts remain pending."
+  },
+  "notes_sha256": "2daa109783c0066699c4df2b898667a0c3bee29ad816dc7e33260b3ea6b9fc86"
+}

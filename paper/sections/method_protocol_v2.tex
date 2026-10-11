@@ -1,0 +1,217 @@
+% Working method description bound to protocol-v2; not a final evidence claim.
+\section{Problem Formulation}
+We study continuous price prediction for advertised used vehicles. A source
+record contains covariates $x_i$, their original missingness pattern $m_i^0$,
+and a training outcome $y_i=\log(1+p_i)$, where $p_i$ is the recorded advertised
+price. This outcome is neither a transaction price nor an independently
+measured intrinsic value. A reported listing $z_i(H_i)$ retains the original
+missing entries and additionally withholds a set $H_i$ of originally recorded
+fields. In the primary protocol, the optional fields are mileage,
+transmission, fuel type, and body condition. The feasible report set is
+\begin{equation}
+\mathcal H_i=\{H\subseteq\mathcal A\setminus m_i^0:\ |H|\leq h\},
+\qquad h=2,
+\label{eq:feasible_reports}
+\end{equation}
+In Eq.~\eqref{eq:feasible_reports}, $\mathcal A$ contains the four optional
+fields. The eleven candidate
+masks include the empty mask, four singletons and six pairs; masks that
+attempt to hide an originally absent value are invalid for that record.
+Identifiers and other recorded covariates cannot be altered. This threat
+model concerns withholding, rather than fabrication or changes to a vehicle.
+
+The honest report is $z_i(\varnothing)$, which can still contain natural
+missingness. The platform observes the reported covariates and their visible
+missingness; it does not observe $H_i$, $m_i^0$, unavailable source values or
+evaluation outcomes. Thus, the same reported listing must receive the same
+pre-query scores whether a missing mileage entry is natural or concealed.
+For example, a recorded mileage of 140,000 km that is withheld and an
+originally unavailable mileage entry can produce identical public inputs.
+The mileage number is illustrative. The distinction becomes visible only
+through the stipulated query response, not through a secret eligibility flag.
+
+A query requests one visibly missing field. Let $T_a(z_i(H_i);x_i)$ denote
+the replay transition for field $a$. If its source value exists, the query
+restores that recorded value; otherwise the transition is the identity.
+Both outcomes consume one query slot. This is an oracle replay of available
+records, not physical inspection or authentication of seller claims.
+Each batch of $n$ listings has capacity $B=\lfloor\rho n\rfloor$, and at most
+one field may be queried per listing. There is no borrowing of unused slots
+between batches.
+
+For valuation function $f_\theta$ and allocation rule $\pi_\phi$, the
+stipulated seller payoff is
+\begin{equation}
+u_i(H_i,H_{-i})=
+f_\theta\!\left(T_{a_i(H_i,H_{-i})}(z_i(H_i);x_i)\right)
+-\kappa|H_i|,
+\label{eq:seller_payoff}
+\end{equation}
+Equation~\eqref{eq:seller_payoff} uses the identity transition when no query
+is assigned. Sellers know the
+deterministic scoring and batch-allocation rule. Their payoff is a simulated
+log-quote objective with concealment cost $\kappa$, rather than an inferred
+behavioral utility. Capacity couples the sellers because changing one report
+can change which listings are queried. Strategic classification and
+performative prediction already establish the need to account for responses
+to deployed rules~\cite{hardt2016strategic,perdomo2020performative}; we do not
+claim that auditing or feedback itself is new.
+
+\section{Method}
+SAV-Val combines mask-aware valuation, a suppression-output query policy,
+and policy-aware residual training. Its candidate contribution is the
+empirical value of this particular combination under shared capacity and
+ambiguous missingness. An advantage over the controls, disclosure incentive compatibility,
+equilibrium existence and convergence are not consequences of the design;
+they require separate evidence or additional assumptions.
+
+\subsection{Mask-aware valuation}
+A CatBoost backbone~\cite{prokhorenkova2018catboost} is fitted on the feasible
+reported states of each estimator-training record. Every state retains the
+record's outcome, and each state has weight $1/|\mathcal H_i|$, so records with
+more feasible masks do not receive more total training weight. A two-layer
+ReLU residual network with 64 units per hidden layer adjusts the frozen
+backbone:
+\begin{equation}
+f_\theta(z)=b(z)+r_\psi(e(z)).
+\label{eq:residual_valuation}
+\end{equation}
+The encoder $e$ in Eq.~\eqref{eq:residual_valuation} is fitted using training
+covariates only. Numeric features use
+median imputation, missing indicators and scaling; categorical features use
+one-hot encoding with an explicit missing token. Mileage and supported
+range/capacity variables are log-transformed before encoding. Outcomes,
+identifiers and declared direct reveal aliases are excluded. Missingness-aware
+prediction has established theoretical and architectural
+antecedents~\cite{lemorvan2020neumiss,lemorvan2021imputation}; this residual
+construction is not claimed to reproduce their guarantees.
+
+\subsection{Suppression-target construction}
+For an offline training record and report $z=z_i(H)$, define the positive
+quote gap relative to its honest report as
+\begin{equation*}
+d_i(z)=[f_\theta(z)-f_\theta(z_i(\varnothing))]_+.
+\end{equation*}
+The suppression target for a visibly missing field is
+\begin{equation}
+s_{ia}(z)=d_i(z)-d_i(T_a(z;x_i)).
+\label{eq:suppression_target}
+\end{equation}
+The honest-reference and post-query quotes in
+Eq.~\eqref{eq:suppression_target} form training targets only.
+They are absent from runtime head inputs. A failed replay has zero
+suppression target. A successful replay can also have a nonpositive target;
+revealing a value need not lower a quote.
+
+For comparison, an ordinary error-benefit target is
+\begin{equation}
+v_{ia}(z)=(f_\theta(z)-y_i)^2
+-(f_\theta(T_a(z;x_i))-y_i)^2.
+\label{eq:benefit_target}
+\end{equation}
+The ordinary error reduction in Eq.~\eqref{eq:benefit_target} supplies a
+matched target to the implemented Extra-Trees head~\cite{geurts2006extratrees},
+which jointly predicts
+three outputs: suppression $s_{ia}$, error benefit $v_{ia}$, and before-query
+squared error. Its inputs are the encoded public report, its current quote
+and a one-hot candidate field. The primary policy ranks the suppression
+output, while the ordinary-benefit counterpart ranks the benefit output.
+Therefore, this is a comparison of policy outputs and their induced training
+feedback, not a claim that the primary head is trained exclusively on
+suppression labels. Query candidates include naturally missing fields; the
+head cannot receive the simulator's deliberate-concealment mask.
+
+Active acquisition has previously been learned through reinforcement
+learning, generative surrogates, mutual-information objectives, and
+nongreedy oracles~\cite{janisch2019costly,li2021gsm,covert2023information,valancius2024aco}.
+Our one-query ranking policy is a local shared-capacity design and is not an
+official implementation of these sequential acquisition methods.
+
+\subsection{Budget allocation}
+For each listing, let $g_{ia}$ be its predicted score for a visibly missing
+field. Choose the highest-scoring field, then rank the listings by those
+scores. Query at most the first $B$ listings with strictly positive finite
+scores. Ties are broken by fixed within-batch order. This procedure solves
+the additive surrogate allocation problem in Eq.~\eqref{eq:surrogate_allocation}:
+\begin{align}
+\max_{q}\quad &\sum_{i,a}q_{ia}g_{ia},\nonumber\\
+\text{subject to}\quad &q_{ia}\in\{0,1\},\quad
+\sum_a q_{ia}\leq1,\quad\sum_{i,a}q_{ia}\leq B,
+\label{eq:surrogate_allocation}
+\end{align}
+with $q_{ia}=0$ for publicly observed fields. To see this, replace any selected
+field by the best field of that listing without decreasing the objective,
+then exchange any selected lower-score listing for an unselected
+higher-score listing. The result is the top-$B$ positive ranking.
+This conditional surrogate optimality does not imply optimal realized price
+error, optimal seller incentives, or global cross-batch allocation.
+
+\subsection{Policy-aware feedback}
+The residual is trained with honest-report error, mask-averaged error,
+attacked-report error, a positive-gap hinge, and an honest-backbone anchor.
+Writing $\widehat z_i$ for the report after the simulated allocation,
+the implemented objective is Eq.~\eqref{eq:training_loss}:
+\begin{align}
+\mathcal L={}&\mathbb E_i[(f_\theta(z_i(\varnothing))-y_i)^2]
++0.25\mathcal L_{\rm mask}\nonumber\\
+&+0.5\mathbb E_i[(f_\theta(\widehat z_i)-y_i)^2]\nonumber\\
+&+\beta\mathbb E_i\left[\left(
+f_\theta(\widehat z_i)-\operatorname{sg}(f_\theta(z_i(\varnothing)))
+-\tau\right)_+\right]\nonumber\\
+&+0.25\mathbb E_i[(f_\theta(z_i(\varnothing))-b(z_i(\varnothing)))^2],
+\label{eq:training_loss}
+\end{align}
+where $\mathcal L_{\rm mask}$ is the per-record mean squared error over its
+feasible masks, $\operatorname{sg}$ stops gradients, $\beta=0.5$, and
+$\tau=0.02$ log-price units. The anchor and honest error discourage moving the
+reference quote merely to reduce measured inflation. They do not eliminate
+that possibility, so signed bias and honest-price error remain necessary
+diagnostics.
+
+Within each fitting loop, estimator and feedback-guidance records are
+disjoint. The backbone fits estimator records, while the surrogate head fits
+guidance records. Two feedback rounds each train the residual for six epochs
+and refresh guidance targets. Query scores are refreshed once per epoch and
+held fixed within it. Selected report indices and allocation are discrete;
+gradients pass through their selected price predictions. This is a surrogate
+alternating procedure, not differentiation through an exact bilevel game.
+Training uses two seller-response sweeps and one start. Evaluation uses a
+stronger independently checked response search.
+
+\subsection{Nested target generation}
+Three balanced outer folds are assigned by outcome-independent hashes of
+listing identifiers. Each outer teacher fits the \emph{entire} backbone,
+surrogate-head and residual-feedback loop on its outer-training records,
+using a further 70/30 estimator/guidance split. It predicts every candidate
+report on its outer-held-out records without receiving their outcomes.
+The collected outer quotes, original training outcomes and replay transitions
+then form targets for deployment heads.
+
+The deployment estimator is fitted separately using the same 70/30 inner
+split on the full allowed training cohort. The deployment head learns from
+the collected outer targets, using public-state encodings from that
+deployment estimator. Consequently, outer-held-out outcomes cannot influence
+the corresponding teacher's fitted feedback loop. Nevertheless, outer
+teachers and the deployment estimator use different fitting sample sizes and
+encoders. The procedure gives an honest target-generation boundary, rather
+than exact equality between teacher and deployment prediction distributions.
+
+\subsection{Seller-response search and deviation audit}
+Evaluation performs coordinate best responses with four starts: honest
+reports, individual pre-query quote maximizers, and two seeded feasible
+report profiles. At each update, the seller's candidate is ranked against
+fixed peer reports under the actual capacity and tie rule. Ties retain the
+current report; repeated profiles are detected. The search uses at most
+20 sweeps per start and retains the profile with largest aggregate simulated
+seller payoff. This selection does not prefer convergence over attack value.
+
+An independent checker then enumerates every feasible unilateral deviation
+and reruns the allocator. It verifies the search's remaining deviation regret,
+\begin{equation*}
+r_i=\max_{H\in\mathcal H_i}u_i(H,H_{-i})-u_i(H_i,H_{-i}),
+\end{equation*}
+and records the largest unilateral quote at those fixed peer reports.
+The checker can be exact for this finite unilateral comparison even when the
+joint response search has not converged. Its quote envelope is neither a
+jointly attainable batch outcome nor a bound over all peer profiles. Both
+remaining regret and nonconverged batches must accompany performance claims.

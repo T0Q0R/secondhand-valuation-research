@@ -1,0 +1,45 @@
+{
+  "protocol": "sav-val-smoke-v1",
+  "status": "exploratory_development_only",
+  "output": "outputs/smoke-v1",
+  "seeds": [
+    13
+  ],
+  "datasets": [
+    "synthetic"
+  ],
+  "max_train": 600,
+  "max_evaluation": 128,
+  "synthetic_train": 600,
+  "synthetic_evaluation": 128,
+  "synthetic_generation_seed": 73101,
+  "synthetic_evaluation_seed": 73102,
+  "actions": [
+    "mileage_km",
+    "transmission",
+    "fuel_type",
+    "feat_body_condition"
+  ],
+  "maximum_hidden": 2,
+  "batch_size": 64,
+  "budgets": [
+    0,
+    0.1
+  ],
+  "attacker_sweeps": 5,
+  "attacker_restarts": 2,
+  "concealment_cost_log": 0.0,
+  "catboost_iterations": 25,
+  "head_trees": 20,
+  "residual_epochs": 2,
+  "feedback_rounds": 2,
+  "residual_hidden_width": 64,
+  "learning_rate": 0.001,
+  "attack_loss_weight": 0.5,
+  "gap_penalty_weight": 0.5,
+  "anchor_weight": 0.25,
+  "gap_tolerance_log": 0.02,
+  "head_fitting_fraction": 0.3,
+  "bootstrap_repetitions": 100,
+  "runtime_python": "../.venv-gdfs/bin/python"
+}

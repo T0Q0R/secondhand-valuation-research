@@ -1,0 +1,289 @@
+\section{Introduction}
+Used goods are valued from incomplete descriptions of condition, use and
+configuration. Quality uncertainty and voluntary disclosure have a long
+economic history~\cite{akerlof1970lemons,grossman1981disclosure,milgrom1981news}.
+A predictive price quote introduces a concrete incentive: omitting an
+unfavorable recorded attribute can increase the quote. An accurate predictor
+on ordinary listings therefore need not remain accurate after sellers choose
+which information to disclose. The information available to the platform
+matters. Two possible source states of the same listing can produce
+identical missing-mileage reports: in one the seller withheld a recorded
+value, while in the other the source never recorded that value.
+The identifier, other public inputs and peer reports are held fixed.
+Figure~\ref{fig:missingness}
+shows this boundary. A deployment rule cannot distinguish these cases before
+a query. Recorded-value replay may recover a value in the first case and fail
+in the second; both attempts consume the shared verification capacity.
+This replay is a controlled computational intervention, not physical inspection.
+
+Strategically missing data are already studied in regression and
+classification~\cite{zhang2020strategic,krishnaswamy2021withheld}. Costly and
+active feature acquisition also have established methods~\cite{janisch2019costly,
+shim2018joint,li2021gsm,covert2023information,valancius2024aco}.
+The empirical question here is whether learning to suppress concealment-induced
+quote increases improves on ordinary error-reduction acquisition and a simpler
+robust predictor when listings compete for a fixed batch capacity. Changing one
+report can change which other listings receive queries, so a single-listing
+information score alone does not describe the deployed interaction.
+
+Strategic classification and causal perspectives model responses to prediction
+rules~\cite{hardt2016strategic,dong2018preferences,miller2020causal}; performative
+prediction addresses deployment-induced distribution changes~\cite{perdomo2020performative}.
+Recent work also jointly designs prediction, audits and
+penalties~\cite{ebrahimi2026audit}. Their different actions and outcome models
+motivate response analysis but do not establish an incentive property for
+continuous quotes with recorded-value replay.
+Budgeted randomized audits of strategic reports already minimized incentives
+to lie in threshold and top-$k$ allocations~\cite{estornell2021audits}.
+Partial verification without payments also has established incentive
+characterizations~\cite{ceppi2019verification}.
+Estornell et al. check reported types and remove an allocation when a lie
+is detected, with an optional fine. Our query recovers one recorded field,
+can fail while spending capacity, and changes a continuous quote without
+an added penalty. Ceppi et al.'s truthfulness characterization differs from
+our finite bound on stored deviation rows. These model distinctions frame
+the empirical comparison; they are not new general audit guarantees.
+
+Missing-data mechanisms and predictive treatment of missingness are also
+established~\cite{rubin1976missing,lemorvan2021imputation,lemorvan2020neumiss}.
+Our indicators cannot identify why a field is blank. Strong categorical
+tree models~\cite{prokhorenkova2018catboost} and comparisons with neural tabular
+models~\cite{gorishniy2021tabular} motivate retaining a tree control. Acquisition
+outputs share the same multi-output ExtraTrees machinery~\cite{geurts2006extratrees},
+so an output-specific gain must be assessed against that shared implementation.
+Three difficulties remain under this information boundary: natural and
+strategic absence are observationally identical, a fitted feedback loop can
+reuse outcomes indirectly, and capacity competition couples reports within
+a batch. Prediction accuracy and maximum unilateral gain also require
+different evaluation endpoints.
+
+We implement two candidates. SAV-Val combines a mask-aware price predictor,
+suppression-value acquisition and training on simulated post-query reports.
+Its targets are generated through outer folds that contain the entire fitted
+feedback loop (Fig.~\ref{fig:overview}; Section~\ref{sec:sav_fitting}).
+Counterfactual Deviation-Constrained Mixture Verification (CDM-Val) fixes
+the estimator and learns
+a distribution over complete capacity-feasible verification rules. It evaluates
+signed unilateral payoff differences by reallocating the batch separately for
+truthful and withheld reports. Sellers lock their reports before one private
+rule is drawn (Section~\ref{sec:cdm_commitment}). Its finite calibration optimum
+is distinct from performance on
+other listings and peer reports. Randomized response-oracle optimization itself
+is established~\cite{jain2011doubleoracle}.
+
+We study public advertised vehicle prices from two countries and one synthetic
+source, with stipulated withholding responses. The contribution is a concrete
+implementation and an audited assessment of these candidates under a deployable
+information boundary. First, we specify public query eligibility and failed
+replay with hard capacity (Section~\ref{sec:source_query}). Second, we implement
+nested suppression-target fitting and finite mixture calibration
+(Sections~\ref{sec:sav_fitting} and~\ref{sec:cdm_commitment}). Third, we evaluate
+their distinct inflation and deviation endpoints against matched strong
+controls (Section~\ref{sec:results}), retaining unsuccessful comparisons.
+It does not introduce strategic learning or auditing as a new
+problem, or infer observed seller fraud. The principal finding is heterogeneous
+behavior: improvements over a basic masked predictor do not imply improvements
+over strong simple controls. All scheduled size/tuning and ordinary-benefit
+allowance cases are complete and the local copied evidence passes
+reproduction checks. This working draft awaits final author and venue review.
+
+\section{Results}
+\label{sec:results}
+\subsection{Main comparison and ordinary-benefit reference}
+The main nested study is complete: three sources, three fitting seeds and all
+six preset capacities, totaling 558 audited evaluation cells. Methods share
+1,000 evaluation listings per source. These cohorts were inspected during
+historical development, so their retrospective status remains even though the
+current fitted loops exclude their labels. Table~\ref{tab:synthetic_development}
+reports the prespecified 10\% capacity. MAE denotes mean absolute error in
+each source's native price units; errors are not pooled across sources.
+
+On the synthetic source, SAV-Val reduces positive log-quote inflation by
+58.19\% relative to masking with ordinary-benefit acquisition. However, it has
+54.94\% more inflation than the static robust suppression-output control,
+despite 1.28\% lower honest MAE. Its benefit-output feedback counterpart also
+has lower mean inflation; the component interval crosses zero.
+On JUCars, SAV-Val improves on that feedback counterpart by 14.45\%, but has
+34.23\% more inflation than the static robust control. On MUCars, it has
+10.92\% less inflation than the static robust control and 1.56\% lower honest
+MAE. Its component gain of 8.45\% is below the prespecified 10\% magnitude
+criterion. These are distinct comparisons rather than a uniform method gain.
+
+The original ordinary-benefit static robust reference is evaluated separately
+in 54 audited cells (Table~\ref{tab:robust_benefit_reference}). SAV-Val has
+11.42\% lower inflation than this reference on MUCars, but 92.69\% and
+38.65\% higher inflation on synthetic and JUCars. The original fixed-setting
+criterion is met only on MUCars. Figure~\ref{fig:capacity} retains every preset
+capacity. The synthetic comparison reverses at 30\%, while JUCars favors the
+static control at every capacity. MUCars favors SAV-Val even at zero queries,
+which points to an estimator-level difference rather than a query-only effect.
+These frontier observations do not replace the primary capacity.
+
+\subsection{Finite mixture calibration and source evaluation}
+The fixed-estimator CDM study covers all nine source/seed pairs, two price
+estimators, six capacities and fourteen rules/mixtures: 1,512 audited cells
+and 108 calibration fits. Independent full-matrix linear-program (LP)
+solutions agree with the
+stored row-generation solutions. All actual rule draws satisfy the hard
+capacity. Normal-error constraints do not distinguish rules in this replay
+setting because the estimator is fixed and truthful records offer no withheld
+recorded value to recover.
+
+At primary capacity, robust-estimator CDM has 18.59\%, 0.73\% and 11.63\%
+more positive expected-log inflation than the risk rule on synthetic, JUCars
+and MUCars (Table~\ref{tab:cdm_development}). The JUCars interval crosses zero;
+the other two favor the risk rule. On MUCars CDM improves on benefit acquisition
+by 10.62\%, but has 6.32\% more inflation than uniform mixing. Both price
+estimators and all capacities remain visible in Fig.~\ref{fig:cdm_capacity}.
+Exact optimality on the stored calibration rows therefore does not establish
+a consistent improvement in the held-out mean outcome or universal incentives.
+
+A subsequent common-profile diagnostic exhaustively evaluates legal
+unilateral reports on held-out batches under five shared peer-profile
+constructions, retaining all 1,512 cells. Rule expectations precede report
+maximization. With robust pricing, CDM reduces the upper 5\% envelope mean
+relative to the calibration-selected pure rule by 7.34\%, 2.86\% and 6.81\%
+on synthetic, JUCars and MUCars, with positive conditional batch intervals.
+Those intervals against risk include zero on all three cohorts. Mask-aware
+MUCars pricing instead has higher mean and tail envelopes than risk.
+This post-hoc diagnostic identifies a bounded mixing effect and leaves the
+original primary mean-inflation conclusion unchanged; all references,
+capacities and whole-case descriptive tails are retained in the supplement.
+
+\subsection{Selection allowances and comparator boundaries}
+The source/size follow-up assigns each method three training-internal
+gap-weight trials and twelve residual epochs, then refits the selected model.
+All nine source/size cohorts and fixed variants are retained in the
+technical supplement: 972 tuning cells and 324 ordinary-benefit reference cells. A separate ordinary-benefit extension selects weights using its
+own acquisition rule and constructs its own outer prediction targets and
+deployable head. Table~\ref{tab:equal_benefit_reference} includes both fixed and
+tuned roles for every independently audited complete three-seed cohort in that
+extension. All 27 cases per study and 108 fitting stages per study are audited;
+the reference audit includes 54 independent deployment-head refits.
+
+Equal selection allowances do not establish a general full-method gain.
+The tuned synthetic comparisons favor the ordinary-benefit static reference
+at all three caps. JUCars contrasts change with training size and reference.
+Against the ordinary-benefit static reference, tuned JUCars has 20.31\%
+and 23.02\% less inflation at caps 1,000 and 2,500, but 27.09\% more
+at cap 5,000, with reference-minus-SAV interval $[-0.00333,-0.00125]$.
+The honest and attacked error intervals at that largest cap cross zero.
+
+At the configured 5,000 cap (4,774 available training listings), tuned SAV-Val
+has 32.71\% more inflation than the tuned static suppression-output control,
+with reference-minus-SAV interval $[-0.00368,-0.00157]$. Against its tuned
+feedback benefit-output variant, it has 11.83\% less inflation, with interval
+$[0.00095,0.00197]$; honest and attacked errors are also lower, with positive
+paired error intervals. This component comparison does not establish an
+advantage over the static control.
+
+At MUCars cap 1,000, tuned SAV has 7.92\% less inflation than the static
+suppression-output control, with a positive conditional interval. Its
+1.91\% gain against the feedback benefit-output variant crosses zero,
+while honest and attacked errors are larger with intervals excluding zero.
+
+At MUCars cap 2,500, tuned SAV-Val has 19.25\% less inflation than the
+static suppression-output control, with reference-minus-SAV interval
+$[0.00116,0.00225]$. Honest and attacked MAE are 1.64\% and 2.18\% lower,
+with positive paired error intervals. Against the feedback benefit-output
+variant, inflation is 16.98\% lower, with interval $[0.00116,0.00171]$;
+honest and attacked MAE are also lower. These comparisons retain their
+distinct reference identities and do not replace the ordinary-benefit
+extension.
+
+Against the tuned ordinary-benefit static reference at MUCars cap 1,000,
+SAV-Val has 5.68\% less inflation, with interval $[0.00032,0.00068]$.
+This falls below the original 10\% effect-size criterion. Honest and attacked
+MAE are 0.23\% and 0.20\% larger, with both error intervals crossing zero.
+The fixed-weight comparison has 5.56\% more inflation, with an interval
+favoring the reference. Thus weight selection changes this small-cohort
+comparison without establishing a general gain.
+
+At MUCars cap 2,500, the tuned ordinary-benefit comparison has 18.92\% lower inflation, with interval $[0.00112,0.00222]$. Honest and attacked MAE are 1.64\% and 2.10\% lower, with positive paired error intervals. This tuned cohort meets the same 10\% inflation-effect and honest-error thresholds. The fixed-weight inflation reduction is 2.61\%, with an interval crossing zero. These results qualify the source/size comparison without establishing a gain across all scheduled cohorts.
+
+At MUCars cap 5,000, tuned SAV-Val reduces inflation by 21.00\% relative to
+static suppression-output pricing, with difference 0.001501 and interval
+$[0.00101,0.00191]$. Honest and attacked MAE are 1.54\% and 1.83\% lower,
+with positive paired intervals. Against the feedback benefit-output variant,
+inflation is 10.76\% lower, with interval $[0.00033,0.00103]$; honest and
+attacked MAE are 0.60\% and 0.78\% larger, with both error intervals crossing
+zero. Thus an inflation improvement does not imply a component accuracy gain.
+
+Against the separately tuned ordinary-benefit static reference at that cap,
+inflation is 20.41\% lower, with difference 0.001448 and interval
+$[0.00097,0.00186]$. Honest and attacked MAE are 1.54\% and 1.78\% lower,
+with positive paired intervals. This cohort meets the prespecified 10\%
+inflation-effect and honest-error thresholds. The extension's fixed-weight
+comparison has 11.42\% lower inflation, with interval $[0.00045,0.00128]$;
+it does not replace the original fixed-setting study's separate interval.
+At the same largest cap, tuned inflation is 30.09\% higher on synthetic and
+27.09\% higher on JUCars than ordinary-benefit pricing, both with intervals
+favoring that reference. All nine cohorts remain visible in the table and
+the paired training-size figures; no cross-source success is established.
+
+Selection minimizes honest plus attacked squared transformed-price error,
+so tuning can improve accuracy while worsening inflation. No evaluation
+outcome selects a weight, seed, source or favorable capacity.
+
+The technical supplement also retains comparator and diagnostic failures.
+The acquisition-conditioned oracle control is an explicit one-query regression
+adaptation~\cite{valancius2024aco}, not an unchanged classification implementation.
+Its strongest declared setting does not establish an inflation advantage for
+SAV-Val on the synthetic or Jordanian sources. The full-field SMI adaptation
+uses complete categorical groups, declared missing-coordinate domains and a
+strict sign-consistency fallback~\cite{zhang2020strategic}. Its large fallback
+fractions and errors demonstrate the significance of those assumptions when
+extending the numerical formulation; they do not refute the original theorem.
+
+Saved-model sensitivity experiments retain concealment costs, hidden-field
+limits and extra natural missingness. A generic disclosure-monotone envelope
+eliminates positive inflation but can substantially increase honest error.
+Technical missingness strata expose capacity spent on unsuccessful replay;
+they are not demographic fairness groups. In the 200-listing JUCars group
+with one originally absent optional field, SAV attempts queries on 21.67\%
+of listings and fails on 21.50\%, averaged across fitting seeds. This is the
+failed-replay branch of Fig.~\ref{fig:missingness} in an observed-record
+analysis, rather than evidence of deliberate seller concealment.
+Aggregate error can obscure
+heterogeneity, as emphasized in group-robust learning~\cite{sagawa2019groups}.
+Under common SAV-generated reports,
+the static robust control has less inflation in all three sources, although
+attacked-error comparisons can favor SAV-Val. Public inference measurements
+on a busy shared workstation describe resource use and cannot establish
+controlled speedups or physical inspection costs.
+
+\section{Discussion}
+The study shows why an improvement over a basic masked predictor is an
+insufficient test of strategic valuation. Static robust pricing and ordinary
+acquisition remain strong controls. Feedback, acquisition targets and mixture
+calibration have effects that depend on the source and capacity. Differences
+in approximate responses, fitting samples and target distributions are possible
+explanations, not causes established by these experiments.
+
+Inflation is also an incomplete objective. A rule can make withholding
+unprofitable by raising honest quotes. The generic envelope control makes this
+tradeoff explicit: a zero inflation value need not imply accurate valuation.
+Honest and attacked MAE, signed bias, failed queries and remaining deviation
+regret must accompany strategic measures. Mixture calibration addresses a
+maximum finite deviation criterion, whereas the original primary outcome is
+an average positive quote gap; neither should be silently substituted for
+the other after observing results.
+
+The sources contain asking prices rather than realized transaction values.
+They do not contain observed concealment labels, measured seller utilities or
+physical inspection outcomes. Recovered recorded values may themselves be
+inaccurate. The stipulated attacker can withhold recorded optional groups,
+but cannot fabricate values, change identifiers, choose peers or collude.
+Retrospective capped cohorts and ten evaluation batches per source limit
+representativeness. Intervals average paired seed contrasts before resampling
+the shared batches and condition on the fitted models; they do not quantify
+uncertainty over new training populations or real seller behavior.
+
+SAV targets cover the complete outer feedback loop, but teacher and deployment
+sample sizes and selected weights can differ. CDM's first source study uses
+disjoint estimator, head and probability-calibration rows rather than an outer
+replication of the complete mechanism. Its fixed twelve-rule bank and five
+calibration peer-profile types are finite restrictions. Prospective independent
+markets, measured query costs and observed responses are needed before
+deployment. The complete main study supports source-dependent outcomes; the
+general empirical increment of either candidate remains unestablished.

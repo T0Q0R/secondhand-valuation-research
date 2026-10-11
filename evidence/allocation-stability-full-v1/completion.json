@@ -1,0 +1,12 @@
+{
+  "status": "completed_pending_independent_check",
+  "saved_batches": 1080,
+  "batch_radius_rows": 4320,
+  "scope": "post-hoc sufficient conditions at fixed saved reports; perturbation radius is hypothetical, no score-error calibration or causal/performance guarantee",
+  "files": {
+    "coverage.csv": "bf3ae3355148fc2f2d72232c67c297e53ec1c1d658b93fa9ba024199af57c921",
+    "analysis_snapshot.py": "76be5a4f2103f5c6a1a7964a6ef3734f3145f65db4181004b6488c470a817e62",
+    "batch_certificates.csv": "fd428063fb584f22b01b51c42d56d487e6373822cf232a9e6c32bf634bc80970",
+    "input_binding.json": "8e7a5edb94bd4f3280674f33893c47b160ebc8815e5e17af5a8f217e03132e31"
+  }
+}

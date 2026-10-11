@@ -1,0 +1,72 @@
+\subsection{Fixed-estimator counterfactual mixture development}
+The fixed-estimator CDM study has completed all nine source/seed pairs.
+The initial seven-pair generation and its two originally unavailable MUCars
+pairs retain separate immutable provenance; their complete evidence union
+has an independent audit of 1,512 execution cells and 108 calibration fits.
+Every stored payoff row, full-matrix LP optimum, rule allocation and mixture
+expectation is checked. Table~\ref{tab:cdm_development} includes all three
+scheduled sources and all three fitting seeds.
+
+\begin{table*}[t]
+\centering
+\caption{CDM development at 10\% capacity with fixed estimators. Entries are
+three-seed means of positive expected-log uplift. The final column is the
+conditional shared-batch 95\% interval for risk minus CDM; positive values
+favor CDM. This compares verification rules within each fixed estimator,
+rather than a matched full-estimator comparison with feedback-trained SAV.}
+\label{tab:cdm_development}
+\begin{tabular}{llrrrrl}
+\toprule
+Source & Estimator & CDM & Risk & Benefit & Uniform & Risk $-$ CDM interval\\
+\midrule
+Synthetic & Mask-aware & 0.06224 & 0.05634 & 0.06152 & 0.07968 & $[-0.00779,-0.00385]$\\
+ & Robust & 0.01192 & 0.01005 & 0.01017 & 0.01340 & $[-0.00291,-0.00110]$\\
+\midrule
+JUCars & Mask-aware & 0.01879 & 0.01854 & 0.01953 & 0.01886 & $[-0.00042,-0.00012]$\\
+ & Robust & 0.01063 & 0.01055 & 0.01126 & 0.01009 & $[-0.00044,0.00029]$\\
+\midrule
+MUCars & Mask-aware & 0.04398 & 0.03102 & 0.04605 & 0.04430 & $[-0.01461,-0.01144]$\\
+ & Robust & 0.00699 & 0.00626 & 0.00782 & 0.00658 & $[-0.00102,-0.00045]$\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+On the synthetic cohort, CDM reduces uplift relative to uniform mixing but
+has higher uplift than the simple risk rule under both estimators. On JUCars,
+it improves on benefit priority but does not establish a risk-rule advantage;
+under the robust estimator it also loses to uniform mixing. All twelve pure
+rules, the training-selected pure rule, both mixtures and all six capacities
+are retained in the accompanying contrast data. These comparisons with uniform mixing do not establish an advantage
+over the stronger risk rule.
+
+The complete MUCars replication also favors risk priority over CDM under
+both price predictors: CDM uplift is 41.79\% and 11.63\% higher for
+mask-aware and robust prices. The corresponding risk-minus-CDM intervals
+are below zero. With robust prices, CDM improves on benefit priority by
+10.62\% and on the training-selected pure rule by 6.55\%, but has 6.32\%
+more uplift than uniform mixing. At the preset 30\% capacity, robust-price
+MUCars instead has 22.19\% less CDM uplift than risk priority, with paired
+difference $0.00136$ and exploratory interval $[0.00107,0.00169]$.
+This capacity-dependent result does not replace the primary comparison.
+A finite calibration improvement does not imply a general held-out average
+improvement over simple alternatives.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/cdm_capacity_frontiers_full.pdf}
+\caption{Complete CDM source study at every preset capacity. Top:
+mask-aware price predictor; bottom: robust/no-feedback price predictor.
+Points average three fitting seeds and bars give their sample standard
+deviations. The 10\% primary capacity is marked. All sources and capacities
+remain visible; no favorable rule or source is selected after evaluation.
+Conditional risk-minus-CDM primary intervals appear in
+Table~\ref{tab:cdm_development}.}
+\label{fig:cdm_capacity}
+\end{figure*}
+
+The finite LP guarantee concerns the stored calibration types and peer
+profiles. It does not guarantee a reduction of mean held-out uplift, and its
+worst-gain objective differs from that average. In the source experiment,
+the honest-error constraint is invariant across rules and contributes no
+observed discrimination. The mechanism's usefulness therefore remains an
+empirical question despite exact finite optimization.

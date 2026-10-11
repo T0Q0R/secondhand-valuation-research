@@ -1,0 +1,988 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,hyperref}
+\newtheorem{proposition}{Proposition}
+\title{Information Limits and Verification-Path Effects\\in Budgeted Valuation}
+\author{Research addendum to the audited valuation study}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We extend the existing heterogeneous-results study with a finite public-information
+oracle and a diagnostic of verification-path effects. A restricted missingness-alias
+family admits a tight honest-precision--incentive frontier. An exact marginal
+formulation removes complete-allocation enumeration under item-local utility.
+A constructed family shows an unbounded, capacity-related gap for context-insensitive fixed-rule
+mixtures relative to public-context-conditioned lotteries. A new decomposition of
+360,000 saved-model deviation outcomes separates the initial quote, local recovery
+and hard-capacity effects. It identifies partial recovery that can raise a seller's
+quote. A verification-history cap weakly reduces every fixed-profile unilateral
+gain while preserving truthful quotes under the stated replay semantics.
+An exhaustive fixed-profile comparison covers 108 estimator/source/seed/budget
+cases and 2,160,000 entry--method comparisons. A further 432 common-response
+cells show 279 inflation reductions and 153 ties, but 94 attacked-error increases
+and 145 increases in failed-query probability. For the robust benefit rule at
+10\% capacity, mean worst unilateral gain decreases by 6.11\%, 7.04\% and 12.49\%
+on synthetic, JUCars and MUCars cohorts. These conditional effects do not establish
+equilibrium dominance, attacked-error improvement or general methodological novelty.
+A completed ten-seed extension finds no consistent SAV advantage over static
+robust. A separately audited allocation intervention yields two of eighteen
+contrasts meeting the point improvement criterion and ten inflation reversals.
+\end{abstract}
+
+\section{Question and scope}
+\noindent\textbf{Takeaway.} Audit information limits and the consequences of
+verification, while retaining the original negative and heterogeneous results.
+
+Each batch contains 100 listings, each with four optional fields. Sellers may
+withhold at most two available fields. Queries on naturally absent fields fail
+and consume budget. Pricing is itemwise and fixed in the present extension;
+only query allocation couples a batch. Public scores cannot use latent source
+availability. The cap and decomposition experiments use the original three seeds
+(13, 42, 2026), two frozen price models, six capacities and five saved peer
+profiles. Later sections separately report source-complete ten-seed extensions.
+Saved profiles represent the stipulated model, not observed market behavior.
+
+Strategic withholding and monotone incentive remedies already have a literature
+\cite{withheld}; randomized automated mechanism design under partial verification
+also uses established optimization tools \cite{partial}. We do not claim that LP,
+randomization or a minimum operator is new. The candidate contribution is the
+specific precision frontier, information-consistent audit certificates, and the
+empirically diagnosed verification-path effect. Theorem-level novelty review remains
+necessary before claiming a first result.
+
+\section{Data and evaluation quantities}
+\noindent\textbf{Takeaway.} The evidence concerns advertised-price prediction
+on fixed retrospective cohorts and explicitly modeled seller responses.
+
+JUCars-2024 version 2 contains Jordanian listings from 2024 and was deposited
+in 2026 \cite{jucarsdata}; MUCars-2024 version 2 contains Moroccan listings
+from 2024 \cite{mucarsdata}. Both sources are distributed under CC BY 4.0.
+Recorded prices are advertised prices, not completed transaction prices.
+We evaluate native currencies separately. The synthetic market follows the
+saved generator rather than an empirically identified transaction model.
+Before the present caps, the processed training/evaluation splits contain
+4,774/1,374 JUCars records and 39,244/10,672 MUCars records. Identifier hashing
+caps training at 5,000 and evaluation at 1,000 records. Synthetic generation
+uses fixed seeds 73,101 and 73,102 for 6,000/1,500 records before the same caps.
+Fitting seeds vary training randomness, not the source cohorts or generator.
+These validation sources were inspected during earlier development and are
+retrospective, rather than fresh confirmatory tests.
+
+Original advertisement identifiers are unavailable; inherited non-price
+fingerprints provide duplicate control without certifying independent vehicles.
+Targets, identifiers, source indices and declared direct reveal aliases are
+excluded from predictor inputs. Correlated covariates remain, so concealment
+need not remove all information about a field. Naturally absent fields cannot
+be concealed by a seller or successfully recovered by a query.
+
+For one returned report, let $h$ be its model's honest log quote, $y$ the
+log-transformed advertised price, $q_0$ the no-query quote, $q_1$ the quote
+conditional on the selected query, and $p$ its marginal query probability.
+Here $y=\log(1+\mathrm{price})$ and $\mu=(1-p)q_0+pq_1$.
+The principal inflation quantity is $[\mu-h]_+$; it compares the model with
+itself, rather than with the advertised target. The separate realized-positive
+quantity is $(1-p)[q_0-h]_++p[q_1-h]_+$.
+Honest price error is $|\exp(h)-\exp(y)|$, and attacked price error is
+\[
+ (1-p)|\exp(q_0)-\exp(y)|+p|\exp(q_1)-\exp(y)|.
+\]
+The subtraction of one cancels inside each absolute difference. Taking an
+absolute error after averaging the quotes would define a different metric.
+Failed-query probability is $p$ times the indicator that the selected field
+cannot be recovered; such an attempt still consumes capacity. Signed log bias
+is $\mu-y$, while expected squared log error averages the two squared endpoint
+errors before aggregation.
+
+For the unilateral audit, hold peers' returned reports fixed and enumerate
+all feasible reports of one seller, reallocating the whole batch for each.
+Writing $u(r)$ for that seller's expected log quote minus concealment cost,
+the deviation envelope is $[\max_r u(r)-u(r_{\mathrm{honest}})]_+$; remaining
+regret instead subtracts the utility of the returned report. Thus a small
+regret does not establish a small gain over honesty. Main empirical concealment
+costs are zero. All quantities are aggregated over the retained listings;
+nonconverged responses remain in the analysis. The finite oracle's constructed
+quote units must not be interpreted as empirical log-price effects.
+
+\section{Observable-report oracle and a precision frontier}
+\noindent\textbf{Takeaway.} A finite complete oracle can distinguish a policy-library
+restriction from the best value achievable under the same public information.
+
+Let $o$ be the complete observable batch signature and $A_B(o)$ its feasible
+complete nonadaptive allocations, each spending at most $B$ queries. Allocate
+probability $z_{oa}$ to action $a$, sharing the same variables across latent
+worlds with the same signature. For each legal deviation $d$, let $G_d(z)$ be
+the expected deviated quote minus the truthful quote, with the entire batch
+reallocated on both sides. The finite oracle solves
+\[
+ \min_{z,t} t\quad\text{s.t.}\quad G_d(z)\le t\ (\forall d),\quad
+ \sum_{a\in A_B(o)}z_{oa}=1,\quad z_{oa}\ge0,\quad t\ge0.
+\]
+This is exact only for the declared complete finite world/report/action universe.
+Its numerical primal/dual certificate uses tolerance $10^{-8}$. It is not a
+guarantee over unseen types or general adaptive query trees.
+
+Consider a separate alias family with an all-natural-missing world and worlds
+in which only listing $i$ has a recoverable low-value field, lowering its target
+by $\Delta_i>0$. Withholding it produces the same public batch. Require
+verification-neutral quotes (same final record, same quote), and uniform
+absolute error at most $\eta$ on all specified honest reports. Set
+$a_i=(\Delta_i-2\eta)_+$. The attainable worst positive expected gain is
+\begin{equation}
+T^*(\eta,B)=\min_{0\le p_i\le1,\ \sum_i p_i\le B}\max_i a_i(1-p_i).
+\label{eq:frontier}
+\end{equation}
+For the nonzero interior case, $\sum_{i:a_i>0}(1-T^*/a_i)_+=B$.
+
+\paragraph{Proof sketch and boundaries.}
+Couple queries by their private random seed on the all-failure transcript.
+Let $p_i$ be the probability of querying $i$. Hard capacity gives
+$\sum_i p_i\le B$. Until $i$ is queried, its hidden low-value world has the same
+transcript; without recovery, the honest-precision constraint leaves a quote
+gap at least $\Delta_i-2\eta$. This proves the lower bound, including adaptive
+policies in this single-recoverable family. Choose quote shifts
+$e_i=\min(\eta,\Delta_i/2)$ toward one another and marginals
+$p_i=(1-T^*/a_i)_+$. Systematic interval sampling realizes these marginals with
+at most $B$ queries per draw and attains the bound. This does not follow from
+an average MAE bound. It does not imply zero adaptivity benefit for failed-query
+counts or multi-field worlds.
+
+\paragraph{What the frontier excludes.}
+Let $k_\eta=|\{i:\Delta_i>2\eta\}|$. Equation~\eqref{eq:frontier}
+implies $T^*(\eta,B)=0$ if and only if $B\geq k_\eta$: each strictly
+positive residual gap needs unit query probability. In particular, at $B=0$
+zero gain requires $\eta\geq\frac12\max_i\Delta_i$. For $n$ identical gaps
+$\Delta$, the frontier simplifies to
+\[
+ T^*(\eta,B)=(\Delta-2\eta)_+\left(1-\min\{B/n,1\}\right).
+\]
+The lower bound follows because some marginal is at most $B/n$; equal
+marginals attain it. Thus honest precision, query capacity and strategic gain
+cannot be specified independently in this alias family.
+
+This is compatible with existing truthful predictors. Natural-versus-strategic
+missingness ambiguity is explicit in \cite{withheld}, whose Theorems~1 and~2
+give minimum-cut optimality and a MAX-ensemble characterization for binary
+classification. A predictor can eliminate withholding gains by changing its
+predictions, while violating the uniform error requirement imposed here.
+Our lower bound restricts that escape route; it does not contradict truthful
+classification or establish impossibility under average MAE alone.
+History-dependent quote rules satisfy this frontier only when they also meet
+its verification-neutrality and uniform-precision assumptions on the specified
+family. An arbitrary history cap cannot be placed inside that mechanism class
+without checking these conditions.
+
+A two-mode constructed example at $B=1,\eta=0$ yields $72/17$ for the public
+oracle, $72/13$ for the best global mixture of the specified eight rules, and
+$8$ for risk ordering. These are artificial linear quote units, not empirical
+log-price effects. All 32 budget/precision cases passed a separate auditor.
+
+\section{Compact marginals and a fixed-mixture separation}
+\noindent\textbf{Takeaway.} Item-local utility permits an exact compact oracle;
+enlarging a globally mixed priority library need not remove its contextual limitation.
+
+Let $y_{oif}$ be the probability of querying field $f$ of item $i$ in public
+report class $o$. Impose
+\[
+y_{oif}\ge0,\qquad \sum_f y_{oif}\le1,\qquad
+\sum_{i,f}y_{oif}\le B,
+\]
+and zero probability on publicly ineligible fields. Every declared unilateral
+deviation has the affine form $G_d(y)=b_d+\sum_{o,i,f}c_{doif}y_{oif}$ when its
+realized utility depends only on its own queried field or no query. Coefficients
+include both truthful and deviated report classes. Compatible latent worlds
+must share the same $y$ variables.
+
+\begin{proposition}[Compact finite oracle]
+For item-local utilities, nonadaptive queries, unit query costs and at most one
+queried field per item, minimizing $\max\{0,\max_d G_d(y)\}$ over the above
+constraints has the same value as the complete-allocation lottery oracle.
+Every feasible marginal solution is implementable under a hard budget on every draw.
+\end{proposition}
+\begin{proof}
+Every complete-allocation lottery induces feasible $y$. Conversely, fix a
+public class and set $p_i=\sum_f y_{if}$. Arrange consecutive intervals of lengths
+$p_i$. A private uniform $U\in[0,1)$ selects intervals containing some $U+k$,
+for integer $k$. Each interval has length at most one and the total length is
+at most $B$, so at most $B$ items are selected; item $i$ has selection probability
+$p_i$. Conditional on selection, draw its field with probability $y_{if}/p_i$.
+Thus every field has exactly the prescribed marginal and all affine expected
+deviation payoffs are preserved.\end{proof}
+
+With $O$ public classes, $n$ items and $F$ fields, this representation uses at
+most $OnF+1$ variables rather than one variable per complete allocation. It does
+not remove counterfactual-world or report enumeration, preserve arbitrary joint
+event probabilities, or cover adaptive queries and nonunit costs. The history
+cap is item-local and therefore admits the same reduction. Marginal formulations
+and their implementability limitations are established in security games
+\cite{marginals}; the proposition gives the specific implementation argument
+needed for this valuation audit, not a claim to invent marginal optimization.
+
+Independent checks match compact and complete-enumeration values on all 32 original
+market fixtures and 24 multi-field affine fixtures. One larger algebraic fixture
+has 100 items, 4 fields, 8 public classes, 96 payoff rows and budget 10. Its compact
+LP has 3,201 variables, versus 18,662,296,388,649,543,921 complete allocations
+per class. All 57 numerical primal/dual certificates pass. The repaired sampler
+has 3,200 exactly checked rational field marginals across 111 interval pieces;
+16,000 numerical draws respect hard capacity. The large full-enumeration solver
+was not run, so this is a representation comparison, not a measured speedup.
+
+\paragraph{A capacity-related global-mixture gap.}
+Consider $n>B\ge1$, a fixed core $C$ of size $B$, and public contexts
+$j\in\{B+1,\ldots,n\}$. In context $j$, potential quote gaps are 2 for core
+items, 1 for item $j$, and $\epsilon=1/(B+2)$ for every other item. These are
+linear toy utility units. Use the honest-exact missingness-alias worlds from
+the preceding construction. All items are query-eligible in the all-missing report.
+
+The reference library contains \emph{all} fixed item-priority orders and a risk
+rule using these exact gaps, but employs one context-independent mixing vector.
+Every priority rule selects a fixed $B$-subset. Risk always selects the core,
+because $2>1>\epsilon$, without relying on a cutoff tie. Thus the global mixture
+has the same query marginals in every context, whereas a publicly conditioned
+mechanism may change them with $j$.
+
+\begin{proposition}[Global-mixture separation]
+In this family the optimal worst gains are
+\[
+ T_{\rm global}=\frac{2(n-B)}{2n-B},\qquad
+ T_{\rm context}=\frac{2}{B+2}.
+\]
+Their ratio is $(B+2)(n-B)/(2n-B)$. Taking $n=B^2+B$ makes the ratio
+$B(B+2)/(2B+1)$, which grows without bound with $B$.
+\end{proposition}
+\begin{proof}
+A global mixture with value $t$ must satisfy $2(1-p_i)\le t$ for each core
+item and $1-p_i\le t$ for each other item, using the context in which that
+item is active. Summing gives $B\ge n-t(B/2+n-B)$ and the stated lower bound.
+It is attained with core marginal $1-T_{\rm global}/2$ and other marginal
+$1-T_{\rm global}$. These sum to $B$ and are implementable as a lottery over
+$B$-subsets, all represented by fixed priorities. In one public context, the
+$B$ core items and active item imply $B\ge B+1-t(B/2+1)$. Set core marginal
+$(B+1)/(B+2)$, active-item marginal $B/(B+2)$ and all others zero to attain the
+bound. The low-gap unqueried items have gain $\epsilon<T_{\rm context}$.
+Both constructions use the preceding hard-budget sampling argument.
+\end{proof}
+
+We checked rational primal/lower-bound witnesses on 26 predetermined $(n,B)$
+cases and 257,274 context--item rows. Sixteen small cases also match independently
+constructed complete-subset LPs for both policy classes. At $B=20,n=420$, the
+ratio is $440/41\approx10.73$. This is a constructed limitation of global mixing over the specified
+context-insensitive rule library; it does not establish that real-source
+CDM losses arise from this mechanism or that these bounds are first in the literature.
+
+\paragraph{A stronger small-library comparator.}
+The separation concerns the information used by the rules, not fixed mixture
+weights alone. Add $B+1$ deterministic context-aware rules: one queries every
+core item; rule $i$ replaces core item $i$ with the publicly active item.
+Give the first rule weight $2/(B+2)$ and each replacement rule weight $1/(B+2)$.
+The weights are fixed across contexts. Every draw uses exactly $B$ queries,
+while each core item's marginal is $(B+1)/(B+2)$ and the active item's marginal
+is $B/(B+2)$. Thus this small library attains $T_{\rm context}$ without solving
+a new LP at deployment. The previous lower bound proves its optimality within
+the constructed family. It does not imply an unseen-context guarantee for
+learned rules on vehicle records.
+
+An independent exact-arithmetic extension checks all 26 cases, 15,922
+context--rule allocations and 257,274 context--item losses. Freezing the active
+item or changing the weights to uniform fails the optimum check. Consequently,
+this family supports a representation limitation of the original library,
+not an intrinsic advantage of dynamically chosen weights or an LP solver.
+This stronger comparator must be retained in subsequent algorithm evaluations.
+
+\paragraph{Closest-work boundary.}
+Strategic missingness in regression already appears in support-margin
+imputation \cite{smi}; moving from classification to continuous quotation is
+therefore not a novelty claim. The main manuscript includes a separately
+audited categorical SMI adaptation, with its assumptions and fallback rates.
+Its SVR margin is not the uniform honest-quote-error condition used in our
+precision frontier.
+
+Budgeted minimization of incentives to misreport already appears in audit
+models: threshold UNIFORM optimality and top-$k$ results are established in
+\cite{audits}. General randomized partial-verification optimization and
+combinatorial objectives are covered in \cite{partial}. Truthful withheld-data
+classification has minimum-cut and MAX-ensemble characterizations \cite{withheld}.
+Our candidate claims must therefore concern the particular precision frontier,
+context-mixture separation and audited recovery-path effects, with these tools
+credited to prior work. Contextual regret already compares context-to-action
+policies against fixed actions \cite{contextual}; that repeated-game result is
+not our static allocation bound. A recent preprint gives feature-channel audit
+allocation and a water-filling characterization \cite{auditrisk}. Its penalty-based
+classification model differs from failed, charged field recovery, but rules out
+presenting feature-level budget optimization itself as new. Neither comparison
+establishes priority for our specific frontier or separation construction.
+
+The randomized-versus-deterministic gap in Example~1 of \cite{partial}
+is also distinct from our restricted-library comparison: our global comparator
+already randomizes, and the $B+1$ context-aware library closes the constructed
+gap. Neither the existence of an unbounded gap nor an LP formulation is a new
+principle. The partial-verification model optimizes over a reporting relation;
+encoding active recovery transcripts into a richer outcome space could connect
+our finite oracle to that framework. We do not claim non-representability or
+a new general mechanism-design algorithm merely from different terminology.
+
+\paragraph{Training and randomization boundary.}
+Repeated training under strategic distribution changes already belongs to
+performative prediction \cite{performative}. Its repeated-gradient analysis does
+not require differentiating the full induced-risk map, so freezing a response
+within an update is not itself a new principle. Strategic empirical risk
+minimization with differentiable response proxies is also established \cite{serm}.
+Our discrete-response, frozen-probability updates are a particular surrogate,
+not an exact solution of that bilevel objective. Randomized strategic empirical
+risk and expected-utility responses have also been analyzed \cite{randomized}.
+We randomize hard-budget field recovery, but changing the randomized object
+does not prove that a sufficiently rich prior hypothesis class cannot represent
+the same policy. Moreover, optimal randomized-versus-deterministic class
+comparisons do not guarantee that our score-minimax heuristic beats top-$B$.
+The claimed convergence and generalization results of these papers are not
+transferred to our nonconvex finite-round training and batch-dependent responses.
+Joint score/audit design is already explicit in \cite{auditrisk}; any additional
+value here must be established for failed-but-charged recovery and the matched
+learning intervention, rather than for the combination in the abstract.
+
+\section{A nondegenerate mechanism decomposition}
+\noindent\textbf{Takeaway.} Freezing truthful queries cannot separate recovery
+from capacity in this replay model; use a capacity-relaxed public query instead.
+
+For each fixed peer profile and evaluated mixture, retain its saved maximizing
+own report $h^*$. Let $q_0$ be the truthful quote, $q_h$ the unqueried reported
+quote, $q_L$ the quote after the same rule's highest-scoring eligible query with
+capacity relaxed, and $q_A$ the hard-budget quote. Ineligible or nonpositive
+scores still cause no query in the relaxed reference. Then
+\begin{align}
+E &= q_h-q_0, & R&=\mathbb{E}[q_L]-q_h,\\
+C &=\mathbb{E}[q_A]-\mathbb{E}[q_L], & G&=E+R+C.
+\end{align}
+All components are signed and evaluated at the same $h^*$. Mixture expectation
+precedes report maximization. The relaxed query is a diagnostic, not a feasible
+deployment policy. The original truthful-query anchor would give zero recovery:
+that query targets a naturally absent field, which remains absent when another
+field is withheld. Its remaining term would conflate recovery and capacity.
+
+Across all nine source/seed pairs and both price models at 10\% capacity,
+360,000 component rows were independently reconstructed by complete stable
+sorting of each hypothetical batch. The audit checked 11,343,240 legal
+rule--world allocations and rejected four output mutations. Eighty-one saved
+winners differed from freshly computed argmax labels only through floating
+ties; the largest payoff gap was $6.94\times10^{-18}$. Original winners were
+retained. The initial argmax-identity failure is preserved in a separate run.
+
+Positive $R$ can occur: hiding two fields and recovering one can move a
+nonmonotone estimator to an intermediate record with a higher quote. This
+motivates the following developmental mechanism experiment. It is not evidence
+that all original SAV advantages or failures have been causally explained.
+
+\section{Verification-history cap}
+\noindent\textbf{Takeaway.} Removing quote increases along the realized recovery
+path gives a conditional unilateral-gain guarantee without changing truthful quotes.
+
+For every realized allocation, use
+\begin{equation}
+ q_{\rm cap}(r,a)=\min\{q(r,\varnothing),q(r,a)\}.
+\end{equation}
+Apply this operation before averaging over a policy mixture. The underlying
+public scores, query budget, model and mixture weights are fixed.
+
+\begin{proposition}
+If truthful queries cannot alter the fixed itemwise quote, then for any fixed
+peer profile and any fixed policy mixture the cap preserves the truthful quote
+and weakly reduces the worst expected unilateral gain over legal own reports.
+\end{proposition}
+\begin{proof}
+Pointwise $q_{\rm cap}(h,a)\le q(h,a)$, whereas
+$q_{\rm cap}(0,a)=q(0,a)=q_0$ for every realized action. Subtracting the same
+truthful quote, taking expectations and then maximizing over legal $h$ preserves
+the inequality. The null deviation yields zero.\end{proof}
+
+The mechanism deliberately uses verification history. It lies outside the
+verification-neutral class in Equation~\eqref{eq:frontier}, so it cannot be used
+to claim a violation of that bound. Equal final records can have different
+prices under the cap. The guarantee concerns fixed peers and scores; a new
+seller-response profile can change allocations and outcomes. Lower quotes need
+not have lower absolute pricing error.
+
+\begin{table}[ht]
+\centering\small
+\caption{Primary descriptive comparison: robust frozen estimator, 10\% capacity.
+Mean worst unilateral log-quote gain, equally averaging five fixed peer profiles
+and three seeds. No confidence interval or practical-threshold pass is asserted.}
+\begin{tabular}{llrrr}\toprule
+Source & Rule & Original & Capped & Reduction (\%)\\\midrule
+jucars & benefit & 0.010473 & 0.009736 & 7.04 \\
+jucars & cdm & 0.010389 & 0.010041 & 3.36 \\
+jucars & risk & 0.010748 & 0.010748 & 0.00 \\
+jucars & suppression & 0.010546 & 0.010007 & 5.11 \\
+mucars & benefit & 0.007412 & 0.006486 & 12.49 \\
+mucars & cdm & 0.006780 & 0.006399 & 5.62 \\
+mucars & risk & 0.006540 & 0.006540 & 0.00 \\
+mucars & suppression & 0.007607 & 0.006984 & 8.18 \\
+synthetic & benefit & 0.011395 & 0.010699 & 6.11 \\
+synthetic & cdm & 0.011560 & 0.011244 & 2.74 \\
+synthetic & risk & 0.011423 & 0.011423 & 0.00 \\
+synthetic & suppression & 0.012591 & 0.012085 & 4.01 \\
+\bottomrule\end{tabular}
+\end{table}
+
+The full comparison includes both estimators and all six capacities: 108 cases,
+5,671,620 legal report rows and 2,160,000 entry--method comparisons. A separate
+auditor reconstructs absolute quotes rather than reusing the signed-gain cap
+calculation. All truthful quotes are unchanged and all fixed-profile envelopes
+weakly decrease within tolerance $10^{-10}$. Risk has zero improvement in the
+primary table and is retained as a strong reference. These are additional
+conditional diagnostics, not new ten-seed training experiments.
+
+
+\section{Recomputed common responses and multiobjective effects}
+\noindent\textbf{Takeaway.} The cap's inflation reductions survive the saved
+response heuristic in this study, but attacked error and failed-query rates
+can worsen. This is an empirical result, not an extension of the fixed-peer theorem.
+
+We recomputed reports for every source/seed/estimator/capacity/rule cell, using
+the original four starts and up to 20 sweeps, frozen public scores and unchanged
+mixture weights. The uncapped baseline uses the independently audited original
+responses. All 432 new cells and 432,000 listing outcomes were replayed by an
+independent full-sort auditor. It checked 5,300 supported complete-rule batch
+allocations and 5,570,112 legal rule--deviation outcomes. The auditor reconstructs
+final quotations, currency absolute errors, query failures and remaining unilateral
+regret; it does not certify a globally optimal joint response or every search step.
+
+\begin{table}[ht]
+\centering\small
+\caption{Recomputed common-response comparison at 10\% capacity with the robust
+estimator, averaged over three seeds. Positive inflation reduction is favorable;
+positive attacked-MAE change and failed-query change are unfavorable. Failure
+change is percentage points per listing, not the conditional failure/query rate.}
+\begin{tabular}{llrrr}\toprule
+Source & Rule & \shortstack{Inflation\\reduction (\%)} & \shortstack{MAE\\change (\%)} & \shortstack{Failure\\change (pp)}\\\midrule
+synthetic & suppression & 4.82 & -0.079 & +0.400 \\
+synthetic & benefit & 7.72 & -0.147 & +0.467 \\
+synthetic & risk & 3.70 & -0.122 & +0.133 \\
+synthetic & cdm & 1.07 & -0.081 & +0.160 \\
+jucars & suppression & 9.70 & +0.070 & +0.333 \\
+jucars & benefit & 12.44 & +0.080 & +0.800 \\
+jucars & risk & 0.61 & +0.002 & +0.000 \\
+jucars & cdm & 7.71 & +0.018 & +0.300 \\
+mucars & suppression & 7.62 & -0.038 & +0.133 \\
+mucars & benefit & 11.76 & -0.030 & +0.200 \\
+mucars & risk & 1.11 & +0.005 & +0.033 \\
+mucars & cdm & 4.76 & -0.019 & +0.067 \\
+\bottomrule\end{tabular}
+\end{table}
+
+Across all 432 paired cells, inflation decreases in 279 and is unchanged in 153
+within numerical tolerance. Attacked MAE decreases in 185 cells, is unchanged
+in 153, and increases in 94. Failed-query probability increases in 145 cells,
+decreases in 4, and is unchanged in 283. Honest MAE is unchanged throughout.
+These cell counts are descriptive; cells share records and fitted models.
+
+Thirty-three capped cells contain at least one batch with remaining unilateral
+regret above the convergence tolerance, compared with 34 original cells. The
+maximum capped regret is 0.204423 log units. We retain these cases. In the primary
+robust benefit comparison, one synthetic seed has one nonconverged batch, with
+maximum regret 0.029232; the JUCars and MUCars primary benefit batches pass the
+specified local regret check. Therefore no result is described as a certified
+market equilibrium.
+
+For the 12 primary source/rule contrasts, we compute unadjusted 95\% percentile
+intervals from 1,000 paired resamples of the ten shared batches, first averaging
+the three fixed fitted-seed outcomes within each batch. These are conditional
+evaluation-batch intervals, not training-population intervals or 30 independent
+batch replicates. For benefit, the absolute inflation-reduction intervals are
+$[0.000388,0.001252]$ (synthetic), $[0.001207,0.001586]$ (JUCars), and
+$[0.000842,0.000995]$ (MUCars). The JUCars and MUCars point reductions satisfy
+the original 10\% inflation/5\% honest-error criterion with a positive conditional
+interval, but that criterion does not constrain attacked error or query failures.
+In particular, JUCars attacked MAE increases by 0.080\%.
+
+Risk had no change in the earlier primary fixed-profile table, but can change
+under the newly computed profiles. The comparisons condition on different peer
+reports, so these findings are compatible. The existing fixed-profile theorem
+must not be used as a common-response or Pareto-dominance guarantee.
+
+\section{Source-complete ten-seed extension: synthetic}
+\noindent\textbf{Takeaway.} Increasing the fitting-seed count preserves the
+negative synthetic result against the original static robust comparator.
+This section uses ten seeds; preceding cap experiments retain three.
+
+We combine original seeds 13, 42 and 2026 with predetermined seeds 101, 211,
+307, 401, 503, 601 and 701 under the same original protocol. All ten synthetic
+checkpoints pass the source-binding, split, model-receipt and recorded-outcome
+checks: 620 method/capacity cells and 620,000 listing outcomes. These outcome
+rows are repeated predictions, not independent evaluation examples. The design
+contains 1,000 unique evaluation listings in ten shared batches of 100,
+with ten fitting-seed realizations on fixed training records. JUCars and MUCars
+are reported separately below; the completed union covers all thirty source/seed pairs.
+
+At 10\% capacity, SAV mean positive log-quote inflation is 0.021175 versus
+0.012084 for static robust without feedback, a 75.23\% increase. Table~\ref{tab:tenseed}
+retains all five original contrasts. The benefit-head variant is the original
+feedback-trained variant; it is not the separately tuned ordinary-benefit
+benchmark. This extension does not isolate estimator, acquisition and feedback
+factors, and it must not be presented as the matched factorial experiment.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Original comparator & Comparator minus SAV & Nominal 95\% interval\\
+\midrule
+Benefit head & $-0.004328$ & $[-0.007774,-0.001215]$\\
+Static robust & $-0.009091$ & $[-0.012355,-0.006323]$\\
+Masking benefit & $0.029153$ & $[0.024928,0.033582]$\\
+SAV without gap & $0.017007$ & $[0.014282,0.019794]$\\
+Pre-audit attacker & $-0.007556$ & $[-0.010444,-0.004923]$\\
+\bottomrule
+\end{tabular}
+\caption{Synthetic, original protocol, ten fitting seeds and 10\% capacity.
+Positive paired inflation differences favor SAV. Intervals are exploratory,
+unadjusted percentile intervals from 1,000 crossed seed/batch resamples.}
+\label{tab:tenseed}
+\end{table}
+
+For each contrast we construct the ten-seed by ten-batch paired difference
+matrix. We independently resample seed indices and shared batch indices,
+retaining their crossed grid and within-cell method pairing. These intervals
+capture empirical fitting-seed and evaluation-batch variation conditional on
+the training records; they do not capture training-population uncertainty.
+Only ten batch clusters are available, so nominal coverage is not established.
+No multiplicity correction or confirmatory hypothesis-test claim is made.
+An independent checker reconstructs all five contrasts and bootstrap endpoints
+from raw outcome records using count-weighted resampling, and rejects altered
+effect direction, interval endpoints and missing-seed inputs.
+
+
+\section{Ten-seed extension: JUCars and sensitivity to seed variability}
+\noindent\textbf{Takeaway.} The original-protocol JUCars result does not support
+a stable SAV advantage, and its uncertainty depends materially on including
+fitting-seed variation.
+
+The same ten-seed source-binding and recorded-outcome audit covers 620 JUCars
+method/capacity cells and 620,000 outcome rows, again representing 1,000 unique
+evaluation listings in ten shared batches. All five raw-record contrasts and
+bootstrap endpoints pass independent reconstruction. At 10\% capacity, SAV
+inflation is 0.014988 versus 0.012082 for static robust, a 24.05\% increase.
+The comparator-minus-SAV difference is $-0.002906$. Its fixed-seed batch-only
+interval is $[-0.003783,-0.002103]$, whereas the crossed seed/batch interval is
+$[-0.007025,0.000777]$. The latter includes zero. This is uncertainty about a
+paired effect, not evidence of equivalence or a demonstrated source interaction.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Original comparator & Comparator minus SAV & Nominal 95\% interval\\
+\midrule
+Benefit head & $0.001252$ & $[-0.000172,0.002946]$\\
+Static robust & $-0.002906$ & $[-0.007025,0.000777]$\\
+Masking benefit & $0.005030$ & $[0.001649,0.007985]$\\
+SAV without gap & $0.019588$ & $[0.016131,0.023292]$\\
+Pre-audit attacker & $-0.001037$ & $[-0.002428,0.000303]$\\
+\bottomrule
+\end{tabular}
+\caption{JUCars, original protocol, ten fitting seeds, 10\% capacity.
+Positive differences favor SAV. Crossed seed/batch percentile intervals use
+1,000 resamples, are exploratory and unadjusted, and condition on fixed
+training records. The limitations stated for the synthetic extension apply.}
+\end{table}
+
+\section{Ten-seed extension: MUCars completes the source comparison}
+\noindent\textbf{Takeaway.} The original-protocol MUCars extension does not
+establish a stable advantage over static robust or the original benefit head.
+This comparison differs from the separately tuned ordinary-benefit benchmark.
+
+The completed three-source union contains thirty source/seed pairs, 1,860
+method/capacity cells and 1,860,000 repeated outcome rows. Each source still
+contains only 1,000 unique evaluation items. An independent raw-record checker
+reconstructs all fifteen paired contrasts and both bootstrap definitions.
+At 10\% capacity, MUCars SAV inflation is 0.007340 against 0.006511 for static
+robust, a 12.73\% increase. The crossed interval includes zero; this neither
+establishes superiority nor demonstrates equivalence. Against the original
+benefit head, SAV inflation is 3.53\% higher, also with an interval spanning zero.
+The large gains against masking benefit and SAV without gap remain, illustrating
+why comparator identity must accompany any statement that MUCars favors SAV.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrr}
+\toprule Original comparator & Comparator minus SAV & Nominal 95\% interval\\
+\midrule
+Benefit head & $-0.000250$ & $[-0.001092,0.000488]$\\
+Static robust & $-0.000829$ & $[-0.001870,0.000210]$\\
+Masking benefit & $0.039742$ & $[0.036708,0.042906]$\\
+SAV without gap & $0.015624$ & $[0.014036,0.017120]$\\
+Pre-audit attacker & $0.000580$ & $[-0.000212,0.001238]$\\
+\bottomrule
+\end{tabular}
+\caption{MUCars, original protocol, ten fitting seeds, 10\% capacity.
+Positive differences favor SAV. Crossed seed/batch percentile intervals use
+1,000 resamples and retain the fixed-training-record, exploratory and
+unadjusted interpretation of the other two source extensions.}
+\end{table}
+
+\section{Matched allocation intervention: conditional gains and reversals}
+\noindent\textbf{Takeaway.} Score-minimax allocation can help with a robust
+price model, but the same intervention can worsen inflation with a masking
+model. It is not a universal replacement for top-$B$.
+
+This separate experiment retains the original three seeds and frozen price
+models. It crosses three sources, two price models, three public acquisition
+scores and two allocators at 10\% capacity: 108 cells and 108,000 outcome rows.
+Seller responses are recomputed for each allocator. The independent evaluator
+reconstructs 1,080 method/batch cells, 1,134,324 legal unilateral deviations,
+model outputs, allocations and expected-error arithmetic. A second checker
+rebuilds all eighteen contrasts, five metrics, resampling intervals, decision
+gates and pointwise dominance flags from the raw records. This is an allocation
+intervention conditional on frozen models, not the full feedback-training study.
+
+Table~\ref{tab:allocation} retains all eighteen contrasts. Only robust-benefit
+and robust-suppression on MUCars meet the pre-existing point criteria of at
+least 10\% inflation reduction and at most 5\% honest-MAE increase. They reduce
+inflation by 13.70\% and 13.05\%, but increase failed-query probability by
+0.060 and 0.128 percentage points. Honest MAE is unchanged in every contrast
+under these replay semantics. Ten of eighteen contrasts increase inflation;
+four have a positive lower endpoint for the inflation reduction. JUCars
+robust-benefit improves by 9.985\%, which does not meet the 10\% threshold.
+No threshold is relaxed after observing this near miss.
+
+\small
+\begin{longtable}{lllrrr}
+\caption{Allocation intervention at 10\% capacity. Positive inflation
+reduction favors score-minimax over top-$B$. Intervals are in log-inflation
+units, from 1,000 crossed resamples of three fitting seeds and ten shared
+batches, conditional on fixed training records; they are unadjusted.
+The final column is minimax minus top-$B$ failed-query probability in percentage
+points, so a positive value is an adverse change.}\label{tab:allocation}\\
+\toprule Source & Price & Score & Reduction (\%) & 95\% interval & Failure change\\
+\midrule\endfirsthead
+\toprule Source & Price & Score & Reduction (\%) & 95\% interval & Failure change\\
+\midrule\endhead
+jucars & masking & benefit & 0.49 & $[-0.00005,0.00027]$ & 0.204\\
+jucars & masking & risk & -3.26 & $[-0.00181,0.00009]$ & 0.015\\
+jucars & masking & suppression & -0.30 & $[-0.00024,0.00012]$ & -0.604\\
+jucars & robust & benefit & 9.99 & $[0.00065,0.00160]$ & 0.815\\
+jucars & robust & risk & 0.52 & $[-0.00029,0.00040]$ & -0.011\\
+jucars & robust & suppression & 8.00 & $[0.00044,0.00132]$ & -0.634\\
+mucars & masking & benefit & -0.51 & $[-0.00069,0.00013]$ & -0.043\\
+mucars & masking & risk & -36.94 & $[-0.01262,-0.00726]$ & -0.000\\
+mucars & masking & suppression & -0.55 & $[-0.00066,0.00009]$ & -0.041\\
+mucars & robust & benefit & 13.70 & $[0.00087,0.00128]$ & 0.060\\
+mucars & robust & risk & 0.13 & $[-0.00024,0.00024]$ & -0.000\\
+mucars & robust & suppression & 13.05 & $[0.00082,0.00126]$ & 0.128\\
+synthetic & masking & benefit & -47.57 & $[-0.02905,-0.01810]$ & -1.543\\
+synthetic & masking & risk & -49.33 & $[-0.02998,-0.01744]$ & -1.659\\
+synthetic & masking & suppression & -22.54 & $[-0.01618,-0.01067]$ & -1.597\\
+synthetic & robust & benefit & -6.65 & $[-0.00193,0.00038]$ & -1.186\\
+synthetic & robust & risk & -11.36 & $[-0.00221,-0.00037]$ & -0.928\\
+synthetic & robust & suppression & 2.34 & $[-0.00009,0.00085]$ & -0.633\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The multiobjective results qualify the apparent gains. MUCars robust-benefit
+and robust-suppression also reduce expected attacked MAE by 7.17 and 7.67
+source-currency units, but their failed-query increases prevent Pareto
+dominance. JUCars robust-benefit and robust-suppression increase attacked MAE
+by 2.06 and 0.62 units despite reducing inflation. Only JUCars robust-risk and
+synthetic robust-suppression weakly dominate top-$B$ on all four point metrics;
+neither has an inflation interval excluding zero. These point comparisons use
+a numerical tie tolerance, not a claim of practical equivalence.
+
+Ten top-$B$ response batches fail the convergence criterion (six synthetic
+masking-benefit and four synthetic masking-suppression); their maximum
+unilateral regret is 0.095752. The minimax responses have zero recorded final
+regret over the enumerated legal unilateral actions. All batches are retained.
+Thus the intervention includes its response-search consequences, and the
+observed reversals cannot be attributed solely to equilibrium allocation quality.
+The score objective remains a surrogate and does not prove general incentive
+optimality. The factorial study tests whether training feedback changes these
+conditional effects.
+
+\section{Matched factorial protocol: implementation status}
+\noindent\textbf{Takeaway.} The full controlled experiment has started;
+implementation checks are not yet evidence of a method advantage.
+
+The new design crosses two initial training objectives (mask-augmented and
+robust), three acquisition scores (suppression, benefit and risk), two policy
+feedback settings, and two allocators (top-$B$ and score-minimax). The initial
+objective factor is a new controlled intervention, not a relabeling of the
+original SAV and static-robust checkpoints. Each cell uses the same backbone
+architecture, six initial residual epochs and six subsequent epochs in two
+rounds, with matched record orders and head-refresh schedules. No-policy-feedback
+fits are shared across their six acquisition/allocation aliases, giving fourteen
+unique fits for twenty-four cells. The implemented sequence is:
+\begin{enumerate}
+\item For each of three outer folds, exclude its records from the complete
+training loop. Split the remaining records into estimator and head-guidance
+sets, using a guidance fraction of 0.3. Fit the augmented backbone and each
+six-epoch initial residual objective.
+\item Clone each initial model into one no-policy-feedback fit and six
+score/allocator-specific feedback fits. Run two three-epoch robust-update
+rounds. Refit the guidance head after each round, retaining identical record
+orders across the matched cells.
+\item At the start of each feedback epoch, compute public acquisition scores
+and hold them fixed during that epoch. Within each minibatch, use the current
+detached quotes to search seller responses, with two sweeps and one start at
+10\% capacity. Reallocate the batch for every candidate report. Update only
+the residual model using the resulting frozen response and probabilities.
+The no-policy-feedback control instead searches valid reports with no queries;
+it still receives the same six robust-update epochs.
+\item Predict every excluded fold with its corresponding trained model. Fit
+the deployment model through the same training sequence, then refit its
+160-tree deployment heads using the assembled outer-fold quote targets and
+the deployment model's encoded inputs. These heads are used for evaluation;
+the deployment residual model is not updated after this final head fit.
+\item Evaluate each fixed deployment model at capacities 0, 1, 5, 10, 20 and
+30\%, using four response starts and at most twenty sweeps. Compute expected
+quotes and errors analytically from the query marginals; retain every final
+profile and its independently checked unilateral regret.
+\end{enumerate}
+This protocol does not refit a separate model for each evaluation capacity.
+Effects away from 10\% therefore include transfer from the fixed training
+capacity. Evaluation uses stronger response search than training, but finite
+search still does not certify a global best-response equilibrium.
+
+For the score-minimax control, an item's highest positive publicly eligible
+score is $g_i$. We minimize $\max_i g_i(1-p_i)$ subject to $0\le p_i\le1$ and
+$\sum_i p_i\le B$, then realize the marginals with a private systematic draw.
+This is a score surrogate and an established resource-allocation construction;
+it is not a guarantee about report-dependent unilateral incentives. Every
+candidate seller report therefore triggers a fresh batch allocation in the
+response calculation.
+
+For a frozen within-step query marginal $p$, training uses the expected
+post-query squared error,
+\[
+ (1-p)(q_0-y)^2+p(q_1-y)^2
+ =((1-p)q_0+pq_1-y)^2+p(1-p)(q_1-q_0)^2.
+\]
+Taking squared error after averaging quotes would omit the variance term.
+The gain penalty instead uses the positive part of expected gain, matching
+the expected-utility objective. Gradients do not pass through the discrete
+report search, field selection or allocation probabilities; this remains a
+frozen-policy training surrogate.
+
+The subsequent robust update combines truthful squared error, a quarter-weighted
+mean squared error over valid report states, a quarter-weighted anchor to the
+backbone's truthful quote, and half-weighted expected attacked error and gain
+penalty. The declared weights and twelve-epoch total are common across matched
+cells. The distinction between expected squared error and squared expected
+quote is necessary for correct stochastic replay training; the variance identity
+itself is not a new mathematical result.
+
+For attribution, at fixed source, initial objective, acquisition score and
+capacity, let $L_{f,a}$ be an outcome under feedback setting $f$ and allocator
+$a$. We will report the interaction
+\[
+ D=(L_{\mathrm{none},\mathrm{minimax}}-L_{\mathrm{policy},\mathrm{minimax}})
+  -(L_{\mathrm{none},\mathrm{top}B}-L_{\mathrm{policy},\mathrm{top}B}).
+\]
+For loss-like outcomes, positive $D$ means feedback has a larger incremental
+benefit with minimax. Both constituent effects must also be shown: positive
+$D$ alone does not establish that either feedback policy is beneficial. The
+fixed analysis contract contains 58 conditional factor contrasts per
+source/capacity, including six feedback--allocation interactions. The primary
+capacity therefore has 174 exploratory contrasts, all retained rather than
+screened for favorable directions. No individual unadjusted interval is treated
+as a confirmatory finding across this family.
+
+A small synthetic end-to-end check covers twenty-four cells at two budgets,
+960 outcome rows and 10,032 independently reconstructed legal unilateral
+quotes. This validates execution only. The launched full experiment uses the
+ten predetermined seeds, three sources, three outer folds and all six original
+capacities, with 10\% capacity evaluated first. Completed performance results,
+interaction estimates and full independent audits are still pending.
+An additional training auditor reconstructs hash-ranked partitions, matched
+minibatch orders and held-out predictions, then independently builds the
+deployment-head targets and refits every decision tree. On the completed
+execution fixture it reproduces 840 held-out prediction rows and fourteen
+deployment heads, including tree structure and leaf values, and rejects altered
+partitions, permutations and predictions. All ten synthetic full-size fits have also passed this audit:
+700,000 held-out prediction rows and 140 independently refitted heads.
+This is partial coverage of the thirty configured source--seed pairs. This audit validates recorded fit provenance and head targets;
+it does not replay every optimizer step or establish scientific performance.
+
+\section{Conditional stability of verification probabilities}
+\noindent\textbf{Takeaway.} Randomized allocation admits a conditional
+sensitivity bound, but small field margins and scores near zero limit its
+applicability. Stability alone does not imply lower strategic inflation.
+
+Fix the positive-score support $I$, the queried field of each item, and budget
+$B$. For two score vectors $g,g'$ with all supported scores at least $m>0$, let
+$\delta=\|g-g'\|_\infty$. Define the score-minimax value and canonical marginals
+\[
+ T(g)=\min_{0\leq p\leq1,\,\sum_i p_i\leq B}\max_{i\in I}g_i(1-p_i),
+ \qquad p_i(g)=[1-T(g)/g_i]_+.
+\]
+For $B=0$ use zero marginals; for $B\geq |I|$ use unit marginals on $I$.
+Then
+\[
+ |T(g)-T(g')|\leq\delta,\qquad
+ \|p(g)-p(g')\|_\infty\leq\min\{1,2\delta/m\}.
+\]
+For any fixed feasible allocation, the two objectives differ by at most
+$\delta$, which proves the value bound after minimization. The function
+$h(t,x)=[1-t/x]_+$ is separately $1/m$-Lipschitz in $t$ and $x$ for
+$t\geq0,x\geq m$: on its positive branch, $t/x^2\leq1/x$, and it is
+continuous at the branch boundary. Applying the value bound proves the
+marginal bound. The active allocation set may change; positive-score support
+and queried fields must remain fixed.
+
+If both pre-query and recovered quotes change by at most $\epsilon$, and the
+primed recovery span is at most $R$, expected quotes differ by at most
+$\epsilon+R\min\{1,2\delta/m\}$. If these conditions hold uniformly over
+all own reports at fixed peer reports, costs are unchanged, and truthful
+quotes are verification-neutral, the positive unilateral-gain envelope changes
+by at most $2\epsilon+R\min\{1,2\delta/m\}$. This is not a guarantee for
+adapted peer responses, equilibrium selection, training convergence, or a
+fixed realization of the sampling randomness.
+
+Three examples delimit the claim. With two items and $B=1$, swapping scores
+$(1+\delta,1)$ and $(1,1+\delta)$ changes the first item's top-$B$ probability
+by one, but its minimax probability by $\delta/(2+\delta)$. In contrast,
+swapping $(2\delta,\delta)$ and $(\delta,2\delta)$ changes its minimax
+probability by $1/3$ even as $\delta$ tends to zero. Finally, one fully queried
+item with two fields whose scores swap as in the first example can have a
+unit quote jump if the two recovery quotes are zero and one. The score lower
+bound and fixed-field condition therefore cannot simply be removed.
+An exact-arithmetic checker covers 2,916 score-pair/budget cases, including
+510 active-set changes; 108 production/linear-program comparisons agree to
+floating-point precision. These finite checks supplement the proof.
+
+We additionally audited all 1,080 saved fixed-profile batch executions at
+hypothetical radii $\delta=\alpha\operatorname{median}(g_i:g_i>0)$.
+A sufficient certificate requires support preservation and every positive
+item's top-two field gap to exceed $2\delta$. Its bound uses
+$m=\min_{i\in I}g_i-\delta$. Recovery spans are reconstructed for every
+eligible item, including items not queried by a saved top-$B$ allocation.
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$\alpha$ & Minimax conditions & Probability bound $<1$ & Top-$B$ constant\\
+\midrule
+0.001 & 471 & 468 & 401\\
+0.01 & 401 & 353 & 212\\
+0.05 & 267 & 245 & 53\\
+0.1 & 244 & 242 & 39\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each row has 1,080 batch executions, including both generating allocators;
+these are dependent diagnostic cases, not independent statistical replicates.
+Top-$B$ is locally constant when the same support/field conditions and its
+selection-rank margin hold (or all positive items fit). Its certificate is
+stronger than a nonzero sensitivity bound, so counts do not establish an
+ordering of stability. Failure to certify is not evidence of instability.
+An independent checker reconstructs all 4,320 condition rows and 144 grouped
+summaries using exact fractions of the stored scores and radii; displayed
+quote bounds remain floating-point approximations. The radii are not calibrated
+prediction errors. These post-hoc diagnostics neither establish performance
+improvement nor explain source effects causally. General water-filling
+sensitivity is established literature; priority for this application-specific
+bound is not claimed.
+
+\section{Claims and evidence}
+\noindent\textbf{Takeaway.} The supported contribution is a bounded information
+frontier and an audited verification-path mechanism. General superiority and
+feedback attribution require evidence beyond the current completed results.
+
+\small
+\begin{longtable}{p{0.23\textwidth}p{0.32\textwidth}p{0.35\textwidth}}
+\caption{Claim--evidence matrix. Positive comparator-minus-SAV differences
+favor SAV. Running studies are explicitly separated from completed evidence.}\\
+\toprule
+Claim & Decisive evidence & Verdict and boundary\\
+\midrule
+\endfirsthead
+\toprule Claim & Decisive evidence & Verdict and boundary\\\midrule
+\endhead
+C1. A precision--incentive frontier is tight. & Restricted missingness-alias proof and 32-case finite oracle. & Supported in the stated family; uniform honest error and verification-neutral quotes required.\\
+\addlinespace
+C2. Marginals replace complete allocation lotteries. & 57 compact cases; 56 comparisons with complete enumeration. & Supported for item-local utility, unit costs and at most one field per item; marginal optimization is established prior work.\\
+\addlinespace
+C3. The fixed-priority library can have an unbounded gap. & 26 exact cases; a fixed mixture of $B+1$ context-aware rules closes the constructed gap. & Supports a restriction on rule information; does not establish an advantage of dynamic weights or the LP solver.\\
+\addlinespace
+C4. A verification-history cap reduces fixed-profile incentives. & Pointwise replay argument and exhaustive fixed-profile evaluation. & Supported for fixed peer reports and the stated truthful replay; not an equilibrium theorem.\\
+\addlinespace
+C5. The cap improves every measured objective after recomputed responses. & 432 cells: 94 attacked-error increases and 145 failed-query increases. & Not supported. Inflation reductions do not imply Pareto dominance.\\
+\addlinespace
+C6. SAV consistently beats static robust at 10\% capacity. & Ten-seed paired difference: synthetic -0.009091; JUCars -0.002906; MUCars -0.000829. & Not supported. Synthetic is unfavorable with an interval excluding zero; both real-source intervals include zero.\\
+\addlinespace
+C7. Score-minimax allocation consistently improves outcomes. & 108 audited cells; 18 independently checked contrasts; only two pass the point gate, while ten worsen inflation. & Not supported generally. MUCars robust gains coexist with failed-query increases; feedback attribution remains pending.\\
+\addlinespace
+C8. The source-specific effects are caused by feedback training. & A matched 24-cell, ten-seed nested experiment is running. & Pending. Existing unmatched comparisons do not isolate the feedback contribution.\\
+\addlinespace
+\bottomrule
+\end{longtable}
+\normalsize
+
+The information frontier and recovery-path findings answer different questions.
+The frontier limits what verification can guarantee under observationally
+indistinguishable missingness; the recovery analysis shows how an otherwise
+valid query can change the quotation adversely. Together they support auditing
+both the information available to an allocator and the quotation after recovery.
+The compact formulation supplies an exact finite reference, while the small
+context-aware rule library shows why a solver advantage cannot be inferred
+from a restricted comparator alone.
+
+For deployment, the history cap is a conditional intervention whose attacked
+error and failed-query effects need to be measured alongside inflation. The
+source-specific SAV results similarly support local validation against static
+robust and simple acquisition controls. They do not justify selecting SAV as
+a universal default. The running factorial experiment asks whether matched
+feedback and allocation interventions explain these differences; until it is
+complete, estimator differences and response-search behavior remain rival
+explanations. Fitting-seed resampling alone cannot establish uncertainty over
+new training populations.
+
+The current artifacts are local and the addendum remains separate from the
+fully integrated submission manuscript. Establishing priority for the specific
+frontier, completing the running experiments and finalizing the public evidence
+package remain necessary before submission claims are finalized.
+
+\begin{thebibliography}{99}
+\bibitem{jucarsdata} N. Thalji.
+JUCars-2024: A Dataset of Used Car Listings in Jordan.
+Mendeley Data, version 2, 2026. doi:10.17632/ddcz486x5t.2.
+\bibitem{mucarsdata} E. Tabarnoust, M. Mghari and Y. Zaz.
+Moroccan Used Cars Dataset (MUCars -- 2024).
+Mendeley Data, version 2, 2024. doi:10.17632/vjrbcb2rrt.2.
+\bibitem{marginals} J. Letchford and V. Conitzer.
+\emph{Solving Security Games on Graphs via Marginal Probabilities}.
+AAAI, 2013, pp. 591--597. \url{https://doi.org/10.1609/aaai.v27i1.8688}.
+\bibitem{audits} A. Estornell, S. Das and Y. Vorobeychik.
+\emph{Incentivizing Truthfulness Through Audits in Strategic Classification}.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+35(6):5347--5354, 2021. \url{https://doi.org/10.1609/aaai.v35i6.16674}.
+\bibitem{withheld} A. K. Krishnaswamy, H. Li, D. Rein, H. Zhang and V. Conitzer.
+\emph{Classification with Strategically Withheld Data}.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+35(6):5514--5522, 2021. \url{https://doi.org/10.1609/aaai.v35i6.16694}.
+\bibitem{partial} H. Zhang, Y. Cheng and V. Conitzer.
+\emph{Automated Mechanism Design for Classification with Partial Verification}.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+35(6):5789--5796, 2021.
+Version examined: \url{https://arxiv.org/abs/2104.05182v1}.
+\bibitem{contextual} P. G. Sessa, I. Bogunovic, A. Krause and M. Kamgarpour.
+\emph{Contextual Games: Multi-Agent Learning with Side Information}.
+NeurIPS, 2020.
+\url{https://papers.nips.cc/paper/2020/file/f9afa97535cf7c8789a1c50a2cd83787-Paper.pdf}.
+\bibitem{auditrisk} R. Ebrahimi and M. Franceschetti.
+\emph{Strategic Classification Has a Missing Lever: Audit Risk}.
+arXiv:2609.22534v1, 18 September 2026, preprint.
+\url{https://arxiv.org/abs/2609.22534}.
+\bibitem{smi} J. Zhang, X. Liu and X.-B. Li.
+\emph{Predictive Analytics with Strategically Missing Data}.
+INFORMS Journal on Computing, 32(4):1143--1156, 2020.
+\url{https://doi.org/10.1287/ijoc.2019.0947}.
+\bibitem{performative} J. Perdomo, T. Zrnic, C. Mendler-D\"unner and M. Hardt.
+\emph{Performative Prediction}. ICML, PMLR 119:7599--7609, 2020.
+\url{https://proceedings.mlr.press/v119/perdomo20a.html}.
+\bibitem{serm} S. Levanon and N. Rosenfeld.
+\emph{Strategic Classification Made Practical}. ICML, PMLR 139:6243--6253, 2021.
+\url{https://proceedings.mlr.press/v139/levanon21a.html}.
+\bibitem{randomized} J. Geary and H. Gouk.
+\emph{Strategic Classification with Randomised Classifiers}.
+arXiv:2502.01313v1, 2025, version examined.
+\url{https://arxiv.org/abs/2502.01313v1}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "exact_cases": 26,
+  "full_subset_lp_pairs": 16,
+  "exact_context_item_rows": 257274,
+  "seconds": 1.4145948886871338,
+  "largest_ratio": "440/41",
+  "files": {
+    "checker_snapshot.py": "4bdfbfcef9aa0eb4d45b96582d2870f25d9ec587d64d9d4b5afb4e8424278548",
+    "cases.json": "78613db9c9122708dc9220d871cad445301ccc8f54a3dd23f29b49b322dc4ac0",
+    "input_binding.json": "894be932e89a76c1ec81da7cdf69f90b1cd438c757a03fb3b4547fcd0df1cf59"
+  },
+  "scope": "constructed publicly observable context family; exact rational lower/primal witnesses and small complete-subset LPs; no real-source or first-in-literature guarantee"
+}

@@ -1,0 +1,156 @@
+\section{Introduction}
+Information about condition, usage and configuration is central to the
+valuation of used goods. Quality uncertainty in such markets has a long
+economic history~\cite{akerlof1970lemons}, as do models of voluntary
+disclosure~\cite{grossman1981disclosure,milgrom1981news}. A prediction system
+adds a concrete disclosure incentive: a seller may omit a recorded attribute
+if doing so raises its estimated price. Training an accurate predictor on
+ordinary listings does not by itself establish that its quotes remain
+accurate after sellers respond to its deployment.
+
+Consider two alternative source states for the same vehicle listing,
+holding its identifier, other public inputs and peer reports fixed.
+In both, reported mileage is absent. In the first state the seller has
+withheld a recorded mileage of 140,000 km; in the second the source never
+recorded mileage. The number is illustrative. Before a query, a
+platform cannot distinguish these cases from the report alone. A rule that
+uses a simulation's concealment flag to select queries would therefore
+receive information unavailable in deployment. After a query, a replay
+may recover the recorded value in the first case and fail in the second.
+Both attempts consume capacity. Figure~\ref{fig:missingness} makes this
+information boundary explicit.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/missingness_example.pdf}
+\caption{Identical public reports require identical pre-query decisions.
+The private source state determines whether recorded-value replay succeeds;
+failed attempts still consume capacity. The mileage is illustrative, and
+the replay is not physical inspection or authentication.}
+\label{fig:missingness}
+\end{figure*}
+
+Strategic missingness is already studied in regression and
+classification~\cite{zhang2020strategic,krishnaswamy2021withheld}. Active
+feature acquisition also provides established methods for selecting
+information subject to acquisition costs~\cite{janisch2019costly,
+shim2018joint,li2021gsm,valancius2024aco}.
+Budgeted randomized audits of strategic reports already minimized incentives
+to lie in threshold and top-$k$ allocations~\cite{estornell2021audits}.
+Partial verification without payments also has established incentive
+characterizations~\cite{ceppi2019verification}.
+In Estornell et al.'s model, an audit checks an agent's reported type;
+a detected lie removes its allocation and can incur a fine. Here a query
+attempts to recover one missing recorded field, can fail while consuming
+capacity, and changes a continuous quotation without an added penalty.
+Ceppi et al. characterize verification sufficient for truthful allocation
+without transfers. Our finite rule-bank calibration instead bounds only
+stored unilateral payoff rows; it supplies no general truthfulness
+characterization. The differences define the experimental model, not a
+proof that auditing or its optimization is new.
+These literatures leave an
+empirical question for the present setting: under a shared batch capacity,
+does learning to suppress concealment-induced quote increases improve on
+ordinary error-reduction acquisition and a simpler robust predictor?
+Capacity makes this question consequential because a change in one
+seller's report can alter another seller's chance of receiving a query.
+
+We implement SAV-Val, a mask-aware predictor with a learned query score
+and policy-aware residual training. The query target measures a reduction
+in the positive quote gap relative to the same listing's honest report.
+The honest reference and replay outcomes are used to construct targets
+offline; runtime scoring receives only the public report, current quote
+and candidate field. Feedback training uses post-query reports produced
+by simulated responses to the actual allocation rule. Three outer folds
+generate targets without allowing a held-out outcome into the
+corresponding fitting and feedback loop.
+
+We also implement counterfactual deviation-constrained mixture verification
+(CDM-Val). It fixes the estimator and optimizes a distribution over complete
+capacity-feasible verification rules using signed, batch-reallocated
+unilateral payoff rows. Reports are locked before one private rule is drawn.
+Its exact finite-set calibration guarantee is separated from held-out
+performance; the fixed-estimator study does not establish an advantage over a
+simple risk rule. Randomization and response-oracle optimization themselves
+are established methods~\cite{jain2011doubleoracle}, not novelty claims here.
+
+The contribution being investigated is this specific combination and its
+measured value, rather than the invention of strategic learning, auditing,
+or acquisition. We provide a reproducible implementation, an explicit
+information boundary, independently audited hard capacities and unilateral
+deviation checks, and matched controls for the action target and feedback
+components. We distinguish a conditional optimization statement about an
+additive score from a guarantee about actual price error or seller behavior.
+
+This manuscript is a development draft. The complete three-source,
+three-seed main study favors the full model over a simpler no-feedback
+control on MUCars and favors that control on synthetic and Jordanian
+records. Direct-comparator audits, all nine source/size retraining cohorts
+and the ordinary-benefit allowance extension are complete and independently
+audited; their outcomes remain source-dependent.
+Accordingly, the present evidence
+does not support a general performance advantage or disclosure-incentive
+claim. The target is recorded advertised price, and seller responses are
+stipulated simulations; neither actual transactions nor observed fraud
+are inferred from these data.
+
+\section{Related Work}
+\subsection{Strategic disclosure and prediction}
+Strategic classification studies prediction rules when people respond to
+them~\cite{hardt2016strategic,dong2018preferences}; causal perspectives
+separate changes to observed features from changes to underlying
+outcomes~\cite{miller2020causal}. Performative prediction studies
+deployment-induced distribution changes~\cite{perdomo2020performative}.
+These works motivate modeling response, but their different action and
+outcome assumptions do not automatically establish a property of our
+withholding-and-replay game.
+
+Zhang et al.~\cite{zhang2020strategic} address strategically missing data
+in regression through support-margin imputation (SMI) using full and
+reduced linear support-vector models. This is a direct regression
+antecedent. The published formulation and variable-domain assumptions
+must be preserved in any comparison; an ordinary SVR with arbitrary
+imputation is not SMI. Krishnaswamy et al.~\cite{krishnaswamy2021withheld}
+study withheld data for classification. Applying a classification
+implementation to continuous price prediction would require an explicitly
+identified adaptation. A recent joint prediction-and-audit
+preprint~\cite{ebrahimi2026audit} further establishes auditing as an
+existing strategic-design mechanism. Its linear acceptance setting,
+feature changes and penalties differ from our continuous quotes and
+recorded-value replay; a setting difference alone is not evidence of a
+new learning contribution.
+
+\subsection{Missingness-aware prediction}
+Statistical missing-data mechanisms are established
+concepts~\cite{rubin1976missing}. Prediction with missing data also has
+theoretical and architectural treatments~\cite{lemorvan2021imputation,
+lemorvan2020neumiss}. Our use of missing indicators and imputation is a
+practical representation choice. It does not identify whether a particular
+blank is naturally missing or strategically withheld. CatBoost provides
+the categorical tabular backbone~\cite{prokhorenkova2018catboost}; work
+revisiting deep tabular models~\cite{gorishniy2021tabular} motivates
+retaining a strong tree-based control when assessing a neural residual.
+
+\subsection{Acquisition and robustness}
+Costly-feature classification~\cite{janisch2019costly}, joint feature
+selection and prediction~\cite{shim2018joint}, generative acquisition
+surrogates~\cite{li2021gsm}, dynamic information
+selection~\cite{covert2023information}, and acquisition-conditioned
+oracles~\cite{valancius2024aco} are acquisition antecedents. Our ordinary
+benefit head is a local matched control, not an official reproduction of
+any of these systems. The strategic suppression output differs in its
+target, while both outputs share the same fitted multi-output
+ExtraTrees head~\cite{geurts2006extratrees}. This makes it possible to
+isolate the selected score without crediting shared machinery to one
+variant alone.
+
+Robust training also requires reporting where the benefit occurs and
+whether ordinary prediction is harmed. Group-robust work emphasizes
+that aggregate scores can obscure heterogeneous
+errors~\cite{sagawa2019groups}. Our completed technical subgroup analysis
+uses source missingness patterns, rather than protected-demographic
+labels, and cannot be read as a demographic fairness assessment. More
+generally, reduced strategic quote inflation is an incomplete objective:
+a model can make withholding unprofitable by issuing consistently high
+honest quotes. Honest error and signed quote bias must therefore remain
+visible alongside the strategic measure.

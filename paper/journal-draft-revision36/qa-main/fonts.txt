@@ -1,0 +1,38 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+IHAIZV+LMRoman17-Regular-Identity-H  CID Type 0C       Identity-H       yes yes yes      4  0
+BZIVMZ+LMRoman12-Regular-Identity-H  CID Type 0C       Identity-H       yes yes yes      6  0
+IXFAWU+LMRoman8-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes      8  0
+TQTHRL+LMRoman9-Bold-Identity-H      CID Type 0C       Identity-H       yes yes yes     10  0
+YEUUOC+LMRoman9-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes     12  0
+AKHCZK+LMRoman8-Bold-Identity-H      CID Type 0C       Identity-H       yes yes yes     14  0
+VDVGTR+LMRoman10-Italic-Identity-H   CID Type 0C       Identity-H       yes yes yes     16  0
+CAFSZL+LMRoman10-Regular-Identity-H  CID Type 0C       Identity-H       yes yes yes     18  0
+DDIEWW+LMMono10-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes     20  0
+FKPJSN+LMRoman12-Bold-Identity-H     CID Type 0C       Identity-H       yes yes yes     26  0
+JAGKKY+CMMI10                        Type 1C           Builtin          yes yes yes     39  0
+NOMARO+CMR10                         Type 1C           Builtin          yes yes yes     70  0
+KPXLOM+CMSY10                        Type 1C           Builtin          yes yes yes     71  0
+UTACNV+CMMI7                         Type 1C           Builtin          yes yes yes     84  0
+FZDNHS+MSBM10                        Type 1C           Builtin          yes yes yes     90  0
+DZGKAF+CMR7                          Type 1C           Builtin          yes yes yes     91  0
+GJMHKB+CMEX10                        Type 1C           Builtin          yes yes no      92  0
+NITCSQ+CMBX10                        Type 1C           Builtin          yes yes yes     98  0
+UBBQTN+CMSY7                         Type 1C           Builtin          yes yes yes     99  0
+PVTTLK+LMRoman10-Bold-Identity-H     CID Type 0C       Identity-H       yes yes yes    111  0
+DDVRQV+DejaVuSerif-Bold              CID TrueType      Identity-H       yes yes yes    174  0
+EGUGTU+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    181  0
+EQPZUM+DejaVuSerif-Bold              CID TrueType      Identity-H       yes yes yes    197  0
+GAGMHH+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    204  0
+GRZSEO+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    211  0
+FXFYGD+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    227  0
+HGGEOQ+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    234  0
+FDFEVD+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    265  0
+GGGFFG+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes    272  0
+LPOGEQ+CMR8                          Type 1C           Builtin          yes yes yes    311  0
+GQYLQL+CMMI5                         Type 1C           Builtin          yes yes yes    312  0
+WXMALW+CMSY8                         Type 1C           Builtin          yes yes yes    313  0
+XKCNTN+CMMI8                         Type 1C           Builtin          yes yes yes    314  0
+AIBCOH+CMR9                          Type 1C           Builtin          yes yes yes    315  0
+ALHFJP+CMSY9                         Type 1C           Builtin          yes yes yes    316  0
+FBXEDP+CMMI9                         Type 1C           Builtin          yes yes yes    317  0

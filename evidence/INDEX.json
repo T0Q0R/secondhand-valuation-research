@@ -1,0 +1,153 @@
+[
+  {
+    "local_artifact": "oqbo-val/outputs/finite-demo-01-audit-01",
+    "files": [
+      {
+        "path": "evidence/finite-demo-01-audit-01/completion.json",
+        "sha256": "a76baae3aa6b30d03ac689b100af874fb866a4d851380c984df922041cc0032b"
+      }
+    ]
+  },
+  {
+    "local_artifact": "oqbo-val/outputs/compact-v1-audit",
+    "files": [
+      {
+        "path": "evidence/compact-v1-audit/completion.json",
+        "sha256": "f37bc57de6b426d969a25c989ccd3701cdbd63ecb8e2ee6fcb507bf1ba641cdc"
+      }
+    ]
+  },
+  {
+    "local_artifact": "oqbo-val/outputs/context-mixture-gap-v1",
+    "files": [
+      {
+        "path": "evidence/context-mixture-gap-v1/cases.json",
+        "sha256": "78613db9c9122708dc9220d871cad445301ccc8f54a3dd23f29b49b322dc4ac0"
+      },
+      {
+        "path": "evidence/context-mixture-gap-v1/completion.json",
+        "sha256": "3475a101cc42ce77e65633fea633175f24e80a2b2ea3db33471e5edff3345c74"
+      },
+      {
+        "path": "evidence/context-mixture-gap-v1/input_binding.json",
+        "sha256": "894be932e89a76c1ec81da7cdf69f90b1cd438c757a03fb3b4547fcd0df1cf59"
+      }
+    ]
+  },
+  {
+    "local_artifact": "oqbo-val/outputs/context-rule-library-v1",
+    "files": [
+      {
+        "path": "evidence/context-rule-library-v1/cases.json",
+        "sha256": "609b529741b436e806f31983c17b67fdb2429a9680566533c1589a34653229fe"
+      },
+      {
+        "path": "evidence/context-rule-library-v1/completion.json",
+        "sha256": "120046ae38e7ed3353941da7721406aa3491cb1b7ca3d9fdb47072cb25fdee61"
+      },
+      {
+        "path": "evidence/context-rule-library-v1/input_binding.json",
+        "sha256": "76ce28939b5096949eec8d21543f3752a867b9c8c7e69e540f5648f6ea9188cb"
+      }
+    ]
+  },
+  {
+    "local_artifact": "oqbo-val/outputs/score-stability-v1",
+    "files": [
+      {
+        "path": "evidence/score-stability-v1/boundary_cases.json",
+        "sha256": "a31eb725117ac5b5ac1918c18e5ca61cddb89b9e98893a6de7a6e9e6835fbf03"
+      },
+      {
+        "path": "evidence/score-stability-v1/completion.json",
+        "sha256": "c7049ef55750e5ebf94cfba2804cc28dbb0766d06ae0d3e63709e34bb0251843"
+      }
+    ]
+  },
+  {
+    "local_artifact": "outputs/ten-seed-three-source-union-v1",
+    "files": [
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/completion.json",
+        "sha256": "d1e3d43d9b920b6b74ac9696597063e655bd7a8aaefd57bd60a83148f5693440"
+      },
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/input_binding.json",
+        "sha256": "de774717a95e1334aa8eae0002b3344a36d05c6af4b33920c80e18ce6d3e6a7f"
+      },
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/manifest.json",
+        "sha256": "eccc152da48e6cf8f61e9d9025dce090ca8a37106771976a64cbafc966ca5f83"
+      },
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/method_capacity_mean_sd.csv",
+        "sha256": "e176716cf6aa0661b4a882ddfe47098f6bfb8355759b42a0e93eac964662ef6b"
+      },
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/metric_checks.csv",
+        "sha256": "9c8d88c7761ddb2c6f26984c6e65f26ef4eb6e55a700cdb9b0227519e6db8e21"
+      },
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/primary_contrasts.csv",
+        "sha256": "bd3b55266dc5a0e5979f6afea8f65bf4f0e719b82e37e3bb65d2818b77de560c"
+      },
+      {
+        "path": "evidence/ten-seed-three-source-union-v1/report.md",
+        "sha256": "f1932c381327d145e1e276d09c79e9ffa5204714b0705f58f2e00ed8e838c306"
+      }
+    ]
+  },
+  {
+    "local_artifact": "outputs/ten-seed-three-source-union-v1-statistics-check",
+    "files": [
+      {
+        "path": "evidence/ten-seed-three-source-union-v1-statistics-check/completion.json",
+        "sha256": "1247948aeee48e574af573bae4ce422cec42065ce67aa9f2a5856c429a5be899"
+      }
+    ]
+  },
+  {
+    "local_artifact": "outputs/minimax-response-full-v1-analysis",
+    "files": [
+      {
+        "path": "evidence/minimax-response-full-v1-analysis/completion.json",
+        "sha256": "4af31efcadec3b3babe60477a357867646f7b66578706b953c94888a1fb965d9"
+      },
+      {
+        "path": "evidence/minimax-response-full-v1-analysis/contrasts.csv",
+        "sha256": "928be547a22f87fe86f6b2a33f33acbd955ca72da67af3f003bbfd0f7006f172"
+      }
+    ]
+  },
+  {
+    "local_artifact": "outputs/minimax-response-full-v1-statistics-check",
+    "files": [
+      {
+        "path": "evidence/minimax-response-full-v1-statistics-check/completion.json",
+        "sha256": "be5193b6f74ed27e8e5c79e97f7865e93762b7e45d25f459d62a32743e75502c"
+      }
+    ]
+  },
+  {
+    "local_artifact": "outputs/allocation-stability-full-v1",
+    "files": [
+      {
+        "path": "evidence/allocation-stability-full-v1/completion.json",
+        "sha256": "c2a204bdc45d62ac9d086d4b8436feef55be9de94deb06cbf16cf0c62dce0054"
+      },
+      {
+        "path": "evidence/allocation-stability-full-v1/coverage.csv",
+        "sha256": "bf3ae3355148fc2f2d72232c67c297e53ec1c1d658b93fa9ba024199af57c921"
+      }
+    ]
+  },
+  {
+    "local_artifact": "outputs/allocation-stability-full-v1-check",
+    "files": [
+      {
+        "path": "evidence/allocation-stability-full-v1-check/completion.json",
+        "sha256": "e8c99a9fc4fb6e4cbce06f4edd80ed6acce13f771f98f7b79d57bd4ea54f2443"
+      }
+    ]
+  }
+]

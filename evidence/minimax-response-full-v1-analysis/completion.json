@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "contrasts": 18,
+  "resamples": 1000,
+  "seed": 20261008,
+  "run_completion_sha256": "6984bcd3a933262f0d01d36a04991e5e6518cd7f370cf0386028cf658e87fe19",
+  "audit_completion_sha256": "e288c135fbda88977b827d6bb6a9604c10a85810772c336dafbe82c32a7af606",
+  "scope": "exploratory unadjusted paired seed/shared-batch intervals on fixed training records; no training-population or equilibrium guarantee"
+}

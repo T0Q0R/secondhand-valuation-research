@@ -1,0 +1,68 @@
+\subsection{Ordinary-benefit reference with equal selection allowances}
+The separate extension evaluates ordinary-benefit acquisition with a static
+robust estimator at the same three gap-weight trials and twelve residual
+epochs. Static candidate price fits can be shared with the suppression-output
+control, but the ordinary-benefit validation objective is recomputed and its
+selected weight is refitted when necessary. Its outer predictions and final
+action head follow its own selections. The comparison therefore does not
+relabel a suppression-output policy or select a reference on evaluation data.
+
+\begin{table*}[t]
+\centering
+\caption{Every fully completed three-seed source/cap cohort in the audited
+ordinary-benefit allowance extension, at 10\% capacity. BEN is the static robust
+predictor with ordinary-benefit acquisition. Gain is $100(\Phi_{BEN}-\Phi_{SAV})/
+\Phi_{BEN}$. Error changes are SAV relative to BEN; positive values mean larger
+MAE. Intervals concern the paired reference-minus-SAV inflation difference,
+averaged over seeds before resampling ten shared batches. Fixed means
+$\beta=0.5$; tuned selects from the same three training-internal trials.}
+\label{tab:equal_benefit_reference}
+\small
+\begin{tabular}{lrlrrrrrr}
+\toprule
+Source & Cap & Role & SAV $\Phi$ & BEN $\Phi$ & Gain (\%) & Difference interval & Honest $\Delta$ (\%) & Attack $\Delta$ (\%)\\
+\midrule
+JUCars & 1000 & Fixed & 0.00605 & 0.00596 & -1.51 & $[-0.00050,0.00026]$ & -0.23 & -0.26\\
+ &  & Tuned & 0.00538 & 0.00675 & +20.31 & $[0.00087,0.00189]$ & -0.05 & -0.05\\
+\midrule
+JUCars & 2500 & Fixed & 0.00846 & 0.00993 & +14.72 & $[0.00072,0.00218]$ & -0.84 & -0.86\\
+ &  & Tuned & 0.00866 & 0.01125 & +23.02 & $[0.00200,0.00308]$ & -0.28 & -0.24\\
+\midrule
+JUCars & 5000 & Fixed & 0.01549 & 0.01117 & -38.65 & $[-0.00593,-0.00286]$ & +0.04 & -0.11\\
+ &  & Tuned & 0.01097 & 0.00863 & -27.09 & $[-0.00333,-0.00125]$ & -0.07 & -0.09\\
+\midrule
+MUCars & 1000 & Fixed & 0.00847 & 0.00802 & -5.56 & $[-0.00062,-0.00028]$ & -0.01 & -0.10\\
+ &  & Tuned & 0.00830 & 0.00879 & +5.68 & $[0.00032,0.00068]$ & +0.23 & +0.20\\
+\midrule
+MUCars & 2500 & Fixed & 0.00857 & 0.00880 & +2.61 & $[-0.00021,0.00067]$ & -1.59 & -1.79\\
+ &  & Tuned & 0.00698 & 0.00861 & +18.92 & $[0.00112,0.00222]$ & -1.64 & -2.10\\
+\midrule
+MUCars & 5000 & Fixed & 0.00689 & 0.00778 & +11.42 & $[0.00045,0.00128]$ & -1.56 & -1.65\\
+ &  & Tuned & 0.00564 & 0.00709 & +20.41 & $[0.00097,0.00186]$ & -1.54 & -1.78\\
+\midrule
+Synthetic & 1000 & Fixed & 0.02095 & 0.00936 & -123.82 & $[-0.01280,-0.01038]$ & -1.58 & +2.92\\
+ &  & Tuned & 0.01921 & 0.01258 & -52.62 & $[-0.00868,-0.00453]$ & -0.90 & +1.44\\
+\midrule
+Synthetic & 2500 & Fixed & 0.01764 & 0.00926 & -90.60 & $[-0.01029,-0.00662]$ & -0.90 & +2.46\\
+ &  & Tuned & 0.01790 & 0.01220 & -46.79 & $[-0.00774,-0.00368]$ & -0.16 & +2.33\\
+\midrule
+Synthetic & 5000 & Fixed & 0.02075 & 0.01077 & -92.69 & $[-0.01268,-0.00786]$ & -1.28 & +3.88\\
+ &  & Tuned & 0.01809 & 0.01391 & -30.09 & $[-0.00682,-0.00204]$ & +0.33 & +3.14\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+At JUCars cap 1,000, tuned SAV-Val has 20.31\% lower inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors SAV-Val.
+At JUCars cap 2,500, tuned SAV-Val has 23.02\% lower inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors SAV-Val.
+At JUCars cap 5,000, tuned SAV-Val has 27.09\% higher inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors the reference.
+At MUCars cap 1,000, tuned SAV-Val has 5.68\% lower inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors SAV-Val.
+At MUCars cap 2,500, tuned SAV-Val has 18.92\% lower inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors SAV-Val.
+At MUCars cap 5,000, tuned SAV-Val has 20.41\% lower inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors SAV-Val.
+At Synthetic cap 1,000, tuned SAV-Val has 52.62\% higher inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors the reference.
+At Synthetic cap 2,500, tuned SAV-Val has 46.79\% higher inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors the reference.
+At Synthetic cap 5,000, tuned SAV-Val has 30.09\% higher inflation than the tuned ordinary-benefit robust reference; the reference-minus-SAV interval favors the reference.
+
+Both roles and all preset capacities remain in the associated statistics.
+All nine scheduled source/cap cohorts and all 324 reference cells are independently audited, with a matching full 972-cell tuning-parent audit. The conditional,
+unadjusted intervals concern the fitted models and historical validation
+cohorts; they are not guarantees for new markets or seller behavior.

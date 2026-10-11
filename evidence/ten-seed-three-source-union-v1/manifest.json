@@ -1,0 +1,240 @@
+{
+  "sources": [
+    "synthetic",
+    "jucars",
+    "mucars"
+  ],
+  "all_planned_sources": [
+    "synthetic",
+    "jucars",
+    "mucars"
+  ],
+  "seeds": [
+    13,
+    42,
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701,
+    2026
+  ],
+  "pair_receipts": [
+    {
+      "dataset": "synthetic",
+      "seed": 13,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "108535eab42b103d41fa4be48085710ad282989dc305a00e361f553d0a998d57"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 42,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "e19028d7683b1a7b9bdd79aa51965eccca67c19718cbef6c156b3bdf4c721ab9"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 2026,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "a110a96c490a7eb00b4c64830f67f61e915b4292768e858ed77818790eedd6b3"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 13,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "7b89f753bd25a9e578e0a23ca8ae4080bb2272ce4fcdae45bb733830e35800d3"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 42,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "2dc0907f41c4a141b846ee11b629bc331cbaddaa19acc709abcf69332be5ca9e"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 2026,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "2658a96d8db456957cf5d602e5caa802bfd29292391f5fcddeecf26c6f10036e"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 13,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "95f8aaf3c21bd53216ab41aac3e4e2185331b0a2a492f2f0e6015791eafd4b8f"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 42,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "fb29589d47c57aeb6843badfc5d6a562a6ac6403a6eca2cb9e103be58777a23f"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 2026,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+      "binding": "f84fdaf325d78760aab26487b978029cec0145f8bfdbfab0d02d8a1dce645299",
+      "evaluation_completion_sha256": "7462ecde5eb089b732b815d91834fa746a80634742942d42049f120c0f0d03c7"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 101,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "e31783c92815b368a2bb009b77bdca9145b4173765de7b7cbf1fb349674e4d42"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 211,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "91126002ae4f863c135663ea7b5ed5de2ea64bf6b4615ff5354c302962d7f8cf"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 307,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "a49fe30831586aa64be98ba3434ea32aa1074ac7e3d00fac8dc962fceadce590"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 401,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "e3ac85c3be44f9f24fe2395afb2db09dc443252f5bcc6285c086a750a353f4fe"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 503,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "343b1bb9bb940e6161728c1597fbf97e54c0199a34614a5889c15cc21fa13844"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 601,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "42a63011d3e0cac82dde435433e0d61dac0202c2c34458e54b2140674240ce2e"
+    },
+    {
+      "dataset": "synthetic",
+      "seed": 701,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "9183f1250be0de6fff9b77a239b0a094209213fcc20285f26a0e7a3869000d4f"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 101,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "fe61d97eab60f3fe54a8b5b5ad286e4df9c6a8f190f1f935eea831db3810ef5d"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 211,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "4bcbfd9b13bba0e4dc5e2277914f7e3f51990bbc3d0e5eb8943883f68741d0ae"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 307,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "054013ce2bbd0b300bb2086c1452f1381373724f38cc1aaf4c0e5efc108dc83a"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 401,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "8e7b701b8999e83422fa2106022de9f6772f55f907796ef0f2b3a0fd75c435bb"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 503,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "1cf33aeb790fe40a57a31822cb326e7ba5c73def932aa329964b4f479764078f"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 601,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "549a581d380a874064dd0134a0a888a73a102f8f70fe3cf5c09f434b69eb85e9"
+    },
+    {
+      "dataset": "jucars",
+      "seed": 701,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "9b17495d4ad8a386bed21d7ccab3dc66533313ec8c1913fca13f63885358aa23"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 101,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "0cf3c641715e3f92d002f2c3264f6c10d96471f2d78d43a3c13a7897bfcb1f95"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 211,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "992ea6a7e86d8a549735eefe8ed05d74105b1eabb8ec6b5f323d5634920970f9"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 307,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "a8d62c7e445bec6c3d7a32f55589f6bda2ab515e7ca92b2ea3607730ce8a40a0"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 401,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "972d3d125768a06cc027c67120969c6a3932b4ce4dddb64dc04b3ab7eb742d85"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 503,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "cdeb260a4d398a4b4c8b00fcbcef1067bf1212cf5dd2acc7773fd86b4d1a6f3b"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 601,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "234c8272922eee6c571bbbccbf0f8ff47b1f6c8622d889898aca4cb09f68ab4d"
+    },
+    {
+      "dataset": "mucars",
+      "seed": 701,
+      "root": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+      "binding": "385999f8cebd637f89e9963ca1552528b37c00ae56626f5ca0d64d8ac8072681",
+      "evaluation_completion_sha256": "2b81cdd79f137710c89db5ea60788b08b1e5397481bd05ae30b465fdf34eed0b"
+    }
+  ],
+  "original_source": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-development-v2",
+  "added_source": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1",
+  "all_source_coverage": true,
+  "scope": "strict source-complete original-protocol union; not tuned ordinary-benefit or matched factorial study"
+}

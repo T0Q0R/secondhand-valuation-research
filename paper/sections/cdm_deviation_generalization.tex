@@ -1,0 +1,86 @@
+\section{Common-profile deviation generalization}
+\label{sec:cdm_deviation_generalization}
+This exploratory diagnostic was specified after the original CDM outcomes
+were available and before its own tail summaries were opened. It neither
+refits the price estimator nor changes the primary positive-inflation
+endpoint. All 108 source/seed/price/capacity cases and 1,512 method cells
+are retained. For each held-out batch, every method faces the same five
+peer-report profiles: truthful, no-query maximizing, fixed-seed random,
+suppression-response and benefit-response. These constructions match the
+calibration profile types but use held-out listings; they do not cover
+all possible peer configurations.
+
+For listing $i$ and peer profile $p$, we evaluate every legal report $h$,
+reallocate the complete batch under both $h$ and the truthful report, and
+compute the signed log-quote difference under each rule $k$, denoted
+$D_{i,p,h,k}$. Given rule probabilities $\alpha$, the envelope is
+\begin{equation}
+ e_{i,p}(\alpha)=\max\{0,\max_h\sum_k\alpha_kD_{i,p,h,k}\}.
+\label{eq:common_profile_envelope}
+\end{equation}
+The rule expectation in Eq.~\eqref{eq:common_profile_envelope} precedes
+report maximization. Listings and profiles
+receive equal weight, irrespective of how many reports are legal. We
+retain the mean, maximum, 95th percentile and exact upper 5\% probability
+mass mean (conditional value at risk, CVaR), using fractional boundary mass
+where necessary. Whole-case
+tails have descriptive seed means and standard deviations. The intervals
+in Table~\ref{tab:cdm_deviation_generalization} apply instead to batch-level
+measures: paired seed contrasts are averaged before resampling the ten
+shared batches. They are conditional on the three fitted models and are
+unadjusted exploratory intervals. ``Chosen pure'' is selected on calibration
+rows, never on these held-out summaries. The complete exported contrasts
+retain all four references and all six capacities.
+
+With robust pricing at 10\% capacity, CDM reduces batch CVaR relative to
+the calibration-selected pure rule by 7.34\% on Synthetic, 2.86\% on JUCars
+and 6.81\% on MUCars, with positive conditional intervals. Its batch maxima
+also have positive intervals against this reference on Synthetic and MUCars;
+the JUCars interval includes zero. These gains do not establish an advantage
+over risk: its CVaR intervals against risk include zero on all three robust
+cohorts, and mean envelopes are higher on Synthetic and MUCars. With
+mask-aware pricing on MUCars, mean, 95th-percentile and CVaR envelopes are
+higher than risk, with intervals excluding zero. Thus finite-profile mixing
+has a bounded effect against its training-selected pure reference, while
+the original absence of a consistent risk-rule advantage remains.
+
+\begin{table*}[t]
+\centering
+\caption{Complete common-profile deviation diagnostic at 10\% capacity.
+Columns report relative reductions in batch measures (\%); positive values
+favor CDM. The final column is reference minus CDM batch CVaR, in log-quote
+units, with its conditional 95\% interval. Chosen pure is selected on
+calibration data. Every source, estimator and reference is retained.}
+\label{tab:cdm_deviation_generalization}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lllrrrrl}
+\toprule
+Source & Pricing & Reference & Mean & Maximum & P95 & CVaR & CVaR difference [interval]\\
+\midrule
+Synthetic & Masking & Risk & 1.29 & 1.87 & -0.34 & -0.33 & $-0.00087\;[-0.00330,0.00157]$\\
+Synthetic & Masking & Benefit & 0.02 & 0.05 & 0.07 & 0.06 & $0.00017\;[0.00013,0.00022]$\\
+Synthetic & Masking & Uniform & 11.29 & 2.13 & 1.18 & -1.03 & $-0.00266\;[-0.00876,0.00424]$\\
+Synthetic & Masking & Chosen pure & 1.35 & 4.15 & 1.21 & 1.47 & $0.00391\;[0.00109,0.00726]$\\
+Synthetic & Robust & Risk & -1.20 & 2.72 & 0.80 & 1.75 & $0.00143\;[-0.00010,0.00292]$\\
+Synthetic & Robust & Benefit & -1.46 & 2.72 & 0.40 & 2.51 & $0.00207\;[0.00071,0.00331]$\\
+Synthetic & Robust & Uniform & 9.48 & 3.89 & 19.12 & 7.28 & $0.00632\;[0.00344,0.00854]$\\
+Synthetic & Robust & Chosen pure & 3.40 & 5.05 & 10.17 & 7.34 & $0.00637\;[0.00470,0.00786]$\\
+JUCars & Masking & Risk & -0.56 & -0.78 & 0.63 & -1.12 & $-0.00135\;[-0.00391,0.00061]$\\
+JUCars & Masking & Benefit & 4.99 & 3.97 & 2.39 & 6.18 & $0.00807\;[0.00208,0.01528]$\\
+JUCars & Masking & Uniform & -1.19 & 2.67 & -3.26 & 0.62 & $0.00077\;[-0.00533,0.00801]$\\
+JUCars & Masking & Chosen pure & 0.21 & -0.90 & 1.31 & 0.58 & $0.00071\;[0.00006,0.00145]$\\
+JUCars & Robust & Risk & 3.34 & 3.44 & 3.03 & 3.23 & $0.00357\;[-0.00049,0.00707]$\\
+JUCars & Robust & Benefit & 0.80 & -0.44 & 3.52 & -1.31 & $-0.00138\;[-0.00778,0.00494]$\\
+JUCars & Robust & Uniform & -3.62 & -4.33 & -4.99 & -8.60 & $-0.00848\;[-0.01149,-0.00501]$\\
+JUCars & Robust & Chosen pure & 4.77 & 2.46 & 3.04 & 2.86 & $0.00315\;[0.00141,0.00524]$\\
+MUCars & Masking & Risk & -15.24 & -2.53 & -4.85 & -4.21 & $-0.00831\;[-0.01115,-0.00586]$\\
+MUCars & Masking & Benefit & 4.43 & 7.66 & 1.84 & 3.59 & $0.00765\;[0.00071,0.01520]$\\
+MUCars & Masking & Uniform & -1.63 & 4.01 & -3.74 & -0.78 & $-0.00158\;[-0.00821,0.00574]$\\
+MUCars & Masking & Chosen pure & 3.81 & 5.49 & 2.48 & 3.01 & $0.00638\;[0.00285,0.01061]$\\
+MUCars & Robust & Risk & -3.67 & 1.77 & -2.82 & -1.62 & $-0.00101\;[-0.00279,0.00084]$\\
+MUCars & Robust & Benefit & 8.52 & 6.07 & 6.85 & 6.39 & $0.00434\;[0.00292,0.00602]$\\
+MUCars & Robust & Uniform & -5.34 & -1.63 & -8.68 & -9.00 & $-0.00525\;[-0.00616,-0.00441]$\\
+MUCars & Robust & Chosen pure & 6.75 & 3.70 & 8.42 & 6.81 & $0.00465\;[0.00351,0.00601]$\\
+\bottomrule
+\end{tabular}
+\end{table*}

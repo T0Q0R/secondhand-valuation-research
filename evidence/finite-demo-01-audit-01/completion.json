@@ -1,0 +1,308 @@
+{
+  "status": "independently_audited_finite_oracle",
+  "cases": [
+    {
+      "case": "case-00.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "0",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-01.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 16,
+      "max_honest_absolute_error": "0",
+      "primal_violation": 0.0,
+      "duality_gap": 3.552713678800501e-15
+    },
+    {
+      "case": "case-02.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 24,
+      "max_honest_absolute_error": "0",
+      "primal_violation": 2.842170943040401e-14,
+      "duality_gap": 3.3306690738754696e-15
+    },
+    {
+      "case": "case-03.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "0",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-04.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1/4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-05.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 16,
+      "max_honest_absolute_error": "1/4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-06.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 24,
+      "max_honest_absolute_error": "1/4",
+      "primal_violation": 0.0,
+      "duality_gap": 1.021405182655144e-14
+    },
+    {
+      "case": "case-07.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1/4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-08.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1/2",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-09.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 16,
+      "max_honest_absolute_error": "1/2",
+      "primal_violation": 0.0,
+      "duality_gap": 3.9968028886505635e-15
+    },
+    {
+      "case": "case-10.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1/2",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-11.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1/2",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-12.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-13.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 16,
+      "max_honest_absolute_error": "1",
+      "primal_violation": 7.105427357601002e-15,
+      "duality_gap": 5.773159728050814e-15
+    },
+    {
+      "case": "case-14.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-15.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "1",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-16.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "2",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-17.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 16,
+      "max_honest_absolute_error": "2",
+      "primal_violation": 7.105427357601002e-15,
+      "duality_gap": 3.1086244689504383e-15
+    },
+    {
+      "case": "case-18.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "2",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-19.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "2",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-20.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "3",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-21.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 12,
+      "max_honest_absolute_error": "3",
+      "primal_violation": 0.0,
+      "duality_gap": 4.884981308350689e-15
+    },
+    {
+      "case": "case-22.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "3",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-23.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "3",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-24.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-25.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-26.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-27.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "4",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-28.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "6",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-29.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "6",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-30.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "6",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    },
+    {
+      "case": "case-31.json",
+      "world_report_pairs": 14,
+      "aliased_world_lookups": 8,
+      "exact_draw_world_checks": 8,
+      "max_honest_absolute_error": "6",
+      "primal_violation": 0.0,
+      "duality_gap": 0.0
+    }
+  ],
+  "case_count": 32,
+  "mutations_rejected": [
+    "capacity",
+    "public_key",
+    "private_key",
+    "payoff"
+  ],
+  "primary_values": {
+    "observable": "72/17",
+    "fixed_global_library": "72/13",
+    "risk": "8",
+    "privileged": "0"
+  },
+  "run_completion_sha256": "363a508cb19697675b58480e94ffbf148619e969f1c28b4984063a20047b056f",
+  "scope": "Exact rational analytic lower/upper construction plus numerical full-LP primal/dual checks at1e-8. No imported solver helpers, real-source result, first-ever novelty or unseen guarantee."
+}

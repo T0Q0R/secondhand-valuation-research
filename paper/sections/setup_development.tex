@@ -1,0 +1,120 @@
+\section{Experimental Setup}
+\subsection{Data and evidence status}
+The experiment uses a stipulated synthetic vehicle market and two public
+listing sources: JUCars-2024 version 2~\cite{thalji2026jucars} and
+MUCars-2024 version 2~\cite{tabarnoust2024mucars}. JUCars was deposited in
+2026 and contains Jordanian observations from 2024; MUCars contains
+Moroccan listings from 2024. Their recorded prices are advertised prices.
+Source prices are evaluated separately, without pooling native currencies.
+The synthetic target follows the saved generator, rather than an inferred
+model of real transactions.
+
+The previously processed source splits are reused. The underlying public
+validation sources have been inspected during earlier development; they
+are retrospective evaluation material, not fresh confirmatory tests.
+The source training/evaluation counts before current caps are 4,774/1,374
+for JUCars and 39,244/10,672 for MUCars. Deterministic identifier hashing
+caps training at 5,000 rows and evaluation at 1,000. The synthetic
+generator creates 6,000 training and 1,500 evaluation rows using fixed
+generation seeds 73,101 and 73,102, followed by the same 5,000/1,000 caps.
+Consequently, training seeds vary fitting randomness, not the evaluation
+cohort or synthetic market generation.
+
+Original advertisement identifiers are unavailable, so the inherited
+processing uses conservative non-price fingerprints for duplicate control.
+This does not certify that every remaining listing is an independent
+vehicle. Price, outcomes, identifiers, source-row indices and declared
+direct reveal aliases are removed from predictor inputs. Correlated
+non-alias covariates remain and can make a concealed field partly
+inferable. Original unavailable optional fields remain unavailable to
+seller actions and to successful replay.
+
+\subsection{Methods and fitting allowance}
+The main matrix contains twelve policy/model combinations. Native and
+mask-augmented predictors without acquisition are evaluated at zero
+capacity. The common mask-aware backbone is paired with random, fixed-field,
+before-query-risk, ordinary-benefit and suppression-output acquisition.
+The robust/no-feedback residual model is a stronger simple control using
+the suppression output for acquisition. It must not be relabeled as ordinary
+benefit acquisition. The separately completed original-contract reference
+uses its same multi-output head's ordinary-benefit output; its execution and
+audit have separate provenance and contribute 54 additional cells. Full
+SAV-Val is compared with a zero-gap-loss variant, an ordinary-benefit-output
+variant, and a variant whose training attacker ignores query allocation.
+The last variant changes training responses; evaluation still uses each
+actual deployed rule. These are component comparisons, not official
+reproductions of all prior acquisition papers.
+
+All fitted methods use training seeds 13, 42 and 2,026. The CatBoost
+backbone has 250 iterations; the action head has 160 trees. The residual
+has two 64-unit ReLU layers. The no-feedback control trains for 12 epochs;
+the full method and feedback variants train for two rounds of six epochs
+each, also 12 epochs in total, without an additional initial residual fit.
+The learning rate is 0.001. The attacked-error,
+positive-gap and honest-anchor weights are 0.5, 0.5 and 0.25, respectively,
+and the gap tolerance is 0.02 in log-price space. Feedback uses a 10\%
+capacity and a shorter one-start, two-sweep response search. No evaluation
+outcomes are used for fitting, target generation or hyperparameter
+selection within this recorded run. These common fixed settings are not
+an equal-budget hyperparameter search. A separate nested, equal-allowance
+retraining study follows below; all 972 tuning and 324 ordinary-benefit
+evaluation cells are independently audited.
+
+Outer three-fold assignments and inner estimator/guidance assignments
+depend on identifier hashes. The inner guidance fraction is 30\%, with
+the remaining 70\% used to fit the estimator. Encoders, models and target
+generation stay within their respective training roles. The outer-held-out
+predictions form deployment-head targets; deployment estimators use the
+full allowed training cohort through the same inner split. Model-fit
+receipts and prediction hashes make these boundaries auditable.
+
+\subsection{Allocation, responses and metrics}
+Evaluation batches contain 100 listings. Capacity fractions are
+0, 0.01, 0.05, 0.10, 0.20 and 0.30, giving integer limits of 0, 1, 5, 10,
+20 and 30 attempts. At most two recorded optional fields can be withheld
+in the primary setting. Concealment cost is zero, and each method is
+attacked with 20 coordinate sweeps and four starts. The exact independent
+unilateral-deviation audit enumerates all feasible masks for one seller
+against the returned peer reports. Remaining regret and cycles are
+reported, rather than treating a search termination flag as an
+equilibrium certificate. Saved common-attack transfers also distinguish
+performance on shared reports from performance under each rule's own
+seller responses.
+
+The principal strategic metric is mean positive log-quote inflation,
+$[f(z_i^{\mathrm{final}})-f(z_i(\varnothing))]_+$. It compares a model
+with itself; it does not measure overvaluation relative to the target.
+We also report honest and attacked native-price MAE, RMSLE, signed
+log-price bias, query attempts, failed replay fractions, concealment and
+deviation-regret measures. The primary component contrast at 10\%
+capacity compares full SAV-Val with its ordinary-benefit-output variant.
+The stronger robust/no-feedback comparison remains visible even when
+that primary contrast favors SAV-Val.
+
+Uncertainty uses 1,000 paired batch bootstrap
+resamples~\cite{efron1979bootstrap,cameron2015clusters}. The same listings
+and batches are shared across training seeds. We first average their
+paired listing contrasts over the completed fitted seeds and then
+resample the ten shared batches once. Repeated seed copies are not
+independent evaluation clusters. These intervals describe evaluation-batch
+variation conditional on the fitted models; they omit training-sample
+uncertainty. Training-seed variation is reported separately. With only
+ten evaluation batches and retrospective sources, the intervals support
+limited development inference.
+
+The implementation uses NumPy, pandas, PyTorch, CatBoost and
+scikit-learn~\cite{pedregosa2011sklearn}. Independent analysis recomputes
+price-space metrics, state transitions and capacities from saved listing
+outcomes. The original code/configuration bytes, role assignments,
+artifact hashes and receipts are archived. Follow-up sensitivity work
+with saved models is explicitly separate from the main run and cannot
+retroactively become a prespecified confirmatory experiment.
+
+\input{sections/equal_tuning_size_protocol}
+
+\subsection{AI assistance in development}
+An OpenAI Codex assistant contributed to algorithm formulation, code, auditing
+scripts and manuscript drafting. These computational checks do not replace
+author accountability, independent scientific judgment or author review of
+the complete evidence. Author review and final disclosure remain pending in
+this working draft.

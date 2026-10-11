@@ -1,0 +1,186 @@
+\subsection{Sources, reports and query information}
+\label{sec:source_query}
+We use a stipulated synthetic generator and public JUCars-2024 version 2
+and MUCars-2024 version 2 listing records~\cite{thalji2026jucars,tabarnoust2024mucars}.
+The inherited training/validation counts are 4,774/1,374 and 39,244/10,672.
+Label-independent hash caps give training counts of 4,774 and 5,000 and
+1,000 evaluation listings per source. The generator creates 6,000/1,500
+records with seeds 73,101/73,102, capped at 5,000/1,000. Training seeds
+13, 42 and 2,026 vary fitting, while evaluation membership remains fixed.
+Native price units are retained separately. Earlier inspection of source
+validation data makes this retrospective development. Original advertisement
+identifiers are unavailable; conservative non-price duplicate fingerprints
+do not certify independent vehicles. Outcomes, identifiers, row indices and
+declared direct reveal aliases are excluded from prediction covariates.
+
+The target is $y_i=\log(1+p_i)$ for advertised price $p_i$. An honest report
+retains natural missingness. A seller can additionally withhold up to two
+originally recorded fields among mileage, transmission, fuel and body condition,
+giving at most eleven legal report states. Other covariates and identifiers
+cannot change. The platform observes public reports and missingness, without
+knowing the deliberate concealment mask. A query requests one visibly missing
+field and restores its recorded value if available; otherwise it changes
+nothing. Both cases consume a slot. This replay does not authenticate a
+record or inspect a vehicle. Batches have 100 listings, with at most one
+attempt per listing and hard limits $B=\lfloor100\rho\rfloor$ for
+$\rho\in\{0,.01,.05,.10,.20,.30\}$. Capacity is never borrowed across batches.
+
+For the illustrative mileage example in Fig.~\ref{fig:missingness}, both
+public reports have the same blank mileage field and therefore the same
+pre-query scores. If selected, each spends one slot. The stipulated recorded
+state restores 140,000 km, while the unavailable state remains blank.
+That numerical mileage illustrates a transition and is not a selected source
+observation. The original-missingness strata test the failed branch on actual
+recorded cohorts in the Results.
+
+\subsection{SAV fitting and allocation}
+\label{sec:sav_fitting}
+A 250-iteration CatBoost backbone $b$ fits all legal reported states,
+weighted so each source record has equal total weight. A frozen-backbone
+residual $r$ has two 64-unit rectified-linear layers and a learning rate of .001. Its public
+encoding uses numerical imputation, scaling and missing indicators, and
+categorical one-hot encoding with missing tokens. Specified positive-valued
+numerical features are log-transformed. With training-fitted encoder $e$,
+the log quotation is $f(z)=b(z)+r(e(z))$. For reported state $z_i(H)$,
+where $H$ is its set of additionally withheld fields, define the targets
+in Eq.~\eqref{eq:sav_targets}:
+\begin{align}
+ d_i(z)&=[f(z)-f(z_i(\varnothing))]_+,\nonumber\\
+ s_{ia}(z)&=d_i(z)-d_i(T_a z),\nonumber\\
+ v_{ia}(z)&=(f(z)-y_i)^2-(f(T_a z)-y_i)^2.
+ \label{eq:sav_targets}
+\end{align}
+Here $T_a$ is the recorded-value replay, and $[\cdot]_+$ is positive
+truncation. A 160-tree Extra-Trees head jointly predicts suppression $s$,
+ordinary error benefit $v$ and before-query squared error from encoded public
+reports, current quotes and candidate-field identity. Honest references,
+outcomes and post-query values form offline targets only. Suppression and
+ordinary-benefit policies rank their respective output. Each listing offers
+its highest scoring visibly missing field; the allocator chooses the top
+$B$ strictly positive finite scores, breaking ties by fixed batch order.
+Naturally absent fields remain eligible, and failed replay has zero target
+benefit. Top-$B$ is optimal for this additive surrogate, rather than for
+realized market incentives.
+
+Write $L_h,L_m,L_a$ for honest, per-record mask-average and attacked
+squared log-price losses, and $\widehat z$ for the attacked report after
+query replay. Equation~\eqref{eq:sav_training_loss} trains the residual:
+\begin{align}
+ L={}&L_h+.25L_m+.5L_a\nonumber\\
+ &+\beta\mathbb E[(f(\widehat z)-
+ \operatorname{sg}(f(z^{\rm honest}))-.02)_+]\nonumber\\
+ &+.25\mathbb E[(f(z^{\rm honest})-b(z^{\rm honest}))^2],
+ \label{eq:sav_training_loss}
+\end{align}
+where $\beta=.5$ and $\operatorname{sg}$ stops gradients.
+The static control uses twelve epochs. Feedback methods use two rounds of
+six epochs, refreshing guidance targets between rounds and query scores
+once per epoch. Training responses use one start, two sweeps and 10\%
+capacity. Discrete report/allocation choices are held fixed for residual
+gradients; this is a surrogate alternating procedure.
+
+Three outer folds enclose the entire estimator/head/feedback loop. Within
+each outer training cohort, a hash-based 70/30 estimator/guidance split
+fits the backbone and feedback head. Entire outer-held-out report states
+are predicted without their outcomes entering that loop. Collected outer
+quotes, training outcomes and replay transitions form deployment-head targets.
+The separately fitted deployment estimator uses a 70/30 split on the full
+allowed training cohort. Its sample size and encoding differ from the
+teachers; this boundary does not ensure identical teacher/deployment
+prediction distributions. Receipt hashes preserve all role assignments.
+The static robust control in the main matrix uses suppression acquisition;
+its separately evaluated ordinary-benefit counterpart is the original-contract
+reference. Four ablations and the main simple controls remain in the supplement.
+
+\subsection{CDM commitment and finite calibration}
+\label{sec:cdm_commitment}
+CDM fixes an estimator and commits to probabilities $\alpha$ over twelve
+complete hard-cap rules: none, suppression, benefit, risk, four constant-field
+and four identifier-hash priorities. Risk ranks predicted before-query error
+and uses a training-selected benefit field. Sellers know $\alpha$ and lock
+reports before one private whole-batch draw; they cannot respond to its
+realization. The parent estimator uses about 70\% of training records; the
+unused 30\% is equally divided between fresh head fitting and probability
+calibration. This fixed-estimator study does not cross-fit the complete CDM
+selection process. Log-quote utility with zero concealment cost is stipulated.
+
+For each calibration type, legal report and fixed peer profile, $D_{dk}$ is
+the signed utility difference between deviation and honest report under
+rule $k$. Both complete batch allocations are recomputed. Five profile
+constructions are honest, no-query maximizing, fixed-seed random, suppression
+response and benefit response. Equation~\eqref{eq:cdm_program} minimizes
+a nonnegative bound $t$ on these finite signed deviations:
+\begin{equation}
+\begin{aligned}
+ \min_{\alpha,t}\quad&t,\\
+ D\alpha&\leq t\mathbf1,\qquad\mathbf1^\top\alpha=1,\quad\alpha\geq0,\quad t\geq0,\\
+ E^\top\alpha&\leq1.01E_{\rm ref}.
+\end{aligned}
+ \label{eq:cdm_program}
+\end{equation}
+The error vector $E$ records honest currency MAE, with $E_{\rm ref}$ the
+reference rule's value. It is constant across rules
+under this replay, so its cap is inactive. Violated-row generation separates
+against every stored row and is checked against an independent full-matrix
+LP. Feasible mixtures bound only these stored expected deviations and are
+no worse than feasible pure vertices for the finite maximum objective.
+This gives no unseen-type, unseen-peer or global-equilibrium guarantee.
+Expected utility precedes report maximization and positive truncation.
+Twenty predetermined common simulation uniforms per batch draw whole rules
+after reports are fixed; expected currency MAE is evaluated per rule before
+averaging, rather than inverse-transforming an expected log quote.
+
+\subsection{Responses, endpoints and follow-up analysis}
+Evaluation uses four starts and at most twenty coordinate-response sweeps:
+honest, pre-query maximizing and two seeded legal profiles. Each candidate
+reallocates against fixed peer reports. Ties retain the current state;
+cycles are detected. The highest aggregate payoff profile is retained,
+without asserting equilibrium. An independent enumeration checks every
+remaining unilateral deviation. The principal outcome is mean positive
+log-quote inflation relative to each model's own honest quote; it does not
+measure error against the advertised price. Honest and attacked native-price
+MAE, root mean squared log error, bias, attempted/failed queries, withholding and residual regret
+remain available. Shared-report transfer separates quotation differences
+from method-specific responses.
+
+The primary capacity is 10\%. The original criterion compares SAV with
+static robust/ordinary benefit; the component criterion compares SAV with
+its own benefit-output variant. Their identities are preserved. Conditional
+95\% intervals use 1,000 paired batch bootstrap samples, first averaging
+matched seed contrasts and then resampling ten shared batches. They omit
+training-sample uncertainty and are unadjusted; seed standard deviations
+are reported separately~\cite{efron1979bootstrap,cameron2015clusters}.
+
+The equal-allowance follow-up retrains caps of 1,000, 2,500 and 5,000
+(4,774 on JUCars), with fixed evaluation membership. Each method receives
+three $\beta$ trials, $.25,.5,1$, and twelve residual epochs. Internal
+80/20 tuning splits and candidate 70/30 fitting/guidance splits stay inside
+each outer fold. Honest plus attacked squared log loss at 10\% selects
+each method's weight; ties follow grid order. Selected models are refitted
+before outer prediction; deployment repeats its own selection/refit.
+Ordinary-benefit references have their own objectives, choices, outer targets
+and deployable heads. Reuse of acquisition-independent static fits is verified
+against separate fits. The complete 972-cell and 324-cell matrices each
+contain 27 source/size/seed cases and 108 fitting stages. All cases are
+independently audited; the ordinary-benefit audit independently refits 54
+deployment heads. Every scheduled cohort is retained without selecting
+favorable outcomes.
+
+The post-hoc common-profile diagnostic evaluates all legal held-out deviations
+on five shared profile constructions, without fitting or retuning. For each
+listing/profile, $e=\max(0,\max_h\sum_k\alpha_kD_{h,k})$. Equal-weight means,
+maxima, 95th percentiles and exact upper 5\% mass means retain fractional
+boundary mass. Whole-case summaries are descriptive across seeds; intervals
+apply to batch-level measures only. The selected pure reference is chosen
+on calibration records. Sensitivities, adapted comparators and workstation
+resource measurements are documented in full in the supplement. Independent
+audit code rebuilds prices, eligibility, allocations, deviations and outcomes
+from saved artifacts; the implementation uses NumPy, pandas, PyTorch,
+CatBoost and scikit-learn~\cite{pedregosa2011sklearn}.
+
+\subsection{AI assistance in development}
+An OpenAI Codex assistant contributed to algorithm formulation, code, auditing
+scripts and manuscript drafting. These computational checks do not replace
+author accountability, independent scientific judgment or author review of
+the complete evidence. Author review and final disclosure remain pending in
+this working draft.

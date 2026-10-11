@@ -1,0 +1,118 @@
+\subsection{Whole-field categorical SMI adaptation}
+The full-field no-query SMI adaptation has completed all three sources.
+One deterministic fitting generation per source uses all allowed covariates,
+four whole optional-field groups, and the full sixteen-model linear-SVR
+family. All fits share complete-optional-field estimator-training rows.
+Training-only scaling, category vocabularies and target normalization are
+retained. Missing categories require a one-hot completion, including the
+declared unknown token. These discrete groups and fallback conventions
+are a task adaptation of the two-stage SMI formulation~\cite{zhang2020strategic},
+not an official Weka reproduction.
+
+Independent categorical enumeration and scalar interval optimization check
+94,527 report/domain cases, every final full-model quote, legal seller report
+and source cohort. The interval oracle agrees with a separate continuous-LP
+oracle on the complete execution smoke and randomized sign-consistent families.
+It preserves all domains and constraints; once-only array decoding changes
+audit overhead, not evaluation.
+
+\begin{table*}[t]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Whole-field SMI adaptation, without queries, on 1,000 evaluation
+listings per source. There is one deterministic fit per source, not three
+independent seeds. All methods share the stated complete-optional-field
+training rows. Fallback uses ordinary median/mode SVR when the fully reduced
+sign-consistent family or optimization is unavailable. The original method's
+guarantee is not asserted on those rows. MAEs use native source price units.}
+\label{tab:grouped_smi}
+\begin{tabular}{llrrrrrr}
+\toprule
+Source & Domain/method & Fit rows & Honest MAE & Attack MAE & Inflation & \shortstack{Honest\\fallback (\%)} & \shortstack{Attack\\fallback (\%)}\\
+\midrule
+Synthetic & Median/mode SVR & 2947 & 6973.99 & 7825.89 & 0.08741 & 0.0 & 0.0\\
+ & SMI / free & 2947 & 6973.99 & 7825.89 & 0.08741 & 13.7 & 75.3\\
+ & SMI / nonnegative & 2947 & 6973.99 & 7825.89 & 0.08741 & 13.7 & 75.3\\
+ & SMI / unit box & 2947 & 6973.99 & 7825.89 & 0.08741 & 13.7 & 75.3\\
+\midrule
+JUCars & Median/mode SVR & 2674 & 9138.21 & 8723.06 & 0.12962 & 0.0 & 0.0\\
+ & SMI / free & 2674 & 9138.21 & 8723.06 & 0.12962 & 20.0 & 87.3\\
+ & SMI / nonnegative & 2674 & 9138.21 & 8723.06 & 0.12962 & 20.0 & 87.3\\
+ & SMI / unit box & 2674 & 9138.21 & 8723.06 & 0.12962 & 20.0 & 87.3\\
+\midrule
+MUCars & Median/mode SVR & 3368 & 54377.45 & 58214.93 & 0.10496 & 0.0 & 0.0\\
+ & SMI / free & 3368 & 54377.45 & 58214.93 & 0.10496 & 2.8 & 65.6\\
+ & SMI / nonnegative & 3368 & 54377.45 & 58214.93 & 0.10496 & 2.8 & 65.6\\
+ & SMI / unit box & 3368 & 54377.45 & 58214.93 & 0.10496 & 2.8 & 65.6\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+All three adapted domains have the same aggregate honest and attacked
+outcomes as ordinary median/mode SVR. Attacked fallback fractions are
+75.3\%, 87.3\% and 65.6\% on synthetic, JUCars and MUCars respectively.
+This demonstrates the importance of retained-family assumptions when
+extending the method to categorical market representations. It does not
+demonstrate failure of the original theorem under its assumptions, or a
+gain attributable specifically to SAV-Val acquisition. The numerical and
+categorical diagnostics have different fitting rows and action spaces.
+
+\subsection{Acquisition-conditioned neighbor control}
+ACO-1 is a clean-room regression/group/hard-cap adaptation of
+acquisition-conditioned expected-loss scoring~\cite{valancius2024aco}.
+Each price predictor is fixed. A training-only conditional neighbor bank
+provides squared log-loss changes for sixteen optional-field observation
+patterns; unavailable bank values give zero replay benefit. Distances use
+only observed query groups and all allowed nonoptional groups, with fixed
+numeric/category weighting and stable ties. One-field acquisition and
+batch capacity replace general multi-step rollout and the acquisition-cost
+trade-off. This is not an unchanged execution of the authors' classification system.
+
+The complete nine-pair study contains 144 cells. Main $k=25$ uses all six
+capacities; $k=10$ and $k=50$ use only the primary capacity. Independent
+checks cover role separation, loss banks, field boundaries, direct coordinate
+distances, allocations, sixteen metrics and first-batch exact unilateral
+deviations. No winning $k$ is selected.
+
+\begin{table*}[t]
+\centering
+\caption{All ACO-1 neighbor settings at 10\% capacity, averaged over three
+fitting seeds. Mask and robust are the common mask-aware and robust/no-feedback
+price predictors. Native-price MAEs are source-specific. Main $k=25$ and
+both fixed sensitivity counts remain visible.}
+\label{tab:aco_primary}
+\begin{tabular}{llrrrr}
+\toprule
+Source & Price predictor & $k$ & Inflation & Honest MAE & Attack MAE\\
+\midrule
+Synthetic & Mask & 10 & 0.06439 & 3503.62 & 4624.94\\
+ &  & 25 & 0.05742 & 3503.62 & 4416.39\\
+ &  & 50 & 0.05684 & 3503.62 & 4412.09\\
+ & Robust & 10 & 0.01089 & 3568.22 & 3618.77\\
+ &  & 25 & 0.01081 & 3568.22 & 3612.31\\
+ &  & 50 & 0.01042 & 3568.22 & 3609.03\\
+\midrule
+JUCars & Mask & 10 & 0.01762 & 6875.38 & 6880.10\\
+ &  & 25 & 0.01779 & 6875.38 & 6881.85\\
+ &  & 50 & 0.01819 & 6875.38 & 6881.19\\
+ & Robust & 10 & 0.01128 & 7081.70 & 7082.40\\
+ &  & 25 & 0.01118 & 7081.70 & 7081.03\\
+ &  & 50 & 0.01088 & 7081.70 & 7081.48\\
+\midrule
+MUCars & Mask & 10 & 0.03838 & 27281.98 & 28064.34\\
+ &  & 25 & 0.03817 & 27281.98 & 28083.47\\
+ &  & 50 & 0.03711 & 27281.98 & 27971.09\\
+ & Robust & 10 & 0.00715 & 27578.04 & 27776.84\\
+ &  & 25 & 0.00716 & 27578.04 & 27778.54\\
+ &  & 50 & 0.00708 & 27578.04 & 27786.83\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+With robust prices and $k=25$, ACO-1 has lower primary inflation than full
+SAV-Val on synthetic and JUCars records. Full-minus-ACO differences are
+$0.00995$ and $0.00431$, with conditional intervals
+$[0.00725,0.01345]$ and $[0.00291,0.00588]$. On MUCars, the point difference
+favors SAV-Val by $0.00027$, but its interval crosses zero. ACO-1 also
+improves on robust suppression-output acquisition on synthetic and MUCars
+records, while the JUCars interval crosses zero. These results strengthen
+the need for a strong acquisition control; the primary comparison varies by source.

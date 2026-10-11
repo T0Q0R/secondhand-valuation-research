@@ -1,0 +1,91 @@
+{
+  "canonical": {
+    "prior_review": "paper/qa-development-v2-revision32/qa-receipt.json",
+    "prior_review_sha256": "b3f0c147d953406f0d589d8608ccae0433c833fce799308230583d74af5739b3",
+    "same_exact_page_images": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png",
+      "page-06.png",
+      "page-07.png",
+      "page-08.png",
+      "page-09.png",
+      "page-10.png",
+      "page-11.png",
+      "page-12.png",
+      "page-13.png",
+      "page-14.png",
+      "page-15.png",
+      "page-16.png",
+      "page-17.png",
+      "page-18.png",
+      "page-19.png"
+    ],
+    "changed_images_require_fresh_review": [
+      "page-20.png"
+    ],
+    "current_preflight_sha256": "6af183cbf2444404a41cc7290bff1bd1a387c290e3b474751af2a45e40fc84ea"
+  },
+  "main": {
+    "prior_review": "paper/journal-draft-revision35/qa-main/qa-receipt.json",
+    "prior_review_sha256": "4a9394a0d5a1c2ccb518f8de73de00aa9a3ec02a83a972e3e8a2fc16c5662a44",
+    "same_exact_page_images": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png",
+      "page-06.png",
+      "page-07.png",
+      "page-08.png",
+      "page-09.png",
+      "page-10.png",
+      "page-11.png",
+      "page-12.png",
+      "page-14.png",
+      "page-15.png",
+      "page-16.png",
+      "page-17.png",
+      "page-18.png",
+      "page-19.png",
+      "page-20.png"
+    ],
+    "changed_images_require_fresh_review": [
+      "page-13.png"
+    ],
+    "current_preflight_sha256": "488cc4e76babb0d2b9bf92b1cf43df0045307691d83592ed03891c5a578fdc33"
+  },
+  "supplement": {
+    "prior_review": "paper/journal-draft-revision35/qa-supplement/qa-receipt.json",
+    "prior_review_sha256": "938352525067885c3a71eed054a4f0bcb112b3ab38d422f654de17c4e1d5f990",
+    "same_exact_page_images": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png",
+      "page-06.png",
+      "page-07.png",
+      "page-08.png",
+      "page-09.png",
+      "page-10.png",
+      "page-11.png",
+      "page-12.png",
+      "page-13.png",
+      "page-14.png",
+      "page-15.png",
+      "page-16.png",
+      "page-17.png",
+      "page-18.png",
+      "page-19.png",
+      "page-21.png",
+      "page-22.png"
+    ],
+    "changed_images_require_fresh_review": [
+      "page-20.png"
+    ],
+    "current_preflight_sha256": "bc2da8c3b651d43f25de5f8d413677d1e131294fa1c5431a0c42fa0624511ffb"
+  }
+}

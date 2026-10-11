@@ -1,0 +1,52 @@
+{
+  "actions": [
+    "mileage_km",
+    "transmission",
+    "fuel_type",
+    "feat_body_condition"
+  ],
+  "anchor_weight": 0.25,
+  "attack_loss_weight": 0.5,
+  "attacker_restarts": 2,
+  "attacker_sweeps": 2,
+  "batch_size": 20,
+  "bootstrap_repetitions": 1000,
+  "budgets": [
+    0,
+    0.1
+  ],
+  "catboost_iterations": 8,
+  "concealment_cost_log": 0.0,
+  "datasets": [
+    "synthetic"
+  ],
+  "feedback_rounds": 2,
+  "gap_penalty_weight": 0.5,
+  "gap_tolerance_log": 0.02,
+  "head_fitting_fraction": 0.3,
+  "head_trees": 4,
+  "learning_rate": 0.001,
+  "max_evaluation": 20,
+  "max_train": 60,
+  "maximum_hidden": 2,
+  "outer_folds": 2,
+  "output": "outputs/matched-factorial-end-to-end-smoke-v1",
+  "protocol": "sav-val-public-nested-development-v2",
+  "residual_epochs": 12,
+  "residual_hidden_width": 8,
+  "runtime_python": "../.venv-gdfs/bin/python",
+  "seeds": [
+    13
+  ],
+  "status": "retrospective_crossfit_development",
+  "synthetic_evaluation": 20,
+  "synthetic_evaluation_seed": 73102,
+  "synthetic_generation_seed": 73101,
+  "synthetic_train": 80,
+  "training_attacker_sweeps": 1,
+  "training_budget": 0.1,
+  "initial_epochs": 1,
+  "feedback_epochs": 2,
+  "factorial_primary_budget": 0.1,
+  "execution_smoke": true
+}

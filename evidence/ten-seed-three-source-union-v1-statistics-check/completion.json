@@ -1,0 +1,185 @@
+{
+  "status": "completed",
+  "contrasts": 15,
+  "source_seed_pairs": 30,
+  "resamples_per_contrast": 1000,
+  "mutations_rejected": [
+    "effect_direction",
+    "interval_endpoint",
+    "missing_seed"
+  ],
+  "parent_completion_sha256": "d1e3d43d9b920b6b74ac9696597063e655bd7a8aaefd57bd60a83148f5693440",
+  "scope": "independent record-level contrast and count-weighted bootstrap reconstruction; not a guarantee of nominal coverage with10 shared batches",
+  "checked": [
+    {
+      "dataset": "synthetic",
+      "reference": "sav_benefit_head",
+      "difference": -0.00432826805114746,
+      "seed_batch_interval": [
+        -0.007773940088748933,
+        -0.0012152854704856884
+      ]
+    },
+    {
+      "dataset": "synthetic",
+      "reference": "robust_no_feedback",
+      "difference": -0.009090935897827146,
+      "seed_batch_interval": [
+        -0.012355069985389702,
+        -0.006323359067440032
+      ]
+    },
+    {
+      "dataset": "synthetic",
+      "reference": "masking_benefit",
+      "difference": 0.029153461265563962,
+      "seed_batch_interval": [
+        0.024928108894824972,
+        0.03358155432701111
+      ]
+    },
+    {
+      "dataset": "synthetic",
+      "reference": "sav_no_gap",
+      "difference": 0.017006581592559813,
+      "seed_batch_interval": [
+        0.014282406265735624,
+        0.01979379586219787
+      ]
+    },
+    {
+      "dataset": "synthetic",
+      "reference": "sav_preaudit_attacker",
+      "difference": -0.007556044101715086,
+      "seed_batch_interval": [
+        -0.010444319882392882,
+        -0.0049231054568290725
+      ]
+    },
+    {
+      "dataset": "jucars",
+      "reference": "sav_benefit_head",
+      "difference": 0.0012521481037139886,
+      "seed_batch_interval": [
+        -0.000172024093866348,
+        0.0029455897772312158
+      ]
+    },
+    {
+      "dataset": "jucars",
+      "reference": "robust_no_feedback",
+      "difference": -0.0029056589603424065,
+      "seed_batch_interval": [
+        -0.007024669643640515,
+        0.000776961024999616
+      ]
+    },
+    {
+      "dataset": "jucars",
+      "reference": "masking_benefit",
+      "difference": 0.005030293798446636,
+      "seed_batch_interval": [
+        0.0016488687014579583,
+        0.007985400304794287
+      ]
+    },
+    {
+      "dataset": "jucars",
+      "reference": "sav_no_gap",
+      "difference": 0.019588297605514515,
+      "seed_batch_interval": [
+        0.01613117665648459,
+        0.02329204158663748
+      ]
+    },
+    {
+      "dataset": "jucars",
+      "reference": "sav_preaudit_attacker",
+      "difference": -0.0010368447303771963,
+      "seed_batch_interval": [
+        -0.0024280837869644157,
+        0.00030338703155517467
+      ]
+    },
+    {
+      "dataset": "mucars",
+      "reference": "sav_benefit_head",
+      "difference": -0.00025021495819091747,
+      "seed_batch_interval": [
+        -0.0010921381402015672,
+        0.0004883432507514939
+      ]
+    },
+    {
+      "dataset": "mucars",
+      "reference": "robust_no_feedback",
+      "difference": -0.0008287597656249993,
+      "seed_batch_interval": [
+        -0.0018697111201286289,
+        0.00020955837011337115
+      ]
+    },
+    {
+      "dataset": "mucars",
+      "reference": "masking_benefit",
+      "difference": 0.03974243068695066,
+      "seed_batch_interval": [
+        0.03670806464672086,
+        0.0429055034804344
+      ]
+    },
+    {
+      "dataset": "mucars",
+      "reference": "sav_no_gap",
+      "difference": 0.0156239324569702,
+      "seed_batch_interval": [
+        0.01403626260042189,
+        0.017119624583721144
+      ]
+    },
+    {
+      "dataset": "mucars",
+      "reference": "sav_preaudit_attacker",
+      "difference": 0.0005796012878417959,
+      "seed_batch_interval": [
+        -0.00021213029146194422,
+        0.0012384665918350193
+      ]
+    }
+  ],
+  "source_outcome_hashes": {
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/synthetic/seed-13/per_listing_outcomes.csv.gz": "856edc8be9389c013bd76479c4f0c790071e349b6d49670933bca7dd72ecdfbe",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/synthetic/seed-42/per_listing_outcomes.csv.gz": "5f2115c37cab5e6100b3fa33f5ed6543f0f8cc99e550a092af2a012db11ab16c",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/synthetic/seed-2026/per_listing_outcomes.csv.gz": "1904d55eaa30d12452786f7eb35993e94b02385ab3f5187bc7501cf87483f0f8",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/jucars/seed-13/per_listing_outcomes.csv.gz": "c174529219ab6eaeb6ae85966ab43190227a71b2981645c3e1cbe1af08670810",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/jucars/seed-42/per_listing_outcomes.csv.gz": "debefdb5ba30f6a5efe3f663bb0ba47fa4307592f922e90047ce846c0528d0c5",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/jucars/seed-2026/per_listing_outcomes.csv.gz": "6c4c75d98832e0859a3c62cd88f0b0f45075562260a8a5039e09ada02de55595",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/mucars/seed-13/per_listing_outcomes.csv.gz": "4185d2995acd895a4b09741dd2ba9b2ca5786c303bbbe9da4b0ea954f36961bf",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/mucars/seed-42/per_listing_outcomes.csv.gz": "f027fc27ca4dc95f572a19d653d2f42c852da64421d3aa9875be6806d4dc75f4",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-development-v2/mucars/seed-2026/per_listing_outcomes.csv.gz": "40101a4adc9e35e7cd4c5d0ba57e73e105a7d7e59160a7419f23ac65ff65f58c",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-101/per_listing_outcomes.csv.gz": "921fff71109c1a08bd8ccb2c2eecbe6fc413eced26b50fc691823f9d99c2843c",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-211/per_listing_outcomes.csv.gz": "b8503287dfdf9903cfe394d2d6ab4bd92f602dadf26d0c5e5fbc63ea3536deca",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-307/per_listing_outcomes.csv.gz": "91e96d9785c85c22c79d55faa83737ac3a7e78861bd54bd8cb76ca5a09dfdb4d",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-401/per_listing_outcomes.csv.gz": "81eb04e2d445c0c4f11acc657cccb431c653d186a58f0ae32f683c38ce9226da",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-503/per_listing_outcomes.csv.gz": "60cae9401c5026469c5180aa9a75fe56761872a67138278df6615be4a8f05614",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-601/per_listing_outcomes.csv.gz": "885579b061a6d50647327a9da6db97154edb9020a1b980adf72f5fb5badba109",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/synthetic/seed-701/per_listing_outcomes.csv.gz": "cb00094e8c08f701b2411cf6f0cb87aa2f1f7cc7077018e442bb1fcb0bd9fba4",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-101/per_listing_outcomes.csv.gz": "abc8761a3e0eec32ad53581d8a19cee875940926f168c6a101d14c5cf7fc7bd7",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-211/per_listing_outcomes.csv.gz": "a12e375ba019709db80f0f05804053b11b7c6ea9ba2b063284e72aef575a84b7",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-307/per_listing_outcomes.csv.gz": "d8cafc8dd13111843964f36eb8809888b04a27dc0ab8401e46724f180a3d5a0c",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-401/per_listing_outcomes.csv.gz": "d37316e8d0f5462c89a22edd785c62a465d9c7c8b79c86d544fa67b7a5fac79a",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-503/per_listing_outcomes.csv.gz": "25295ae2c4cef57955112df52bd4f5bfc6501e9c0be18c0c9e4161e9e9ec3690",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-601/per_listing_outcomes.csv.gz": "88688476db9d916543d281f7108f0c787d53ed77cdb4daf9bff9e20bf0dabaeb",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/jucars/seed-701/per_listing_outcomes.csv.gz": "299a9e353f4ecf3ea1d03680a33f44691ae00d0b7d1e3edf7d3e0373dddb998d",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-101/per_listing_outcomes.csv.gz": "42789e10da2047fd87a050c66fedbd681ec2c2f0b736eee1dd7ce627669692d5",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-211/per_listing_outcomes.csv.gz": "63c4dfadddb428ddf6a3f67bf375839dfeaa72d55a44d39a29aa5dce20066d3b",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-307/per_listing_outcomes.csv.gz": "ef11bb845d0c16a1fa3ca040b60024b02a9675155a505a5a31c1f2f664505180",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-401/per_listing_outcomes.csv.gz": "bb131e13269f88b8044468933e3619b8019a3f715be12c6c2ed0f2eabb7636c7",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-503/per_listing_outcomes.csv.gz": "fc538d9594dbec96c98cdc726dee418a780cb46e1fb5220a226cc1c5d78ff7a4",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-601/per_listing_outcomes.csv.gz": "2da769b95cee63391bd849aae33c6c2c724f919a60e4ebe07f89c1784782ed7d",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/nested-seven-extra-seeds-v1/mucars/seed-701/per_listing_outcomes.csv.gz": "db0d3581b52283b185cf9736d10d52575c012f7cb29e53e0a2be655fa881c341"
+  },
+  "files": {
+    "checker_snapshot.py": "b62343344fcd97a437153e4a734e0c3f8a5502dbe2e0e16383d1b64ec3a4d7e2"
+  }
+}

@@ -1,0 +1,12 @@
+experiment_id,type,claim_id,dataset,metric,baselines_involved,our_method_variant,expected_outcome,result_status,notes
+DEV-SYN,main_comparison,C0,synthetic,clean MAE;attack MAE;uplift;regret,Development controls and four ablations,sav_val,Unknown; feasibility only,verified,Independent generation seeds; development sizes; actual saved development-v1 outcomes and independent metric recomputation
+DEV-JU,main_comparison,C0,JUCars validation,clean MAE;attack MAE;uplift;regret,Development controls and four ablations,sav_val,Unknown; feasibility only,verified,Existing training and validation; source test labels not opened; actual saved development-v1 outcomes and independent metric recomputation
+DEV-MU,main_comparison,C0,MUCars validation,clean MAE;attack MAE;uplift;regret,Development controls and four ablations,sav_val,Unknown; feasibility only,verified,Existing training and validation; source test labels not opened; actual saved development-v1 outcomes and independent metric recomputation
+FINAL-MAIN,main_comparison,C0,synthetic;JUCars;MUCars,accuracy and inflation budget frontier,Selected controls,sav_val,Test prespecified success rule,planned,Final scope freeze requires development and competitor audit
+FINAL-HEAD,ablation,C1,synthetic;JUCars;MUCars,accuracy;uplift,sav_benefit_head,sav_val,Test suppression objective,planned,Three training seeds
+FINAL-GAP,ablation,C1,synthetic;JUCars;MUCars,accuracy;uplift;signed bias,sav_no_gap,sav_val,Test upward-gap penalty,planned,Three training seeds
+FINAL-FEEDBACK,ablation,C1,synthetic;JUCars;MUCars,accuracy;uplift,robust_no_feedback,sav_val,Test feedback training,planned,Three training seeds
+FINAL-ADAPT,ablation,C1,synthetic;JUCars;MUCars,accuracy;uplift;deviation regret,sav_preaudit_attacker,sav_val,Test post-policy attacker,planned,Three training seeds
+FINAL-ROBUST,robustness,C2,synthetic;JUCars;MUCars,missingness and cost and hide-cap curves,Selected controls,sav_val,Test robustness limits,planned,Freeze additional attacks before final evaluation
+FINAL-TRANSFER,robustness,C2,synthetic;JUCars;MUCars,Common-state attacked MAE,Ordinary benefit and static robust,sav_val,Separate response and estimator effects,planned,Same source masks transferred across methods
+FINAL-EFFICIENCY,efficiency,C2,synthetic;JUCars;MUCars,training seconds;latency;artifact bytes,Selected controls,sav_val,Measure actual cost,planned,No efficiency claim without per-method timing

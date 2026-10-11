@@ -1,0 +1,92 @@
+\subsection{Shared-report transfer}
+The original main run also saved outcomes when every principal method
+receives full SAV-Val's returned primary reports. Each allocation and quote
+is recomputed for its own fixed model and rule while reports stay fixed.
+This is one-direction transfer; sellers are not reoptimized against receiving
+methods. Independent reconstruction checks public head inputs, sorted
+allocation and twelve reported metrics for all 36 source/seed/method cells.
+
+\begin{table*}[t]
+\centering
+\caption{Principal methods on full SAV-Val's primary reports, at 10\%
+capacity, averaged over three fitted seeds. The full method's own outcome
+is unchanged; the others are transfer evaluations, not equilibrium outcomes
+for the receiving methods. Native-price attacked MAE remains visible.}
+\label{tab:shared_reports}
+\begin{tabular}{llrr}
+\toprule
+Source & Receiving method & Inflation & Attack MAE\\
+\midrule
+Synthetic & Mask + benefit & 0.04355 & 4415.82\\
+ & Robust, no feedback & 0.01003 & 3696.09\\
+ & SAV + benefit output & 0.01768 & 3772.35\\
+ & SAV-Val & 0.02075 & 3754.03\\
+\midrule
+JUCars & Mask + benefit & 0.00593 & 6877.03\\
+ & Robust, no feedback & 0.00719 & 7110.27\\
+ & SAV + benefit output & 0.01201 & 7061.26\\
+ & SAV-Val & 0.01549 & 7073.94\\
+\midrule
+MUCars & Mask + benefit & 0.01393 & 27548.09\\
+ & Robust, no feedback & 0.00473 & 27751.89\\
+ & SAV + benefit output & 0.00517 & 27067.27\\
+ & SAV-Val & 0.00689 & 27311.95\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Robust/no-feedback has lower inflation than full SAV-Val on these shared
+reports in all three sources, with reference-minus-full conditional intervals
+below zero. The MUCars advantage in the own-response main study therefore
+does not persist in this transfer. MUCars attacked MAE still favors SAV-Val:
+the robust-minus-full difference is 439.95 price units, with interval
+$[146.51,778.31]$. This separates comparison on fixed reports from comparison
+under different induced responses; it does not identify a causal feedback effect.
+
+\subsection{Online cost and stored model size}
+The public inference path encodes and quotes the current report, scores
+publicly absent fields, allocates queries, replays recorded values, and
+revalues the batch. Model/data loading and seller search are excluded.
+Private counterfactual enumeration is used by the independent auditor,
+not the timed pipeline. All 360 batches reproduce parent queries, replay
+outcomes and final quotes. There are 7,200 measurements, using two warmups
+and twenty repetitions per batch with four CPU threads.
+
+\begin{table*}[t]
+\centering
+\caption{Public inference on a shared workstation: 100 listings per batch,
+three saved fitting seeds and ten batches per seed. Each timing cell has
+600 repeated measurements, not independent evaluation samples. Times
+include preprocessing, scoring, allocation, software replay and final
+revaluation. Stored size averages compressed model-and-head files over
+three seeds. These are not physical inspection times or controlled speedups.}
+\label{tab:online_resources}
+\begin{tabular}{llrrr}
+\toprule
+Source & Method & Median batch (ms) & Batch p90 (ms) & Stored size (MiB)\\
+\midrule
+Synthetic & Mask + benefit & 55.75 & 81.00 & 15.44\\
+ & Robust, no feedback & 55.38 & 69.05 & 16.92\\
+ & SAV + benefit output & 55.50 & 72.91 & 17.69\\
+ & SAV-Val & 54.86 & 75.95 & 16.95\\
+\midrule
+JUCars & Mask + benefit & 64.19 & 78.51 & 1.98\\
+ & Robust, no feedback & 65.24 & 100.76 & 1.94\\
+ & SAV + benefit output & 65.17 & 77.43 & 2.01\\
+ & SAV-Val & 60.33 & 68.97 & 1.99\\
+\midrule
+MUCars & Mask + benefit & 56.25 & 60.62 & 0.87\\
+ & Robust, no feedback & 57.35 & 63.48 & 1.15\\
+ & SAV + benefit output & 59.60 & 65.70 & 1.14\\
+ & SAV-Val & 57.74 & 63.00 & 1.15\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Hardware contention and sequential method order limit speed comparisons.
+Separately recorded outer/deployment fit stages cover the shared twelve-method
+matrix. Summed stage times are 316.33, 1,669.22 and 5,671.34 seconds for
+synthetic, JUCars and MUCars. These do not attribute training cost to one
+method, measure peak memory or energy, or include all head reconstruction,
+response evaluation and artifact I/O. Nested fitting and equal tuning add
+offline work that must be weighed against source-dependent gains.

@@ -1,0 +1,181 @@
+{
+  "status": "compiled_rendered_geometric_checks_passed_visual_review_pending",
+  "pdf": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/paper/journal-draft-revision36/main.pdf",
+  "pdf_sha256": "26e5da089a8c545966da1087d9f8599790548ed3de0b887a0c79fb1c6cfb5431",
+  "pages": 20,
+  "log_sha256": "f0e30f420d7c9a3917280f9aa38c94da4fc22d86f7309e3714e739d962944ad7",
+  "renderer_sha256": "afa9eae88f8e57006bd6089f3556ed99731f7e32b978fb341972e5c7ce528235",
+  "all_extracted_word_bounds_within_page": true,
+  "all_fonts_embedded": true,
+  "font_unicode_limitations": [
+    "GJMHKB+CMEX10                        Type 1C           Builtin          yes yes no      92  0"
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "words": 192,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 2,
+      "words": 353,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 3,
+      "words": 404,
+      "has_tail_table": false,
+      "has_benefit_table": true,
+      "has_references_heading": false
+    },
+    {
+      "page": 4,
+      "words": 391,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 5,
+      "words": 414,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 6,
+      "words": 359,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 7,
+      "words": 369,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 8,
+      "words": 336,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 9,
+      "words": 360,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 10,
+      "words": 339,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 11,
+      "words": 318,
+      "has_tail_table": false,
+      "has_benefit_table": true,
+      "has_references_heading": true
+    },
+    {
+      "page": 12,
+      "words": 286,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 13,
+      "words": 260,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 14,
+      "words": 116,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 15,
+      "words": 180,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 16,
+      "words": 70,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 17,
+      "words": 98,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 18,
+      "words": 157,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 19,
+      "words": 166,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    },
+    {
+      "page": 20,
+      "words": 209,
+      "has_tail_table": false,
+      "has_benefit_table": false,
+      "has_references_heading": false
+    }
+  ],
+  "render_hashes": {
+    "page-15.png": "c58b30df422016d96589d39225bf1a8c10df71a2cce2a45231e5128a3a58e7f9",
+    "page-01.png": "a653a344a54b19281a24ee421d30669331ae592e111ccd95ed5f6573568ed99c",
+    "page-14.png": "cbc0af6c82327e69bc8d6b0a44d84f4e87b283e17fac5a22b7c4f3a23724c322",
+    "page-02.png": "f8652c609638f7cf324c91e269c91c2e90a5c09a44a8efa31865d682dab246d5",
+    "page-16.png": "876f47b8678e04455c71236ee0e939b663828701c684f2c32b6f4e6acf19d456",
+    "page-17.png": "5344f976fa2d319b43dde43c29dbf999ca870a7976abc13b865a1ac151be45c4",
+    "page-03.png": "26860705c5ff691c814a4211b6c6215e89cb7cd29827fc436a2edf42397b93a3",
+    "page-07.png": "76cc2f4d14e6f57a4a75e55c9518e5869188ebf4e306f5886108d0e70d943aff",
+    "page-13.png": "e7b9aad77535beb3e4bd3ab8b492d0ed4949a25de5ad396adaff4509d5138f19",
+    "page-12.png": "81bcec9e985c0636ddbe8bfa90bc23cf2b682b8ff4b45f6aaf54484395520fa3",
+    "page-06.png": "16c08385ca217fabeaf7c175fafd13e95246f3f296a8096bb4cec6fd519cac00",
+    "page-10.png": "445b3bf38d41102fffb23faa96e0bd1785b563932e3395fb1032a2a4429120c9",
+    "page-04.png": "46520e94283799595018919e1b119d3be76ed44c83fd28aadb8c28bdf2af5517",
+    "page-05.png": "d1a8619504a1a1206fb711deff668c37030683821a212db0bb2fab8d7d89b42f",
+    "page-11.png": "932eb9e3dcf8e2d991a36efb7ae6539b00e566ebb41292e5c01b9c94a0133323",
+    "contact-3.png": "d9e35e540e08997dbff75446409b0c33aae3f299af554d5744c828781f561691",
+    "contact-2.png": "7fe88751579b68bb4aecace98a3ed24927fdfef7916b1da68c9b83855495f90f",
+    "contact-1.png": "30e90864c579a8c8a5bfe386ee8ce144fac738d72f92be1fa136ef55d5bfea7b",
+    "page-08.png": "71db25a23159e31d8af795e76f22f63aa52870fd3aa48cd2fcc58e25c807945e",
+    "page-20.png": "f9a98bc561b13d902e8a3cba93c30f618fd109a3cc0ef3ed4805ad996e1aadab",
+    "page-09.png": "e1308bc0f6292670afe5c9347e65a0af8fc08332a6ab3bb032547c66faa17671",
+    "page-19.png": "c24e8d9cd0282c6e02e2e9a1a501b69ef757b63e335e42a62b0c888e6921f1c9",
+    "page-18.png": "dbdca88093f1dffe0b2aefd42d756c70b723ae74cab6bf24dcf9ddac7777183e"
+  },
+  "scope": "saved development artifact; neither experiment completion nor journal acceptance"
+}

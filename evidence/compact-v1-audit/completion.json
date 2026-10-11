@@ -1,0 +1,309 @@
+{
+  "status": "completed",
+  "cases": 57,
+  "full_enumeration_comparisons": 56,
+  "original_market_cases": 32,
+  "algebraic_small_cases": 24,
+  "large_compact_variables": 3201,
+  "exact_interval_pieces": 111,
+  "exact_field_marginals": 3200,
+  "hard_budget_draws": 16000,
+  "sampling_check": "simultaneous Hoeffding tolerance for3200 marginals,2000 draws/class,alpha0.001; continuous kernel marginal identities checked exactly",
+  "mutations_rejected": [
+    "dual_gap",
+    "hard_capacity"
+  ],
+  "parent_completion_sha256": "e6c6d64a3d61365dd8162b1ecdb3feeb86070efcab1828b4274030f2d541f64d",
+  "seconds": 0.3710672855377197,
+  "checked": [
+    {
+      "case": "original-case-00",
+      "bound": 18.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-01",
+      "bound": 4.235294117647059,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-02",
+      "bound": 0.808988764044944,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-03",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-04",
+      "bound": 17.5,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-05",
+      "bound": 3.984375,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-06",
+      "bound": 0.4442508710801392,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-07",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-08",
+      "bound": 17.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-09",
+      "bound": 3.7333333333333334,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-10",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-11",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-12",
+      "bound": 16.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-13",
+      "bound": 3.230769230769231,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-14",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-15",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-16",
+      "bound": 14.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-17",
+      "bound": 2.2222222222222223,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-18",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-19",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-20",
+      "bound": 12.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-21",
+      "bound": 1.2000000000000002,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-22",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-23",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-24",
+      "bound": 10.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-25",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-26",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-27",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-28",
+      "bound": 6.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-29",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-30",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "original-case-31",
+      "bound": 0.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-00",
+      "bound": 17.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-01",
+      "bound": 17.1044776119403,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-02",
+      "bound": 13.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-03",
+      "bound": 7.535528596187174,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-04",
+      "bound": 19.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-05",
+      "bound": 9.589567327133036,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-06",
+      "bound": 10.288494077834176,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-07",
+      "bound": 7.582563102880381,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-08",
+      "bound": 19.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-09",
+      "bound": 17.773234200743495,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-10",
+      "bound": 17.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-11",
+      "bound": 13.066666666666668,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-12",
+      "bound": 20.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-13",
+      "bound": 14.2,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-14",
+      "bound": 8.106052690958306,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-15",
+      "bound": 19.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-16",
+      "bound": 20.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-17",
+      "bound": 12.39203189543706,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-18",
+      "bound": 16.666666666666664,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-19",
+      "bound": 17.0,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-20",
+      "bound": 16.166666666666664,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-21",
+      "bound": 16.222222222222225,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-22",
+      "bound": 8.692899482910834,
+      "certificate_verified": true
+    },
+    {
+      "case": "algebraic-23",
+      "bound": 6.248745601988359,
+      "certificate_verified": true
+    },
+    {
+      "case": "large-algebraic",
+      "bound": 25.038806677085486,
+      "certificate_verified": true
+    }
+  ],
+  "files": {
+    "auditor_snapshot.py": "06cf7de08d628cf03e186e01c2ea8b4b31ff3442f14dcec4604dc09529ed27a6"
+  },
+  "scope": "finite item-local LP equivalence; algebraic scale fixture is not source-market efficacy or unseen-world evidence"
+}

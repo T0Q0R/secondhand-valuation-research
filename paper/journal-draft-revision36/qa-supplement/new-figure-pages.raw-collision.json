@@ -1,0 +1,200 @@
+{
+  "pdf": "paper/journal-draft-revision32/qa-supplement/new-figure-pages.pdf",
+  "auditable": true,
+  "verdict": "FIX BEFORE DELIVERY",
+  "page_count": 2,
+  "visible_text_box_count": 215,
+  "text_trace_count": 232,
+  "stroke_path_count": 974,
+  "filled_region_count": 645,
+  "image_region_count": 0,
+  "summary": {
+    "fail": 8,
+    "warn": 0,
+    "contained_fill_overlays": 0,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": [
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S5.Training-sizeeffectsvarywithsourceandreferenceunderequal-budgettunedSAV-Valattheprimary10%querycapacity.Rowsstratifysources;",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0440673828125,
+        701.663330078125
+      ],
+      "other_text": "columnsshowpositivelog-quoteinﬂation,honestMAEandattackedMAE.EverysignedcontrastisreferenceminusSAV,sopositivevaluesfavorSAV.",
+      "other_bbox": [
+        48.963890075683594,
+        666.7941284179688,
+        563.0440673828125,
+        674.7642211914062
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S5.Training-sizeeffectsvarywithsourceandreferenceunderequal-budgettunedSAV-Valattheprimary10%querycapacity.Rowsstratifysources;",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0440673828125,
+        701.663330078125
+      ],
+      "other_text": "Inﬂationcontrastsareinmillilogunits;MAEretainssource-nativepriceunits.Centersaveragethreeﬁtted-seedpairedcontrasts;barsareunadjusted95%",
+      "other_bbox": [
+        48.963890075683594,
+        675.760498046875,
+        563.0360107421875,
+        683.7305908203125
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S5.Training-sizeeffectsvarywithsourceandreferenceunderequal-budgettunedSAV-Valattheprimary10%querycapacity.Rowsstratifysources;",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0440673828125,
+        701.663330078125
+      ],
+      "other_text": "bootstrapintervalsfromtensharedevaluationbatches,conditionalonﬁttedmodels.Theydonotrepresenttraining-populationuncertainty.Referencepositions",
+      "other_bbox": [
+        48.963890075683594,
+        684.7268676757812,
+        563.0360717773438,
+        692.6969604492188
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S5.Training-sizeeffectsvarywithsourceandreferenceunderequal-budgettunedSAV-Valattheprimary10%querycapacity.Rowsstratifysources;",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0440673828125,
+        701.663330078125
+      ],
+      "other_text": "areoffsetby60trainingrecordsforvisibility.All972scheduledtuningcellsandall324ordinary-BENcellsareincluded.Alladverseeffectsremainvisible.",
+      "other_bbox": [
+        48.963890075683594,
+        693.6932373046875,
+        563.0362548828125,
+        701.663330078125
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 2,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S6.Training-sizeeffectsvarywithsourceandreferenceunderﬁxed-weightSAV-Valattheprimary10%querycapacity.Rowsstratifysources;columns",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0441284179688,
+        701.663330078125
+      ],
+      "other_text": "showpositivelog-quoteinﬂation,honestMAEandattackedMAE.EverysignedcontrastisreferenceminusSAV,sopositivevaluesfavorSAV.Inﬂation",
+      "other_bbox": [
+        48.963890075683594,
+        666.7941284179688,
+        563.0360717773438,
+        674.7642211914062
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 2,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S6.Training-sizeeffectsvarywithsourceandreferenceunderﬁxed-weightSAV-Valattheprimary10%querycapacity.Rowsstratifysources;columns",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0441284179688,
+        701.663330078125
+      ],
+      "other_text": "contrastsareinmillilogunits;MAEretainssource-nativepriceunits.Centersaveragethreeﬁtted-seedpairedcontrasts;barsareunadjusted95%bootstrap",
+      "other_bbox": [
+        48.963890075683594,
+        675.760498046875,
+        563.0361328125,
+        683.7305908203125
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 2,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S6.Training-sizeeffectsvarywithsourceandreferenceunderﬁxed-weightSAV-Valattheprimary10%querycapacity.Rowsstratifysources;columns",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0441284179688,
+        701.663330078125
+      ],
+      "other_text": "intervalsfromtensharedevaluation batches,conditionalonﬁttedmodels.Theydonotrepresenttraining-populationuncertainty. Referencepositionsareoffset",
+      "other_bbox": [
+        48.963890075683594,
+        684.7268676757812,
+        563.0441284179688,
+        692.6969604492188
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 2,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Fig.S6.Training-sizeeffectsvarywithsourceandreferenceunderﬁxed-weightSAV-Valattheprimary10%querycapacity.Rowsstratifysources;columns",
+      "text_bbox": [
+        48.963890075683594,
+        657.8277587890625,
+        563.0441284179688,
+        701.663330078125
+      ],
+      "other_text": "by60trainingrecordsforvisibility.All972scheduledtuningcellsandall324ordinary-BENcellsareincluded.Alladverseeffectsremainvisible.",
+      "other_bbox": [
+        48.963890075683594,
+        693.6932373046875,
+        534.2801513671875,
+        701.663330078125
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    }
+  ]
+}

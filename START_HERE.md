@@ -1,6 +1,6 @@
 # AI 与研究接手总览
 
-完整源码目录在 `secondhand-valuation-research-source.zip` 内，解压后各相对链接可使用。下面集中保存目标、现状、创新边界和数据入口，方便AI直接读取。
+完整源码已展开到本仓库目录；AI可直接读取 AI_HANDOFF.md、docs/STATUS.md、docs/RESEARCH.md 和 data/README.md。源码包另作初始快照保留；后续以目录中的版本为准。下面是初始交付时的总览。
 
 # AI 接手入口
 

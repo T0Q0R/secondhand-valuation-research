@@ -1,0 +1,262 @@
+[
+  {
+    "items": 2,
+    "budget": 1,
+    "contexts": 1,
+    "unique_rules": 2,
+    "core_rule_weight": "2/3",
+    "swap_rule_weight": "1/3",
+    "attained_bound": "2/3",
+    "budget_lower_bound": "2/3"
+  },
+  {
+    "items": 3,
+    "budget": 1,
+    "contexts": 2,
+    "unique_rules": 2,
+    "core_rule_weight": "2/3",
+    "swap_rule_weight": "1/3",
+    "attained_bound": "2/3",
+    "budget_lower_bound": "2/3"
+  },
+  {
+    "items": 3,
+    "budget": 2,
+    "contexts": 1,
+    "unique_rules": 3,
+    "core_rule_weight": "1/2",
+    "swap_rule_weight": "1/4",
+    "attained_bound": "1/2",
+    "budget_lower_bound": "1/2"
+  },
+  {
+    "items": 5,
+    "budget": 2,
+    "contexts": 3,
+    "unique_rules": 3,
+    "core_rule_weight": "1/2",
+    "swap_rule_weight": "1/4",
+    "attained_bound": "1/2",
+    "budget_lower_bound": "1/2"
+  },
+  {
+    "items": 6,
+    "budget": 2,
+    "contexts": 4,
+    "unique_rules": 3,
+    "core_rule_weight": "1/2",
+    "swap_rule_weight": "1/4",
+    "attained_bound": "1/2",
+    "budget_lower_bound": "1/2"
+  },
+  {
+    "items": 4,
+    "budget": 3,
+    "contexts": 1,
+    "unique_rules": 4,
+    "core_rule_weight": "2/5",
+    "swap_rule_weight": "1/5",
+    "attained_bound": "2/5",
+    "budget_lower_bound": "2/5"
+  },
+  {
+    "items": 7,
+    "budget": 3,
+    "contexts": 4,
+    "unique_rules": 4,
+    "core_rule_weight": "2/5",
+    "swap_rule_weight": "1/5",
+    "attained_bound": "2/5",
+    "budget_lower_bound": "2/5"
+  },
+  {
+    "items": 12,
+    "budget": 3,
+    "contexts": 9,
+    "unique_rules": 4,
+    "core_rule_weight": "2/5",
+    "swap_rule_weight": "1/5",
+    "attained_bound": "2/5",
+    "budget_lower_bound": "2/5"
+  },
+  {
+    "items": 5,
+    "budget": 4,
+    "contexts": 1,
+    "unique_rules": 5,
+    "core_rule_weight": "1/3",
+    "swap_rule_weight": "1/6",
+    "attained_bound": "1/3",
+    "budget_lower_bound": "1/3"
+  },
+  {
+    "items": 9,
+    "budget": 4,
+    "contexts": 5,
+    "unique_rules": 5,
+    "core_rule_weight": "1/3",
+    "swap_rule_weight": "1/6",
+    "attained_bound": "1/3",
+    "budget_lower_bound": "1/3"
+  },
+  {
+    "items": 20,
+    "budget": 4,
+    "contexts": 16,
+    "unique_rules": 5,
+    "core_rule_weight": "1/3",
+    "swap_rule_weight": "1/6",
+    "attained_bound": "1/3",
+    "budget_lower_bound": "1/3"
+  },
+  {
+    "items": 7,
+    "budget": 6,
+    "contexts": 1,
+    "unique_rules": 7,
+    "core_rule_weight": "1/4",
+    "swap_rule_weight": "1/8",
+    "attained_bound": "1/4",
+    "budget_lower_bound": "1/4"
+  },
+  {
+    "items": 13,
+    "budget": 6,
+    "contexts": 7,
+    "unique_rules": 7,
+    "core_rule_weight": "1/4",
+    "swap_rule_weight": "1/8",
+    "attained_bound": "1/4",
+    "budget_lower_bound": "1/4"
+  },
+  {
+    "items": 42,
+    "budget": 6,
+    "contexts": 36,
+    "unique_rules": 7,
+    "core_rule_weight": "1/4",
+    "swap_rule_weight": "1/8",
+    "attained_bound": "1/4",
+    "budget_lower_bound": "1/4"
+  },
+  {
+    "items": 9,
+    "budget": 8,
+    "contexts": 1,
+    "unique_rules": 9,
+    "core_rule_weight": "1/5",
+    "swap_rule_weight": "1/10",
+    "attained_bound": "1/5",
+    "budget_lower_bound": "1/5"
+  },
+  {
+    "items": 17,
+    "budget": 8,
+    "contexts": 9,
+    "unique_rules": 9,
+    "core_rule_weight": "1/5",
+    "swap_rule_weight": "1/10",
+    "attained_bound": "1/5",
+    "budget_lower_bound": "1/5"
+  },
+  {
+    "items": 72,
+    "budget": 8,
+    "contexts": 64,
+    "unique_rules": 9,
+    "core_rule_weight": "1/5",
+    "swap_rule_weight": "1/10",
+    "attained_bound": "1/5",
+    "budget_lower_bound": "1/5"
+  },
+  {
+    "items": 11,
+    "budget": 10,
+    "contexts": 1,
+    "unique_rules": 11,
+    "core_rule_weight": "1/6",
+    "swap_rule_weight": "1/12",
+    "attained_bound": "1/6",
+    "budget_lower_bound": "1/6"
+  },
+  {
+    "items": 21,
+    "budget": 10,
+    "contexts": 11,
+    "unique_rules": 11,
+    "core_rule_weight": "1/6",
+    "swap_rule_weight": "1/12",
+    "attained_bound": "1/6",
+    "budget_lower_bound": "1/6"
+  },
+  {
+    "items": 110,
+    "budget": 10,
+    "contexts": 100,
+    "unique_rules": 11,
+    "core_rule_weight": "1/6",
+    "swap_rule_weight": "1/12",
+    "attained_bound": "1/6",
+    "budget_lower_bound": "1/6"
+  },
+  {
+    "items": 17,
+    "budget": 16,
+    "contexts": 1,
+    "unique_rules": 17,
+    "core_rule_weight": "1/9",
+    "swap_rule_weight": "1/18",
+    "attained_bound": "1/9",
+    "budget_lower_bound": "1/9"
+  },
+  {
+    "items": 33,
+    "budget": 16,
+    "contexts": 17,
+    "unique_rules": 17,
+    "core_rule_weight": "1/9",
+    "swap_rule_weight": "1/18",
+    "attained_bound": "1/9",
+    "budget_lower_bound": "1/9"
+  },
+  {
+    "items": 272,
+    "budget": 16,
+    "contexts": 256,
+    "unique_rules": 17,
+    "core_rule_weight": "1/9",
+    "swap_rule_weight": "1/18",
+    "attained_bound": "1/9",
+    "budget_lower_bound": "1/9"
+  },
+  {
+    "items": 21,
+    "budget": 20,
+    "contexts": 1,
+    "unique_rules": 21,
+    "core_rule_weight": "1/11",
+    "swap_rule_weight": "1/22",
+    "attained_bound": "1/11",
+    "budget_lower_bound": "1/11"
+  },
+  {
+    "items": 41,
+    "budget": 20,
+    "contexts": 21,
+    "unique_rules": 21,
+    "core_rule_weight": "1/11",
+    "swap_rule_weight": "1/22",
+    "attained_bound": "1/11",
+    "budget_lower_bound": "1/11"
+  },
+  {
+    "items": 420,
+    "budget": 20,
+    "contexts": 400,
+    "unique_rules": 21,
+    "core_rule_weight": "1/11",
+    "swap_rule_weight": "1/22",
+    "attained_bound": "1/11",
+    "budget_lower_bound": "1/11"
+  }
+]

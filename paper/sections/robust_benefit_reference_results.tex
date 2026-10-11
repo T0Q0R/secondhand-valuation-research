@@ -1,0 +1,45 @@
+\subsection{Original robust predictor with ordinary-benefit acquisition}
+The saved robust/no-feedback control in the main study uses the suppression
+output. To complete the comparison specified in the original contract, we
+separately evaluate the same nine frozen robust predictors and their
+multi-output, out-of-fold deployment heads using the ordinary-benefit
+output. All six capacities, source cohorts, seeds and seller-search settings
+are retained. The 54 additional cells are independently checked for public
+scores, allocations, replay, metrics and exact first-batch deviations.
+Honest quotes are identical to the suppression-output robust control;
+this follow-up changes acquisition and the induced seller reports, without
+refitting or selecting models from evaluation outcomes.
+
+\begin{table*}[t]
+\centering
+\caption{Completed robust/ordinary-benefit reference at 10\% capacity.
+Reference values average three training seeds, with sample standard deviation
+in parentheses. The last column is reference minus full SAV-Val inflation,
+with a 95\% conditional shared-batch interval; positive values favor SAV-Val.
+Price errors retain native source units.}
+\label{tab:robust_benefit_reference}
+\begin{tabular}{lrrrr}
+\toprule
+Source & Reference inflation (SD) & Honest MAE & Attack MAE & Difference [95\% interval]\\
+\midrule
+Synthetic & 0.01077 (0.00066) & 3568.22 & 3613.74 & $-0.00998\;[-0.01260,-0.00791]$\\
+JUCars & 0.01117 (0.00046) & 7081.70 & 7081.51 & $-0.00432\;[-0.00598,-0.00285]$\\
+MUCars & 0.00778 (0.00108) & 27578.04 & 27770.09 & $0.00089\;[0.00045,0.00130]$\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+At the primary capacity, SAV-Val has 92.69\% more inflation than this
+reference on the synthetic cohort and 38.65\% more on JUCars. Their
+reference-minus-full intervals are below zero. On MUCars, SAV-Val has
+11.42\% less inflation, with difference $0.000888$ and interval
+$[0.000445,0.001295]$; honest MAE is 1.56\% lower and attacked MAE
+is 1.65\% lower. This meets the original fixed-setting comparison's
+10\% reduction, positive interval and at most 5\% honest-error deterioration
+criteria on MUCars only. It does not meet them across all scheduled sources,
+and the different component criterion in protocol v2 remains separate.
+The completed equal-allowance extension separately tunes and refits both
+static acquisition references and their deployment heads across all nine
+source/size cohorts. These original 54 fixed-setting cells and intervals remain
+unchanged; the separate 324-cell extension is reported below. Neither study
+establishes a universal feedback advantage.

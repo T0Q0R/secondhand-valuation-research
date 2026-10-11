@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "batch_radius_rows": 4320,
+  "aggregate_groups": 144,
+  "condition_arithmetic": "exact fractions of represented scores and perturbation radii",
+  "display_bound_tolerance": 1e-12,
+  "maximum_display_quote_bound_error": 1.0408340855860843e-16,
+  "parent_completion_sha256": "c2a204bdc45d62ac9d086d4b8436feef55be9de94deb06cbf16cf0c62dce0054",
+  "scope": "all fixed-profile sufficient conditions and recovery spans reconstructed; displayed bounds are floating approximations, no adapted-response or calibrated head-error guarantee"
+}
