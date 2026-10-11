@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-11T15:57:54.741549+08:00",
+  "snapshot_time": "2026-10-11T16:16:22.838719+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -10,7 +10,9 @@
       "time_utc": "2026-10-11T02:01:34Z",
       "stage": "fit-audit"
     },
-    "fit_pairs_verified_at_snapshot": 14
+    "fit_pairs_verified_at_snapshot": 14,
+    "audit_process_observed_live": true,
+    "full_pipeline_complete": false
   },
   "goal_complete": false,
   "live_state_is_not_in_github": true
