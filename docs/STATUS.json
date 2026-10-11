@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-11T22:47:12+08:00",
+  "snapshot_time": "2026-10-12T00:01:50+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -48,7 +48,7 @@
       "training_restarted": false
     },
     "current_main_pair": "jucars/307",
-    "current_main_heads_verified": 3,
+    "current_main_heads_verified": 6,
     "parallel_snapshot": {
       "workers": 8,
       "dataset": "mucars",
@@ -62,9 +62,18 @@
         101,
         2026
       ],
-      "heads_verified_per_pair": 7,
       "total_heads_per_pair": 14,
-      "complete_pair_receipts": 0
+      "complete_pair_receipts": 0,
+      "heads_verified_by_seed": {
+        "101": 9,
+        "211": 8,
+        "307": 9,
+        "401": 9,
+        "503": 8,
+        "601": 9,
+        "701": 9,
+        "2026": 8
+      }
     }
   },
   "goal_complete": false,
