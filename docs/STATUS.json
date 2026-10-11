@@ -1,19 +1,31 @@
 {
-  "snapshot_time": "2026-10-11T19:33:07.282050+08:00",
+  "snapshot_time": "2026-10-11T21:01:02+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
     "method_capacity_cells": 4320,
     "training_and_evaluation": "completed_pending_independent_audit",
     "pipeline": {
-      "status": "running_stage",
-      "time_utc": "2026-10-11T08:31:32Z",
-      "stage": "fit-audit"
+      "status": "paused_by_user",
+      "stage": "fit-audit",
+      "pipeline_pid": 1818,
+      "audit_pid": 1819
     },
     "fit_pairs_verified_at_snapshot": 14,
     "audit_process_observed_live": true,
     "full_pipeline_complete": false,
-    "fit_count_basis": "unique source/seed pairs; repeated resume log entries deduplicated"
+    "fit_count_basis": "unique source/seed pairs; repeated resume log entries deduplicated",
+    "pause": {
+      "signal": "SIGSTOP",
+      "process_states_verified": [
+        "Ts",
+        "T"
+      ],
+      "current_pair": "jucars/211",
+      "heads_verified": 13,
+      "total_heads": 14,
+      "memory_retained": true
+    }
   },
   "goal_complete": false,
   "live_state_is_not_in_github": true
