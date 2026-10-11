@@ -18,3 +18,7 @@
 从上方数据源获取合法下载，保留版本与许可。按 REPRODUCING.md 的既有输入处理说明检查数据路径与角色，按 REPRODUCING_MATCHED_FACTORIAL.md 运行新实验。合成来源由保存的生成程序重建。原机器 outputs 下有完整模型和结果；未来可放到单独私有制品存储并补URI、SHA256和版本，当前没有可下载的外部地址。
 
 哈希绑定证据内保留的本地绝对路径是来源记录，不是便携下载链接。若移动制品，保留原绑定并重新独立校验；不能改几个字符串后声称原审计仍有效。
+
+## 独立克隆准备
+
+新增 [PORTABLE_SETUP.md](../docs/PORTABLE_SETUP.md) 给出父目录布局、两个处理脚本的安装、固定输入的哈希核对和训练前检查。处理脚本原字节副本见 `source_inputs/`；凭据见 `notes/source-reproduction-inputs-v1.json`。这些材料补齐源码依赖，未声称完整清洁环境复现完成。
