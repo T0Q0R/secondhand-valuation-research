@@ -24,7 +24,20 @@
       "current_pair": "jucars/211",
       "heads_verified": 13,
       "total_heads": 14,
-      "memory_retained": true
+      "memory_retained": true,
+      "audit_pids": [
+        1819,
+        2075,
+        2076,
+        2178,
+        2179,
+        2180,
+        2181,
+        2182,
+        2281
+      ],
+      "audit_task_count": 9,
+      "all_audit_processes_verified_stopped": true
     }
   },
   "goal_complete": false,
