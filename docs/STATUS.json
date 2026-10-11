@@ -1,12 +1,12 @@
 {
-  "snapshot_time": "2026-10-11T21:01:02+08:00",
+  "snapshot_time": "2026-10-11T21:19:31+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
     "method_capacity_cells": 4320,
     "training_and_evaluation": "completed_pending_independent_audit",
     "pipeline": {
-      "status": "paused_by_user",
+      "status": "running_stage",
       "stage": "fit-audit",
       "pipeline_pid": 1818,
       "audit_pid": 1819
@@ -37,7 +37,15 @@
         2281
       ],
       "audit_task_count": 9,
-      "all_audit_processes_verified_stopped": true
+      "all_audit_processes_verified_stopped": false,
+      "active": false
+    },
+    "resume": {
+      "time": "2026-10-11T21:19:31+08:00",
+      "signal": "SIGCONT",
+      "audit_task_count": 9,
+      "all_processes_verified_not_stopped": true,
+      "training_restarted": false
     }
   },
   "goal_complete": false,
