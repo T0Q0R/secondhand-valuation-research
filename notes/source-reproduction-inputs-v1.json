@@ -1,0 +1,23 @@
+{
+  "builder_sha256": {
+    "build_jucars_bvival_manifest.py": "7cc08205b90d0a8494beec4281bc9bc2dfc27d160455482988d383830075ddd0",
+    "build_mucars_bvival_manifest.py": "e93c85dd57da857a0e97d37a8fda137627398afa81e197d5efe11351b6c5764d"
+  },
+  "license": "CC BY 4.0",
+  "processed_sha256": {
+    "jucars/train.csv": "c1f56a13d04b953c448699269966236d2b7e78e039410110327ab1494b8fac2b",
+    "jucars/validation.csv": "4d57d04ab0944af11713c67e5c3b1f35d135f4f2314a9a1f5f4b78906541548b",
+    "mucars/train.csv": "a8a2231abfdac008a9739c89a5ea3b1ab3518f647b856df501d525f7e46952fa",
+    "mucars/validation.csv": "ce27add36fb375f8e86953c5fdc2310addd412274add3ec9c62ad265c3a486a7"
+  },
+  "raw_sha256": {
+    "jucars_dictionary": "c56d9c24d39707f3b85079dba10b25fcd5b087e7d559c81da936278b50566d52",
+    "jucars_source": "d0099b330027bbf1c380307c75c72520ef3c4be8784880d0a9845c79e3d00d0a",
+    "mucars_source": "cb3574e38f34adfd70ee08d18c7748899fe86dc01338b50562bf91bcd145e749"
+  },
+  "source_dois": {
+    "jucars": "10.17632/ddcz486x5t.2",
+    "mucars": "10.17632/vjrbcb2rrt.2"
+  },
+  "status": "retrospective inherited validation inputs; not fresh confirmation"
+}
