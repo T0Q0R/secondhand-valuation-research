@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-12T17:01:25+08:00",
+  "snapshot_time": "2026-10-12T17:03:22+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -52,7 +52,19 @@
     },
     "remaining_unique_pairs": [],
     "fit_audit_stage_complete": true,
-    "outcome_cells_verified_at_snapshot": 72
+    "outcome_cells_verified_at_snapshot": 72,
+    "outcome_parallel": {
+      "worker_pids": [
+        35790,
+        35791,
+        35792,
+        35793
+      ],
+      "formal_pid": 35239,
+      "workers": 4,
+      "formal_full_coverage_required": true,
+      "identical_input_bindings_verified": true
+    }
   },
   "goal_complete": false,
   "live_state_is_not_in_github": true
