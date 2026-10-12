@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-12T14:06:45+08:00",
+  "snapshot_time": "2026-10-12T14:36:46+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -11,7 +11,7 @@
       "pipeline_pid": 1818,
       "audit_pid": 1819
     },
-    "fit_pairs_verified_at_snapshot": 28,
+    "fit_pairs_verified_at_snapshot": 30,
     "audit_process_observed_live": true,
     "full_pipeline_complete": false,
     "fit_count_basis": "unique source/seed pairs; repeated resume log entries deduplicated",
@@ -44,23 +44,14 @@
       "training_restarted": false
     },
     "current_main_pair": "mucars/13 (parallel audit also in flight)",
-    "current_main_heads_verified": 3,
+    "current_main_heads_verified": 5,
     "parallel_snapshot": {
+      "all_workers_finished": true,
       "live_audit_pids": [
-        1819,
-        2075,
-        2076
-      ],
-      "mucars_heads_verified_by_seed": {
-        "13": 13,
-        "42": 13
-      },
-      "jucars_701_complete": true
+        1819
+      ]
     },
-    "remaining_unique_pairs": [
-      "mucars/13",
-      "mucars/42"
-    ]
+    "remaining_unique_pairs": []
   },
   "goal_complete": false,
   "live_state_is_not_in_github": true
