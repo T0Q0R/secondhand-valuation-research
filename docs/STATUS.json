@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-12T11:13:37+08:00",
+  "snapshot_time": "2026-10-12T13:03:01+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -43,8 +43,8 @@
       "new_parallel_pair": "jucars/701",
       "training_restarted": false
     },
-    "current_main_pair": "jucars/701 (receipt already published by parallel worker; main finishing redundant in-flight verification)",
-    "current_main_heads_verified": 7,
+    "current_main_pair": "mucars/13 (parallel audit also in flight)",
+    "current_main_heads_verified": 1,
     "parallel_snapshot": {
       "live_audit_pids": [
         1819,
@@ -52,8 +52,8 @@
         2076
       ],
       "mucars_heads_verified_by_seed": {
-        "13": 6,
-        "42": 6
+        "13": 10,
+        "42": 10
       },
       "jucars_701_complete": true
     },
