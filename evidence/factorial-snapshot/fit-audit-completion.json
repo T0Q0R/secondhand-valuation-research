@@ -1,0 +1,142 @@
+{
+  "status": "completed",
+  "coverage": "all_configured_fits",
+  "execution_smoke": false,
+  "source_seed_pairs": 30,
+  "configured_pairs": 30,
+  "heldout_prediction_rows": 2068360,
+  "independently_refitted_heads": 420,
+  "mutations_rejected": [
+    "permutation",
+    "heldout_partition",
+    "heldout_prediction"
+  ],
+  "inputs": {
+    "run_manifest_sha256": "5c6f29cf592c4b903e3b41e03043b4ee2fd73432ac1a54cd0cd3959094d32f2d",
+    "checker_sha256": "29423840127e066821a3007ddd68dc9b58852b7319880e45e8caeec8580de14d",
+    "selected_pairs": [
+      [
+        "synthetic",
+        13
+      ],
+      [
+        "synthetic",
+        42
+      ],
+      [
+        "synthetic",
+        2026
+      ],
+      [
+        "synthetic",
+        101
+      ],
+      [
+        "synthetic",
+        211
+      ],
+      [
+        "synthetic",
+        307
+      ],
+      [
+        "synthetic",
+        401
+      ],
+      [
+        "synthetic",
+        503
+      ],
+      [
+        "synthetic",
+        601
+      ],
+      [
+        "synthetic",
+        701
+      ],
+      [
+        "jucars",
+        13
+      ],
+      [
+        "jucars",
+        42
+      ],
+      [
+        "jucars",
+        2026
+      ],
+      [
+        "jucars",
+        101
+      ],
+      [
+        "jucars",
+        211
+      ],
+      [
+        "jucars",
+        307
+      ],
+      [
+        "jucars",
+        401
+      ],
+      [
+        "jucars",
+        503
+      ],
+      [
+        "jucars",
+        601
+      ],
+      [
+        "jucars",
+        701
+      ],
+      [
+        "mucars",
+        13
+      ],
+      [
+        "mucars",
+        42
+      ],
+      [
+        "mucars",
+        2026
+      ],
+      [
+        "mucars",
+        101
+      ],
+      [
+        "mucars",
+        211
+      ],
+      [
+        "mucars",
+        307
+      ],
+      [
+        "mucars",
+        401
+      ],
+      [
+        "mucars",
+        503
+      ],
+      [
+        "mucars",
+        601
+      ],
+      [
+        "mucars",
+        701
+      ]
+    ],
+    "completed_only": false
+  },
+  "scope": "split and matched-budget receipts, all OOF predictions and independently reconstructed deployment heads; not full optimizer replay or performance evidence"
+}
