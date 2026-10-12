@@ -1,44 +1,32 @@
 {
-  "snapshot_time": "2026-10-12T00:01:50+08:00",
+  "snapshot_time": "2026-10-12T08:01:58+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
     "method_capacity_cells": 4320,
     "training_and_evaluation": "completed_pending_independent_audit",
     "pipeline": {
-      "status": "running_stage",
+      "status": "paused_by_user",
       "stage": "fit-audit",
       "pipeline_pid": 1818,
       "audit_pid": 1819
     },
-    "fit_pairs_verified_at_snapshot": 15,
+    "fit_pairs_verified_at_snapshot": 26,
     "audit_process_observed_live": true,
     "full_pipeline_complete": false,
     "fit_count_basis": "unique source/seed pairs; repeated resume log entries deduplicated",
     "pause": {
+      "active": true,
       "signal": "SIGSTOP",
-      "process_states_verified": [
-        "Ts",
-        "T"
-      ],
-      "current_pair": "jucars/211",
-      "heads_verified": 13,
-      "total_heads": 14,
-      "memory_retained": true,
+      "pipeline_pid": 1818,
       "audit_pids": [
         1819,
         2075,
-        2076,
-        2178,
-        2179,
-        2180,
-        2181,
-        2182,
-        2281
+        2076
       ],
-      "audit_task_count": 9,
-      "all_audit_processes_verified_stopped": false,
-      "active": false
+      "all_audit_processes_verified_stopped": true,
+      "memory_retained": true,
+      "time": "2026-10-12T08:01:58+08:00"
     },
     "resume": {
       "time": "2026-10-11T21:19:31+08:00",
@@ -47,33 +35,11 @@
       "all_processes_verified_not_stopped": true,
       "training_restarted": false
     },
-    "current_main_pair": "jucars/307",
-    "current_main_heads_verified": 6,
+    "current_main_pair": "jucars/601",
+    "current_main_heads_verified": 5,
     "parallel_snapshot": {
-      "workers": 8,
-      "dataset": "mucars",
-      "seeds": [
-        701,
-        601,
-        503,
-        401,
-        307,
-        211,
-        101,
-        2026
-      ],
-      "total_heads_per_pair": 14,
-      "complete_pair_receipts": 0,
-      "heads_verified_by_seed": {
-        "101": 9,
-        "211": 8,
-        "307": 9,
-        "401": 9,
-        "503": 8,
-        "601": 9,
-        "701": 9,
-        "2026": 8
-      }
+      "workers_still_live": 2,
+      "other_six_workers_finished": true
     }
   },
   "goal_complete": false,
