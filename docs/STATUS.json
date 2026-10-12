@@ -1,12 +1,12 @@
 {
-  "snapshot_time": "2026-10-12T08:01:58+08:00",
+  "snapshot_time": "2026-10-12T08:03:07+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
     "method_capacity_cells": 4320,
     "training_and_evaluation": "completed_pending_independent_audit",
     "pipeline": {
-      "status": "paused_by_user",
+      "status": "running_stage",
       "stage": "fit-audit",
       "pipeline_pid": 1818,
       "audit_pid": 1819
@@ -16,7 +16,7 @@
     "full_pipeline_complete": false,
     "fit_count_basis": "unique source/seed pairs; repeated resume log entries deduplicated",
     "pause": {
-      "active": true,
+      "active": false,
       "signal": "SIGSTOP",
       "pipeline_pid": 1818,
       "audit_pids": [
@@ -24,15 +24,23 @@
         2075,
         2076
       ],
-      "all_audit_processes_verified_stopped": true,
+      "all_audit_processes_verified_stopped": false,
       "memory_retained": true,
       "time": "2026-10-12T08:01:58+08:00"
     },
     "resume": {
-      "time": "2026-10-11T21:19:31+08:00",
+      "time": "2026-10-12T08:03:07+08:00",
       "signal": "SIGCONT",
-      "audit_task_count": 9,
+      "audit_pids": [
+        1819,
+        2075,
+        2076,
+        14965
+      ],
+      "audit_task_count": 4,
       "all_processes_verified_not_stopped": true,
+      "remaining_pairs": 4,
+      "new_parallel_pair": "jucars/701",
       "training_restarted": false
     },
     "current_main_pair": "jucars/601",
