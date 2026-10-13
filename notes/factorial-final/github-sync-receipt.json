@@ -1,0 +1,15 @@
+{
+  "time": "2026-10-13T10:24:31.398440+08:00",
+  "repository": "T0Q0R/secondhand-valuation-research",
+  "commit": "540a0221e5398f53613b141ad059f2f5d7b12d26",
+  "uploaded_files": 29,
+  "remote_readback_verified": [
+    "AGENTS.md unchanged",
+    "paper source Git blob matches",
+    "evidence ZIP Git blob matches",
+    "STATUS.json accessible"
+  ],
+  "compiler": "success",
+  "full_pipeline_complete": true,
+  "submission_complete": false
+}
