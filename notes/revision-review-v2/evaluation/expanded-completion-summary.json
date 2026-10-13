@@ -1,0 +1,22 @@
+{
+  "status": "completed_and_corroborated",
+  "cells": 480,
+  "batches": 29040,
+  "outcome_rows": 2891040,
+  "legal_unilateral_deviations_checked": 31269840,
+  "nonconverged_seed_cell_batches": 0,
+  "max_remaining_regret": 0.0,
+  "scope": "all final profiles, independent allocation/bit transitions and every legal unilateral utility; 10000 weighted crossed-bootstrap exploratory intervals, no fresh-cohort or training-population guarantee",
+  "full_feedback": {
+    "jucars": {
+      "negative_points": 12,
+      "upper_below_zero": 12,
+      "contrasts": 12
+    },
+    "mucars": {
+      "negative_points": 12,
+      "upper_below_zero": 10,
+      "contrasts": 12
+    }
+  }
+}

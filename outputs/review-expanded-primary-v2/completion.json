@@ -1,0 +1,8 @@
+{
+  "status": "completed_pending_corroborating_audit",
+  "cells": 480,
+  "summary_sha256": "62e38fe5988311531e3019fd8faee13fa118dfc58995ad0f4d32a1fcddd46194",
+  "manifest_sha256": "c622d6f2898c13b59317e4b92a64a5fbab6e295d2f0219c5a33553863bc882ec",
+  "operational_scheduler_sha256": "9172b20480de798b0328fd9c76545a6057eae54c5ba98241c71e75f8ad671891",
+  "scheduling": "independent_remaining_cells"
+}

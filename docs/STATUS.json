@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 08:39:45 UTC",
+  "snapshot_time": "2026-10-13 08:52:22 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -61,7 +61,7 @@
   },
   "completion_scope": "original computations complete; current scientific revision and submission preparation incomplete",
   "remaining_for_actual_submission": [
-    "full MUCars evaluation, corroboration and backfill",
+    "full-validation manuscript backfill and final QA",
     "author responsibility and factual declarations",
     "institution CAS edition/category and selected template",
     "public access/licensing/archival release decisions",
@@ -89,14 +89,12 @@
       "positive heterogeneous-cost subset",
       "full JUCars validation and corroboration"
     ],
-    "manuscript_changes": "saved_compiled_layout_and_correspondence_checked",
-    "running": "full MUCars frozen-model evaluation, then automated corroboration and weighted statistics",
+    "manuscript_changes": "current 30-page draft awaits full MU backfill",
+    "running": null,
     "expanded_snapshot": {
-      "completed_cells": 440,
+      "completed_cells": 480,
       "total": 480,
-      "not_global_completion": true,
-      "scope": "durable cell receipts verified at resize",
-      "completed_batches": 25183
+      "status": "completed_and_corroborated"
     },
     "full_jucars": {
       "listings": 1374,
@@ -127,7 +125,7 @@
       "finite_sample_fwer_certified": false
     },
     "runtime_resize": {
-      "status": "resumed_and_checkpoint_preservation_verified",
+      "status": "completed_and_corroborated",
       "producer_workers": 8,
       "producer_pid": 15837,
       "previous_pid": 9952,
@@ -139,11 +137,24 @@
       "observed_worker_count": 8
     },
     "scheduler_rebalance": {
-      "status": "prepared",
-      "entrypoint": "notes/revision-review-v2/evaluation/resume_cells_expanded.py",
-      "reason": "serial shared-fit critical path",
+      "status": "completed",
+      "old_pid": 15837,
+      "final_producer_pid": 17329,
       "workers": 8,
-      "frozen_algorithm_unchanged": true
+      "entrypoint": "notes/revision-review-v2/evaluation/resume_cells_expanded.py",
+      "completed_checkpoint_receipts_preserved": 29267
+    },
+    "full_expansion": {
+      "status": "completed_and_corroborated",
+      "cells": 480,
+      "batches": 29040,
+      "outcome_rows": 2891040,
+      "legal_unilateral_deviations": 31269840,
+      "nonconverged_seed_cell_batches": 0,
+      "max_remaining_regret": 0,
+      "feedback_negative_points": "24/24",
+      "feedback_unadjusted_upper_below_zero": "JU12/12; MU10/12",
+      "receipt": "notes/revision-review-v2/evaluation/expanded-completion-summary.json"
     }
   },
   "delivery_v1_historical": {

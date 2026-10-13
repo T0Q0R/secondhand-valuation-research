@@ -32,3 +32,8 @@ JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/
 ## 八worker恢复入口
 
 2026-10-13 16:15（Asia/Shanghai）已从6切到8 worker；用notes/revision-review-v2/evaluation/resume_expanded.py --workers 8恢复。它只给完整cell加哈希校验和精确summary缓存，原producer/evaluator/manifest均未改。切换前440个完整cell、25183批和25623完成凭据的哈希恢复后保持一致。新producer15837；日志controller-eight.log。finalizer12200保持等待，不能复用其他机器PID。重启时先核身份/锁，不要重新调用旧的resize_workers.py --old-pid 9952。
+
+
+## 最新优先事项（2026-10-13 08:52:22 UTC）
+
+全量计算、复核和统计已完成，不能重启9952/15837/17329/12200或重复writer。先读notes/revision-review-v2/evaluation/expanded-completion-summary.json与full-expanded-evidence-index.json；所有旧“MU仍运行”段落是历史快照。下一步只回填当前同一tex的§7.8/回应C并compile/导出QA；无新训练。全MU12反馈点都不利、10个未校正区间排除零、2个mask/suppression区间跨零。总体480cell/29040批/2891040结果/31269840偏离；新全真实源批次均符合有限单边regret容差，但不得推广成全局最优保证。

@@ -1,0 +1,70 @@
+{
+  "status": "producer_completed_checkpoint_preservation_verified",
+  "old_pid": 15837,
+  "old_workers": 8,
+  "new_workers": 8,
+  "completed_cells": 477,
+  "completed_batches": 28790,
+  "checkpoint_index": "notes/revision-review-v2/evaluation/rebalance-checkpoints-20261013T083953Z.json",
+  "checkpoint_index_sha256": "3a84938ddc54ae4aaa2c5b6fecd4e1240625b738aed5860e1cc19b5413543518",
+  "frozen_source_hashes": {
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/notes/revision-review-v2/evaluation/expanded_evaluation.py": "43ccebf1b13331dc793a16cc95b58e68e4b6f99a89968adbcb9a7089990d5926",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/matched_factorial_evaluation.py": "4f7b35ae64151c44682acafaaac2118f1b9dac09a6593e95d2f1cd50325b37f8",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/manifest.json": "c622d6f2898c13b59317e4b92a64a5fbab6e295d2f0219c5a33553863bc882ec"
+  },
+  "wrapper_sha256": "9172b20480de798b0328fd9c76545a6057eae54c5ba98241c71e75f8ad671891",
+  "started_at_utc": "20261013T083953Z",
+  "old_group_members": [
+    [
+      15837,
+      "Ts"
+    ],
+    [
+      15841,
+      "T"
+    ],
+    [
+      15842,
+      "T"
+    ],
+    [
+      15843,
+      "T"
+    ],
+    [
+      15844,
+      "T"
+    ],
+    [
+      15845,
+      "T"
+    ],
+    [
+      15846,
+      "T"
+    ],
+    [
+      15847,
+      "T"
+    ],
+    [
+      15848,
+      "T"
+    ],
+    [
+      15849,
+      "T"
+    ]
+  ],
+  "scope": "split only independent remaining cells, reuse unchanged frozen worker; exact complete summaries preserved and no concurrent cell writers",
+  "new_pid": 17329,
+  "new_process_group": 17329,
+  "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/controller-cells-eight.log",
+  "all_frozen_hashes_unchanged": true,
+  "old_group_terminated": true,
+  "checkpoint_receipts_unchanged_after_resume": 29267,
+  "verified_at_utc": "2026-10-13T08:44:30.619969+00:00",
+  "final_completed_cells": 480,
+  "checkpoint_archive_sha256": "d2f88a97e2c9a073386169c049063b6434b970ff125ee0877961f6105a190e57",
+  "checkpoint_archive_bytes": 1294389
+}
