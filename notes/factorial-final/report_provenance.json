@@ -1,0 +1,18 @@
+{
+  "pipeline_completion_sha256": "e11b5f47c49cdf485372687e4dd67e05b96bc2919827511c0472c11a5c107196",
+  "analysis_completion_sha256": "60262446dfc7a09714912bb96983a00a3c4d8ed247c47060a7722258a8ea8e7f",
+  "source_contrasts_sha256": "a0453323b97cc3ca832424122c8d4b18c4134834627827ee646a7d0ba4ca5091",
+  "source_components_sha256": "494d75865fa3337935d87e9a0497d4db3cb17a95cc19d3861de595df274f3dbd",
+  "new_training": false,
+  "multiple_testing_adjusted": false,
+  "figure_contract": {
+    "archetype": "single-panel paired-effect forest plots",
+    "dimensions_inches": [
+      7.08,
+      4.3
+    ],
+    "backend": "python",
+    "uncertainty": "95% unadjusted seed-by-batch crossed bootstrap, fixed training records",
+    "alignment": "not applicable: each figure has one plotting axis"
+  }
+}

@@ -1,71 +1,46 @@
 {
-  "snapshot_time": "2026-10-12T17:03:22+08:00",
+  "snapshot_time": "2026-10-13 02:23:57 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
     "method_capacity_cells": 4320,
-    "training_and_evaluation": "completed_pending_independent_audit",
+    "training_and_evaluation": "completed_and_audited",
     "pipeline": {
-      "status": "running_stage",
-      "stage": "outcome-audit",
-      "time_utc": "2026-10-12T08:54:43Z"
+      "status": "completed",
+      "time_utc": "2026-10-12T16:55:59Z"
     },
-    "fit_pairs_verified_at_snapshot": 30,
-    "audit_process_observed_live": true,
-    "full_pipeline_complete": false,
-    "fit_count_basis": "unique source/seed pairs; repeated resume log entries deduplicated",
-    "pause": {
-      "active": false,
-      "signal": "SIGSTOP",
-      "pipeline_pid": 1818,
-      "audit_pids": [
-        1819,
-        2075,
-        2076
-      ],
-      "all_audit_processes_verified_stopped": false,
-      "memory_retained": true,
-      "time": "2026-10-12T08:01:58+08:00"
-    },
-    "resume": {
-      "time": "2026-10-12T08:03:07+08:00",
-      "signal": "SIGCONT",
-      "audit_pids": [
-        1819,
-        2075,
-        2076,
-        14965
-      ],
-      "audit_task_count": 4,
-      "all_processes_verified_not_stopped": true,
-      "remaining_pairs": 4,
-      "new_parallel_pair": "jucars/701",
-      "training_restarted": false
-    },
-    "current_main_pair": "mucars/13 (parallel audit also in flight)",
-    "current_main_heads_verified": 13,
-    "parallel_snapshot": {
-      "all_workers_finished": true,
-      "live_audit_pids": [
-        1819
-      ]
-    },
-    "remaining_unique_pairs": [],
-    "fit_audit_stage_complete": true,
-    "outcome_cells_verified_at_snapshot": 72,
-    "outcome_parallel": {
-      "worker_pids": [
-        35790,
-        35791,
-        35792,
-        35793
-      ],
-      "formal_pid": 35239,
-      "workers": 4,
-      "formal_full_coverage_required": true,
-      "identical_input_bindings_verified": true
-    }
+    "fit_pairs_verified": 30,
+    "outcome_cells_verified": 4320,
+    "outcome_rows": 4320000,
+    "legal_unilateral_deviations": 45372960,
+    "metric_contrast_rows": 9216,
+    "full_pipeline_complete": true,
+    "audit_process_observed_live": false
   },
-  "goal_complete": false,
-  "live_state_is_not_in_github": true
+  "interpretation": {
+    "primary_capacity": 0.1,
+    "feedback_inflation_worsens_points": "36/36",
+    "feedback_unfavorable_unadjusted_intervals": "34/36",
+    "mucars_robust_initial_objective_gates": "12/12",
+    "joint_policy_gates": "0/18",
+    "fixed_training_records": true,
+    "multiple_comparison_corrected": false
+  },
+  "manuscript": {
+    "addendum_updated": true,
+    "builtin_compilation": "success",
+    "final_submission_manuscript_complete": false
+  },
+  "figures": {
+    "new_count": 2,
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "collision_qa": "both PASS",
+    "single_axes": true
+  },
+  "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
+  "goal_complete": false
 }

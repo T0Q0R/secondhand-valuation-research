@@ -1,0 +1,83 @@
+{
+  "pipeline_complete": true,
+  "archive": "audited-analysis-evidence.zip",
+  "archive_sha256": "bc078d6b321dccf131aeb1452600006d5c2ccc841181af56b92f69a4bd771433",
+  "contents": [
+    {
+      "archive_path": "completion.json",
+      "bytes": 724,
+      "sha256": "e11b5f47c49cdf485372687e4dd67e05b96bc2919827511c0472c11a5c107196"
+    },
+    {
+      "archive_path": "inputs.json",
+      "bytes": 3631,
+      "sha256": "8aa1327364af378ae324b915eb8c6c89639c3a9d81ec0c66e35c6bf45d7fad04"
+    },
+    {
+      "archive_path": "analysis/cell_means_and_pareto.csv",
+      "bytes": 97531,
+      "sha256": "0e598229130c770ec3cb8592752b0dfdaaa89abe4020b34bcc7c35d517fe1732"
+    },
+    {
+      "archive_path": "analysis/analysis_snapshot.py",
+      "bytes": 12053,
+      "sha256": "2b6440e95097f25f268fa921fa524a6795019d353a09d6e02aa0922c946e0c01"
+    },
+    {
+      "archive_path": "analysis/paired_tensors_and_draws.npz",
+      "bytes": 1596421,
+      "sha256": "114c58b9dbf8fbf24e97513b5869f1495b0c8249766f6872a5e6a336fbec2f0a"
+    },
+    {
+      "archive_path": "analysis/contrast_specifications.json",
+      "bytes": 34160,
+      "sha256": "42d4f2fb866943d06e37135593446afd9b3c4b3bfe4d951897476726587d8a65"
+    },
+    {
+      "archive_path": "analysis/contrasts.csv",
+      "bytes": 1869628,
+      "sha256": "a0453323b97cc3ca832424122c8d4b18c4134834627827ee646a7d0ba4ca5091"
+    },
+    {
+      "archive_path": "analysis/completion.json",
+      "bytes": 1158,
+      "sha256": "60262446dfc7a09714912bb96983a00a3c4d8ed247c47060a7722258a8ea8e7f"
+    },
+    {
+      "archive_path": "analysis/input_binding.json",
+      "bytes": 13408722,
+      "sha256": "be8bd22503e559226baf8c16879fc8c4395de1bf98776edfeef647dd9dee0a47"
+    },
+    {
+      "archive_path": "analysis/contrast_components.csv",
+      "bytes": 3210184,
+      "sha256": "494d75865fa3337935d87e9a0497d4db3cb17a95cc19d3861de595df274f3dbd"
+    },
+    {
+      "archive_path": "fit-audit/completion.json",
+      "bytes": 2191,
+      "sha256": "3b31d963cc7079abc54c97f60945d155097de95681bbac9394ee27eddbe1ce55"
+    },
+    {
+      "archive_path": "outcome-audit/completion.json",
+      "bytes": 1198598,
+      "sha256": "d337f600425e5015bdf2b8191b99d1e1ec7f315ee48045dd5b7239e2ab76f772"
+    },
+    {
+      "archive_path": "statistics-check/completion.json",
+      "bytes": 592,
+      "sha256": "757e78758fc94de7673d6b52cb6899268ee6aea7d24e5420ff5927778b3bbc91"
+    },
+    {
+      "archive_path": "fit-audit/inputs.json",
+      "bytes": 1434,
+      "sha256": "4abb13d01d92137df2540cad656f9935b91a91eba1b58b0a6e5547c907f2ea93"
+    },
+    {
+      "archive_path": "outcome-audit/inputs.json",
+      "bytes": 2882,
+      "sha256": "6142244bc5d9e4d3d8b3c256610267340c18e909bb17df56683ce30b5dfb5c88"
+    }
+  ],
+  "excluded": "raw per-listing outcomes and model weights; remain local, not an independent clean-machine reproduction"
+}

@@ -1,0 +1,7 @@
+dataset,contrast,budget,primary_capacity,family,metric,difference,lower,upper,smaller_is_preferred,point_gate,inflation_reduction_percent,honest_mae_increase_percent
+synthetic,initial_objective__suppression__none__top_b,0.1,True,initial_objective,positive_expected_log_inflation,-0.0022295454025268,-0.0036412020516395,-0.0008835158610343,True,False,-20.508996245433792,-0.576464641738172
+synthetic,initial_objective__suppression__none__minimax,0.1,True,initial_objective,positive_expected_log_inflation,-0.002229703812787,-0.0036257552056518,-0.000847912719379,True,False,-20.960031831207942,-0.576464641738172
+jucars,initial_objective__suppression__none__top_b,0.1,True,initial_objective,positive_expected_log_inflation,0.0008821682453155,-0.0011520832908153,0.0029664198231697,True,False,7.354704612075053,0.4594891689195783
+jucars,initial_objective__suppression__none__minimax,0.1,True,initial_objective,positive_expected_log_inflation,0.0008484587582578,-0.001047978827454,0.0028015250587867,True,False,7.5215564232035,0.4594891689195783
+mucars,initial_objective__suppression__none__top_b,0.1,True,initial_objective,positive_expected_log_inflation,0.0015540622711181,0.0008724562263488,0.0022450821542739,True,True,19.269364207344903,-1.240522502417939
+mucars,initial_objective__suppression__none__minimax,0.1,True,initial_objective,positive_expected_log_inflation,0.0026937243894756,0.0020529333645454,0.0033986058751465,True,True,33.400435297657964,-1.240522502417939

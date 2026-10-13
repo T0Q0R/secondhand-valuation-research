@@ -4,7 +4,7 @@
 \newtheorem{proposition}{Proposition}
 \title{Information Limits and Verification-Path Effects\\in Budgeted Valuation}
 \author{Research addendum to the audited valuation study}
-\date{9 October 2026}
+\date{13 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -28,6 +28,14 @@ equilibrium dominance, attacked-error improvement or general methodological nove
 A completed ten-seed extension finds no consistent SAV advantage over static
 robust. A separately audited allocation intervention yields two of eighteen
 contrasts meeting the point improvement criterion and ten inflation reversals.
+A matched ten-seed factorial experiment covers 4,320 cells, with independently
+checked training provenance, 4.32 million outcome records and reconstructed
+statistical contrasts. At the prespecified 10\% capacity, feedback increases
+mean inflation in all 36 conditional comparisons, whereas a robust initial
+objective reduces inflation in all twelve MUCars comparisons. None of eighteen
+joint feedback--allocation interventions meets the point improvement criterion.
+These controlled results separate training-objective effects from feedback
+benefits and retain their fixed-cohort, exploratory interpretation.
 \end{abstract}
 
 \section{Question and scope}
@@ -697,9 +705,9 @@ The score objective remains a surrogate and does not prove general incentive
 optimality. The factorial study tests whether training feedback changes these
 conditional effects.
 
-\section{Matched factorial protocol: implementation status}
-\noindent\textbf{Takeaway.} The full controlled experiment has started;
-implementation checks are not yet evidence of a method advantage.
+\section{Matched factorial protocol and completed audits}
+\noindent\textbf{Takeaway.} The full controlled experiment and four-stage audit are complete;
+controlled contrasts do not establish a general method advantage.
 
 The new design crosses two initial training objectives (mask-augmented and
 robust), three acquisition scores (suppression, benefit and risk), two policy
@@ -771,7 +779,7 @@ itself is not a new mathematical result.
 
 For attribution, at fixed source, initial objective, acquisition score and
 capacity, let $L_{f,a}$ be an outcome under feedback setting $f$ and allocator
-$a$. We will report the interaction
+$a$. We report the interaction
 \[
  D=(L_{\mathrm{none},\mathrm{minimax}}-L_{\mathrm{policy},\mathrm{minimax}})
   -(L_{\mathrm{none},\mathrm{top}B}-L_{\mathrm{policy},\mathrm{top}B}).
@@ -785,21 +793,105 @@ capacity therefore has 174 exploratory contrasts, all retained rather than
 screened for favorable directions. No individual unadjusted interval is treated
 as a confirmatory finding across this family.
 
-A small synthetic end-to-end check covers twenty-four cells at two budgets,
-960 outcome rows and 10,032 independently reconstructed legal unilateral
-quotes. This validates execution only. The launched full experiment uses the
-ten predetermined seeds, three sources, three outer folds and all six original
-capacities, with 10\% capacity evaluated first. Completed performance results,
-interaction estimates and full independent audits are still pending.
-An additional training auditor reconstructs hash-ranked partitions, matched
-minibatch orders and held-out predictions, then independently builds the
-deployment-head targets and refits every decision tree. On the completed
-execution fixture it reproduces 840 held-out prediction rows and fourteen
-deployment heads, including tree structure and leaf values, and rejects altered
-partitions, permutations and predictions. All ten synthetic full-size fits have also passed this audit:
-700,000 held-out prediction rows and 140 independently refitted heads.
-This is partial coverage of the thirty configured source--seed pairs. This audit validates recorded fit provenance and head targets;
-it does not replay every optimizer step or establish scientific performance.
+The full experiment completed thirty source--seed pairs and 4,320 cells.
+The training audit reconstructed hash-ranked partitions, matched minibatch
+orders and 2,068,360 held-out prediction rows. It independently rebuilt all
+420 deployment heads, comparing tree structure and leaf values, and rejected
+altered partitions, permutations and predictions. This audit verifies fit
+provenance and head targets, rather than replaying every optimizer step.
+The outcome audit checked 4,320,000 recorded outcomes and 45,372,960 legal
+unilateral deviations, including reallocation after each changed report.
+An independent statistical checker reconstructed 9,216 metric--contrast rows,
+validated contrast semantics and intervals, and rejected altered interaction
+signs and interval endpoints. The full four-stage completion receipt was
+issued on 13 October 2026.
+
+\section{Matched factorial results: feedback harm and source dependence}
+\noindent\textbf{Takeaway.} At the prespecified 10\% capacity, none of the
+36 feedback comparisons reduces mean inflation. A robust initial objective
+helps consistently on MUCars, but positive interactions do not imply beneficial
+feedback or a successful combined policy.
+
+\paragraph{Inference scope.}
+Every source uses ten fitting seeds and ten shared evaluation batches of
+100 listings. The same 1,000 listings are reused across seeds and methods;
+4.32 million outcome records are therefore not independent listing observations.
+We report 1,000 crossed seed--batch bootstrap draws and their 2.5th and 97.5th
+percentiles. These unadjusted exploratory intervals condition on the fixed
+training records. They do not cover a new training population or correct for
+multiple comparisons. The primary capacity supplies 174 factor contrasts and
+18 additional joint-policy contrasts, each evaluated on eight metrics.
+All six capacities and all contrast components remain in the evidence package.
+Comparisons away from 10\% also measure transfer from the fixed training capacity.
+
+\paragraph{Feedback does not explain a beneficial effect in this design.}
+Define a feedback contrast as no-policy-feedback loss minus policy-feedback
+loss, holding the initial objective, score and allocator fixed. For positive
+expected log-quote inflation, all 36 point estimates at 10\% were negative;
+34 unadjusted intervals excluded zero in the unfavorable direction.
+The two intervals crossing zero corresponded to MUCars with the mask initial
+objective and suppression acquisition. No feedback contrast passed the point
+gate of at least 10\% inflation reduction with at most 5\% honest-MAE increase.
+This is a negative result for the implemented two-round frozen-policy training
+procedure, not an impossibility result for feedback learning.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Source & Feedback harms & Harm intervals & Robust-init gains & Joint gates\\
+\midrule
+Synthetic & 12/12 & 12/12 & 4/12 & 0/6\\
+JUCars & 12/12 & 12/12 & 12/12 & 0/6\\
+MUCars & 12/12 & 10/12 & 12/12 & 0/6\\
+\bottomrule
+\end{tabular}
+\caption{Primary-capacity factorial diagnostics. Counts refer to positive
+expected log-quote inflation. Feedback harms and robust-initialization gains
+are point-estimate directions. Harm intervals are 95\% unadjusted intervals
+excluding zero adversely. A joint gate compares no feedback/top-$B$ with
+policy feedback/minimax under a fixed initial objective and score, requiring
+at least 10\% inflation reduction and at most 5\% honest-MAE increase.
+Counts are descriptive across correlated contrasts, not independent trials.}
+\end{table}
+
+\paragraph{Initial-objective effects depend on the source.}
+The robust initial objective lowered mean inflation in all twelve MUCars
+conditional contrasts. Reductions ranged from 12.43\% to 33.40\%, all twelve
+unadjusted intervals excluded zero favorably, and all twelve passed the point
+gate. Honest MAE also decreased in these comparisons. On JUCars, twelve point
+estimates favored the robust objective but only two intervals excluded zero
+favorably. On synthetic data, only four point estimates favored it, and six
+intervals excluded zero in the adverse direction. Thus the controlled
+initial-objective factor has a stronger source-dependent signature than a
+beneficial feedback effect. These are newly trained matched models, so they
+do not retrospectively identify the cause of the original SAV/static-robust
+comparison.
+
+\paragraph{A positive interaction can mean less harm.}
+For synthetic data with the mask objective and suppression acquisition, the
+feedback--allocation interaction was $D=0.004917$, with an unadjusted interval
+$[0.002378,0.007586]$. Yet feedback increased inflation under both allocators:
+from 0.010871 to 0.018969 under top-$B$, and from 0.010638 to 0.013818 under
+minimax. The positive interaction measures the smaller increase under minimax;
+it does not show that minimax feedback improved on its no-feedback control.
+Across all sources, none of eighteen joint changes from no feedback/top-$B$
+to policy feedback/minimax passed the point gate. The three favorable MUCars
+joint point estimates were small and their intervals crossed zero. Inflation,
+honest error, attacked error and failed-query effects must therefore be read
+jointly rather than inferred from the interaction sign.
+
+\paragraph{Mechanism and practical boundary.}
+The factorial experiment isolates implemented training and allocation choices,
+but does not identify why feedback increased inflation. Frozen acquisition
+scores, the weaker training response search and capacity transfer are possible
+explanations requiring separate interventions. They are not established causes.
+The appropriate practical comparison is the matched no-feedback control with
+the same initial objective, score and capacity. Choosing feedback from a
+positive interaction alone is unsupported. A risk score is also not a universal
+fallback: its feedback-trained cells are among the adverse cases. Performance
+on a new cohort requires renewed multiobjective validation; point Pareto flags
+in the present cohort are descriptive, not probabilistic dominance guarantees.
 
 \section{Conditional stability of verification probabilities}
 \noindent\textbf{Takeaway.} Randomized allocation admits a conditional
@@ -882,13 +974,13 @@ bound is not claimed.
 
 \section{Claims and evidence}
 \noindent\textbf{Takeaway.} The supported contribution is a bounded information
-frontier and an audited verification-path mechanism. General superiority and
-feedback attribution require evidence beyond the current completed results.
+frontier and an audited verification-path mechanism. General superiority is unsupported; the completed factorial experiment
+separates source-dependent initial-objective effects from adverse feedback effects.
 
 \small
 \begin{longtable}{p{0.23\textwidth}p{0.32\textwidth}p{0.35\textwidth}}
 \caption{Claim--evidence matrix. Positive comparator-minus-SAV differences
-favor SAV. Running studies are explicitly separated from completed evidence.}\\
+favor SAV. All listed experiments are complete; bounded claims remain separate from general superiority.}\\
 \toprule
 Claim & Decisive evidence & Verdict and boundary\\
 \midrule
@@ -907,9 +999,9 @@ C5. The cap improves every measured objective after recomputed responses. & 432 
 \addlinespace
 C6. SAV consistently beats static robust at 10\% capacity. & Ten-seed paired difference: synthetic -0.009091; JUCars -0.002906; MUCars -0.000829. & Not supported. Synthetic is unfavorable with an interval excluding zero; both real-source intervals include zero.\\
 \addlinespace
-C7. Score-minimax allocation consistently improves outcomes. & 108 audited cells; 18 independently checked contrasts; only two pass the point gate, while ten worsen inflation. & Not supported generally. MUCars robust gains coexist with failed-query increases; feedback attribution remains pending.\\
+C7. Score-minimax allocation consistently improves outcomes. & 108 audited cells; 18 independently checked contrasts; only two pass the point gate, while ten worsen inflation. & Not supported generally. MUCars robust gains coexist with failed-query increases; the separate factorial study does not show beneficial feedback.\\
 \addlinespace
-C8. The source-specific effects are caused by feedback training. & A matched 24-cell, ten-seed nested experiment is running. & Pending. Existing unmatched comparisons do not isolate the feedback contribution.\\
+C8. Matched feedback training reduces inflation. & 4,320 audited cells; at 10\% capacity, all 36 feedback point estimates worsen inflation and 34 adverse intervals exclude zero. & Not supported for this training procedure. This does not establish why feedback fails or rule out other feedback algorithms.\\
 \addlinespace
 \bottomrule
 \end{longtable}
@@ -928,16 +1020,17 @@ For deployment, the history cap is a conditional intervention whose attacked
 error and failed-query effects need to be measured alongside inflation. The
 source-specific SAV results similarly support local validation against static
 robust and simple acquisition controls. They do not justify selecting SAV as
-a universal default. The running factorial experiment asks whether matched
-feedback and allocation interventions explain these differences; until it is
-complete, estimator differences and response-search behavior remain rival
-explanations. Fitting-seed resampling alone cannot establish uncertainty over
+a universal default. The completed factorial experiment identifies initial-objective
+effects on MUCars and adverse feedback effects across all three cohorts.
+These controlled effects do not establish the cause of the original unmatched
+SAV comparison, and response-search behavior remains a possible contributor. Fitting-seed resampling alone cannot establish uncertainty over
 new training populations.
 
-The current artifacts are local and the addendum remains separate from the
-fully integrated submission manuscript. Establishing priority for the specific
-frontier, completing the running experiments and finalizing the public evidence
-package remain necessary before submission claims are finalized.
+The code and compact evidence package are maintained in a private research
+repository; large raw outcomes and model artifacts remain local. The addendum
+is not yet a fully integrated submission manuscript. Establishing priority for
+the specific frontier, preparing legally redistributable artifacts and completing
+the manuscript remain necessary before submission claims are finalized.
 
 \begin{thebibliography}{99}
 \bibitem{jucarsdata} N. Thalji.

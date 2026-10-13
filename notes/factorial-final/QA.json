@@ -1,0 +1,18 @@
+{
+  "single_axis_figures": true,
+  "alignment_gate": "not applicable; no comparable multi-panel axes",
+  "visual_review": {
+    "feedback-suppression": "all 12 rows, intervals, zero line and footer inspected; no clipping",
+    "initial-objective": "all 6 rows inspected after shortening redundant labels; no clipping"
+  },
+  "raster_preview_dpi": 300,
+  "final_formats": [
+    "pdf",
+    "svg"
+  ],
+  "tiff_omitted": "vector figures supplied; no target-journal raster requirement selected",
+  "minimum_text_pt": 7,
+  "collision_checks": "both PASS; zero failures and warnings",
+  "compiler": "built-in source compiler success",
+  "backend": "python"
+}

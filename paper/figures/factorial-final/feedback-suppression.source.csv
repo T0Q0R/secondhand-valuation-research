@@ -1,0 +1,13 @@
+dataset,contrast,budget,primary_capacity,family,metric,difference,lower,upper,smaller_is_preferred,point_gate,inflation_reduction_percent,honest_mae_increase_percent
+synthetic,feedback__masking__suppression__top_b,0.1,True,feedback,positive_expected_log_inflation,-0.0080974900245666,-0.0110323025846481,-0.0052429098916053,True,False,-74.48666096822183,-1.1355862299518358
+synthetic,feedback__masking__suppression__minimax,0.1,True,feedback,positive_expected_log_inflation,-0.0031805873332773,-0.0045670011850815,-0.0016863429407819,True,False,-29.898684912818773,0.6573996347137889
+synthetic,feedback__robust__suppression__top_b,0.1,True,feedback,positive_expected_log_inflation,-0.0012619623184204,-0.0024690174913406,-0.0001821122622489,True,False,-9.632854555160272,-0.3061787864688641
+synthetic,feedback__robust__suppression__minimax,0.1,True,feedback,positive_expected_log_inflation,-0.0010994691217711,-0.0021235255043741,-8.25729706394932e-05,True,False,-8.544485276783705,0.2055652227436494
+jucars,feedback__masking__suppression__top_b,0.1,True,feedback,positive_expected_log_inflation,-0.0014230615615844,-0.002294941073656,-0.0006583268260955,True,False,-11.86417385326352,0.015759390642954
+jucars,feedback__masking__suppression__minimax,0.1,True,feedback,positive_expected_log_inflation,-0.0015698411045301,-0.0021155480000996,-0.0008755620237127,True,False,-13.916585017558363,-0.0282307746976514
+jucars,feedback__robust__suppression__top_b,0.1,True,feedback,positive_expected_log_inflation,-0.0012840804100036,-0.0019922854042053,-0.0006580108761787,True,False,-11.555338285004538,-0.0375909690516613
+jucars,feedback__robust__suppression__minimax,0.1,True,feedback,positive_expected_log_inflation,-0.0014231471027252,-0.0020449270893951,-0.0007937610565534,True,False,-13.642258099820138,-0.0257352426936776
+mucars,feedback__masking__suppression__top_b,0.1,True,feedback,positive_expected_log_inflation,-0.0001826642990112,-0.0005624309563636,0.0002477920556068,True,False,-2.2649188328819303,0.0347083223461314
+mucars,feedback__masking__suppression__minimax,0.1,True,feedback,positive_expected_log_inflation,-0.0003247069358825,-0.0007096467137336,6.60056161880503e-05,True,False,-4.02615540217086,0.0936310229266137
+mucars,feedback__robust__suppression__top_b,0.1,True,feedback,positive_expected_log_inflation,-0.0006719644546508,-0.001018371245861,-0.0003076750326156,True,False,-10.320646337240614,0.299570457904858
+mucars,feedback__robust__suppression__minimax,0.1,True,feedback,positive_expected_log_inflation,-0.0010183798818273,-0.0014413993110284,-0.0006133131527408,True,False,-18.95995878746792,0.1628139588778976
