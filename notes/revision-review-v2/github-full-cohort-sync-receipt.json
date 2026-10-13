@@ -1,0 +1,11 @@
+{
+  "repository": "T0Q0R/secondhand-valuation-research",
+  "commit": "575a42c953b60816d065a3cb9ebab6464572221a",
+  "math_commit": "4bdc50790b1b9d7787eb28cd711d9c175f35d6d0",
+  "readback_verified": "final paper 18 blobs and six canonical entries; math nine blobs and three entries; all hashes/content match",
+  "source_sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
+  "pdf_sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849",
+  "computation": "completed_and_corroborated",
+  "formal_submission_ready": false,
+  "verified_at_utc": "2026-10-13T09:07:49.365359+00:00"
+}
