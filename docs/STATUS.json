@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 07:39:12 UTC",
+  "snapshot_time": "2026-10-13 07:44:01 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -92,9 +92,17 @@
     "manuscript_changes": "saved_compiled_layout_and_correspondence_checked",
     "running": "full MUCars frozen-model evaluation, then automated corroboration and weighted statistics",
     "expanded_snapshot": {
-      "completed_cells": 383,
+      "completed_cells": 393,
       "total": 480,
-      "not_global_completion": true
+      "not_global_completion": true,
+      "observed_worker_cpu_percent": [
+        100,
+        100,
+        99.4,
+        100,
+        100,
+        99.1
+      ]
     },
     "full_jucars": {
       "listings": 1374,
