@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 03:24:48 UTC",
+  "snapshot_time": "2026-10-13 05:20:55 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -51,7 +51,7 @@
     "minimum_embedded_label_pt": 9.018280982971191
   },
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
-  "goal_complete": true,
+  "goal_complete": false,
   "delivery": {
     "archive": "paper/manuscript-delivery-v1.zip",
     "sha256": "3b0d2afe572aadc82db082c82c98556a367704db3235b4bb771c42c09877c03b",
@@ -63,5 +63,14 @@
     "author responsibility and factual declarations",
     "institution's applicable CAS edition/category and selected journal template",
     "editor/reviewer evidence access and release policy"
-  ]
+  ],
+  "revision_v2": {
+    "status": "in_progress",
+    "review_comments": "A-I",
+    "completed": [
+      "I"
+    ],
+    "analyses": "saved-tensor joint intervals; independent state enumeration; evaluation/cost feasibility",
+    "no_new_training": true
+  }
 }

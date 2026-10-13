@@ -1,3 +1,7 @@
+## 当前优先事项（2026-10-13 05:20:55 UTC）
+
+用户对26页稿提出A–I科学评审。先读 CURRENT_DELIVERY.md 和 notes/revision-review-v2/review-tracker.json；修订进行中。原计算完成，但投稿准备未完成。不得把编译/数值一致性等同于创新与联合推断通过；不得修改冻结源文件或重跑已完成训练。
+
 # AI 接手入口
 
 先读 README、docs/STATUS.md、docs/RESEARCH.md、data/README.md，再查看匹配因子复现说明与论文。

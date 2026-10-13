@@ -1,0 +1,44 @@
+{
+  "version": "revision-review-v2",
+  "decision_type": "not an editorial decision; user scientific review",
+  "status": "in_progress",
+  "baseline_source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
+  "comments": {
+    "A": {
+      "status": "in_progress",
+      "action": "Make theoretical scope explicit and formulate a testable recovery-path diagnostic; do not apply restricted frontier to four-field data without assumptions."
+    },
+    "B": {
+      "status": "in_progress",
+      "action": "Centered max-standardized simultaneous crossed-bootstrap intervals; retrospective and post-hoc, not confirmatory."
+    },
+    "C": {
+      "status": "in_progress",
+      "action": "Inspect frozen-model full-heldout evaluation scope and runtime before launching."
+    },
+    "D": {
+      "status": "in_progress",
+      "action": "Inflation degeneracy and co-primary attacked-MAE/failed-query outcomes; cap counts are descriptive consequences."
+    },
+    "E": {
+      "status": "in_progress",
+      "action": "Report continuous effects and threshold sensitivity, no invented preregistration."
+    },
+    "F": {
+      "status": "in_progress",
+      "action": "Shared-primitive audit dependency disclosure plus separate brute-force state/transition oracle."
+    },
+    "G": {
+      "status": "in_progress",
+      "action": "Promote strong ordinary-benefit and ACO controls to main results without claiming all conditional MUCars gains vanish."
+    },
+    "H": {
+      "status": "in_progress",
+      "action": "Verification-history governance, final-record-only mechanism and positive heterogeneous-cost responses."
+    },
+    "I": {
+      "status": "verified_done",
+      "action": "Correct stale CURRENT_DELIVERY and canonical status."
+    }
+  }
+}
