@@ -1,31 +1,25 @@
 # 二手物品估值：策略性缺失与预算核验
 
-这是个人研究与 AI 接手仓库。目标是实现有可核查创新的算法，开展严格实验，形成符合学校“三区”口径的论文。期刊分类、首创性和接收结果均未确定。
+个人研究与AI接手仓库，目标为有可核查创新、严格实验和中科院三区论文；分类、首创性与接收结果尚未确定。
 
-## 从这里开始
+[AI接手](AI_HANDOFF.md) · [当前状态](docs/STATUS.md) · [机器状态](docs/STATUS.json) · [进度](docs/PROGRESS.md) · [研究边界](docs/RESEARCH.md) · [数据入口](data/README.md)
 
-- [AI 接手说明](AI_HANDOFF.md)：研究目标、证据边界及下一步。
-- [当前状态](docs/STATUS.md) / [机器可读状态](docs/STATUS.json)。
-- [研究想法与创新边界](docs/RESEARCH.md)。
-- [数据入口](data/README.md)、[证据索引](evidence/INDEX.json)。
-- [匹配因子实验复现](REPRODUCING_MATCHED_FACTORIAL.md)、[稳定性复现](REPRODUCING_STABILITY.md)。
-- [完整论文源文件](paper/innovation-addendum-v1.tex) · [PDF](paper/innovation-addendum-v1.pdf) · [交付包](paper/manuscript-delivery-v1.zip)。
-- [完整因子结果、图表与复核入口](docs/FINAL_RESULTS.md)。
+[当前源文件](paper/innovation-addendum-v1.tex) · [PDF](paper/innovation-addendum-v1.pdf) · [修订包](paper/revision-delivery-v2.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md) · [哈希索引](notes/revision-review-v2/revision-delivery-index.json)
 
-## 实现
+[汇总复算](notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [原全量训练协议](REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)
 
-`experiments/` 保存估值、查询分配、卖家响应、交叉拟合、审计及分析代码；`oqbo-val/` 保存可观测报告 oracle、精度前沿和条件稳定性检查；`tests/` 保存测试；`plan/` 与 `notes/design/` 保留设计和预先记录的实验协议。BRC/CDM/EMC 等目录属于探索分支，其结果不可混作同一算法。
+快照：2026-10-13 07:39:12 UTC；研究时区 Asia/Shanghai。
 
-30 个来源/种子组合、4320 个因子实验单元的训练评估、训练审计、结果回放审计、统计分析和独立统计检查均已完成，覆盖432万条结果。主容量10%下，36个匹配反馈对比均恶化inflation；MUCars的12个robust初始目标对比均通过点估计门槛。区间是固定训练记录上的未校正探索结果，不能宣称通用优势。26页完整科学稿已交付，内置编译与逐页检查完成；作者与单位按用户要求留空。正式投稿和学校分区认证尚未完成。
+**科学修订进行中，尚未达到正式投稿准备状态。** 当前标题 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*；同一编辑器源文件原位修改，30页、16引用、2幅矢量图，作者与单位留空。
 
-[完整分析与审计证据包](notes/factorial-final/audited-analysis-evidence.zip)含所有容量的对比CSV、张量/重采样和完成凭据；[清单与哈希](notes/factorial-final/EVIDENCE_INDEX.json)便于外部AI复核。GitHub仍是有时间戳的快照。
+原训练与四阶段核对完成：30/30组、4320单元、432万行、45372960个合法单边偏离。新增20000次事后同时敏感性保留31/27/20个不利反馈inflation区间，对应36/108/1536家族；不是确证或有限样本FWER保证。新增独立bit-mask状态oracle、真实模型恢复诊断、完整阈值网格；共享审计原语已公开。
 
-本仓库提供代码、文稿、方案和小型证据，不包含约24GB的全部本地输出、模型权重或逐条挂牌记录。完整复现仍需获取数据与运行实验，详见数据说明。软件许可与对外发布尚未确定；数据源许可不能替代软件许可。
+正成本保留108新单元与36零成本对照。异质成本下synthetic robust/suppression/top-B反馈的四指标均值改善、三seed inflation方向均有利；仅局部事后三seed子集，非普遍或显著优势。JU/MU子集方向仍不利，20个未收敛批次保留。
 
-## 最终科学稿交付
+JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照383/480，不是最终完成。现有6worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
 
-完整科学稿已交付：26页、9节正文、5组附录、14篇引用、2幅矢量图、11个编号表；作者与单位留空。内置编译、逐页视觉检查、引用/边界检查和证据包逐文件校验完成。
+内置编译、30页联系表视觉核查及14页全尺寸检查、页界/引用和5段逐字摘录检查通过。无Overfull或未定义引用，一个Underfull保留。图使用line/glyph提取适配、默认阈值未放宽，原始提取假阳性报告保留。
 
-[完整源文件](paper/innovation-addendum-v1.tex) · [同稿PDF](paper/innovation-addendum-v1.pdf) · [论文与证据包](paper/manuscript-delivery-v1.zip) · [核查记录](notes/manuscript-integration/PRE_SUBMISSION_REVIEW.md) · [投稿准备](notes/manuscript-integration/VENUE_PREPARATION.zh.md)
+同一物理机器新环境的1536行汇总复算及阈值网格一致；**未完成外部干净机器全训练复现**。公开/DOI/许可证、真实作者责任、单位适用分区及期刊适配仍待决定；没有公开、投稿或接收事实。旧26页包是历史稿，旧PRE_SUBMISSION_REVIEW可投稿性判断已superseded。
 
-科学稿写作已完成；正式投稿、单位适用分区确认、作者声明与证据访问仍需准备。没有新增训练或外部机器全流程重跑，原模型及逐条结果仍保留。
+experiments/保存训练、分配、响应、交叉拟合和核对；oqbo-val/保存有限信息边界与oracle。随机化、水位法、LP和minimum是已有工具。约24GB完整本地输出及权重不进入普通Git，完整复现仍需获取数据与运行实验。源码许可和对外发布尚未决定。按AGENTS.md每完成工作上传验证与下一步。

@@ -1,0 +1,65 @@
+{
+  "status": "passed_for_declared_checks",
+  "source_sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff",
+  "pdf_sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86",
+  "comment_count": 9,
+  "page_anchors": [
+    [
+      "A",
+      6,
+      "What is tested in the learned-model experiment."
+    ],
+    [
+      "A",
+      16,
+      "Recovery failures in the learned four-field class"
+    ],
+    [
+      "B",
+      12,
+      "Post-hoc simultaneous sensitivity."
+    ],
+    [
+      "C",
+      20,
+      "Full-validation evaluation coverage"
+    ],
+    [
+      "D",
+      4,
+      "Inflation alone admits a degenerate solution."
+    ],
+    [
+      "E",
+      20,
+      "Continuous effects and decision-threshold sensitivity"
+    ],
+    [
+      "F",
+      11,
+      "Audit dependency and independent state coverage."
+    ],
+    [
+      "G",
+      17,
+      "Strong controls and the original candidate comparison"
+    ],
+    [
+      "H",
+      8,
+      "History dependence and a final-record alternative"
+    ],
+    [
+      "H",
+      20,
+      "Positive costs change the conditional feedback ranking"
+    ]
+  ],
+  "verbatim_excerpt_count": 5,
+  "scope": "mechanical anchors, declared receipts and layout; no independent peer review or submission readiness certification",
+  "pending": [
+    "full MUCars evaluation and corroboration",
+    "public-release and actual author decisions",
+    "external-machine full training reproduction"
+  ]
+}

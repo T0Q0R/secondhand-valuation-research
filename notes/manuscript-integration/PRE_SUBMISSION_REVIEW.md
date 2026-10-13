@@ -1,3 +1,5 @@
+> **SUPERSEDED — 历史26页稿的有限核查，不能作为当前科学可投稿性结论。** 用户后续A–I评审发现理论/实证耦合、联合推断与复现范围等主要问题；当前30页修订及未完成项目见 `notes/revision-review-v2/REVIEW_RESPONSE.zh.md` 和 `review-tracker.json`。下文保留原记录以供追溯，其中“无未解决的MAJOR”不再适用。
+
 # 完整科学稿核查记录
 
 核查日期：2026-10-13（Asia/Shanghai）。对象：原编辑器文件 `paper/innovation-addendum-v1.tex` 及其同稿 PDF。作者与单位按用户要求暂留空。

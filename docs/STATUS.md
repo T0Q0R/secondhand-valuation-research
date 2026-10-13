@@ -1,15 +1,19 @@
 # 当前交付状态
 
-快照：2026-10-13 03:24:48 UTC；研究时区 Asia/Shanghai。
+快照：2026-10-13 07:39:12 UTC；研究时区 Asia/Shanghai。
 
-**完整科学论文已写完并交付。** [源文件](../paper/innovation-addendum-v1.tex) · [同稿PDF](../paper/innovation-addendum-v1.pdf) · [交付包](../paper/manuscript-delivery-v1.zip)。26页、9节正文、5组附录、14篇引用、2幅矢量图、11个编号表，作者与单位留空。
+**科学修订进行中，尚未达到正式投稿准备状态。** 当前标题 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*；同一编辑器源文件原位修改，30页、16引用、2幅矢量图，作者与单位留空。
 
-训练评估及四阶段审计全部完成：30组、4320单元、432万条输出、45372960个合法单边偏离、9216条指标对比。主容量36个反馈对比均增加inflation，34个未校正区间不利；MUCars的12个robust初始目标对比通过点门槛；18个联合干预无通过门槛。未新增训练或改动冻结实验代码。
+原训练与四阶段核对完成：30/30组、4320单元、432万行、45372960个合法单边偏离。新增20000次事后同时敏感性保留31/27/20个不利反馈inflation区间，对应36/108/1536家族；不是确证或有限样本FWER保证。新增独立bit-mask状态oracle、真实模型恢复诊断、完整阈值网格；共享审计原语已公开。
 
-内置编译、26页视觉检查、引用/标签/边界检查和47个包内文件校验完成。无Overfull或未定义引用；一个Underfull空白警告保留。图的标准原始检测与嵌入页提取适配检测均通过，未放宽阈值。[完整核查](../notes/manuscript-integration/PRE_SUBMISSION_REVIEW.md)。
+正成本保留108新单元与36零成本对照。异质成本下synthetic robust/suppression/top-B反馈的四指标均值改善、三seed inflation方向均有利；仅局部事后三seed子集，非普遍或显著优势。JU/MU子集方向仍不利，20个未收敛批次保留。
 
-科学稿写作目标完成；正式投稿尚未发生。学校适用的中科院分区、最终期刊模板、真实作者声明与审稿证据访问仍需准备，见[投稿准备](../notes/manuscript-integration/VENUE_PREPARATION.zh.md)。原始结果与模型保留，未声称外部机器已全部重跑。
+JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照383/480，不是最终完成。现有6worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
 
-## 新评审后的修订状态
+内置编译、30页联系表视觉核查及14页全尺寸检查、页界/引用和5段逐字摘录检查通过。无Overfull或未定义引用，一个Underfull保留。图使用line/glyph提取适配、默认阈值未放宽，原始提取假阳性报告保留。
 
-2026-10-13 05:20:55 UTC：数值和编译核查没有替代科学可投稿性审查。现按用户A–I意见实质修订，目标重新处于进行中；原计算及凭据保持已完成。CURRENT_DELIVERY的14/30过期状态已纠正。新增联合统计、独立状态枚举和评价/成本敏感性正在核对，尚未声明完成。
+同一物理机器新环境的1536行汇总复算及阈值网格一致；**未完成外部干净机器全训练复现**。公开/DOI/许可证、真实作者责任、单位适用分区及期刊适配仍待决定；没有公开、投稿或接收事实。旧26页包是历史稿，旧PRE_SUBMISSION_REVIEW可投稿性判断已superseded。
+
+[当前源文件](../paper/innovation-addendum-v1.tex) · [PDF](../paper/innovation-addendum-v1.pdf) · [修订包](../paper/revision-delivery-v2.zip) · [A–I回应](../notes/revision-review-v2/REVIEW_RESPONSE.zh.md) · [哈希索引](../notes/revision-review-v2/revision-delivery-index.json)
+
+[汇总复算](../notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [原全量训练协议](../REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](../notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)

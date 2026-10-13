@@ -1,73 +1,19 @@
-# Current research delivery and reproduction entry
+# Current research delivery — substantive revision in progress
 
-Updated 2026-10-13 (Asia/Shanghai). This is the current extension status; the 2026-10-07
-submission-readiness notes describe the earlier frozen manuscript. Their statement
-that no computation remained does not describe the present factorial extension.
+快照：2026-10-13 07:39:12 UTC；研究时区 Asia/Shanghai。
 
-## Current scientific deliverable
+**科学修订进行中，尚未达到正式投稿准备状态。** 当前标题 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*；同一编辑器源文件原位修改，30页、16引用、2幅矢量图，作者与单位留空。
 
-The editable manuscript is [innovation-addendum-v1.tex](paper/innovation-addendum-v1.tex).
-It now defines the data cohorts, advertised-price target, stochastic outcome
-metrics and unilateral audits. The integrated draft is undergoing substantive scientific revision.
-The editor compiler successfully checked this source after the latest edit.
+原训练与四阶段核对完成：30/30组、4320单元、432万行、45372960个合法单边偏离。新增20000次事后同时敏感性保留31/27/20个不利反馈inflation区间，对应36/108/1536家族；不是确证或有限样本FWER保证。新增独立bit-mask状态oracle、真实模型恢复诊断、完整阈值网格；共享审计原语已公开。
 
-Candidate contributions are the precision frontier under explicit information
-and accuracy constraints, auditable verification-path decomposition, and a
-controlled study of heterogeneous effects. LPs, randomization, water filling and
-the minimum operator are established tools. The fixed-mixture separation is
-restricted: a context-aware library can close it. No universal superiority or
-first-result claim is justified by the current evidence.
+正成本保留108新单元与36零成本对照。异质成本下synthetic robust/suppression/top-B反馈的四指标均值改善、三seed inflation方向均有利；仅局部事后三seed子集，非普遍或显著优势。JU/MU子集方向仍不利，20个未收敛批次保留。
 
-## Reproduction map
+JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照383/480，不是最终完成。现有6worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
 
-Run from this project directory in the scientific environment and use fresh
-output paths. Do not restart an existing live producer or alter its bound sources.
+内置编译、30页联系表视觉核查及14页全尺寸检查、页界/引用和5段逐字摘录检查通过。无Overfull或未定义引用，一个Underfull保留。图使用line/glyph提取适配、默认阈值未放宽，原始提取假阳性报告保留。
 
-| Component | Instructions | Verified receipt |
-|---|---|---|
-| Finite observable-report oracle | [oqbo-val/README.md](oqbo-val/README.md) | [independently_audited_finite_oracle](oqbo-val/outputs/finite-demo-01-audit-01/completion.json) |
-| Compact marginal oracle | [oqbo-val/REPRODUCING-COMPACT.md](oqbo-val/REPRODUCING-COMPACT.md) | [completed](oqbo-val/outputs/compact-v1-audit/completion.json) |
-| Restricted fixed-mixture separation | [oqbo-val/README.md](oqbo-val/README.md) | [completed](oqbo-val/outputs/context-mixture-gap-v1/completion.json) |
-| Context-aware library closes the separation | [oqbo-val/README.md](oqbo-val/README.md) | [completed](oqbo-val/outputs/context-rule-library-v1/completion.json) |
-| Conditional stability checks | [REPRODUCING_STABILITY.md](REPRODUCING_STABILITY.md) | [completed_exact_finite_checks](oqbo-val/outputs/score-stability-v1/completion.json) |
-| Saved-profile stability check | [REPRODUCING_STABILITY.md](REPRODUCING_STABILITY.md) | [completed](outputs/allocation-stability-full-v1-check/completion.json) |
-| Original ten-seed statistics check | [REPRODUCING.md](REPRODUCING.md) | [completed](outputs/ten-seed-three-source-union-v1-statistics-check/completion.json) |
-| Frozen-model allocation statistics check | [REPRODUCING.md](REPRODUCING.md) | [completed](outputs/minimax-response-full-v1-statistics-check/completion.json) |
+同一物理机器新环境的1536行汇总复算及阈值网格一致；**未完成外部干净机器全训练复现**。公开/DOI/许可证、真实作者责任、单位适用分区及期刊适配仍待决定；没有公开、投稿或接收事实。旧26页包是历史稿，旧PRE_SUBMISSION_REVIEW可投稿性判断已superseded。
 
-The original-study guide does not by itself reproduce every extension. For the
-controlled factorial, use [REPRODUCING_MATCHED_FACTORIAL.md](REPRODUCING_MATCHED_FACTORIAL.md);
-its automatic handoff is the active route. Saved receipts and their hashes are
-indexed in [the delivery snapshot](notes/current-delivery-evidence-v1.json).
-Receipts verify the documented scope, not every optimizer step or scientific novelty.
+[当前源文件](paper/innovation-addendum-v1.tex) · [PDF](paper/innovation-addendum-v1.pdf) · [修订包](paper/revision-delivery-v2.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md) · [哈希索引](notes/revision-review-v2/revision-delivery-index.json)
 
-## Computation completed; manuscript revision in progress
-
-The full training/evaluation run and all four verification stages completed on
-2026-10-13 (Asia/Shanghai): 30/30 source/seed pairs, 4320 evaluation cells,
-4,320,000 outcome records, and 45,372,960 legal unilateral deviations. The
-pipeline receipt is outputs/matched-factorial-ten-seeds-v1-pipeline/completion.json.
-No partial 14/30 status or old process identifier represents the current state.
-
-A 26-page integrated draft was delivered and compiled. A subsequent detailed
-scientific review identified theory/experiment scope, joint inference, evaluation
-coverage, metric degeneracy, audit shared primitives and deployment concerns.
-These revisions are in progress under notes/revision-review-v2/review-tracker.json.
-Prior hashes and receipts remain evidence for the historical frozen run.
-
-## Work needed for the user's full goal
-
-1. Address scientific review A–I with recorded analyses and text changes; the
-   original factorial and all four verification stages are already complete.
-2. Integrate checked results, practical guidance and figures into one submission
-   manuscript; inspect the final rendered layout and references.
-3. Complete a clean-environment reproduction and a current evidence package.
-   Historical archives do not contain every new component. Public release,
-   software licensing and a repository/DOI remain unresolved.
-4. The user specified Chinese Academy of Sciences third quartile. Confirm the
-   applicable edition/category and the target journal's current requirements. The earlier Scientific Reports screening is conditional, not
-   proof of an applicable institutional classification.
-5. Finalize corresponding author, contributions, funding, conflicts and author
-   approval, including the AI assistance disclosure. These cannot be invented.
-
-The full goal is still in progress. Completion of computation alone does not
-mean submission readiness or journal acceptance.
+[汇总复算](notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [原全量训练协议](REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)

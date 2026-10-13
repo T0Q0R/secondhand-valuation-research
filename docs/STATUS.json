@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 07:19:34 UTC",
+  "snapshot_time": "2026-10-13 07:39:12 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -27,15 +27,15 @@
     "multiple_comparison_corrected": false
   },
   "manuscript": {
-    "integrated_scientific_manuscript_complete": true,
-    "pages": 26,
+    "integrated_scientific_manuscript_complete": false,
+    "revision_status": "substantive_revision_in_progress",
+    "pages": 30,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "completed",
-    "pre_submission_internal_review": "completed",
-    "source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
-    "pdf_sha256": "e7bfaf7cb341952c1606b3d0fc3442f415730e423a94aca3808cc6ef75c6ca29",
+    "all_page_visual_review": "contact_sheets_all_30_plus_14_full_pages",
+    "source_sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff",
+    "pdf_sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86",
     "submission": "not_submitted",
     "formal_submission_ready": false
   },
@@ -53,21 +53,31 @@
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
   "goal_complete": false,
   "delivery": {
-    "archive": "paper/manuscript-delivery-v1.zip",
-    "sha256": "3b0d2afe572aadc82db082c82c98556a367704db3235b4bb771c42c09877c03b",
-    "bytes": 4968632,
-    "checksum_verified": true
+    "archive": "paper/revision-delivery-v2.zip",
+    "bytes": 4827542,
+    "sha256": "7304878953cfd7c8989b2fb5cdf2d0122bd12a818950506f4278230774788275",
+    "checksum_verified": true,
+    "scope": "bounded revision checkpoint; MU pending"
   },
-  "completion_scope": "scientific manuscript writing delivered; no institution classification, actual submission or acceptance claim",
+  "completion_scope": "original computations complete; current scientific revision and submission preparation incomplete",
   "remaining_for_actual_submission": [
+    "full MUCars evaluation, corroboration and backfill",
     "author responsibility and factual declarations",
-    "institution's applicable CAS edition/category and selected journal template",
-    "editor/reviewer evidence access and release policy"
+    "institution CAS edition/category and selected template",
+    "public access/licensing/archival release decisions",
+    "external-machine full training reproduction"
   ],
   "revision_v2": {
     "status": "in_progress",
     "review_comments": "A-I",
     "completed": [
+      "A scope/diagnostic",
+      "B posthoc sensitivity/reporting",
+      "D",
+      "E",
+      "F bounded state oracle",
+      "G",
+      "H bounded cost subset",
       "I"
     ],
     "analyses": "saved-tensor joint intervals; independent state enumeration; evaluation/cost feasibility",
@@ -79,7 +89,46 @@
       "positive heterogeneous-cost subset",
       "full JUCars validation and corroboration"
     ],
-    "manuscript_changes": "pending",
-    "running": "full MUCars frozen-model evaluation, then automated corroboration and weighted statistics"
+    "manuscript_changes": "saved_compiled_layout_and_correspondence_checked",
+    "running": "full MUCars frozen-model evaluation, then automated corroboration and weighted statistics",
+    "expanded_snapshot": {
+      "completed_cells": 383,
+      "total": 480,
+      "not_global_completion": true
+    },
+    "full_jucars": {
+      "listings": 1374,
+      "batches": 14,
+      "seeds": 10,
+      "cells": 240,
+      "outcome_rows": 329760,
+      "status": "completed_and_corroborated"
+    },
+    "isolated_replay": {
+      "status": "completed",
+      "rows": 1536,
+      "scope": "same-machine fresh virtualenv; aggregates only; no external training replication"
+    },
+    "simultaneous_sensitivity": {
+      "resamples": 20000,
+      "adverse_bands": [
+        31,
+        27,
+        20
+      ],
+      "family_sizes": [
+        36,
+        108,
+        1536
+      ],
+      "confirmatory": false,
+      "finite_sample_fwer_certified": false
+    }
+  },
+  "delivery_v1_historical": {
+    "archive": "paper/manuscript-delivery-v1.zip",
+    "sha256": "3b0d2afe572aadc82db082c82c98556a367704db3235b4bb771c42c09877c03b",
+    "bytes": 4968632,
+    "checksum_verified": true
   }
 }

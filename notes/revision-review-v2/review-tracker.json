@@ -1,44 +1,47 @@
 {
   "version": "revision-review-v2",
   "decision_type": "not an editorial decision; user scientific review",
-  "status": "in_progress",
+  "status": "substantive_revision_in_progress",
   "baseline_source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
   "comments": {
     "A": {
-      "status": "in_progress",
-      "action": "Make theoretical scope explicit and formulate a testable recovery-path diagnostic; do not apply restricted frontier to four-field data without assumptions."
+      "status": "addressed_scope_and_finite_diagnostic",
+      "action": "Restricted frontier scope; finite four-field recovery-path check; no empirical T* claim."
     },
     "B": {
-      "status": "analysis_done_posthoc_inference_only",
-      "action": "Centered max-standardized simultaneous crossed-bootstrap intervals; retrospective and post-hoc, not confirmatory."
+      "status": "addressed_posthoc_sensitivity_not_confirmatory",
+      "action": "Complete simultaneous families and source-wise sensitivity; confirmatory/FWER certification not established."
     },
     "C": {
-      "status": "in_progress",
-      "action": "Inspect frozen-model full-heldout evaluation scope and runtime before launching."
+      "status": "partially_completed_jucars_mucars_running",
+      "action": "Full JU1374/14-batch evaluation corroborated; MU10672/107-batch pending."
     },
     "D": {
-      "status": "in_progress",
-      "action": "Inflation degeneracy and co-primary attacked-MAE/failed-query outcomes; cap counts are descriptive consequences."
+      "status": "addressed_descriptive_multiobjective",
+      "action": "Constant-predictor degeneracy, three co-primary descriptive outcomes, cap harm interpretation."
     },
     "E": {
-      "status": "analysis_done_text_pending",
-      "action": "Report continuous effects and threshold sensitivity, no invented preregistration."
+      "status": "addressed_heuristic_threshold_sensitivity",
+      "action": "Continuous effects and complete declared gate grids."
     },
     "F": {
-      "status": "independent_state_check_done_disclosure_pending",
-      "action": "Shared-primitive audit dependency disclosure plus separate brute-force state/transition oracle."
+      "status": "addressed_bounded_independent_oracle",
+      "action": "Shared primitives disclosed; independent bit-mask state/field oracle, shared model remains outside scope."
     },
     "G": {
-      "status": "in_progress",
-      "action": "Promote strong ordinary-benefit and ACO controls to main results without claiming all conditional MUCars gains vanish."
+      "status": "addressed_main_text_comparators",
+      "action": "BEN/ACO inflation comparison in main text; conditional MU gains retained."
     },
     "H": {
-      "status": "in_progress",
-      "action": "Verification-history governance, final-record-only mechanism and positive heterogeneous-cost responses."
+      "status": "addressed_with_bounded_three_seed_cost_sensitivity",
+      "action": "History governance, analytical final-record envelope, all cost regimes including favorable SYN reversal; not universal dominance."
     },
     "I": {
-      "status": "verified_done",
-      "action": "Correct stale CURRENT_DELIVERY and canonical status."
+      "status": "addressed_status_and_history",
+      "action": "Canonical entries updated; old review and 26-page delivery marked historical."
     }
-  }
+  },
+  "manuscript_pages": 30,
+  "formal_submission_ready": false,
+  "author_public_release_decisions_pending": true
 }
