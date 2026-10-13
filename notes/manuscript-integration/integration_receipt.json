@@ -1,11 +1,14 @@
 {
   "original_sha256": "70b0050c401aa314f45c5520012e978b64c314bf35ba2d715af27fe4eecdcd45",
-  "integrated_sha256": "882c51db13235ebaf66ab6f47814f62a2c4a7b850d739ddc960b5a1e0da289d4",
+  "integrated_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
   "abstract_words": 217,
   "author_affiliation_omitted": true,
   "preserved_experiment_data": true,
   "preserved_frozen_scientific_code": true,
   "figures": "two original Matplotlib vector figures in self-contained picture export",
   "new_experiments": false,
-  "scope": "complete manuscript integration; pre-submission review pending"
+  "scope": "complete scientific manuscript integration and final review; not journal submission",
+  "pdf_sha256": "e7bfaf7cb341952c1606b3d0fc3442f415730e423a94aca3808cc6ef75c6ca29",
+  "builtin_compilation": "success",
+  "all_page_visual_review": "completed"
 }

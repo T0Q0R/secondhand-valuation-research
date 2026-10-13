@@ -1,0 +1,388 @@
+{
+  "source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
+  "pdf_sha256": "e7bfaf7cb341952c1606b3d0fc3442f415730e423a94aca3808cc6ef75c6ca29",
+  "pages": 26,
+  "page_audits": [
+    {
+      "page": 1,
+      "text_characters": 3226,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 2,
+      "text_characters": 3695,
+      "minimum_span_pt": 10.909088134765625,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 3,
+      "text_characters": 3608,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 4,
+      "text_characters": 3128,
+      "minimum_span_pt": 5.977583885192871,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 5,
+      "text_characters": 3405,
+      "minimum_span_pt": 5.977583885192871,
+      "outside_page_spans": 0,
+      "drawings": 1,
+      "contains_main_figure": false
+    },
+    {
+      "page": 6,
+      "text_characters": 3329,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 4,
+      "contains_main_figure": false
+    },
+    {
+      "page": 7,
+      "text_characters": 3016,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 4,
+      "contains_main_figure": false
+    },
+    {
+      "page": 8,
+      "text_characters": 3619,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 9,
+      "text_characters": 3787,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 10,
+      "text_characters": 3023,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 11,
+      "text_characters": 3449,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 12,
+      "text_characters": 941,
+      "minimum_span_pt": 9.018280982971191,
+      "outside_page_spans": 0,
+      "drawings": 59,
+      "contains_main_figure": true
+    },
+    {
+      "page": 13,
+      "text_characters": 636,
+      "minimum_span_pt": 9.018280982971191,
+      "outside_page_spans": 0,
+      "drawings": 32,
+      "contains_main_figure": true
+    },
+    {
+      "page": 14,
+      "text_characters": 3445,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 15,
+      "text_characters": 3392,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 2,
+      "contains_main_figure": false
+    },
+    {
+      "page": 16,
+      "text_characters": 3813,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 17,
+      "text_characters": 2490,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 5,
+      "contains_main_figure": false
+    },
+    {
+      "page": 18,
+      "text_characters": 3422,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 19,
+      "text_characters": 3185,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 2,
+      "contains_main_figure": false
+    },
+    {
+      "page": 20,
+      "text_characters": 3282,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 4,
+      "contains_main_figure": false
+    },
+    {
+      "page": 21,
+      "text_characters": 2728,
+      "minimum_span_pt": 9.962639808654785,
+      "outside_page_spans": 0,
+      "drawings": 6,
+      "contains_main_figure": false
+    },
+    {
+      "page": 22,
+      "text_characters": 3169,
+      "minimum_span_pt": 5.977583885192871,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 23,
+      "text_characters": 3787,
+      "minimum_span_pt": 7.970111846923828,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 24,
+      "text_characters": 3302,
+      "minimum_span_pt": 10.909088134765625,
+      "outside_page_spans": 0,
+      "drawings": 3,
+      "contains_main_figure": false
+    },
+    {
+      "page": 25,
+      "text_characters": 3234,
+      "minimum_span_pt": 10.909088134765625,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    },
+    {
+      "page": 26,
+      "text_characters": 1344,
+      "minimum_span_pt": 10.909088134765625,
+      "outside_page_spans": 0,
+      "drawings": 0,
+      "contains_main_figure": false
+    }
+  ],
+  "figure_pages": [
+    12,
+    13
+  ],
+  "missing_citations": [],
+  "uncited_references": [],
+  "duplicate_labels": [],
+  "missing_refs": [],
+  "undefined_reference_markers": 0,
+  "overfull_boxes": 0,
+  "underfull_log_count": 1,
+  "all_page_visual_review": "completed",
+  "author_affiliation_omitted": true,
+  "review_method": "assistant visual inspection of rendered full pages; no external human review claimed",
+  "visual_page_reviews": [
+    {
+      "page": 1,
+      "status": "inspected",
+      "render_sha256": "ff5b25439b71048527b492d4d64db446050bb84e96b227672beb9fe38473bb0a",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 2,
+      "status": "inspected",
+      "render_sha256": "99c1c1779277741dad9bba0db60a8a6d7484e672bf9d9a7edc9f0d16abef3323",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 3,
+      "status": "inspected",
+      "render_sha256": "83dbd4ef6ab172959dd91fb7255b1b508f65229e50130d1cae5e69c291d2f110",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 4,
+      "status": "inspected",
+      "render_sha256": "5c377474857f89ccdb2d252ff211f05e937ce599f539e79947ad2863fae240bf",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 5,
+      "status": "inspected",
+      "render_sha256": "06b6637b09ed591e68e0855c31e0d33565e7411406bb3531e165f300a3545c90",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 6,
+      "status": "inspected",
+      "render_sha256": "18cf28c8266be58ec90a66250168d46c3bfed511030f6b0e91ff68ce30f4866a",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 7,
+      "status": "inspected",
+      "render_sha256": "2f1bce1cbc8fea10fce5cee05f1f013e51cf391419e69c17a51de8040160bb6e",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 8,
+      "status": "inspected",
+      "render_sha256": "184b4545838e17d551be07c55b6cf66a95131e2ba48b83de87f8a772cbb1821d",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 9,
+      "status": "inspected",
+      "render_sha256": "a94f90c1029869e2301b8402b38e550d2c56c5ca6d23461bc4bffd1da77f800b",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 10,
+      "status": "inspected",
+      "render_sha256": "054114be223f093c45cb2a0aa925f0c3fbd702069b80400d36010712dd5135b8",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 11,
+      "status": "inspected",
+      "render_sha256": "afba06a46678c7d15a44171d1f97ec4d900f6fe7c4eb990a9e300851046618a6",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 12,
+      "status": "inspected",
+      "render_sha256": "985ccd48ff7afd80613705971c0ae510e2a53025411945b25c6de29eecb9c30e",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 13,
+      "status": "inspected",
+      "render_sha256": "69b50adb7421e9c3aed908282ace178f2897d3bc50455b3fcc8bee4161849ad2",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 14,
+      "status": "inspected",
+      "render_sha256": "29a44c1d1c747b60b26bdac814c5c3ffa2517e9d7d83607bb66551fa569ed46c",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 15,
+      "status": "inspected",
+      "render_sha256": "309041d31eed0c7c70d3d2902e3e01b4cddf0040a5b72950703528c304e1ebca",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 16,
+      "status": "inspected",
+      "render_sha256": "192ed7eb612903bed8d39376414f685f700309caedffcb3aa66c54bac13adb75",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 17,
+      "status": "inspected",
+      "render_sha256": "5ab9adec622157fcd4a2d30098c641917609f780e95c24715bfe4650cbb5983d",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 18,
+      "status": "inspected",
+      "render_sha256": "6c728921fb8e7c3de6257cb047a143b8d0a89a4e4d3157aa6397f02ffb31d3e3",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 19,
+      "status": "inspected",
+      "render_sha256": "4452c7315be5aa7a6811a0a547e2a1bff04f5ca1bef79ffe178845c3e556e1e0",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 20,
+      "status": "inspected",
+      "render_sha256": "ef600185333b8ec0a314cfec6a888b78b29e36972c086017d026f112ae3d5940",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 21,
+      "status": "inspected",
+      "render_sha256": "7b5b346a8e6277738d26cf01b0f1f62fa4bc9555707193c71852062b05c180b1",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 22,
+      "status": "inspected",
+      "render_sha256": "35b8033ab93583c3712dd30be670ab161610fe0525a94178fd728a6393f889e7",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 23,
+      "status": "inspected",
+      "render_sha256": "a6be3da5d0395d5a451eb17b4c6cd4965b71c2cdc26b1b1ad6c25e11eabc5a7c",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 24,
+      "status": "inspected",
+      "render_sha256": "b0e119556e86726dac430225e15fe7b9fc7ce73b917dc44f91e2f4ec1dff2ef0",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 25,
+      "status": "inspected",
+      "render_sha256": "8878196b08b7ce46a39becff6545531c29f16a3f6b9af556e1bd3f2a79075c39",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    },
+    {
+      "page": 26,
+      "status": "inspected",
+      "render_sha256": "e0661ccd94210f383b7d43fc35d06a9f3f7e93dd7566a8d03a6283ff746ab01b",
+      "finding": "No clipped content or unreadable table/figure; cross-page continuations retained."
+    }
+  ],
+  "final_reference_repair": "Table 7 reference on page 20 inspected after final export"
+}

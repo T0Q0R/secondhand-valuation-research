@@ -20,6 +20,10 @@ Suppression acquisition、no-policy-feedback控制、10%预算；mask减robust�
 
 每幅图均有PDF/SVG/PNG、source.csv和字体/碰撞QA。[报告构建脚本](../notes/build_factorial_final_report.py) 验证已完成分析哈希后生成结果与图；[图表依赖](../notes/factorial-final/requirements-report.txt)。主统计及审计代码仍为原冻结版本；没有重训练或新增性能数据。
 
-## 尚未完成
+## 完整科学稿交付
 
-图已独立交付，尚未嵌入单一完整投稿稿。创新首创性、作者声明、学校分区口径、许可、公开发布和清洁环境复现尚待处理。原逐条结果与模型文件不包含在此包中，不能据此声称任何外部机器已成功复现。
+两幅矢量图已嵌入26页单一科学稿，完整引言、相关工作、方法、实验、结果、讨论和五组附录已完成。[PDF](../paper/innovation-addendum-v1.pdf) · [交付ZIP](../paper/manuscript-delivery-v1.zip) · [核查记录](../notes/manuscript-integration/PRE_SUBMISSION_REVIEW.md) · [清单](../notes/manuscript-integration/delivery_manifest.json)。
+
+完整六预算分析和附录强基线的小型对比/凭据均在包内，47个文件逐一校验。嵌入XeTeX页的碰撞检测只修正了text-trace提取导致的假阳性，未改变阈值；原失败记录保留。
+
+作者/单位留空。正式投稿的学校分区确认、期刊模板、作者责任与声明、证据访问尚需准备；没有外部机器完整复现或接收事实。

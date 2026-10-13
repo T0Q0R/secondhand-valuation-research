@@ -1,0 +1,225 @@
+{
+  "scope": "all archived aggregate results and completion receipts for Appendix E; no new experiment",
+  "archive_sha256": "f6e67b546605cc30b2ad9e2a987804787119a13a3c32ca02c30097cc951092b5",
+  "receipt_bound_files_verified": [
+    "outputs/grouped-smi-development-v2-interval-cached-audit/analyze_grouped_smi_interval_cached.py",
+    "outputs/grouped-smi-development-v2-interval-cached-audit/audited_summary.csv",
+    "outputs/grouped-smi-development-v2-interval-cached-audit/grouped_smi_interval_oracle.py",
+    "outputs/grouped-smi-development-v2-interval-cached-audit/solver_coverage.csv",
+    "outputs/aco1-development-v2-audit/bank_boundary_checks.csv",
+    "outputs/aco1-development-v2-audit/metric_recomputation.csv",
+    "outputs/aco1-development-v2-audit/paired_primary_comparisons.csv",
+    "outputs/aco1-development-v2-audit/primary_first_batch_unilateral_audit.csv",
+    "outputs/aco1-development-v2-audit/rechecked_summary.csv",
+    "outputs/aco1-development-v2-audit/report.md",
+    "outputs/robust-benefit-reference-v1-audit/audited_summary.csv",
+    "outputs/robust-benefit-reference-v1-audit/cell_checks.csv",
+    "outputs/robust-benefit-reference-v1-audit/paired_contrasts.csv",
+    "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/audited_joint_summary.csv",
+    "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/paired_contrasts.csv",
+    "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/primary_contrasts.csv",
+    "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/source_snapshot.py",
+    "outputs/equal-benefit-size-reference-development-v1-audit-full-01/audited_summary.csv",
+    "outputs/equal-benefit-size-reference-development-v1-audit-full-01/cell_checks.csv",
+    "outputs/equal-benefit-size-reference-development-v1-audit-full-01/input_binding.json",
+    "outputs/equal-benefit-size-reference-development-v1-audit-full-01/stages.csv"
+  ],
+  "contents": [
+    {
+      "path": "outputs/aco1-development-v2/completion.json",
+      "bytes": 685,
+      "sha256": "9456d740d00dd27b3ad5bb3b88cc4d2d81d29e2c636dfb88ab2995b7b72d2634"
+    },
+    {
+      "path": "outputs/aco1-development-v2/summary.csv",
+      "bytes": 47498,
+      "sha256": "79b8327422962dc07dcb6cb19dfd4b349570188fde78f3e0c268a2518afb2abf"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/analysis_completion.json",
+      "bytes": 2157,
+      "sha256": "04319a93060ab7dab96c9667bdf554fe01b45189b92460aad0c964af31564b26"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/bank_boundary_checks.csv",
+      "bytes": 2849,
+      "sha256": "af7d7839961f4ba3fedd4cb7439d6ec9cb89799e0e3d4c1d3281a55e1621b014"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/metric_recomputation.csv",
+      "bytes": 5146,
+      "sha256": "de548d27d302c1bacd7ebf53ce914cbff318795fee8838cb00e06bfbe7c4ca2f"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/paired_primary_comparisons.csv",
+      "bytes": 30008,
+      "sha256": "1bf34f004af9b9e54329b46514dbb5dea5e4ce65bf69fb71fc462c56562ade8f"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/primary_first_batch_unilateral_audit.csv",
+      "bytes": 973,
+      "sha256": "a0c473ecfba1ccf6e9422f8562837f4c1721b74c266fae2bfac10142da3c6f47"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/rechecked_summary.csv",
+      "bytes": 45897,
+      "sha256": "00cab64c67efdef9e9b01038202fd2af048fc12d8c0598c8ea6fd134b3a24729"
+    },
+    {
+      "path": "outputs/aco1-development-v2-audit/report.md",
+      "bytes": 35359,
+      "sha256": "84cac77b7de8f8ebe247d4856e3f11ce0028e91b037be5d770e5d13ab740febf"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1/completion.json",
+      "bytes": 1780,
+      "sha256": "30188fcb97c408c55b707ec3e23ec28bacf1a91bd0494058a8e994b05c5b806e"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-audit-full-01/audited_summary.csv",
+      "bytes": 91991,
+      "sha256": "be415fbf08b92ccde023a73dbd93a8de679708a279f8445eb650417fd14e5815"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-audit-full-01/cell_checks.csv",
+      "bytes": 23771,
+      "sha256": "b6d1a179ce75e564b383f0952d8d314ba181d4c7f6ff2989731da3592e6dfd09"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-audit-full-01/completion.json",
+      "bytes": 1850,
+      "sha256": "c399a5c0f1971fe270f943c0509dbf48bc93a279018dabb93a5f848a244065af"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-audit-full-01/input_binding.json",
+      "bytes": 15620,
+      "sha256": "e540f739552cee254ed0fe58ae444a56ee816a82d027274bafd83fe452eb8d87"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-audit-full-01/stages.csv",
+      "bytes": 5169,
+      "sha256": "d46db9970cdb64597e33d0fa31a80cd6a4b2c847f38fadc85015bcc215a3bd1b"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/audited_joint_summary.csv",
+      "bytes": 353658,
+      "sha256": "cab09088ad89e73dc5bebb7b45fdd5900da479a82958a322f073bef33dfa3a1d"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/completion.json",
+      "bytes": 8749,
+      "sha256": "2e0bac4fbd58f46572ec8305d7699e71f096ee6112a82258bfe8f7ab5a664680"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/paired_contrasts.csv",
+      "bytes": 258765,
+      "sha256": "aef72fdbe60b531193ad219d6b642bbb078207f9562f3d050501b8e835240aca"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/primary_contrasts.csv",
+      "bytes": 43662,
+      "sha256": "94dec89da9a646836cffa88771361948f5a368123be6cd8263d24229cb3988fb"
+    },
+    {
+      "path": "outputs/equal-benefit-size-reference-development-v1-contrasts-full-01/source_snapshot.py",
+      "bytes": 5472,
+      "sha256": "7fa8b906868a3689732100affbb6fe2f22e77bc5c14ac3470e0c19a039bba4e9"
+    },
+    {
+      "path": "outputs/equal-tuning-size-development-v1/completion.json",
+      "bytes": 273,
+      "sha256": "202294c8b7c24ce4190a86112324241e648418145cbff55394c68bf26d59ef0d"
+    },
+    {
+      "path": "outputs/equal-tuning-size-development-v1-audit-full-01/auditor_snapshot.py",
+      "bytes": 16552,
+      "sha256": "ba7cf54cb548910fa422e25f795d37b94716c9f33299228b7a2d57cfe40af135"
+    },
+    {
+      "path": "outputs/equal-tuning-size-development-v1-audit-full-01/cells.csv",
+      "bytes": 49293,
+      "sha256": "e981aeb35a355f529fe07c4995c3e6de3b8161b0895c41be51fa7edf7d583b0c"
+    },
+    {
+      "path": "outputs/equal-tuning-size-development-v1-audit-full-01/completion.json",
+      "bytes": 605,
+      "sha256": "8ab647b6b6373f8bb8b775ab0c80a087650cba3c2e7898bec0f8e75bc4ad0709"
+    },
+    {
+      "path": "outputs/equal-tuning-size-development-v1-audit-full-01/input_binding.json",
+      "bytes": 15524,
+      "sha256": "8ce4161d838a2e59345f5e49f034ae3b463c68936be24fb5350613c98ba8939b"
+    },
+    {
+      "path": "outputs/equal-tuning-size-development-v1-audit-full-01/stages.csv",
+      "bytes": 4548,
+      "sha256": "03d144232d5bf1835822dabc4e3d32894e167ab388c5de153a978e88c72e4286"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2/completion.json",
+      "bytes": 198,
+      "sha256": "fb48ed81abeeaa199409244a722d7d4d2b2ae157ab3b258c584291b2bf44d046"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2/summary.csv",
+      "bytes": 2590,
+      "sha256": "41d8eee26fc2983bd9a3dac9a7bd9d2210b366a18f9f78fa9dcc10493ac3d7bb"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2-interval-cached-audit/analyze_grouped_smi_interval_cached.py",
+      "bytes": 18746,
+      "sha256": "160663a451d714805d86a112c576d9190ad2b0b6d638db57c5c549fbccf592cd"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2-interval-cached-audit/audited_summary.csv",
+      "bytes": 2566,
+      "sha256": "db7310d09d73115ca2160c18af849e29fa740a4d73ff80f02640a548737db63e"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2-interval-cached-audit/completion.json",
+      "bytes": 1070,
+      "sha256": "46b99d30e11f53867f8aee8407b90aff3180bc4350db56fbf71f7e16df5f3ef8"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2-interval-cached-audit/grouped_smi_interval_oracle.py",
+      "bytes": 5521,
+      "sha256": "860e4ca90195eb3c78b9068d1683398934bc9b2cecba270cd90c3adfae6f2903"
+    },
+    {
+      "path": "outputs/grouped-smi-development-v2-interval-cached-audit/solver_coverage.csv",
+      "bytes": 1508,
+      "sha256": "9bfedcf7ea099130e31665c8e581d8f7f65eefbcce5bfb1321eedbca21ecebf8"
+    },
+    {
+      "path": "outputs/robust-benefit-reference-v1/completion.json",
+      "bytes": 715,
+      "sha256": "bd6fde4e0372bde76b3d9f3e6848e281d0d439534bd36627ec361db50463032f"
+    },
+    {
+      "path": "outputs/robust-benefit-reference-v1/summary.csv",
+      "bytes": 15208,
+      "sha256": "a3291d8fc7ca960925045a2328557a927fb5035e7a128c439422bd3bcfe3f531"
+    },
+    {
+      "path": "outputs/robust-benefit-reference-v1-audit/audited_summary.csv",
+      "bytes": 14644,
+      "sha256": "f1c8611f8c3dd8f81237a96bcbfc6f4091e4919a32671bde1f59919a07c9274e"
+    },
+    {
+      "path": "outputs/robust-benefit-reference-v1-audit/cell_checks.csv",
+      "bytes": 1657,
+      "sha256": "1fc5a34f08f89e2b915bb2ec13bc789e4f7070da82da9f38f19b1f0db7b01bff"
+    },
+    {
+      "path": "outputs/robust-benefit-reference-v1-audit/completion.json",
+      "bytes": 1376,
+      "sha256": "541e0fa80745179350b6eb5f6d471eb3092c0a4c6f58e92af2abc220e9a12a6b"
+    },
+    {
+      "path": "outputs/robust-benefit-reference-v1-audit/paired_contrasts.csv",
+      "bytes": 15102,
+      "sha256": "afe298eef00290353117a7e0ae3671f96aa9eb6af91e52333b5368d1dc5a8611"
+    }
+  ],
+  "excluded": "raw listing outcomes, fitting records and model weights; not external full reproduction"
+}

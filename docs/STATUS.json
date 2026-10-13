@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 03:11:36 UTC",
+  "snapshot_time": "2026-10-13 03:24:48 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -27,14 +27,17 @@
     "multiple_comparison_corrected": false
   },
   "manuscript": {
-    "integrated_scientific_manuscript": true,
+    "integrated_scientific_manuscript_complete": true,
     "pages": 26,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "in_progress",
-    "pre_submission_review": "in_progress",
-    "submission": "not_submitted"
+    "all_page_visual_review": "completed",
+    "pre_submission_internal_review": "completed",
+    "source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
+    "pdf_sha256": "e7bfaf7cb341952c1606b3d0fc3442f415730e423a94aca3808cc6ef75c6ca29",
+    "submission": "not_submitted",
+    "formal_submission_ready": false
   },
   "figures": {
     "new_count": 2,
@@ -43,9 +46,22 @@
       "svg",
       "png"
     ],
-    "collision_qa": "both PASS",
-    "single_axes": true
+    "collision_qa": "original figures PASS; embedded XeTeX pages extraction-adapted PASS with default thresholds; raw false-positive reports preserved",
+    "single_axes": true,
+    "minimum_embedded_label_pt": 9.018280982971191
   },
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
-  "goal_complete": false
+  "goal_complete": true,
+  "delivery": {
+    "archive": "paper/manuscript-delivery-v1.zip",
+    "sha256": "3b0d2afe572aadc82db082c82c98556a367704db3235b4bb771c42c09877c03b",
+    "bytes": 4968632,
+    "checksum_verified": true
+  },
+  "completion_scope": "scientific manuscript writing delivered; no institution classification, actual submission or acceptance claim",
+  "remaining_for_actual_submission": [
+    "author responsibility and factual declarations",
+    "institution's applicable CAS edition/category and selected journal template",
+    "editor/reviewer evidence access and release policy"
+  ]
 }

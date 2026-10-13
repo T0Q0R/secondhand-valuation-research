@@ -11,8 +11,10 @@
     "svg"
   ],
   "tiff_omitted": "vector figures supplied; no target-journal raster requirement selected",
-  "minimum_text_pt": 7,
-  "collision_checks": "both PASS; zero failures and warnings",
-  "compiler": "built-in source compiler success",
-  "backend": "python"
+  "minimum_text_pt": 9.018280982971191,
+  "collision_checks": "original figures: standard checker PASS; embedded figures: extraction-adapted checker PASS, unchanged thresholds; raw false-positive reports preserved",
+  "compiler": "final source built-in compiler success",
+  "backend": "python",
+  "minimum_original_figure_text_pt": 10,
+  "minimum_embedded_figure_text_pt": 9.018280982971191
 }

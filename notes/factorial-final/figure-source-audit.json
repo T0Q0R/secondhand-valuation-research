@@ -28,7 +28,7 @@
     {
       "check_id": "FONT-SIZE",
       "level": "PASS",
-      "message": "All detected text sizes are at least 5 pt (minimum 7 pt)",
+      "message": "All detected text sizes are at least 5 pt (minimum 10 pt)",
       "evidence": []
     },
     {

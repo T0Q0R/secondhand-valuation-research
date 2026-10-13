@@ -1,0 +1,18 @@
+{
+  "scope": "entire final source, including appendices and captions",
+  "source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
+  "exact_term_hits": [
+    {
+      "term": "yet",
+      "line": 1101,
+      "quote": "tables, resampling tensors, figure source data and hash-indexed audit receipts. It is not yet a public archival release. Model weights and large per-listing outputs remain on the research machine; independent clean-machine reproducti"
+    },
+    {
+      "term": "reveal",
+      "line": 444,
+      "quote": "certifying independent vehicles. Targets, identifiers, source indices and declared direct reveal aliases are excluded from predictor inputs. Correlated covariates remain, so concealment need not remove all information about a field. Nat"
+    }
+  ],
+  "unicode_em_dash_count": 0,
+  "tex_em_dash_count": 0
+}

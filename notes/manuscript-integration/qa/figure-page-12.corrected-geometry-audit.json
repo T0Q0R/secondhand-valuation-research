@@ -1,0 +1,27 @@
+{
+  "auditable": true,
+  "verdict": "PASS",
+  "page_count": 1,
+  "visible_text_box_count": 26,
+  "text_trace_count": 790,
+  "stroke_path_count": 57,
+  "filled_region_count": 44,
+  "image_region_count": 0,
+  "summary": {
+    "fail": 0,
+    "warn": 0,
+    "contained_fill_overlays": 0,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": [],
+  "extraction": "rendered line boxes and per-glyph clipping; grouped text trace union avoided",
+  "default_thresholds_unchanged": true,
+  "original_pdf_sha256": "b5a83643ec6fbb8b101fd2c7779bfeed23a02ea957e315f1439a14c03219b9ee",
+  "detector_sha256": "841ede7dcaefa3ab11576b5ba52375d1678a71f77d39f553d5464e81b0699283",
+  "real_collision_probes_rejected": true
+}

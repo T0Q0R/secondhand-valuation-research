@@ -16,12 +16,15 @@
 
 新增匹配因子实验交叉初始目标×查询分数×反馈×分配方式，30组、4320单元已完成计算；全量 fit/outcome/analysis/statistics-check 四阶段已全部通过。完整包及结果解读见 docs/FINAL_RESULTS.md；10%主容量的36个反馈对比全为不利点估计，34个未校正区间完全不利，MUCars初始robust目标12个对比均通过门槛，18个联合政策干预无通过门槛。不得将原SAV/static-robust模型重命名为新增匹配模型。
 
-## 接下来
+## 最新交付与下一步
 
-1. 阅读 docs/FINAL_RESULTS.md、notes/factorial-final/RESULTS.zh.md 和完整分析证据包，重核清单与哈希。
-2. 已整合匹配因子结果到原addendum，继续核查反馈失败机制和创新优先权；保留负结果与未收敛响应。
-3. 将审计结果、图表与实践建议整合成单一投稿稿；核对引用与最终排版。
-4. 核查首创性、学校三区口径、作者声明与代码/数据可用性；清洁环境复现仍待完成。
+完整科学稿已交付：26页、9节正文、5组附录、14篇引用、2幅矢量图、11个编号表；作者与单位留空。内置编译、逐页视觉检查、引用/边界检查和证据包逐文件校验完成。
+
+[完整源文件](paper/innovation-addendum-v1.tex) · [同稿PDF](paper/innovation-addendum-v1.pdf) · [论文与证据包](paper/manuscript-delivery-v1.zip) · [核查记录](notes/manuscript-integration/PRE_SUBMISSION_REVIEW.md) · [投稿准备](notes/manuscript-integration/VENUE_PREPARATION.zh.md)
+
+科学稿写作已完成；正式投稿、单位适用分区确认、作者声明与证据访问仍需准备。没有新增训练或外部机器全流程重跑，原模型及逐条结果仍保留。
+
+不要重复启动已完成的训练。只有明确的新研究问题或已确认错误才应增加实验；保留负结果、失败查询和未收敛响应。Scientific Reports 为既有条件候选，Applied Intelligence 为另一条件候选；尚未确定最终期刊。学校/作者事实先检查已提供的资料，避免重复索取。后续优先按选刊政策处理模板、真实声明和证据访问。
 
 ## 操作约束
 
