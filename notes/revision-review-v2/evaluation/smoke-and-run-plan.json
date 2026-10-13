@@ -1,0 +1,62 @@
+{
+  "expanded_smoke": {
+    "receipt": "outputs/review-expanded-primary-v2/worker-receipts/jucars/seed-13/robust__none__shared__shared.json",
+    "sha256": "e18b7fffc9d78f300e8aa8a86f0599fdae81b99aec8fa2884940f3d8950a5522",
+    "logical_cells": 6,
+    "records_per_cell": 1374,
+    "original_1000_prefix_checked": true
+  },
+  "cost_smoke": {
+    "summary": "outputs/review-cost-sensitivity-v2/smoke-summary.csv",
+    "sha256": "e7f935dd26c417fb2530514d04dc89ec611429c56441693953b613ab87d279dc",
+    "cells": 2,
+    "allocations": [
+      "top_b",
+      "minimax"
+    ],
+    "zero_cost_states_and_quotes_match_frozen": true,
+    "every_legal_unilateral_utility_cross_checked": true
+  },
+  "planned_full_expansion": {
+    "datasets": {
+      "jucars": 1374,
+      "mucars": 10672
+    },
+    "fitting_seeds": 10,
+    "capacity": 0.1,
+    "method_cells": 480,
+    "unique_fit_tasks": 280,
+    "workers": 6,
+    "new_training": false
+  },
+  "planned_cost_sensitivity": {
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "sources": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "initial_objective": "robust",
+    "score": "suppression",
+    "feedback": [
+      "none",
+      "policy"
+    ],
+    "allocation": [
+      "top_b",
+      "minimax"
+    ],
+    "costs": [
+      "uniform005",
+      "uniform020",
+      "heterogeneous020"
+    ],
+    "method_cells": 108,
+    "workers": 2,
+    "new_training": false
+  }
+}
