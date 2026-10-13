@@ -1,16 +1,16 @@
 {
   "status": "bounded_revision_checkpoint",
-  "scope": "current 30-page revised manuscript, A-I response, aggregate replay inputs, completed supplements; full MU pending",
+  "scope": "current 30-page revised manuscript, A-I response, aggregate replay inputs and completed full-real-cohort supplements; author/release/external-training pending",
   "archive": "paper/revision-delivery-v2.zip",
-  "bytes": 4827542,
-  "sha256": "7304878953cfd7c8989b2fb5cdf2d0122bd12a818950506f4278230774788275",
-  "manuscript_sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff",
-  "pdf_sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86",
+  "bytes": 4873470,
+  "sha256": "627590477b23a1e30cad837c93178d7d83d43f675c4cc39bb5cf7943bdd7ddec",
+  "manuscript_sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
+  "pdf_sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849",
   "files": [
     {
       "path": "notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md",
-      "bytes": 1438,
-      "sha256": "e5a1f9cf2ec48f4de4f9e0eb79dbc91124905ba598c3aaeee762c527407344ec"
+      "bytes": 1501,
+      "sha256": "2b31fa18eea0251150b2c675615095f10188c40b007ea56038ae3f99081dd6f1"
     },
     {
       "path": "notes/revision-review-v2/REPRODUCING_AGGREGATES.md",
@@ -19,8 +19,8 @@
     },
     {
       "path": "notes/revision-review-v2/REVIEW_RESPONSE.zh.md",
-      "bytes": 8595,
-      "sha256": "10c1a6c50925f9a5beb4a09602bd15456a0c99b7e47aff0ecf86f4686a86d4ff"
+      "bytes": 8830,
+      "sha256": "a884d5124e135d4bb755f2cf27ad270b6aa36d94af6f14be53914ce931aa6514"
     },
     {
       "path": "notes/revision-review-v2/aggregate-requirements.txt",
@@ -49,8 +49,8 @@
     },
     {
       "path": "notes/revision-review-v2/build_revision_delivery.py",
-      "bytes": 4005,
-      "sha256": "674e9414bc084c28417af6572039dd5dc907c0fa40a3f5b6f5679ce2d93815f5"
+      "bytes": 4685,
+      "sha256": "72a8d128c346b6c817ccada5edaf2320e3af3243e52ef922869ee25b56de59c1"
     },
     {
       "path": "notes/revision-review-v2/completed-supplements-stage1-index.json",
@@ -68,6 +68,11 @@
       "sha256": "08abbf233d95e48c9ead22dccccd3f3be4a6e8be167d3260de558f4715e4908c"
     },
     {
+      "path": "notes/revision-review-v2/evaluation/expanded-completion-summary.json",
+      "bytes": 676,
+      "sha256": "a46e17bf31c178eea9839a700d67aa2fcc0ec57f3a0311cd7c355165a9d6890e"
+    },
+    {
       "path": "notes/revision-review-v2/evaluation/expanded_evaluation.py",
       "bytes": 8080,
       "sha256": "43ccebf1b13331dc793a16cc95b58e68e4b6f99a89968adbcb9a7089990d5926"
@@ -76,6 +81,21 @@
       "path": "notes/revision-review-v2/evaluation/finalize_supplements.py",
       "bytes": 17161,
       "sha256": "89ff6299a918ebbcf02ea9c8349b1bdacf20547c581500231535e1bdd55caf7f"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/rebalance-cells-receipt.json",
+      "bytes": 2255,
+      "sha256": "3981ee2efc3a63cc2380db24dc9532e49e4ee1384599e718e921065a9aa81bb7"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/rebalance-plan.json",
+      "bytes": 1512,
+      "sha256": "b00d64fe3d0d9097be79d639363e3a46176a2a03235d4027a5a6330ca0fe6841"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/rebalance_to_cells.py",
+      "bytes": 6150,
+      "sha256": "73c1bb8c57880a58a0a2c14f6267c7e38bf5a95859d9ffc86f058651750dd68a"
     },
     {
       "path": "notes/revision-review-v2/evaluation/recovery_completion.json",
@@ -108,14 +128,39 @@
       "sha256": "0cdc5ca85d5026acec1937431a14cb1f6a3ffa40339364cd9222f51ef1550a2e"
     },
     {
+      "path": "notes/revision-review-v2/evaluation/resize-to-eight-receipt.json",
+      "bytes": 2971,
+      "sha256": "1afffb1507fd8aa3124eb2c7f6645d752a0d676ae4c67beb86f2f4affed7d729"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/resize_workers.py",
+      "bytes": 6067,
+      "sha256": "f802274a1799c22502173555592a576340676824ff19a5c158db366293d35778"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/resume_cells_expanded.py",
+      "bytes": 5198,
+      "sha256": "9172b20480de798b0328fd9c76545a6057eae54c5ba98241c71e75f8ad671891"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/resume_expanded.py",
+      "bytes": 2265,
+      "sha256": "b8cdb56e9146b21df3f929818f92959e5f6684213556829a84746cd7af63932c"
+    },
+    {
       "path": "notes/revision-review-v2/evaluation/running-processes.json",
-      "bytes": 1386,
-      "sha256": "4bfd3605b9e701a0db883be437205cce0754f9b52819fc2bcbf7b29a030ff8cf"
+      "bytes": 1936,
+      "sha256": "13ff4d43b20771b4415c0ab90c44953c5ff6ecbbd0e6b84969be36b2b29e984b"
     },
     {
       "path": "notes/revision-review-v2/evaluation/smoke-and-run-plan.json",
       "bytes": 1430,
       "sha256": "2e9b960e5ca58b97258ba8089cb4c2eb302b24941677e9f88be62db4b625ac4f"
+    },
+    {
+      "path": "notes/revision-review-v2/github-sync-receipt.json",
+      "bytes": 401,
+      "sha256": "6f44daeaecde916a87c3cda5b5684c8f805a655488d49fe2e110c6e83850acda"
     },
     {
       "path": "notes/revision-review-v2/isolated-replay-receipt.json",
@@ -124,23 +169,23 @@
     },
     {
       "path": "notes/revision-review-v2/manuscript-changes.patch",
-      "bytes": 42564,
-      "sha256": "c8b3595a7d32554550421d71393b30b031b7198ee6197bdf1c7d5e375b40db53"
+      "bytes": 42984,
+      "sha256": "ab4214df8b028f63c0e37ab9c19645b92b053b4acd5223b2b8aca422fd833fc4"
     },
     {
       "path": "notes/revision-review-v2/manuscript-revision-receipt.json",
-      "bytes": 1211,
-      "sha256": "862e26c038f58ff141adb1860d6faa2f17d22a929adc342ab7e4e8307d2fc5a9"
+      "bytes": 984,
+      "sha256": "f3fb43b79d2b2fceb2217c5c861ccf2985254780972bb7fb5fba54f6f57c8ed4"
     },
     {
       "path": "notes/revision-review-v2/qa/correspondence-audit.json",
-      "bytes": 1484,
-      "sha256": "2fefcf6e748cbcc03913a89b86d71b331008794f63622f3a64125cf9681a54a3"
+      "bytes": 1436,
+      "sha256": "0a1575e8c97bd07671c0be10b978d5d83c5addb0b1fa5949659ae0969c0e4e96"
     },
     {
       "path": "notes/revision-review-v2/qa/figure-page-14.corrected-geometry-audit.json",
       "bytes": 815,
-      "sha256": "eabe78f5d882c2fc9146254e5431ec0bafb7952efc9f7c5835953c9803b57e29"
+      "sha256": "948929a95b29d696798a211cd836718469e38f6d578e867811493530823123da"
     },
     {
       "path": "notes/revision-review-v2/qa/figure-page-14.raw-geometry-audit.json",
@@ -150,7 +195,7 @@
     {
       "path": "notes/revision-review-v2/qa/figure-page-15.corrected-geometry-audit.json",
       "bytes": 815,
-      "sha256": "6573ea1b80a2cf8306236545beee977df4f4211331844998aa6ca170a41160e7"
+      "sha256": "f93b9f28d81395fbd3aa8b5385b51799e2d50b4c221bd69b98d3026a9dae87fc"
     },
     {
       "path": "notes/revision-review-v2/qa/figure-page-15.raw-geometry-audit.json",
@@ -169,8 +214,8 @@
     },
     {
       "path": "notes/revision-review-v2/qa/render-audit.json",
-      "bytes": 7703,
-      "sha256": "7c28d3a47f52e52e7491c5d295dc58cecd960df5e32613234c1316b627ce95fa"
+      "bytes": 7615,
+      "sha256": "f6af1c667707dbe06f880d687d209776c03aaed89e042a6e9b7659bcc22f5e75"
     },
     {
       "path": "notes/revision-review-v2/response-excerpts.tex",
@@ -179,13 +224,13 @@
     },
     {
       "path": "notes/revision-review-v2/review-tracker.json",
-      "bytes": 2044,
-      "sha256": "2ee54668cbb7cc8361cef025618a1e71114b75760224a7fd475e7f410686ec91"
+      "bytes": 2081,
+      "sha256": "0c58ffa53fd3d79bb495ec4a62345b6fe020ce4da7547744098fa215babbe69e"
     },
     {
       "path": "notes/revision-review-v2/revise_manuscript.py",
-      "bytes": 28348,
-      "sha256": "0c110ada7c1cbf13dc26c8288c017f8af7d1b0214c266ef9afcfe624ac4fa66e"
+      "bytes": 29080,
+      "sha256": "9d2f1dc52e817e93245bb203382e274796858119cd4da8eafae7b4f4cd06e969"
     },
     {
       "path": "notes/revision-review-v2/state-audit/check_state_space.py",
@@ -239,8 +284,8 @@
     },
     {
       "path": "notes/revision-review-v2/verify_revision_package.py",
-      "bytes": 3218,
-      "sha256": "3144f740100d27d193845f87f14aa9d8c22e9b586bd5bed44c75a09abf83781b"
+      "bytes": 3289,
+      "sha256": "87d1267ff985e2ee7ef9ded7ab1bce72650befb847b158aa3f786f915aac1a64"
     },
     {
       "path": "outputs/matched-factorial-ten-seeds-v1-pipeline/analysis/completion.json",
@@ -273,17 +318,42 @@
       "sha256": "be5193b6f74ed27e8e5c79e97f7865e93762b7e45d25f459d62a32743e75502c"
     },
     {
+      "path": "outputs/review-expanded-primary-v2-analysis/completion.json",
+      "bytes": 82908,
+      "sha256": "26aed4c5bf730641cb2534839cb123d58f9a2d936324e4b7f425a199e8bd2c5a"
+    },
+    {
+      "path": "outputs/review-expanded-primary-v2-analysis/expanded_cell_means.csv",
+      "bytes": 9508,
+      "sha256": "46bcf68f7ae08cc41524cb7f6db954c375e28d39ab243b929705da1b2dd02c0f"
+    },
+    {
+      "path": "outputs/review-expanded-primary-v2-analysis/expanded_feedback_contrasts.csv",
+      "bytes": 25628,
+      "sha256": "f08c0c72fc927c2d53e44767ce89e5210ed208a8ca6a9f0f33fd78edf66bed64"
+    },
+    {
       "path": "paper/innovation-addendum-v1.pdf",
-      "bytes": 197657,
-      "sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86"
+      "bytes": 197913,
+      "sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849"
     },
     {
       "path": "paper/innovation-addendum-v1.tex",
-      "bytes": 125113,
-      "sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff"
+      "bytes": 125527,
+      "sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e"
     }
   ],
   "no_weights_or_raw_listings": true,
   "external_full_training_reproduction": false,
-  "public_release": false
+  "public_release": false,
+  "external_evidence_archives": [
+    {
+      "status": "completed_evidence_archive",
+      "scope": "two full real-source validation cohorts and complete corroborating audit/weighted analysis; no raw listing outcomes or weights",
+      "archive": "notes/revision-review-v2/evaluation/full-expanded-evidence.zip",
+      "bytes": 6310486,
+      "sha256": "001e40d862994365b5b0d1ed46f4f942c96a8821ca149eeaf5fd23eb30059eaf",
+      "files": "see separate full-expanded-evidence-index.json"
+    }
+  ]
 }

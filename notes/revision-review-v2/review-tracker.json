@@ -13,8 +13,8 @@
       "action": "Complete simultaneous families and source-wise sensitivity; confirmatory/FWER certification not established."
     },
     "C": {
-      "status": "partially_completed_jucars_mucars_running",
-      "action": "Full JU1374/14-batch evaluation corroborated; MU10672/107-batch pending."
+      "status": "addressed_full_real_cohort_evaluation",
+      "action": "Full JU1374/14-batch and MU10672/107-batch evaluation, all 480 cells corroborated; weighted exploratory analysis."
     },
     "D": {
       "status": "addressed_descriptive_multiobjective",

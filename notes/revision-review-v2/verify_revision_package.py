@@ -39,8 +39,9 @@ for n in qa['figure_pages']:
  g=json.loads((H/f'qa/figure-page-{n:02d}.corrected-geometry-audit.json').read_text()); assert g['summary']['fail']==g['summary']['warn']==0
 assert json.loads((H/'statistics/completion.json').read_text())['results']['core36']['core_feedback_upper_below_zero']==31
 assert json.loads((ROOT/'outputs/review-expanded-primary-v2-analysis/jucars/completion.json').read_text())['cells']==240
+assert json.loads((ROOT/'outputs/review-expanded-primary-v2-analysis/completion.json').read_text())['cells']==480
 r={'status':'passed_for_declared_checks','source_sha256':sha(source),'pdf_sha256':sha(pdf),
  'comment_count':9,'page_anchors':checks,'verbatim_excerpt_count':len(quotes),
  'scope':'mechanical anchors, declared receipts and layout; no independent peer review or submission readiness certification',
- 'pending':['full MUCars evaluation and corroboration','public-release and actual author decisions','external-machine full training reproduction']}
+ 'pending':['public-release and actual author decisions','external-machine full training reproduction']}
 (H/'qa/correspondence-audit.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r))

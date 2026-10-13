@@ -374,7 +374,7 @@
  
  Thirty-three capped cells contain at least one batch with remaining unilateral
  regret above the convergence tolerance, compared with 34 original cells. The
-@@ -1015,41 +1164,88 @@
+@@ -1015,41 +1164,94 @@
  reports, so these findings are compatible. The existing fixed-profile theorem
  must not be used as a common-response or Pareto-dominance guarantee.
  
@@ -439,17 +439,23 @@
 +primary experiment.
 +
 +\subsection{Full-validation evaluation coverage}
-+An additional frozen-model evaluation removes the JUCars cap and uses all
-+1,374 validation records, fourteen batches and the same ten fitting seeds.
-+The final batch contains 74 records and has capacity seven. All 240 cells,
-+3,360 seed/cell batches and 329,760 repeated outcomes pass algebraic allocation,
-+bit-transition, metric and complete unilateral-utility checks. The original
-+1,000-record prefix is reproduced and reused; no model is retrained.
++An additional frozen-model evaluation removes both real-source caps: all
++1,374 JUCars and 10,672 MUCars validation records form fourteen and 107 batches,
++respectively, using the same ten fitting seeds. Final batches contain 74 and
++72 records, each with capacity seven. All 480 cells, 29,040 seed/cell batches
++and 2,891,040 repeated outcomes pass algebraic allocation, bit-transition,
++metric and complete unilateral-utility checks, covering 31,269,840 legal
++deviations. All returned real-source batches meet the finite unilateral-regret
++tolerance; this does not certify arbitrary actions or globally optimal joint
++responses. The original 1,000-record prefixes are reproduced and reused;
++no model is retrained.
 +
-+All twelve JUCars feedback inflation point estimates remain adverse, and
-+their ten-thousand-draw exploratory intervals exclude zero adversely. These
-+intervals weight batches by record counts, including the partial batch, and
-+do not add independent training records or make the source confirmatory.
++All 24 real-source feedback inflation point estimates remain adverse.
++Ten-thousand-draw exploratory intervals exclude zero adversely for all twelve
++JUCars comparisons and ten MUCars comparisons; both MUCars masking-objective,
++suppression-score comparisons span zero. These unadjusted intervals weight
++batches by record counts, including the partial batches. They do not add
++independent training records or make either retrospective source confirmatory.
 +The original capped factorial remains the declared primary comparison.
 +
  \section{Discussion}\label{sec:discussion}
@@ -493,7 +499,7 @@
  
  The information frontier and recovery-path findings answer different questions.
  The frontier limits what verification can guarantee under observationally
-@@ -1087,8 +1283,7 @@
+@@ -1087,8 +1289,7 @@
  recomputed responses expose attacked-error and failed-query costs. The matched
  experiment further shows that a positive feedback--allocation interaction is
  insufficient evidence of improvement: all 36 primary feedback comparisons
@@ -503,7 +509,7 @@
  semantics and every comparison component, retaining negative results and
  multiobjective trade-offs. This conclusion is conditional on the implemented
  learning and response procedures, not a universal prescription for valuation.
-@@ -1100,7 +1295,7 @@
+@@ -1100,7 +1301,7 @@
  implementation, full six-capacity analysis tables, resampling tensors, figure
  source data and hash-indexed audit receipts. It is not yet a public archival
  release. Model weights and large per-listing outputs remain on the research
@@ -512,7 +518,7 @@
  The source access and reconstruction instructions are included in the evidence
  package. External access and an archival release must be finalized before an
  editorial submission requiring public availability.
-@@ -1108,10 +1303,7 @@
+@@ -1108,10 +1309,7 @@
  AI assistance was used for implementation support, experiment orchestration,
  analysis-code development, literature checking, figure preparation and manuscript
  drafting. Quantitative claims are tied to saved experimental records and
@@ -524,7 +530,7 @@
  
  \appendix
  \section{Contextual policy-library witnesses}\label{app:library}
-@@ -1249,7 +1441,7 @@
+@@ -1249,7 +1447,7 @@
  the training records; they do not capture training-population uncertainty.
  Only ten batch clusters are available, so nominal coverage is not established.
  No multiplicity correction or confirmatory hypothesis-test claim is made.
@@ -533,7 +539,7 @@
  from raw outcome records using count-weighted resampling, and rejects altered
  effect direction, interval endpoints and missing-seed inputs.
  
-@@ -1294,7 +1486,7 @@
+@@ -1294,7 +1492,7 @@
  
  Table~\ref{tab:original_mucars} retains the five primary comparisons. The completed three-source union contains thirty source/seed pairs, 1,860
  method/capacity cells and 1,860,000 repeated outcome rows. Each source still
@@ -542,7 +548,7 @@
  reconstructs all fifteen paired contrasts and both bootstrap definitions.
  At 10\% capacity, MUCars SAV inflation is 0.007340 against 0.006511 for static
  robust, a 12.73\% increase. The crossed interval includes zero; this neither
-@@ -1393,7 +1585,7 @@
+@@ -1393,7 +1591,7 @@
  selection-rank margin hold (or all positive items fit). Its certificate is
  stronger than a nonzero sensitivity bound, so counts do not establish an
  ordering of stability. Failure to certify is not evidence of instability.
@@ -551,7 +557,7 @@
  summaries using exact fractions of the stored scores and radii; displayed
  quote bounds remain floating-point approximations. The radii are not calibrated
  prediction errors. These post-hoc diagnostics neither establish performance
-@@ -1402,7 +1594,7 @@
+@@ -1402,7 +1600,7 @@
  bound is not claimed.
  
  \section{Strong additional comparators and adaptation boundaries}\label{app:comparators}
@@ -560,7 +566,7 @@
  not the newly trained matched factorial model family. Keeping these identities
  separate prevents a favorable acquisition or tuning result from being attributed
  to the wrong training intervention.
-@@ -1462,7 +1654,7 @@
+@@ -1462,7 +1660,7 @@
  and stable ties. It was a clean-room task adaptation, not an unchanged execution
  of the original sequential classification method.
  
@@ -569,7 +575,7 @@
  main $k=25$ used every capacity; fixed $k=10$ and $k=50$ sensitivities used
  10\% capacity only. No winning $k$ was selected. With the frozen robust
  predictor and $k=25$, mean inflation was 0.01081 on synthetic, 0.01118 on
-@@ -1474,6 +1666,37 @@
+@@ -1474,6 +1672,37 @@
  strengthen comparator coverage without implying that one-step ACO-1 dominates
  the matched factorial policies or reproduces the original method's guarantee.
  
@@ -607,7 +613,7 @@
  \begin{thebibliography}{99}
  \bibitem{jucarsdata} N. Thalji.
  JUCars-2024: A Dataset of Used Car Listings in Jordan.
-@@ -1526,5 +1749,12 @@
+@@ -1526,5 +1755,12 @@
  \bibitem{extratrees} P. Geurts, D. Ernst and L. Wehenkel.
  Extremely Randomized Trees. Machine Learning 63:3--42, 2006.
  \url{https://doi.org/10.1007/s10994-006-6226-1}.

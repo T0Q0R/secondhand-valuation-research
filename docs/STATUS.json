@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 08:52:22 UTC",
+  "snapshot_time": "2026-10-13 09:05:02 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -27,15 +27,15 @@
     "multiple_comparison_corrected": false
   },
   "manuscript": {
-    "integrated_scientific_manuscript_complete": false,
-    "revision_status": "substantive_revision_in_progress",
+    "integrated_scientific_manuscript_complete": true,
+    "revision_status": "full_cohort_backfill_compiled_and_checked",
     "pages": 30,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "contact_sheets_all_30_plus_14_full_pages",
-    "source_sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff",
-    "pdf_sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86",
+    "all_page_visual_review": "all 30 contact sheets and changed pages 20-23/28-30 at full size",
+    "source_sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
+    "pdf_sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849",
     "submission": "not_submitted",
     "formal_submission_ready": false
   },
@@ -54,21 +54,20 @@
   "goal_complete": false,
   "delivery": {
     "archive": "paper/revision-delivery-v2.zip",
-    "bytes": 4827542,
-    "sha256": "7304878953cfd7c8989b2fb5cdf2d0122bd12a818950506f4278230774788275",
+    "bytes": 4873470,
+    "sha256": "627590477b23a1e30cad837c93178d7d83d43f675c4cc39bb5cf7943bdd7ddec",
     "checksum_verified": true,
-    "scope": "bounded revision checkpoint; MU pending"
+    "scope": "all computed supplements complete; external full-cohort archive indexed separately"
   },
-  "completion_scope": "original computations complete; current scientific revision and submission preparation incomplete",
+  "completion_scope": "scientific revision and calculations delivered; no actual submission or public-release/author/external-full-training claim",
   "remaining_for_actual_submission": [
-    "full-validation manuscript backfill and final QA",
     "author responsibility and factual declarations",
     "institution CAS edition/category and selected template",
     "public access/licensing/archival release decisions",
     "external-machine full training reproduction"
   ],
   "revision_v2": {
-    "status": "in_progress",
+    "status": "implemented_with_declared_scientific_limits",
     "review_comments": "A-I",
     "completed": [
       "A scope/diagnostic",
@@ -89,7 +88,7 @@
       "positive heterogeneous-cost subset",
       "full JUCars validation and corroboration"
     ],
-    "manuscript_changes": "current 30-page draft awaits full MU backfill",
+    "manuscript_changes": "full JU/MU coverage backfilled, compiled, layout and correspondence checked",
     "running": null,
     "expanded_snapshot": {
       "completed_cells": 480,

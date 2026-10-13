@@ -21,7 +21,7 @@
   "findings": [],
   "extraction": "rendered line boxes and per-glyph clipping; grouped text trace union avoided",
   "default_thresholds_unchanged": true,
-  "original_pdf_sha256": "b14d7ee060c61e982ee074585c11ef5b50bb96ee1fc1f61800c847fd0a611843",
+  "original_pdf_sha256": "d58730e52391cc2932efe7eded6474aa064b5185de035c0e5582ab51bf665c32",
   "detector_sha256": "841ede7dcaefa3ab11576b5ba52375d1678a71f77d39f553d5464e81b0699283",
   "real_collision_probes_rejected": true
 }

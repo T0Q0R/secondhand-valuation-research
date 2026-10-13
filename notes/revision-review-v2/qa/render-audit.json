@@ -1,6 +1,6 @@
 {
-  "source_sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff",
-  "pdf_sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86",
+  "source_sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
+  "pdf_sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849",
   "pages": 30,
   "references": 16,
   "missing_refs": [],
@@ -149,77 +149,77 @@
       "page": 20,
       "outside_spans": 0,
       "minimum_span_pt": 7.970111846923828,
-      "render_sha256": "d4dcc48d272309090d06afb54b2d73e012d5bccafec78baf2a2e4a279bf9f8be",
+      "render_sha256": "2e5b90817384bc29460ea9554ed2af038ab544f764652e6b9bea5658a8331975",
       "figure": false
     },
     {
       "page": 21,
       "outside_spans": 0,
       "minimum_span_pt": 9.962639808654785,
-      "render_sha256": "67b336a8985a3fed333a4de64fb73ad8b85c9b76e4a8ec094a6ef9fb355712ea",
+      "render_sha256": "3ba6d3354b0536c90a146c4103199abeea20c72fa9ff716b91294dea7278bc20",
       "figure": false
     },
     {
       "page": 22,
       "outside_spans": 0,
       "minimum_span_pt": 7.970111846923828,
-      "render_sha256": "091c761c86ce38547307cd1b2522ce1c5f5f6268489d3199694412bc54966893",
+      "render_sha256": "ac964f43ddff53be4cd2af127ed5116c45ccb122b742a590e406a59761468198",
       "figure": false
     },
     {
       "page": 23,
       "outside_spans": 0,
       "minimum_span_pt": 7.970111846923828,
-      "render_sha256": "ac5b27cfea66e04c514ca5550e3c890a3b08f9822fce3f226d39a925e89c5d4d",
+      "render_sha256": "ddfe68ba1492eae5dd7baf6adc94b61d0bcaba61c99cebc8fbaf8b0eef912894",
       "figure": false
     },
     {
       "page": 24,
       "outside_spans": 0,
       "minimum_span_pt": 9.962639808654785,
-      "render_sha256": "c3fe2868e708c1d44371377caa4b14236f01c0acf07f2257d8a7b54f2859ae69",
+      "render_sha256": "8f3f644828b271814ed210cfc014f495b1aaa6d97116c34e124b1086c03813a3",
       "figure": false
     },
     {
       "page": 25,
       "outside_spans": 0,
-      "minimum_span_pt": 5.977583885192871,
-      "render_sha256": "edecc32a101b2a0ecb83662a0383c354a87130c5e5e3f41e42183c82d3ea1e29",
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "edb81574e4dda93a48c8a1b5db6263ed99033ea8ae8bd10c68de3142582900bc",
       "figure": false
     },
     {
       "page": 26,
       "outside_spans": 0,
-      "minimum_span_pt": 7.970111846923828,
-      "render_sha256": "09eafd569de5a472abdf79998bbd5106aed2fe96a609bc1d7824a926803b58b7",
+      "minimum_span_pt": 5.977583885192871,
+      "render_sha256": "c3d7eb6e32e714acc5b30e6bff2ca3ae215eec2b17efb1190f26849b9481e910",
       "figure": false
     },
     {
       "page": 27,
       "outside_spans": 0,
       "minimum_span_pt": 10.909088134765625,
-      "render_sha256": "4c787b1e142468fb58708c4250137007904186db17639d2b9cad4647e235ad13",
+      "render_sha256": "0eb19eadf2d752721f2912a32334b6e0490bb637bc2cb35bcf777b40add5c499",
       "figure": false
     },
     {
       "page": 28,
       "outside_spans": 0,
       "minimum_span_pt": 9.962639808654785,
-      "render_sha256": "902f7e7a9d2d66d695418aa30c6080c4913b75d084225b7e744b6290ff7e724e",
+      "render_sha256": "f32b19ee47b37df7b38621009f120505750cbb8450f61d07128807a5019483f5",
       "figure": false
     },
     {
       "page": 29,
       "outside_spans": 0,
       "minimum_span_pt": 9.962639808654785,
-      "render_sha256": "0b1dc6b37cf58755b96b5d2f8b377198979b4fd7b3fae1721cf96fbd1dd292c6",
+      "render_sha256": "80d7f61c30917ca785e94940130044134744f8b219603ef3f15d307624a9ab22",
       "figure": false
     },
     {
       "page": 30,
       "outside_spans": 0,
       "minimum_span_pt": 10.909088134765625,
-      "render_sha256": "b6dc4d3d604ee240dc0dfdd60fe1eb710669004c7207e0716ace9c98e496f6cf",
+      "render_sha256": "1544e26db637a25afc9b28790071965b1d01497df25fbf2519f439039a6cf21e",
       "figure": false
     }
   ],
@@ -258,24 +258,16 @@
       29,
       30
     ],
-    "full_page_checks": [
-      1,
-      11,
-      12,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
+    "full_page_checks_after_full_cohort_backfill": [
       20,
       21,
       22,
+      23,
+      28,
       29,
       30
     ],
-    "last_changed_page_rechecked": 29,
-    "reviewer": "Codex visual inspection; not independent human peer review"
+    "reviewer": "Codex layout inspection, not independent human scientific peer review"
   },
-  "embedded_figure_geometry": "rendered line/glyph extraction adapter PASS at unchanged default thresholds; original grouped-trace failures retained"
+  "embedded_figure_geometry": "rendered line/glyph extraction PASS with unchanged thresholds; raw grouped-trace failures preserved"
 }

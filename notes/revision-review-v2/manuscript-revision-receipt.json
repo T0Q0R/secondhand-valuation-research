@@ -1,7 +1,7 @@
 {
-  "status": "revised_compiled_and_layout_checked_scientific_revision_in_progress",
+  "status": "full_cohort_backfill_compiled_and_layout_checked",
   "baseline_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
-  "revised_sha256": "382cb77bd7847b1a9a758f7a3d35fab708337324ab57014c44aee08baa005aff",
+  "revised_sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
   "abstract_words": 240,
   "supported_revisions": [
     "A scope + real recovery diagnostic",
@@ -11,17 +11,14 @@
     "F shared-primitives disclosure + independent state oracle",
     "G competitive controls promoted",
     "H final-record alternative and governance",
-    "C full JUCars coverage; MUCars still pending",
-    "H all declared positive-cost regimes including favorable synthetic reversal"
+    "C both full real-source validation cohorts, corroboration and weighted statistics"
   ],
   "pending": [
-    "C full MUCars evaluation/corroboration/statistics",
     "author/public-release/independent-machine full reproduction"
   ],
   "new_training": false,
-  "pdf_sha256": "9c96a8d77318cd132b103eabe1c704468fb5f32bfe0c79b7b3ea5f2d5c8c5e86",
   "pages": 30,
+  "pdf_sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849",
   "builtin_compilation": "success",
-  "layout_check": "contact sheets for all 30 pages plus 14 full page checks; no page-boundary overflow",
   "formal_submission_ready": false
 }

@@ -1,39 +1,29 @@
 # AI 接手入口
 
-先读 AGENTS.md、docs/STATUS.md、CURRENT_DELIVERY.md 和 notes/revision-review-v2/REVIEW_RESPONSE.zh.md。每完成独立工作先提交成果、追加进度、同步状态、推送并回读验证。用户目标：真实创新、严格证据、单位口径中科院三区论文；不得虚构优势、作者审批、投稿或接收。
+先读AGENTS.md、docs/STATUS.md、CURRENT_DELIVERY.md、notes/revision-review-v2/REVIEW_RESPONSE.zh.md。每完成独立工作提交成果、追加进度、同步状态、推送并回读。用户目标为真实创新/严格证据/单位口径中科院三区论文；不得虚构方法优势、作者批准、许可、DOI或投稿事实。
 
-快照：2026-10-13 07:39:12 UTC；研究时区 Asia/Shanghai。
+快照：2026-10-13 09:05:02 UTC；Asia/Shanghai。
 
-**科学修订进行中，尚未达到正式投稿准备状态。** 当前标题 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*；同一编辑器源文件原位修改，30页、16引用、2幅矢量图，作者与单位留空。
+**本轮计算、全量复核、统计和论文结果回填全部完成。没有尚待运行的大计算。** 当前30页稿题为 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*，16引用、2幅矢量图，作者/单位按用户要求留空。正式投稿准备尚未完成。
 
-原训练与四阶段核对完成：30/30组、4320单元、432万行、45372960个合法单边偏离。新增20000次事后同时敏感性保留31/27/20个不利反馈inflation区间，对应36/108/1536家族；不是确证或有限样本FWER保证。新增独立bit-mask状态oracle、真实模型恢复诊断、完整阈值网格；共享审计原语已公开。
+原训练/四阶段核对：30/30组、4320单元、432万重复行、45372960个合法偏离。补充全验证评价：JU1374条/14批、MU10672条/107批，同10seed，共480单元、29040批、2891040重复行；31269840合法单边偏离及最终分配/状态/指标核对通过。全部返回真实源批次满足有限单边regret容差，不是任意策略或全局联合最优保证。旧PID都是已退出的历史记录，不能重启或在别处复用。
 
-正成本保留108新单元与36零成本对照。异质成本下synthetic robust/suppression/top-B反馈的四指标均值改善、三seed inflation方向均有利；仅局部事后三seed子集，非普遍或显著优势。JU/MU子集方向仍不利，20个未收敛批次保留。
+完整真实来源的24个反馈inflation点仍全不利；JU12个未校正区间排除零，MU10个排除零、masking/suppression两个跨零。原36对比的事后同时敏感性保留31/27/20不利区间，对应36/108/1536家族。更大评价集和bootstrap不使已看过队列成为确证，也不覆盖新训练人口。
 
-JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照440/480，不是最终完成。现有8worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
+三seed正成本子集的synthetic robust/suppression/top-B仍有局部排序反转与四指标均值改善；保留所有成本条件、失败和20个未收敛批次。不能宣称反馈普遍有害、SAV普遍更优或首创已认证。审计共享原语已披露，独立性仅限明确的bit-mask/分配等重实现范围。
 
-内置编译、30页联系表视觉核查及14页全尺寸检查、页界/引用和5段逐字摘录检查通过。无Overfull或未定义引用，一个Underfull保留。图使用line/glyph提取适配、默认阈值未放宽，原始提取假阳性报告保留。
+当前源文件和同稿PDF已内置编译及导出核查；30页联系表、改变页20–23/28–30全尺寸核查、引用/页界/对应摘录检查通过，0 Overfull/未定义引用、1 Underfull保留。当前源SHA256 9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e；PDF a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849。
 
-同一物理机器新环境的1536行汇总复算及阈值网格一致；**未完成外部干净机器全训练复现**。公开/DOI/许可证、真实作者责任、单位适用分区及期刊适配仍待决定；没有公开、投稿或接收事实。旧26页包是历史稿，旧PRE_SUBMISSION_REVIEW可投稿性判断已superseded。
+同机新环境1536汇总行和阈值复算通过；**外部机器全训练、公开/许可/DOI、真实作者责任及期刊/单位分区适配仍未完成**。私有上传不等于公开或投稿。历史26页包与旧PRE_SUBMISSION_REVIEW的可投稿性判断已superseded。
 
-[当前源文件](paper/innovation-addendum-v1.tex) · [PDF](paper/innovation-addendum-v1.pdf) · [修订包](paper/revision-delivery-v2.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md) · [哈希索引](notes/revision-review-v2/revision-delivery-index.json)
+[当前源文件](paper/innovation-addendum-v1.tex) · [同稿PDF](paper/innovation-addendum-v1.pdf) · [论文修订包](paper/revision-delivery-v2.zip) · [完整扩评价证据](notes/revision-review-v2/evaluation/full-expanded-evidence.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md)
 
-[汇总复算](notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [原全量训练协议](REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)
+## 下一步
 
-## 首先继续哪里
+没有待恢复计算；不要重启9952/15837/17329/12200或重跑训练。先核当前证据索引，再处理具体的选刊模板、作者事实与证据访问/公开决策，或用户明确提出的新研究问题。理论是受限精度边界和恢复机制，不是普遍算法优势；审计质量不替代创新与可投稿性判断。
 
-检查 outputs/review-expanded-primary-v2/progress.json、controller.log、finalizer.log 和 notes/revision-review-v2/evaluation/running-processes.json。原机器producer15837（9952已退出）、finalizer12200只适用于本次本机，其他机器不可复用PID；先核身份/路径/锁。8worker producer完成后finalizer已配置做全量复核与10000次记录数加权统计。不要重复启动，不改运行中的expanded_evaluation.py/finalize_supplements.py或任何冻结源码；凭据绑定脚本SHA。
+当前唯一论文源paper/innovation-addendum-v1.tex；当前生成器notes/revision-review-v2/revise_manuscript.py从baseline-reviewed-source.tex与已完成结果原位生成，不能用旧integrate_manuscript.py覆盖修订。任何后续改文后都重新内置compile_latex_document、同稿PDF导出与布局/对应核查。用户已授权导出同稿PDF，保持原编辑器，不创建替代稿。
 
-全量completion与finalizer确实完成后：核对480单元、两个来源、原1000条前缀、末批74/72条权重及未收敛保留；在notes/revision-review-v2/revise_manuscript.py回填MU，用同一tex原位修改，内置compile_latex_document检查、用户已授权的同稿PDF导出/视觉核查、重新生成diff/回应/包、再提交。不要单独运行旧integrate_manuscript.py覆盖本轮。
+源码/小型分析在仓库，权重与逐条输出在原机器，普通Git不包含约24GB全结果。新机器提取revision-delivery-v2.zip，再提取其中completed-supplements-stage1.zip和单独full-expanded-evidence.zip，保持项目相对路径；文件绑定见各索引。仅汇总统计复算见REPRODUCING_AGGREGATES.md；不要把它说成外部端到端重训。原科学环境用../.venv-gdfs/bin/python原路径，解析symlink会绕过venv。
 
-用../.venv-gdfs/bin/python原路径，不能解析symlink绕过venv。seed共用评价样本，挂牌价不是成交价，按来源本币不可池化MAE。权重和逐条原结果仍保留，普通Git只存小型证据；没有原始输出删除授权的推定。准备具体公开候选可以，未经用户决策不得公开私有仓库或自行选择许可证/编造DOI。
-
-
-## 八worker恢复入口
-
-2026-10-13 16:15（Asia/Shanghai）已从6切到8 worker；用notes/revision-review-v2/evaluation/resume_expanded.py --workers 8恢复。它只给完整cell加哈希校验和精确summary缓存，原producer/evaluator/manifest均未改。切换前440个完整cell、25183批和25623完成凭据的哈希恢复后保持一致。新producer15837；日志controller-eight.log。finalizer12200保持等待，不能复用其他机器PID。重启时先核身份/锁，不要重新调用旧的resize_workers.py --old-pid 9952。
-
-
-## 最新优先事项（2026-10-13 08:52:22 UTC）
-
-全量计算、复核和统计已完成，不能重启9952/15837/17329/12200或重复writer。先读notes/revision-review-v2/evaluation/expanded-completion-summary.json与full-expanded-evidence-index.json；所有旧“MU仍运行”段落是历史快照。下一步只回填当前同一tex的§7.8/回应C并compile/导出QA；无新训练。全MU12反馈点都不利、10个未校正区间排除零、2个mask/suppression区间跨零。总体480cell/29040批/2891040结果/31269840偏离；新全真实源批次均符合有限单边regret容差，但不得推广成全局最优保证。
+原1000条主比较保持声明，全JU/MU扩评是补充；seed共享评价数据、按记录数加权尾批，MAE按来源本币，挂牌价不是成交价。保留负结果、跨零和非收敛。数据源CC BY不自动给代码指定许可；没有用户公开授权时不得公开私有仓库。

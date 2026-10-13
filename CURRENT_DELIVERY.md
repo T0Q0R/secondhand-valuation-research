@@ -1,22 +1,17 @@
-# Current research delivery — substantive revision in progress
+# Current delivery — computations completed; submission preparation remains
 
-快照：2026-10-13 07:39:12 UTC；研究时区 Asia/Shanghai。
+快照：2026-10-13 09:05:02 UTC；Asia/Shanghai。
 
-**科学修订进行中，尚未达到正式投稿准备状态。** 当前标题 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*；同一编辑器源文件原位修改，30页、16引用、2幅矢量图，作者与单位留空。
+**本轮计算、全量复核、统计和论文结果回填全部完成。没有尚待运行的大计算。** 当前30页稿题为 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*，16引用、2幅矢量图，作者/单位按用户要求留空。正式投稿准备尚未完成。
 
-原训练与四阶段核对完成：30/30组、4320单元、432万行、45372960个合法单边偏离。新增20000次事后同时敏感性保留31/27/20个不利反馈inflation区间，对应36/108/1536家族；不是确证或有限样本FWER保证。新增独立bit-mask状态oracle、真实模型恢复诊断、完整阈值网格；共享审计原语已公开。
+原训练/四阶段核对：30/30组、4320单元、432万重复行、45372960个合法偏离。补充全验证评价：JU1374条/14批、MU10672条/107批，同10seed，共480单元、29040批、2891040重复行；31269840合法单边偏离及最终分配/状态/指标核对通过。全部返回真实源批次满足有限单边regret容差，不是任意策略或全局联合最优保证。旧PID都是已退出的历史记录，不能重启或在别处复用。
 
-正成本保留108新单元与36零成本对照。异质成本下synthetic robust/suppression/top-B反馈的四指标均值改善、三seed inflation方向均有利；仅局部事后三seed子集，非普遍或显著优势。JU/MU子集方向仍不利，20个未收敛批次保留。
+完整真实来源的24个反馈inflation点仍全不利；JU12个未校正区间排除零，MU10个排除零、masking/suppression两个跨零。原36对比的事后同时敏感性保留31/27/20不利区间，对应36/108/1536家族。更大评价集和bootstrap不使已看过队列成为确证，也不覆盖新训练人口。
 
-JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照440/480，不是最终完成。现有8worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
+三seed正成本子集的synthetic robust/suppression/top-B仍有局部排序反转与四指标均值改善；保留所有成本条件、失败和20个未收敛批次。不能宣称反馈普遍有害、SAV普遍更优或首创已认证。审计共享原语已披露，独立性仅限明确的bit-mask/分配等重实现范围。
 
-内置编译、30页联系表视觉核查及14页全尺寸检查、页界/引用和5段逐字摘录检查通过。无Overfull或未定义引用，一个Underfull保留。图使用line/glyph提取适配、默认阈值未放宽，原始提取假阳性报告保留。
+当前源文件和同稿PDF已内置编译及导出核查；30页联系表、改变页20–23/28–30全尺寸核查、引用/页界/对应摘录检查通过，0 Overfull/未定义引用、1 Underfull保留。当前源SHA256 9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e；PDF a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849。
 
-同一物理机器新环境的1536行汇总复算及阈值网格一致；**未完成外部干净机器全训练复现**。公开/DOI/许可证、真实作者责任、单位适用分区及期刊适配仍待决定；没有公开、投稿或接收事实。旧26页包是历史稿，旧PRE_SUBMISSION_REVIEW可投稿性判断已superseded。
+同机新环境1536汇总行和阈值复算通过；**外部机器全训练、公开/许可/DOI、真实作者责任及期刊/单位分区适配仍未完成**。私有上传不等于公开或投稿。历史26页包与旧PRE_SUBMISSION_REVIEW的可投稿性判断已superseded。
 
-[当前源文件](paper/innovation-addendum-v1.tex) · [PDF](paper/innovation-addendum-v1.pdf) · [修订包](paper/revision-delivery-v2.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md) · [哈希索引](notes/revision-review-v2/revision-delivery-index.json)
-
-[汇总复算](notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [原全量训练协议](REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)
-
-
-八worker切换记录（2026-10-13 16:15，Asia/Shanghai）：已确认8个计算worker运行、约97–100%单核CPU。旧9952组全部退出；440个完成单元和25183批检查点保留，25623个完成凭据恢复后哈希不变；冻结源码/manifest、算法参数及RNG不变。见notes/revision-review-v2/evaluation/resize-to-eight-receipt.json。阶段数不是最终完成。
+[当前源文件](paper/innovation-addendum-v1.tex) · [同稿PDF](paper/innovation-addendum-v1.pdf) · [论文修订包](paper/revision-delivery-v2.zip) · [完整扩评价证据](notes/revision-review-v2/evaluation/full-expanded-evidence.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md)

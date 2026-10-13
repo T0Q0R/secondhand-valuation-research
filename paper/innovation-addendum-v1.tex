@@ -1225,17 +1225,23 @@ evidence package; no winning cost distribution is substituted for the zero-cost
 primary experiment.
 
 \subsection{Full-validation evaluation coverage}
-An additional frozen-model evaluation removes the JUCars cap and uses all
-1,374 validation records, fourteen batches and the same ten fitting seeds.
-The final batch contains 74 records and has capacity seven. All 240 cells,
-3,360 seed/cell batches and 329,760 repeated outcomes pass algebraic allocation,
-bit-transition, metric and complete unilateral-utility checks. The original
-1,000-record prefix is reproduced and reused; no model is retrained.
+An additional frozen-model evaluation removes both real-source caps: all
+1,374 JUCars and 10,672 MUCars validation records form fourteen and 107 batches,
+respectively, using the same ten fitting seeds. Final batches contain 74 and
+72 records, each with capacity seven. All 480 cells, 29,040 seed/cell batches
+and 2,891,040 repeated outcomes pass algebraic allocation, bit-transition,
+metric and complete unilateral-utility checks, covering 31,269,840 legal
+deviations. All returned real-source batches meet the finite unilateral-regret
+tolerance; this does not certify arbitrary actions or globally optimal joint
+responses. The original 1,000-record prefixes are reproduced and reused;
+no model is retrained.
 
-All twelve JUCars feedback inflation point estimates remain adverse, and
-their ten-thousand-draw exploratory intervals exclude zero adversely. These
-intervals weight batches by record counts, including the partial batch, and
-do not add independent training records or make the source confirmatory.
+All 24 real-source feedback inflation point estimates remain adverse.
+Ten-thousand-draw exploratory intervals exclude zero adversely for all twelve
+JUCars comparisons and ten MUCars comparisons; both MUCars masking-objective,
+suppression-score comparisons span zero. These unadjusted intervals weight
+batches by record counts, including the partial batches. They do not add
+independent training records or make either retrospective source confirmatory.
 The original capped factorial remains the declared primary comparison.
 
 \section{Discussion}\label{sec:discussion}
