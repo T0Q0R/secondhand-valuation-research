@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 05:32:03 UTC",
+  "snapshot_time": "2026-10-13 07:19:34 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -73,9 +73,13 @@
     "analyses": "saved-tensor joint intervals; independent state enumeration; evaluation/cost feasibility",
     "no_new_training": true,
     "completed_analyses": [
-      "posthoc simultaneous intervals and threshold sensitivity",
-      "independent state/transition enumeration"
+      "simultaneous sensitivity and threshold grids",
+      "independent state oracle",
+      "real-model recovery diagnostics",
+      "positive heterogeneous-cost subset",
+      "full JUCars validation and corroboration"
     ],
-    "manuscript_changes": "pending"
+    "manuscript_changes": "pending",
+    "running": "full MUCars frozen-model evaluation, then automated corroboration and weighted statistics"
   }
 }

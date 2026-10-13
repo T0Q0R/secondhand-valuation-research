@@ -1,0 +1,506 @@
+{
+  "scope": "completed recovery diagnostic, full JUCars corroboration and complete cost subset; MUCars full evaluation still running",
+  "sha256": "558dc5e9cfe10c0a83ad39306f1de2cbbc469884aeac79615190d0f5921cc463",
+  "files": [
+    {
+      "path": "notes/revision-review-v2/evaluation/recovery_completion.json",
+      "sha256": "9bcf36c170f3836b30359c64b249299ce2ea4ed3db5811d99f082ec467a2d0fa"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/recovery_edges_source_totals.csv",
+      "sha256": "9eeda0eabe72576f11db95b1e7b503fac64adb94c716ea43e40c746045de5de0"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/recovery_edges_unique_fits.csv",
+      "sha256": "403207376abc364e4df384d2c5e0f6c1f3200a643f147ceaf1b9f9e74ef90cab"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/recovery_input_binding.json",
+      "sha256": "8beccbca22e58fe8f3813f2052a02183eeceb76ed06d5639415de7b4ebbec9c9"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/recovery_path_cells.csv",
+      "sha256": "0cdc5ca85d5026acec1937431a14cb1f6a3ffa40339364cd9222f51ef1550a2e"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/batch_summary.csv",
+      "sha256": "88177c28b2cd231549b467bc93744b092512ce4a80208a70119261c4209b8af1"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/completion.json",
+      "sha256": "d29af6504cf4f20a5ad422b1252ddbcd77ce3064109f791abce57eabe8a40224"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/none/minimax/heterogeneous020/completion.json",
+      "sha256": "96e8a5ba323e63885f495f882470f6567cde8d42f1b0ddb615734aac2761c6fe"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/none/minimax/uniform005/completion.json",
+      "sha256": "e0ccbdb05c41ec30786f56cf1b9bbbfcc4c8617ebed0dd93dc4ffc3154938269"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/none/minimax/uniform020/completion.json",
+      "sha256": "47a04aad2a107fdd9f25eadb0bb017373b900929e4e57c4d1ab324fd6ea9c1fc"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/none/top_b/heterogeneous020/completion.json",
+      "sha256": "a0465cea2a6a97a16ec9572e704ae3ee968f28a90917f8a1d38a67219aed8c1c"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/none/top_b/uniform005/completion.json",
+      "sha256": "b874d7d90e0ec0051374124e319b0517aa4df6732b87a57d9a8ce5badd28e4e1"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/none/top_b/uniform020/completion.json",
+      "sha256": "4cd5c246454e3de95eb1472c8e8dacadbfb7ed2f6cf69b0508fdd38ff6ef7524"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "27ebee6cea72e7ee045bf7773de8b268e44da06a33b57253032b962fd6c910b5"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/policy/minimax/uniform005/completion.json",
+      "sha256": "44797609c9efa047aaa020736f8673a99088024b2dc704203d254fdd030c1cc8"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/policy/minimax/uniform020/completion.json",
+      "sha256": "55d58ab4d206a2925ef1d38f71f2748a2a6390723f3a9e9c5598d390e2a170d4"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "057e9f497caf15db5bd67a2c3a2369afc2a3a3fdc3a1503ddfbfba657f334de1"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/policy/top_b/uniform005/completion.json",
+      "sha256": "a7c6446be6d91093bf0f095aec8aef474e5d5beac96742c9ef6eb5fd873c4c0b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-13/policy/top_b/uniform020/completion.json",
+      "sha256": "42121aafa967d8c66157c6690681ad8b6e99474932600ce5dea81d5011e95923"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/none/minimax/heterogeneous020/completion.json",
+      "sha256": "078424a8ba619e1b9b55cee21adfb0b2d6f7d0a95b029eb2022a42a0b0e2d12b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/none/minimax/uniform005/completion.json",
+      "sha256": "98d46ad00dec68ab668d0ca499f6e545a1f16b0dfffde2907aa1504200e8c29f"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/none/minimax/uniform020/completion.json",
+      "sha256": "8e2bcc7867989d78ab2d61c565c41e332f017b1f73c7176674cf7b035161681a"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/none/top_b/heterogeneous020/completion.json",
+      "sha256": "01c46390ef38fdaf06a8779e9eaf0dbd49eb7180d11348a50f2ca876ac12bc9d"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/none/top_b/uniform005/completion.json",
+      "sha256": "499a532e92608b0be30d0f85a7ec5da3393dbffdb5fe37d18109e3aead7e8f02"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/none/top_b/uniform020/completion.json",
+      "sha256": "3733958513aab16ecedac92a233535bfd6f5d86f2b7188ee6e5fe47a2548a147"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "ec7a80a6544eaf99b4a5748d9bd3f354158e54ad70d695c0d228e8945704bba8"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/policy/minimax/uniform005/completion.json",
+      "sha256": "fb7ef6221a6d6ea48175c730dbf1144d718ebb885ceb594ef363ecf8c3b9b943"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/policy/minimax/uniform020/completion.json",
+      "sha256": "a9d13b0264d190faf49790ffedaf5b9696e65c1f683f02ec61fd6ac23adc9aee"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "493e36063b0532d58efd19e12a4e20bca796a444238827402e8ea3ac445bd9e2"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/policy/top_b/uniform005/completion.json",
+      "sha256": "0eb9fa03e87dd2cc9a6841ad3c057cd91b45388cdf8c966d81e2ba1e17be99f5"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-2026/policy/top_b/uniform020/completion.json",
+      "sha256": "a68d579a8c5bfaaaf5a5120e91b51a2ac397996c4bc0e9b52a4b9ca4205b32b4"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/none/minimax/heterogeneous020/completion.json",
+      "sha256": "b8d1a93339aee967dee7e1c8a5ac8b6f63383b8a08774750c34cdd461ce3fa27"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/none/minimax/uniform005/completion.json",
+      "sha256": "9878e28b03ad7e3c4100669d05ee0ef692bd351c3f10b2c31960e3722861fa18"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/none/minimax/uniform020/completion.json",
+      "sha256": "799d756f1bd903259a8b2653a63465707544996a22493c9aa4a0191a94c2ae4b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/none/top_b/heterogeneous020/completion.json",
+      "sha256": "448c9078e488498561a2f3498a929109654692f5e7ee32d76c8c4cb398ac587c"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/none/top_b/uniform005/completion.json",
+      "sha256": "f12f7a5a926d55da70c3e377af7fd8b9fe5bc71890acb9b43ed44c49bef3c014"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/none/top_b/uniform020/completion.json",
+      "sha256": "bc9358418f183bfaa7289f11ebb0c97eb7a5adf43ca0dba106c479811517d44c"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "86045cc856cf4bb5ec6d6de01c60d4ef8039d9600ffac2d43d5173220e94f79d"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/policy/minimax/uniform005/completion.json",
+      "sha256": "17796cd6210d7a9444b6db0331509ed0f40bdea286ca6d20588365207e4bce45"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/policy/minimax/uniform020/completion.json",
+      "sha256": "3aec790adc8ee040d5fda20102d8a94f28106d89beac4b4ed9af51c6ee5e08b2"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "fe094078f5b31af6df19917bf7b64e3e2c5cfdcd2b4032bba6b11eef5f9e361b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/policy/top_b/uniform005/completion.json",
+      "sha256": "d2e7c51b5dcd1f0d513102962b1683ee1adcf0101ec010a900469cafe7a5c45b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/jucars/seed-42/policy/top_b/uniform020/completion.json",
+      "sha256": "35bdcc4212549905da879c4181cc4a7ec562f0d29f1fab2a9b3e6031698e3f83"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/manifest.json",
+      "sha256": "ba1fd8dbcaaecb4ad3f2908e88ed129008ce740a735f9948e56daccb5618668d"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/none/minimax/heterogeneous020/completion.json",
+      "sha256": "673670119245b489a0d8b92b8ac4669290813df7dac428bca4dd8d57de73daa4"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/none/minimax/uniform005/completion.json",
+      "sha256": "29c97aaf2e25ca1fe920854071ccb2ba63f2aa45fe4b6436930421b3b249529e"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/none/minimax/uniform020/completion.json",
+      "sha256": "cd0cddad511b2ceb52e02716ca40838a98b24f6e8d37dad308b31d8ba7070224"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/none/top_b/heterogeneous020/completion.json",
+      "sha256": "89943a0b42326371a7155699a9b0833f02639fca1cf426b078b37d5c3840f61b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/none/top_b/uniform005/completion.json",
+      "sha256": "e9c8c34826bd2a137b5e353e374f7dcadcbf2de04ff68f0a87e2447239aa3d9a"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/none/top_b/uniform020/completion.json",
+      "sha256": "a5d58d441dd1dcd77bcf14dd797ef332a6fe785f89666b947c5aaec734a4b8bf"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "2c1a71f559288f07ebb995a0e95bd17381c1365cb50e59d0fb662b4fbdf02748"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/policy/minimax/uniform005/completion.json",
+      "sha256": "ea067c09bf94ff5888f4534ec069e026a63d6d5831d2be913b6fbc057d1980a7"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/policy/minimax/uniform020/completion.json",
+      "sha256": "5a612b1ef9475072d3f7e8c0a918af27c8dac39e80044b4c062488ce0ccc57c5"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "02f4efb5e1110086eff2208094ffcb0d77d6b90f9a8548ce0ce60969a6d2e663"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/policy/top_b/uniform005/completion.json",
+      "sha256": "4fde4d2ec1f033f39d976b3b7b68745d661c127321bf8cd4ae99369e235352dc"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-13/policy/top_b/uniform020/completion.json",
+      "sha256": "f864b88bc0d9334a4c2cc670a1f73367887343574d1aa1066e0fa522aa8fd2db"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/none/minimax/heterogeneous020/completion.json",
+      "sha256": "d86f7dc23911c2378153a50a2aa84cfd60a38e636f98f8bccea2ff4d5c11dcaa"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/none/minimax/uniform005/completion.json",
+      "sha256": "713fcbd1910b4722eadf6fefca0e305149f7072a9a9901df657298b1f5148bf5"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/none/minimax/uniform020/completion.json",
+      "sha256": "b3068d94faad7a1342008cdff419e54aadc2ca267c4f928fbaa6987ffe3991e8"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/none/top_b/heterogeneous020/completion.json",
+      "sha256": "821a54d9b2b79c41b3cb0480773bb65674c66fae840c59f1da969fbe41d62b07"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/none/top_b/uniform005/completion.json",
+      "sha256": "d40be23263b2f73b4ab6a21aac59df208a58acefac32674895acd0f625b6a484"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/none/top_b/uniform020/completion.json",
+      "sha256": "3fc4c14740d762521cae4af408bb4dc784ad1711fd198b7721f219f429098c64"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "d0fb26890a327c98870f89dc39f8e8d267a50abfca48dccf6966f5c544c27cb9"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/policy/minimax/uniform005/completion.json",
+      "sha256": "6a08e5ca6b42b904105c2c819ff84a5490e86314cda4fc77e6c68ef7a8f22042"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/policy/minimax/uniform020/completion.json",
+      "sha256": "51e32ca5b9891b81dca8dd52100d1ddf95b1add31e45ad660f521cbd6f9cca45"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "8f5236699f2f62be5b6adb181f96e13bc85c563c28f13cdf008a88837424587a"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/policy/top_b/uniform005/completion.json",
+      "sha256": "b2492e37a7e6256e35b94400830688743714c3abd77f0e522df6d90f950a4519"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-2026/policy/top_b/uniform020/completion.json",
+      "sha256": "93f4f8d599b304cb2db8e64d92cac9f987ef73d80e5612b273f6b59ae2083eef"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/none/minimax/heterogeneous020/completion.json",
+      "sha256": "5e7720c70db9dafd222e079d823749b4e59e9e6b00f23187af49c9ae5f034268"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/none/minimax/uniform005/completion.json",
+      "sha256": "27ffecb2ac76541dbadd470ff5290d4d1a5c6cae7754662c1dc58192bb2d04c4"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/none/minimax/uniform020/completion.json",
+      "sha256": "e4caa62d9cba5812b4a4a271c178d913fa16b62b3cc8079b45864261c0154eac"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/none/top_b/heterogeneous020/completion.json",
+      "sha256": "b16fdd94d424cf810081a9a05aeb07c94fe61b4add7653e9cf5307741e4647d6"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/none/top_b/uniform005/completion.json",
+      "sha256": "3d320ef6d9269185cd589a7fa3d8c53548004d1388476c2b79712c6a9301364b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/none/top_b/uniform020/completion.json",
+      "sha256": "3b243939723d0646e86b07a73342050325ae15869a88f9f7c84fa32b1273b76e"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "ff619a1f4678f447d69ec45f7a738c5eb2d1197d646abbe8b66fbbb866bfa82a"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/policy/minimax/uniform005/completion.json",
+      "sha256": "b7581344cdc6fa0e69a6c92fc5e4a062bcaefa4ffb7546bd614645dc0c5657cd"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/policy/minimax/uniform020/completion.json",
+      "sha256": "0ae7c50a2a4670ccaa8c9589ac7cfdfdfa7c1d87fe4798eb2550587be0f50e37"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "e88118eb2fe3eed09a29c15a853136efb65d5eb75c36d5ad82c51974fe251ed1"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/policy/top_b/uniform005/completion.json",
+      "sha256": "5a7da4105af41dc9e7aa2ef6091c89eb5ba67d68ddb2acb3d13fdbe85fcb30a8"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/mucars/seed-42/policy/top_b/uniform020/completion.json",
+      "sha256": "c3527685b416a631a95ebc5b1fb1d508c42dad6d4dfc7f89e602122d1276ee8b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/summary.csv",
+      "sha256": "655636c8737f572e359e5b04bb5b1bc34717d73f3be709aa2537709c504b916f"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/none/minimax/heterogeneous020/completion.json",
+      "sha256": "161d18363cb79ae4b29a4e38edda57f579397e8e04aba4b739971827d1f6b250"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/none/minimax/uniform005/completion.json",
+      "sha256": "a50da32d3b3d53d99a2901da2369bcfd98ba23fdd9b0fd77fe751a95c4c4a1cb"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/none/minimax/uniform020/completion.json",
+      "sha256": "606fd12efcc1bdddbcc81e78943946e29d638a26235907f409ce612fbc5e1b4f"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/none/top_b/heterogeneous020/completion.json",
+      "sha256": "75943e3b3dbbdaf85d105ce47fe002e26dcf593f7fb7a244725ceab8e7d5110c"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/none/top_b/uniform005/completion.json",
+      "sha256": "1c85acebce01ae21c234c925275c5ca2f36e12a92cd9e99efcfef44769268a97"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/none/top_b/uniform020/completion.json",
+      "sha256": "d8bae49b7108c811403232110884b5f42f1c136fe6c4bca1fb28be5c94fff87c"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "f875b9e4fb18aacc1ea859bc8b56859c54725121357d3f1a0037e41ea3954cfb"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/policy/minimax/uniform005/completion.json",
+      "sha256": "798a8171394ec059bcc2586e493d1f05ea6382c62ee593834a399a63daf0edb2"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/policy/minimax/uniform020/completion.json",
+      "sha256": "2ff7e7edead7f168d47dbb9e1c33ebfa27be4fb6cb625e567b05ad3265e76d75"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "cc1a4ed3f4c9aa1dd3f6b44d1ad86e5a18cd05b07531d2251bf51fea3743498e"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/policy/top_b/uniform005/completion.json",
+      "sha256": "1ac1153fef74f62d7ed0d3c48bfb5f9221bd863e179f88e68016a99a8dc8f78f"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-13/policy/top_b/uniform020/completion.json",
+      "sha256": "bd89393b332a2d657fd358686742a720ac893eb172417dae44fdcfcd435fed8f"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/none/minimax/heterogeneous020/completion.json",
+      "sha256": "e377ad1fe6305cf4e3e105ba96bb5663884b39f8b7b82ed46520ff0b821d1643"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/none/minimax/uniform005/completion.json",
+      "sha256": "3c0e25815573c5533ab8deb50338e8819dcc784d844a7b751e48589baed83f4a"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/none/minimax/uniform020/completion.json",
+      "sha256": "919978cc4fd0b6ad662beb579f64f331cdf0e68e0a5f3590bb19a76e0884f299"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/none/top_b/heterogeneous020/completion.json",
+      "sha256": "9f2a0ab86b3d0a1b0c52c111765d2dcaf27ce2acbc93d562678fc7ed68ba2ead"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/none/top_b/uniform005/completion.json",
+      "sha256": "5560edce845b65e7c865d81d8e5ca64a8d9420d57ca5ebe660478690a0664bda"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/none/top_b/uniform020/completion.json",
+      "sha256": "85f40f2dac00b0bd108d457024fa91fea35def060e3538ddaa1a32968ccd28d7"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "33bc1e8683567f4dfb117b8f6035cfc8a5b2325ec66eebe85f0391362d72c6fb"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/policy/minimax/uniform005/completion.json",
+      "sha256": "29166e7d10eb3d146b47f367bc5274faa9da72d46b6166a11d429692f4fbb35e"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/policy/minimax/uniform020/completion.json",
+      "sha256": "dc0a93698aab8294fd6a65ef65d97c8fe7ae6c9f73c3f744fa566421fb782c3d"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "1558fafc957d0f14a8850da9b887d7242716da008c829f873eefbdb85c3f9d2c"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/policy/top_b/uniform005/completion.json",
+      "sha256": "3ed87f287595d0bacfc8bee71b8b98de91a0f34af3bad12a16891835315d10f3"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-2026/policy/top_b/uniform020/completion.json",
+      "sha256": "6f2faaefa74bcc8e949b1aba4bc2e4f89129bb122e58c5274a22ef7dc80ae8d6"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/none/minimax/heterogeneous020/completion.json",
+      "sha256": "f4c58ff6143b40f665ffe9ce7d2799527536c480615b24cd9c0ef6d9a0429829"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/none/minimax/uniform005/completion.json",
+      "sha256": "ad3ed3d30e0aecbb52c5d86a50d49ea3a63230beb50be85440c0385aa4e81ddf"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/none/minimax/uniform020/completion.json",
+      "sha256": "f0f23f8e48b7a62b1ab6e1c237d15ec0beec3f2f9e4a582d6f4ef9811748ac04"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/none/top_b/heterogeneous020/completion.json",
+      "sha256": "cbe8130c6bb314338499ea3c6db88363736a8a8c1e527aab82747ddb349ef868"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/none/top_b/uniform005/completion.json",
+      "sha256": "c307a72663e3c139c7ec1967e77f20097fb124f8c86a6500f8eda866e8fadb32"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/none/top_b/uniform020/completion.json",
+      "sha256": "84afd82db42a6df3a725e8ced99a8c9364cd659f5fe080ddf4d9ac8d289b87f7"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/policy/minimax/heterogeneous020/completion.json",
+      "sha256": "6cefe66fce664b959b837392904140c1c00d7120cad173ec37ccb96f8c0dac6b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/policy/minimax/uniform005/completion.json",
+      "sha256": "0aafdd60a7cd5603ac4cf10edb682ef57dbe05c312fe6c1af77522722cc0c894"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/policy/minimax/uniform020/completion.json",
+      "sha256": "d2f645181c88e85f02c09ed17c2bd866f7942726800f1ee4ff5bd7d0f277ce24"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/policy/top_b/heterogeneous020/completion.json",
+      "sha256": "a6bd92a8280b87c72497d0c069ae95237f68657409774d1cd9f6b9ac2392f61b"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/policy/top_b/uniform005/completion.json",
+      "sha256": "ada9b1c690984571662b4082f0b92e0da6a55c0167d67853da6878e932a4131f"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2/synthetic/seed-42/policy/top_b/uniform020/completion.json",
+      "sha256": "38d7cdb988aa35c7a19cd1c208ac49e041a6669998a9fbfe092380b8390df223"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2-analysis/all_seed_cells.csv",
+      "sha256": "01d02466936002409919d5d9e32dc911f19627343b5a981f5df132ca73e66071"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2-analysis/completion.json",
+      "sha256": "6ff16969f01d3e1201068884fd758a20b48c3ff9efdda988b8eb8533297d7c9d"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2-analysis/feedback_point_contrasts.csv",
+      "sha256": "a9afb347e83d6f5533d59f31c93901e6b48845903d56d08c66bba80ef1766cee"
+    },
+    {
+      "path": "outputs/review-cost-sensitivity-v2-analysis/source_means.csv",
+      "sha256": "0791da40a0580239236f9760b4607fa8ab03fc7dc9a9308988592d2596edf796"
+    },
+    {
+      "path": "outputs/review-expanded-primary-v2-analysis/jucars/completion.json",
+      "sha256": "045e5ecec5fd62856f634c0cdceb4ecb3b55d5bb1069e1a6ebdbd8bc9c6c9457"
+    },
+    {
+      "path": "outputs/review-expanded-primary-v2-analysis/jucars/corroborated_batch_means.csv",
+      "sha256": "4d3277a2e393ddf5ba05a55fa1f849dec3cdd07a7586bb4103e8ee1cb197d7cf"
+    },
+    {
+      "path": "outputs/review-expanded-primary-v2-analysis/jucars/expanded_cell_means.csv",
+      "sha256": "eb7044485a68e41d00bb29a6c3fa8df545e52d058364bb8b767d0221bc50df3f"
+    },
+    {
+      "path": "outputs/review-expanded-primary-v2-analysis/jucars/expanded_feedback_contrasts.csv",
+      "sha256": "8d597708e40279ed69451ad0a266940c86db592793c6a9eec29991fe931e32ce"
+    }
+  ]
+}

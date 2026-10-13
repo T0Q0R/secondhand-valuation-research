@@ -34,6 +34,7 @@ for cp in paths:
     bindings[str(cp.relative_to(ROOT))] = sha(cp)
     sums = {'rows': 0, 'positive_recovery_rows': 0, 'gain_increasing_recovery_rows': 0,
             'two_hidden_gain_increasing_recovery_rows': 0, 'actual_positive_probability_rows': 0,
+            'allocated_gain_increasing_recovery_rows': 0,
             'E_sum': 0., 'R_sum': 0., 'C_sum': 0., 'G_sum': 0., 'identity_max_error': 0.}
     for name, value in cell['batch_receipts'].items():
         bp = cp.parent / name; assert sha(bp) == value; b = json.loads(bp.read_text()); folder = bp.parent
@@ -55,6 +56,7 @@ for cp in paths:
         sums['rows'] += n; sums['positive_recovery_rows'] += int(positive.sum())
         sums['gain_increasing_recovery_rows'] += int(increases_gain.sum())
         sums['two_hidden_gain_increasing_recovery_rows'] += int((increases_gain & two[states]).sum())
+        sums['allocated_gain_increasing_recovery_rows'] += int((increases_gain & two[states] & (z['probabilities'] > 0)).sum())
         sums['actual_positive_probability_rows'] += int((z['probabilities'] > 0).sum())
         for key, values in [('E_sum', E), ('R_sum', R), ('C_sum', C), ('G_sum', G)]: sums[key] += float(values.sum())
         sums['identity_max_error'] = max(sums['identity_max_error'], err)

@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "primary_cells": 720,
+  "returned_profile_rows": 720000,
+  "unique_fit_batches": 4200,
+  "identity_max_error": 0.0,
+  "source_edge_totals": {
+    "jucars": {
+      "prediction_rows": 140000,
+      "eligible_success_edges": 2044000,
+      "positive_recovery_edges": 1692653,
+      "gain_increasing_edges": 67523,
+      "two_hidden_gain_increasing_edges": 67523
+    },
+    "mucars": {
+      "prediction_rows": 140000,
+      "eligible_success_edges": 2212560,
+      "positive_recovery_edges": 1846530,
+      "gain_increasing_edges": 61404,
+      "two_hidden_gain_increasing_edges": 61404
+    },
+    "synthetic": {
+      "prediction_rows": 140000,
+      "eligible_success_edges": 2098600,
+      "positive_recovery_edges": 1579048,
+      "gain_increasing_edges": 82939,
+      "two_hidden_gain_increasing_edges": 82939
+    }
+  },
+  "witness": {
+    "dataset": "mucars",
+    "fit_id": "masking__none__shared__shared",
+    "seed": 101,
+    "honest_quote_log": 11.484823226928711,
+    "two_hidden_quote_log": 11.517865180969238,
+    "one_recovered_quote_log": 11.546429634094238,
+    "state_mask": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "recovered_field_index": 1,
+    "scope": "one finite prediction-table witness, not an estimate of seller behavior or deployment prevalence"
+  },
+  "scope": "finite recovery-path diagnostic on the real four-field predictor class; no causal explanation of feedback harm and no empirical frontier optimality claim",
+  "parent_outcome_receipt_sha256": "d337f600425e5015bdf2b8191b99d1e1ec7f315ee48045dd5b7239e2ab76f772",
+  "checker_sha256": "2ca769976f4df856913a911049800446ff30217363fa5c0c298912be5ae82aed"
+}

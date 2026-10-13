@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-10-13T13:46:08.952645+08:00",
+  "processes": [
+    {
+      "kind": "expanded",
+      "pid": 9952,
+      "process_group": 9952,
+      "workers": 6,
+      "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/controller.log",
+      "output": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2"
+    },
+    {
+      "kind": "cost",
+      "pid": 9953,
+      "process_group": 9953,
+      "workers": 2,
+      "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-cost-sensitivity-v2/controller.log",
+      "output": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-cost-sensitivity-v2"
+    },
+    {
+      "kind": "expanded_finalizer",
+      "pid": 12200,
+      "process_group": 12200,
+      "workers": 6,
+      "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/finalizer.log",
+      "status": "waiting_for_producer_then_corroboration_and_weighted_statistics"
+    }
+  ],
+  "scope": "new frozen-model evaluation and response-cost diagnostics; no training; no reused old PID",
+  "cost_status": "completed_and_analyzed",
+  "jucars_expansion_status": "completed_and_corroborated"
+}
