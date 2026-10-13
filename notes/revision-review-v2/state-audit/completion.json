@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "fixture_natural_patterns": 16,
+  "maximum_hidden_values_checked": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fixture_counts": {
+    "0": {
+      "records": 16,
+      "states": 1,
+      "legal_reports": 16,
+      "all_field_transitions": 64,
+      "publicly_eligible_transitions": 32,
+      "successful_recovery_transitions": 0,
+      "failed_public_queries": 32
+    },
+    "1": {
+      "records": 16,
+      "states": 5,
+      "legal_reports": 48,
+      "all_field_transitions": 192,
+      "publicly_eligible_transitions": 112,
+      "successful_recovery_transitions": 32,
+      "failed_public_queries": 80
+    },
+    "2": {
+      "records": 16,
+      "states": 11,
+      "legal_reports": 72,
+      "all_field_transitions": 288,
+      "publicly_eligible_transitions": 184,
+      "successful_recovery_transitions": 80,
+      "failed_public_queries": 104
+    },
+    "3": {
+      "records": 16,
+      "states": 15,
+      "legal_reports": 80,
+      "all_field_transitions": 320,
+      "publicly_eligible_transitions": 212,
+      "successful_recovery_transitions": 104,
+      "failed_public_queries": 108
+    },
+    "4": {
+      "records": 16,
+      "states": 16,
+      "legal_reports": 81,
+      "all_field_transitions": 324,
+      "publicly_eligible_transitions": 216,
+      "successful_recovery_transitions": 108,
+      "failed_public_queries": 108
+    }
+  },
+  "full_validation_records": {
+    "jucars": {
+      "input_sha256": "4d57d04ab0944af11713c67e5c3b1f35d135f4f2314a9a1f5f4b78906541548b",
+      "records": 1374,
+      "states": 11,
+      "legal_reports": 14043,
+      "all_field_transitions": 56172,
+      "publicly_eligible_transitions": 21980,
+      "successful_recovery_transitions": 20110,
+      "failed_public_queries": 1870
+    },
+    "mucars": {
+      "input_sha256": "ce27add36fb375f8e86953c5fdc2310addd412274add3ec9c62ad265c3a486a7",
+      "records": 10672,
+      "states": 11,
+      "legal_reports": 116248,
+      "all_field_transitions": 464992,
+      "publicly_eligible_transitions": 170752,
+      "successful_recovery_transitions": 168750,
+      "failed_public_queries": 2002
+    }
+  },
+  "mutations_rejected": [
+    "wrong_recovery_transition",
+    "natural_missing_treated_as_concealable",
+    "natural_and_strategic_missing_distinguished",
+    "wrong_materialized_field"
+  ],
+  "production_savval_sha256": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+  "checker_sha256": "a8f8631b4b99702f99880fe24c31d3f32cbe5a05b8fe90202a7725b70746e9c8",
+  "oracle_imports_shared_state_or_query_logic": false,
+  "scope": "state masks, validity, materialized records, public missingness and recovery/failure transitions; not independent model/scorer/training reimplementation",
+  "remaining_shared_primitives": [
+    "model.predict",
+    "head.score",
+    "training libraries",
+    "cohort construction in the historical factorial audit"
+  ]
+}

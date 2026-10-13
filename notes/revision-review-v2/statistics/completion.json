@@ -1,0 +1,56 @@
+{
+  "status": "completed",
+  "resamples": 20000,
+  "rng_seed": 2026101307,
+  "fixed_training_records": true,
+  "primary_capacity": 0.1,
+  "fitting_seeds": 10,
+  "evaluation_batches": 10,
+  "results": {
+    "core36": {
+      "family_size": 36,
+      "critical_95": 3.1256978500722568,
+      "core_feedback_upper_below_zero": 31,
+      "core_feedback_source_bonf_upper_below_zero": 31,
+      "critical_first_half": 3.1274161643695857,
+      "critical_second_half": 3.1211791597020158
+    },
+    "co_primary108": {
+      "family_size": 108,
+      "critical_95": 3.8031941462783245,
+      "core_feedback_upper_below_zero": 27,
+      "core_feedback_source_bonf_upper_below_zero": 27,
+      "critical_first_half": 3.8031941462783245,
+      "critical_second_half": 3.8031941462783245
+    },
+    "all1536": {
+      "family_size": 1536,
+      "critical_95": 4.8822405014001395,
+      "core_feedback_upper_below_zero": 20,
+      "core_feedback_source_bonf_upper_below_zero": 19,
+      "critical_first_half": 4.890784511742395,
+      "critical_second_half": 4.872769884955033
+    }
+  },
+  "scope": "post-hoc approximate simultaneous sensitivity; not confirmatory, finite-sample FWER-certified, or training-population inference",
+  "cross_source_assumption": "shared seed indices, independent source batches; source-wise Bonferroni sensitivity avoids a cross-source dependence assumption",
+  "scale": "exact conditional crossed-bootstrap variance, checked by exhaustive 2x2 enumeration",
+  "validation": "all 1536 points match frozen CSV; 60 weighted/draw-index resamples match independently; all structural zeros retained",
+  "input_hashes": {
+    "completion.json": "60262446dfc7a09714912bb96983a00a3c4d8ed247c47060a7722258a8ea8e7f",
+    "paired_tensors_and_draws.npz": "114c58b9dbf8fbf24e97513b5869f1495b0c8249766f6872a5e6a336fbec2f0a",
+    "contrast_specifications.json": "42d4f2fb866943d06e37135593446afd9b3c4b3bfe4d951897476726587d8a65",
+    "contrasts.csv": "a0453323b97cc3ca832424122c8d4b18c4134834627827ee646a7d0ba4ca5091"
+  },
+  "frozen_allocation_input_sha256": "928be547a22f87fe86f6b2a33f33acbd955ca72da67af3f003bbfd0f7006f172",
+  "checker_sha256": "0f0b2d00a167cd06e171bbdf8e14698259f47012001dc9ed7ee4fa2349570fee",
+  "files": {
+    "simultaneous_primary_contrasts.csv": "115152c2d698506efdd0dac55568ca4be039d8b83131970c62e2ea2dfbb95f01",
+    "resampling_indices.npz": "5c5040bd67c478c5e41a08c7058a416b95d412c435733acebf1fe975b0a8c190",
+    "frozen_allocation_threshold_sensitivity.csv": "2fdb4330a89ae602aea87b4aaf9ea01fa31ee4c2a55135c7f78d4cc005a6d2b2",
+    "continuous_primary_effects.csv": "7113f650900b1701cf422c8f410d572033619f1279eeb6c5da8618ee3a21065e",
+    "frozen_allocation_continuous_effects.csv": "d4e5c3cbfae3e90419f0ce3d64f488bd659c50f7769210c3010fea3d85b08484",
+    "threshold_sensitivity.csv": "0f887e1aee31bc83eaa0e21401923e6a7346f16183763fedba9dcfbbd38e47dc",
+    "joint_intervals.py": "0f0b2d00a167cd06e171bbdf8e14698259f47012001dc9ed7ee4fa2349570fee"
+  }
+}

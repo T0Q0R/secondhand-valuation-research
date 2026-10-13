@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 05:20:55 UTC",
+  "snapshot_time": "2026-10-13 05:32:03 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -71,6 +71,11 @@
       "I"
     ],
     "analyses": "saved-tensor joint intervals; independent state enumeration; evaluation/cost feasibility",
-    "no_new_training": true
+    "no_new_training": true,
+    "completed_analyses": [
+      "posthoc simultaneous intervals and threshold sensitivity",
+      "independent state/transition enumeration"
+    ],
+    "manuscript_changes": "pending"
   }
 }

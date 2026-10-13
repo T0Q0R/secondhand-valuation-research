@@ -9,7 +9,7 @@
       "action": "Make theoretical scope explicit and formulate a testable recovery-path diagnostic; do not apply restricted frontier to four-field data without assumptions."
     },
     "B": {
-      "status": "in_progress",
+      "status": "analysis_done_posthoc_inference_only",
       "action": "Centered max-standardized simultaneous crossed-bootstrap intervals; retrospective and post-hoc, not confirmatory."
     },
     "C": {
@@ -21,11 +21,11 @@
       "action": "Inflation degeneracy and co-primary attacked-MAE/failed-query outcomes; cap counts are descriptive consequences."
     },
     "E": {
-      "status": "in_progress",
+      "status": "analysis_done_text_pending",
       "action": "Report continuous effects and threshold sensitivity, no invented preregistration."
     },
     "F": {
-      "status": "in_progress",
+      "status": "independent_state_check_done_disclosure_pending",
       "action": "Shared-primitive audit dependency disclosure plus separate brute-force state/transition oracle."
     },
     "G": {
