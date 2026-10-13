@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 07:44:01 UTC",
+  "snapshot_time": "2026-10-13 08:17:33 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -92,17 +92,11 @@
     "manuscript_changes": "saved_compiled_layout_and_correspondence_checked",
     "running": "full MUCars frozen-model evaluation, then automated corroboration and weighted statistics",
     "expanded_snapshot": {
-      "completed_cells": 393,
+      "completed_cells": 440,
       "total": 480,
       "not_global_completion": true,
-      "observed_worker_cpu_percent": [
-        100,
-        100,
-        99.4,
-        100,
-        100,
-        99.1
-      ]
+      "scope": "durable cell receipts verified at resize",
+      "completed_batches": 25183
     },
     "full_jucars": {
       "listings": 1374,
@@ -131,6 +125,18 @@
       ],
       "confirmatory": false,
       "finite_sample_fwer_certified": false
+    },
+    "runtime_resize": {
+      "status": "resumed_and_checkpoint_preservation_verified",
+      "producer_workers": 8,
+      "producer_pid": 15837,
+      "previous_pid": 9952,
+      "finalizer_pid": 12200,
+      "finalizer_workers": 6,
+      "frozen_hashes_unchanged": true,
+      "receipt": "notes/revision-review-v2/evaluation/resize-to-eight-receipt.json",
+      "wrapper": "notes/revision-review-v2/evaluation/resume_expanded.py",
+      "observed_worker_count": 8
     }
   },
   "delivery_v1_historical": {

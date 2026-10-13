@@ -1,0 +1,112 @@
+{
+  "status": "resumed_and_checkpoint_preservation_verified",
+  "old_pid": 9952,
+  "old_workers": 6,
+  "new_workers": 8,
+  "completed_cells": 440,
+  "completed_batches": 25183,
+  "checkpoint_index": "notes/revision-review-v2/evaluation/resize-checkpoints-20261013T081320Z.json",
+  "checkpoint_index_sha256": "0b23f35002f9451e7c8b0fe794d496827a11b0e4a09bb76edd46199ae00d8156",
+  "frozen_source_hashes": {
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/notes/revision-review-v2/evaluation/expanded_evaluation.py": "43ccebf1b13331dc793a16cc95b58e68e4b6f99a89968adbcb9a7089990d5926",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/matched_factorial_evaluation.py": "4f7b35ae64151c44682acafaaac2118f1b9dac09a6593e95d2f1cd50325b37f8",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/manifest.json": "c622d6f2898c13b59317e4b92a64a5fbab6e295d2f0219c5a33553863bc882ec"
+  },
+  "wrapper_sha256": "b8cdb56e9146b21df3f929818f92959e5f6684213556829a84746cd7af63932c",
+  "started_at_utc": "20261013T081320Z",
+  "old_group_members": [
+    [
+      9952,
+      "Ts"
+    ],
+    [
+      9960,
+      "T"
+    ],
+    [
+      9961,
+      "T"
+    ],
+    [
+      9962,
+      "T"
+    ],
+    [
+      9963,
+      "T"
+    ],
+    [
+      9964,
+      "T"
+    ],
+    [
+      9965,
+      "T"
+    ],
+    [
+      9966,
+      "T"
+    ]
+  ],
+  "scope": "scheduler/checkpoint-only change; exact completed summaries preserved; unfinished batches resumed",
+  "new_pid": 15837,
+  "new_process_group": 15837,
+  "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/controller-eight.log",
+  "all_frozen_hashes_unchanged": true,
+  "observed_workers": [
+    {
+      "pid": 15842,
+      "state": "R",
+      "cpu_percent": 99.4,
+      "rss_kb": 112560
+    },
+    {
+      "pid": 15843,
+      "state": "R",
+      "cpu_percent": 100.0,
+      "rss_kb": 1274992
+    },
+    {
+      "pid": 15844,
+      "state": "R",
+      "cpu_percent": 97.4,
+      "rss_kb": 112704
+    },
+    {
+      "pid": 15845,
+      "state": "R",
+      "cpu_percent": 98.2,
+      "rss_kb": 950624
+    },
+    {
+      "pid": 15846,
+      "state": "R",
+      "cpu_percent": 98.2,
+      "rss_kb": 755456
+    },
+    {
+      "pid": 15847,
+      "state": "R",
+      "cpu_percent": 99.1,
+      "rss_kb": 708464
+    },
+    {
+      "pid": 15848,
+      "state": "R",
+      "cpu_percent": 98.4,
+      "rss_kb": 113424
+    },
+    {
+      "pid": 15849,
+      "state": "R",
+      "cpu_percent": 98.4,
+      "rss_kb": 112944
+    }
+  ],
+  "observed_worker_count": 8,
+  "old_group_terminated": true,
+  "checkpoint_receipts_unchanged_after_resume": 25623,
+  "verified_at_utc": "2026-10-13T08:15:24.127808+00:00",
+  "checkpoint_archive_sha256": "51af6911bfcfdf9fe77ec9112a0a368b299466af4b0e34ff0b592d964b78c541",
+  "checkpoint_archive_bytes": 1133307
+}

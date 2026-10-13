@@ -8,7 +8,7 @@
 
 正成本保留108新单元与36零成本对照。异质成本下synthetic robust/suppression/top-B反馈的四指标均值改善、三seed inflation方向均有利；仅局部事后三seed子集，非普遍或显著优势。JU/MU子集方向仍不利，20个未收敛批次保留。
 
-JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照393/480，不是最终完成。现有6worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
+JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/107批仍运行**；扩评价阶段快照440/480，不是最终完成。现有8worker producer完成后，已启动的finalizer自动接全量复核和加权统计；后台不会自动改正文或推送GitHub。
 
 内置编译、30页联系表视觉核查及14页全尺寸检查、页界/引用和5段逐字摘录检查通过。无Overfull或未定义引用，一个Underfull保留。图使用line/glyph提取适配、默认阈值未放宽，原始提取假阳性报告保留。
 
@@ -17,3 +17,6 @@ JUCars全1374条/14批/10seed/240单元已完成及复核。**MUCars全10672条/
 [当前源文件](paper/innovation-addendum-v1.tex) · [PDF](paper/innovation-addendum-v1.pdf) · [修订包](paper/revision-delivery-v2.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md) · [哈希索引](notes/revision-review-v2/revision-delivery-index.json)
 
 [汇总复算](notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [原全量训练协议](REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)
+
+
+八worker切换记录（2026-10-13 16:15，Asia/Shanghai）：已确认8个计算worker运行、约97–100%单核CPU。旧9952组全部退出；440个完成单元和25183批检查点保留，25623个完成凭据恢复后哈希不变；冻结源码/manifest、算法参数及RNG不变。见notes/revision-review-v2/evaluation/resize-to-eight-receipt.json。阶段数不是最终完成。

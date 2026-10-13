@@ -3,11 +3,13 @@
   "processes": [
     {
       "kind": "expanded",
-      "pid": 9952,
-      "process_group": 9952,
-      "workers": 6,
-      "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/controller.log",
-      "output": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2"
+      "pid": 15837,
+      "process_group": 15837,
+      "workers": 8,
+      "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2/controller-eight.log",
+      "output": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/review-expanded-primary-v2",
+      "previous_pid": 9952,
+      "entrypoint": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/notes/revision-review-v2/evaluation/resume_expanded.py"
     },
     {
       "kind": "cost",
@@ -28,5 +30,6 @@
   ],
   "scope": "new frozen-model evaluation and response-cost diagnostics; no training; no reused old PID",
   "cost_status": "completed_and_analyzed",
-  "jucars_expansion_status": "completed_and_corroborated"
+  "jucars_expansion_status": "completed_and_corroborated",
+  "resize_receipt": "notes/revision-review-v2/evaluation/resize-to-eight-receipt.json"
 }

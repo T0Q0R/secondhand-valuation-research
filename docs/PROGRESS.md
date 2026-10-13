@@ -235,3 +235,12 @@
 - 已确认提交a96a5dde05c0dd3fe738bb975834559d6bcad652：28个成果文件Git blob SHA和6个仓库入口正文回读一致，AGENTS保持原哈希。同步凭据保存在notes/revision-review-v2/github-sync-receipt.json。
 - 后台393/480个评测单元；6个worker均为R，约99.1–100%单核CPU；producer与finalizer正常存活。全量completion尚未生成，不以CPU或快照推定完成。
 - 下一步保持全MU运行并等待自动复核/加权统计；后续AI再回填并重新检查正文。删除了本项上传专用/tmp base64副本，保留原模型、结果和当前证据。
+
+
+## 2026-10-13 08:17:33 UTC — 按用户要求将计算并行从6增至8
+
+- 用户明确要求再加两个核心。先核原producer身份/进程组及独占锁；冻结六worker组，逐哈希验证440完整单元、25183完整batch、25623完成凭据，记录checkpoint索引后退出旧组；单进程新producer15837以8worker从原检查点恢复。
+- 新resume_expanded.py只为完整cell验证哈希并返回原summary，避免已完成单元重聚合/重写。算法、模型、数据、4starts/20sweeps、RNG与冻结producer/evaluator/manifest哈希不变；未保存批次按原确定性搜索重算。
+- 已完成单元缓存smoke通过；恢复后25623凭据哈希仍全部相同，观察到8个计算worker均R、约97–100%单核CPU。旧组无残留，原finalizer12200继续等待全量completion。
+- 已保存切换脚本、运行记录、校验receipt和1133307字节压缩检查点哈希索引；尚未把480全量或全审计标完成。
+- 下一步继续全MU，再自动全量复核/加权统计和正文回填；不要重启重复writer或修改绑定源码。8个worker不承诺线性提速。
