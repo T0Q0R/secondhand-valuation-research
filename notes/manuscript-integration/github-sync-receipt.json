@@ -1,0 +1,174 @@
+{
+  "repository": "T0Q0R/secondhand-valuation-research",
+  "delivery_commit": "198f931fc1df2f3f9f89aa4ca75b823a8fc66ac3",
+  "verified_at_utc": "2026-10-13 03:27:41 UTC",
+  "scope": "full scientific manuscript writing delivered; actual submission and institutional CAS verification are separate",
+  "files_verified": [
+    {
+      "path": "notes/factorial-final/QA.json",
+      "git_blob_sha": "a193206cd5c7aa6b185441c3285dc4be9babc57e"
+    },
+    {
+      "path": "notes/factorial-final/figure-source-audit.json",
+      "git_blob_sha": "29fdb936aebdfcdd2f79ce7db4bef73841f8d88d"
+    },
+    {
+      "path": "notes/manuscript-integration/DELIVERY.zh.md",
+      "git_blob_sha": "29a4a054f3290898fc20705d616e1f413b7ab4ef"
+    },
+    {
+      "path": "notes/manuscript-integration/PRE_SUBMISSION_REVIEW.md",
+      "git_blob_sha": "c187dee3f928903f622e4ed106027fc9981880f1"
+    },
+    {
+      "path": "notes/manuscript-integration/VENUE_PREPARATION.zh.md",
+      "git_blob_sha": "27a298d032797705bfbd200ced4379295457fd60"
+    },
+    {
+      "path": "notes/manuscript-integration/additional-comparator-evidence-index.json",
+      "git_blob_sha": "456f07d0f16e4b19566ad9d5c3645bf4a2ef8109"
+    },
+    {
+      "path": "notes/manuscript-integration/additional-comparator-evidence.zip",
+      "git_blob_sha": "637a37469cccc82100bad0efb26ea6e657c20a16"
+    },
+    {
+      "path": "notes/manuscript-integration/additional_comparators.tex",
+      "git_blob_sha": "5a909a926f03fbf31a46ad4419fd7b7caeb2fb2e"
+    },
+    {
+      "path": "notes/manuscript-integration/audit_and_render.py",
+      "git_blob_sha": "63735823377a28d6361e31a7ab19966272e8d1c4"
+    },
+    {
+      "path": "notes/manuscript-integration/audit_embedded_vector_geometry.py",
+      "git_blob_sha": "5d860dd0643fba1ef6558bceb36e2410e22c01fc"
+    },
+    {
+      "path": "notes/manuscript-integration/bibliography-source-map.json",
+      "git_blob_sha": "53eb3465613879d96ee5a1dc43435c687aea1da7"
+    },
+    {
+      "path": "notes/manuscript-integration/build_delivery.py",
+      "git_blob_sha": "8cd3639099c4b3f94bd01f57494e6976c88f4b7f"
+    },
+    {
+      "path": "notes/manuscript-integration/delivery_manifest.json",
+      "git_blob_sha": "4e8c421610caf1654f5a36e74bc3bd99d84d5383"
+    },
+    {
+      "path": "notes/manuscript-integration/delivery_receipt.json",
+      "git_blob_sha": "ae0603c7edf0d3a4cd4fef1a4f6518af699de3ab"
+    },
+    {
+      "path": "notes/manuscript-integration/feedback-suppression.inline.tex",
+      "git_blob_sha": "ba865b4d928d7b37c49a0c9c471ce36653e74cbf"
+    },
+    {
+      "path": "notes/manuscript-integration/initial-objective.inline.tex",
+      "git_blob_sha": "80b9127370b9b614d9703ee88f1e5f9d3daecf01"
+    },
+    {
+      "path": "notes/manuscript-integration/inline_matplotlib_vectors.py",
+      "git_blob_sha": "5b45bfd4638b30a83c9e91821260272fd8809b56"
+    },
+    {
+      "path": "notes/manuscript-integration/integrate_manuscript.py",
+      "git_blob_sha": "c825d98ddf29e95b8ea5702d1c63d563288c6682"
+    },
+    {
+      "path": "notes/manuscript-integration/integration_receipt.json",
+      "git_blob_sha": "d857a9cc8395443186a80080626d755341ef2f03"
+    },
+    {
+      "path": "notes/manuscript-integration/multiobjective-primary.source.csv",
+      "git_blob_sha": "de41fe5663fbbbf7e8a549e64e2cfd4f1678c1fe"
+    },
+    {
+      "path": "notes/manuscript-integration/pre-integration-source.tex",
+      "git_blob_sha": "5aafdcb7563934f1318e8ee32f87e49aa8a477f9"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/feedback-original-final.collision.json",
+      "git_blob_sha": "254f0416807b70c639815624df7f43a494274104"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/figure-1-embedded.collision.json",
+      "git_blob_sha": "25098a8761efa2aded4a61737cd51de62e485a72"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/figure-2-embedded.collision.json",
+      "git_blob_sha": "493150b000dc9f36c3a87e22ff1022d7fd154593"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/figure-page-12.corrected-geometry-audit.json",
+      "git_blob_sha": "b9fa3b036fd0b90d34fa7b249e19e97ddd3ff078"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/figure-page-12.pdf",
+      "git_blob_sha": "500a622ef6c7b7c787c8a17c1fb80eb65f1eabb9"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/figure-page-13.corrected-geometry-audit.json",
+      "git_blob_sha": "8ad8e5dc3411f57da6fcc16c43a0916b85ad5704"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/figure-page-13.pdf",
+      "git_blob_sha": "7481d086ca8b3656f9bdf13e7e9a5cccd0cb5d0b"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/initial-original-final.collision.json",
+      "git_blob_sha": "2357fcb1504678fff5890138fa60729f5501e43c"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/render-audit.json",
+      "git_blob_sha": "58dece3bf2870c15f6e54866bab2246ece9b1096"
+    },
+    {
+      "path": "notes/manuscript-integration/qa/vocabulary-scan.json",
+      "git_blob_sha": "1c4962a111873c6cb7d6fce00c2d47baf664715a"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.pdf",
+      "git_blob_sha": "caecf06e676756f658cd426f77c01a8bf5cd8afd"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.tex",
+      "git_blob_sha": "31188dc588c7a3002e5d7ea78638c87cd5f904b5"
+    },
+    {
+      "path": "paper/manuscript-delivery-v1.zip",
+      "git_blob_sha": "08a43ec24d6dafc6db5267327e852acfc55ddc0b"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha": "b2abbba51aeb2507d2fdf3f777b4da3991e70569"
+    },
+    {
+      "path": "AI_HANDOFF.md",
+      "git_blob_sha": "9298ece9b7c68c8a32cacb38d3547f199a81f5a5"
+    },
+    {
+      "path": "docs/FINAL_RESULTS.md",
+      "git_blob_sha": "37767484bceac6b8fc9b6b09c414676c1c6d79d7"
+    },
+    {
+      "path": "docs/STATUS.md",
+      "git_blob_sha": "7b993eab44c09e1975ddd4033cfc71eac0a89c1c"
+    },
+    {
+      "path": "docs/STATUS.json",
+      "git_blob_sha": "90d26d85599c25310fc19325149c5594fb2130da"
+    },
+    {
+      "path": "docs/PROGRESS.md",
+      "git_blob_sha": "f26623b9acaf987e981ea5835967940d13bce697"
+    }
+  ],
+  "AGENTS_git_blob_preserved": "abdc72c63dd2310b286e2cf6ecaec5abb988c267",
+  "archive_sha256": "3b0d2afe572aadc82db082c82c98556a367704db3235b4bb771c42c09877c03b",
+  "source_sha256": "7cdb49adbf795fa91694f9cedb28ef430ca89129d6153069ee79c88bbdf75e37",
+  "pdf_sha256": "e7bfaf7cb341952c1606b3d0fc3442f415730e423a94aca3808cc6ef75c6ca29",
+  "scientific_manuscript_complete": true,
+  "submission_complete": false
+}
