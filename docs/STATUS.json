@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 08:17:33 UTC",
+  "snapshot_time": "2026-10-13 08:39:45 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -137,6 +137,13 @@
       "receipt": "notes/revision-review-v2/evaluation/resize-to-eight-receipt.json",
       "wrapper": "notes/revision-review-v2/evaluation/resume_expanded.py",
       "observed_worker_count": 8
+    },
+    "scheduler_rebalance": {
+      "status": "prepared",
+      "entrypoint": "notes/revision-review-v2/evaluation/resume_cells_expanded.py",
+      "reason": "serial shared-fit critical path",
+      "workers": 8,
+      "frozen_algorithm_unchanged": true
     }
   },
   "delivery_v1_historical": {

@@ -1,0 +1,19 @@
+{
+  "status": "prepared_awaiting_safe_handoff",
+  "date_utc": "2026-10-13T08:39:02.000305+00:00",
+  "old_pid": 15837,
+  "workers": 8,
+  "reason": "shared-model group serializes up to six cells; aggregate throughput ETA underestimated its critical path",
+  "changes": "pending independent cells become separate tasks; original frozen worker/predictions/scoring/evaluator/RNG retained; only receipt path routed uniquely per cell",
+  "smoke": "JU seed13 robust/suppression/no-feedback/top-B original worker invoked, prefix checks passed, result equals exact cached summary, completed receipts unchanged",
+  "preserve": "STOP/validate checkpoint hashes/terminate original group before new single writer starts",
+  "new_entrypoint": "notes/revision-review-v2/evaluation/resume_cells_expanded.py",
+  "handoff_script": "notes/revision-review-v2/evaluation/rebalance_to_cells.py",
+  "full_corroboration": "original finalizer 12200 retained; global 480 completion still required",
+  "frozen_source_hashes": {
+    "notes/revision-review-v2/evaluation/expanded_evaluation.py": "43ccebf1b13331dc793a16cc95b58e68e4b6f99a89968adbcb9a7089990d5926",
+    "experiments/matched_factorial_evaluation.py": "4f7b35ae64151c44682acafaaac2118f1b9dac09a6593e95d2f1cd50325b37f8",
+    "notes/revision-review-v2/evaluation/resume_expanded.py": "b8cdb56e9146b21df3f929818f92959e5f6684213556829a84746cd7af63932c",
+    "outputs/review-expanded-primary-v2/manifest.json": "c622d6f2898c13b59317e4b92a64a5fbab6e295d2f0219c5a33553863bc882ec"
+  }
+}
