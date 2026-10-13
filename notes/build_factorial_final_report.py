@@ -36,7 +36,7 @@ assert len(joint)==18 and joint.point_gate.eq(True).sum()==0
 mucars=inflation[inflation.dataset.eq('mucars')&inflation.family.eq('initial_objective')]
 assert len(mucars)==12 and mucars.difference.gt(0).all() and mucars.point_gate.eq(True).all()
 
-plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':8,'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42,'svg.fonttype':'none','axes.linewidth':.7})
+plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42,'svg.fonttype':'none','axes.linewidth':.7})
 colors={'synthetic':'#536F8C','jucars':'#C17E4B','mucars':'#638C72'}
 def forest(family,name,heading,definition,terms):
  data=inflation[inflation.family.eq(family)&inflation.contrast.isin(terms)].copy()
@@ -50,13 +50,13 @@ def forest(family,name,heading,definition,terms):
   words=[w for w in words if w not in ['Suppression','No feedback']]
   labels.append({'synthetic':'Synthetic','jucars':'JUCars','mucars':'MUCars'}[row.dataset]+' / '+' / '.join(words))
  fig,ax=plt.subplots(figsize=(7.08,4.3))
- fig.subplots_adjust(left=.43,right=.97,bottom=.20,top=.86)
+ fig.subplots_adjust(left=.43,right=.97,bottom=.17,top=.96)
  for j,row in enumerate(data.itertuples()):
   ax.errorbar(row.difference,j,xerr=[[row.difference-row.lower],[row.upper-row.difference]],fmt='o',color=colors[row.dataset],markersize=4,capsize=2,lw=1)
  ax.axvline(0,color='#777777',lw=.7,ls='--');ax.set_yticks(range(len(data)),labels);ax.invert_yaxis()
- ax.set_xlabel(definition);fig.text(.04,.93,heading,fontsize=10)
+ ax.set_xlabel('Inflation difference (no feedback - policy feedback)' if family=='feedback' else 'Inflation difference (mask - robust)');# The journal caption contains the heading; preserve plot-only artwork.
  ax.tick_params(axis='y',length=0,pad=8)
- fig.text(.43,.045,'10 seeds × 10 shared batches; 95% unadjusted crossed-bootstrap intervals\nFixed training records; 10% capacity; suppression acquisition',fontsize=7)
+ if family=='initial_objective':ax.set_xticks([-.003,0,.003])
  data.to_csv(FIG/(name+'.source.csv'),index=False)
  fig.savefig(FIG/(name+'.pdf'));fig.savefig(FIG/(name+'.svg'));fig.savefig(FIG/(name+'.png'),dpi=300)
  plt.close(fig)

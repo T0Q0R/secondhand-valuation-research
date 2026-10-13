@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 02:23:57 UTC",
+  "snapshot_time": "2026-10-13 03:11:36 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -27,9 +27,14 @@
     "multiple_comparison_corrected": false
   },
   "manuscript": {
-    "addendum_updated": true,
+    "integrated_scientific_manuscript": true,
+    "pages": 26,
+    "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
-    "final_submission_manuscript_complete": false
+    "same_manuscript_pdf_export": "success",
+    "all_page_visual_review": "in_progress",
+    "pre_submission_review": "in_progress",
+    "submission": "not_submitted"
   },
   "figures": {
     "new_count": 2,

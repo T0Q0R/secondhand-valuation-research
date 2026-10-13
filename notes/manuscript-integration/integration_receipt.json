@@ -1,0 +1,11 @@
+{
+  "original_sha256": "70b0050c401aa314f45c5520012e978b64c314bf35ba2d715af27fe4eecdcd45",
+  "integrated_sha256": "882c51db13235ebaf66ab6f47814f62a2c4a7b850d739ddc960b5a1e0da289d4",
+  "abstract_words": 217,
+  "author_affiliation_omitted": true,
+  "preserved_experiment_data": true,
+  "preserved_frozen_scientific_code": true,
+  "figures": "two original Matplotlib vector figures in self-contained picture export",
+  "new_experiments": false,
+  "scope": "complete manuscript integration; pre-submission review pending"
+}
