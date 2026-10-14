@@ -1,0 +1,8 @@
+{
+  "status": "started",
+  "pid": 35940,
+  "workers": 2,
+  "started_unix": 1791952472.2924411,
+  "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/completion-ablation-v6/execution.log",
+  "smoke_and_config_commit": "b184f6e7463dc4d75eb20ef0488ed145bf52f335"
+}

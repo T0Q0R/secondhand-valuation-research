@@ -212,10 +212,10 @@
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   },
   "experiment_first_request": {
-    "status": "controlled_ablation_smoke_passed_ready_to_run",
+    "status": "controlled_ablation_running",
     "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
     "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
-    "new_training_started": false,
+    "new_training_started": true,
     "existing_original_cells": 1860,
     "existing_methods": 12,
     "complete_three_component_ablation_cells": 432,
@@ -298,6 +298,14 @@
       "manuscript_frozen": true,
       "smoke": "notes/experiment-completion-v6/ablation-smoke.json",
       "started": false
+    },
+    "ablation_running": {
+      "status": "started",
+      "pid": 35940,
+      "workers": 2,
+      "started_unix": 1791952472.2924411,
+      "log": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/completion-ablation-v6/execution.log",
+      "smoke_and_config_commit": "b184f6e7463dc4d75eb20ef0488ed145bf52f335"
     }
   }
 }

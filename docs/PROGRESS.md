@@ -321,3 +321,6 @@ Bound completed producer/auditor receipts and actual summaries. Original1860cell
 
 ## 2026-10-14 12:35 Asia/Shanghai — controlled ablation validated
 Implemented resumable full2^3 component ablation with matched two6-epoch optimizer schedules, nested held-out heads, hash-bound reuse and a separate integer-mask/allocation utility audit. Tiny24-cell smoke and all three production-training prediction identities pass(max difference0); action/state/quote corruption controls reject. First smoke had missing parent directory for reference save; fixed and retained failure. Same-config restart passes. Frozen9-pair/432-cell/108-new-price-fit job ready; full computation starts only after this commit readback. No paper generation. New recent methods still eligibility review, not executed.
+
+## 2026-10-14 12:35 Asia/Shanghai — formal controlled ablation started
+After verified remote config commit b184f6e7463dc4d75eb20ef0488ed145bf52f335, started detached PID35940 with two workers; output outputs/completion-ablation-v6. First off-gap fits completed; computation remains running, not a scientific result yet. No paper edits. macOS memory_pressure reports40% system free, first worker RSS~507MiB; no dependency/environment mutation.
