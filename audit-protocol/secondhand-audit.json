@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "study": {
+    "name": "Secondhand strategic-missingness audit",
+    "status": "retrospective_posthoc",
+    "primary": "Original 1000-record prefixes and declared .1 capacity; full real cohorts are sensitivity",
+    "training_records": "fixed",
+    "holdout": "Validation cohorts previously examined; original test labels not used"
+  },
+  "units": {
+    "fitting_seeds": 10,
+    "cost_subset_seeds": [
+      13,
+      42,
+      2026
+    ],
+    "listing_rows": "Repeated per seed and method, not independent samples",
+    "evaluation_clusters": "shared hash-ordered batches across methods and fitting seeds; tail weighted by listing count",
+    "same_validation_across_seeds": true,
+    "source_units": "MAE uses source currency, not pooled currency"
+  },
+  "axes": {
+    "estimator": [
+      "masking",
+      "robust"
+    ],
+    "acquisition": [
+      "suppression",
+      "benefit",
+      "risk"
+    ],
+    "feedback": [
+      "none",
+      "policy"
+    ],
+    "allocation": [
+      "top_b",
+      "minimax"
+    ]
+  },
+  "response": {
+    "capacity_fraction": 0.1,
+    "capacity_rule": "floor(n * fraction)",
+    "failed_queries_charged": true,
+    "maximum_hidden_fields": 2,
+    "cost_primary": 0,
+    "cost_sensitivity": [
+      ".005",
+      ".02",
+      "listing-hash .02*[.5,1.5)"
+    ],
+    "starts": 4,
+    "maximum_sweeps": 20,
+    "finite_regret_tolerance": 1e-07,
+    "retain_nonconverged": true,
+    "guarantee": "finite unilateral tolerance at returned peers only"
+  },
+  "outcomes": [
+    {
+      "name": "inflation",
+      "unit": "log quote",
+      "definition": "mean positive expected quote minus frozen truthful quote"
+    },
+    {
+      "name": "honest_mae",
+      "unit": "source currency",
+      "definition": "mean absolute truthful price prediction error"
+    },
+    {
+      "name": "attacked_mae",
+      "unit": "source currency",
+      "definition": "expected absolute attacked error over verification randomization"
+    },
+    {
+      "name": "failed_query",
+      "unit": "probability per listing",
+      "definition": "expected charged unsuccessful query indicator"
+    },
+    {
+      "name": "net_deviation",
+      "unit": "log utility",
+      "definition": "positive best legal unilateral utility minus truthful utility; not returned net gain"
+    },
+    {
+      "name": "regret",
+      "unit": "log utility",
+      "definition": "best legal unilateral utility minus returned utility"
+    }
+  ],
+  "inference": {
+    "confirmatory": false,
+    "primary_intervals": "Unadjusted exploratory crossed seed/batch bootstrap",
+    "simultaneous": "Posthoc 36/108/1536-family sensitivities; no finite-sample FWER certificate",
+    "variance": "Exact conditional weighted bootstrap main/interaction variance, not new training-population variance",
+    "equivalence": "No equivalence margin or claim",
+    "thresholds": "Inherited 10% inflation / 5% honest error gate; grid sensitivity retained"
+  },
+  "audit_scope": {
+    "shared_primitives": [
+      "training libraries",
+      "frozen predictor inference",
+      "head scoring",
+      "historical replay state APIs"
+    ],
+    "independent_components": [
+      "separate bit-mask state enumeration and transitions",
+      "algebraic allocation and all legal unilateral utilities",
+      "exact small bootstrap enumeration",
+      "utility-bound negative and nonconverged cases"
+    ],
+    "limits": "No from-scratch independent predictor implementation; no global joint equilibrium certificate"
+  },
+  "release": {
+    "publicly_released": false,
+    "license": "No new code license authorized",
+    "doi": null,
+    "external_full_training_reproduction": false,
+    "available": "Private GitHub small artifacts and hash-bound aggregate archives; models/raw listings remain on original machine"
+  },
+  "artifacts": [
+    {
+      "path": "notes/revision-mechanisms-v3/variance_components.csv",
+      "kind": "csv",
+      "sha256": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e",
+      "rows": 48,
+      "required_columns": [
+        "dataset",
+        "seed_share",
+        "batch_share",
+        "interaction_share"
+      ]
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/cost_mechanism_batches.csv",
+      "kind": "csv",
+      "sha256": "56563fce7baba9c1d21c50c04ecd1daf9cc932cf0d1a0e5a527f13b9ac8973bd",
+      "rows": 1440,
+      "required_columns": [
+        "dataset",
+        "seed",
+        "batch",
+        "scenario",
+        "max_regret",
+        "hidden_lower",
+        "hidden_upper"
+      ]
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_pilot.csv",
+      "kind": "csv",
+      "sha256": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9",
+      "rows": 12,
+      "required_columns": [
+        "dataset",
+        "seed",
+        "subset",
+        "n",
+        "abstentions",
+        "base_honest_mae",
+        "envelope_honest_mae"
+      ]
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/completion.json",
+      "kind": "json",
+      "sha256": "edc926b76829c7f94114d16dc58a5b0e4df7b359f53c47161873d718f927ef2f",
+      "status": "completed"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_completion.json",
+      "kind": "json",
+      "sha256": "1a749af9f4b41b9bef858e1d1ff3474248a97748b9ced5d734279b02a9c8b630",
+      "status": "completed_restricted_pilot"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/expanded-completion-summary.json",
+      "kind": "json",
+      "sha256": "a46e17bf31c178eea9839a700d67aa2fcc0ec57f3a0311cd7c355165a9d6890e",
+      "status": "completed_and_corroborated"
+    }
+  ]
+}

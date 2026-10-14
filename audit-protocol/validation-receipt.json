@@ -1,0 +1,40 @@
+{
+  "status": "contract_and_bound_artifacts_valid",
+  "artifacts": [
+    {
+      "path": "notes/revision-mechanisms-v3/variance_components.csv",
+      "sha256": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/cost_mechanism_batches.csv",
+      "sha256": "56563fce7baba9c1d21c50c04ecd1daf9cc932cf0d1a0e5a527f13b9ac8973bd"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_pilot.csv",
+      "sha256": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/completion.json",
+      "sha256": "edc926b76829c7f94114d16dc58a5b0e4df7b359f53c47161873d718f927ef2f"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_completion.json",
+      "sha256": "1a749af9f4b41b9bef858e1d1ff3474248a97748b9ced5d734279b02a9c8b630"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/expanded-completion-summary.json",
+      "sha256": "a46e17bf31c178eea9839a700d67aa2fcc0ec57f3a0311cd7c355165a9d6890e"
+    }
+  ],
+  "scope": "structural/data-binding validation only; not validity, novelty, independence, causality, fairness or inferential coverage certification",
+  "protocol_sha256": "ef4e48b5ef482687b76eae9f89a6258dd904d40b4969e5cca25da68ae94cdc7f",
+  "validator_sha256": "792afb157f03c65eacc426eeedf768e33821e5c7d62e51e69d4aac5e1407f4cd",
+  "rejected_negative_controls": [
+    "invalid_budget",
+    "drop_nonconvergence",
+    "false_confirmation",
+    "wrong_hash",
+    "wrong_row_count",
+    "path_escape"
+  ]
+}

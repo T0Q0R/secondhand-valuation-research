@@ -180,6 +180,12 @@
       ],
       "coverage": "JU801/1000; MU999/1000",
       "no_mileage_concealment_guarantee": true
+    },
+    "audit_protocol": {
+      "status": "explicit_contract_and_validator_completed",
+      "direct_bound_artifacts": 6,
+      "negative_controls_rejected": 6,
+      "preregistered": false
     }
   }
 }
