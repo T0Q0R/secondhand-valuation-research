@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14 04:53:05 UTC",
+  "snapshot_time": "2026-10-14 04:54:39 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -212,7 +212,7 @@
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   },
   "experiment_first_request": {
-    "status": "ablation_running_remaining_validated_jobs_ready_for_queue",
+    "status": "background_ablation_and_detached_completion_queue_active_ai_stopping_per_user",
     "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
     "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
     "new_training_started": true,
@@ -337,15 +337,18 @@
       "new_price_fits": 576
     },
     "queue": {
-      "status": "ready_after_remote_verification",
+      "status": "waiting_for_ablation",
       "config": "notes/experiment-completion-v6/queue-launch.json",
       "total_cells_including_reuse": 954,
       "manuscript_writes": false,
-      "future_result_sync": "next_active_collaborator"
+      "future_result_sync": "next_active_collaborator",
+      "pid": 37905,
+      "running_receipt": "notes/experiment-completion-v6/queue-running.json"
     },
     "analysis": {
       "status": "implemented_factorial_and_contrast_sign_self_test_passed",
       "future_figures": "source CSVs prepared only after actual completion; visual rendering/QA pending"
-    }
+    },
+    "ai_work": "stopping_this_turn_after_independent_preparations_per_user_no_polling"
   }
 }

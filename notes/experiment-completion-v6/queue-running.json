@@ -1,0 +1,11 @@
+{
+  "status": "started_detached",
+  "queue_pid": 37905,
+  "started_unix": 1791953648.128035,
+  "verified_configuration_commit": "8cb175ca5190a48c2f8f0d0b1e31aa3b9e9d17d0",
+  "queue_config_sha256": "79f2f3205b39b1e5ee6c112915de24e6d75336a9bccced12ade93eded5001637",
+  "queue_script_sha256": "40619b08c76241ce7657dc19458f1b5d4962f3d94e437a710452be2f2d87cf59",
+  "status_path": "outputs/completion-queue-v6/status.json",
+  "no_manuscript_generation": true,
+  "next_ai_action": "After user returns, inspect queue status/failure and synchronize finished checkpoints before further scientific work"
+}
