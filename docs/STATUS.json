@@ -212,9 +212,15 @@
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   },
   "experiment_first_request": {
-    "status": "inventory_in_progress",
+    "status": "inventory_complete_missing_experiments_planned",
     "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
     "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
-    "new_training_started": false
+    "new_training_started": false,
+    "existing_original_cells": 1860,
+    "existing_methods": 12,
+    "complete_three_component_ablation_cells": 432,
+    "matched_reset_schedule_required": true,
+    "receipt": "notes/experiment-completion-v6/inventory-completion.json",
+    "experiment_contract": "notes/experiment-completion-v6/EXPERIMENT_CONTRACT.md"
   }
 }

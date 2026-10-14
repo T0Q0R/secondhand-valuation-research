@@ -1,0 +1,13 @@
+method,cells,sources,fitting_seeds,capacity_levels
+masking_benefit,180,3,10,6
+masking_fixed,180,3,10,6
+masking_no_audit,30,3,10,1
+masking_random,180,3,10,6
+masking_risk,180,3,10,6
+masking_suppression,180,3,10,6
+native_no_audit,30,3,10,1
+robust_no_feedback,180,3,10,6
+sav_benefit_head,180,3,10,6
+sav_no_gap,180,3,10,6
+sav_preaudit_attacker,180,3,10,6
+sav_val,180,3,10,6

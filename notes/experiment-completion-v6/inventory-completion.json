@@ -1,0 +1,41 @@
+{
+  "status": "existing_evidence_inventoried_new_experiments_not_complete",
+  "original_rows": 1860,
+  "original_methods": [
+    "masking_benefit",
+    "masking_fixed",
+    "masking_no_audit",
+    "masking_random",
+    "masking_risk",
+    "masking_suppression",
+    "native_no_audit",
+    "robust_no_feedback",
+    "sav_benefit_head",
+    "sav_no_gap",
+    "sav_preaudit_attacker",
+    "sav_val"
+  ],
+  "paper_generation": "paused_until_required_experiments_and_checks_complete",
+  "paper_source_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+  "script_sha256": "9f003fd85c35f35205597b1960425c0044d7b5d3ea1aef83431dde739ef09589",
+  "input_sha256": {
+    "outputs/nested-development-v2/all_summary.csv": "b238fe74c3e0f1176acd5604160a37a8db6dcac9b652d95d98ad944c6858e232",
+    "outputs/nested-seven-extra-seeds-v1/all_summary.csv": "aef2eca061d0a8a667482b3344ee4343e3845a773ebca10345b6d8f71dbed832",
+    "outputs/nested-development-v2/completion.json": "53b6c71cb9468982d1105bb0d7f8fde669ad6881118f91d494cf6ac8392cabd5",
+    "outputs/nested-seven-extra-seeds-v1/completion.json": "1e3c6ded59324eb7e0e25e8c29c1aaf0b93d6d96c720527bd5b9e27a783b406f",
+    "outputs/nested-development-v2-audit-01/analysis_completion.json": "e086f4f1c4fb5380f20d65895a7d118dee067c9a6c6e45597f0447579514538e",
+    "outputs/matched-factorial-ten-seeds-v1/completion.json": "ce42ee5f82c20f633edb30a1be2d807a8fb6a21b30052e34dbaf4e54505164d8",
+    "outputs/matched-factorial-ten-seeds-v1-pipeline/outcome-audit/completion.json": "d337f600425e5015bdf2b8191b99d1e1ec7f315ee48045dd5b7239e2ab76f772",
+    "outputs/grouped-smi-development-v2/completion.json": "fb48ed81abeeaa199409244a722d7d4d2b2ae157ab3b258c584291b2bf44d046",
+    "outputs/grouped-smi-development-v2-interval-cached-audit/completion.json": "46b99d30e11f53867f8aee8407b90aff3180bc4350db56fbf71f7e16df5f3ef8",
+    "outputs/aco1-development-v2/completion.json": "9456d740d00dd27b3ad5bb3b88cc4d2d81d29e2c636dfb88ab2995b7b72d2634",
+    "outputs/aco1-development-v2-audit/analysis_completion.json": "04319a93060ab7dab96c9667bdf554fe01b45189b92460aad0c964af31564b26",
+    "outputs/equal-tuning-size-development-v1/completion.json": "202294c8b7c24ce4190a86112324241e648418145cbff55394c68bf26d59ef0d",
+    "outputs/equal-tuning-size-development-v1-audit-full-01/completion.json": "8ab647b6b6373f8bb8b775ab0c80a087650cba3c2e7898bec0f8e75bc4ad0709",
+    "outputs/equal-benefit-size-reference-development-v1/completion.json": "30188fcb97c408c55b707ec3e23ec28bacf1a91bd0494058a8e994b05c5b806e",
+    "outputs/equal-benefit-size-reference-development-v1-audit-full-01/completion.json": "c399a5c0f1971fe270f943c0509dbf48bc93a279018dabb93a5f848a244065af",
+    "outputs/online-resource-development-v2/completion.json": "a7deaad446f18aa5845955627dd603c640bc64be1be2bd99dbfa0e2f47d22964",
+    "outputs/online-resource-and-transfer-v2-audit/completion.json": "4b865bbc6f6f039bbe59a6d6b3ff8389e5c58350c7bd3b321ae2d2f080dd715d"
+  },
+  "scope": "Receipt/source binding and actual summary coverage only; not a new independent replay of existing raw outcomes"
+}
