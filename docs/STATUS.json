@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T19:21:55+08:00",
+  "snapshot_time": "2026-10-14T21:10:48+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -417,13 +417,14 @@
     "pid": 60933
   },
   "recovery_path_learning": {
-    "status": "validated_pending_queue_launch",
+    "status": "queue_live_waiting_for_environment_shift",
     "cells": 162,
     "new_evaluations": 108,
     "reused": 54,
     "new_price_fits": 144,
     "plan": "notes/recovery-path-learning-v1/LITERATURE_AND_DESIGN.zh.md",
     "novelty": "candidate_requires_further_nearest_neighbor_review",
-    "superiority": "not_established"
+    "superiority": "not_established",
+    "pid": 67304
   }
 }

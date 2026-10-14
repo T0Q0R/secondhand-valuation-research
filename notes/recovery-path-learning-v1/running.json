@@ -1,0 +1,12 @@
+{
+  "pid": 67304,
+  "started": 1791983430.296109,
+  "configuration_commit": "6643cbe3266f2c1548d987c2bb53e366e19ad3ef",
+  "status": "launched_waiting_for_environment_shift",
+  "verified_at": "2026-10-14T21:10:48+08:00",
+  "verified_status": {
+    "status": "waiting_for_environment_shift",
+    "pid": 67304,
+    "time": 1791983430.3291001
+  }
+}

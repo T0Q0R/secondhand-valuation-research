@@ -1,3 +1,7 @@
+# 最新追加：恢复路径增益正则候选
+
+2026-10-14T21:10:48+08:00：恢复路径增益正则候选已通过工程检查、配置提交回读，尾队列PID67304已核验等待环境压力实验结束。162单元（54复用/108新评估），144次新价格拟合，6配置含λ与去gap消融。总名义计算预算仍9线程。结果及优越性尚未建立，论文冻结。 状态outputs/recovery-path-learning-queue-v1/status.json；方案notes/recovery-path-learning-v1/LITERATURE_AND_DESIGN.zh.md。等待进程不占满CPU，不重复启动。完整顺序：原四阶段→机制→环境压力→RPL；统计侧进程最多1线程。完成后仍需科学解释、图表QA与结果同步。
+
 # 最新追加：期刊适用条件压力实验
 
 2026-10-14T19:14:50+08:00：PID60933等待机制队列59731成功结束后运行环境压力实验，状态outputs/environment-shift-queue-v1/status.json；计算时看outputs/environment-shift-runtime-v1/status.json。189单元（63复用/126新评估），0重训；额外天然缺失0/.1/.3，7方法含risk/benefit。正文缺口与非计算待办见notes/environment-shift-v1/JOURNAL_GAPS.zh.md。不重复启动；总预算9线程。原所有队列保留，正文冻结。
