@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "completion": {
+    "status": "completed_and_corroborated",
+    "cells": 1,
+    "summary_sha256": "f90eac17e7ae71dd4e4404a895875961404f3be25a015038f280af47298512f4",
+    "manifest_sha256": "19fcd3a18831dd013497d76c46dae481c112e6099d4ab39f16f3698bf0861ef7",
+    "smoke_only": true
+  },
+  "production_identity": {
+    "max_prediction_error": 0.0,
+    "max_public_score_error": 1.3877787807814457e-17
+  },
+  "scope": "Full-data four-stage refit matches original price model and held-out-target deployment head"
+}

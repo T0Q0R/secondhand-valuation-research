@@ -1,0 +1,169 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0.1,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "workers": 2,
+  "smoke_only": false,
+  "settings": {
+    "beta-0": {
+      "beta": 0.0,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "gap_weight"
+    },
+    "beta-0.1": {
+      "beta": 0.1,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "gap_weight"
+    },
+    "beta-0.25": {
+      "beta": 0.25,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "gap_weight"
+    },
+    "beta-0.5": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "gap_weight"
+    },
+    "beta-1": {
+      "beta": 1.0,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "gap_weight"
+    },
+    "beta-2": {
+      "beta": 2.0,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "gap_weight"
+    },
+    "tolerance-0": {
+      "beta": 0.5,
+      "tolerance": 0.0,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "tolerance"
+    },
+    "tolerance-0.01": {
+      "beta": 0.5,
+      "tolerance": 0.01,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "tolerance"
+    },
+    "tolerance-0.05": {
+      "beta": 0.5,
+      "tolerance": 0.05,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "tolerance"
+    },
+    "tolerance-0.1": {
+      "beta": 0.5,
+      "tolerance": 0.1,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "tolerance"
+    },
+    "rounds-1-feedback-0": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 1,
+      "feedback": false,
+      "axis": "feedback_schedule"
+    },
+    "rounds-1-feedback-1": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 1,
+      "feedback": true,
+      "axis": "feedback_schedule"
+    },
+    "rounds-4-feedback-0": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 4,
+      "feedback": false,
+      "axis": "feedback_schedule"
+    },
+    "rounds-4-feedback-1": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 4,
+      "feedback": true,
+      "axis": "feedback_schedule"
+    },
+    "rounds-2-feedback-0": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": false,
+      "axis": "feedback_schedule"
+    }
+  },
+  "expected_pairs": 9,
+  "expected_cells": 270,
+  "source_sha256": "9a382d41c0497a0947dd8030bfd1e0853a83599dc8d4d6d4ff763706acf330c6",
+  "common_source_sha256": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+  "paper_frozen_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+  "scope": "Retrospective fixed-parameter sensitivity; no evaluation-driven default selection"
+}

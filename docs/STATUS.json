@@ -306,6 +306,18 @@
       "started_unix": 1791952472.2924411,
       "log": "/Users/tqr/Documents/人工智能/secondhand-ai-valuation/sav-val/outputs/completion-ablation-v6/execution.log",
       "smoke_and_config_commit": "b184f6e7463dc4d75eb20ef0488ed145bf52f335"
+    },
+    "parameters": {
+      "status": "implemented_smoke_passed_waiting_for_ablation_completion",
+      "pairs": 9,
+      "settings": 15,
+      "budgets": [
+        0.1,
+        0.3
+      ],
+      "cells": 270,
+      "new_price_fits": 432,
+      "manifest": "notes/experiment-completion-v6/parameters-launch.json"
     }
   }
 }

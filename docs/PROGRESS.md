@@ -324,3 +324,6 @@ Implemented resumable full2^3 component ablation with matched two6-epoch optimiz
 
 ## 2026-10-14 12:35 Asia/Shanghai — formal controlled ablation started
 After verified remote config commit b184f6e7463dc4d75eb20ef0488ed145bf52f335, started detached PID35940 with two workers; output outputs/completion-ablation-v6. First off-gap fits completed; computation remains running, not a scientific result yet. No paper edits. macOS memory_pressure reports40% system free, first worker RSS~507MiB; no dependency/environment mutation.
+
+## 2026-10-14 12:45 Asia/Shanghai — parameter sensitivity implementation validated
+Uniform nested full-pipeline gap weights0/.1/.25/.5/1/2, tolerances0/.01/.02/.05/.1 and feedback schedules1/2/4 with paired no-feedback optimizer-reset controls; constant12epochs.15unique settings×9source/seed pairs×budgets.1/.3=270cells, existing exact branches reused. Full-data four-stage baseline refit smoke has max price error0 and max public-score error1.39e-17 vs original; independent utility replay passes. Formal config frozen; waits for ablation completion to avoid excess memory/concurrency. No evaluation-based default selection and no paper edits.
