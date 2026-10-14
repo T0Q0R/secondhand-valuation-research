@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T13:04:10+08:00",
+  "snapshot_time": "2026-10-14T13:05:57+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -212,7 +212,7 @@
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   },
   "experiment_first_request": {
-    "status": "background_ablation_and_detached_completion_queue_active_ai_stopping_per_user",
+    "status": "parallel_runtime_running_ai_stopping_after_verified_resize",
     "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
     "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
     "new_training_started": true,
@@ -337,13 +337,14 @@
       "new_price_fits": 576
     },
     "queue": {
-      "status": "waiting_for_ablation",
+      "status": "superseded_by_parallel_runtime",
       "config": "notes/experiment-completion-v6/queue-launch.json",
       "total_cells_including_reuse": 954,
       "manuscript_writes": false,
       "future_result_sync": "next_active_collaborator",
-      "pid": 37905,
-      "running_receipt": "notes/experiment-completion-v6/queue-running.json"
+      "pid": 38715,
+      "running_receipt": "notes/experiment-completion-v6/queue-running.json",
+      "status_path": "outputs/completion-parallel-runtime-v1/status.json"
     },
     "analysis": {
       "status": "implemented_factorial_and_contrast_sign_self_test_passed",
@@ -351,14 +352,21 @@
     },
     "ai_work": "stopping_this_turn_after_independent_preparations_per_user_no_polling",
     "runtime_resize": {
-      "status": "implemented_smoke_passed_ready_to_switch",
+      "status": "running_verified",
       "requested_cpu_allowance": 9,
       "max_workers": 4,
       "threads_per_worker": 2,
       "nominal_compute_threads": 8,
       "source_and_scientific_manifests_unchanged": true,
       "memory_admission": "Start extra workers only with>=6GiB estimated reclaimable memory; target4GiB headroom, no hard OS reservation",
-      "config": "notes/experiment-completion-v6/parallel-runtime-config-v1.json"
+      "config": "notes/experiment-completion-v6/parallel-runtime-config-v1.json",
+      "pid": 38715,
+      "active_workers_observed": 4,
+      "observed_cpu_cores_approx": 7.5,
+      "protected_checkpoint_receipts": 425,
+      "preserved_receipt_mismatches": 0,
+      "verification": "notes/experiment-completion-v6/parallel-runtime-verification-v1.json",
+      "running_receipt": "notes/experiment-completion-v6/parallel-runtime-running-v1.json"
     }
   }
 }

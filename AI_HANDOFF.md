@@ -1,3 +1,7 @@
+# 当前并行运行入口（取代以下旧PID）
+
+2026-10-14T13:05:57+08:00：用户允许最多9核，已把计算和后续队列切换到PID38715，最多4进程×原2线程，实测约7.5核。先读outputs/completion-parallel-runtime-v1/status.json、failure.json(如有)、execution.log。旧35940/37905已终止，旧queue状态已标记superseded，禁止按旧PID重启。原科学worker和manifest未改；独立runtime溯源见notes/experiment-completion-v6/parallel-runtime-running-v1.json。425份已完成检查点记录哈希保护并验证未变。内存门控要求估计可回收>=6GiB才新增任务，目标余量4GiB不是硬OS预留；并发可低于4。所有后续参数/稳定性/SEFA及最终汇总由新调度器自动接续。不要重复启动。等用户回来再检查结果并同步新完成产物；此前不改论文、不轮询等计算。
+
 # 当前实验优先接手说明
 
 2026-10-14 04:53:05 UTC：用户要求独立准备结束后停止AI工作、后台计算继续，不要轮询等待，也不要提前写论文。PID35940为本轮消融，2进程；notes/experiment-completion-v6/queue-launch.json依次调度核心参数270、稳定性144、SEFA2025的108单元，最后汇总校验。队列启动PID见queue-running.json；不要依旧PID重启或重复作业。先读outputs/completion-queue-v6/status.json及failure.json(如有)，再看各阶段completion.json。新图渲染/QA和科学解释仍待结果，不能自动宣称创新或优势。未来完成证据尚待下一次AI活动依AGENTS上传GitHub。正文源SHA保持bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24，不可提前回填。

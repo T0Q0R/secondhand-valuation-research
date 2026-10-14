@@ -1,0 +1,63 @@
+{
+  "status": "verified_resumed",
+  "time": "2026-10-14T13:05:13+08:00",
+  "running": {
+    "status": "running",
+    "stage": "ablation",
+    "pid": 38715,
+    "active_pids": [
+      38721,
+      38728,
+      38731,
+      38736
+    ],
+    "active_pairs": [
+      [
+        "jucars",
+        13
+      ],
+      [
+        "jucars",
+        42
+      ],
+      [
+        "jucars",
+        2026
+      ],
+      [
+        "mucars",
+        13
+      ]
+    ],
+    "remaining_pairs": [
+      [
+        "mucars",
+        42
+      ],
+      [
+        "mucars",
+        2026
+      ]
+    ],
+    "completed_pairs": 3,
+    "expected_pairs": 9,
+    "max_workers": 4,
+    "threads_per_worker": 2,
+    "cpu_thread_budget": 8,
+    "memory": {
+      "free_percent": 46,
+      "estimated_reclaimable_gib": 7.36
+    },
+    "last_update": 1791954313.361262
+  },
+  "preserved_checkpoint_receipts": 425,
+  "changed_preserved_receipts": [],
+  "process_resource_snapshot": [
+    "38715     1   1.7  28480       00:37 ../.venv-gdfs/bin/python notes/experiment-completion-v6/run_parallel_runtime_v1.py --config notes/experiment-completion-v6/parallel-runtime-config-v1.json",
+    "38721 38715 187.0 280848       00:36 /Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/../.venv-gdfs/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=6, pipe_handle=8) --multiprocessing-fork",
+    "38728 38715 190.6 1516752       00:33 /Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/../.venv-gdfs/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=6, pipe_handle=10) --multiprocessing-fork",
+    "38731 38715 187.8 373952       00:30 /Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/../.venv-gdfs/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=6, pipe_handle=12) --multiprocessing-fork",
+    "38736 38715 188.0 1154832       00:27 /Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/../.venv-gdfs/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=6, pipe_handle=14) --multiprocessing-fork"
+  ],
+  "scope": "Measured after runtime-only resize; completion and speedup not yet claimed"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "started_runtime_resize",
+  "pid": 38715,
+  "started_unix": 1791954276.927221,
+  "replaced_master": 35940,
+  "replaced_idle_queue": 37905,
+  "maximum_workers": 4,
+  "threads_per_worker": 2,
+  "nominal_compute_threads": 8,
+  "user_allowance": 9,
+  "preserved_checkpoint_receipts": 425,
+  "checkpoint_snapshot": "notes/experiment-completion-v6/parallel-resize-preserved-checkpoints.json",
+  "scientific_worker_sources_and_manifests_unchanged": true,
+  "partial_rounds": "Only any unfinished uncommitted round/cell may be recomputed; completed checkpoints preserved",
+  "status_path": "outputs/completion-parallel-runtime-v1/status.json"
+}
