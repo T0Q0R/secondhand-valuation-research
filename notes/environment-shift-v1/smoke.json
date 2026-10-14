@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "smoke_only": true,
+  "checks": [
+    {
+      "source": "synthetic",
+      "rate": 0.0,
+      "rows": 100,
+      "legal_deviations": 1041
+    },
+    {
+      "source": "synthetic",
+      "rate": 0.1,
+      "rows": 100,
+      "legal_deviations": 891
+    },
+    {
+      "source": "synthetic",
+      "rate": 0.3,
+      "rows": 100,
+      "legal_deviations": 633
+    },
+    {
+      "source": "jucars",
+      "rate": 0.0,
+      "rows": 100,
+      "legal_deviations": 1008
+    },
+    {
+      "source": "jucars",
+      "rate": 0.1,
+      "rows": 100,
+      "legal_deviations": 875
+    },
+    {
+      "source": "jucars",
+      "rate": 0.3,
+      "rows": 100,
+      "legal_deviations": 662
+    },
+    {
+      "source": "mucars",
+      "rate": 0.0,
+      "rows": 100,
+      "legal_deviations": 1084
+    },
+    {
+      "source": "mucars",
+      "rate": 0.1,
+      "rows": 100,
+      "legal_deviations": 912
+    },
+    {
+      "source": "mucars",
+      "rate": 0.3,
+      "rows": 100,
+      "legal_deviations": 651
+    }
+  ],
+  "hash_mask_determinism": true,
+  "nested_masks": true,
+  "zero_rate_identity": true,
+  "targets_ids_unchanged": true,
+  "scope": "9engineering cells on100records/source;not scientific outcomes"
+}

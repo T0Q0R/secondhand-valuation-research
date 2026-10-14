@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T19:06:25+08:00",
+  "snapshot_time": "2026-10-14T19:13:58+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -406,5 +406,13 @@
     "coverage": "notes/completion-statistics-v1/COVERAGE.zh.md",
     "pid": 60157,
     "status_path": "outputs/completion-statistics-v1/status.json"
+  },
+  "environment_shift": {
+    "status": "validated_pending_queue_launch",
+    "cells": 189,
+    "new_evaluations": 126,
+    "reused": 63,
+    "new_fits": 0,
+    "plan": "notes/environment-shift-v1/JOURNAL_GAPS.zh.md"
   }
 }

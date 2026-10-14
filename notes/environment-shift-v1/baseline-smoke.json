@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "source": "synthetic",
+      "method": "masking_risk",
+      "rate": 0.0,
+      "kind": "risk"
+    },
+    {
+      "source": "synthetic",
+      "method": "masking_risk",
+      "rate": 0.3,
+      "kind": "risk"
+    },
+    {
+      "source": "synthetic",
+      "method": "masking_benefit",
+      "rate": 0.0,
+      "kind": "benefit"
+    },
+    {
+      "source": "synthetic",
+      "method": "masking_benefit",
+      "rate": 0.3,
+      "kind": "benefit"
+    },
+    {
+      "source": "jucars",
+      "method": "masking_risk",
+      "rate": 0.0,
+      "kind": "risk"
+    },
+    {
+      "source": "jucars",
+      "method": "masking_risk",
+      "rate": 0.3,
+      "kind": "risk"
+    },
+    {
+      "source": "jucars",
+      "method": "masking_benefit",
+      "rate": 0.0,
+      "kind": "benefit"
+    },
+    {
+      "source": "jucars",
+      "method": "masking_benefit",
+      "rate": 0.3,
+      "kind": "benefit"
+    },
+    {
+      "source": "mucars",
+      "method": "masking_risk",
+      "rate": 0.0,
+      "kind": "risk"
+    },
+    {
+      "source": "mucars",
+      "method": "masking_risk",
+      "rate": 0.3,
+      "kind": "risk"
+    },
+    {
+      "source": "mucars",
+      "method": "masking_benefit",
+      "rate": 0.0,
+      "kind": "benefit"
+    },
+    {
+      "source": "mucars",
+      "method": "masking_benefit",
+      "rate": 0.3,
+      "kind": "benefit"
+    }
+  ],
+  "smoke_only": true,
+  "scope": "12engineering100-row cells;zero-shift response matches original saved first batch"
+}

@@ -1,0 +1,19 @@
+{
+  "predecessor": "outputs/mechanism-tail-v1/status.json",
+  "frozen_files": {
+    "experiments/run_environment_shift_v1.py": "a65ec1c50bc2d4e53b665680bd976dfb578c746f4b50956ac2bb795bbd7fe3cd",
+    "notes/environment-shift-v1/analyze.py": "6ceef34effe2393aa5fdd41eef1368e7f3db816ed53dc19c28ddf7cb6535ab83",
+    "notes/environment-shift-v1/runtime.json": "2ec578af1474ea621c251131a167834658a293d275c7bf245fb33ec24ab7e61b",
+    "notes/experiment-completion-v6/run_parallel_runtime_v1.py": "a498797373c64d982c1d9574559a4d9046e2acaaf02935565043dbe748ff92a2",
+    "outputs/environment-shift-v1/manifest.json": "7cc8f18abb53f8ea2410c8590700856d1052f716a9c3f9399e863aea85e1011e",
+    "experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "experiments/run_completion_ablation_v6.py": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+    "experiments/mechanism_diagnostics_v1.py": "51f2d69aa5e4a824d8fd0d97a6fd6128fe67c8ef625de750c78ce490e5c39d3c"
+  },
+  "expected_cells": 189,
+  "new_evaluations": 126,
+  "reused": 63,
+  "new_price_fits": 0,
+  "status": "validated_pending_launch"
+}
