@@ -1,3 +1,7 @@
+# 最新追加：期刊适用条件压力实验
+
+2026-10-14T19:14:50+08:00：PID60933等待机制队列59731成功结束后运行环境压力实验，状态outputs/environment-shift-queue-v1/status.json；计算时看outputs/environment-shift-runtime-v1/status.json。189单元（63复用/126新评估），0重训；额外天然缺失0/.1/.3，7方法含risk/benefit。正文缺口与非计算待办见notes/environment-shift-v1/JOURNAL_GAPS.zh.md。不重复启动；总预算9线程。原所有队列保留，正文冻结。
+
 # 第九计算线程：统计后处理队列
 
 2026-10-14T19:06:25+08:00：用户再次授权9核，训练仍PID38715最多4×2线程；单核分析PID60157已启动，状态outputs/completion-statistics-v1/status.json。它处理完成的消融，再自动等参数/稳定性/SEFA/机制阶段。机制尾队列59731保留。总名义8+1线程；等待时不占满CPU。不要重复启动。配对bootstrap/Pareto只属探索性分析，3种子不保证覆盖率。正文冻结；未来科学/图表QA、结果GitHub同步仍待下一次活动。

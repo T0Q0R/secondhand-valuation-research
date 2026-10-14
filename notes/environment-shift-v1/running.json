@@ -1,0 +1,14 @@
+{
+  "pid": 60933,
+  "started": 1791976460.456185,
+  "status": "launched_waiting_for_mechanism",
+  "new_evaluations": 126,
+  "new_fits": 0,
+  "verified_at": "2026-10-14T19:14:50+08:00",
+  "verified_status": {
+    "status": "waiting_for_mechanism_queue",
+    "pid": 60933,
+    "time": 1791976460.510907
+  },
+  "configuration_commit": "e93f4a1b9f26d00d4cd298e354f199b78907f9f4"
+}
