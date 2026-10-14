@@ -1,0 +1,37 @@
+{
+  "status": "scientific_commit_and_readbacks_verified",
+  "repository": "T0Q0R/secondhand-valuation-research",
+  "scientific_commit": "f0dc9a86149661cd2a748a6427fa52da114ca0d8",
+  "timestamp_utc": "2026-10-14 02:58:00 UTC",
+  "checks": [
+    {
+      "path": "paper/innovation-addendum-v1.tex",
+      "sha": "a76249d8aac946858d8a41145635f16b55d4a7b8"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.pdf",
+      "sha": "6b3b7354bbd6b821be5acd818229c5dbb7bad11f"
+    },
+    {
+      "path": "paper/revision-delivery-v4.zip",
+      "sha": "25ed292fcb442b59f71820eaad1eff2ab2b66e84"
+    },
+    {
+      "path": "notes/teacher-review-v4/diagnostic-completion.json",
+      "sha": "541016c8d024d42b7f2809ad9cecd08eafd3b318"
+    },
+    {
+      "path": "docs/STATUS.json",
+      "sha": "ec949628608258603e71383512dcb6707ce5e892"
+    },
+    {
+      "path": "AI_HANDOFF.md",
+      "sha": "9be1bcdc55bba9ce796e903c91f496c111853575"
+    },
+    {
+      "path": "README.md",
+      "sha": "a4480f43de4253cf6f6c89aacfc107d941ba3e47"
+    }
+  ],
+  "scope": "Teacher wording/denominator revisions, aggregate arithmetic and three frozen-model inference checks; no new training, seller-response optimization or public release"
+}
