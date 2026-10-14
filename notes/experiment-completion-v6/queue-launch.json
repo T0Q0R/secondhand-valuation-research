@@ -1,4 +1,5 @@
 {
+  "status": "ready_after_remote_verification",
   "ablation_pid": 35940,
   "workers_per_stage": 2,
   "stages": [
@@ -10,11 +11,26 @@
       "manifest_sha256": "0cd9dcc9afbadae0d8dbf5f7b4c134ec60f0c1c7ed7b98e208b6418db04d58fa"
     },
     {
+      "name": "stability",
+      "script": "experiments/run_completion_stability_v6.py",
+      "output": "outputs/completion-stability-v6",
+      "script_sha256": "9d55eda852f1ec18adeb146c198f10b74a7cfadca20833aa60de5b901a748a0a",
+      "manifest_sha256": "619f485b6f7c74a421611caa012507e6f3cd9c4c426c8aa3878eb23853feeb53"
+    },
+    {
       "name": "sefa2025",
       "script": "experiments/run_completion_sefa_v6.py",
       "output": "outputs/completion-sefa-v6-official",
       "script_sha256": "c4a4b21bcdd2285b57dfab45e46abae437eb7633f32db800e4d64e2c341e8875",
       "manifest_sha256": "45b092de011434981d3274af6c6d6d149ea9855038d16f9e2c2b2a1db9da4c5a"
     }
-  ]
+  ],
+  "analysis": {
+    "script": "notes/experiment-completion-v6/analyze_completed.py",
+    "script_sha256": "ff4db8f884451a3f7f8f69346b36270dd402da422889439efe8ff01c6d7ee08d",
+    "output": "outputs/completion-analysis-v6"
+  },
+  "no_manuscript_writes": true,
+  "stop_on_failure": true,
+  "total_evaluation_cells_including_reused": 954
 }

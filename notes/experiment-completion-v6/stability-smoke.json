@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "completion": {
+    "status": "completed_and_corroborated",
+    "cells": 1,
+    "summary_sha256": "bf44a24afbb431fe1b08bb2146c57b70cd0001e4255ba662c789eb6ce17c7a1a",
+    "manifest_sha256": "6df08995736a6274b717fe8f0d2154f2f05d0365897728d7ad3a4109347502d4",
+    "smoke_only": true
+  },
+  "structural_controls": {
+    "status": "structural_controls_pass",
+    "residual_width": 32,
+    "head_tree_count": 80,
+    "total_epochs": 6,
+    "scope": "New controls propagate through outer fitting and deployment; baseline identity established by core parameter smoke"
+  },
+  "initial_failure": "Deployment head initially inherited160trees instead of80; structural smoke rejected, corrected to use per-variant config; prior generation retained",
+  "new_price_fits": 576,
+  "settings": 16,
+  "full_cells": 144
+}

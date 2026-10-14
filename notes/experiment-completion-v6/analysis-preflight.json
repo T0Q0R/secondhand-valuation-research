@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "known_factorial_main_interactions_and_contrast_sign": "pass",
+  "negative_control": "incomplete_job_rejected",
+  "uses_fabricated_experiment_results": false,
+  "only_unsaved_toy_inputs_for_algebra_test": true,
+  "new_curves_rendered": false
+}

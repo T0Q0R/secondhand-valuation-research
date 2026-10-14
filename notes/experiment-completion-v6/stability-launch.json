@@ -1,0 +1,223 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0.1
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "workers": 2,
+  "smoke_only": false,
+  "settings": {
+    "anchor_weight-0": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "anchor_weight",
+      "updates": {
+        "anchor_weight": 0.0
+      }
+    },
+    "anchor_weight-0.125": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "anchor_weight",
+      "updates": {
+        "anchor_weight": 0.125
+      }
+    },
+    "anchor_weight-0.5": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "anchor_weight",
+      "updates": {
+        "anchor_weight": 0.5
+      }
+    },
+    "anchor_weight-1": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "anchor_weight",
+      "updates": {
+        "anchor_weight": 1.0
+      }
+    },
+    "attack_loss_weight-0": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "attack_loss_weight",
+      "updates": {
+        "attack_loss_weight": 0.0
+      }
+    },
+    "attack_loss_weight-0.25": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "attack_loss_weight",
+      "updates": {
+        "attack_loss_weight": 0.25
+      }
+    },
+    "attack_loss_weight-1": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "attack_loss_weight",
+      "updates": {
+        "attack_loss_weight": 1.0
+      }
+    },
+    "attack_loss_weight-2": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "attack_loss_weight",
+      "updates": {
+        "attack_loss_weight": 2.0
+      }
+    },
+    "learning_rate-0.0003": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "learning_rate",
+      "updates": {
+        "learning_rate": 0.0003
+      }
+    },
+    "learning_rate-0.003": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "learning_rate",
+      "updates": {
+        "learning_rate": 0.003
+      }
+    },
+    "residual_epochs-6": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "residual_epochs",
+      "updates": {
+        "residual_epochs": 6
+      }
+    },
+    "residual_epochs-24": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "residual_epochs",
+      "updates": {
+        "residual_epochs": 24
+      }
+    },
+    "head_trees-80": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "head_trees",
+      "updates": {
+        "head_trees": 80
+      }
+    },
+    "head_trees-320": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "head_trees",
+      "updates": {
+        "head_trees": 320
+      }
+    },
+    "residual_hidden_width-32": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "residual_hidden_width",
+      "updates": {
+        "residual_hidden_width": 32
+      }
+    },
+    "residual_hidden_width-128": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "residual_hidden_width",
+      "updates": {
+        "residual_hidden_width": 128
+      }
+    }
+  },
+  "expected_pairs": 9,
+  "expected_cells": 144,
+  "source_sha256": "9d55eda852f1ec18adeb146c198f10b74a7cfadca20833aa60de5b901a748a0a",
+  "common_source_sha256": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+  "paper_frozen_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+  "scope": "Additional loss/optimizer/capacity stability,one factor at a time; no evaluation-driven default selection"
+}

@@ -12,6 +12,7 @@ def alive(pid):
 def main():
  lock=(OUT/'execution.lock').open('a+');fcntl.flock(lock.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB);manifest=json.loads((NOTES/'queue-launch.json').read_text());status=dict(status='waiting_for_ablation',started_unix=time.time(),pid=os.getpid(),stages=[]);write(OUT/'status.json',status)
  while not (ROOT/'outputs/completion-ablation-v6/completion.json').exists():
+  if (ROOT/'outputs/completion-ablation-v6/failure.json').exists():raise RuntimeError('Ablation has a failure receipt; dependent queue stopped')
   if not alive(manifest['ablation_pid']):raise RuntimeError('Ablation exited without completion; dependent queue stopped')
   time.sleep(20)
  completion=json.loads((ROOT/'outputs/completion-ablation-v6/completion.json').read_text());assert completion['cells']==432 and completion['status']=='completed_and_corroborated'
@@ -23,7 +24,12 @@ def main():
     rc=process.wait()
    if rc!=0:raise RuntimeError(f"{stage['name']} failed, exit{rc}; see frozen failure receipt")
   done=json.loads((output/'completion.json').read_text());assert done['status']=='completed_and_corroborated' and done['cells']==frozen['expected_cells'];status['stages'].append(dict(name=stage['name'],completion_sha256=sha(output/'completion.json'),cells=done['cells'],time=time.time()));write(OUT/'status.json',status)
- status.update(status='computations_completed_analysis_and_qa_pending',last_update=time.time());write(OUT/'status.json',status)
+ analysis=manifest['analysis'];script=ROOT/analysis['script'];assert sha(script)==analysis['script_sha256'];status.update(status='checking_results',current_stage='aggregate_analysis',last_update=time.time());write(OUT/'status.json',status)
+ with (OUT/'analysis.log').open('ab',buffering=0) as log:
+  rc=subprocess.call(['../.venv-gdfs/bin/python',str(script),'--output',str(ROOT/analysis['output'])],cwd=ROOT,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT)
+ if rc!=0:raise RuntimeError('Aggregate integrity/coverage analysis failed; no paper generation allowed')
+ status.update(status='computations_and_aggregate_checks_completed_scientific_visual_review_pending',last_update=time.time());write(OUT/'status.json',status)
 if __name__=='__main__':
  try:main()
- except Exception as exc:write(OUT/'failure.json',dict(error=repr(exc),time=time.time()));raise
+ except Exception as exc:
+  failure=dict(status='failed_preserving_all_checkpoints',error=repr(exc),time=time.time());write(OUT/'failure.json',failure);write(OUT/'status.json',failure);raise

@@ -1,3 +1,7 @@
+# 当前实验优先接手说明
+
+2026-10-14 04:53:05 UTC：用户要求独立准备结束后停止AI工作、后台计算继续，不要轮询等待，也不要提前写论文。PID35940为本轮消融，2进程；notes/experiment-completion-v6/queue-launch.json依次调度核心参数270、稳定性144、SEFA2025的108单元，最后汇总校验。队列启动PID见queue-running.json；不要依旧PID重启或重复作业。先读outputs/completion-queue-v6/status.json及failure.json(如有)，再看各阶段completion.json。新图渲染/QA和科学解释仍待结果，不能自动宣称创新或优势。未来完成证据尚待下一次AI活动依AGENTS上传GitHub。正文源SHA保持bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24，不可提前回填。
+
 # AI接手入口
 
 先读AGENTS.md、docs/STATUS.md以及最新实验完整性记录。
