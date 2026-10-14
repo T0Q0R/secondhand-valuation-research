@@ -1,0 +1,25 @@
+{
+  "runtime_output": "outputs/recovery-path-learning-runtime-v1",
+  "max_workers": 4,
+  "user_cpu_allowance": 9,
+  "nominal_compute_threads": 8,
+  "per_worker_torch_blas_head_threads": 2,
+  "memory_admission_gib": 6,
+  "memory_target_reserve_gib": 4,
+  "memory_reservation_is_hard": false,
+  "scientific_worker_sources_unchanged": true,
+  "stages": [
+    {
+      "name": "recovery_path_learning",
+      "script": "experiments/run_recovery_path_learning_v1.py",
+      "script_sha256": "4d859f8347a3b496765953d860921d8da3dd53e9928aee637b73f91b43036548",
+      "output": "outputs/recovery-path-learning-v1",
+      "manifest_sha256": "4c37e3aaf117c78fb472f477a119f1cf027f32518bb6e290adc3935def2749e6"
+    }
+  ],
+  "analysis": {
+    "script": "notes/recovery-path-learning-v1/analyze.py",
+    "script_sha256": "96ee36bed6c0470cb630f311b7448e90e9e2af4a0181919653db988295b2c6a3",
+    "output": "outputs/recovery-path-learning-analysis-v1"
+  }
+}

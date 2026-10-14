@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T19:14:50+08:00",
+  "snapshot_time": "2026-10-14T19:21:55+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -415,5 +415,15 @@
     "new_fits": 0,
     "plan": "notes/environment-shift-v1/JOURNAL_GAPS.zh.md",
     "pid": 60933
+  },
+  "recovery_path_learning": {
+    "status": "validated_pending_queue_launch",
+    "cells": 162,
+    "new_evaluations": 108,
+    "reused": 54,
+    "new_price_fits": 144,
+    "plan": "notes/recovery-path-learning-v1/LITERATURE_AND_DESIGN.zh.md",
+    "novelty": "candidate_requires_further_nearest_neighbor_review",
+    "superiority": "not_established"
   }
 }
