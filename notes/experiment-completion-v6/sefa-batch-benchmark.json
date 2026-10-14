@@ -1,0 +1,8 @@
+{
+  "scope": "synthetic128-row training batch,100latent samples,2threads,three steps; not end-to-end ETA",
+  "seconds_per_batch": {
+    "1": 0.03889962499670219,
+    "5": 0.05283183333328149,
+    "9": 0.07117705566633958
+  }
+}

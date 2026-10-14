@@ -1,0 +1,50 @@
+{
+  "repo": "a-norcliffe/SEFA",
+  "commit": "3af8da2c9212c294fc7fedad27bc31045db7607a",
+  "files": [
+    {
+      "path": "models/sefa.py",
+      "sha256": "0a6dcb4b345d980547ab6183a919416455f87283085aefa0077709f1a16e0789"
+    },
+    {
+      "path": "models/base.py",
+      "sha256": "76423b573260f375d2db01e99e263a9a3be249dff3fe3559c741e851f132e1e1"
+    },
+    {
+      "path": "models/standard_layers.py",
+      "sha256": "04c2c6a52febe36e36375261a158986ce5d9b8f4ae9c89253e0b8b9a0a7fb90a"
+    },
+    {
+      "path": "models/shared_functions.py",
+      "sha256": "dad8d9a8d87d7fb0ffc76678d9068e3966041a3373c6964c8ff6160ef9129ab1"
+    },
+    {
+      "path": "models/constants.py",
+      "sha256": "22ccbaf09ccfcfa08ff3018f1490aecdf13e2c8089db38d5aae972045d6c4c3b"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "4875965ecf1cc2ac5e4a1a2cd3a9e46386a47da94ea34686bd2567939fd2741e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3249019b624e9bba7742a154c9c9ce6b7e6c729b21e42abf4f2d7973a59bbecf"
+    },
+    {
+      "path": "datasets/create_california_housing.py",
+      "sha256": "7b5dcd056e4e0d195c6502a7818818564cf21beeb14a1af0f9b4512be39c9ddb"
+    },
+    {
+      "path": "experiments/hyperparameters/configs/sefa/config1.json",
+      "sha256": "e4eaca852ad8dfa615fa68f6534921c03f26c3e91ba530f398cc96f2832c031f"
+    },
+    {
+      "path": "experiments/hyperparameters/configs/sefa/config5.json",
+      "sha256": "639a2243c5549b61504e9fff22de67a6df3d08c32c88262f1f9598132e7bf74f"
+    },
+    {
+      "path": "experiments/hyperparameters/configs/sefa/config9.json",
+      "sha256": "6308877e94fdfe20976235c44025ee389f342750bb41fa983e236e1b1069f197"
+    }
+  ]
+}

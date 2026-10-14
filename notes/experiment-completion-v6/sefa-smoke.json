@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "completion": {
+    "status": "completed_and_corroborated",
+    "cells": 2,
+    "summary_sha256": "43b77d20665c9343a865182157069be6a5fda31992e70dadd06a467467bec4f6",
+    "manifest_sha256": "6ee72106285aa1ddcd1155bc32f54f0c79ab07d86db5aacb6733cfa635581bb5",
+    "smoke_only": true
+  },
+  "public_input": {
+    "status": "passed",
+    "hidden_value_perturbation": "mileage at concealed state",
+    "zero_label_inputs": true,
+    "finite_scores": 1705
+  },
+  "torch_compatibility": {
+    "forward_and_gradients_vs_separate_blocks": "pass",
+    "patch": "view to reshape on noncontiguous einsum output",
+    "official_files_modified": false
+  },
+  "initial_smoke_failure": "Official block einsum view incompatible with torch2.14 CPU strides; frozen original preserved, algebra-equivalent reshape adapter added",
+  "scope": "Tiny2-epoch smoke only; full official120epoch/100train200predict200acquisition sample configs still pending",
+  "full_trials_preserve_official_120_epochs": true
+}

@@ -1,0 +1,119 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "source_sha256": "c4a4b21bcdd2285b57dfab45e46abae437eb7633f32db800e4d64e2c341e8875",
+  "official_sources": {
+    "repo": "a-norcliffe/SEFA",
+    "commit": "3af8da2c9212c294fc7fedad27bc31045db7607a",
+    "files": [
+      {
+        "path": "models/sefa.py",
+        "sha256": "0a6dcb4b345d980547ab6183a919416455f87283085aefa0077709f1a16e0789"
+      },
+      {
+        "path": "models/base.py",
+        "sha256": "76423b573260f375d2db01e99e263a9a3be249dff3fe3559c741e851f132e1e1"
+      },
+      {
+        "path": "models/standard_layers.py",
+        "sha256": "04c2c6a52febe36e36375261a158986ce5d9b8f4ae9c89253e0b8b9a0a7fb90a"
+      },
+      {
+        "path": "models/shared_functions.py",
+        "sha256": "dad8d9a8d87d7fb0ffc76678d9068e3966041a3373c6964c8ff6160ef9129ab1"
+      },
+      {
+        "path": "models/constants.py",
+        "sha256": "22ccbaf09ccfcfa08ff3018f1490aecdf13e2c8089db38d5aae972045d6c4c3b"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "4875965ecf1cc2ac5e4a1a2cd3a9e46386a47da94ea34686bd2567939fd2741e"
+      },
+      {
+        "path": "README.md",
+        "sha256": "3249019b624e9bba7742a154c9c9ce6b7e6c729b21e42abf4f2d7973a59bbecf"
+      },
+      {
+        "path": "datasets/create_california_housing.py",
+        "sha256": "7b5dcd056e4e0d195c6502a7818818564cf21beeb14a1af0f9b4512be39c9ddb"
+      },
+      {
+        "path": "experiments/hyperparameters/configs/sefa/config1.json",
+        "sha256": "e4eaca852ad8dfa615fa68f6534921c03f26c3e91ba530f398cc96f2832c031f"
+      },
+      {
+        "path": "experiments/hyperparameters/configs/sefa/config5.json",
+        "sha256": "639a2243c5549b61504e9fff22de67a6df3d08c32c88262f1f9598132e7bf74f"
+      },
+      {
+        "path": "experiments/hyperparameters/configs/sefa/config9.json",
+        "sha256": "6308877e94fdfe20976235c44025ee389f342750bb41fa983e236e1b1069f197"
+      }
+    ]
+  },
+  "workers": 2,
+  "smoke_only": false,
+  "pairs": 9,
+  "expected_cells": 108,
+  "selection_trials": [
+    1,
+    5,
+    9
+  ],
+  "scope": "SEFA acquisition on four price bins; fixed separate price models; shared one-query budget adaptation"
+}

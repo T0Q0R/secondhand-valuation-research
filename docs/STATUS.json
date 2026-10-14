@@ -318,6 +318,16 @@
       "cells": 270,
       "new_price_fits": 432,
       "manifest": "notes/experiment-completion-v6/parameters-launch.json"
+    },
+    "recent_baseline": {
+      "status": "official_SEFA_implementation_smoke_passed_formal_queued",
+      "pairs": 9,
+      "backends": 2,
+      "cells": 108,
+      "official_commit": "3af8da2c9212c294fc7fedad27bc31045db7607a",
+      "scope": "four-bin official acquisition; separate fixed price model, one-query batch adaptation",
+      "formal_epochs": 120,
+      "training_only_trials": 3
     }
   }
 }

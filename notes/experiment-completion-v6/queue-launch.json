@@ -1,0 +1,20 @@
+{
+  "ablation_pid": 35940,
+  "workers_per_stage": 2,
+  "stages": [
+    {
+      "name": "parameters",
+      "script": "experiments/run_completion_parameters_v6.py",
+      "output": "outputs/completion-parameters-v6",
+      "script_sha256": "9a382d41c0497a0947dd8030bfd1e0853a83599dc8d4d6d4ff763706acf330c6",
+      "manifest_sha256": "0cd9dcc9afbadae0d8dbf5f7b4c134ec60f0c1c7ed7b98e208b6418db04d58fa"
+    },
+    {
+      "name": "sefa2025",
+      "script": "experiments/run_completion_sefa_v6.py",
+      "output": "outputs/completion-sefa-v6-official",
+      "script_sha256": "c4a4b21bcdd2285b57dfab45e46abae437eb7633f32db800e4d64e2c341e8875",
+      "manifest_sha256": "45b092de011434981d3274af6c6d6d149ea9855038d16f9e2c2b2a1db9da4c5a"
+    }
+  ]
+}
