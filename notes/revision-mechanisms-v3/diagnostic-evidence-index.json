@@ -1,0 +1,14 @@
+{
+  "archive": "diagnostic-evidence.zip",
+  "bytes": 240474,
+  "sha256": "f829df82a1b6b7165b39af539989d9ad29eca9632299522fc36d547a84e045fe",
+  "files": {
+    "diagnose.py": "82fe410703c57ce03157e2dc7d6756d2fd577d24aa5fd403062f26eed52821de",
+    "DIAGNOSTICS.md": "49bfab2916ac1e5ff72a3b704300c14024d893280fee3cd8bc265ba5422e172b",
+    "completion.json": "edc926b76829c7f94114d16dc58a5b0e4df7b359f53c47161873d718f927ef2f",
+    "variance_components.csv": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e",
+    "cost_mechanism_means.csv": "f00a9c567b8bcbedf6ac0d6eef23506070afd9d6693062479641d2b3b97972ee",
+    "cost_mechanism_batches.csv": "56563fce7baba9c1d21c50c04ecd1daf9cc932cf0d1a0e5a527f13b9ac8973bd",
+    "paired_differences.npz": "d5623100f28330b32b2b8ba50fcc6708a50f49bceb4511e8686d6c8b3ada741a"
+  }
+}

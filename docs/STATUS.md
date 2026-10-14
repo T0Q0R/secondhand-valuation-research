@@ -15,3 +15,6 @@
 同机新环境1536汇总行和阈值复算通过；**外部机器全训练、公开/许可/DOI、真实作者责任及期刊/单位分区适配仍未完成**。私有上传不等于公开或投稿。历史26页包与旧PRE_SUBMISSION_REVIEW的可投稿性判断已superseded。
 
 [当前源文件](../paper/innovation-addendum-v1.tex) · [同稿PDF](../paper/innovation-addendum-v1.pdf) · [论文修订包](../paper/revision-delivery-v2.zip) · [完整扩评价证据](../notes/revision-review-v2/evaluation/full-expanded-evidence.zip) · [A–I回应](../notes/revision-review-v2/REVIEW_RESPONSE.zh.md)
+
+
+2026-10-14 新增：冻结产物机制诊断完成，论文回填待做；不再存在未完成的原扩评计算。见 notes/revision-mechanisms-v3/DIAGNOSTICS.md。扩评后两个MU对比的seed主方差占98.3%–98.4%；不能解释成零效应或训练人口不确定性。正成本隐瞒强度报告保留非收敛批次的识别范围。

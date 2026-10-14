@@ -273,3 +273,8 @@
 
 
 同步收尾：计算包及正文更新均已远程回读验证；同步凭据见notes/revision-review-v2/github-full-cohort-sync-receipt.json。原9952/15837/17329/12200进程均已退出；仅清理上传专用/tmp副本，原模型、逐条结果和证据仍保留。
+
+
+## 2026-10-14 Asia/Shanghai — frozen-outcome mechanism diagnostics
+
+Completed exact weighted crossed-bootstrap seed/batch/interaction decomposition (48 rows) and all 1,440 zero/positive-cost batch diagnostics; no training or response rerun. MUCars masking/suppression uncapped seed-main shares 98.39%/98.28%, correcting CI-width inversion. Positive-cost concealment has identified bounds, not invented state counts; all 20 nonconverged batches retained. Two exhaustive 2x2 variance oracles and 768 utility-bound cases pass. Source/input/output hashes and paired differences in notes/revision-mechanisms-v3/diagnostic-evidence.zip; index and technical explanation alongside. Limits: conditional training-randomness variance, no population/equivalence guarantee; mechanism co-occurrence does not identify causal mediation. Next: bounded final-record demonstration, explicit audit protocol, and concise manuscript backfill/compilation.

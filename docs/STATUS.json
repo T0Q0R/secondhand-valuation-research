@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-13 09:05:02 UTC",
+  "snapshot_time": "2026-10-14 Asia/Shanghai",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -161,5 +161,15 @@
     "sha256": "3b0d2afe572aadc82db082c82c98556a367704db3235b4bb771c42c09877c03b",
     "bytes": 4968632,
     "checksum_verified": true
+  },
+  "revision_v3": {
+    "status": "diagnostics_completed_paper_revision_pending",
+    "no_new_training": true,
+    "variance_seed_main_share_uncapped_mucars": [
+      0.983896,
+      0.982766
+    ],
+    "cost_concealment": "bounded using utility and regret; all nonconverged retained",
+    "evidence": "notes/revision-mechanisms-v3/diagnostic-evidence.zip"
   }
 }
