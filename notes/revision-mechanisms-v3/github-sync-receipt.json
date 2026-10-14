@@ -1,0 +1,38 @@
+{
+  "status": "remote_commit_and_readbacks_verified",
+  "scientific_commit": "a2339a85497d4218fc1916dbd429e765b4363007",
+  "unit_commits": [
+    "c4053de6e31157792d423ef35930b00b783eec5e",
+    "e87b4866e6652aef9d9394e7e867b71a9192d66d",
+    "e2c632827bae7d66a8faae22ce0ccbe3c67fe472",
+    "a2339a85497d4218fc1916dbd429e765b4363007"
+  ],
+  "repository": "T0Q0R/secondhand-valuation-research",
+  "checks": [
+    {
+      "path": "paper/innovation-addendum-v1.tex",
+      "sha": "780d75ea2216772a9c6b4518293833329f2666cc"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.pdf",
+      "sha": "47b086bfe67b035140bdd380f21d0a79aecaace4"
+    },
+    {
+      "path": "paper/revision-delivery-v3.zip",
+      "sha": "146b1b596e48d0e5200b6d97ae22f4074d90a8bc"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/completion.json",
+      "sha": "e9a77def8b50d765243fe986a874a8775fee5dbb"
+    },
+    {
+      "path": "docs/STATUS.json",
+      "sha": "96310bef9ba6ef07c786f4ca5095b2ce9fd595a5"
+    },
+    {
+      "path": "README.md",
+      "sha": "128bd0b6c61e33d046995c51961b5f0bfc9d4831"
+    }
+  ],
+  "limits": "Private repository only; no public DOI/release, external training reproduction or submission. A first final-binary upload returned no structured success; retried and verified blob SHA before committing."
+}
