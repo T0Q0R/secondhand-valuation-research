@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": [
+    "zero_and_constant_paired_bootstrap",
+    "known_pareto_relation",
+    "real_reused_cell_row_summary_agreement"
+  ],
+  "scientific_result": false
+}

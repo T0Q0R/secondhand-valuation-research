@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T19:00:26+08:00",
+  "snapshot_time": "2026-10-14T19:05:16+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -398,5 +398,11 @@
       "stability": 0,
       "sefa": 0
     }
+  },
+  "statistics_sidecar": {
+    "status": "validated_pending_launch",
+    "nominal_threads": 1,
+    "total_with_training": 9,
+    "coverage": "notes/completion-statistics-v1/COVERAGE.zh.md"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "script_sha256": "d0e53b05d852a8ecf30cefcad6837c0e0123bb4639b6209638f72a032cc4a99e",
+  "threads": 1,
+  "training_threads": 8,
+  "total_nominal_threads": 9,
+  "resamples": 4000,
+  "waiting_stages": [
+    "ablation",
+    "parameters",
+    "stability",
+    "sefa",
+    "mechanisms"
+  ],
+  "status": "validated_pending_launch",
+  "time": "2026-10-14T19:05:16+08:00"
+}
