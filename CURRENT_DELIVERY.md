@@ -1,22 +1,15 @@
-# 当前论文与证据交付
+# 当前交付与实验优先顺序
 
-本轮老师意见修订已完成。G.1区分队列扩展与尾批权重变化；摘要98%以上仅指uncapped的两个MU对比；G.3突出完整覆盖类别记录零变化、天然缺失记录可有大折减（最大为原预测报价25.5%，不是MAE占挂牌价30%）；§7.7补充成本条件下synthetic子集的描述性收益，仍非完全非策略化。八规则/十二规则、Table8 improvement符号及§7.6分母18已明确。详见notes/teacher-review-v4/REVIEW_RESPONSE.zh.md。
+快照：2026-10-14 04:17:36 UTC（Asia/Shanghai项目）。
 
+当前优先事项为补齐实验，未补齐前不再改写或重新生成论文。先核已有经典/近年基线、参数选择与敏感性、组件单独/组合移除消融以及结果曲线。不得假定三个组件都是创新点，不得重跑已有完成实验，不得把负结果删掉。
 
-快照：2026-10-14 02:58:00 UTC（Asia/Shanghai时区项目）。
+四张结果图在该指示前已完成并嵌入同一稿：cap多目标取舍、成本/反馈差异、绝对方差分解、final-record覆盖/误差集中。当前保存稿36页、6图、15表、16参考文献，作者留空。内置编译、原图字体/碰撞、三组面板对齐、六个嵌入图页默认阈值几何检查通过；0Overfull/未定义引用、原1Underfull。新图源数据/脚本/矢量/PNG/QA见notes/results-visual-v5/visualization-assets-v5.zip。没有新模型训练、响应求解或置信区间。
 
-本轮新增诊断、有限域试验、协议和论文回填已完成；没有待恢复的大计算，也没有新训练。当前稿32页，233词摘要、16引用、15表、2幅原矢量图，作者/单位留空。正式投稿条件仍未完成。
+本轮没有再生成全论文包。paper/revision-delivery-v4.zip是32页历史支持包，不是当前36页稿。当前源paper/innovation-addendum-v1.tex，SHA256 bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24；PDF c11fd3e09c2e16da6e73e016f98f18c4635d34e47b48c07d9bbb00ee7704ad0b。保持原编辑器；旧v2/v3/v4或v5回填脚本都不能在补齐实验前随意运行。
 
-- 全真实来源扩评仍为480单元、29,040批、2,891,040重复行，31,269,840合法单边偏离；24/24反馈方向不利，22/24未校正区间排除零。首10批复用原字节，原receipt出处保留于扩展绑定。
-- MU两个跨零对比的seed主项条件方差占98.39%/98.28%，不支持76%–81%的区间反推；不证明零效应/等效，也不量化新训练人口不确定性。30seed只是设计投影，未训练。
-- 正成本反转伴随隐瞒强烈下降、净偏离下降77.5%/81.1%、失败查询接近预算上限。正成本最终states未保存，报告效用/regret给出的识别范围，保留全部20个未收敛批次；不冒充精确隐瞒数或因果机制。
-- final-record三seed类别域pilot：JU801/MU999共享支持，199/1缺里程弃权；MU误差代价集中在28条自然缺类别样本。完整四字段（含里程隐瞒）替代机制仍未实测。
-- 显式audit-protocol/合同/执行文档/标准库validator已交付：六文件绑定和六错误控制通过。它是事后结构与哈希检查，不是科学有效性、完整独立性或外部训练复现证书。
+原30/30组、4320单元训练审计和全真实来源480单元扩评仍已完成；所有旧PID已退出，不能重启。MU跨零不是零效应；seed主项98%仅uncapped两个条件，队列/加权变化已区分。正成本反转只在synthetic子集有条件描述性收益，完整四字段final-record机制仍未实测。详见notes/teacher-review-v4/REVIEW_RESPONSE.zh.md。
 
-内置编译/同稿导出/对应检查/布局审阅通过；0 Overfull或未定义引用，保留原1 Underfull。当前源SHA256 546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c；PDF 67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d。
+公开/许可/DOI、外部全训练、作者事实与实际投稿仍未完成。不得宣称SAV普遍优势或SCI接收保证。科学环境用../.venv-gdfs/bin/python原路径；原始数据和权重不上传普通Git。每独立完成工作依AGENTS提交、推送、回读。
 
-原30/30组、4,320单元、432万重复行、45,372,960偏离的训练/核对保持完成。当前包为paper/revision-delivery-v4.zip（648810字节，SHA256 953e6ae358398854c5fc7f3a892c9edf90e14010972d116005f13ebb0f24146e）；v3/v2修订包与full-expanded证据是支持历史，不能当作当前稿。
-
-尚缺：作者责任与事实声明、单位适用的中科院分区版本/期刊模板、公开/许可/DOI决策、外部机器全训练复现。私有上传不等于公开或投稿；不宣称二区/三区接收保证。
-
-[当前源](paper/innovation-addendum-v1.tex) · [当前PDF](paper/innovation-addendum-v1.pdf) · [v4修订包](paper/revision-delivery-v4.zip) · [逐条处理](notes/teacher-review-v4/REVIEW_RESPONSE.zh.md) · [审计协议](audit-protocol/README.md)
+[当前PDF](paper/innovation-addendum-v1.pdf) · [新图证据](notes/results-visual-v5/visual-assets-index.json)

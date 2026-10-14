@@ -1,0 +1,90 @@
+{
+  "status": "source_data_pdf_layout_glyph_collision_and_visual_checks_passed",
+  "figure_count": 4,
+  "training_runs": 0,
+  "input_sha256": {
+    "outputs/replay-cap-response-full-v1-audit-v2/verified_summary.csv": "bd5334aab61bbe175c2ba357b3a692ccec6b5d30efe8d925a9c9cf61753ba5ec",
+    "notes/revision-mechanisms-v3/cost_mechanism_means.csv": "f00a9c567b8bcbedf6ac0d6eef23506070afd9d6693062479641d2b3b97972ee",
+    "outputs/review-cost-sensitivity-v2-analysis/all_seed_cells.csv": "01d02466936002409919d5d9e32dc911f19627343b5a981f5df132ca73e66071",
+    "notes/revision-mechanisms-v3/variance_components.csv": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e",
+    "notes/revision-mechanisms-v3/final_record_pilot.csv": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9",
+    "notes/teacher-review-v4/price_and_singleton_diagnostics.csv": "019f86115530e8871105adccb90cbc7bd10a72566c2df63abc1aee6097a9de2a"
+  },
+  "script_sha256": "9b98f8b5ad304bce64404344d203acbb8811faf9fb18d94c433d4854bf752028",
+  "figures": [
+    {
+      "name": "cap-tradeoffs",
+      "panels": 2,
+      "dimensions_inches": [
+        6.3,
+        3.5
+      ],
+      "alignment": "PASS",
+      "minimum_configured_text_pt": 8
+    },
+    {
+      "name": "cost-mechanism",
+      "panels": 2,
+      "dimensions_inches": [
+        6.3,
+        3.5
+      ],
+      "alignment": "PASS",
+      "minimum_configured_text_pt": 8
+    },
+    {
+      "name": "uncertainty-components",
+      "panels": 1,
+      "dimensions_inches": [
+        6.3,
+        3.1
+      ],
+      "alignment": "NOT APPLICABLE",
+      "minimum_configured_text_pt": 8
+    },
+    {
+      "name": "envelope-boundary",
+      "panels": 2,
+      "dimensions_inches": [
+        6.3,
+        3.5
+      ],
+      "alignment": "PASS",
+      "minimum_configured_text_pt": 8
+    }
+  ],
+  "source_audit": "19PASS;2documentedWARN;0FAIL",
+  "embedded_geometry": "six pages PASS, default thresholds with XeTeX glyph extraction adapter",
+  "output_sha256": {
+    "paper/figures/results-visual-v5/cap-tradeoffs.pdf": "0357f30a5c7f16504c90316fd6619622475ef1683178c64d75e7d4e0d50a8f02",
+    "paper/figures/results-visual-v5/cost-bounds-source.csv": "549a0ceb3f90db16004f385f2050d7d1ef491df22955e9ca113047b2d4cf68c8",
+    "paper/figures/results-visual-v5/cap-tradeoffs.png": "c4058e1c385a992642935d6247d63481d458fd81dfacb4b3eacd637b55420d16",
+    "paper/figures/results-visual-v5/cost-mechanism.svg": "c87e91a9d749b55c03ba07a9c54991ba6d8a160d7854f8fa1335ad82f48b9b38",
+    "paper/figures/results-visual-v5/cost-mechanism.pdf": "11095b5250382765e6bfd347c26eb0500463ad5ce30a479ea1c44e7de3e994eb",
+    "paper/figures/results-visual-v5/cap-tradeoffs-source.csv": "9d5a7e78cda0a80d887bc08cacd741727f1c2312c0eb58fd0058f8e4a1214c59",
+    "paper/figures/results-visual-v5/cost-mechanism.collision.json": "41161b5dbc4418e1b63c44c57ddd4bb6cb66265bf58ab0c70486e68aef48c6fd",
+    "paper/figures/results-visual-v5/cap-tradeoffs.glyph.json": "89911c91b72183778d608551f860b6122e46c610de7dc67a2654373936c1cb4e",
+    "paper/figures/results-visual-v5/cost-mechanism.png": "e435c5c5decfc3d76c5a52b10f9536aae511d6d0bd19238ad8b1d8728c4621c6",
+    "paper/figures/results-visual-v5/envelope-coverage-source.csv": "c8cbc42294c6421c7344f3cb43eaec2b719c3ab03f7a33350699f5c7ede533df",
+    "paper/figures/results-visual-v5/cap-tradeoffs.svg": "5e1f4403c012c33bf64cfc25cbf6d689ab345512ace6981404cc2454ece58b13",
+    "paper/figures/results-visual-v5/cost-mechanism.alignment.json": "02dcc5fff5631792dbf4fb03dc317e2e7a7d3be363fd58b71debe78ae085a1a0",
+    "paper/figures/results-visual-v5/envelope-error-source.csv": "938583a6bab2ceb163fc4e53082e87ff3d09a20d9163f57de0ec275fc325f9e5",
+    "paper/figures/results-visual-v5/uncertainty-components.png": "e8e9bb496843e0fab237792fa260e742e1b5c8dae79d6906189958b9332501ea",
+    "paper/figures/results-visual-v5/uncertainty-components.collision.json": "d5311aa22526614f34ecdbec9960168389a88995f96a1737dad51db5cd08c2c8",
+    "paper/figures/results-visual-v5/envelope-boundary.svg": "4f432aa366e4e7393cc1062d8d4eb313078025f1af60a0cda6de1df6035dda14",
+    "paper/figures/results-visual-v5/uncertainty-components.pdf": "5099334a9952c2ebc65d74cbd86d6c56227b8f0f812db552d8e14d8f92b3a54c",
+    "paper/figures/results-visual-v5/cost-paired-source.csv": "d1129abbb57f2e584f852b29e03f178177d32a56a997f525c8349a22fd6f9382",
+    "paper/figures/results-visual-v5/uncertainty-components.alignment.json": "db681371a7cbe245daee9bec37877f964c732175301e3a01880267565c6ef09f",
+    "paper/figures/results-visual-v5/envelope-boundary.glyph.json": "d45507db1b74650eb3960b7d781fc3f809275645299ddfe96ecedd07550987ba",
+    "paper/figures/results-visual-v5/cap-tradeoffs.collision.json": "f1981a3705216fa2edcb335a648e781133a26b31a175b2705535026a45722225",
+    "paper/figures/results-visual-v5/uncertainty-components.glyph.json": "d50683435e11a05d8818d85700548e79cef8f14039ddb4bdb61b09e69ad93547",
+    "paper/figures/results-visual-v5/envelope-boundary.alignment.json": "d9b8a8f407ad8fd0a0258aba67f3741f36916ca11296c83b4c0e188bc90493f6",
+    "paper/figures/results-visual-v5/cost-mechanism.glyph.json": "98b7e5ef84cd41ae9545c6ee53f86d45000a74cddd1a1f53ef73d0d150e5b735",
+    "paper/figures/results-visual-v5/envelope-boundary.png": "2289d654e2f6b89be74201abcb59792045b945d7e66458f72661a7aed3758619",
+    "paper/figures/results-visual-v5/envelope-boundary.collision.json": "ca464ca2e68c0017e5a5ae24a8c201dc6c2d1d851faa17176021150018a153bb",
+    "paper/figures/results-visual-v5/cap-tradeoffs.alignment.json": "6104b3fe2fba4403501dc6cf74aba6aeea79db554b20eade75db38e55c44e78a",
+    "paper/figures/results-visual-v5/envelope-boundary.pdf": "8e9fceb37a8d4a5928c7f9367461ab39f6420422eb19224e8b35455ffcf20f08",
+    "paper/figures/results-visual-v5/uncertainty-components.svg": "793d9bfdcf25b2dd558082ade03d6950719d8a22e58fb406df55733012d99bb4",
+    "paper/figures/results-visual-v5/variance-source.csv": "18a961e18198fa79d33fbd3b2532d95cad37791f1588c236f779ba0a7cca0ff9"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "builtin_compiled_exported_and_visual_checks_passed",
+  "figure_count": 6,
+  "new_figure_count": 4,
+  "new_training_runs": 0,
+  "source_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+  "script_sha256": "8fca031cc3a93fc6082ccd3d59db41c6ab3a41a2d34a8632fb415ce799a271d2",
+  "labels": [
+    "fig:cap_tradeoffs",
+    "fig:cost_mechanism",
+    "fig:uncertainty_components",
+    "fig:envelope_boundary"
+  ],
+  "pages": 36,
+  "pdf_sha256": "c11fd3e09c2e16da6e73e016f98f18c4635d34e47b48c07d9bbb00ee7704ad0b",
+  "all_figure_count": 6,
+  "original_figure_environments_unchanged": true
+}

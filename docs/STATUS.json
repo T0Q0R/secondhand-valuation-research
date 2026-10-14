@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14 02:58:00 UTC",
+  "snapshot_time": "2026-10-14 04:17:36 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,28 +28,32 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "teacher_v4_clarifications_compiled_and_layout_checked",
-    "pages": 32,
+    "revision_status": "four_visualizations_integrated_then_manuscript_generation_paused_for_experiment_completion",
+    "pages": 36,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "32-page contacts and changed pages 6/20/21/30/31 at full size",
-    "source_sha256": "546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c",
-    "pdf_sha256": "67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d",
+    "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 inspected",
+    "source_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+    "pdf_sha256": "c11fd3e09c2e16da6e73e016f98f18c4635d34e47b48c07d9bbb00ee7704ad0b",
     "submission": "not_submitted",
     "formal_submission_ready": false,
-    "abstract_words": 233
+    "abstract_words": 233,
+    "figure_count": 6
   },
   "figures": {
-    "new_count": 2,
+    "new_count": 4,
     "formats": [
       "pdf",
       "svg",
       "png"
     ],
-    "collision_qa": "original figures PASS; embedded XeTeX pages extraction-adapted PASS with default thresholds; raw false-positive reports preserved",
+    "collision_qa": "Four originals PASS; six embedded pages extraction-adapted PASS with default thresholds",
     "single_axes": true,
-    "minimum_embedded_label_pt": 9.018280982971191
+    "minimum_embedded_label_pt": 8,
+    "total_count": 6,
+    "alignment": "Three two-panel figures PASS1.5pt; single-panel NOT APPLICABLE",
+    "assets_archive": "notes/results-visual-v5/visualization-assets-v5.zip"
   },
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
   "goal_complete": false,
@@ -58,7 +62,10 @@
     "bytes": 648810,
     "sha256": "953e6ae358398854c5fc7f3a892c9edf90e14010972d116005f13ebb0f24146e",
     "checksum_verified": true,
-    "scope": "v3 supporting scientific evidence retained; current source/PDF and v4 bounded wording/accounting/price-normalization checks; no raw listings/weights/new training/public release"
+    "scope": "v3 supporting scientific evidence retained; current source/PDF and v4 bounded wording/accounting/price-normalization checks; no raw listings/weights/new training/public release",
+    "status": "v4_archive_historical_current_source_has_v5_figures",
+    "current_figure_assets": "notes/results-visual-v5/visual-assets-index.json",
+    "new_full_paper_bundle": "not_created_under_experiment_first_instruction"
   },
   "completion_scope": "scientific revision and calculations delivered; no actual submission or public-release/author/external-full-training claim",
   "remaining_for_actual_submission": [
@@ -203,5 +210,11 @@
     "cost_conditional_benefit": "synthetic robust/suppression/top-B subset mean only; residual concealment remains positive",
     "response": "notes/teacher-review-v4/REVIEW_RESPONSE.zh.md",
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
+  },
+  "experiment_first_request": {
+    "status": "inventory_in_progress",
+    "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
+    "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
+    "new_training_started": false
   }
 }

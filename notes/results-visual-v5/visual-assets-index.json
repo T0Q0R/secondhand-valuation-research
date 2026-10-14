@@ -1,0 +1,204 @@
+{
+  "scope": "Four completed scientific figure assets and checks only; no new manuscript generation after experiment-first request",
+  "path": "notes/results-visual-v5/visualization-assets-v5.zip",
+  "bytes": 780808,
+  "sha256": "4337c49fe3276a7d0f96f4b38429f3eb3f7cec40c4b01350a1fe4a947bdf15d3",
+  "files": [
+    {
+      "path": "notes/results-visual-v5/FIGURE_CONTRACT.md",
+      "sha256": "ac0bf53a8070cc83c29f086b1cdd5cb6baffd31a50ce7ab39729c2b4acbee039"
+    },
+    {
+      "path": "notes/results-visual-v5/QA_NOTES.md",
+      "sha256": "642d9b9ccd9f049a98025588c39ffdf22fcdb1564f15cc153cfb7f20ab28df0d"
+    },
+    {
+      "path": "notes/results-visual-v5/audit_embedded_geometry.py",
+      "sha256": "a617e6ec101c751e4c3db543126ddff781e87a8e6cca86bcf62e9771f8f53ffb"
+    },
+    {
+      "path": "notes/results-visual-v5/audit_figure_collisions.py",
+      "sha256": "841ede7dcaefa3ab11576b5ba52375d1678a71f77d39f553d5464e81b0699283"
+    },
+    {
+      "path": "notes/results-visual-v5/audit_panel_alignment.py",
+      "sha256": "43958e6b49d897f326ff64e73cbed0bf057e17c06533b5b57d3dededf8111e76"
+    },
+    {
+      "path": "notes/results-visual-v5/audit_render.py",
+      "sha256": "2318538eddef356b235b4dfb3e80a3c9385bf4edfc7577eab203fb5bd7bd8722"
+    },
+    {
+      "path": "notes/results-visual-v5/draw_results.py",
+      "sha256": "9b98f8b5ad304bce64404344d203acbb8811faf9fb18d94c433d4854bf752028"
+    },
+    {
+      "path": "notes/results-visual-v5/figure-completion.json",
+      "sha256": "481986c450ce3089e63204252fe698c9cdc5f0aa4fb96424c9f68e653f31b25a"
+    },
+    {
+      "path": "notes/results-visual-v5/inline_vectors.py",
+      "sha256": "d456df05a2cd3ce4a2a1972e263bdb09252438801053e539359236d4ee3f50e0"
+    },
+    {
+      "path": "notes/results-visual-v5/manuscript-revision-receipt.json",
+      "sha256": "53476aa2cf0ac44d01a5c51706a3335dc21f189b4118f0461dbe40b8f6f834a2"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/figure-page-14.corrected-geometry-audit.json",
+      "sha256": "e8451ad41877135052de7fdb62de8e346a5b7af94442311d1fe92619a07a74a3"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/figure-page-15.corrected-geometry-audit.json",
+      "sha256": "cb22367b61b8f9b204fe1be538142472d9eadfe05f04bbb51b22452183fb79a2"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/figure-page-20.corrected-geometry-audit.json",
+      "sha256": "c3d9e5bff015d03282afefad26195c3ce0982bea9e9c6c0cd85ccc892aab7c26"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/figure-page-22.corrected-geometry-audit.json",
+      "sha256": "7122e7023c36ad63db1d8b203a277e3cc5ec7726a55563734055c0fb27440aa4"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/figure-page-24.corrected-geometry-audit.json",
+      "sha256": "849ca35b02d204b7ea76b779fabb0a96b578e6b3d80243a0a654f4ef4ed92556"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/figure-page-34.corrected-geometry-audit.json",
+      "sha256": "2c6d5d059d43576e24ff540108be03c0a1e33127e14460c87e6c19d0c10d3533"
+    },
+    {
+      "path": "notes/results-visual-v5/qa/render-audit.json",
+      "sha256": "df89b0fadaa552a7b03e71df6332267791cbcf664521f2695de3c9df76499bba"
+    },
+    {
+      "path": "notes/results-visual-v5/revise_manuscript.py",
+      "sha256": "8fca031cc3a93fc6082ccd3d59db41c6ab3a41a2d34a8632fb415ce799a271d2"
+    },
+    {
+      "path": "notes/results-visual-v5/source-audit.json",
+      "sha256": "e7d736d1eef486d8afa116e36b9755af2f90f69a946de93f578dc4b360612447"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs-source.csv",
+      "sha256": "9d5a7e78cda0a80d887bc08cacd741727f1c2312c0eb58fd0058f8e4a1214c59"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs.alignment.json",
+      "sha256": "6104b3fe2fba4403501dc6cf74aba6aeea79db554b20eade75db38e55c44e78a"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs.collision.json",
+      "sha256": "f1981a3705216fa2edcb335a648e781133a26b31a175b2705535026a45722225"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs.glyph.json",
+      "sha256": "89911c91b72183778d608551f860b6122e46c610de7dc67a2654373936c1cb4e"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs.pdf",
+      "sha256": "0357f30a5c7f16504c90316fd6619622475ef1683178c64d75e7d4e0d50a8f02"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs.png",
+      "sha256": "c4058e1c385a992642935d6247d63481d458fd81dfacb4b3eacd637b55420d16"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cap-tradeoffs.svg",
+      "sha256": "5e1f4403c012c33bf64cfc25cbf6d689ab345512ace6981404cc2454ece58b13"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-bounds-source.csv",
+      "sha256": "549a0ceb3f90db16004f385f2050d7d1ef491df22955e9ca113047b2d4cf68c8"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-mechanism.alignment.json",
+      "sha256": "02dcc5fff5631792dbf4fb03dc317e2e7a7d3be363fd58b71debe78ae085a1a0"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-mechanism.collision.json",
+      "sha256": "41161b5dbc4418e1b63c44c57ddd4bb6cb66265bf58ab0c70486e68aef48c6fd"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-mechanism.glyph.json",
+      "sha256": "98b7e5ef84cd41ae9545c6ee53f86d45000a74cddd1a1f53ef73d0d150e5b735"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-mechanism.pdf",
+      "sha256": "11095b5250382765e6bfd347c26eb0500463ad5ce30a479ea1c44e7de3e994eb"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-mechanism.png",
+      "sha256": "e435c5c5decfc3d76c5a52b10f9536aae511d6d0bd19238ad8b1d8728c4621c6"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-mechanism.svg",
+      "sha256": "c87e91a9d749b55c03ba07a9c54991ba6d8a160d7854f8fa1335ad82f48b9b38"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/cost-paired-source.csv",
+      "sha256": "d1129abbb57f2e584f852b29e03f178177d32a56a997f525c8349a22fd6f9382"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-boundary.alignment.json",
+      "sha256": "d9b8a8f407ad8fd0a0258aba67f3741f36916ca11296c83b4c0e188bc90493f6"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-boundary.collision.json",
+      "sha256": "ca464ca2e68c0017e5a5ae24a8c201dc6c2d1d851faa17176021150018a153bb"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-boundary.glyph.json",
+      "sha256": "d45507db1b74650eb3960b7d781fc3f809275645299ddfe96ecedd07550987ba"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-boundary.pdf",
+      "sha256": "8e9fceb37a8d4a5928c7f9367461ab39f6420422eb19224e8b35455ffcf20f08"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-boundary.png",
+      "sha256": "2289d654e2f6b89be74201abcb59792045b945d7e66458f72661a7aed3758619"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-boundary.svg",
+      "sha256": "4f432aa366e4e7393cc1062d8d4eb313078025f1af60a0cda6de1df6035dda14"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-coverage-source.csv",
+      "sha256": "c8cbc42294c6421c7344f3cb43eaec2b719c3ab03f7a33350699f5c7ede533df"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/envelope-error-source.csv",
+      "sha256": "938583a6bab2ceb163fc4e53082e87ff3d09a20d9163f57de0ec275fc325f9e5"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/uncertainty-components.alignment.json",
+      "sha256": "db681371a7cbe245daee9bec37877f964c732175301e3a01880267565c6ef09f"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/uncertainty-components.collision.json",
+      "sha256": "d5311aa22526614f34ecdbec9960168389a88995f96a1737dad51db5cd08c2c8"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/uncertainty-components.glyph.json",
+      "sha256": "d50683435e11a05d8818d85700548e79cef8f14039ddb4bdb61b09e69ad93547"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/uncertainty-components.pdf",
+      "sha256": "5099334a9952c2ebc65d74cbd86d6c56227b8f0f812db552d8e14d8f92b3a54c"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/uncertainty-components.png",
+      "sha256": "e8e9bb496843e0fab237792fa260e742e1b5c8dae79d6906189958b9332501ea"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/uncertainty-components.svg",
+      "sha256": "793d9bfdcf25b2dd558082ade03d6950719d8a22e58fb406df55733012d99bb4"
+    },
+    {
+      "path": "paper/figures/results-visual-v5/variance-source.csv",
+      "sha256": "18a961e18198fa79d33fbd3b2532d95cad37791f1588c236f779ba0a7cca0ff9"
+    }
+  ]
+}

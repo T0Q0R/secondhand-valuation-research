@@ -1,0 +1,274 @@
+{
+  "source_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+  "pdf_sha256": "c11fd3e09c2e16da6e73e016f98f18c4635d34e47b48c07d9bbb00ee7704ad0b",
+  "pages": 36,
+  "references": 16,
+  "missing_refs": [],
+  "missing_citations": [],
+  "overfull": 0,
+  "underfull_count": 1,
+  "figure_pages": [
+    14,
+    15,
+    20,
+    22,
+    24,
+    34
+  ],
+  "page_audits": [
+    {
+      "page": 1,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "02db93255080dd474395a28070364a507364b2e94a4dbfa585361551011fa587",
+      "figure": false
+    },
+    {
+      "page": 2,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "813e43e7e534c16c0213f1a614fbe6e9dca48732c8e28ed8e1e2fe8eb79b645e",
+      "figure": false
+    },
+    {
+      "page": 3,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "10838fc5bf471e24b86a1a6c2d9f4ea6cfa263111a98dda1670dd05ec8556e4b",
+      "figure": false
+    },
+    {
+      "page": 4,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "4f7f367fb93f39595ca3481d3df9f9dc7196f76ff0d67b3865125539f16df5b2",
+      "figure": false
+    },
+    {
+      "page": 5,
+      "outside_spans": 0,
+      "minimum_span_pt": 5.977583885192871,
+      "render_sha256": "501f1efa0f761c45658852b722f0349ddf92a0ebfb270a677f80ae38f9d6356a",
+      "figure": false
+    },
+    {
+      "page": 6,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "5cf1a380af142c49a1139395d4ba8604bfa2b4c62eeed51a091285dc2ad3fc2a",
+      "figure": false
+    },
+    {
+      "page": 7,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "73f01df17dc0f3f78561ef37ed735ec02e21fc6c05215967107091d902835d28",
+      "figure": false
+    },
+    {
+      "page": 8,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "6dc181d298f3005e210ce105cdb28e6476f2a7824935f42ed8b705fa8348a0ce",
+      "figure": false
+    },
+    {
+      "page": 9,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "0163091a1e164592ae59ed3cf8d8281bfc8c86f5deb15551116eaa055c17ccc4",
+      "figure": false
+    },
+    {
+      "page": 10,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "8bc525dd5fb1fa6f7b6186b4fd90f700ee29a6c601667f056b2d71598798a622",
+      "figure": false
+    },
+    {
+      "page": 11,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "fc1dc2fd96cf086a9785ddf7a424ddf51b081d7b397a6091757dbc9530137e47",
+      "figure": false
+    },
+    {
+      "page": 12,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "b13a9f83b38438ca3233b68bac8050021be8bc755fb3cf8dd1063b7ffd94a473",
+      "figure": false
+    },
+    {
+      "page": 13,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "96192eb1cfab07c84cff6babd06d559b7a53bf9909d9343c1a738e581264e6d4",
+      "figure": false
+    },
+    {
+      "page": 14,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.018280982971191,
+      "render_sha256": "f7298af993669fed9c9af3307bcf53c5ffb0f79baebd87d880023bd44961cbf7",
+      "figure": true
+    },
+    {
+      "page": 15,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.018280982971191,
+      "render_sha256": "2ab34f65460c6ed53152596c4c0654e51aceba9d8c23f8aed3fabcd9d356408a",
+      "figure": true
+    },
+    {
+      "page": 16,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "414eaa5feb632a7c97f7bfbd8514e39b6949c2baee373ba0bda95641c455a4ba",
+      "figure": false
+    },
+    {
+      "page": 17,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "5747787d44a773ca3a9e7e56e3660a948bcdca4a77cdf5debbc4a71587449256",
+      "figure": false
+    },
+    {
+      "page": 18,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "c11dccd77b26de06a2155022fced6c0b324f1faddcff0bb769b2fe66f13c6047",
+      "figure": false
+    },
+    {
+      "page": 19,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "28f48eb530ddc6e55b8bf70c96b39916acb4fbc85e52fa47279f8f955897d61c",
+      "figure": false
+    },
+    {
+      "page": 20,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "9640e77680db78ccff4d67bddcd7ed822417e2d11ade570a794d8c9b0740e789",
+      "figure": true
+    },
+    {
+      "page": 21,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "925d17838bdd6f183a10b5d78cda5e33df1ad4e41feadf35d165393e460071b3",
+      "figure": false
+    },
+    {
+      "page": 22,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "470ed1c06fbf6bdd4fbd412408cdb2a31f917ee20e79644a0ea99ab71bf72966",
+      "figure": true
+    },
+    {
+      "page": 23,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "32fcbd4f86392a054a96292f61e4e062db9f0b353d03d74b8330498312c9c0e3",
+      "figure": false
+    },
+    {
+      "page": 24,
+      "outside_spans": 0,
+      "minimum_span_pt": 8.966376304626465,
+      "render_sha256": "a82e4b6c0cef7ce5fee64ec21062997e81280750f3e69875686381f13bf88a4d",
+      "figure": true
+    },
+    {
+      "page": 25,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "a184923a42a5afbfcd4a9f80ffe9d135e0e1f22ac12fe638ff418aeb74d2b5e9",
+      "figure": false
+    },
+    {
+      "page": 26,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "aa0d0d151538d5f3368c1dde8a1d5f5be166aa3ea0daf3ef2e49f17e2cd75f0a",
+      "figure": false
+    },
+    {
+      "page": 27,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "5800cac7f645aee267a80feff9c8cf14af32082c4e606193fbc36d24b7fa8208",
+      "figure": false
+    },
+    {
+      "page": 28,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "95d9a79f57c17785912403a521ee4696297193c31225262f16b465f2a14b68bd",
+      "figure": false
+    },
+    {
+      "page": 29,
+      "outside_spans": 0,
+      "minimum_span_pt": 5.977583885192871,
+      "render_sha256": "3fc0bf64caebbad3c3677bf3a66b5074d125878cf981cd3f310464e308f45534",
+      "figure": false
+    },
+    {
+      "page": 30,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "14eb7fcc9e67da74171385a20168a6009a614b17f30715ec51cb236ad3ab359c",
+      "figure": false
+    },
+    {
+      "page": 31,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "a6df44a4c5850bef799023be024327544b875c996f913501bf898be5d0eef2ba",
+      "figure": false
+    },
+    {
+      "page": 32,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "4ad4e9abe063bb606073a6f711c6a10f99e344d0dc167b8bf6eb71f30d5b0742",
+      "figure": false
+    },
+    {
+      "page": 33,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "80ac160eebec24a84c92f0cd20a18bb113a6d60ae8a7f086360b07b051f06ed1",
+      "figure": false
+    },
+    {
+      "page": 34,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "a1c5cfec5b14a663db1ab15709c9ea9b7b7a556d2ec2d70e61c58ff2777259ca",
+      "figure": true
+    },
+    {
+      "page": 35,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "19525dc8a47d10d03820bbfdd3a565af0b184d951a06ff3ba71a76d7c2458f08",
+      "figure": false
+    },
+    {
+      "page": 36,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "f624fcdcd8e7ffc574c48566d40f269a1bac1260c179167ed92c5b44d24f9e5b",
+      "figure": false
+    }
+  ],
+  "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 at full size",
+  "builtin_compilation": "success"
+}
