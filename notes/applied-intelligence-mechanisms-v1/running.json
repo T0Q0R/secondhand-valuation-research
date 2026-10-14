@@ -1,0 +1,14 @@
+{
+  "pid": 59731,
+  "status": "waiting_for_predecessor_verified",
+  "time": 1791975601.8241239,
+  "predecessor_pid": 38715,
+  "configuration_commit": "c31685d543f5d2ba56d41113e622a283c4d80c97",
+  "verified_at": "2026-10-14T19:00:26+08:00",
+  "current_counts": {
+    "ablation": 432,
+    "parameters": 184,
+    "stability": 0,
+    "sefa": 0
+  }
+}

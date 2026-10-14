@@ -1,3 +1,7 @@
+# 新增机制尾队列已运行
+
+2026-10-14T19:00:26+08:00：PID59731等待原PID38715完成原四阶段及汇总后自动接续。查看outputs/mechanism-tail-v1/status.json和failure.json；计算开始后查看outputs/mechanism-parallel-runtime-v1/status.json。90单元（36复用/54新评估）、108新拟合；不要重复启动。原计算最新快照{'ablation': 432, 'parameters': 184, 'stability': 0, 'sefa': 0}。正文冻结；后续仍需科学解释/图表QA及GitHub同步。
+
 # 新增机制计算（待启动）
 
 2026-10-14T18:59:24+08:00：用户要求面向Applied Intelligence补机制证据，已准备独立尾队列，等原四阶段/汇总通过后接续。90单元/108新拟合，36评估复用。先查notes/applied-intelligence-mechanisms-v1/tail-config.json及outputs/mechanism-tail-v1/status.json（尚未启动时不存在）。原runtime38715不改、不重启；正文冻结。新计算完成后需科学解释和绘图QA，不自动写论文。
