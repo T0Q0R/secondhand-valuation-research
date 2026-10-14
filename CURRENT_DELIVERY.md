@@ -1,8 +1,11 @@
 # 当前论文与证据交付
 
-快照：2026-10-14 10:30:08 +08:00（Asia/Shanghai）。
+本轮老师意见修订已完成。G.1区分队列扩展与尾批权重变化；摘要98%以上仅指uncapped的两个MU对比；G.3突出完整覆盖类别记录零变化、天然缺失记录可有大折减（最大为原预测报价25.5%，不是MAE占挂牌价30%）；§7.7补充成本条件下synthetic子集的描述性收益，仍非完全非策略化。八规则/十二规则、Table8 improvement符号及§7.6分母18已明确。详见notes/teacher-review-v4/REVIEW_RESPONSE.zh.md。
 
-本轮新增诊断、有限域试验、协议和论文回填已完成；没有待恢复的大计算，也没有新训练。当前稿32页，229词摘要、16引用、15表、2幅原矢量图，作者/单位留空。正式投稿条件仍未完成。
+
+快照：2026-10-14 02:58:00 UTC（Asia/Shanghai时区项目）。
+
+本轮新增诊断、有限域试验、协议和论文回填已完成；没有待恢复的大计算，也没有新训练。当前稿32页，233词摘要、16引用、15表、2幅原矢量图，作者/单位留空。正式投稿条件仍未完成。
 
 - 全真实来源扩评仍为480单元、29,040批、2,891,040重复行，31,269,840合法单边偏离；24/24反馈方向不利，22/24未校正区间排除零。首10批复用原字节，原receipt出处保留于扩展绑定。
 - MU两个跨零对比的seed主项条件方差占98.39%/98.28%，不支持76%–81%的区间反推；不证明零效应/等效，也不量化新训练人口不确定性。30seed只是设计投影，未训练。
@@ -10,10 +13,10 @@
 - final-record三seed类别域pilot：JU801/MU999共享支持，199/1缺里程弃权；MU误差代价集中在28条自然缺类别样本。完整四字段（含里程隐瞒）替代机制仍未实测。
 - 显式audit-protocol/合同/执行文档/标准库validator已交付：六文件绑定和六错误控制通过。它是事后结构与哈希检查，不是科学有效性、完整独立性或外部训练复现证书。
 
-内置编译/同稿导出/对应检查/布局审阅通过；0 Overfull或未定义引用，保留原1 Underfull。当前源SHA256 5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3；PDF 05504e83aa321323626a56c6abfe42c2b046588bbba8a3d58e575ea542501385。
+内置编译/同稿导出/对应检查/布局审阅通过；0 Overfull或未定义引用，保留原1 Underfull。当前源SHA256 546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c；PDF 67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d。
 
-原30/30组、4,320单元、432万重复行、45,372,960偏离的训练/核对保持完成。新包为paper/revision-delivery-v3.zip（578302字节，SHA256 7fb038f974bdc921583c2c9e534b61f2b6ec24a3d2ae4506fe010cc4e2dc2f3a）；v2修订包与full-expanded证据是支持历史，不能当作当前稿。
+原30/30组、4,320单元、432万重复行、45,372,960偏离的训练/核对保持完成。当前包为paper/revision-delivery-v4.zip（648810字节，SHA256 953e6ae358398854c5fc7f3a892c9edf90e14010972d116005f13ebb0f24146e）；v3/v2修订包与full-expanded证据是支持历史，不能当作当前稿。
 
 尚缺：作者责任与事实声明、单位适用的中科院分区版本/期刊模板、公开/许可/DOI决策、外部机器全训练复现。私有上传不等于公开或投稿；不宣称二区/三区接收保证。
 
-[当前源](paper/innovation-addendum-v1.tex) · [当前PDF](paper/innovation-addendum-v1.pdf) · [v3增量包](paper/revision-delivery-v3.zip) · [逐条处理](notes/revision-mechanisms-v3/REVIEW_RESPONSE.zh.md) · [审计协议](audit-protocol/README.md)
+[当前源](paper/innovation-addendum-v1.tex) · [当前PDF](paper/innovation-addendum-v1.pdf) · [v4修订包](paper/revision-delivery-v4.zip) · [逐条处理](notes/teacher-review-v4/REVIEW_RESPONSE.zh.md) · [审计协议](audit-protocol/README.md)

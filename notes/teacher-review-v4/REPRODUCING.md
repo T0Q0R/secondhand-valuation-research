@@ -1,0 +1,11 @@
+# Teacher-review revision v4
+
+Current source is still paper/innovation-addendum-v1.tex. This bounded revision clarifies variance/cohort weighting, adds the uncapped qualifier, makes the categorical singleton/discount boundary explicit, states the conditional higher-cost benefit, and fixes rule-library definitions, Table8 signs and threshold denominators. It adds no training, fitted seeds or response optimization.
+
+check_advice.py reads existing variance/threshold/cost artifacts and validation records. It re-evaluates the same three frozen MUCars models solely to check the maximum individual quote discount, with all completion means matching the earlier pilot within 1e-8 source currency units. No new data is selected or tuned. Its receipt binds all inputs and aggregate outputs. Original models/raw validation files remain on the original machine and are not added to ordinary Git.
+
+revise_manuscript.py binds the previous reviewed source (SHA256 5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3) and applies ten bounded replacements to the same open file. Do not run the older v3/v2 generators to regenerate the current document; they would revert this revision. Built-in compilation/export/layout checks must be renewed after source changes.
+
+revision-delivery-v4.zip carries the previous v3 supporting evidence plus current source/PDF and these v4 diagnostics. The older v3 analysis receipts remain historical, correctly bound to their own source versions; v4/revision-receipt.json identifies the current manuscript. The standard-library audit-protocol validator continues to check the same six v3 direct scientific artifacts; v4's new checks are separately bound in diagnostic-completion.json. Neither is a transitive raw-input audit or external full-training reproduction.
+
+The practical zero-change result concerns covered records complete in the three categorical fields, with observed mileage held fixed. The 25.5% maximum discount uses each record's original predicted quote as denominator. It is not 30% of advertised price or an MAE percentage. Cost-conditional feedback benefit is a synthetic subset mean observation, not a proof of full nonstrategic behavior or universal benefit.

@@ -1,0 +1,27 @@
+{
+  "status": "completed_frozen_artifact_and_inference_checks",
+  "training_runs": 0,
+  "response_updates": 0,
+  "scope": "Existing conditional variance components; six categorical-domain support summaries; three MUCars frozen models re-evaluated solely to distinguish individual quote reduction from advertised-price-normalized mean losses.",
+  "input_sha256": {
+    "notes/revision-mechanisms-v3/variance_components.csv": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e",
+    "notes/revision-mechanisms-v3/paired_differences.npz": "d5623100f28330b32b2b8ba50fcc6708a50f49bceb4511e8686d6c8b3ada741a",
+    "notes/revision-mechanisms-v3/final_record_domains.json": "1d766711891b34053523442823fc308beba5b4cb0d7a26f3f4b6c5ae61b260a0",
+    "notes/revision-mechanisms-v3/final_record_pilot.csv": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/experiments/data/processed/jucars_bvival_v1/splits/validation.csv": "4d57d04ab0944af11713c67e5c3b1f35d135f4f2314a9a1f5f4b78906541548b",
+    "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/experiments/data/processed/mucars_bvival_v1/splits/validation.csv": "ce27add36fb375f8e86953c5fdc2310addd412274add3ec9c62ad265c3a486a7",
+    "outputs/matched-factorial-ten-seeds-v1/mucars/seed-13/fit/deployment_models/robust__none__shared__shared.joblib": "36e8d8ceca87ca9300bb96d2edfde505edfa1b18d42eccf82f0d3be4cdac6554",
+    "outputs/matched-factorial-ten-seeds-v1/mucars/seed-42/fit/deployment_models/robust__none__shared__shared.joblib": "80ed1d25e271a0d7a8d5f356b6ff44b77a11c554119a296967688c8573382d35",
+    "outputs/matched-factorial-ten-seeds-v1/mucars/seed-2026/fit/deployment_models/robust__none__shared__shared.joblib": "21e963cf798b85b80a192d44115d2d335bcda9a8a3f129fa152f451165f96273",
+    "notes/revision-review-v2/statistics/frozen_allocation_threshold_sensitivity.csv": "2fdb4330a89ae602aea87b4aaf9ea01fa31ee4c2a55135c7f78d4cc005a6d2b2",
+    "notes/revision-review-v2/statistics/threshold_sensitivity.csv": "0f887e1aee31bc83eaa0e21401923e6a7346f16183763fedba9dcfbbd38e47dc",
+    "oqbo-val/outputs/finite-demo-01/case-10.json": "eb7f1242ea1b51c254071b0dbc822eba2095cdf1494b432f9bbad9511bb7cf43",
+    "notes/revision-mechanisms-v3/cost_mechanism_means.csv": "f00a9c567b8bcbedf6ac0d6eef23506070afd9d6693062479641d2b3b97972ee"
+  },
+  "script_sha256": "db123277f8b97bbb15dd48971bd45ffae8407a65599fb353ead52d65b9b16d81",
+  "output_sha256": {
+    "coverage_weight_diagnostics.csv": "b5cf43ec7942b491c1315ae8afcf71593f76ec55d579d2d876e636db3300ae50",
+    "price_and_singleton_diagnostics.csv": "019f86115530e8871105adccb90cbc7bd10a72566c2df63abc1aee6097a9de2a",
+    "accounting-checks.json": "d5c138474a83209a291abe84b0431cdf5911225a549d0f3051920acc7bc09614"
+  }
+}

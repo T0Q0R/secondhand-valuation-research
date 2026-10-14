@@ -1,0 +1,246 @@
+{
+  "status": "compiled_and_checked_teacher_advice_revision",
+  "archive": "paper/revision-delivery-v4.zip",
+  "bytes": 648810,
+  "sha256": "953e6ae358398854c5fc7f3a892c9edf90e14010972d116005f13ebb0f24146e",
+  "source_sha256": "546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c",
+  "pdf_sha256": "67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d",
+  "scope": "v3 supporting scientific evidence retained; current source/PDF and v4 bounded wording/accounting/price-normalization checks; no raw listings/weights/new training/public release",
+  "files": [
+    {
+      "path": "audit-protocol/README.md",
+      "bytes": 5171,
+      "sha256": "de25115221a8b8b4f7aa1ce5140ffa96679edeaadd40896997cd73ba71048802"
+    },
+    {
+      "path": "audit-protocol/secondhand-audit.json",
+      "bytes": 5636,
+      "sha256": "ef4e48b5ef482687b76eae9f89a6258dd904d40b4969e5cca25da68ae94cdc7f"
+    },
+    {
+      "path": "audit-protocol/validate_protocol.py",
+      "bytes": 5324,
+      "sha256": "792afb157f03c65eacc426eeedf768e33821e5c7d62e51e69d4aac5e1407f4cd"
+    },
+    {
+      "path": "audit-protocol/validation-receipt.json",
+      "bytes": 1587,
+      "sha256": "9df496b024b49810506fce42ccc7a125824362749010b08fcafb7f6353aa39d5"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/DIAGNOSTICS.md",
+      "bytes": 3885,
+      "sha256": "49bfab2916ac1e5ff72a3b704300c14024d893280fee3cd8bc265ba5422e172b"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/FINAL_RECORD_PILOT.md",
+      "bytes": 2894,
+      "sha256": "a9524f8eae9de8a95a30f4f226d0553e91a80635fdd21b278947dfaf3739fa8c"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/REPRODUCING.md",
+      "bytes": 2411,
+      "sha256": "6cb3cffb1b87f0f102af4c4efa8262816b4537a67118594cf16c94da62e082f8"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/RESULT_ALLOCATION.md",
+      "bytes": 1290,
+      "sha256": "5ea01224c1f479d5bc58a385eaf3ac382659209bd7a138b64bac96d91468ee60"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/REVIEW_RESPONSE.zh.md",
+      "bytes": 4767,
+      "sha256": "36a71b5006e9078fbe10fbdaa588061f1d14a020ad938d6f7ca962ae3e2a0bae"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/audit_render.py",
+      "bytes": 2977,
+      "sha256": "788f9d9fbf649e81554051b5841c33403fddb43f89ccf190de6cc59841d91104"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/baseline-reviewed-source.tex",
+      "bytes": 125527,
+      "sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/build_delivery.py",
+      "bytes": 1896,
+      "sha256": "de522f3ba5f157a5531d4c93bd740ca32457dcf634c613ca0a7da78223775727"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/completion.json",
+      "bytes": 150880,
+      "sha256": "edc926b76829c7f94114d16dc58a5b0e4df7b359f53c47161873d718f927ef2f"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/cost_mechanism_batches.csv",
+      "bytes": 335749,
+      "sha256": "56563fce7baba9c1d21c50c04ecd1daf9cc932cf0d1a0e5a527f13b9ac8973bd"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/cost_mechanism_means.csv",
+      "bytes": 10914,
+      "sha256": "f00a9c567b8bcbedf6ac0d6eef23506070afd9d6693062479641d2b3b97972ee"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/diagnose.py",
+      "bytes": 9052,
+      "sha256": "82fe410703c57ce03157e2dc7d6756d2fd577d24aa5fd403062f26eed52821de"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/diagnostic-evidence-index.json",
+      "bytes": 826,
+      "sha256": "cca9f12380c2c26e60cc168fb0118ccbb00b9f3bd161f2851aa6c95914273f99"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_completion.json",
+      "bytes": 16255,
+      "sha256": "1a749af9f4b41b9bef858e1d1ff3474248a97748b9ced5d734279b02a9c8b630"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_domains.json",
+      "bytes": 2572,
+      "sha256": "1d766711891b34053523442823fc308beba5b4cb0d7a26f3f4b6c5ae61b260a0"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_pilot.csv",
+      "bytes": 1888,
+      "sha256": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_pilot.py",
+      "bytes": 6784,
+      "sha256": "af4b7b5f0f2ea9746cbff56650e1fcbb98e3d887c97fc095f89d7cbe941e76e0"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/manuscript-changes.patch",
+      "bytes": 16390,
+      "sha256": "3f176745eb43eeef773b4ad0c7eebd3a628a1f5b3b2f89d4e63a5e9020cae878"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/manuscript-revision-receipt.json",
+      "bytes": 1015,
+      "sha256": "638189a66075037ab313ab2f0eb0bcdcc0c6e721196495329c0c21c658efc96f"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/paired_differences.npz",
+      "bytes": 134015,
+      "sha256": "d5623100f28330b32b2b8ba50fcc6708a50f49bceb4511e8686d6c8b3ada741a"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/qa/render-audit.json",
+      "bytes": 7430,
+      "sha256": "09ee5e86e830ca0825d85636c52e9be58f8f5f10cdac93f4952b0e96cf031660"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/response-excerpts.tex",
+      "bytes": 1445,
+      "sha256": "65023d8e797b5f50d09161196505d45765cc1403ce71deeb2b047a8b5512a032"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/revise_manuscript.py",
+      "bytes": 13004,
+      "sha256": "01ce8bece0394eaf14a2fd023d9c1b0b5363ca910791722cb138da1933d12458"
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/variance_components.csv",
+      "bytes": 13735,
+      "sha256": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e"
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/expanded-completion-summary.json",
+      "bytes": 676,
+      "sha256": "a46e17bf31c178eea9839a700d67aa2fcc0ec57f3a0311cd7c355165a9d6890e"
+    },
+    {
+      "path": "notes/teacher-review-v4/REPRODUCING.md",
+      "bytes": 2219,
+      "sha256": "338f24202cc83b6130492851e723c5d3375a5706fa5ebfbd61a3c3a92dcae471"
+    },
+    {
+      "path": "notes/teacher-review-v4/REVIEW_RESPONSE.zh.md",
+      "bytes": 3263,
+      "sha256": "605ed441f91965a764f449897aecc67f9bf43e5f07055d8fd2b0474f91b24fc2"
+    },
+    {
+      "path": "notes/teacher-review-v4/accounting-checks.json",
+      "bytes": 1958,
+      "sha256": "d5c138474a83209a291abe84b0431cdf5911225a549d0f3051920acc7bc09614"
+    },
+    {
+      "path": "notes/teacher-review-v4/audit_render.py",
+      "bytes": 2977,
+      "sha256": "788f9d9fbf649e81554051b5841c33403fddb43f89ccf190de6cc59841d91104"
+    },
+    {
+      "path": "notes/teacher-review-v4/baseline-reviewed-source.tex",
+      "bytes": 132470,
+      "sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3"
+    },
+    {
+      "path": "notes/teacher-review-v4/build_delivery.py",
+      "bytes": 1994,
+      "sha256": "309a930380f0fa495e1f1e16b49f57a292b34d84a1255032b882dea3bc532fa6"
+    },
+    {
+      "path": "notes/teacher-review-v4/check_advice.py",
+      "bytes": 8068,
+      "sha256": "db123277f8b97bbb15dd48971bd45ffae8407a65599fb353ead52d65b9b16d81"
+    },
+    {
+      "path": "notes/teacher-review-v4/coverage_weight_diagnostics.csv",
+      "bytes": 476,
+      "sha256": "b5cf43ec7942b491c1315ae8afcf71593f76ec55d579d2d876e636db3300ae50"
+    },
+    {
+      "path": "notes/teacher-review-v4/diagnostic-completion.json",
+      "bytes": 2835,
+      "sha256": "f0bf37ba3ca430c863b44710ae5e7c9ec8b40fd51a491b061741b566cf3b162b"
+    },
+    {
+      "path": "notes/teacher-review-v4/manuscript-changes.patch",
+      "bytes": 8172,
+      "sha256": "6ac5fcdd75b27158a8eda3cfdcc24e4eef1d1d481ff498389cce6f9421240ad2"
+    },
+    {
+      "path": "notes/teacher-review-v4/price_and_singleton_diagnostics.csv",
+      "bytes": 959,
+      "sha256": "019f86115530e8871105adccb90cbc7bd10a72566c2df63abc1aee6097a9de2a"
+    },
+    {
+      "path": "notes/teacher-review-v4/qa/render-audit.json",
+      "bytes": 7391,
+      "sha256": "f799c3241e4056d35f4bd86c04840e3584e13939dd74adf99976ffdd59169923"
+    },
+    {
+      "path": "notes/teacher-review-v4/response-excerpts.tex",
+      "bytes": 3457,
+      "sha256": "98dfd418599aa5773ce73874b1f4cd56307f7a45bb8eb15abf22b2a166adde33"
+    },
+    {
+      "path": "notes/teacher-review-v4/revise_manuscript.py",
+      "bytes": 6131,
+      "sha256": "53e907624d5cf4b9d35a461621fde64ebff94327c1305b2729938e8b0ab714ff"
+    },
+    {
+      "path": "notes/teacher-review-v4/revision-receipt.json",
+      "bytes": 576,
+      "sha256": "70a930c213e66303bad719a554cab8713daff82b897fc5258279d431ea431025"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.log",
+      "bytes": 13036,
+      "sha256": "3acf6a857eb60f1e54d3be33abe1a1fb0938967f1392ca17ef6c2358fdb7935a"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.pdf",
+      "bytes": 211221,
+      "sha256": "67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d"
+    },
+    {
+      "path": "paper/innovation-addendum-v1.tex",
+      "bytes": 134444,
+      "sha256": "546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c"
+    }
+  ]
+}

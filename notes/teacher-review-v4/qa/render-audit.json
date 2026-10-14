@@ -1,0 +1,243 @@
+{
+  "source_sha256": "546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c",
+  "pdf_sha256": "67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d",
+  "pages": 32,
+  "references": 16,
+  "missing_refs": [],
+  "missing_citations": [],
+  "overfull": 0,
+  "underfull_count": 1,
+  "figure_pages": [
+    14,
+    15
+  ],
+  "page_audits": [
+    {
+      "page": 1,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "02db93255080dd474395a28070364a507364b2e94a4dbfa585361551011fa587",
+      "figure": false
+    },
+    {
+      "page": 2,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "813e43e7e534c16c0213f1a614fbe6e9dca48732c8e28ed8e1e2fe8eb79b645e",
+      "figure": false
+    },
+    {
+      "page": 3,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "10838fc5bf471e24b86a1a6c2d9f4ea6cfa263111a98dda1670dd05ec8556e4b",
+      "figure": false
+    },
+    {
+      "page": 4,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "4f7f367fb93f39595ca3481d3df9f9dc7196f76ff0d67b3865125539f16df5b2",
+      "figure": false
+    },
+    {
+      "page": 5,
+      "outside_spans": 0,
+      "minimum_span_pt": 5.977583885192871,
+      "render_sha256": "501f1efa0f761c45658852b722f0349ddf92a0ebfb270a677f80ae38f9d6356a",
+      "figure": false
+    },
+    {
+      "page": 6,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "5cf1a380af142c49a1139395d4ba8604bfa2b4c62eeed51a091285dc2ad3fc2a",
+      "figure": false
+    },
+    {
+      "page": 7,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "73f01df17dc0f3f78561ef37ed735ec02e21fc6c05215967107091d902835d28",
+      "figure": false
+    },
+    {
+      "page": 8,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "6dc181d298f3005e210ce105cdb28e6476f2a7824935f42ed8b705fa8348a0ce",
+      "figure": false
+    },
+    {
+      "page": 9,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "44202c9d58df93913d16deadeb4d3d0f3a5b4a0257cb6ecaf7dc9034abf14c9b",
+      "figure": false
+    },
+    {
+      "page": 10,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "8bc525dd5fb1fa6f7b6186b4fd90f700ee29a6c601667f056b2d71598798a622",
+      "figure": false
+    },
+    {
+      "page": 11,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "fc1dc2fd96cf086a9785ddf7a424ddf51b081d7b397a6091757dbc9530137e47",
+      "figure": false
+    },
+    {
+      "page": 12,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "b13a9f83b38438ca3233b68bac8050021be8bc755fb3cf8dd1063b7ffd94a473",
+      "figure": false
+    },
+    {
+      "page": 13,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "96192eb1cfab07c84cff6babd06d559b7a53bf9909d9343c1a738e581264e6d4",
+      "figure": false
+    },
+    {
+      "page": 14,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.018280982971191,
+      "render_sha256": "f7298af993669fed9c9af3307bcf53c5ffb0f79baebd87d880023bd44961cbf7",
+      "figure": true
+    },
+    {
+      "page": 15,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.018280982971191,
+      "render_sha256": "2ab34f65460c6ed53152596c4c0654e51aceba9d8c23f8aed3fabcd9d356408a",
+      "figure": true
+    },
+    {
+      "page": 16,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "414eaa5feb632a7c97f7bfbd8514e39b6949c2baee373ba0bda95641c455a4ba",
+      "figure": false
+    },
+    {
+      "page": 17,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "5747787d44a773ca3a9e7e56e3660a948bcdca4a77cdf5debbc4a71587449256",
+      "figure": false
+    },
+    {
+      "page": 18,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "c11dccd77b26de06a2155022fced6c0b324f1faddcff0bb769b2fe66f13c6047",
+      "figure": false
+    },
+    {
+      "page": 19,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "616aea35a52281cde3bd6743a461d5b4ea9f4187ec6093077c69a08966fbf9db",
+      "figure": false
+    },
+    {
+      "page": 20,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "20d2fd0ab5236a79e45fc0c7bde3f8f43f14c18f7cc7a19440735b1c3bf6a4b5",
+      "figure": false
+    },
+    {
+      "page": 21,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "dd1ab83d72adc59922591383f21612fe19faffd90861a779581ebd8fceef2224",
+      "figure": false
+    },
+    {
+      "page": 22,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "c0882ec54fd2849a67c562e9d2799e413437bc7a8314568c5f558e9289f947c8",
+      "figure": false
+    },
+    {
+      "page": 23,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "bed65190a20ed6cce9451aae4cd05b5c92fcb4931eb7d6e3a5e1aea8ef31b411",
+      "figure": false
+    },
+    {
+      "page": 24,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "b460e54f162b6a691c70f562af3b205f545de26a33c887c37fba0b4ffd8d0d44",
+      "figure": false
+    },
+    {
+      "page": 25,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "e9ffcf4928726f98e82e860064bb27498b441840dcbc9f3e1a33d69ba449fe32",
+      "figure": false
+    },
+    {
+      "page": 26,
+      "outside_spans": 0,
+      "minimum_span_pt": 5.977583885192871,
+      "render_sha256": "9c327ffba0c379bea56ce8af001fda876bd56e8b1c5e548458473175ea0caab2",
+      "figure": false
+    },
+    {
+      "page": 27,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "1a0bbe1f8b12b2e8266b6de1c7096b3d2faa770691fbcc2a93f97df0e9adfaef",
+      "figure": false
+    },
+    {
+      "page": 28,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "0ceac28dece9e71eef326eeb9c23a483277ce8ff481c2a37e200303c87293b17",
+      "figure": false
+    },
+    {
+      "page": 29,
+      "outside_spans": 0,
+      "minimum_span_pt": 9.962639808654785,
+      "render_sha256": "4d89e3ef8d1c954859225935b991942bc6c7775a267aa8dec4a1772dd1c75b87",
+      "figure": false
+    },
+    {
+      "page": 30,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "8ea76787a7ae66b220c4fa46b6bd7f8c2a1fa3ec46e504ffe6381e733ee75269",
+      "figure": false
+    },
+    {
+      "page": 31,
+      "outside_spans": 0,
+      "minimum_span_pt": 7.970111846923828,
+      "render_sha256": "fc3489c586917db8c82acd9cf6309de34f01a49ec29484a0b73c4eba1312d0c4",
+      "figure": false
+    },
+    {
+      "page": 32,
+      "outside_spans": 0,
+      "minimum_span_pt": 10.909088134765625,
+      "render_sha256": "f0f0ef147dd387c1f054d972f0f938be8c5c2a8d78db8e8266198a56ddb9cead",
+      "figure": false
+    }
+  ],
+  "all_page_visual_review": "32-page contacts reviewed; changed pages 6/20/21/30/31 inspected at full size",
+  "builtin_compilation": "success",
+  "figure_environments_unchanged": true
+}

@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14 02:30:08 UTC",
+  "snapshot_time": "2026-10-14 02:58:00 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,16 +28,17 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "v3_mechanisms_compiled_and_layout_checked",
+    "revision_status": "teacher_v4_clarifications_compiled_and_layout_checked",
     "pages": 32,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "32-page contact sheets reviewed; final changed pages 1/13/20/21/29/30/31 at full size, final page32 contact reviewed",
-    "source_sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3",
-    "pdf_sha256": "05504e83aa321323626a56c6abfe42c2b046588bbba8a3d58e575ea542501385",
+    "all_page_visual_review": "32-page contacts and changed pages 6/20/21/30/31 at full size",
+    "source_sha256": "546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c",
+    "pdf_sha256": "67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d",
     "submission": "not_submitted",
-    "formal_submission_ready": false
+    "formal_submission_ready": false,
+    "abstract_words": 233
   },
   "figures": {
     "new_count": 2,
@@ -53,11 +54,11 @@
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
   "goal_complete": false,
   "delivery": {
-    "archive": "paper/revision-delivery-v3.zip",
-    "bytes": 578302,
-    "sha256": "7fb038f974bdc921583c2c9e534b61f2b6ec24a3d2ae4506fe010cc4e2dc2f3a",
+    "archive": "paper/revision-delivery-v4.zip",
+    "bytes": 648810,
+    "sha256": "953e6ae358398854c5fc7f3a892c9edf90e14010972d116005f13ebb0f24146e",
     "checksum_verified": true,
-    "scope": "Current source/PDF and all v3 scientific diagnostics/protocol; excludes raw listings/weights/transitive original inputs. Older full-cohort evidence remains separately indexed. No public/external-training/submission claim."
+    "scope": "v3 supporting scientific evidence retained; current source/PDF and v4 bounded wording/accounting/price-normalization checks; no raw listings/weights/new training/public release"
   },
   "completion_scope": "scientific revision and calculations delivered; no actual submission or public-release/author/external-full-training claim",
   "remaining_for_actual_submission": [
@@ -191,5 +192,16 @@
     "delivery_index": "notes/revision-mechanisms-v3/revision-delivery-index.json",
     "full_four_field_final_record_mechanism": "not_empirically_evaluated",
     "extracted_bundle_contract_test": "six direct bindings and six negative controls pass; same-machine aggregate validation only"
+  },
+  "teacher_revision_v4": {
+    "status": "completed_compiled_and_checked",
+    "new_training_runs": 0,
+    "new_response_optimizations": 0,
+    "variance_weight_checks": true,
+    "price_discount_denominator": "original predicted quote",
+    "max_individual_quote_discount_fraction": 0.254743,
+    "cost_conditional_benefit": "synthetic robust/suppression/top-B subset mean only; residual concealment remains positive",
+    "response": "notes/teacher-review-v4/REVIEW_RESPONSE.zh.md",
+    "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   }
 }

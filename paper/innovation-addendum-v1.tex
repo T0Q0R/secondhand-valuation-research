@@ -23,8 +23,8 @@ capacity, all 36 zero-cost feedback contrasts worsen inflation; a post-hoc
 simultaneous sensitivity retains 31 adverse intervals for that family.
 Removing both real-source evaluation caps preserves all 24 adverse directions,
 with 22 unadjusted intervals excluding zero. For the two crossing-zero MUCars
-contrasts, fitting-seed main effects explain over 98\% of conditional bootstrap
-variance; this neither establishes equivalence nor measures training-population
+contrasts in the uncapped design, fitting-seed main effects explain over 98\%
+of conditional bootstrap variance; this neither establishes equivalence nor measures training-population
 uncertainty. Ordinary-benefit and acquisition-conditioned controls also outperform
 the original SAV candidate on synthetic and JUCars inflation. A history cap
 can worsen attacked error or query failures after responses change. Positive
@@ -291,8 +291,11 @@ family. An arbitrary history cap cannot be placed inside that mechanism class
 without checking these conditions.
 
 A two-mode constructed example at $B=1,\eta=0$ yields $72/17$ for the public
-oracle, $72/13$ for the best global mixture of the specified eight rules, and
-$8$ for risk ordering. These are artificial linear quote units, not empirical
+oracle, $72/13$ for the best global mixture of eight fixture rules, and
+$8$ for risk ordering. The eight rules are the six priority permutations of
+three items, risk ordering by residual leverage $(\Delta_i-2\eta)_+$, and
+no query; this fixture library differs from the twelve-rule empirical CDM
+library in Section~3.2. These are artificial linear quote units, not empirical
 log-price effects. All 32 budget/precision cases passed a separate auditor.
 
 \paragraph{What is tested in the learned-model experiment.}
@@ -1176,12 +1179,12 @@ claim. We retain it to avoid retrospective threshold selection, report the
 continuous effects, and vary inflation cutoffs over 0, 5, 10, 15 and 20\%
 and honest-error allowances over 0, 1, 5 and 10\%.
 
-At a 5\% honest-error allowance, the frozen allocation study has 8, 4, 2, 0
-and 0 passing points across the respective inflation cutoffs. Its JUCars
+At a 5\% honest-error allowance, the frozen allocation study has 8/18, 4/18,
+2/18, 0/18 and 0/18 passing contrasts across the respective inflation cutoffs. Its JUCars
 robust-benefit reduction is approximately 9.985\%, so classifying it below a
 10\% gate is not a substantive discontinuity in usefulness. In the matched
-joint-policy family, the zero-cutoff gate retains three small MUCars gains;
-no joint point passes any inflation cutoff of 5\% or more. Full grids and
+joint-policy family, the zero-cutoff gate retains 3/18 contrasts, all small
+MUCars gains; 0/18 pass any inflation cutoff of 5\% or more. Full grids and
 unrounded effects are supplied. A deployment threshold requires a platform's
 error/query-cost preferences, which this retrospective study has not elicited.
 
@@ -1208,15 +1211,15 @@ in absolute terms (9.4\% without and 9.3\% with feedback per listing).
 
 \begin{table}[htbp]\centering\small
 \begin{tabular}{lrrr}\toprule
-Cost per hidden field & Inflation difference & Attack-MAE difference & Failure difference (pp)\\\midrule
+Cost per hidden field & Inflation improvement & Attack-MAE improvement & Failure improvement (pp)\\\midrule
 0 & -0.000908 & -8.995 & -0.533 \\
 0.005 & -0.000378 & +3.043 & -0.233 \\
 0.02 & +0.000316 & +14.200 & +0.067 \\
 Heterogeneous 0.02 & +0.000553 & +12.198 & +0.100 \\
 \bottomrule\end{tabular}
 \caption{Synthetic robust/suppression/top-$B$ feedback sensitivity on the same
-1,000 records and three fitting seeds. All differences are no-feedback minus
-feedback, so positive values favor feedback. Costs are log-quote utility units;
+1,000 records and three fitting seeds. Improvements are no-feedback minus
+feedback; positive values mean reductions in inflation, attacked error or failure. Costs are log-quote utility units;
 MAE uses synthetic price units. All four cost regimes and all individual-seed
 results are retained; the table is descriptive and post-hoc.}
 \label{tab:cost_sensitivity}\end{table}
@@ -1231,7 +1234,12 @@ Failed queries reach 9.47\% and 9.40\% per listing; at 10\% capacity, at least
 94.7\% and 94.0\% of actual queries fail. Thus the local ranking reversal
 coexists with suppressed concealment and predominantly unsuccessful
 verification; it does not isolate improved feedback quality as its cause.
-Appendix~\ref{app:mechanism_diagnostics} gives the utility-based bounds.
+Constructively, deterrence moves this subset toward ordinary valuation:
+at both 0.02 cost specifications, feedback no longer worsens mean inflation
+and lowers mean honest error, attacked error and query failure. This is a
+conditional descriptive benefit, not a fully nonstrategic limit: residual
+concealment remains positive. Appendix~\ref{app:mechanism_diagnostics} gives
+the utility-based bounds.
 
 JUCars and MUCars retain adverse mean inflation directions for both allocators
 under every declared cost regime in this subset. Twenty positive-cost
@@ -1265,8 +1273,9 @@ The original capped factorial remains the declared primary comparison.
 An exact conditional seed/batch variance decomposition, including weighted
 partial batches, attributes 98.39\% and 98.28\% to fitting-seed main effects
 for the uncapped MUCars masking/suppression top-$B$ and minimax contrasts.
-Their capped shares are 90.97\% and 87.42\%; interval-width ratios alone do
-not identify these components. Under the empirical conditional design,
+Their capped shares are 90.97\% and 87.42\%; these compare different cohort
+and weighting designs, not a pure replication-size change. Interval-width
+ratios alone do not identify the components. Under the empirical conditional design,
 thirty instead of ten independent fitting seeds would project standard
 deviations to approximately 58\% of their current values, while eliminating
 only batch resampling noise leaves approximately 99\%. These are design
@@ -1759,6 +1768,16 @@ are calculated by conditioning on the multinomial count of the single
 partial batch, retaining ratio normalization. Exhaustive balanced and
 unequally weighted $2\times2$ resampling independently checks the formula.
 All 48 capped/full real-source feedback decompositions are retained.
+Capped components use ten equal 100-record batches; uncapped MUCars components
+use 107 batches normalized by record counts, including a 72-record tail.
+Thus the outcome matrix and averaging weights both change. For top-$B$ and
+minimax, batch variances fall by factors 5.73 and 8.04 (not 10.7), while
+seed-main variances change by $-13.20\%$ and $-9.43\%$. This is not variance
+reduction from sample size alone. Holding all 107 batches fixed and changing
+only equal-batch to record-count weights changes the seed term by merely
+$-0.16\%$ and $+0.11\%$, respectively; the larger change cannot be attributed
+to tail weighting alone.
+
 Thirty-seed projections divide seed and interaction terms by three; the
 batch-noise-free projection holds the empirical batch distribution fixed.
 Neither supplies new training runs, equivalence evidence or population coverage.
@@ -1810,8 +1829,17 @@ Each JUCars model evaluates 806 completions; each MUCars model evaluates
 1,139. All baseline quotes match saved predictions within $5\times10^{-6}$
 in log quote; sampled completions also match the production all-state
 inference route within that tolerance. Predictor primitives are shared.
-Only one covered JUCars and 28 covered MUCars records have a naturally missing
-category, explaining the concentration of effects. The guarantee covers only
+On the declared covered domain, the envelope is exactly costless for complete
+categorical records: 800/801 JUCars and 971/999 MUCars records have singleton
+completion sets. All quotation and error changes are confined to the one and
+28 naturally incomplete records, respectively. For the MUCars subset, the
+largest individual quotation reduction is 25.5\% of that record's original
+predicted quote, while mean honest-MAE increases range from 374.24 to 851.51
+currency units (Table~\ref{tab:final_record_pilot}). Quotation discounts and
+absolute-error costs have different denominators and must not be conflated.
+The practical trade-off is zero change on complete covered categorical
+records but potentially substantial discounts on naturally incomplete ones.
+The guarantee covers only
 the declared categorical domain with fixed observed mileage. It does not
 cover mileage concealment, unseen values or the original full four-field
 game, and this pilot supplies no confirmatory or universal method advantage.

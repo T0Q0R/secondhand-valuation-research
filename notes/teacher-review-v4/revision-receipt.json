@@ -1,0 +1,13 @@
+{
+  "status": "builtin_compiled_exported_checked",
+  "source_sha256": "546ac4c6050bef4b4c97c28ede46789de1b0996e141c11e5421322a021e8057c",
+  "baseline_sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3",
+  "generator_sha256": "53e907624d5cf4b9d35a461621fde64ebff94327c1305b2729938e8b0ab714ff",
+  "replacements": 10,
+  "abstract_words": 233,
+  "pdf_sha256": "67c490d41e0b1e8dcff59d3ffd130da4c6bbea32d43f26b7165b120f4fecc30d",
+  "pages": 32,
+  "builtin_compile": "success",
+  "response_consistency_findings": [],
+  "figure_environments_unchanged": true
+}

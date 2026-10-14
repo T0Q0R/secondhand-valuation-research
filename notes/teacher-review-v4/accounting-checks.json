@@ -1,0 +1,86 @@
+{
+  "frozen_threshold_counts": [
+    {
+      "inflation_reduction_threshold_percent": 0,
+      "passing_points": 8,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 5,
+      "passing_points": 4,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 10,
+      "passing_points": 2,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 15,
+      "passing_points": 0,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 20,
+      "passing_points": 0,
+      "comparisons": 18
+    }
+  ],
+  "joint_threshold_counts": [
+    {
+      "inflation_reduction_threshold_percent": 0.0,
+      "passing_points": 3,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 5.0,
+      "passing_points": 0,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 10.0,
+      "passing_points": 0,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 15.0,
+      "passing_points": 0,
+      "comparisons": 18
+    },
+    {
+      "inflation_reduction_threshold_percent": 20.0,
+      "passing_points": 0,
+      "comparisons": 18
+    }
+  ],
+  "eight_fixture_rules": [
+    "priority-012",
+    "priority-021",
+    "priority-102",
+    "priority-120",
+    "priority-201",
+    "priority-210",
+    "risk",
+    "none"
+  ],
+  "synthetic_higher_cost_mean_benefits": [
+    {
+      "scenario": "uniform020",
+      "improvements": {
+        "inflation": 0.00031592909495040036,
+        "honest_mae": 4.29311941792821,
+        "attacked_mae": 14.19971240747509,
+        "failed_query": 0.0006666666666665932
+      }
+    },
+    {
+      "scenario": "heterogeneous020",
+      "improvements": {
+        "inflation": 0.0005532248814901003,
+        "honest_mae": 4.29311941792821,
+        "attacked_mae": 12.198133680573392,
+        "failed_query": 0.0010000000000000009
+      }
+    }
+  ]
+}
