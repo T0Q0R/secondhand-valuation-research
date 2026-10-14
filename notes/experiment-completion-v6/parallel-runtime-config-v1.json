@@ -1,0 +1,46 @@
+{
+  "runtime_output": "outputs/completion-parallel-runtime-v1",
+  "max_workers": 4,
+  "user_cpu_allowance": 9,
+  "nominal_compute_threads": 8,
+  "per_worker_torch_blas_head_threads": 2,
+  "memory_admission_gib": 6,
+  "memory_target_reserve_gib": 4,
+  "memory_reservation_is_hard": false,
+  "scientific_worker_sources_unchanged": true,
+  "stages": [
+    {
+      "name": "ablation",
+      "script": "experiments/run_completion_ablation_v6.py",
+      "script_sha256": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+      "output": "outputs/completion-ablation-v6",
+      "manifest_sha256": "20c8751b1baa464c77b1057c424030b0e3349469b7bce17b8cc79006782fedf0"
+    },
+    {
+      "name": "parameters",
+      "script": "experiments/run_completion_parameters_v6.py",
+      "output": "outputs/completion-parameters-v6",
+      "script_sha256": "9a382d41c0497a0947dd8030bfd1e0853a83599dc8d4d6d4ff763706acf330c6",
+      "manifest_sha256": "0cd9dcc9afbadae0d8dbf5f7b4c134ec60f0c1c7ed7b98e208b6418db04d58fa"
+    },
+    {
+      "name": "stability",
+      "script": "experiments/run_completion_stability_v6.py",
+      "output": "outputs/completion-stability-v6",
+      "script_sha256": "9d55eda852f1ec18adeb146c198f10b74a7cfadca20833aa60de5b901a748a0a",
+      "manifest_sha256": "619f485b6f7c74a421611caa012507e6f3cd9c4c426c8aa3878eb23853feeb53"
+    },
+    {
+      "name": "sefa2025",
+      "script": "experiments/run_completion_sefa_v6.py",
+      "output": "outputs/completion-sefa-v6-official",
+      "script_sha256": "c4a4b21bcdd2285b57dfab45e46abae437eb7633f32db800e4d64e2c341e8875",
+      "manifest_sha256": "45b092de011434981d3274af6c6d6d149ea9855038d16f9e2c2b2a1db9da4c5a"
+    }
+  ],
+  "analysis": {
+    "script": "notes/experiment-completion-v6/analyze_completed.py",
+    "script_sha256": "ff4db8f884451a3f7f8f69346b36270dd402da422889439efe8ff01c6d7ee08d",
+    "output": "outputs/completion-analysis-v6"
+  }
+}

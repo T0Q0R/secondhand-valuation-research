@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checkpoint_resume": "23existing cell receipts unchanged; one omitted cell recomputed with exact DataFrame equality vs original tiny run",
+  "completed_pair_skip": "Final wrapper version skips completed tiny24-cell pair and verifies summary; no rerun",
+  "scientific_sources_unchanged": {
+    "experiments/run_completion_ablation_v6.py": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+    "experiments/run_completion_parameters_v6.py": "9a382d41c0497a0947dd8030bfd1e0853a83599dc8d4d6d4ff763706acf330c6",
+    "experiments/run_completion_stability_v6.py": "9d55eda852f1ec18adeb146c198f10b74a7cfadca20833aa60de5b901a748a0a",
+    "experiments/run_completion_sefa_v6.py": "c4a4b21bcdd2285b57dfab45e46abae437eb7633f32db800e4d64e2c341e8875"
+  },
+  "smoke_runtime_completion": {
+    "status": "computations_and_aggregate_checks_completed_scientific_visual_review_pending",
+    "pid": 38580,
+    "time": 1791954183.0349078,
+    "manuscript_generated": false
+  },
+  "runtime_source_sha256": "a498797373c64d982c1d9574559a4d9046e2acaaf02935565043dbe748ff92a2",
+  "scope": "Runtime/concurrency/checkpoint validation only; no new scientific result"
+}
