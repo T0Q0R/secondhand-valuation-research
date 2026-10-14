@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T19:05:16+08:00",
+  "snapshot_time": "2026-10-14T19:06:25+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -318,7 +318,7 @@
       "cells": 270,
       "new_price_fits": 432,
       "manifest": "notes/experiment-completion-v6/parameters-launch.json",
-      "completed_cells_snapshot": 110,
+      "completed_cells_snapshot": 188,
       "total_cells": 270,
       "completed_new_price_fits_snapshot": 179
     },
@@ -400,9 +400,11 @@
     }
   },
   "statistics_sidecar": {
-    "status": "validated_pending_launch",
+    "status": "running_verified",
     "nominal_threads": 1,
     "total_with_training": 9,
-    "coverage": "notes/completion-statistics-v1/COVERAGE.zh.md"
+    "coverage": "notes/completion-statistics-v1/COVERAGE.zh.md",
+    "pid": 60157,
+    "status_path": "outputs/completion-statistics-v1/status.json"
   }
 }

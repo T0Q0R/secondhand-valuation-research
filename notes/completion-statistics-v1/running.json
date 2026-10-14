@@ -1,0 +1,16 @@
+{
+  "pid": 60157,
+  "time": 1791975937.998267,
+  "threads": 1,
+  "status": "launched",
+  "verified_at": "2026-10-14T19:06:25+08:00",
+  "observed_status": {
+    "status": "waiting_for_stage",
+    "stage": "parameters",
+    "pid": 60157,
+    "threads": 1,
+    "time": 1791975964.58148
+  },
+  "configuration_commit": "32e694bfc04654a19d6db7f63d5f4709055671a3",
+  "observed_cpu_percent": 94.9
+}

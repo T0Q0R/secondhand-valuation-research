@@ -1,3 +1,7 @@
+# 第九计算线程：统计后处理队列
+
+2026-10-14T19:06:25+08:00：用户再次授权9核，训练仍PID38715最多4×2线程；单核分析PID60157已启动，状态outputs/completion-statistics-v1/status.json。它处理完成的消融，再自动等参数/稳定性/SEFA/机制阶段。机制尾队列59731保留。总名义8+1线程；等待时不占满CPU。不要重复启动。配对bootstrap/Pareto只属探索性分析，3种子不保证覆盖率。正文冻结；未来科学/图表QA、结果GitHub同步仍待下一次活动。
+
 # 新增机制尾队列已运行
 
 2026-10-14T19:00:26+08:00：PID59731等待原PID38715完成原四阶段及汇总后自动接续。查看outputs/mechanism-tail-v1/status.json和failure.json；计算开始后查看outputs/mechanism-parallel-runtime-v1/status.json。90单元（36复用/54新评估）、108新拟合；不要重复启动。原计算最新快照{'ablation': 432, 'parameters': 184, 'stability': 0, 'sefa': 0}。正文冻结；后续仍需科学解释/图表QA及GitHub同步。
