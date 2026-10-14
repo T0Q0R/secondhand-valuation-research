@@ -1,0 +1,77 @@
+{
+  "status": "ready_to_start_after_remote_readback",
+  "output": "outputs/completion-ablation-v6",
+  "workers": 2,
+  "torch_threads": 2,
+  "blas_threads": 2,
+  "action_head_threads": 2,
+  "catboost_threads": 4,
+  "pairs": 9,
+  "cells": 432,
+  "price_fits_new": 108,
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/completion-ablation-v6",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "frozen_sources": {
+    "run_completion_ablation_v6.py": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+    "run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7",
+    "savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a"
+  },
+  "manuscript_frozen": true,
+  "smoke": "notes/experiment-completion-v6/ablation-smoke.json",
+  "started": false
+}

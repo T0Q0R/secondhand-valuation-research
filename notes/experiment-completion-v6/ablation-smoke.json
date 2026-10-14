@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "smoke_cells": 24,
+  "corruption_controls": {
+    "action": "rejected",
+    "final_state": "rejected",
+    "attacked_prediction_log": "rejected"
+  },
+  "prediction_identity": {
+    "max_log_errors": {
+      "on_sup_gap": 0.0,
+      "on_ben_gap": 0.0,
+      "on_sup_zero": 0.0
+    },
+    "scope": "Reused feedback-on schedule matches production training on identical tiny data"
+  },
+  "failed_first_smoke": "identity-reference parent directory missing; fixed; immutable tiny fits reused in v2",
+  "completion": {
+    "status": "completed_and_corroborated",
+    "cells": 24,
+    "pairs": 1,
+    "summary_sha256": "4d7c2ea8407ac8fb4b4ef1f484673a33e7433b9f41da17ec974a62719070f55b",
+    "manifest_sha256": "9699a150a4ebb3ce2cc50685277b4f3cb4b09903e7c51c89d83d42d3dad7120d",
+    "smoke_only": true
+  }
+}
