@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "live_predecessor_not_bypassed": true,
+  "failure_blocks_tail": true,
+  "unverified_completion_rejected": true,
+  "contrast_algebra_checked": true,
+  "frozen_file_hashes_verified": 11,
+  "scientific_result": false
+}

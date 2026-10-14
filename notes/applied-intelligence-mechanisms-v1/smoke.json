@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "smoke_only": true,
+  "scope": "Engineering checks on201estimator/81guidance/101evaluation rows with existing backbone;not scientific outcomes",
+  "branches": {
+    "epoch-weak": {
+      "identity": {
+        "prediction": 0.0,
+        "score": 0.0
+      },
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1052,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "diagnostics": {
+        "legal_hidden_recovery_edges": 1513,
+        "recovery_raises_quote_edges": 764,
+        "recovery_raises_quote_edge_fraction": 0.5049570389953735,
+        "max_recovery_log_increase": 0.18610668182373047,
+        "realized_successful_queries": 9,
+        "realized_recovery_raises_quote": 1,
+        "realized_positive_recovery_log_sum": 0.039374351501464844,
+        "all_listing_realized_positive_recovery_log_mean": 0.00038984506437093907,
+        "denominator_note": "Edges count only legal hidden fields; realized fractions must use successful queries,not all missing fields."
+      },
+      "epochs": 4,
+      "training_batches": 12
+    },
+    "epoch-strong": {
+      "identity": null,
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1052,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "diagnostics": {
+        "legal_hidden_recovery_edges": 1513,
+        "recovery_raises_quote_edges": 762,
+        "recovery_raises_quote_edge_fraction": 0.5036351619299405,
+        "max_recovery_log_increase": 0.18634605407714844,
+        "realized_successful_queries": 9,
+        "realized_recovery_raises_quote": 1,
+        "realized_positive_recovery_log_sum": 0.03958415985107422,
+        "all_listing_realized_positive_recovery_log_mean": 0.00039192237476311107,
+        "denominator_note": "Edges count only legal hidden fields; realized fractions must use successful queries,not all missing fields."
+      },
+      "epochs": 4,
+      "training_batches": 12
+    },
+    "batch-weak": {
+      "identity": null,
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1052,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "diagnostics": {
+        "legal_hidden_recovery_edges": 1513,
+        "recovery_raises_quote_edges": 764,
+        "recovery_raises_quote_edge_fraction": 0.5049570389953735,
+        "max_recovery_log_increase": 0.18612957000732422,
+        "realized_successful_queries": 9,
+        "realized_recovery_raises_quote": 1,
+        "realized_positive_recovery_log_sum": 0.039389610290527344,
+        "all_listing_realized_positive_recovery_log_mean": 0.00038999614149036975,
+        "denominator_note": "Edges count only legal hidden fields; realized fractions must use successful queries,not all missing fields."
+      },
+      "epochs": 4,
+      "training_batches": 12
+    },
+    "batch-strong": {
+      "identity": null,
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1052,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "diagnostics": {
+        "legal_hidden_recovery_edges": 1513,
+        "recovery_raises_quote_edges": 762,
+        "recovery_raises_quote_edge_fraction": 0.5036351619299405,
+        "max_recovery_log_increase": 0.18634796142578125,
+        "realized_successful_queries": 9,
+        "realized_recovery_raises_quote": 1,
+        "realized_positive_recovery_log_sum": 0.039554595947265625,
+        "all_listing_realized_positive_recovery_log_mean": 0.0003916296628442141,
+        "denominator_note": "Edges count only legal hidden fields; realized fractions must use successful queries,not all missing fields."
+      },
+      "epochs": 4,
+      "training_batches": 12
+    },
+    "feedback-off": {
+      "identity": {
+        "prediction": 0.0,
+        "score": 0.0
+      },
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1052,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "diagnostics": {
+        "legal_hidden_recovery_edges": 1513,
+        "recovery_raises_quote_edges": 757,
+        "recovery_raises_quote_edge_fraction": 0.5003304692663583,
+        "max_recovery_log_increase": 0.18688583374023438,
+        "realized_successful_queries": 9,
+        "realized_recovery_raises_quote": 1,
+        "realized_positive_recovery_log_sum": 0.04066276550292969,
+        "all_listing_realized_positive_recovery_log_mean": 0.0004026016386428682,
+        "denominator_note": "Edges count only legal hidden fields; realized fractions must use successful queries,not all missing fields."
+      },
+      "epochs": 4,
+      "training_batches": 0
+    }
+  },
+  "seconds": {
+    "epoch-weak": 2.3676300048828125,
+    "epoch-strong": 1.1366910934448242,
+    "batch-weak": 0.6519789695739746,
+    "batch-strong": 1.248905897140503,
+    "feedback-off": 0.482086181640625
+  },
+  "resume_sha_unchanged": true,
+  "changed_config_rejected": true,
+  "paper_sha": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24"
+}

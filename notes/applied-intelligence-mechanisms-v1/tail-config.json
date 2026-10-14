@@ -1,0 +1,39 @@
+{
+  "predecessor_pid": 38715,
+  "predecessor_output": "outputs/completion-parallel-runtime-v1",
+  "predecessor_manifest_sha256": "28168064a9ed4f6a0d9b4d817df80e25bc6e8fa06f8c92806e40260d526fac80",
+  "predecessor_stages": [
+    {
+      "output": "outputs/completion-ablation-v6",
+      "cells": 432
+    },
+    {
+      "output": "outputs/completion-parameters-v6",
+      "cells": 270
+    },
+    {
+      "output": "outputs/completion-stability-v6",
+      "cells": 144
+    },
+    {
+      "output": "outputs/completion-sefa-v6-official",
+      "cells": 108
+    }
+  ],
+  "runtime_script": "notes/experiment-completion-v6/run_parallel_runtime_v1.py",
+  "runtime_config": "notes/applied-intelligence-mechanisms-v1/runtime-config.json",
+  "tail_output": "outputs/mechanism-tail-v1",
+  "frozen_files": {
+    "experiments/run_completion_mechanisms_v1.py": "144a0fce7d823dab0c961dfe120dd1ce1522765a674649466ce27dde755c27f9",
+    "experiments/mechanism_training_v1.py": "4cd91fe5bf8b9b767ae01bc05013e624e18ab92772402d5d6fff293c197f7c8a",
+    "experiments/mechanism_diagnostics_v1.py": "51f2d69aa5e4a824d8fd0d97a6fd6128fe67c8ef625de750c78ce490e5c39d3c",
+    "experiments/run_completion_ablation_v6.py": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+    "notes/applied-intelligence-mechanisms-v1/analyze.py": "080db7828674dd746f6b4432ae65aef39bd359a5bf426112935ba3e912b46501",
+    "notes/applied-intelligence-mechanisms-v1/runtime-config.json": "672f2fbc23f50a94fce33c548bacee8c536a7838b2111478750e458f81629e88",
+    "notes/experiment-completion-v6/run_parallel_runtime_v1.py": "a498797373c64d982c1d9574559a4d9046e2acaaf02935565043dbe748ff92a2",
+    "outputs/completion-mechanisms-v1/manifest.json": "1c350d713593e329796f2ba33cb4dacf4e9983d09ee0eb75ca6ff22467caa3a0",
+    "experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "experiments/run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0.1,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "workers": 4,
+  "smoke_only": false,
+  "settings": {
+    "epoch-weak": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "score_refresh_x_response_search",
+      "refresh": "epoch",
+      "search": "weak",
+      "sweeps": 2,
+      "restarts": 1
+    },
+    "epoch-strong": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "score_refresh_x_response_search",
+      "refresh": "epoch",
+      "search": "strong",
+      "sweeps": 20,
+      "restarts": 4
+    },
+    "batch-weak": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "score_refresh_x_response_search",
+      "refresh": "batch",
+      "search": "weak",
+      "sweeps": 2,
+      "restarts": 1
+    },
+    "batch-strong": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": true,
+      "axis": "score_refresh_x_response_search",
+      "refresh": "batch",
+      "search": "strong",
+      "sweeps": 20,
+      "restarts": 4
+    },
+    "feedback-off": {
+      "beta": 0.5,
+      "tolerance": 0.02,
+      "rounds": 2,
+      "feedback": false,
+      "axis": "matched_no_feedback",
+      "refresh": "epoch",
+      "search": "none",
+      "sweeps": 2,
+      "restarts": 1
+    }
+  },
+  "expected_pairs": 9,
+  "expected_cells": 90,
+  "source_sha256": "144a0fce7d823dab0c961dfe120dd1ce1522765a674649466ce27dde755c27f9",
+  "common_source_sha256": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+  "paper_frozen_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
+  "scope": "Retrospective mechanism interventions;3fitting seeds/fixed training population; no universal feedback claim",
+  "dependency_sha256": {
+    "experiments/mechanism_training_v1.py": "4cd91fe5bf8b9b767ae01bc05013e624e18ab92772402d5d6fff293c197f7c8a",
+    "experiments/mechanism_diagnostics_v1.py": "51f2d69aa5e4a824d8fd0d97a6fd6128fe67c8ef625de750c78ce490e5c39d3c",
+    "experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "experiments/run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7"
+  }
+}

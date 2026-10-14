@@ -1,3 +1,7 @@
+# 新增机制计算（待启动）
+
+2026-10-14T18:59:24+08:00：用户要求面向Applied Intelligence补机制证据，已准备独立尾队列，等原四阶段/汇总通过后接续。90单元/108新拟合，36评估复用。先查notes/applied-intelligence-mechanisms-v1/tail-config.json及outputs/mechanism-tail-v1/status.json（尚未启动时不存在）。原runtime38715不改、不重启；正文冻结。新计算完成后需科学解释和绘图QA，不自动写论文。
+
 # 最新完成检查点
 
 2026-10-14T15:51:11+08:00：三组件消融432/432及108个新价格模型完成，逐单元复算通过；完成凭证与summary.csv的SHA已核验并提交。本次参数快照110/270，稳定性与SEFA尚未开始，后台仍由PID38715调度。最终汇总/科学解释及图表QA未完成，不可因此写论文或宣称算法优势。先看outputs/completion-parallel-runtime-v1/status.json。

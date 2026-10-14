@@ -1,0 +1,25 @@
+{
+  "runtime_output": "outputs/mechanism-parallel-runtime-v1",
+  "max_workers": 4,
+  "user_cpu_allowance": 9,
+  "nominal_compute_threads": 8,
+  "per_worker_torch_blas_head_threads": 2,
+  "memory_admission_gib": 6,
+  "memory_target_reserve_gib": 4,
+  "memory_reservation_is_hard": false,
+  "scientific_worker_sources_unchanged": true,
+  "stages": [
+    {
+      "name": "mechanisms",
+      "script": "experiments/run_completion_mechanisms_v1.py",
+      "output": "outputs/completion-mechanisms-v1",
+      "script_sha256": "144a0fce7d823dab0c961dfe120dd1ce1522765a674649466ce27dde755c27f9",
+      "manifest_sha256": "1c350d713593e329796f2ba33cb4dacf4e9983d09ee0eb75ca6ff22467caa3a0"
+    }
+  ],
+  "analysis": {
+    "script": "notes/applied-intelligence-mechanisms-v1/analyze.py",
+    "script_sha256": "080db7828674dd746f6b4432ae65aef39bd359a5bf426112935ba3e912b46501",
+    "output": "outputs/mechanism-analysis-v1"
+  }
+}

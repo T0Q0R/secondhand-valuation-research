@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T15:51:11+08:00",
+  "snapshot_time": "2026-10-14T18:59:24+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -380,5 +380,16 @@
       "summary": "outputs/completion-ablation-v6/summary.csv",
       "summary_sha256": "83643ec44cf654e40e346c3558cedab085810d7487f1671624a5dc643cb2c257"
     }
+  },
+  "applied_intelligence_mechanisms": {
+    "status": "implemented_validated_pending_tail_launch",
+    "plan": "notes/applied-intelligence-mechanisms-v1/PLAN.zh.md",
+    "cells": 90,
+    "reused_cells": 36,
+    "new_evaluation_cells": 54,
+    "new_price_fits": 108,
+    "predecessor_pid": 38715,
+    "scientific_results": "not_started",
+    "manuscript_generated": false
   }
 }
