@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14T13:05:57+08:00",
+  "snapshot_time": "2026-10-14T15:51:11+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -212,7 +212,7 @@
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   },
   "experiment_first_request": {
-    "status": "parallel_runtime_running_ai_stopping_after_verified_resize",
+    "status": "controlled_ablation_completed_parameters_running",
     "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
     "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
     "new_training_started": true,
@@ -308,7 +308,7 @@
       "smoke_and_config_commit": "b184f6e7463dc4d75eb20ef0488ed145bf52f335"
     },
     "parameters": {
-      "status": "implemented_smoke_passed_waiting_for_ablation_completion",
+      "status": "running",
       "pairs": 9,
       "settings": 15,
       "budgets": [
@@ -317,10 +317,13 @@
       ],
       "cells": 270,
       "new_price_fits": 432,
-      "manifest": "notes/experiment-completion-v6/parameters-launch.json"
+      "manifest": "notes/experiment-completion-v6/parameters-launch.json",
+      "completed_cells_snapshot": 110,
+      "total_cells": 270,
+      "completed_new_price_fits_snapshot": 179
     },
     "recent_baseline": {
-      "status": "official_SEFA_implementation_smoke_passed_formal_queued",
+      "status": "queued_not_started",
       "pairs": 9,
       "backends": 2,
       "cells": 108,
@@ -330,7 +333,7 @@
       "training_only_trials": 3
     },
     "stability": {
-      "status": "implemented_structural_smoke_passed_queued",
+      "status": "queued_not_started",
       "settings": 16,
       "cells": 144,
       "pairs": 9,
@@ -350,7 +353,7 @@
       "status": "implemented_factorial_and_contrast_sign_self_test_passed",
       "future_figures": "source CSVs prepared only after actual completion; visual rendering/QA pending"
     },
-    "ai_work": "stopping_this_turn_after_independent_preparations_per_user_no_polling",
+    "ai_work": "status_checked_and_completed_ablation_checkpoint_synced_then_stop_waiting",
     "runtime_resize": {
       "status": "running_verified",
       "requested_cpu_allowance": 9,
@@ -367,6 +370,15 @@
       "preserved_receipt_mismatches": 0,
       "verification": "notes/experiment-completion-v6/parallel-runtime-verification-v1.json",
       "running_receipt": "notes/experiment-completion-v6/parallel-runtime-running-v1.json"
+    },
+    "controlled_ablation": {
+      "status": "completed_and_per_cell_corroborated_global_cross_stage_review_pending",
+      "cells": 432,
+      "pairs": 9,
+      "new_price_fits": 108,
+      "completion": "outputs/completion-ablation-v6/completion.json",
+      "summary": "outputs/completion-ablation-v6/summary.csv",
+      "summary_sha256": "83643ec44cf654e40e346c3558cedab085810d7487f1671624a5dc643cb2c257"
     }
   }
 }

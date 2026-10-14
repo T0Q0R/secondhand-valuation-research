@@ -1,3 +1,7 @@
+# 最新完成检查点
+
+2026-10-14T15:51:11+08:00：三组件消融432/432及108个新价格模型完成，逐单元复算通过；完成凭证与summary.csv的SHA已核验并提交。本次参数快照110/270，稳定性与SEFA尚未开始，后台仍由PID38715调度。最终汇总/科学解释及图表QA未完成，不可因此写论文或宣称算法优势。先看outputs/completion-parallel-runtime-v1/status.json。
+
 # 当前并行运行入口（取代以下旧PID）
 
 2026-10-14T13:05:57+08:00：用户允许最多9核，已把计算和后续队列切换到PID38715，最多4进程×原2线程，实测约7.5核。先读outputs/completion-parallel-runtime-v1/status.json、failure.json(如有)、execution.log。旧35940/37905已终止，旧queue状态已标记superseded，禁止按旧PID重启。原科学worker和manifest未改；独立runtime溯源见notes/experiment-completion-v6/parallel-runtime-running-v1.json。425份已完成检查点记录哈希保护并验证未变。内存门控要求估计可回收>=6GiB才新增任务，目标余量4GiB不是硬OS预留；并发可低于4。所有后续参数/稳定性/SEFA及最终汇总由新调度器自动接续。不要重复启动。等用户回来再检查结果并同步新完成产物；此前不改论文、不轮询等计算。
