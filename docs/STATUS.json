@@ -170,6 +170,16 @@
       0.982766
     ],
     "cost_concealment": "bounded using utility and regret; all nonconverged retained",
-    "evidence": "notes/revision-mechanisms-v3/diagnostic-evidence.zip"
+    "evidence": "notes/revision-mechanisms-v3/diagnostic-evidence.zip",
+    "final_record_pilot": {
+      "status": "completed_restricted_categorical_domain",
+      "seeds": [
+        13,
+        42,
+        2026
+      ],
+      "coverage": "JU801/1000; MU999/1000",
+      "no_mileage_concealment_guarantee": true
+    }
   }
 }

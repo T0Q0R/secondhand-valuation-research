@@ -1,0 +1,143 @@
+{
+  "jucars/seed-13": {
+    "transmission": [
+      "<MISSING>",
+      "Automatic",
+      "Manual"
+    ],
+    "fuel_type": [
+      "<MISSING>",
+      "Diesel",
+      "Electric",
+      "Gasoline",
+      "Hybrid",
+      "Mild Hybrid",
+      "Plug-in - Hybrid"
+    ],
+    "feat_body_condition": [
+      "<MISSING>",
+      "Excellent with no defects",
+      "Fair (body needs work)",
+      "Good (body only has minor blemishes)",
+      "Other",
+      "Poor (severe body damages)"
+    ]
+  },
+  "jucars/seed-42": {
+    "transmission": [
+      "<MISSING>",
+      "Automatic",
+      "Manual"
+    ],
+    "fuel_type": [
+      "<MISSING>",
+      "Diesel",
+      "Electric",
+      "Gasoline",
+      "Hybrid",
+      "Mild Hybrid",
+      "Plug-in - Hybrid"
+    ],
+    "feat_body_condition": [
+      "<MISSING>",
+      "Excellent with no defects",
+      "Fair (body needs work)",
+      "Good (body only has minor blemishes)",
+      "Other",
+      "Poor (severe body damages)"
+    ]
+  },
+  "jucars/seed-2026": {
+    "transmission": [
+      "<MISSING>",
+      "Automatic",
+      "Manual"
+    ],
+    "fuel_type": [
+      "<MISSING>",
+      "Diesel",
+      "Electric",
+      "Gasoline",
+      "Hybrid",
+      "Mild Hybrid",
+      "Plug-in - Hybrid"
+    ],
+    "feat_body_condition": [
+      "<MISSING>",
+      "Excellent with no defects",
+      "Fair (body needs work)",
+      "Good (body only has minor blemishes)",
+      "Other",
+      "Poor (severe body damages)"
+    ]
+  },
+  "mucars/seed-13": {
+    "transmission": [
+      "<MISSING>",
+      "Automatic",
+      "Manual"
+    ],
+    "fuel_type": [
+      "<MISSING>",
+      "Diesel",
+      "Electrique",
+      "Hybrid",
+      "LPG",
+      "Petrol"
+    ],
+    "feat_body_condition": [
+      "<MISSING>",
+      "Damaged",
+      "Excellent",
+      "Fair",
+      "Good",
+      "Very Good"
+    ]
+  },
+  "mucars/seed-42": {
+    "transmission": [
+      "<MISSING>",
+      "Automatic",
+      "Manual"
+    ],
+    "fuel_type": [
+      "<MISSING>",
+      "Diesel",
+      "Electrique",
+      "Hybrid",
+      "LPG",
+      "Petrol"
+    ],
+    "feat_body_condition": [
+      "<MISSING>",
+      "Damaged",
+      "Excellent",
+      "Fair",
+      "Good",
+      "Very Good"
+    ]
+  },
+  "mucars/seed-2026": {
+    "transmission": [
+      "<MISSING>",
+      "Automatic",
+      "Manual"
+    ],
+    "fuel_type": [
+      "<MISSING>",
+      "Diesel",
+      "Electrique",
+      "Hybrid",
+      "LPG",
+      "Petrol"
+    ],
+    "feat_body_condition": [
+      "<MISSING>",
+      "Damaged",
+      "Excellent",
+      "Fair",
+      "Good",
+      "Very Good"
+    ]
+  }
+}
