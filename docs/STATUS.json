@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-14 Asia/Shanghai",
+  "snapshot_time": "2026-10-14 02:30:08 UTC",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,14 +28,14 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "full_cohort_backfill_compiled_and_checked",
-    "pages": 30,
+    "revision_status": "v3_mechanisms_compiled_and_layout_checked",
+    "pages": 32,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "all 30 contact sheets and changed pages 20-23/28-30 at full size",
-    "source_sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
-    "pdf_sha256": "a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849",
+    "all_page_visual_review": "32-page contact sheets reviewed; final changed pages 1/13/20/21/29/30/31 at full size, final page32 contact reviewed",
+    "source_sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3",
+    "pdf_sha256": "05504e83aa321323626a56c6abfe42c2b046588bbba8a3d58e575ea542501385",
     "submission": "not_submitted",
     "formal_submission_ready": false
   },
@@ -53,11 +53,11 @@
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
   "goal_complete": false,
   "delivery": {
-    "archive": "paper/revision-delivery-v2.zip",
-    "bytes": 4873470,
-    "sha256": "627590477b23a1e30cad837c93178d7d83d43f675c4cc39bb5cf7943bdd7ddec",
+    "archive": "paper/revision-delivery-v3.zip",
+    "bytes": 578302,
+    "sha256": "7fb038f974bdc921583c2c9e534b61f2b6ec24a3d2ae4506fe010cc4e2dc2f3a",
     "checksum_verified": true,
-    "scope": "all computed supplements complete; external full-cohort archive indexed separately"
+    "scope": "Current source/PDF and all v3 scientific diagnostics/protocol; excludes raw listings/weights/transitive original inputs. Older full-cohort evidence remains separately indexed. No public/external-training/submission claim."
   },
   "completion_scope": "scientific revision and calculations delivered; no actual submission or public-release/author/external-full-training claim",
   "remaining_for_actual_submission": [
@@ -163,7 +163,7 @@
     "checksum_verified": true
   },
   "revision_v3": {
-    "status": "diagnostics_completed_paper_revision_pending",
+    "status": "completed_compiled_and_checked",
     "no_new_training": true,
     "variance_seed_main_share_uncapped_mucars": [
       0.983896,
@@ -186,6 +186,10 @@
       "direct_bound_artifacts": 6,
       "negative_controls_rejected": 6,
       "preregistered": false
-    }
+    },
+    "response": "notes/revision-mechanisms-v3/REVIEW_RESPONSE.zh.md",
+    "delivery_index": "notes/revision-mechanisms-v3/revision-delivery-index.json",
+    "full_four_field_final_record_mechanism": "not_empirically_evaluated",
+    "extracted_bundle_contract_test": "six direct bindings and six negative controls pass; same-machine aggregate validation only"
   }
 }

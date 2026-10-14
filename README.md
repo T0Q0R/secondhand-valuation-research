@@ -1,25 +1,23 @@
 # 二手物品估值：策略性缺失与预算核验
 
-个人研究与AI接手仓库；用户目标为有可核查创新、严格实验和中科院三区论文。分类、首创性和接收结果未认证。
+个人研究与AI接手仓库；创新、有效范围和结果均需证据支撑。
 
-[AI接手](AI_HANDOFF.md) · [状态](docs/STATUS.md) · [机器状态](docs/STATUS.json) · [进度](docs/PROGRESS.md) · [研究边界](docs/RESEARCH.md) · [数据入口](data/README.md)
+[AI接手](AI_HANDOFF.md) · [状态](docs/STATUS.md) · [进度](docs/PROGRESS.md) · [当前源](paper/innovation-addendum-v1.tex) · [同稿PDF](paper/innovation-addendum-v1.pdf) · [v3增量包](paper/revision-delivery-v3.zip) · [审计协议](audit-protocol/README.md) · [本轮意见处理](notes/revision-mechanisms-v3/REVIEW_RESPONSE.zh.md)
 
-[当前源文件](paper/innovation-addendum-v1.tex) · [同稿PDF](paper/innovation-addendum-v1.pdf) · [论文修订包](paper/revision-delivery-v2.zip) · [完整扩评价证据](notes/revision-review-v2/evaluation/full-expanded-evidence.zip) · [A–I回应](notes/revision-review-v2/REVIEW_RESPONSE.zh.md)
+快照：2026-10-14 10:30:08 +08:00（Asia/Shanghai）。
 
-快照：2026-10-13 09:05:02 UTC；Asia/Shanghai。
+本轮新增诊断、有限域试验、协议和论文回填已完成；没有待恢复的大计算，也没有新训练。当前稿32页，229词摘要、16引用、15表、2幅原矢量图，作者/单位留空。正式投稿条件仍未完成。
 
-**本轮计算、全量复核、统计和论文结果回填全部完成。没有尚待运行的大计算。** 当前30页稿题为 *When Does Verification Help? A Controlled Audit of Strategy-Aware Valuation*，16引用、2幅矢量图，作者/单位按用户要求留空。正式投稿准备尚未完成。
+- 全真实来源扩评仍为480单元、29,040批、2,891,040重复行，31,269,840合法单边偏离；24/24反馈方向不利，22/24未校正区间排除零。首10批复用原字节，原receipt出处保留于扩展绑定。
+- MU两个跨零对比的seed主项条件方差占98.39%/98.28%，不支持76%–81%的区间反推；不证明零效应/等效，也不量化新训练人口不确定性。30seed只是设计投影，未训练。
+- 正成本反转伴随隐瞒强烈下降、净偏离下降77.5%/81.1%、失败查询接近预算上限。正成本最终states未保存，报告效用/regret给出的识别范围，保留全部20个未收敛批次；不冒充精确隐瞒数或因果机制。
+- final-record三seed类别域pilot：JU801/MU999共享支持，199/1缺里程弃权；MU误差代价集中在28条自然缺类别样本。完整四字段（含里程隐瞒）替代机制仍未实测。
+- 显式audit-protocol/合同/执行文档/标准库validator已交付：六文件绑定和六错误控制通过。它是事后结构与哈希检查，不是科学有效性、完整独立性或外部训练复现证书。
 
-原训练/四阶段核对：30/30组、4320单元、432万重复行、45372960个合法偏离。补充全验证评价：JU1374条/14批、MU10672条/107批，同10seed，共480单元、29040批、2891040重复行；31269840合法单边偏离及最终分配/状态/指标核对通过。全部返回真实源批次满足有限单边regret容差，不是任意策略或全局联合最优保证。旧PID都是已退出的历史记录，不能重启或在别处复用。
+内置编译/同稿导出/对应检查/布局审阅通过；0 Overfull或未定义引用，保留原1 Underfull。当前源SHA256 5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3；PDF 05504e83aa321323626a56c6abfe42c2b046588bbba8a3d58e575ea542501385。
 
-完整真实来源的24个反馈inflation点仍全不利；JU12个未校正区间排除零，MU10个排除零、masking/suppression两个跨零。原36对比的事后同时敏感性保留31/27/20不利区间，对应36/108/1536家族。更大评价集和bootstrap不使已看过队列成为确证，也不覆盖新训练人口。
+原30/30组、4,320单元、432万重复行、45,372,960偏离的训练/核对保持完成。新包为paper/revision-delivery-v3.zip（578302字节，SHA256 7fb038f974bdc921583c2c9e534b61f2b6ec24a3d2ae4506fe010cc4e2dc2f3a）；v2修订包与full-expanded证据是支持历史，不能当作当前稿。
 
-三seed正成本子集的synthetic robust/suppression/top-B仍有局部排序反转与四指标均值改善；保留所有成本条件、失败和20个未收敛批次。不能宣称反馈普遍有害、SAV普遍更优或首创已认证。审计共享原语已披露，独立性仅限明确的bit-mask/分配等重实现范围。
+尚缺：作者责任与事实声明、单位适用的中科院分区版本/期刊模板、公开/许可/DOI决策、外部机器全训练复现。私有上传不等于公开或投稿；不宣称二区/三区接收保证。
 
-当前源文件和同稿PDF已内置编译及导出核查；30页联系表、改变页20–23/28–30全尺寸核查、引用/页界/对应摘录检查通过，0 Overfull/未定义引用、1 Underfull保留。当前源SHA256 9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e；PDF a5487a675585f120661a41a0f17e0402a5d65002cd806b756e2f2b03b8ba8849。
-
-同机新环境1536汇总行和阈值复算通过；**外部机器全训练、公开/许可/DOI、真实作者责任及期刊/单位分区适配仍未完成**。私有上传不等于公开或投稿。历史26页包与旧PRE_SUBMISSION_REVIEW的可投稿性判断已superseded。
-
-[当前包哈希索引](notes/revision-review-v2/revision-delivery-index.json) · [完整扩评价哈希索引](notes/revision-review-v2/evaluation/full-expanded-evidence-index.json) · [汇总复算](notes/revision-review-v2/REPRODUCING_AGGREGATES.md) · [全训练协议](REPRODUCING_MATCHED_FACTORIAL.md) · [公开候选清单](notes/revision-review-v2/PUBLIC_RELEASE_CHECKLIST.zh.md)
-
-experiments/保存训练/查询/响应/核对；oqbo-val/保存有限信息边界与oracle。随机化、水位法、LP和minimum是已有技术。正式投稿尚未发生，按AGENTS.md继续逐工作提交验证与下一步。
+[当前包索引](notes/revision-mechanisms-v3/revision-delivery-index.json) · [诊断说明](notes/revision-mechanisms-v3/DIAGNOSTICS.md) · [有限域边界](notes/revision-mechanisms-v3/FINAL_RECORD_PILOT.md) · [复算入口](notes/revision-mechanisms-v3/REPRODUCING.md) · [完整扩评证据](notes/revision-review-v2/evaluation/full-expanded-evidence.zip) · [数据入口](data/README.md)

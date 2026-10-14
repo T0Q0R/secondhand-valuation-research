@@ -12,29 +12,29 @@
 \maketitle
 \begin{abstract}
 Verification can recover withheld information without reducing a seller's
-valuation gain. We examine this distinction in secondhand-price prediction
-with naturally missing fields, charged failed queries and batch capacity.
-A restricted information frontier bounds what verification can remove under
-uniform honest precision; it defines scope rather than predicting the effects
-of our four-field learned models. Recovery-path analysis supplies a directly
-checkable diagnostic. Exhaustive saved prediction tables contain gain-increasing
-partial recoveries on all three cohorts, including real-source examples.
-We separate initial objective, acquisition, feedback and allocation in a
-ten-seed factorial study with 4,320 cells and 4.32 million repeated records.
-At the declared 10\% capacity, all 36 feedback contrasts worsen inflation.
-A post-hoc simultaneous analysis retains 31 adverse intervals for that family,
-27 when attacked error and failed queries are included, and 20 across all
-1,536 primary contrasts and metrics. These approximate intervals condition
-on fixed training records and do not make retrospective data confirmatory.
-Strong ordinary-benefit and acquisition-conditioned controls also have lower
-inflation than the original SAV candidate on synthetic and JUCars; MUCars gains
-remain conditional. A verification-history cap reduces fixed-peer gain but
-can worsen attacked error or query failures after responses are recomputed.
-A positive-cost sensitivity reverses the synthetic top-$B$ feedback ranking.
-We expose shared audit primitives and add a separate exhaustive state-transition
-oracle. The contribution is a reusable controlled audit, an empirical recovery
-failure diagnostic and explicit information and deployment boundaries. No
-universal method advantage or equilibrium guarantee is asserted.
+valuation gain. We study secondhand-price prediction with natural missingness,
+charged failed queries and batch capacity. A restricted information frontier
+bounds verification under uniform honest precision; recovery-path analysis
+instead diagnoses actual learned models. Exhaustive prediction tables show
+gain-increasing partial recoveries on all three cohorts.
+A ten-seed factorial study separates initial objective, acquisition, feedback
+and allocation across 4,320 cells and 4.32 million repeated records. At 10\%
+capacity, all 36 zero-cost feedback contrasts worsen inflation; a post-hoc
+simultaneous sensitivity retains 31 adverse intervals for that family.
+Removing both real-source evaluation caps preserves all 24 adverse directions,
+with 22 unadjusted intervals excluding zero. For the two crossing-zero MUCars
+contrasts, fitting-seed main effects explain over 98\% of conditional bootstrap
+variance; this neither establishes equivalence nor measures training-population
+uncertainty. Ordinary-benefit and acquisition-conditioned controls also outperform
+the original SAV candidate on synthetic and JUCars inflation. A history cap
+can worsen attacked error or query failures after responses change. Positive
+costs reverse a synthetic subset ranking alongside sharply reduced concealment
+and high query failure, limiting its interpretation as better feedback.
+A restricted final-record envelope illustrates honest-error and coverage costs.
+We deliver an explicit audit contract and validator, disclose shared audit
+primitives, and add an exhaustive state-transition oracle. The contribution is
+a controlled audit, a recovery failure diagnostic and explicit information
+and deployment boundaries, without a universal method advantage.
 \end{abstract}
 \noindent\textbf{Keywords:} strategic missingness; secondhand valuation; budgeted verification; incentive auditing; factorial evaluation
 
@@ -464,8 +464,11 @@ prior work~\cite{withheld,smi}.
 The alternative can lower honest quotes and worsen honest MAE, unlike the
 history cap's truthful-quote preservation. Its guarantee needs completion-domain
 coverage and nonempty nested sets; unsupported records require abstention or
-an explicitly uncertified fallback. It is an analytical alternative, not an
-empirically evaluated replacement in the present comparisons.
+an explicitly uncertified fallback. A three-seed categorical-domain pilot
+quantifies one limited honest-error cost: MUCars shared-support MAE increases
+by 10.49--23.87 currency units, concentrated among 28 naturally incomplete
+records. Mileage is observed and fixed, so this is not a tested four-field
+replacement (Appendix~\ref{app:mechanism_diagnostics}).
 
 \section{Experimental design and corroborating checks}\label{sec:experiment_setup}
 \subsection{Cohorts and source boundaries}
@@ -718,7 +721,9 @@ MUCars & 12/12 & 10/12 & 12/12 & 0/6\\
 \caption{Primary-capacity factorial diagnostics. Counts refer to positive
 expected log-quote inflation. Feedback harms and robust-initialization gains
 are point-estimate directions. Harm intervals are 95\% unadjusted intervals
-excluding zero adversely. A joint gate compares no feedback/top-$B$ with
+excluding zero adversely for the capped primary evaluation. The uncapped
+MUCars sensitivity also excludes zero in 10/12 intervals
+(Section~\ref{sec:full_validation}). A joint gate compares no feedback/top-$B$ with
 policy feedback/minimax under a fixed initial objective and score, requiring
 at least 10\% inflation reduction and at most 5\% honest-MAE increase.
 Counts are descriptive across correlated contrasts, not independent trials.}
@@ -1216,6 +1221,18 @@ MAE uses synthetic price units. All four cost regimes and all individual-seed
 results are retained; the table is descriptive and post-hoc.}
 \label{tab:cost_sensitivity}\end{table}
 
+The reversal accompanies strong concealment deterrence. At uniform cost
+0.02, synthetic top-$B$ mean hidden-field counts are bounded by
+$[0.130,0.165]$ without feedback and $[0.130,0.181]$ with it, versus directly
+observed zero-cost means 0.996 and 0.957. These bounds retain nonconverged
+profiles rather than treating the inflation--net-deviation gap as exact cost.
+The legal net-deviation envelope falls by 77.5\% and 81.1\%, respectively.
+Failed queries reach 9.47\% and 9.40\% per listing; at 10\% capacity, at least
+94.7\% and 94.0\% of actual queries fail. Thus the local ranking reversal
+coexists with suppressed concealment and predominantly unsuccessful
+verification; it does not isolate improved feedback quality as its cause.
+Appendix~\ref{app:mechanism_diagnostics} gives the utility-based bounds.
+
 JUCars and MUCars retain adverse mean inflation directions for both allocators
 under every declared cost regime in this subset. Twenty positive-cost
 seed/cell batches remain nonconverged and are retained. Therefore the original
@@ -1224,7 +1241,7 @@ property of feedback training. The full three-source cost table is in the
 evidence package; no winning cost distribution is substituted for the zero-cost
 primary experiment.
 
-\subsection{Full-validation evaluation coverage}
+\subsection{Full-validation evaluation coverage}\label{sec:full_validation}
 An additional frozen-model evaluation removes both real-source caps: all
 1,374 JUCars and 10,672 MUCars validation records form fourteen and 107 batches,
 respectively, using the same ten fitting seeds. Final batches contain 74 and
@@ -1233,8 +1250,9 @@ and 2,891,040 repeated outcomes pass algebraic allocation, bit-transition,
 metric and complete unilateral-utility checks, covering 31,269,840 legal
 deviations. All returned real-source batches meet the finite unilateral-regret
 tolerance; this does not certify arbitrary actions or globally optimal joint
-responses. The original 1,000-record prefixes are reproduced and reused;
-no model is retrained.
+responses. The first ten batches reuse the original prediction/outcome bytes
+through symlinks, with original receipt provenance retained in the extended
+bindings; only the remaining batches are newly evaluated. No model is retrained.
 
 All 24 real-source feedback inflation point estimates remain adverse.
 Ten-thousand-draw exploratory intervals exclude zero adversely for all twelve
@@ -1243,6 +1261,27 @@ suppression-score comparisons span zero. These unadjusted intervals weight
 batches by record counts, including the partial batches. They do not add
 independent training records or make either retrospective source confirmatory.
 The original capped factorial remains the declared primary comparison.
+
+An exact conditional seed/batch variance decomposition, including weighted
+partial batches, attributes 98.39\% and 98.28\% to fitting-seed main effects
+for the uncapped MUCars masking/suppression top-$B$ and minimax contrasts.
+Their capped shares are 90.97\% and 87.42\%; interval-width ratios alone do
+not identify these components. Under the empirical conditional design,
+thirty instead of ten independent fitting seeds would project standard
+deviations to approximately 58\% of their current values, while eliminating
+only batch resampling noise leaves approximately 99\%. These are design
+projections, not newly trained results. The stable small estimates and
+crossing-zero intervals establish neither zero effect nor equivalence;
+fitting randomness on fixed training records also does not quantify
+training-population uncertainty. Details are in
+Appendix~\ref{app:mechanism_diagnostics}.
+
+
+The accompanying \path{audit-protocol/} artifact provides a machine-readable
+worked contract, an execution protocol and a standard-library validator of
+six directly bound evidence files. Six invalid-contract controls are rejected.
+It is an explicit post-hoc protocol, not preregistration or a certificate of
+scientific validity or independent end-to-end reproduction.
 
 \section{Discussion}\label{sec:discussion}
 \noindent\textbf{Takeaway.} The supported contribution is a bounded information
@@ -1289,7 +1328,7 @@ history cap can suppress adverse recovery paths under fixed peers, while
 recomputed responses expose attacked-error and failed-query costs. The matched
 experiment further shows that a positive feedback--allocation interaction is
 insufficient evidence of improvement: all 36 primary feedback comparisons
-increase mean inflation at zero concealment cost, even though robust initialization helps on MUCars. A three-seed positive-cost sensitivity reverses the synthetic top-$B$ feedback ranking, further limiting generalization. The practical implication is to audit public information, recovery
+increase mean inflation at zero concealment cost, even though robust initialization helps on MUCars. A three-seed positive-cost sensitivity reverses the synthetic top-$B$ feedback ranking alongside sharply reduced concealment and high query failure, further limiting generalization. The practical implication is to audit public information, recovery
 semantics and every comparison component, retaining negative results and
 multiobjective trade-offs. This conclusion is conditional on the implemented
 learning and response procedures, not a universal prescription for valuation.
@@ -1698,11 +1737,85 @@ C6. SAV consistently beats static robust at 10\% capacity. & Ten-seed paired dif
 \addlinespace
 C7. Score-minimax allocation consistently improves outcomes. & 108 audited cells; 18 independently checked contrasts; only two pass the point gate, while ten worsen inflation. & Not supported generally. MUCars robust gains coexist with failed-query increases; the separate factorial study does not show beneficial feedback.\\
 \addlinespace
-C8. Matched feedback training reduces inflation. & 4,320 audited cells; at 10\% capacity, all 36 zero-cost feedback points worsen inflation; 31 adverse bands survive the post-hoc 36-contrast sensitivity. & Not supported for this training procedure. Positive costs reverse one subset ranking. Neither a universal feedback failure nor confirmatory coverage is established.\\
-\addlinespace
+C8. Matched feedback training reduces inflation. & 4,320 audited cells; at 10\% capacity, all 36 zero-cost feedback points worsen inflation; 31 adverse bands survive the post-hoc 36-contrast sensitivity. & Not supported for this training procedure. Positive costs reverse one subset ranking alongside strong concealment deterrence. Neither a universal feedback failure nor confirmatory coverage is established.\\
 \bottomrule
 \end{longtable}
 \normalsize
+
+\section{Conditional uncertainty and mechanism diagnostics}\label{app:mechanism_diagnostics}
+\subsection{Exact conditional crossed-bootstrap variance}
+Let $Y$ be a paired-difference matrix with $S$ fitting seeds and $K$ batches.
+Independent bootstrap seed weights $U$ and record-normalized batch weights
+$V$ give $U^\top YV$. Write $m=\mathbb E[V]$, $C=\operatorname{Cov}(V)$,
+$r=Ym-\mathbf1\,\operatorname{mean}(Ym)$,
+$z=\operatorname{mean}_{s}(Y)$ and
+$R=Y-\mathbf1z^\top-r\mathbf1^\top$. The conditional variance decomposes as
+\[
+ \frac{\|r\|^2}{S^2}+z^\top Cz+
+ \frac{1}{S^2}\sum_s R_s^\top C R_s.
+\]
+These are seed-main, batch-main and interaction terms. Batch-weight moments
+are calculated by conditioning on the multinomial count of the single
+partial batch, retaining ratio normalization. Exhaustive balanced and
+unequally weighted $2\times2$ resampling independently checks the formula.
+All 48 capped/full real-source feedback decompositions are retained.
+Thirty-seed projections divide seed and interaction terms by three; the
+batch-noise-free projection holds the empirical batch distribution fixed.
+Neither supplies new training runs, equivalence evidence or population coverage.
+
+\subsection{Concealment identification from saved utility summaries}
+For one listing let $C_i=c_i k_i$ be concealment cost, $G_i$ positive expected
+quote inflation, $N_i$ the positive best-legal-utility gain over truth, and
+$\rho_i$ remaining unilateral regret. Since truthful utility is its honest
+quote,
+\[
+ C_i-\rho_i\le G_i-N_i\le C_i.
+\]
+Thus $\max(\overline G-\overline N,0)$ bounds mean cost below; adding
+$\max_i\rho_i$ and capping by $2\overline c$ bounds it above. Uniform-cost
+hidden-field bounds divide by $c$; heterogeneous costs in $[.01,.03)$ give
+bounds using .03 and .01, respectively. Dividing by mean heterogeneous cost
+would not identify mean hidden fields. Positive-cost states were not saved;
+all 20 nonconverged batches remain in the bounds. The inequality passes
+768 exhaustive toy utility/returned-state checks. The paired zero-cost
+concealment counts use saved states directly. Neither co-occurrence nor this
+accounting identity identifies a causal mediation effect.
+
+\subsection{Restricted final-record honest-error pilot}
+Three frozen robust/no-feedback models per real source (seeds 13, 42 and
+2026) enumerate completions of transmission, fuel and body condition from
+their training-encoder vocabularies, including missing tokens. Mileage must
+be observed and fixed; other covariates stay fixed. Unsupported observed
+categories and missing mileage abstain. The same original 1,000 records per
+source are used without tuning or retraining. Current records are included
+in the minima; singleton sets preserve their original quotes exactly.
+Shared-support errors and abstentions are reported separately.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{llrrr}\toprule
+Source & Support & Records & Honest-MAE change & Mean quote reduction\\\midrule
+JUCars & Covered & 801 & 0 & 0\\
+JUCars & Missing category & 1 & 0 & 0\\
+MUCars & Covered & 999 & 10.49--23.87 & 200.21--240.51\\
+MUCars & Missing category & 28 & 374.24--851.51 & 7,143.33--8,581.21\\
+\bottomrule\end{tabular}
+\caption{Final-record categorical-envelope pilot. Entries are per-source
+three-seed ranges, not uncertainty intervals; positive MAE changes are worse.
+Price quantities use source currency units. Missing-category rows are subsets
+of covered rows, not additional observations. JUCars abstains on 199 records,
+MUCars on one, all for missing mileage.}\label{tab:final_record_pilot}
+\end{table}
+
+Each JUCars model evaluates 806 completions; each MUCars model evaluates
+1,139. All baseline quotes match saved predictions within $5\times10^{-6}$
+in log quote; sampled completions also match the production all-state
+inference route within that tolerance. Predictor primitives are shared.
+Only one covered JUCars and 28 covered MUCars records have a naturally missing
+category, explaining the concentration of effects. The guarantee covers only
+the declared categorical domain with fixed observed mileage. It does not
+cover mileage concealment, unseen values or the original full four-field
+game, and this pilot supplies no confirmatory or universal method advantage.
+
 \begin{thebibliography}{99}
 \bibitem{jucarsdata} N. Thalji.
 JUCars-2024: A Dataset of Used Car Listings in Jordan.

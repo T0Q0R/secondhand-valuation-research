@@ -1,0 +1,17 @@
+{
+  "status": "compiled_exported_correspondence_and_layout_checked",
+  "abstract_words": 229,
+  "source_sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3",
+  "script_sha256": "01ce8bece0394eaf14a2fd023d9c1b0b5363ca910791722cb138da1933d12458",
+  "inputs": {
+    "notes/revision-mechanisms-v3/baseline-reviewed-source.tex": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
+    "notes/revision-mechanisms-v3/variance_components.csv": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e",
+    "notes/revision-mechanisms-v3/cost_mechanism_means.csv": "f00a9c567b8bcbedf6ac0d6eef23506070afd9d6693062479641d2b3b97972ee",
+    "notes/revision-mechanisms-v3/final_record_pilot.csv": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9"
+  },
+  "pages": 32,
+  "builtin_compile": "success",
+  "skill_correspondence_findings": [],
+  "unchanged_figure_environments": true,
+  "pdf_sha256": "05504e83aa321323626a56c6abfe42c2b046588bbba8a3d58e575ea542501385"
+}

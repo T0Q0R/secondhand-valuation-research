@@ -1,0 +1,170 @@
+{
+  "status": "completed_incremental_scientific_revision",
+  "archive": "paper/revision-delivery-v3.zip",
+  "bytes": 578302,
+  "sha256": "7fb038f974bdc921583c2c9e534b61f2b6ec24a3d2ae4506fe010cc4e2dc2f3a",
+  "source_sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3",
+  "scope": "Current source/PDF and all v3 scientific diagnostics/protocol; excludes raw listings/weights/transitive original inputs. Older full-cohort evidence remains separately indexed. No public/external-training/submission claim.",
+  "files": [
+    {
+      "path": "audit-protocol/README.md",
+      "sha256": "de25115221a8b8b4f7aa1ce5140ffa96679edeaadd40896997cd73ba71048802",
+      "bytes": 5171
+    },
+    {
+      "path": "audit-protocol/secondhand-audit.json",
+      "sha256": "ef4e48b5ef482687b76eae9f89a6258dd904d40b4969e5cca25da68ae94cdc7f",
+      "bytes": 5636
+    },
+    {
+      "path": "audit-protocol/validate_protocol.py",
+      "sha256": "792afb157f03c65eacc426eeedf768e33821e5c7d62e51e69d4aac5e1407f4cd",
+      "bytes": 5324
+    },
+    {
+      "path": "audit-protocol/validation-receipt.json",
+      "sha256": "9df496b024b49810506fce42ccc7a125824362749010b08fcafb7f6353aa39d5",
+      "bytes": 1587
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/DIAGNOSTICS.md",
+      "sha256": "49bfab2916ac1e5ff72a3b704300c14024d893280fee3cd8bc265ba5422e172b",
+      "bytes": 3885
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/FINAL_RECORD_PILOT.md",
+      "sha256": "a9524f8eae9de8a95a30f4f226d0553e91a80635fdd21b278947dfaf3739fa8c",
+      "bytes": 2894
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/REPRODUCING.md",
+      "sha256": "6cb3cffb1b87f0f102af4c4efa8262816b4537a67118594cf16c94da62e082f8",
+      "bytes": 2411
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/RESULT_ALLOCATION.md",
+      "sha256": "5ea01224c1f479d5bc58a385eaf3ac382659209bd7a138b64bac96d91468ee60",
+      "bytes": 1290
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/REVIEW_RESPONSE.zh.md",
+      "sha256": "36a71b5006e9078fbe10fbdaa588061f1d14a020ad938d6f7ca962ae3e2a0bae",
+      "bytes": 4767
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/audit_render.py",
+      "sha256": "788f9d9fbf649e81554051b5841c33403fddb43f89ccf190de6cc59841d91104",
+      "bytes": 2977
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/baseline-reviewed-source.tex",
+      "sha256": "9560dbc977cbf14e92ea8c07080560453837cdf36dc899e1d81c9b3eb6da4d2e",
+      "bytes": 125527
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/build_delivery.py",
+      "sha256": "de522f3ba5f157a5531d4c93bd740ca32457dcf634c613ca0a7da78223775727",
+      "bytes": 1896
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/completion.json",
+      "sha256": "edc926b76829c7f94114d16dc58a5b0e4df7b359f53c47161873d718f927ef2f",
+      "bytes": 150880
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/cost_mechanism_batches.csv",
+      "sha256": "56563fce7baba9c1d21c50c04ecd1daf9cc932cf0d1a0e5a527f13b9ac8973bd",
+      "bytes": 335749
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/cost_mechanism_means.csv",
+      "sha256": "f00a9c567b8bcbedf6ac0d6eef23506070afd9d6693062479641d2b3b97972ee",
+      "bytes": 10914
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/diagnose.py",
+      "sha256": "82fe410703c57ce03157e2dc7d6756d2fd577d24aa5fd403062f26eed52821de",
+      "bytes": 9052
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/diagnostic-evidence-index.json",
+      "sha256": "cca9f12380c2c26e60cc168fb0118ccbb00b9f3bd161f2851aa6c95914273f99",
+      "bytes": 826
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_completion.json",
+      "sha256": "1a749af9f4b41b9bef858e1d1ff3474248a97748b9ced5d734279b02a9c8b630",
+      "bytes": 16255
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_domains.json",
+      "sha256": "1d766711891b34053523442823fc308beba5b4cb0d7a26f3f4b6c5ae61b260a0",
+      "bytes": 2572
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_pilot.csv",
+      "sha256": "ee8845abd74b0ac292c8529cddf99fb49acdd43ddf7396b5e99cadd829db4cf9",
+      "bytes": 1888
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/final_record_pilot.py",
+      "sha256": "af4b7b5f0f2ea9746cbff56650e1fcbb98e3d887c97fc095f89d7cbe941e76e0",
+      "bytes": 6784
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/manuscript-changes.patch",
+      "sha256": "3f176745eb43eeef773b4ad0c7eebd3a628a1f5b3b2f89d4e63a5e9020cae878",
+      "bytes": 16390
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/manuscript-revision-receipt.json",
+      "sha256": "638189a66075037ab313ab2f0eb0bcdcc0c6e721196495329c0c21c658efc96f",
+      "bytes": 1015
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/paired_differences.npz",
+      "sha256": "d5623100f28330b32b2b8ba50fcc6708a50f49bceb4511e8686d6c8b3ada741a",
+      "bytes": 134015
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/qa/render-audit.json",
+      "sha256": "09ee5e86e830ca0825d85636c52e9be58f8f5f10cdac93f4952b0e96cf031660",
+      "bytes": 7430
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/response-excerpts.tex",
+      "sha256": "65023d8e797b5f50d09161196505d45765cc1403ce71deeb2b047a8b5512a032",
+      "bytes": 1445
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/revise_manuscript.py",
+      "sha256": "01ce8bece0394eaf14a2fd023d9c1b0b5363ca910791722cb138da1933d12458",
+      "bytes": 13004
+    },
+    {
+      "path": "notes/revision-mechanisms-v3/variance_components.csv",
+      "sha256": "55b299e979a0d28ef3c6702d6f3cd39e6028a6d6b767a7817a9eef731e6ea76e",
+      "bytes": 13735
+    },
+    {
+      "path": "notes/revision-review-v2/evaluation/expanded-completion-summary.json",
+      "sha256": "a46e17bf31c178eea9839a700d67aa2fcc0ec57f3a0311cd7c355165a9d6890e",
+      "bytes": 676
+    },
+    {
+      "path": "paper/innovation-addendum-v1.log",
+      "sha256": "6743b6833432d151b8287c9db1d8f9c3a7188b58b1a253c12528ca6b449c5a77",
+      "bytes": 13036
+    },
+    {
+      "path": "paper/innovation-addendum-v1.pdf",
+      "sha256": "05504e83aa321323626a56c6abfe42c2b046588bbba8a3d58e575ea542501385",
+      "bytes": 209010
+    },
+    {
+      "path": "paper/innovation-addendum-v1.tex",
+      "sha256": "5604909da964a80acfd906ee697142a5d6f2ddedae6431373a051d8e6bfa14d3",
+      "bytes": 132470
+    }
+  ]
+}
