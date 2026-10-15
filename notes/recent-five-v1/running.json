@@ -1,0 +1,13 @@
+{
+  "pid": 99579,
+  "started": 1792031287.596728,
+  "configuration_commit": "ced25432f4378d464a1015e2e3693976ae1c7669",
+  "status": "launched_waiting_for_RPL",
+  "added_cells": 324,
+  "verified_at": "2026-10-15T10:28:25+08:00",
+  "verified_status": {
+    "status": "waiting_for_recovery_path_learning",
+    "pid": 99579,
+    "time": 1792031287.649363
+  }
+}

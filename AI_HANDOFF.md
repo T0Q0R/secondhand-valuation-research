@@ -1,3 +1,8 @@
+# 最新追加：近期基线扩至5个
+
+2026-10-15T10:28:25+08:00：近期5基线扩充尾队列PID99579已启动核验，等待RPL完成后依次执行GDFS/DIME/解释AFA，共324新增单元。正式结果尚未产生。资源上限4×2+至多1统计线程；原队列不变；后续需科学解释和图表QA。
+状态outputs/recent-five-queue-v1/status.json；运行时outputs/recent-five-runtime-v1/status.json；方案notes/recent-five-v1/PLAN.zh.md。配置和来源已提交回读，不重复启动。五方法为ACO2024(已完成)、SEFA2025(原队列)、GDFS2023/DIME2024/解释AFA2025(本次新增)。所有方法均报告具体任务适配，不能冒称原论文原样复现或已获优越结果。论文仍冻结。
+
 # 最新追加：恢复路径增益正则候选
 
 2026-10-14T21:10:48+08:00：恢复路径增益正则候选已通过工程检查、配置提交回读，尾队列PID67304已核验等待环境压力实验结束。162单元（54复用/108新评估），144次新价格拟合，6配置含λ与去gap消融。总名义计算预算仍9线程。结果及优越性尚未建立，论文冻结。 状态outputs/recovery-path-learning-queue-v1/status.json；方案notes/recovery-path-learning-v1/LITERATURE_AND_DESIGN.zh.md。等待进程不占满CPU，不重复启动。完整顺序：原四阶段→机制→环境压力→RPL；统计侧进程最多1线程。完成后仍需科学解释、图表QA与结果同步。

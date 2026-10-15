@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-15T10:26:59+08:00",
+  "snapshot_time": "2026-10-15T10:28:25+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -428,7 +428,7 @@
     "pid": 67304
   },
   "recent_five": {
-    "status": "validated_pending_launch",
+    "status": "queue_live_waiting_for_RPL",
     "methods": [
       "ACO2024",
       "SEFA2025",
@@ -437,6 +437,7 @@
       "ExplainabilityAFA2025"
     ],
     "added_cells": 324,
-    "plan": "notes/recent-five-v1/PLAN.zh.md"
+    "plan": "notes/recent-five-v1/PLAN.zh.md",
+    "pid": 99579
   }
 }
