@@ -1,0 +1,39 @@
+{
+  "runtime_output": "outputs/recent-five-runtime-v1",
+  "max_workers": 4,
+  "user_cpu_allowance": 9,
+  "nominal_compute_threads": 8,
+  "per_worker_torch_blas_head_threads": 2,
+  "memory_admission_gib": 6,
+  "memory_target_reserve_gib": 4,
+  "memory_reservation_is_hard": false,
+  "scientific_worker_sources_unchanged": true,
+  "stages": [
+    {
+      "name": "gdfs",
+      "script": "experiments/run_recent_gdfs_v1.py",
+      "script_sha256": "cab2e802d1e5006816aba79ba8f29b79e66fe8facca0c8e0276928b22b7a27d8",
+      "output": "outputs/recent-gdfs-v1",
+      "manifest_sha256": "5262bf435181fd5fe152a51c0f1bb9ba8ca0164b5afb6b7607eaea843b0588d6"
+    },
+    {
+      "name": "dime",
+      "script": "experiments/run_recent_dime_v1.py",
+      "script_sha256": "aaa5c45418f30838a7cd73715516e5b9b55282696e1a76d96514dfb34e1ffacc",
+      "output": "outputs/recent-dime-v1",
+      "manifest_sha256": "21de85a2c7c783201f03628b4b6e8fa9f753360ab5abc3e5e48b519f7f48414d"
+    },
+    {
+      "name": "efa",
+      "script": "experiments/run_recent_efa_v1.py",
+      "script_sha256": "e86fc77ef8cfb2ecd7a494bfe108cb4504bab1d8727d790acbaa61fcc4203745",
+      "output": "outputs/recent-efa-v1",
+      "manifest_sha256": "8400fdd588a5083bd994e13a9eefee018b0c5be76cc1f91190c83b09d8e7265d"
+    }
+  ],
+  "analysis": {
+    "script": "notes/recent-five-v1/analyze.py",
+    "script_sha256": "a49eb67cad0a01371f7e3d7ffb154be0f7806ab0d07f3a71f0cb2a80cf48d431",
+    "output": "outputs/recent-five-analysis-v1"
+  }
+}

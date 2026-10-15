@@ -1,0 +1,168 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1,
+    "recent_method": "dime"
+  },
+  "source_sha256": "aaa5c45418f30838a7cd73715516e5b9b55282696e1a76d96514dfb34e1ffacc",
+  "adapter_sha256": "6710560de197dabee77901af290f24ca70cba49a3c5ac6fbb999fb5188337782",
+  "training_sha256": "d6e2f94f0c9f32f991e885af8db9e3d2b3edafcfc57da66f02ed8102fc161596",
+  "official_sources": {
+    "repositories": [
+      {
+        "url": "https://github.com/a-norcliffe/SEFA",
+        "commit": "3af8da2c9212c294fc7fedad27bc31045db7607a",
+        "role": "published SEFA comparison implementation of GDFS/DIME; not original authors code"
+      },
+      {
+        "url": "https://github.com/vkola-lab/icml2025",
+        "commit": "d08f39ae7a50c0dd2bc6d9113d9a124b1cec085e",
+        "role": "official explainability-driven AFA architecture and training reference"
+      }
+    ],
+    "files": [
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/gdfs.py",
+        "sha256": "de75dd6c5de696ab30643151e7d8201241c7e621f9b69956ed70ebeaa6c3db81"
+      },
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/dime.py",
+        "sha256": "41f5daaad3e6d0167c2f1d79b1c03c99d95940b374b9681976cecfb5002223df"
+      },
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/base.py",
+        "sha256": "76423b573260f375d2db01e99e263a9a3be249dff3fe3559c741e851f132e1e1"
+      },
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/standard_layers.py",
+        "sha256": "04c2c6a52febe36e36375261a158986ce5d9b8f4ae9c89253e0b8b9a0a7fb90a"
+      },
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/constants.py",
+        "sha256": "22ccbaf09ccfcfa08ff3018f1490aecdf13e2c8089db38d5aae972045d6c4c3b"
+      },
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/shared_functions.py",
+        "sha256": "dad8d9a8d87d7fb0ffc76678d9068e3966041a3373c6964c8ff6160ef9129ab1"
+      },
+      {
+        "path": "notes/experiment-completion-v6/official-code/a-norcliffe__SEFA/models/sefa.py",
+        "sha256": "0a6dcb4b345d980547ab6183a919416455f87283085aefa0077709f1a16e0789"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/experiments/hyperparameters/configs/gdfs/config1.json",
+        "sha256": "5a59bd8797f06d80f1b12887ef80c8c895011bb8b035f1937fdb1259ddd4649d"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/experiments/hyperparameters/configs/gdfs/config5.json",
+        "sha256": "d46cb1b1f1a6419c7151367c130810c85d99a886395350a6fa32510bf55ed0bb"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/experiments/hyperparameters/configs/gdfs/config9.json",
+        "sha256": "b29c6589aface33a5d5aaba96e8a8d6dde878977b58661e626aa0e1f8d7adc2c"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/experiments/hyperparameters/configs/dime/config1.json",
+        "sha256": "6acbeeb3ffeba46ed50a7dd1f1a13bb64df6363b7d7401edc7bfbecca8e72ea3"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/experiments/hyperparameters/configs/dime/config5.json",
+        "sha256": "a9f91fb89830aef6e03457eb2294e6050340def838414d6e24f13e5c6e2ce066"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/experiments/hyperparameters/configs/dime/config9.json",
+        "sha256": "ab4e9ab332029b10a120d983fef74951f00b512c77797e51cd9496541bace1b9"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/explainability-afa/Tabular_Experiments/model_gpt.py",
+        "sha256": "b26b4a9b9bdebbbd94012052baa6c3dca5ec7f3c3a25d7c4f3182aa67b5caa40"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/explainability-afa/Tabular_Experiments/first_stage_tabular.py",
+        "sha256": "95cb5f323cd49e2b1b94accb902a67d04b1ee877dddfa0526e436b1a302e5879"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/explainability-afa/Tabular_Experiments/second_stage_tabular.py",
+        "sha256": "3099178ae265ff826ca468a61ad4a439bb8ee3ce89c63315a0e279f71f15a5b9"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/explainability-afa/Tabular_Experiments/train_and_test_tabular.sh",
+        "sha256": "ef73a09baaff0e9ed1a7ef5e1e4fd268cf4c4ff0cdf2b48cd807a0663ec64bf5"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/explainability-afa/Tabular_Experiments/README.md",
+        "sha256": "252334af7f1f5781a20f3d1d0818f89633d54e6438cc978d4b8e3ad136ee0650"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/sefa-reference/LICENSE",
+        "sha256": "4875965ecf1cc2ac5e4a1a2cd3a9e46386a47da94ea34686bd2567939fd2741e"
+      },
+      {
+        "path": "notes/recent-five-v1/official-code/explainability-afa/LICENSE",
+        "sha256": "5a9689fc6d8d7941d10c635a197d334cf6f04f44449d92c704205ce60728690b"
+      }
+    ]
+  },
+  "workers": 2,
+  "smoke_only": false,
+  "pairs": 9,
+  "expected_cells": 108,
+  "selection_trials": [
+    0,
+    1,
+    2
+  ],
+  "scope": "dime task adaptation; training-only selection and full-training refit; public context, two-step training, one-query shared allocation"
+}

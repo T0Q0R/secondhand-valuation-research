@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "engineering_only": true,
+  "methods": [
+    {
+      "method": "gdfs",
+      "epochs": 6,
+      "public_input_check": true,
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1041,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "finite_loss": true
+    },
+    {
+      "method": "dime",
+      "epochs": 5,
+      "public_input_check": true,
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1041,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "finite_loss": true
+    },
+    {
+      "method": "efa",
+      "epochs": 3,
+      "public_input_check": true,
+      "audit": {
+        "status": "allocation_transition_all_legal_utilities_corroborated",
+        "legal_deviations": 1041,
+        "max_regret": 0.0,
+        "scope": "Frozen predictor/head shared; separate integer states, rank count, transitions and utility algebra"
+      },
+      "finite_loss": true
+    }
+  ],
+  "scientific_results": false
+}

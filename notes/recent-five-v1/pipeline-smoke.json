@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "engineering_only": true,
+  "cells": 6,
+  "checks": [
+    {
+      "method": "gdfs",
+      "receipt": {
+        "status": "completed_and_corroborated",
+        "cells": 2,
+        "summary_sha256": "f7d5fc80eb1d5b95066e5470e7b960a34ffb69672f2784913f4596d64c00d12e",
+        "manifest_sha256": "45c7f27e749faf59819ec98ca7f8d8e3e8f9f54b6e745531658f2d4725a001cf",
+        "smoke_only": true
+      }
+    },
+    {
+      "method": "dime",
+      "receipt": {
+        "status": "completed_and_corroborated",
+        "cells": 2,
+        "summary_sha256": "d64d9cbdb9bf157370b6d693c2ed7dfd61ce85fa37d4d83cc80285f368e5c5c7",
+        "manifest_sha256": "6807e7a01b2728b43b5d89fdfaabf92237c8593a936d314bf97fba9a89873ba4",
+        "smoke_only": true
+      }
+    },
+    {
+      "method": "efa",
+      "receipt": {
+        "status": "completed_and_corroborated",
+        "cells": 2,
+        "summary_sha256": "7e718dacc15d828cbfa8719d9cdf267fb74ec7393a44afc45712a4329bff725a",
+        "manifest_sha256": "af03cf275c0d0ef52b7c9302a63cb224215fdc8f5ad5952246c5b7a48f4af168",
+        "smoke_only": true
+      }
+    }
+  ]
+}
