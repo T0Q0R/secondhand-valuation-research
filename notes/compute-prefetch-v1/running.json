@@ -1,0 +1,10 @@
+{
+  "status": "running_one_sefa_pair",
+  "pid": 10858,
+  "source": "synthetic",
+  "seed": 13,
+  "threads": 2,
+  "stage_lock_held": true,
+  "original_scheduler": 38715,
+  "started": 1792043339.7028952
+}

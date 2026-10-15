@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-15T10:28:25+08:00",
+  "snapshot_time": "2026-10-15T13:49:17+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -439,5 +439,15 @@
     "added_cells": 324,
     "plan": "notes/recent-five-v1/PLAN.zh.md",
     "pid": 99579
+  },
+  "sefa_prefetch": {
+    "status": "running_one_sefa_pair",
+    "pid": 10858,
+    "source": "synthetic",
+    "seed": 13,
+    "threads": 2,
+    "stage_lock_held": true,
+    "original_scheduler": 38715,
+    "started": 1792043339.7028952
   }
 }
