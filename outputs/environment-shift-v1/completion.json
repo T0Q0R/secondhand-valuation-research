@@ -1,0 +1,9 @@
+{
+  "status": "completed_and_corroborated",
+  "cells": 189,
+  "summary_sha256": "ec89b74ea5a91d7cf2b3e5ecc52107e05b639260e1501c27d53607771f8f085f",
+  "manifest_sha256": "7cc8f18abb53f8ea2410c8590700856d1052f716a9c3f9399e863aea85e1011e",
+  "smoke_only": false,
+  "runtime_override_receipt": "outputs/environment-shift-runtime-v1/manifest.json",
+  "maximum_observed_processes": 4
+}

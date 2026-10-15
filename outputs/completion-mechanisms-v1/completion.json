@@ -1,0 +1,9 @@
+{
+  "status": "completed_and_corroborated",
+  "cells": 90,
+  "summary_sha256": "9dc9aa8a815e39a87ffc0046706774b105c3909c830e0c2921b5d5c053a383db",
+  "manifest_sha256": "1c350d713593e329796f2ba33cb4dacf4e9983d09ee0eb75ca6ff22467caa3a0",
+  "smoke_only": false,
+  "runtime_override_receipt": "outputs/mechanism-parallel-runtime-v1/manifest.json",
+  "maximum_observed_processes": 4
+}

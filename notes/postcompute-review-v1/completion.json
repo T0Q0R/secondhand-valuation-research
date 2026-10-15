@@ -1,0 +1,125 @@
+{
+  "status": "integrity_and_descriptive_review_completed",
+  "time": "2026-10-16T07:55:08+08:00",
+  "cells": 1719,
+  "stages": [
+    {
+      "stage": "completion-ablation-v6",
+      "cells": 432,
+      "receipt_cells": 432,
+      "summary_sha256": "83643ec44cf654e40e346c3558cedab085810d7487f1671624a5dc643cb2c257"
+    },
+    {
+      "stage": "completion-parameters-v6",
+      "cells": 270,
+      "receipt_cells": 270,
+      "summary_sha256": "b662f5d23ce7574cd38a5c0f19471a363e171c089b11f38e2155105a9c604eed"
+    },
+    {
+      "stage": "completion-stability-v6",
+      "cells": 144,
+      "receipt_cells": 144,
+      "summary_sha256": "8e00f93d80f90ec8bdf1e4d424c7674e8eafd09c1620cebf0848dff75fc388f4"
+    },
+    {
+      "stage": "completion-sefa-v6-official",
+      "cells": 108,
+      "receipt_cells": 108,
+      "summary_sha256": "0474d4d15d0d5ceafacbb5dbda88fc1f021d43f9c5e071f9fd00ea3e5b4a96fc"
+    },
+    {
+      "stage": "completion-mechanisms-v1",
+      "cells": 90,
+      "receipt_cells": 90,
+      "summary_sha256": "9dc9aa8a815e39a87ffc0046706774b105c3909c830e0c2921b5d5c053a383db"
+    },
+    {
+      "stage": "environment-shift-v1",
+      "cells": 189,
+      "receipt_cells": 189,
+      "summary_sha256": "ec89b74ea5a91d7cf2b3e5ecc52107e05b639260e1501c27d53607771f8f085f"
+    },
+    {
+      "stage": "recovery-path-learning-v1",
+      "cells": 162,
+      "receipt_cells": 162,
+      "summary_sha256": "3c407ce8d568d4867a51a0321fb7adf6608bbb54960c1ab568e29d6d38da0e78"
+    },
+    {
+      "stage": "recent-gdfs-v1",
+      "cells": 108,
+      "receipt_cells": 108,
+      "summary_sha256": "82a849fc4b44f4c0fa4766fed0002d521575c71e263c1b0ef31cd8b440fa73e2"
+    },
+    {
+      "stage": "recent-dime-v1",
+      "cells": 108,
+      "receipt_cells": 108,
+      "summary_sha256": "bb9eabb3e943cb62be1c29a04b28ef7f0e79a18cedac76a8d39a88cd828c6d72"
+    },
+    {
+      "stage": "recent-efa-v1",
+      "cells": 108,
+      "receipt_cells": 108,
+      "summary_sha256": "889ee966d9b6813959c747fb4902c1b8085962437fde4c23f576963529c41f36"
+    }
+  ],
+  "bindings": {
+    "completion-ablation-v6": {
+      "cells": 432,
+      "summary_sha256": "83643ec44cf654e40e346c3558cedab085810d7487f1671624a5dc643cb2c257",
+      "completion_sha256": "7e1df8303746a86085ca68a5e1d8f29482cc0979540d08bee8fb55b4e97500b7"
+    },
+    "completion-parameters-v6": {
+      "cells": 270,
+      "summary_sha256": "b662f5d23ce7574cd38a5c0f19471a363e171c089b11f38e2155105a9c604eed",
+      "completion_sha256": "a7cf84daacd13595119cce082cce0c08a0bf0122ee4f3567fd2eaf7af59ca524"
+    },
+    "completion-stability-v6": {
+      "cells": 144,
+      "summary_sha256": "8e00f93d80f90ec8bdf1e4d424c7674e8eafd09c1620cebf0848dff75fc388f4",
+      "completion_sha256": "71b629401ce702b5ed9316b608cd0dfc650453e9636c184f4bf873624d02c519"
+    },
+    "completion-sefa-v6-official": {
+      "cells": 108,
+      "summary_sha256": "0474d4d15d0d5ceafacbb5dbda88fc1f021d43f9c5e071f9fd00ea3e5b4a96fc",
+      "completion_sha256": "773ab845e47079f452c1ad5270d81de4e63f0a300fa7bbd01a8002eae8e7f1f3"
+    },
+    "completion-mechanisms-v1": {
+      "cells": 90,
+      "summary_sha256": "9dc9aa8a815e39a87ffc0046706774b105c3909c830e0c2921b5d5c053a383db",
+      "completion_sha256": "d85ebcffe914aeb061b68bbff62cc8ea5c3da0ed844fb62e83e1fd755531d2c8"
+    },
+    "environment-shift-v1": {
+      "cells": 189,
+      "summary_sha256": "ec89b74ea5a91d7cf2b3e5ecc52107e05b639260e1501c27d53607771f8f085f",
+      "completion_sha256": "36c53817238e8ca90754b68970138783ba1d23685169d5901e8df74b3d85a20b"
+    },
+    "recovery-path-learning-v1": {
+      "cells": 162,
+      "summary_sha256": "3c407ce8d568d4867a51a0321fb7adf6608bbb54960c1ab568e29d6d38da0e78",
+      "completion_sha256": "8efa4fc426a9574a511ed5ebb694ff0ecac440e67256217e349c34d61d08dd41"
+    },
+    "recent-gdfs-v1": {
+      "cells": 108,
+      "summary_sha256": "82a849fc4b44f4c0fa4766fed0002d521575c71e263c1b0ef31cd8b440fa73e2",
+      "completion_sha256": "d4c8ba6f78490c0b01faab5d1e5d7fc9032d60f61dfdabb76266d071f2c85ce2"
+    },
+    "recent-dime-v1": {
+      "cells": 108,
+      "summary_sha256": "bb9eabb3e943cb62be1c29a04b28ef7f0e79a18cedac76a8d39a88cd828c6d72",
+      "completion_sha256": "3462045feb6405296c0f05c5696df85cc8fa0cfa4cc0970bb8409003024d0ed7"
+    },
+    "recent-efa-v1": {
+      "cells": 108,
+      "summary_sha256": "889ee966d9b6813959c747fb4902c1b8085962437fde4c23f576963529c41f36",
+      "completion_sha256": "9a45815bb025768c980529bd0d4efcd7bfdcbf9196436b08dbdb53d3f6f54dd1"
+    }
+  },
+  "nonconverged_cells": 137,
+  "independent_experimental_seeds": 3,
+  "not_independent_cells": true,
+  "raw_hashes_verified": true,
+  "shared_predictor_audits_not_full_independent_reimplementations": true,
+  "paper_generated": false
+}

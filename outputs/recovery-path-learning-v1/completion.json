@@ -1,0 +1,9 @@
+{
+  "status": "completed_and_corroborated",
+  "cells": 162,
+  "summary_sha256": "3c407ce8d568d4867a51a0321fb7adf6608bbb54960c1ab568e29d6d38da0e78",
+  "manifest_sha256": "4c37e3aaf117c78fb472f477a119f1cf027f32518bb6e290adc3935def2749e6",
+  "smoke_only": false,
+  "runtime_override_receipt": "outputs/recovery-path-learning-runtime-v1/manifest.json",
+  "maximum_observed_processes": 4
+}

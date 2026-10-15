@@ -1,0 +1,9 @@
+{
+  "status": "completed_and_corroborated",
+  "cells": 108,
+  "summary_sha256": "bb9eabb3e943cb62be1c29a04b28ef7f0e79a18cedac76a8d39a88cd828c6d72",
+  "manifest_sha256": "21de85a2c7c783201f03628b4b6e8fa9f753360ab5abc3e5e48b519f7f48414d",
+  "smoke_only": false,
+  "runtime_override_receipt": "outputs/recent-five-runtime-v1/manifest.json",
+  "maximum_observed_processes": 4
+}
