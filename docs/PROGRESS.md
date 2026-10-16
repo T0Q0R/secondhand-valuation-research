@@ -400,3 +400,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T10:44:12+08:00：RPL十种子扩展PID68433已启动并核验4个计算worker，最多4×2线程，审计侧预算1线程。旧三种子162单元以只读symlink复用；新增378单元正在计算，未完成、未改论文。状态outputs/rpl-ten-seed-runtime-v2/status.json；勿按旧PID启动重复作业。
+
+
+2026-10-16T10:46:36+08:00：按用户明确授权为项目自有代码加入MIT与适用范围说明，保留上游代码/数据许可；audit-protocol在已公开仓库可单独读取。记录用户提供的三位作者顺序与通讯邮箱，单位/英文拼写/贡献/资助/冲突未编造；用户可提供另一台电脑，外部复现尚未执行。论文仍冻结，RPL计算继续。

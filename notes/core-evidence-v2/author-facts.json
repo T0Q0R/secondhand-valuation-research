@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-16T10:46:36+08:00",
+  "source": "direct user statement in current chat",
+  "author_order": [
+    {
+      "name_zh": "汤宇晨",
+      "corresponding": false
+    },
+    {
+      "name_zh": "游凤芹",
+      "corresponding": true,
+      "email": "irisyou@njust.edu.cn"
+    },
+    {
+      "name_zh": "庞鑫",
+      "corresponding": false
+    }
+  ],
+  "affiliations": "AUTHOR_INPUT_NEEDED",
+  "english_name_spelling": "AUTHOR_INPUT_NEEDED",
+  "contributions": "AUTHOR_INPUT_NEEDED",
+  "funding": "AUTHOR_INPUT_NEEDED",
+  "conflicts_of_interest": "AUTHOR_INPUT_NEEDED",
+  "external_machine": "user can provide another computer; OS/access/execution pending"
+}

@@ -471,7 +471,8 @@
     "visibility": "public",
     "status": "verified_anonymous_read_access",
     "verification": "notes/public-release-v1/verification.json",
-    "screening": "notes/public-release-v1/screening.json"
+    "screening": "notes/public-release-v1/screening.json",
+    "project_authored_software_license": "MIT"
   },
   "core_evidence_v2": {
     "status": "rpl_extension_running_audit_preparing",
@@ -483,6 +484,8 @@
     "runner": "experiments/run_rpl_ten_seed_v2.py",
     "manifest": "outputs/rpl-ten-seed-v2/manifest.json",
     "pid": 68433,
-    "runtime_status": "outputs/rpl-ten-seed-runtime-v2/status.json"
+    "runtime_status": "outputs/rpl-ten-seed-runtime-v2/status.json",
+    "author_facts": "notes/core-evidence-v2/author-facts.json",
+    "external_reproduction": "other_machine_available_OS_and_execution_pending"
   }
 }
