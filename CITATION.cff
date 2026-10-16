@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this research repository when using its software or audit protocol."
+type: software
+title: "Secondhand valuation under strategic missingness and budgeted verification"
+authors:
+  - family-names: Tang
+    given-names: Yuchen
+    affiliation: "南京理工大学紫金学院计算机与人工智能学院"
+  - family-names: You
+    given-names: Fengqin
+    email: irisyou@njust.edu.cn
+    affiliation: "南京理工大学紫金学院计算机与人工智能学院"
+  - family-names: Pang
+    given-names: Xin
+    affiliation: "南京理工大学紫金学院计算机与人工智能学院"
+repository-code: "https://github.com/T0Q0R/secondhand-valuation-research"
+url: "https://github.com/T0Q0R/secondhand-valuation-research"
+license: MIT

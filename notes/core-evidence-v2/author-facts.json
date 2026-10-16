@@ -4,22 +4,29 @@
   "author_order": [
     {
       "name_zh": "汤宇晨",
-      "corresponding": false
+      "corresponding": false,
+      "name_en": "Yuchen Tang",
+      "affiliation_zh": "南京理工大学紫金学院计算机与人工智能学院"
     },
     {
       "name_zh": "游凤芹",
       "corresponding": true,
-      "email": "irisyou@njust.edu.cn"
+      "email": "irisyou@njust.edu.cn",
+      "name_en": "Fengqin You",
+      "affiliation_zh": "南京理工大学紫金学院计算机与人工智能学院"
     },
     {
       "name_zh": "庞鑫",
-      "corresponding": false
+      "corresponding": false,
+      "name_en": "Xin Pang",
+      "affiliation_zh": "南京理工大学紫金学院计算机与人工智能学院"
     }
   ],
-  "affiliations": "AUTHOR_INPUT_NEEDED",
-  "english_name_spelling": "AUTHOR_INPUT_NEEDED",
+  "affiliations": "shared affiliation provided by user",
+  "english_name_spelling": "provided_by_user",
   "contributions": "AUTHOR_INPUT_NEEDED",
   "funding": "AUTHOR_INPUT_NEEDED",
   "conflicts_of_interest": "AUTHOR_INPUT_NEEDED",
-  "external_machine": "user can provide another computer; OS/access/execution pending"
+  "external_machine": "macOS; another computer can be supplied; execution pending",
+  "scope_note": "User requested other author declarations not be completed in this turn; no contribution/funding/conflict assertions invented."
 }

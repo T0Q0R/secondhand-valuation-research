@@ -1,0 +1,125 @@
+{
+  "status": "frozen_manifest_derived_no_new_selection",
+  "figure11_axes": {
+    "gap_weight": {
+      "default": 0.5,
+      "scan": [
+        0.0,
+        0.1,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    "tolerance": {
+      "default": 0.02,
+      "scan": [
+        0.0,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ]
+    },
+    "feedback_schedule": {
+      "default": 2,
+      "scan": [
+        1,
+        2,
+        4
+      ]
+    }
+  },
+  "figure12_axes": {
+    "anchor_weight": {
+      "default": 0.25,
+      "scan": [
+        0.0,
+        0.125,
+        0.25,
+        0.5,
+        1.0
+      ]
+    },
+    "attack_loss_weight": {
+      "default": 0.5,
+      "scan": [
+        0.0,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    "learning_rate": {
+      "default": 0.001,
+      "scan": [
+        0.0003,
+        0.001,
+        0.003
+      ]
+    },
+    "residual_epochs": {
+      "default": 12,
+      "scan": [
+        6,
+        12,
+        24
+      ]
+    },
+    "head_trees": {
+      "default": 160,
+      "scan": [
+        80,
+        160,
+        320
+      ]
+    },
+    "residual_hidden_width": {
+      "default": 64,
+      "scan": [
+        32,
+        64,
+        128
+      ]
+    }
+  },
+  "rpl_lambda": {
+    "scan": [
+      0,
+      0.1,
+      0.5,
+      1
+    ],
+    "no_evaluation_selected_default": true,
+    "lambda1": "declared development-grid endpoint, not prespecified primary endpoint"
+  },
+  "rpl_no_gap_ablation": {
+    "beta": 0,
+    "lambda": [
+      0,
+      0.5
+    ]
+  },
+  "environment_extra_missing_rates": [
+    0.0,
+    0.1,
+    0.3
+  ],
+  "aco_neighbors": {
+    "reported_default": 25,
+    "scan": [
+      10,
+      25,
+      50
+    ]
+  },
+  "price_backends": [
+    "masking_suppression",
+    "robust_no_feedback"
+  ],
+  "author_metadata": "author-facts.json",
+  "figure_annotation_policy": "Show default vertical marker and explicit scan in axis label/caption; existing values remain unchanged. Ranges are fitting-seed ranges, not confidence intervals.",
+  "justification_boundary": "A default lying in a sampled plateau does not establish optimality or retrospective selection independence."
+}

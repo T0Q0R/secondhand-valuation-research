@@ -486,9 +486,12 @@
     "pid": 68433,
     "runtime_status": "outputs/rpl-ten-seed-runtime-v2/status.json",
     "author_facts": "notes/core-evidence-v2/author-facts.json",
-    "external_reproduction": "other_machine_available_OS_and_execution_pending",
+    "external_reproduction": "macOS fresh-fitting core subset package prepared; external execution pending",
     "audit_status": "engineering_smoke_passed_ready_to_start",
     "unique_audit_target_cells": 1206,
-    "audit_runner": "experiments/run_core_evidence_queue_v2.py"
+    "audit_runner": "experiments/run_core_evidence_queue_v2.py",
+    "external_package": "reproduction/macos-core-v2/README.zh.md",
+    "manuscript_restructure": "mapped_only_waiting_for_core_results",
+    "doi": "draft_metadata_only_no_DOI_issued"
   }
 }

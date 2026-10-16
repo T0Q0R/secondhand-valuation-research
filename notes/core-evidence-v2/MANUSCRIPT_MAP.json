@@ -1,0 +1,257 @@
+{
+  "tables": [
+    {
+      "current_number": 1,
+      "labels": [
+        "tab:settings"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 2,
+      "labels": [
+        "tab:audit_levels"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 3,
+      "labels": [
+        "tab:simultaneous"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 4,
+      "labels": [
+        "tab:factorial_counts"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 5,
+      "labels": [
+        "tab:multiobjective"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 6,
+      "labels": [
+        "tab:recovery_diagnostic"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 7,
+      "labels": [
+        "tab:allocation"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 8,
+      "labels": [
+        "tab:cap_responses"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 9,
+      "labels": [
+        "tab:cost_sensitivity"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 10,
+      "labels": [
+        "tab:rpl_primary"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 11,
+      "labels": [
+        "tab:fixed_cap"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 12,
+      "labels": [
+        "tab:tenseed"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 13,
+      "labels": [
+        "tab:original_jucars"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 14,
+      "labels": [
+        "tab:original_mucars"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 15,
+      "labels": [
+        "tab:stability"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 16,
+      "labels": [
+        "tab:claims"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 17,
+      "labels": [
+        "tab:final_record_pilot"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 18,
+      "labels": [
+        "tab:recent_primary"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    }
+  ],
+  "figures": [
+    {
+      "current_number": 1,
+      "labels": [
+        "fig:feedback"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 2,
+      "labels": [
+        "fig:initial_objective"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 3,
+      "labels": [
+        "fig:cap_tradeoffs"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 4,
+      "labels": [
+        "fig:cost_mechanism"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 5,
+      "labels": [
+        "fig:uncertainty_components"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 6,
+      "labels": [
+        "fig:completion_mechanism"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 7,
+      "labels": [
+        "fig:rpl_tradeoffs"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 8,
+      "labels": [
+        "fig:recent_curves"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 9,
+      "labels": [
+        "fig:envelope_boundary"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 10,
+      "labels": [
+        "fig:completion_ablation"
+      ],
+      "destination": "main",
+      "preserve_data": true
+    },
+    {
+      "current_number": 11,
+      "labels": [
+        "fig:completion_parameters"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    },
+    {
+      "current_number": 12,
+      "labels": [
+        "fig:completion_stability"
+      ],
+      "destination": "supplement",
+      "preserve_data": true
+    }
+  ],
+  "status": "plan_only_no_manuscript_changes",
+  "source_sha256": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
+  "main_settings_table": "Replace original settings table with one unified symbol/default/scan/role table; added alongside five retained evidence tables",
+  "main_take_home": "Diagnose recovery paths before deciding whether to invest in feedback training.",
+  "appendix_policy": "Move pure audit details in B-H to standalone supplement; retain necessary theoretical statements with pointers to proofs.",
+  "do_not_claim": [
+    "All feedback is harmful",
+    "RPL is universally superior",
+    "All1719 new cells have upgraded audit",
+    "JUCars lambda curve is monotone"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "Secondhand valuation under strategic missingness and budgeted verification: research software and audit protocol",
+    "upload_type": "software",
+    "creators": [
+      {
+        "name": "Tang, Yuchen",
+        "affiliation": "南京理工大学紫金学院计算机与人工智能学院"
+      },
+      {
+        "name": "You, Fengqin",
+        "affiliation": "南京理工大学紫金学院计算机与人工智能学院"
+      },
+      {
+        "name": "Pang, Xin",
+        "affiliation": "南京理工大学紫金学院计算机与人工智能学院"
+      }
+    ],
+    "license": "mit",
+    "access_right": "open",
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/T0Q0R/secondhand-valuation-research",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ]
+  },
+  "status": "prepared_not_submitted",
+  "doi": null,
+  "scope": "Draft software-only archival metadata, to freeze after core audit; manuscript/data/third-party rights remain separately scoped."
+}
