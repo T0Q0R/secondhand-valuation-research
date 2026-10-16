@@ -504,9 +504,9 @@
     "cells": 6,
     "elapsed_seconds": 117.56039810180664,
     "intake": "notes/external-reproduction-synthetic-v1/intake-check.json",
-    "timestamp": "2026-10-16T12:02:57+08:00",
+    "timestamp": "2026-10-16T12:08:28+08:00",
     "diagnostic": "notes/external-reproduction-synthetic-v1/diagnostic-review.json",
-    "followup": "Optional paired first-update diagnostics not run",
+    "followup": "reproduction/macos-core-v2/RESIDUAL_PROBE.zh.md",
     "resources_restored": true,
     "user_confirmed_external_machine": true,
     "fingerprint_review": "notes/external-reproduction-synthetic-v1/fingerprint-review/FINDINGS.zh.md",
@@ -521,7 +521,12 @@
       "residual_parameter_hash_matches": 0,
       "final_prediction_exact_matches": 0,
       "maximum_final_log_quote_difference": 0.011990547180175781
-    }
+    },
+    "short_probe_status": "local_engineering_passed_external_trace_pending",
+    "short_probe_seconds": 7.678303241729736,
+    "short_probe_threads": 1,
+    "short_probe_training_batches": 96,
+    "short_probe_events": 388
   },
   "windows_core_v1": {
     "timestamp": "2026-10-16T11:52:30+08:00",

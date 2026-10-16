@@ -1,0 +1,21 @@
+{
+  "status": "local_diagnostic_completed",
+  "elapsed_seconds": 7.678303241729736,
+  "return_code": 0,
+  "audit_resumed": [
+    71097,
+    72811
+  ],
+  "training_workers_untouched": true,
+  "nominal_budget": "8 production threads + 1 diagnostic replacing 1 audit thread; audit restored afterwards",
+  "archive_sha256": "3ce23d251323c909f678709d384d6ecc244cf9e72756411c378a781901667e5e",
+  "archive_bytes": 2683108,
+  "trace_records": 388,
+  "stages": 4,
+  "batches_per_stage": 24,
+  "payload_sha256": "4c1b8eb0552f2f19a8c75b075845c740b49f355c87616e68305d7629101bb8ce",
+  "probe_sha256": "2fe724d034a68bb886fa37385d420312a5324aec275c13c2c4a7aab87bf1e8ed",
+  "scope": "Local one-thread diagnostic only; external trace comparison and original two-thread failure cause remain pending",
+  "raw_arrays_not_uploaded_to_Git": true,
+  "original_scientific_source_hashes_unchanged": true
+}
