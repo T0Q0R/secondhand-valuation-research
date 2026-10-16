@@ -1,0 +1,297 @@
+{
+  "timestamp": "2026-10-16T11:51:55.827969+08:00",
+  "source": "https://pypi.org/pypi/<name>/<version>/json",
+  "scope": "Published compatible wheel filenames only; not actual Windows installation/execution",
+  "packages": [
+    {
+      "package": "catboost",
+      "version": "1.2.10",
+      "compatible_windows_cp312_wheels": [
+        "catboost-1.2.10-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "cloudpickle",
+      "version": "3.1.2",
+      "compatible_windows_cp312_wheels": [
+        "cloudpickle-3.1.2-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "contourpy",
+      "version": "1.4.0",
+      "compatible_windows_cp312_wheels": [
+        "contourpy-1.4.0-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "cycler",
+      "version": "0.12.1",
+      "compatible_windows_cp312_wheels": [
+        "cycler-0.12.1-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "filelock",
+      "version": "4.0.7",
+      "compatible_windows_cp312_wheels": [
+        "filelock-4.0.7-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "fonttools",
+      "version": "4.66.1",
+      "compatible_windows_cp312_wheels": [
+        "fonttools-4.66.1-cp312-cp312-win_amd64.whl",
+        "fonttools-4.66.1-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "fsspec",
+      "version": "2026.9.0",
+      "compatible_windows_cp312_wheels": [
+        "fsspec-2026.9.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "graphviz",
+      "version": "0.21",
+      "compatible_windows_cp312_wheels": [
+        "graphviz-0.21-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "iniconfig",
+      "version": "2.3.0",
+      "compatible_windows_cp312_wheels": [
+        "iniconfig-2.3.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "Jinja2",
+      "version": "3.1.6",
+      "compatible_windows_cp312_wheels": [
+        "jinja2-3.1.6-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "joblib",
+      "version": "1.6.0",
+      "compatible_windows_cp312_wheels": [
+        "joblib-1.6.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "kiwisolver",
+      "version": "1.5.1",
+      "compatible_windows_cp312_wheels": [
+        "kiwisolver-1.5.1-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "MarkupSafe",
+      "version": "3.0.3",
+      "compatible_windows_cp312_wheels": [
+        "markupsafe-3.0.3-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "matplotlib",
+      "version": "3.11.2",
+      "compatible_windows_cp312_wheels": [
+        "matplotlib-3.11.2-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "mpmath",
+      "version": "1.3.0",
+      "compatible_windows_cp312_wheels": [
+        "mpmath-1.3.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "narwhals",
+      "version": "2.26.0",
+      "compatible_windows_cp312_wheels": [
+        "narwhals-2.26.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "networkx",
+      "version": "3.7",
+      "compatible_windows_cp312_wheels": [
+        "networkx-3.7-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "numpy",
+      "version": "2.5.3",
+      "compatible_windows_cp312_wheels": [
+        "numpy-2.5.3-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "packaging",
+      "version": "26.3",
+      "compatible_windows_cp312_wheels": [
+        "packaging-26.3-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "pandas",
+      "version": "3.0.6",
+      "compatible_windows_cp312_wheels": [
+        "pandas-3.0.6-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "pillow",
+      "version": "12.3.0",
+      "compatible_windows_cp312_wheels": [
+        "pillow-12.3.0-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "plotly",
+      "version": "7.1.0",
+      "compatible_windows_cp312_wheels": [
+        "plotly-7.1.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "pluggy",
+      "version": "1.6.0",
+      "compatible_windows_cp312_wheels": [
+        "pluggy-1.6.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "Pygments",
+      "version": "2.21.0",
+      "compatible_windows_cp312_wheels": [
+        "pygments-2.21.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "pyparsing",
+      "version": "3.3.3",
+      "compatible_windows_cp312_wheels": [
+        "pyparsing-3.3.3-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "pytest",
+      "version": "9.1.1",
+      "compatible_windows_cp312_wheels": [
+        "pytest-9.1.1-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "python-dateutil",
+      "version": "2.9.0.post0",
+      "compatible_windows_cp312_wheels": [
+        "python_dateutil-2.9.0.post0-py2.py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "scikit-learn",
+      "version": "1.9.1",
+      "compatible_windows_cp312_wheels": [
+        "scikit_learn-1.9.1-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "scipy",
+      "version": "1.18.1",
+      "compatible_windows_cp312_wheels": [
+        "scipy-1.18.1-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "setuptools",
+      "version": "84.0.0",
+      "compatible_windows_cp312_wheels": [
+        "setuptools-84.0.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "six",
+      "version": "1.17.0",
+      "compatible_windows_cp312_wheels": [
+        "six-1.17.0-py2.py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "sympy",
+      "version": "1.14.0",
+      "compatible_windows_cp312_wheels": [
+        "sympy-1.14.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "threadpoolctl",
+      "version": "3.7.0",
+      "compatible_windows_cp312_wheels": [
+        "threadpoolctl-3.7.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "torch",
+      "version": "2.14.0",
+      "compatible_windows_cp312_wheels": [
+        "torch-2.14.0-cp312-cp312-win_amd64.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "typing_extensions",
+      "version": "4.16.0",
+      "compatible_windows_cp312_wheels": [
+        "typing_extensions-4.16.0-py3-none-any.whl"
+      ],
+      "passed": true
+    },
+    {
+      "package": "tzdata",
+      "version": "2026.2",
+      "compatible_windows_cp312_wheels": [
+        "tzdata-2026.2-py2.py3-none-any.whl"
+      ],
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

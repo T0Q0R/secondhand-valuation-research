@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-16T11:51:39.304386+08:00",
+  "status": "portable_engineering_checks_passed_Windows_execution_pending",
+  "host": "darwin",
+  "verified": [
+    "portable split AST equals frozen original",
+    "Unix-dependent run_crossfit not imported",
+    "head function AST unchanged",
+    "fit function AST unchanged apart from progress print",
+    "complete fitting/evaluation loop AST unchanged",
+    "config/populations/reference metrics/tolerances unchanged",
+    "canonical LF dataframe hash",
+    "all Python sources compile"
+  ],
+  "preflight": "synthetic 5000 training / 1000 evaluation exact original hashes",
+  "windows_runtime_tested": false,
+  "scientific_changes": false,
+  "training_repeated": false,
+  "contract_sha256": "ac136f93b832fdc3f46a7b8eb262e76e68ffec79df2ad7074770dd362f330d76",
+  "failure_smoke": {
+    "purpose": "deliberate wrong checkpoint binding must stop before fitting, retain failure log in return ZIP, release lock",
+    "passed": true,
+    "exit_code": 1,
+    "models_trained": 0
+  }
+}

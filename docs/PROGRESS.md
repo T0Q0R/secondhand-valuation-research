@@ -424,3 +424,10 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T11:43:52+08:00：外部合成数值差异诊断：同机公开入口从头重训6单元全部通过原阈值，最大指标差异4.55e-13；外机结果仍未通过，环境差异观察不等于因果定位，不放宽容差。保留描述性方向和所有非收敛；只读8模型诊断程序已在本机验证，等待外机现成模型指纹包。原两训练worker和审计进程已全部恢复，训练/审计源未修改，论文未改。结果notes/external-reproduction-synthetic-v1/FINDINGS.zh.md；外机命令reproduction/macos-core-v2/DIAGNOSE.zh.md。
+
+
+## 2026-10-16T11:52:30+08:00 — Windows原生核心训练入口
+
+Windows原生CPU核心训练入口已实现并完成本机工程核查：无Unix文件锁导入、分组函数AST/完整训练评估循环与原入口一致、输入5000/1000哈希一致、36固定依赖Windows CPython3.12 wheel存在；故意错误检查点可阻止训练并自动打包失败日志。尚无Windows实际运行，不表示外机复现通过。原Mac外机严格不匹配继续保留；后台9线程训练/审计不变，论文未改。入口reproduction/windows-core-v1/README.zh.md。
+
+验证：冻结源哈希、分组纯函数AST、head/fit与完整拟合评估循环AST等价性；synthetic check-only准确通过；故意错误检查点终止/日志ZIP/锁释放检查通过；PyPI官方元数据36/36固定包存在win_amd64/CPython3.12兼容wheel，仅证明发布可用性，未替代Windows安装和训练。新增UTF-8/LF序列化及环境记录，未缩小样本、轮次或容差。下一步由另一台Windows执行start.py并回传ZIP；不修改论文。

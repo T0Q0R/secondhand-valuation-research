@@ -67,3 +67,8 @@ SHA256，不能直接覆盖其他项目的代码。`notes/source-reproduction-in
 2026-10-11：原机器上的8项输入/脚本检查全部匹配；不存在的父目录被拒绝。
 这只证明输入检查工具与原记录相符，不证明独立机器上的完整数据重建、训练、
 统计或论文复现已经完成。
+
+
+## Windows原生核心训练
+
+另一台Windows电脑先按[Windows核心训练说明](../reproduction/windows-core-v1/README.zh.md)安装Python3.12/Git并运行固定合成核心。该入口避免Unix专属文件锁，保留原训练设置和数值阈值；与下方/历史全矩阵运行命令区别，尚需Windows实际执行确认。

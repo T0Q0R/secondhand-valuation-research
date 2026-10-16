@@ -508,5 +508,18 @@
     "diagnostic": "notes/external-reproduction-synthetic-v1/diagnostic-review.json",
     "followup": "reproduction/macos-core-v2/DIAGNOSE.zh.md",
     "resources_restored": true
+  },
+  "windows_core_v1": {
+    "timestamp": "2026-10-16T11:52:30+08:00",
+    "status": "implemented_engineering_checked_actual_Windows_execution_pending",
+    "guide": "reproduction/windows-core-v1/README.zh.md",
+    "engineering": "notes/windows-core-v1/engineering-check.json",
+    "wheel_check": "notes/windows-core-v1/pypi-wheel-check.json",
+    "cells": 6,
+    "training_rows": 5000,
+    "evaluation_rows": 1000,
+    "nominal_threads": 2,
+    "scientific_settings_unchanged": true,
+    "windows_execution_verified": false
   }
 }
