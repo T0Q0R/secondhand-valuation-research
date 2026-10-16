@@ -388,3 +388,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T10:27:53+08:00：按用户指示重试仓库公开。检查远程107次提交、962个唯一blob，并递归检查29个ZIP/NPZ压缩对象、2292个归档成员；凭据模式/敏感文件名启发式筛查未命中（不构成不存在敏感信息的证明）。GitHub管理权限正常，已提交公开切换，但被Confirm access身份复核拦住；验证邮件已触发，等待用户在Chrome输入邮箱验证码。当前仍private；不能声称已公开。记录notes/public-release-v1/screening.json。无论文或科研结果修改、无计算启动。下一步完成验证后确认公开与未登录访问，再同步可用性表述。
+
+
+2026-10-16T10:29:50+08:00：仓库公开已确认：GitHub管理页显示Public，GitHub连接返回visibility=public；无Authorization请求的REST元数据HTTP200/private=false，raw README HTTP200。公开资料包含代码、方案、论文、图源/汇总与审计凭证；大型权重和逐条原始产物未新增上传。只修改当前论文可用性段落并原位内置编译成功，同稿PDF导出成功；原1Underfull、无Overfull/未定义引用。DOI、项目统一许可与外部全训练复现仍未完成；公开不升级新1719单元的审计等级。

@@ -1,0 +1,29 @@
+{
+  "verified_at": "2026-10-16T10:29:50+08:00",
+  "repository_url": "https://github.com/T0Q0R/secondhand-valuation-research",
+  "visibility": "public",
+  "verification": {
+    "github_connector_visibility": "public",
+    "github_ui": "Public",
+    "anonymous_api_http": 200,
+    "anonymous_api_private": false,
+    "anonymous_raw_readme_http": 200,
+    "authorization_header_sent": false
+  },
+  "screening_report": "notes/public-release-v1/screening.json",
+  "manuscript_change": "Availability wording only; built-in compilation and same-document PDF export succeeded",
+  "manuscript_files": {
+    "paper/innovation-addendum-v1.tex": {
+      "sha256": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38"
+    },
+    "paper/innovation-addendum-v1.pdf": {
+      "sha256": "a26783fbd9738b6c32725f916be3b3179348f2fed7f6380e146f3ec3a043d8c3"
+    }
+  },
+  "outstanding": [
+    "DOI-backed archival release",
+    "Project-wide reuse licensing decision",
+    "External clean-machine full-training reproduction",
+    "Same-level four-stage audit for new 1719-cell phase"
+  ]
+}
