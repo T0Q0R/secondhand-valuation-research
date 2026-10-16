@@ -564,5 +564,17 @@
     "nominal_threads": 2,
     "scientific_settings_unchanged": true,
     "windows_execution_verified": false
+  },
+  "numerical_stability_v1": {
+    "timestamp": "2026-10-16T13:25:10+08:00",
+    "status": "candidate_local_engineering_passed_not_adopted_cross_machine_and_performance_unvalidated",
+    "plan": "notes/numerical-stability-v1/SOLUTIONS.zh.md",
+    "precision_proxy": "notes/numerical-stability-v1/precision-proxy-results.json",
+    "candidate_checks": "notes/numerical-stability-v1/candidate-engineering.json",
+    "candidate": "reproduction/macos-core-v2/float64_candidate.py",
+    "original_scientific_source_unchanged": true,
+    "formal_results_replaced": false,
+    "external_user_operation_requested": false,
+    "full_experiment_matrix_extended": false
   }
 }

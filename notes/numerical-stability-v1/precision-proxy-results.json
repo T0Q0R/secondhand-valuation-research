@@ -1,0 +1,1248 @@
+{
+  "scope": "Local algebraic-path stress proxy, first/third archived batches of8 saved stages; no model training updates, no external FP64 execution",
+  "input_archive_sha256": "ce79c7425923535a9a2a6556aa0e2a1152b74dc72da253ce6bc85abbf61b4908",
+  "frozen_training_sha256": "c19dad6d140ea3a43a068806e309cc2f6ca1c4a5070cb4ef594cbf167aae38f3",
+  "source_sha256": "d126fe77ed95f87013cc8ccb6d37145c774bdb7885a33827b9ad5202020a8d48",
+  "threads": 1,
+  "elapsed_seconds": 4.1486358642578125,
+  "native_fp32_matches_all16_archived_forward_backward_fixtures": true,
+  "initial_parameters": "Identical archived float32 values promoted, not freshly drawn at a different dtype",
+  "loss": "Unchanged AST extracted from frozen training function",
+  "summary": {
+    "torch.float32": {
+      "fixtures": 16,
+      "maximum_gradient_path_sensitivity": 1.1920928955078125e-07,
+      "maximum_prediction_path_sensitivity": 9.5367431640625e-07,
+      "maximum_deterministic_flag_gradient_change": 0.0
+    },
+    "torch.float64": {
+      "fixtures": 16,
+      "maximum_gradient_path_sensitivity": 2.220446049250313e-16,
+      "maximum_prediction_path_sensitivity": 1.7763568394002505e-15,
+      "maximum_deterministic_flag_gradient_change": 0.0
+    }
+  },
+  "fixtures": [
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-0",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-0",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-0",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-0",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.220446049250313e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 1.7763568394002505e-15,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 1.3877787807814457e-17
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-1",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-1",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-1",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1175870895385742e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-1",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 4.163336342344337e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-2",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 3.725290298461914e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-2",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 4.163336342344337e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.220446049250313e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-2",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 9.5367431640625e-07,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 9.5367431640625e-07,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-2",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "deployment",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1920928955078125e-07,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "deployment",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.220446049250313e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "deployment",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 9.5367431640625e-07,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 9.5367431640625e-07,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "deployment",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 1.7763568394002505e-15,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-0",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-0",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-0",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-0",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 4.163336342344337e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 9.71445146547012e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-1",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-1",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 6.938893903907228e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-1",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 9.5367431640625e-07,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-1",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.220446049250313e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.3877787807814457e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-2",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-2",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-2",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.2351741790771484e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-2",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 2.220446049250313e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 1.7763568394002505e-15,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "deployment",
+      "step": 0,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 7.450580596923828e-09,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "deployment",
+      "step": 0,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "deployment",
+      "step": 2,
+      "dtype": "torch.float32",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 2.9802322387695312e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 5.960464477539063e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 1.4901161193847656e-08,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "deployment",
+      "step": 2,
+      "dtype": "torch.float64",
+      "paths": {
+        "native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_127": {
+          "maximum_gradient_change_vs_native": 5.551115123125783e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "chunks_17": {
+          "maximum_gradient_change_vs_native": 1.1102230246251565e-16,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "separate_bias": {
+          "maximum_gradient_change_vs_native": 2.7755575615628914e-17,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        },
+        "deterministic_native": {
+          "maximum_gradient_change_vs_native": 0.0,
+          "maximum_log_quote_change_vs_native": 0.0,
+          "selected_state_changes_vs_native": 0,
+          "loss_change_vs_native": 0.0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Chunking/bias decomposition stresses local arithmetic order; it is not a replay of the other CPU/backend.",
+    "Reduced local FP64 sensitivity does not prove cross-machine matching, full-training stability or unchanged scientific performance.",
+    "No optimizer update, price/backbone/head fit, formal market response, or original tolerance was changed."
+  ]
+}

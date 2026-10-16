@@ -1,0 +1,50 @@
+{
+  "status": "bounded_local_engineering_passed_cross_machine_and_performance_unvalidated",
+  "scope": "One synthetic fitting seed, outer-fold0, two arms and two repeat12-epoch residual fits; no head/refit or market-response evaluation",
+  "elapsed_seconds": 7.48710298538208,
+  "threads": 1,
+  "loss_expression_ast_unchanged": true,
+  "source_sha256": "de2cc0a33f043141d772034d98283c387555d9e2878677deb0adfe093de41637",
+  "checks": [
+    {
+      "path_weight": 0.0,
+      "fold": 0,
+      "repeat": 1,
+      "residual_epochs": 12,
+      "parameter_sha256": "20a921eac7eb6b9dc4a8bb80a667f98a6eedf53e5915d177c63e0743b7a07c86",
+      "finite_predictions": true,
+      "promoted_initialization_matches": true
+    },
+    {
+      "path_weight": 0.0,
+      "fold": 0,
+      "repeat": 2,
+      "residual_epochs": 12,
+      "parameter_sha256": "20a921eac7eb6b9dc4a8bb80a667f98a6eedf53e5915d177c63e0743b7a07c86",
+      "finite_predictions": true,
+      "promoted_initialization_matches": true
+    },
+    {
+      "path_weight": 1.0,
+      "fold": 0,
+      "repeat": 1,
+      "residual_epochs": 12,
+      "parameter_sha256": "16096ce5de092d719343b6a9356875876899101b622dbdb88c25c3fb328b9a1c",
+      "finite_predictions": true,
+      "promoted_initialization_matches": true
+    },
+    {
+      "path_weight": 1.0,
+      "fold": 0,
+      "repeat": 2,
+      "residual_epochs": 12,
+      "parameter_sha256": "16096ce5de092d719343b6a9356875876899101b622dbdb88c25c3fb328b9a1c",
+      "finite_predictions": true,
+      "promoted_initialization_matches": true
+    }
+  ],
+  "original_checkpoint_files_unchanged": true,
+  "original_frozen_results_replaced": false,
+  "cross_machine_execution": false,
+  "scientific_effect_equivalence_established": false
+}
