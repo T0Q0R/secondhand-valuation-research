@@ -1,0 +1,35 @@
+{
+  "status": "scope_disclosure_not_audit_upgrade",
+  "original_cells": 4320,
+  "completion_cells_including_reuse": 1719,
+  "original_scope": "four-stage fit/outcome/analysis/statistical checks,with disclosed shared primitives",
+  "completion_scope": "hash bindings,recorded integer-state utility rederivations,descriptive and visual review;not equivalent whole-batch fit/analysis/statistics audit",
+  "completion_four_stage_equivalence": false,
+  "rpl_and_recent_conclusions": "exploratory_not_same_level_audited",
+  "frozen_receipts_preserved": true,
+  "protocol": {
+    "commit": "6643cbe3266f2c1548d987c2bb53e366e19ad3ef",
+    "github_created_at_utc": "2026-10-14T13:10:17+00:00",
+    "github_created_at_shanghai": "2026-10-14T21:10:17+08:00",
+    "committed_runner_exactly_matches_used_source": true,
+    "runner_sha256": "4d859f8347a3b496765953d860921d8da3dd53e9928aee637b73f91b43036548",
+    "formal_stage_lower_bound": "2026-10-15T22:57:51.374282+08:00",
+    "lower_bound_reason": "waiter required successful environment predecessor completion",
+    "included_lambda_values": [
+      0,
+      0.1,
+      0.5,
+      1
+    ],
+    "preregistered": false,
+    "does_not_establish_endpoint_selection_before_outcome_inspection": true
+  },
+  "bindings": {
+    "outputs/matched-factorial-ten-seeds-v1-pipeline/fit-audit/completion.json": "3b31d963cc7079abc54c97f60945d155097de95681bbac9394ee27eddbe1ce55",
+    "outputs/matched-factorial-ten-seeds-v1-pipeline/outcome-audit/completion.json": "d337f600425e5015bdf2b8191b99d1e1ec7f315ee48045dd5b7239e2ab76f772",
+    "outputs/recovery-path-learning-analysis-v1/completion.json": "fef40716af9b9f422041e101489de8a5a89d69d8a374b96b092e3205a5acb10c",
+    "outputs/recent-five-analysis-v1/completion.json": "21c173ba90bc5ab17cf58dc2be1127b4f79c4bd0a254ee06e3fd1fbb59544c3d",
+    "notes/postcompute-review-v1/completion.json": "36fb6d8bc81b85f610cb0f6071e67582979cb65213521f1f717c73640ade38ab",
+    "notes/postcompute-paper-v1/final-QA.json": "e3bded7cb4d128f11e73d7942fdcabd4493922d955a5c6efb3bfd8d305f365ae"
+  }
+}

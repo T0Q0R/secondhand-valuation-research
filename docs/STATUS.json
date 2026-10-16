@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-16T08:07:32+08:00",
+  "snapshot_time": "2026-10-16T10:15:42+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -458,5 +458,10 @@
     "visual_QA": "six_figures_passed",
     "paper_integration": "completed_compiled_and_reviewed",
     "delivery": "notes/postcompute-paper-v1/DELIVERY.zh.md"
+  },
+  "review_boundaries_v1": {
+    "status": "scope_and_timeline_verified_manuscript_revision_pending",
+    "equivalent_audit_completed": false,
+    "timeline": "notes/review-boundaries-v1/AUDIT_SCOPE_AND_TIMELINE.json"
   }
 }
