@@ -474,11 +474,13 @@
     "screening": "notes/public-release-v1/screening.json"
   },
   "core_evidence_v2": {
-    "status": "plan_frozen_not_started",
+    "status": "rpl_extension_smoke_passed_ready_to_launch",
     "plan": "notes/core-evidence-v2/PLAN.zh.md",
     "old_core_cells": 684,
     "rpl_total_cells": 540,
     "rpl_new_cells": 378,
-    "timestamp": "2026-10-16T10:36:00+08:00"
+    "timestamp": "2026-10-16T10:42:15+08:00",
+    "runner": "experiments/run_rpl_ten_seed_v2.py",
+    "manifest": "outputs/rpl-ten-seed-v2/manifest.json"
   }
 }

@@ -394,3 +394,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T10:36:00+08:00：核心证据升级方案冻结：旧核心684单元四阶段审计，RPL原配置扩10种子（总540/新增378），不扩方法或λ矩阵。JUCars现有λ均值非单调，不能照抄单调结论；期刊官网未列硬页数限制。当前仅方案完成，计算尚未启动，论文保持不变。方案notes/core-evidence-v2/PLAN.zh.md。
+
+
+2026-10-16T10:42:15+08:00：RPL十种子新调度程序及冻结manifest准备完成。完整原训练分区上的两分支工程小测通过：λ0与原训练预测最大误差0；2线程CatBoost推断逐位相同；训练轮次检查点重复调用字节不变。正式12epochs、原六设置/三预算不改，新378单元尚未启动；等待本次远程回读后启动。代码experiments/run_rpl_ten_seed_v2.py，工程凭据notes/core-evidence-v2/rpl-smoke.json。

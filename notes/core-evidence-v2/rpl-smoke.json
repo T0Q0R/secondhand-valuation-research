@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "full_original_training_partitions": true,
+  "smoke_epochs": 4,
+  "formal_epochs": 12,
+  "base_thread_prediction_identity": true,
+  "branches": {
+    "path-0-gap-0.5": {
+      "zero_weight_identity_max_error": 0.0,
+      "checkpoint_reused_exactly": true,
+      "outcome_check": true
+    },
+    "path-0.5-gap-0.5": {
+      "zero_weight_identity_max_error": null,
+      "checkpoint_reused_exactly": true,
+      "outcome_check": true
+    }
+  },
+  "scope": "engineering only; no performance claim"
+}
