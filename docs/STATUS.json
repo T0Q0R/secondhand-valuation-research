@@ -498,5 +498,12 @@
     "rpl_new_completed_snapshot": 129,
     "snapshot_time": "2026-10-16T11:07:28+08:00",
     "nominal_threads": 9
+  },
+  "external_reproduction_v1": {
+    "status": "external_run_complete_strict_numeric_comparison_failed_local_diagnosis_running",
+    "cells": 6,
+    "elapsed_seconds": 117.56039810180664,
+    "intake": "notes/external-reproduction-synthetic-v1/intake-check.json",
+    "timestamp": "2026-10-16T11:38:25+08:00"
   }
 }

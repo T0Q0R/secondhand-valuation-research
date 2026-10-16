@@ -1,0 +1,58 @@
+{
+  "status": "computed_reference_differences_require_review",
+  "elapsed_seconds": 117.56039810180664,
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python": "3.12.6 (v3.12.6:a4a2d2b0d85, Sep  6 2024, 16:08:03) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "source_input_bindings": {
+    "synthetic": {
+      "training": "5b7e9340d630279da3ff49ea7b8811ecf3c61dff70cd802ce55c68a9964df0aa",
+      "evaluation": "6e578ed63fe2b8f80a2576b049e1a811c51b6df3ed0771a4856335c2682b37c0",
+      "rows": 5000,
+      "evaluation_rows": 1000
+    }
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "torch": "2.14.0",
+    "scikit-learn": "1.9.1",
+    "catboost": "1.2.10"
+  },
+  "contract_sha256": "10e34e63738d05ca90f625988e760f10735bca93bfc011220e318d25fc632f21",
+  "runner_sha256": "0274446cb3432dc1508c157af6bbb17f3c8b7e80d9b1dd47bffdf8a7e85dc4c6",
+  "cells": 6,
+  "comparisons": [
+    {
+      "metric": "mean_positive_log_inflation",
+      "passed": false,
+      "maximum_absolute_difference": 0.00046562099456792273
+    },
+    {
+      "metric": "clean_mae",
+      "passed": false,
+      "maximum_absolute_difference": 3.5455793863388863
+    },
+    {
+      "metric": "attack_mae",
+      "passed": false,
+      "maximum_absolute_difference": 12.797880613626603
+    },
+    {
+      "metric": "failed_query_fraction",
+      "passed": false,
+      "maximum_absolute_difference": 0.0020000000000000018
+    },
+    {
+      "metric": "max_remaining_response_regret",
+      "passed": false,
+      "maximum_absolute_difference": 0.0217685699462891
+    },
+    {
+      "metric": "nonconverged_batch_fraction",
+      "passed": false,
+      "maximum_absolute_difference": 0.10000000000000006
+    }
+  ],
+  "summary_sha256": "1bfbaf11059a0896782cd49c41221ededf2895d70310f553c1d9a01cec6b355a",
+  "scope": "Fresh fitting and evaluation of lambda0/1 at seed13 on selected fixed cohorts; external-machine execution requires human confirmation. This does not reproduce the full study or certify all audit stages."
+}

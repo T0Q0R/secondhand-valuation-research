@@ -1,3 +1,7 @@
+# 最新：外部运行完成，严格数值复现未通过
+
+2026-10-16T11:38:25+08:00：接收用户另一台M2 Pro返回包：6单元117.56秒，archive/summary/runner/contract哈希匹配，固定训练5000/评估1000人群绑定一致；状态computed_reference_differences_require_review，六指标至少一格超出原容差。不能宣称外部复现通过，也不放宽容差。原返回材料保留notes/external-reproduction-synthetic-v1/。已启动同机从头重训诊断；临时冻结2个生产worker与审计worker，剩余生产继续，诊断结束自动恢复原9线程预算。论文未改。
+
 # 最新：核心审计与RPL十种子计算运行中
 
 2026-10-16T11:07:28+08:00：完整审计队列已恢复并核验PID71097/单线程worker，RPL生产PID68433四worker运行正常；新增RPL当前129/378，加旧162为当前已算291/540，仅快照。名义8+1线程，未见failure。四阶段目标原核心828+新增378=1206，不表示全1719升级。每块四链通过后自动上传汇总/全部分析artifact和凭据，未上传模型/原始逐条。论文源SHA e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38不变。当前独立准备已完成，结束AI等待，后台继续；下一次先看两个runtime status/failure和stages完成凭证，禁止重复启动。

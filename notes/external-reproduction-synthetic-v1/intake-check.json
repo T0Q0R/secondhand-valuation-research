@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-16T11:37:49.661408+08:00",
+  "archive_sha256": "ec93a4a925607ec117c32247e23bc5ac18a9dbf93b56c895b97b2b8c4ee6366e",
+  "files": {
+    "summary.csv": "1bfbaf11059a0896782cd49c41221ededf2895d70310f553c1d9a01cec6b355a",
+    "external-training-receipt.json": "6cf10a5c5b31ab0e45c894073e5091ae806c3aef9aa7d216d0c12e0d8762eeec",
+    "external-rpl-synthetic.log": "d9e343a657da7217b0361501a63b2d5dfe7669f36f21c989a8c936be37ace862",
+    "reference-comparison.csv": "1b6ce92dfe94964f067adfafd6cfb44b399003ae50762d367e39c82ace7b891d"
+  },
+  "runner_hash_matches": true,
+  "contract_hash_matches": true,
+  "summary_hash_matches": true,
+  "status": "external_execution_completed_strict_numeric_comparison_failed",
+  "user_reported_hardware": "M2 Pro",
+  "external_machine_identity_cryptographically_verified": false,
+  "elapsed_seconds": 117.56039810180664,
+  "cells": 6,
+  "followup": "same-machine fresh-fit diagnostic then stage comparison; no tolerance changes"
+}
