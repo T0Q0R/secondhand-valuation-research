@@ -472,5 +472,13 @@
     "status": "verified_anonymous_read_access",
     "verification": "notes/public-release-v1/verification.json",
     "screening": "notes/public-release-v1/screening.json"
+  },
+  "core_evidence_v2": {
+    "status": "plan_frozen_not_started",
+    "plan": "notes/core-evidence-v2/PLAN.zh.md",
+    "old_core_cells": 684,
+    "rpl_total_cells": 540,
+    "rpl_new_cells": 378,
+    "timestamp": "2026-10-16T10:36:00+08:00"
   }
 }

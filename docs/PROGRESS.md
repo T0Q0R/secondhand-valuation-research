@@ -391,3 +391,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T10:29:50+08:00：仓库公开已确认：GitHub管理页显示Public，GitHub连接返回visibility=public；无Authorization请求的REST元数据HTTP200/private=false，raw README HTTP200。公开资料包含代码、方案、论文、图源/汇总与审计凭证；大型权重和逐条原始产物未新增上传。只修改当前论文可用性段落并原位内置编译成功，同稿PDF导出成功；原1Underfull、无Overfull/未定义引用。DOI、项目统一许可与外部全训练复现仍未完成；公开不升级新1719单元的审计等级。
+
+
+2026-10-16T10:36:00+08:00：核心证据升级方案冻结：旧核心684单元四阶段审计，RPL原配置扩10种子（总540/新增378），不扩方法或λ矩阵。JUCars现有λ均值非单调，不能照抄单调结论；期刊官网未列硬页数限制。当前仅方案完成，计算尚未启动，论文保持不变。方案notes/core-evidence-v2/PLAN.zh.md。
