@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-16T07:59:42+08:00",
+  "snapshot_time": "2026-10-16T08:07:32+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,18 +28,18 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "four_visualizations_integrated_then_manuscript_generation_paused_for_experiment_completion",
-    "pages": 36,
+    "revision_status": "postcompute_evidence_integrated_compiled_reviewed",
+    "pages": 47,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
     "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 inspected",
-    "source_sha256": "bf799e53b6ba4cbebf84ec78d6c2c3ffe581e6a9a21a8f4e312dd2646f656a24",
-    "pdf_sha256": "c11fd3e09c2e16da6e73e016f98f18c4635d34e47b48c07d9bbb00ee7704ad0b",
+    "source_sha256": "c6b0e07900e150ce1995d04537979504f7d6e1ab4e3b4360d86839c89b99482e",
+    "pdf_sha256": "967a7ee03f5ecda7cfc41fe734467b28cc60715aaa61e217c0399b49f4c2a1d8",
     "submission": "not_submitted",
     "formal_submission_ready": false,
-    "abstract_words": 233,
-    "figure_count": 6
+    "abstract_words": 208,
+    "figure_count": 12
   },
   "figures": {
     "new_count": 4,
@@ -212,7 +212,7 @@
     "receipt": "notes/teacher-review-v4/diagnostic-completion.json"
   },
   "experiment_first_request": {
-    "status": "all_queued_computations_complete_scientific_integration_pending",
+    "status": "requested_coverage_computed_and_integrated_with_scientific_limits",
     "requirement": "Cover classical/recent related baselines, parameter justification/sensitivity, single/combined component ablations and curves before further manuscript generation",
     "manuscript_generation_authorized_after": "Experiment coverage and scientific checks completed",
     "new_training_started": true,
@@ -456,6 +456,7 @@
     "nonconverged_cells": 137,
     "findings": "notes/postcompute-review-v1/FINDINGS.zh.md",
     "visual_QA": "six_figures_passed",
-    "paper_integration": "pending"
+    "paper_integration": "completed_compiled_and_reviewed",
+    "delivery": "notes/postcompute-paper-v1/DELIVERY.zh.md"
   }
 }

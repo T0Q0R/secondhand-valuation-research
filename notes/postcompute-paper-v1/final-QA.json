@@ -1,0 +1,20 @@
+{
+  "status": "integrated_compiled_reviewed",
+  "pages": 47,
+  "abstract_words": 208,
+  "source_sha256": "c6b0e07900e150ce1995d04537979504f7d6e1ab4e3b4360d86839c89b99482e",
+  "pdf_sha256": "967a7ee03f5ecda7cfc41fe734467b28cc60715aaa61e217c0399b49f4c2a1d8",
+  "builtin_compile": "success",
+  "export_same_manuscript": "success",
+  "overfull": 0,
+  "underfull": 1,
+  "undefined_references": 0,
+  "new_figures": 6,
+  "total_figures": 12,
+  "references": 20,
+  "embedded_new_figure_min_font_pt": 6.208956241607666,
+  "visual_review": "47-page contact sheets and all7 new display pages inspected",
+  "statistical_boundary": "three-seed exploratory; nonconverged retained; no universal superiority",
+  "submission_ready": false,
+  "frozen_original_scientific_sources_unchanged": true
+}
