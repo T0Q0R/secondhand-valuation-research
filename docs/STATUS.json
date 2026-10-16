@@ -486,7 +486,7 @@
     "pid": 68433,
     "runtime_status": "outputs/rpl-ten-seed-runtime-v2/status.json",
     "author_facts": "notes/core-evidence-v2/author-facts.json",
-    "external_reproduction": "macOS fresh-fitting core subset package prepared; external execution pending",
+    "external_reproduction": "External fresh fitting and one-pass residual diagnostics executed; same-machine repeatability verified, strict cross-machine numerical reproduction failed and retained",
     "audit_status": "engineering_smoke_passed_ready_to_start",
     "unique_audit_target_cells": 1206,
     "audit_runner": "experiments/run_core_evidence_queue_v2.py",
@@ -500,13 +500,13 @@
     "nominal_threads": 9
   },
   "external_reproduction_v1": {
-    "status": "external_strict_mismatch_localized_to_saved_residual_parameters_cause_unresolved",
+    "status": "external_onepass_diagnostic_complete_first_observed_gradient_divergence_strict_metric_mismatch_retained",
     "cells": 6,
     "elapsed_seconds": 117.56039810180664,
     "intake": "notes/external-reproduction-synthetic-v1/intake-check.json",
-    "timestamp": "2026-10-16T12:33:23+08:00",
+    "timestamp": "2026-10-16T13:09:25+08:00",
     "diagnostic": "notes/external-reproduction-synthetic-v1/diagnostic-review.json",
-    "followup": "reproduction/macos-core-v2/ONEPASS.zh.md",
+    "followup": "notes/external-reproduction-synthetic-v1/onepass-review/FINDINGS.zh.md",
     "resources_restored": true,
     "user_confirmed_external_machine": true,
     "fingerprint_review": "notes/external-reproduction-synthetic-v1/fingerprint-review/FINDINGS.zh.md",
@@ -527,12 +527,25 @@
     "short_probe_threads": 1,
     "short_probe_training_batches": 96,
     "short_probe_events": 388,
-    "onepass_status": "local_full_diagnostics_passed_external_onepass_pending",
+    "onepass_status": "external_32_replays_completed_and_independently_checked",
     "onepass_local_seconds": 129.8232741355896,
     "onepass_full_residual_replays": 32,
     "onepass_reconstructed_original_models": "32/32",
     "onepass_thread_and_repeat_event_equality": true,
-    "onepass_report": "notes/external-reproduction-synthetic-v1/fingerprint-review/local-onepass-summary.json"
+    "onepass_report": "notes/external-reproduction-synthetic-v1/onepass-review/detailed-divergence.json",
+    "external_onepass_seconds": 56.14632487297058,
+    "external_replays_match_saved_models": "32/32",
+    "same_machine_thread_and_repeat_equality_both_machines": true,
+    "first_observed_divergence": "first batch after_backward, output-layer4.weight gradient only",
+    "first_gradient_stage_maximum_range": [
+      2.9802322387695312e-08,
+      7.450580596923828e-08
+    ],
+    "later_training_state_divergence_models": 6,
+    "models": 8,
+    "specific_underlying_primitive_cause": "not isolated; intermediate hidden forward activations not captured",
+    "external_manual_diagnostic_work": "closed_no_repeat_requested",
+    "formal_metric_reproduction": "failed_original_tolerance_unchanged"
   },
   "windows_core_v1": {
     "timestamp": "2026-10-16T11:52:30+08:00",

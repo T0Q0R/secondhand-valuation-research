@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-10-16T13:08:26+08:00",
+  "archive_sha256": "2ce57c7b0d0d3fa4d0979b7ad14c9c9e14227e1edd161ff2dff706fc1fa6217d",
+  "archive_bytes": 55658252,
+  "members": [
+    {
+      "name": "binding.json",
+      "bytes": 2633,
+      "crc32": 919845320
+    },
+    {
+      "name": "onepass-summary.json",
+      "bytes": 1200,
+      "crc32": 1380288133
+    },
+    {
+      "name": "onepass.log",
+      "bytes": 2916,
+      "crc32": 2063720704
+    },
+    {
+      "name": "threads-1-repeat-1.zip",
+      "bytes": 14204107,
+      "crc32": 1450294747
+    },
+    {
+      "name": "threads-1-repeat-2.zip",
+      "bytes": 14204101,
+      "crc32": 2956556408
+    },
+    {
+      "name": "threads-2-repeat-1.zip",
+      "bytes": 14204109,
+      "crc32": 1639346674
+    },
+    {
+      "name": "threads-2-repeat-2.zip",
+      "bytes": 14204101,
+      "crc32": 3647276819
+    }
+  ],
+  "private_copy": "../external-reproduction-private-v1/external-onepass-return-20261016-v1.zip",
+  "raw_trace_arrays_not_uploaded_to_Git": true,
+  "published_worker_and_launcher_sha256_match": true,
+  "previous_external_8_model_file_sha256_match": true,
+  "source_contract_sha256": "10e34e63738d05ca90f625988e760f10735bca93bfc011220e318d25fc632f21",
+  "external_runtime_seconds": 56.14632487297058,
+  "external_model_replays": 32,
+  "observer_controls_pass": true,
+  "all_reported_same_machine_comparisons_rederived": true,
+  "first_batch_gradient_array_sha256_verified": true,
+  "training_performed_during_intake": false,
+  "formal_tolerance_changed": false,
+  "scope": "One fitting seed synthetic diagnostic; original six-cell strict metric reproduction remains failed"
+}

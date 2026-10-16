@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-16T12:02:57+08:00",
-  "status": "saved_residual_parameters_diverge_backbones_exact_specific_training_cause_unresolved",
+  "checked_at": "2026-10-16T13:09:25+08:00",
+  "status": "first_observed_cross_machine_gradient_difference_localized_underlying_primitive_unresolved",
   "same_machine": {
     "status": "computed_reference_comparison_passed",
     "elapsed_seconds": 216.3073332309723,
@@ -28,7 +28,7 @@
     "sha256": "6502e263d25e2c902070865659dbc0298cea30c5f844b4853ffac5265fc2e3c9",
     "arrays_and_model_parameters_not_uploaded_to_Git": true
   },
-  "followup": "Optional fixed-tensor initialization/first-gradient/update diagnostic; not yet run",
+  "followup": "External manual diagnosis closed; original cross-machine strict metric failure retained",
   "original_resources_restored": {
     "status": "resumed_original_workers",
     "pids": [
@@ -52,5 +52,6 @@
     "final_prediction_exact_matches": 0,
     "maximum_final_log_quote_difference": 0.011990547180175781
   },
-  "user_confirmed_external_execution": true
+  "user_confirmed_external_execution": true,
+  "onepass_review": "notes/external-reproduction-synthetic-v1/onepass-review/FINDINGS.zh.md"
 }

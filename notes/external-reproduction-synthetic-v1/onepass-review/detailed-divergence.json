@@ -1,0 +1,699 @@
+{
+  "scope": "Private archived one-pass data only; no fitting, no formal tolerance changes",
+  "recomputed_within_machine_comparisons": {
+    "external": {
+      "repeat_threads_1": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "repeat_threads_2": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "one_vs_two_threads": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      }
+    },
+    "local": {
+      "repeat_threads_1": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "repeat_threads_2": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "one_vs_two_threads": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      }
+    }
+  },
+  "recomputed_cross_machine_comparisons": {
+    "threads-1-repeat-1.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    },
+    "threads-1-repeat-2.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    },
+    "threads-2-repeat-1.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    },
+    "threads-2-repeat-2.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    }
+  },
+  "external_replays_match_previous_saved_parameters": "32/32 independently compared parameter fingerprints",
+  "first_batch_gradient_maximum_absolute_difference": 7.450580596923828e-08,
+  "first_batch_gradient_minimum_nonzero_stage_maximum": 2.9802322387695312e-08,
+  "models_with_recorded_selected_state_divergence": 6,
+  "stages": [
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-0",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 4,
+          "event": "before_backward"
+        },
+        "selected_state_difference": {
+          "round": 1,
+          "step": 26,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 50,
+          "maximum_absolute_difference": 4.470348358154297e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-1",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 1,
+          "event": "before_backward"
+        },
+        "selected_state_difference": {
+          "round": 1,
+          "step": 80,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 50,
+          "maximum_absolute_difference": 3.725290298461914e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-2",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 2,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 45,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "deployment",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 2,
+          "event": "before_backward"
+        },
+        "selected_state_difference": {
+          "round": 0,
+          "step": 109,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 46,
+          "maximum_absolute_difference": 3.725290298461914e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-0",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 4,
+          "event": "before_backward"
+        },
+        "selected_state_difference": {
+          "round": 1,
+          "step": 125,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 46,
+          "maximum_absolute_difference": 7.450580596923828e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-1",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 4,
+          "event": "before_backward"
+        },
+        "selected_state_difference": {
+          "round": 1,
+          "step": 118,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 52,
+          "maximum_absolute_difference": 4.470348358154297e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-2",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 6,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 46,
+          "maximum_absolute_difference": 7.450580596923828e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "deployment",
+      "first_observed_differences": {
+        "any_recorded_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "gradient_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_backward"
+        },
+        "parameter_difference": {
+          "round": 0,
+          "step": 0,
+          "event": "after_update"
+        },
+        "prediction_difference": {
+          "round": 0,
+          "step": 4,
+          "event": "before_backward"
+        },
+        "selected_state_difference": {
+          "round": 0,
+          "step": 151,
+          "event": "before_backward"
+        }
+      },
+      "first_batch_unclipped_gradient_differences": [
+        {
+          "parameter": "0.weight",
+          "dtype": "float32",
+          "total_entries": 2752,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "0.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.weight",
+          "dtype": "float32",
+          "total_entries": 4096,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "2.bias",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        {
+          "parameter": "4.weight",
+          "dtype": "float32",
+          "total_entries": 64,
+          "changed_entries": 45,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        {
+          "parameter": "4.bias",
+          "dtype": "float32",
+          "total_entries": 1,
+          "changed_entries": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "First differing recorded event is not necessarily the first differing primitive operation: intermediate hidden activations were not captured.",
+    "The specific CPU, system math library or numerical kernel responsible is not causally isolated.",
+    "Later selected-state divergence follows earlier gradient divergence; no intervention here proves that branch changes cause the final effect.",
+    "Independent source execution and within-machine repeatability do not certify strict cross-machine metric reproduction."
+  ]
+}

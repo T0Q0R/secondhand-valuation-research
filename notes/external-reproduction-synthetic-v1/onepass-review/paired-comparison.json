@@ -1,0 +1,178 @@
+{
+  "scope": "Saved-backbone residual diagnostics only; no formal metric tolerance or reproduction status changes",
+  "external_archive_sha256": "2ce57c7b0d0d3fa4d0979b7ad14c9c9e14227e1edd161ff2dff706fc1fa6217d",
+  "local_archive_sha256": "ce79c7425923535a9a2a6556aa0e2a1152b74dc72da253ce6bc85abbf61b4908",
+  "external_summary": {
+    "status": "computed_diagnostic_cross_machine_comparison_pending",
+    "original_frozen_results_overwritten": false,
+    "strict_tolerance_changed": false,
+    "scope": "Eight saved synthetic backbones, seed13, residual replay only",
+    "comparisons": {
+      "repeatability_threads_2": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "repeatability_threads_1": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "two_vs_one_thread": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      }
+    },
+    "saved_original_parameter_matches": {
+      "threads-2-repeat-1": 8,
+      "threads-2-repeat-2": 8,
+      "threads-1-repeat-1": 8,
+      "threads-1-repeat-2": 8
+    },
+    "models_per_run": 8,
+    "full_residual_replays": 32,
+    "epochs_per_model": 12,
+    "observer_control_matches": {
+      "threads-2-repeat-1": [
+        true
+      ],
+      "threads-2-repeat-2": [],
+      "threads-1-repeat-1": [
+        true
+      ],
+      "threads-1-repeat-2": []
+    },
+    "elapsed_seconds": 56.14632487297058,
+    "original_checkpoint_hashes_unchanged": true
+  },
+  "local_summary": {
+    "status": "computed_diagnostic_cross_machine_comparison_pending",
+    "original_frozen_results_overwritten": false,
+    "strict_tolerance_changed": false,
+    "scope": "Eight saved synthetic backbones, seed13, residual replay only",
+    "comparisons": {
+      "repeatability_threads_2": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "repeatability_threads_1": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      },
+      "two_vs_one_thread": {
+        "final_parameters_matching": 8,
+        "total_models": 8,
+        "first_differing_trace_event": null
+      }
+    },
+    "saved_original_parameter_matches": {
+      "threads-2-repeat-1": 8,
+      "threads-2-repeat-2": 8,
+      "threads-1-repeat-1": 8,
+      "threads-1-repeat-2": 8
+    },
+    "models_per_run": 8,
+    "full_residual_replays": 32,
+    "epochs_per_model": 12,
+    "observer_control_matches": {
+      "threads-2-repeat-1": [
+        true
+      ],
+      "threads-2-repeat-2": [],
+      "threads-1-repeat-1": [
+        true
+      ],
+      "threads-1-repeat-2": []
+    },
+    "elapsed_seconds": 129.8232741355896,
+    "original_checkpoint_hashes_unchanged": true
+  },
+  "paired_trace_comparisons": {
+    "threads-1-repeat-1.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    },
+    "threads-1-repeat-2.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    },
+    "threads-2-repeat-1.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    },
+    "threads-2-repeat-2.zip": {
+      "final_parameters_matching": 0,
+      "total_models": 8,
+      "first_differing_trace_event": {
+        "method": "path-0-gap-0.5",
+        "stage": "outer-0",
+        "round": 0,
+        "step": 0,
+        "event": "after_backward",
+        "differing_groups": [
+          "gradients"
+        ]
+      }
+    }
+  },
+  "environments": {
+    "external": {
+      "platform": "macOS-26.5.1-arm64-arm-64bit",
+      "python": "3.12.6 (v3.12.6:a4a2d2b0d85, Sep  6 2024, 16:08:03) [Clang 13.0.0 (clang-1300.0.29.30)]",
+      "versions": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "torch": "2.14.0",
+        "scikit-learn": "1.9.1",
+        "catboost": "1.2.10"
+      },
+      "torch_build_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=08187d9e0fba026dc8217405802ab5381dc88d90, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.14.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+    },
+    "local": {
+      "platform": "macOS-26.7.1-arm64-arm-64bit",
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "versions": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "torch": "2.14.0",
+        "scikit-learn": "1.9.1",
+        "catboost": "1.2.10"
+      },
+      "torch_build_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=08187d9e0fba026dc8217405802ab5381dc88d90, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.14.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+    }
+  },
+  "interpretation": "The first differing recorded event bounds the observed divergence. It does not, by itself, identify a causal library, system or hardware change."
+}
