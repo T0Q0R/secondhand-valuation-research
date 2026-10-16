@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "producer_families": [
+    {
+      "status": "smoke_only",
+      "stage": "rpl",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 1,
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    },
+    {
+      "status": "smoke_only",
+      "stage": "mechanisms",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 1,
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    },
+    {
+      "status": "smoke_only",
+      "stage": "sefa",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 1,
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    },
+    {
+      "status": "smoke_only",
+      "stage": "gdfs",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 1,
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    },
+    {
+      "status": "smoke_only",
+      "stage": "dime",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 1,
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    },
+    {
+      "status": "smoke_only",
+      "stage": "efa",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 1,
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    },
+    {
+      "status": "smoke_only",
+      "stage": "aco",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 1,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 1000,
+      "legal_unilateral_deviations": 10421
+    }
+  ],
+  "positive_RPL_head_refit": true,
+  "corrupted_columns_rejected": [
+    "attacked_prediction_log",
+    "best_response_regret_log",
+    "query_succeeded",
+    "final_state"
+  ],
+  "bootstrap_fixture_replicates": 4000,
+  "statistics_check": {
+    "status": "completed",
+    "stage": "smoke",
+    "checked_metric_contrasts": 24,
+    "recomputed_bootstrap_replicates": 4000,
+    "checker_sha256": "df6e96c174a2aa20bf1fdc0dd93a183dfd18a0f3f06e93eb9d3e9ef2ed452bb3",
+    "analysis_completion_sha256": "1481d26f5c32330fa82b98b7499e374e65eef4ab41dee16201980c5c4a1934aa",
+    "changed_point_negative_control_rejected": true,
+    "finite_sample_fwer_certified": false,
+    "scope": "separate indexing/summation implementation of all saved crossed resamples, marginal intervals and exploratory max-deviation bands; no inference about new training populations"
+  },
+  "scope": "engineering acceptance checks, not whole-study audit completion"
+}
