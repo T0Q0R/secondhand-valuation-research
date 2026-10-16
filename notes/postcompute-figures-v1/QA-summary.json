@@ -1,0 +1,32 @@
+[
+  {
+    "name": "factorial_ablations",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "parameter_sensitivity",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "rpl_tradeoffs",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "recent_budget_curves",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "mechanism_search",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "implementation_stability",
+    "font_exit": 0,
+    "collision_exit": 0
+  }
+]

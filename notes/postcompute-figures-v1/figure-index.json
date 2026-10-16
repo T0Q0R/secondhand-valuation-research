@@ -1,0 +1,12 @@
+{
+  "figures": [
+    "rpl_tradeoffs",
+    "mechanism_search",
+    "recent_budget_curves",
+    "factorial_ablations",
+    "parameter_sensitivity",
+    "implementation_stability"
+  ],
+  "source_script_sha256": "5745a7fcb10b39a10f4b6b3b475f3153bdc86e494aadc432d3d16967b9350303",
+  "seed_ranges_not_CIs": true
+}
