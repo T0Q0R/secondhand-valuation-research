@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-16T11:43:52+08:00",
+  "status": "same_machine_reconstruction_passed_external_strict_mismatch_unresolved",
+  "same_machine": {
+    "status": "computed_reference_comparison_passed",
+    "elapsed_seconds": 216.3073332309723,
+    "all6metric_comparisons_passed": true,
+    "largest_absolute_metric_difference": 4.547473508864641e-13
+  },
+  "external": {
+    "status": "computed_reference_differences_require_review",
+    "cells": 6,
+    "elapsed_seconds": 117.56039810180664,
+    "strict_tolerance_changed": false
+  },
+  "environment_differences_observed": {
+    "local_python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "external_python": "3.12.6 (v3.12.6:a4a2d2b0d85, Sep  6 2024, 16:08:03) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "local_platform": "macOS-26.7.1-arm64-arm-64bit",
+    "external_platform": "macOS-26.5.1-arm64-arm-64bit",
+    "listed_library_versions_match": true
+  },
+  "cause": "unresolved; environment differences observed, not causally isolated",
+  "scope": "one fitting seed, synthetic fixed cohort only; descriptive direction persistence is not statistical or numerical reproduction proof",
+  "private_diagnostic_archive": {
+    "local_test_generated": true,
+    "bytes": 1346049,
+    "sha256": "6502e263d25e2c902070865659dbc0298cea30c5f844b4853ffac5265fc2e3c9",
+    "arrays_and_model_parameters_not_uploaded_to_Git": true
+  },
+  "followup": "reproduction/macos-core-v2/DIAGNOSE.zh.md",
+  "original_resources_restored": {
+    "status": "resumed_original_workers",
+    "pids": [
+      71097,
+      69307,
+      70199,
+      72811
+    ],
+    "at_unix": 1792122095.0609028
+  }
+}

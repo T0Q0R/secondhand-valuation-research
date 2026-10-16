@@ -1,3 +1,7 @@
+# 最新：同机重训通过，外机数值偏差待定位
+
+2026-10-16T11:43:52+08:00：外部合成数值差异诊断：同机公开入口从头重训6单元全部通过原阈值，最大指标差异4.55e-13；外机结果仍未通过，环境差异观察不等于因果定位，不放宽容差。保留描述性方向和所有非收敛；只读8模型诊断程序已在本机验证，等待外机现成模型指纹包。原两训练worker和审计进程已全部恢复，训练/审计源未修改，论文未改。结果notes/external-reproduction-synthetic-v1/FINDINGS.zh.md；外机命令reproduction/macos-core-v2/DIAGNOSE.zh.md。
+
 # 最新：外部运行完成，严格数值复现未通过
 
 2026-10-16T11:38:25+08:00：接收用户另一台M2 Pro返回包：6单元117.56秒，archive/summary/runner/contract哈希匹配，固定训练5000/评估1000人群绑定一致；状态computed_reference_differences_require_review，六指标至少一格超出原容差。不能宣称外部复现通过，也不放宽容差。原返回材料保留notes/external-reproduction-synthetic-v1/。已启动同机从头重训诊断；临时冻结2个生产worker与审计worker，剩余生产继续，诊断结束自动恢复原9线程预算。论文未改。

@@ -1,0 +1,38 @@
+[
+  {
+    "method": "path-0-gap-0.5",
+    "stage": "outer-0",
+    "encoder_equal": true,
+    "base_predictions_equal": true,
+    "base_prediction_max_difference": 0.0,
+    "residual_parameter_max_difference": 0.0,
+    "final_prediction_max_difference": 0.0
+  },
+  {
+    "method": "path-0-gap-0.5",
+    "stage": "outer-1",
+    "encoder_equal": true,
+    "base_predictions_equal": true,
+    "base_prediction_max_difference": 0.0,
+    "residual_parameter_max_difference": 0.0,
+    "final_prediction_max_difference": 0.0
+  },
+  {
+    "method": "path-0-gap-0.5",
+    "stage": "outer-2",
+    "encoder_equal": true,
+    "base_predictions_equal": true,
+    "base_prediction_max_difference": 0.0,
+    "residual_parameter_max_difference": 0.0,
+    "final_prediction_max_difference": 0.0
+  },
+  {
+    "method": "path-0-gap-0.5",
+    "stage": "deployment",
+    "encoder_equal": true,
+    "base_predictions_equal": true,
+    "base_prediction_max_difference": 0.0,
+    "residual_parameter_max_difference": 0.0,
+    "final_prediction_max_difference": 0.0
+  }
+]

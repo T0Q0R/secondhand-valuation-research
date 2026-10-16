@@ -500,10 +500,13 @@
     "nominal_threads": 9
   },
   "external_reproduction_v1": {
-    "status": "external_run_complete_strict_numeric_comparison_failed_local_diagnosis_running",
+    "status": "same_machine_passed_external_strict_mismatch_unresolved",
     "cells": 6,
     "elapsed_seconds": 117.56039810180664,
     "intake": "notes/external-reproduction-synthetic-v1/intake-check.json",
-    "timestamp": "2026-10-16T11:38:25+08:00"
+    "timestamp": "2026-10-16T11:43:52+08:00",
+    "diagnostic": "notes/external-reproduction-synthetic-v1/diagnostic-review.json",
+    "followup": "reproduction/macos-core-v2/DIAGNOSE.zh.md",
+    "resources_restored": true
   }
 }
