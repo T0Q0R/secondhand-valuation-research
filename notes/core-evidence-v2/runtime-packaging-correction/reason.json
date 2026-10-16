@@ -1,0 +1,8 @@
+{
+  "scope": "runtime-only evidence packaging correction; no scientific worker or audit arithmetic changes",
+  "reason": "Preserve full bootstrap NPZ so published bytes match analysis artifact hashes",
+  "stopped_process_group": 70396,
+  "RPL_training_process_group_untouched": 68433,
+  "audit_checkpoints_retained": true,
+  "time": 1792119855.9623182
+}

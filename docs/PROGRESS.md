@@ -409,3 +409,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T11:02:57+08:00：按用户提供的英文姓名/共同单位更新作者事实与CITATION.cff；其它贡献/资助/冲突按用户要求本轮不补、不编造。macOS外部从头训练入口准备完成（seed13、λ0/1、三预算，可先合成6单元或全三来源18单元），绑定源码/训练人群/评估哈希、原参考值与预声明数值容差；只做语法/静态合同核查，尚未在外机运行。保存五证据表/四主图的拆分映射与统一默认/扫描范围清单，论文未改；DOI软件归档元数据仅草稿、未发行。
+
+
+2026-10-16T11:04:16+08:00：审计队列运行层修正：公开完整批级配对bootstrap NPZ原字节，并核对上传副本与分析artifact哈希；不再把裁剪输入文件放在同名原artifact下。仅停止审计进程组70396，RPL训练68433未动；审计检查点全部保留，旧运行manifest/status与原因归档notes/core-evidence-v2/runtime-packaging-correction。科学审计/统计代码未改。待远程回读后恢复审计。

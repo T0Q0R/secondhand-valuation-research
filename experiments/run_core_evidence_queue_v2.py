@@ -93,8 +93,12 @@ def sync_stage(stage,checkout):
             shutil.copy2(a.OUT/phase/stage/'completion.json',target/(phase+'-completion.json'))
         for filename in ['audited_cell_summaries.csv','paired_contrasts.csv','multiobjective_means.csv','contrast_keys.json']:
             shutil.copy2(a.OUT/'analysis'/stage/filename,target/filename)
-        z=np.load(a.OUT/'analysis'/stage/'paired_tensors_and_draws.npz')
-        np.savez_compressed(target/'paired_tensors_and_draws.npz',**{k:z[k] for k in ['differences','seed_draws','batch_draws']})
+        # Preserve exact bytes named in the analysis artifact receipt. These are
+        # aggregate paired bootstrap tensors, not listing data/model weights.
+        shutil.copy2(a.OUT/'analysis'/stage/'paired_tensors_and_draws.npz',target/'paired_tensors_and_draws.npz')
+        for p in target.iterdir():
+            if p.name in a.read(a.OUT/'analysis'/stage/'completion.json')['artifacts']:
+                assert a.sha(p)==a.read(a.OUT/'analysis'/stage/'completion.json')['artifacts'][p.name]
         with zipfile.ZipFile(target/'audit-receipts.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
             # Receipts only: no source listings, prices per listing or model weights.
             for phase in ['fit-audit','outcome-audit']:
