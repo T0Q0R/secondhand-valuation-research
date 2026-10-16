@@ -34,8 +34,8 @@
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
     "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 inspected",
-    "source_sha256": "9882831bea3157fabba69d3a1df07f4aabdc5803607ca9719958edd787ee27e1",
-    "pdf_sha256": "0e8cc5fae2bdb45bcf897e77f069b7a6c0184d488f52f87893bdd02d6b699d9d",
+    "source_sha256": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
+    "pdf_sha256": "a26783fbd9738b6c32725f916be3b3179348f2fed7f6380e146f3ec3a043d8c3",
     "submission": "not_submitted",
     "formal_submission_ready": false,
     "abstract_words": 208,
@@ -475,7 +475,7 @@
     "project_authored_software_license": "MIT"
   },
   "core_evidence_v2": {
-    "status": "rpl_extension_running_audit_preparing",
+    "status": "rpl_training_and_full_core_audit_running",
     "plan": "notes/core-evidence-v2/PLAN.zh.md",
     "old_core_cells": 828,
     "rpl_total_cells": 540,
@@ -492,6 +492,11 @@
     "audit_runner": "experiments/run_core_evidence_queue_v2.py",
     "external_package": "reproduction/macos-core-v2/README.zh.md",
     "manuscript_restructure": "mapped_only_waiting_for_core_results",
-    "doi": "draft_metadata_only_no_DOI_issued"
+    "doi": "draft_metadata_only_no_DOI_issued",
+    "audit_pid": 71097,
+    "audit_runtime": "outputs/core-evidence-runtime-v2/status.json",
+    "rpl_new_completed_snapshot": 129,
+    "snapshot_time": "2026-10-16T11:07:28+08:00",
+    "nominal_threads": 9
   }
 }

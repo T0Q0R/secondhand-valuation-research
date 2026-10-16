@@ -1,0 +1,27 @@
+{
+  "time": "2026-10-16T11:07:28+08:00",
+  "rpl_training_pid": 68433,
+  "active_training_pids": [
+    69307,
+    70199,
+    70215,
+    70242
+  ],
+  "rpl_new_completed_cells_snapshot": 129,
+  "new_target": 378,
+  "old_reused": 162,
+  "rpl_total_target": 540,
+  "audit_pid": 71097,
+  "active_audit_pids": [
+    71253
+  ],
+  "audit_stage": "rpl",
+  "cpu_policy": "4x2 training plus1 auditor; after training up to8 one-thread auditors",
+  "paper_unchanged_sha256": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
+  "audit_unique_target": 1206,
+  "not_all_1719_upgraded": true,
+  "external_reproduction": "prepared_not_run_on_external_macOS",
+  "doi": "draft_no_DOI_issued",
+  "license": "MIT_project_authored_software",
+  "next_human_review": "Verify every four-stage closure, negative results and nonconvergence; then revise same manuscript and figures; do not rerun completed jobs."
+}

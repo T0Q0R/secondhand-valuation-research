@@ -1,0 +1,16 @@
+{
+  "status": "running_verified",
+  "pid": 71097,
+  "superseded_pid": 70396,
+  "started_at": "2026-10-16T11:05:43.785559+08:00",
+  "thread_policy": "one auditor during8-thread RPL training,up to8 one-thread auditors afterward",
+  "old_core_cells": 828,
+  "new_RPL_cells": 378,
+  "unique_audit_target_cells": 1206,
+  "runtime": "outputs/core-evidence-runtime-v2/status.json",
+  "progress_sync_checkout": "/tmp/secondhand-core-autosync-20261016",
+  "verified_at": "2026-10-16T11:07:28+08:00",
+  "active_pids": [
+    71253
+  ]
+}

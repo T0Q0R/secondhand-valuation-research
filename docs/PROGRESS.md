@@ -415,3 +415,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T11:05:23+08:00：公开审计包补齐全部分析artifact（包括批均值与完整bootstrap NPZ），复制时逐项对哈希；统计checker新增公开目录/receipt入口。公开目录入口复算4000抽样及24对比通过，拒绝破坏点估计。数值算法与科研结果未变，准备从已保存审计检查点续跑。
+
+
+2026-10-16T11:07:28+08:00：完整审计队列已恢复并核验PID71097/单线程worker，RPL生产PID68433四worker运行正常；新增RPL当前129/378，加旧162为当前已算291/540，仅快照。名义8+1线程，未见failure。四阶段目标原核心828+新增378=1206，不表示全1719升级。每块四链通过后自动上传汇总/全部分析artifact和凭据，未上传模型/原始逐条。论文源SHA e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38不变。当前独立准备已完成，结束AI等待，后台继续；下一次先看两个runtime status/failure和stages完成凭证，禁止重复启动。
