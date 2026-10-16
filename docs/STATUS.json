@@ -504,7 +504,7 @@
     "cells": 6,
     "elapsed_seconds": 117.56039810180664,
     "intake": "notes/external-reproduction-synthetic-v1/intake-check.json",
-    "timestamp": "2026-10-16T13:09:25+08:00",
+    "timestamp": "2026-10-16T13:14:36+08:00",
     "diagnostic": "notes/external-reproduction-synthetic-v1/diagnostic-review.json",
     "followup": "notes/external-reproduction-synthetic-v1/onepass-review/FINDINGS.zh.md",
     "resources_restored": true,
@@ -545,7 +545,12 @@
     "models": 8,
     "specific_underlying_primitive_cause": "not isolated; intermediate hidden forward activations not captured",
     "external_manual_diagnostic_work": "closed_no_repeat_requested",
-    "formal_metric_reproduction": "failed_original_tolerance_unchanged"
+    "formal_metric_reproduction": "failed_original_tolerance_unchanged",
+    "scientific_impact_assessment": "notes/external-reproduction-synthetic-v1/impact-assessment/impact-assessment.json",
+    "processing_decision": "notes/external-reproduction-synthetic-v1/impact-assessment/DECISION.zh.md",
+    "scientific_scope": "Single synthetic fitting seed descriptive effects keep directions; no general equivalence or cross-source guarantee",
+    "numerical_repair": "No isolated implementation bug; frozen code unchanged",
+    "external_manual_work": "closed_no_repeat_requested"
   },
   "windows_core_v1": {
     "timestamp": "2026-10-16T11:52:30+08:00",

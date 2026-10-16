@@ -1,0 +1,178 @@
+{
+  "scope": "Post-hoc descriptive comparison; synthetic fixed cohort, seed13 only, two platforms, three paired capacities",
+  "training_seeds_per_platform": 1,
+  "evaluation_listings_shared_across_methods": 1000,
+  "batches_shared_across_methods": 10,
+  "independent_seed_replication_added_by_onepass_repeats": 0,
+  "summary_sha256": {
+    "external": "1bfbaf11059a0896782cd49c41221ededf2895d70310f553c1d9a01cec6b355a",
+    "local": "0dbd0da9302144ce7af2f21145e73e48d69bfc36891eba1c9babbad32e43fbc2"
+  },
+  "original_strict_tolerance": {
+    "atol": 1e-07,
+    "rtol": 1e-05
+  },
+  "strict_checks_recomputed": {
+    "external": {
+      "mean_positive_log_inflation": {
+        "cells_within_original_tolerance": 0,
+        "cells": 6,
+        "maximum_absolute_difference": 0.00046562099456792273
+      },
+      "clean_mae": {
+        "cells_within_original_tolerance": 0,
+        "cells": 6,
+        "maximum_absolute_difference": 3.5455793863388863
+      },
+      "attack_mae": {
+        "cells_within_original_tolerance": 0,
+        "cells": 6,
+        "maximum_absolute_difference": 12.797880613626603
+      },
+      "failed_query_fraction": {
+        "cells_within_original_tolerance": 3,
+        "cells": 6,
+        "maximum_absolute_difference": 0.0020000000000000018
+      },
+      "max_remaining_response_regret": {
+        "cells_within_original_tolerance": 4,
+        "cells": 6,
+        "maximum_absolute_difference": 0.0217685699462891
+      },
+      "nonconverged_batch_fraction": {
+        "cells_within_original_tolerance": 5,
+        "cells": 6,
+        "maximum_absolute_difference": 0.10000000000000006
+      }
+    },
+    "local": {
+      "mean_positive_log_inflation": {
+        "cells_within_original_tolerance": 6,
+        "cells": 6,
+        "maximum_absolute_difference": 8.673617379884035e-17
+      },
+      "clean_mae": {
+        "cells_within_original_tolerance": 6,
+        "cells": 6,
+        "maximum_absolute_difference": 0.0
+      },
+      "attack_mae": {
+        "cells_within_original_tolerance": 6,
+        "cells": 6,
+        "maximum_absolute_difference": 4.547473508864641e-13
+      },
+      "failed_query_fraction": {
+        "cells_within_original_tolerance": 6,
+        "cells": 6,
+        "maximum_absolute_difference": 0.0
+      },
+      "max_remaining_response_regret": {
+        "cells_within_original_tolerance": 6,
+        "cells": 6,
+        "maximum_absolute_difference": 3.7513395167998453e-17
+      },
+      "nonconverged_batch_fraction": {
+        "cells_within_original_tolerance": 6,
+        "cells": 6,
+        "maximum_absolute_difference": 8.326672684688674e-17
+      }
+    }
+  },
+  "matched_effects": [
+    {
+      "machine": "external",
+      "budget": 0.0,
+      "inflation_reduction_percent": 32.86645119605678,
+      "honest_mae_change_percent": 0.9351155985730442,
+      "attacked_mae_change_percent": -1.0786734628676076,
+      "failed_query_change_percentage_points": 0.0,
+      "fixed_peer_unilateral_envelope_reduction_percent": 32.86645119605678,
+      "maximum_remaining_unilateral_regret": 0.0,
+      "nonconverged_batches": 0,
+      "batches": 10,
+      "descriptive_legacy_10pct_5pct_screen": true,
+      "pareto_dominates_on_inflation_honest_attack_failed_queries": false
+    },
+    {
+      "machine": "external",
+      "budget": 0.1,
+      "inflation_reduction_percent": 57.53754771243391,
+      "honest_mae_change_percent": 0.9351155985730442,
+      "attacked_mae_change_percent": -1.6852201109972764,
+      "failed_query_change_percentage_points": 1.4,
+      "fixed_peer_unilateral_envelope_reduction_percent": 57.39425648458108,
+      "maximum_remaining_unilateral_regret": 0.02197265625,
+      "nonconverged_batches": 1,
+      "batches": 10,
+      "descriptive_legacy_10pct_5pct_screen": true,
+      "pareto_dominates_on_inflation_honest_attack_failed_queries": false
+    },
+    {
+      "machine": "external",
+      "budget": 0.3,
+      "inflation_reduction_percent": 68.17373976284979,
+      "honest_mae_change_percent": 0.9351155985730442,
+      "attacked_mae_change_percent": -1.1059535217066152,
+      "failed_query_change_percentage_points": 1.9999999999999998,
+      "fixed_peer_unilateral_envelope_reduction_percent": 68.08760776200472,
+      "maximum_remaining_unilateral_regret": 0.014229774475097656,
+      "nonconverged_batches": 2,
+      "batches": 10,
+      "descriptive_legacy_10pct_5pct_screen": true,
+      "pareto_dominates_on_inflation_honest_attack_failed_queries": false
+    },
+    {
+      "machine": "local",
+      "budget": 0.0,
+      "inflation_reduction_percent": 30.35138277112536,
+      "honest_mae_change_percent": 0.8263277883663545,
+      "attacked_mae_change_percent": -1.2014229213499372,
+      "failed_query_change_percentage_points": 0.0,
+      "fixed_peer_unilateral_envelope_reduction_percent": 30.35138277112536,
+      "maximum_remaining_unilateral_regret": 0.0,
+      "nonconverged_batches": 0,
+      "batches": 10,
+      "descriptive_legacy_10pct_5pct_screen": true,
+      "pareto_dominates_on_inflation_honest_attack_failed_queries": false
+    },
+    {
+      "machine": "local",
+      "budget": 0.1,
+      "inflation_reduction_percent": 53.96834936372832,
+      "honest_mae_change_percent": 0.8263277883663545,
+      "attacked_mae_change_percent": -1.4661787873069376,
+      "failed_query_change_percentage_points": 1.0999999999999999,
+      "fixed_peer_unilateral_envelope_reduction_percent": 53.96697676843991,
+      "maximum_remaining_unilateral_regret": 0.0002040863037109375,
+      "nonconverged_batches": 1,
+      "batches": 10,
+      "descriptive_legacy_10pct_5pct_screen": true,
+      "pareto_dominates_on_inflation_honest_attack_failed_queries": false
+    },
+    {
+      "machine": "local",
+      "budget": 0.3,
+      "inflation_reduction_percent": 67.41498550604899,
+      "honest_mae_change_percent": 0.8263277883663545,
+      "attacked_mae_change_percent": -1.3369031892948913,
+      "failed_query_change_percentage_points": 2.1999999999999997,
+      "fixed_peer_unilateral_envelope_reduction_percent": 67.41498550604899,
+      "maximum_remaining_unilateral_regret": 0.0020809173583984375,
+      "nonconverged_batches": 1,
+      "batches": 10,
+      "descriptive_legacy_10pct_5pct_screen": true,
+      "pareto_dominates_on_inflation_honest_attack_failed_queries": false
+    }
+  ],
+  "legacy_screen_scope": "Uses the study existing 10% inflation/5% honest-MAE descriptive screen post hoc on a new subset; not a prespecified RPL/external acceptance rule, not a replacement for original numerical tolerance.",
+  "envelope_scope": "Maximum unilateral quote for each seller fixing the returned peer reports, from archived exhaustive unilateral audit; not a bound over arbitrary simultaneous deviations or all equilibria.",
+  "inferential_tests_performed": false,
+  "confidence_intervals_computed": false,
+  "limitations": [
+    "One fitting seed and one synthetic cohort cannot establish general scientific-effect equivalence or all-source ranking stability.",
+    "Honest MAE and failed-query costs retain their adverse tradeoffs; there is no Pareto dominance on the four reported objectives.",
+    "Residual-regret magnitudes and nonconverged-batch counts differ; no incentive compatibility or converged-equilibrium guarantee is established.",
+    "Full core audit and ten-seed production remain separate work."
+  ],
+  "decision": "Retain all old evidence and strict numerical failure; no additional external manual diagnostics. Keep existing ten-seed/core audits running, then integrate the bounded scientific effect and numerical reproducibility limitations. Do not alter frozen training, relax tolerances or upgrade to universal superiority."
+}
