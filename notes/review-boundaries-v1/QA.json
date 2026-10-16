@@ -1,0 +1,14 @@
+{
+  "status": "revised_compiled_scope_checked",
+  "pages": 48,
+  "source_sha256": "9882831bea3157fabba69d3a1df07f4aabdc5803607ca9719958edd787ee27e1",
+  "pdf_sha256": "0e8cc5fae2bdb45bcf897e77f069b7a6c0184d488f52f87893bdd02d6b699d9d",
+  "builtin_compile": "success",
+  "overfull": 0,
+  "undefined_references": 0,
+  "underfull": 1,
+  "abstract_words": 208,
+  "same_level_audit_added": false,
+  "raw_receipts_unchanged": true,
+  "quantitative_results_unchanged": true
+}

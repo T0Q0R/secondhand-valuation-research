@@ -30,6 +30,8 @@
     "outputs/recovery-path-learning-analysis-v1/completion.json": "fef40716af9b9f422041e101489de8a5a89d69d8a374b96b092e3205a5acb10c",
     "outputs/recent-five-analysis-v1/completion.json": "21c173ba90bc5ab17cf58dc2be1127b4f79c4bd0a254ee06e3fd1fbb59544c3d",
     "notes/postcompute-review-v1/completion.json": "36fb6d8bc81b85f610cb0f6071e67582979cb65213521f1f717c73640ade38ab",
-    "notes/postcompute-paper-v1/final-QA.json": "e3bded7cb4d128f11e73d7942fdcabd4493922d955a5c6efb3bfd8d305f365ae"
+    "notes/postcompute-paper-v1/final-QA.json": "e3bded7cb4d128f11e73d7942fdcabd4493922d955a5c6efb3bfd8d305f365ae",
+    "outputs/matched-factorial-ten-seeds-v1-pipeline/analysis/completion.json": "60262446dfc7a09714912bb96983a00a3c4d8ed247c47060a7722258a8ea8e7f",
+    "outputs/matched-factorial-ten-seeds-v1-pipeline/statistics-check/completion.json": "757e78758fc94de7673d6b52cb6899268ee6aea7d24e5420ff5927778b3bbc91"
   }
 }

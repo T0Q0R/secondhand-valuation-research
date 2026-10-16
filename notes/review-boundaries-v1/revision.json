@@ -1,0 +1,8 @@
+{
+  "status": "revised_pending_compile",
+  "abstract_words": 208,
+  "source_sha256": "8111535ba80f4356c9ef0ad42677a753d9d426b480250a7b1dc6c73a98b3de4f",
+  "old_sha256": "c6b0e07900e150ce1995d04537979504f7d6e1ab4e3b4360d86839c89b99482e",
+  "raw_receipts_changed": false,
+  "new_training": false
+}

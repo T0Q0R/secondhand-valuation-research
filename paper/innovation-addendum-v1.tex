@@ -12,7 +12,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Verification can recover withheld information while increasing a seller's valuation gain. We study secondhand-price prediction with natural missingness, charged failed queries and shared batch capacity. A restricted precision--incentive frontier delimits possible guarantees, while exhaustive recovery graphs expose gain-increasing partial recoveries in learned models. This diagnosis motivates recovery-path regularization, which penalizes increases in positive concealment gain along legal recovery edges without adding hidden information to deployment inputs. A ten-seed factorial audit covers 4,320 cells; its 36 primary zero-cost feedback contrasts all worsen inflation under the original training implementation. A subsequent controlled completion study covers 1,719 cells including reused references, full component ablations, parameter sensitivities, search-strength interventions and five recent acquisition families. Stronger training-response search removes some original feedback damage, restricting the negative conclusion to its implementation. In a three-seed regularization pilot at 10\% capacity, the prespecified unit-weight sensitivity endpoint reduces mean inflation by 50.93\%, 33.22\% and 18.72\% on synthetic, JUCars and MUCars relative to its matched zero-weight control. Synthetic honest MAE rises 0.99\%, and failed-query fractions rise on two sources; some responses remain nonconverged. Recent-family rankings also change across sources and fixed price backends. The resulting contribution links an auditable recovery failure to a targeted algorithmic intervention and multiobjective evidence, without claiming universal superiority, incentive compatibility or actual-seller validation.
+Verification can recover withheld information while increasing a seller's valuation gain. We study secondhand-price prediction with natural missingness, charged failed queries and shared batch capacity. A restricted precision--incentive frontier delimits guarantees, while recovery graphs expose gain-increasing partial recoveries in learned models. This diagnosis motivates recovery-path regularization, penalizing increases in positive concealment gain along legal recovery edges without adding hidden information to deployment inputs. A ten-seed, 4,320-cell factorial audit finds adverse inflation directions in all 36 primary feedback contrasts under its original weak-response-search implementation. Subsequent interventions largely remove the mean damage on synthetic and JUCars when training-response search is strengthened. The empirical conclusion is implementation dependence, not inherent harm from feedback. A 1,719-cell completion study adds ablations, parameter sensitivities and five task-adapted recent acquisition families; its verification is below the original four-stage audit standard. In a three-seed exploratory pilot at 10\% capacity, the unit-weight endpoint in a timestamped development grid reduces mean inflation by 50.93\%, 33.22\% and 18.72\% on synthetic, JUCars and MUCars relative to matched zero-weight controls. Synthetic honest MAE rises 0.99\%, failed-query fractions rise on two sources, and some responses remain nonconverged. The contribution links a recovery failure to a targeted intervention with explicit audit and multiobjective boundaries, without establishing universal superiority, incentive compatibility or actual-seller validity.
 \end{abstract}
 \noindent\textbf{Keywords:} strategic missingness; secondhand valuation; budgeted verification; incentive auditing; factorial evaluation
 
@@ -60,8 +60,8 @@ initial objective, acquisition score, policy feedback and allocation.
 The main contribution is a controlled audit of when verification changes valuation incentives and predictive costs.
 Section~\ref{sec:information} uses a restricted precision--incentive frontier to define the information boundary. It does not supply a performance prediction for the learned four-field models. Section~\ref{sec:recovery} identifies a recovery-path failure and states the cap's fixed-peer guarantee. Section~\ref{sec:empirical_recovery} checks that failure in the actual saved model class. Sections~\ref{sec:experiment_setup}
 and~\ref{sec:factorial_results} report a fully audited, ten-seed, three-source
-factorial study. At its prespecified 10\% capacity, all 36 feedback comparisons
-increase mean inflation; a robust initial objective instead helps consistently
+factorial study. Under its original weak training-response search, all 36
+feedback comparisons at the declared primary 10\% capacity increase mean inflation; a robust initial objective instead helps consistently
 on MUCars. Competitive ordinary-benefit and acquisition-conditioned controls have lower inflation than the original SAV candidate on synthetic and JUCars comparisons. Post-hoc simultaneous sensitivity and multiobjective outcomes bound the negative finding. Positive interactions can represent less harm rather than improvement. These contributions concern the stated information boundary and
 implementation and the bounded recovery-path pilot; they do not claim a new general linear-programming method,
 universal method superiority or a market-equilibrium guarantee.
@@ -710,12 +710,49 @@ at least one nonconverged batch; the maximum remaining unilateral regret was
 share predictor and score primitives; hash checks do not establish an
 independent implementation of these shared primitives.
 
+
+\paragraph{Audit levels are not interchangeable.}\label{sec:audit_levels}
+The original 4,320-cell study completed the recorded fit-audit,
+outcome-audit, analysis and statistics-check chain. The 1,719-cell completion
+study has hash-bound outputs, recorded integer-state/utility re-derivations,
+and subsequent descriptive, table and figure review, but has \emph{not}
+completed an equivalent whole-study fit/analysis/statistical audit chain.
+In particular, the RPL and newer acquisition-adapter conclusions in
+Sections~\ref{sec:rpl_results}--\ref{sec:recent_results} are exploratory and
+not audited to that same level. Search-strength interventions in
+Section~\ref{sec:completion_mechanisms} have the same completion-study
+limitation. Selected stages have conditional resampling summaries; that does
+not substitute for the missing chain. Neither level constitutes a fully
+independent reimplementation of all shared prediction primitives.
+
+\begin{table}[tbp]\centering\small
+\caption{Audit scope by experimental generation. A completed computation or
+visual review does not imply an equivalent scientific audit. Historical
+producer receipts are preserved rather than relabeled after manuscript review.}
+\label{tab:audit_levels}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.20\textwidth}>{\raggedright\arraybackslash}p{.35\textwidth}>{\raggedright\arraybackslash}p{.35\textwidth}}\toprule
+Evidence & Completed scope & Claim boundary\\\midrule
+Original 4,320 cells & Fit, outcome, analysis and statistics-check chain & Original implementation; disclosed shared primitives remain\\
+Completion 1,719 cells, including reuse & Hash bindings, recorded utility re-derivations and descriptive/visual review; selected resampling summaries & No equivalent whole-study chain; search interventions, RPL and adapter comparisons remain exploratory\\\bottomrule
+\end{tabular}\end{table}
+
 \section{Results}\label{sec:results}
 \subsection{Matched factorial effects}\label{sec:factorial_results}
-\noindent\textbf{Takeaway.} At the prespecified 10\% capacity, none of the
-36 feedback comparisons reduces mean inflation. A robust initial objective
-helps consistently on MUCars, but positive interactions do not imply beneficial
-feedback or a successful combined policy.
+\noindent\textbf{Takeaway.} Under the original weak training-response search,
+all 36 primary feedback contrasts increase mean inflation. This documents a
+failure of that implementation, not a general negative effect of feedback.
+
+\paragraph{Which conclusion is primary?}
+The paper's empirical conclusion is that verification and feedback outcomes
+depend on the learning and response procedures. The 36/36 count and
+Tables~\ref{tab:simultaneous}--\ref{tab:factorial_counts} establish the
+well-audited original implementation's failure pattern. They are not the
+headline claim that feedback is intrinsically harmful. The later, less-audited
+search intervention (Section~\ref{sec:completion_mechanisms}) largely removes
+the synthetic/JUCars mean damage with stronger training search, while MUCars
+remains adverse in those means. Both findings must be read together; neither
+identifies weak search as the sole cause nor proves exact-equilibrium benefit.
+The asymmetry in audit depth is stated in Table~\ref{tab:audit_levels}.
 
 \paragraph{Inference scope.}
 Every source uses ten fitting seeds and ten shared evaluation batches of
@@ -756,7 +793,8 @@ Feedback, three outcomes & 108 & 3.803 & 27/36\\
 All primary contrasts/metrics & 1,536 & 4.882 & 20/36\\\bottomrule
 \end{tabular}
 \caption{Post-hoc 95\% approximate simultaneous sensitivity on the original
-capped cohorts. The last column counts only the 36 inflation feedback contrasts
+capped cohorts under the original weak training-response search. These bands
+do not cover the strengthened-search interventions. The last column counts only the 36 inflation feedback contrasts
 with an upper endpoint below zero. It is not a confirmatory family-wise
 guarantee. All point effects and all three family definitions are retained.}
 \label{tab:simultaneous}\end{table}
@@ -769,8 +807,10 @@ expected log-quote inflation, all 36 point estimates at 10\% were negative;
 The two intervals crossing zero corresponded to MUCars with the mask initial
 objective and suppression acquisition. No feedback contrast passed the point
 gate of at least 10\% inflation reduction with at most 5\% honest-MAE increase.
-This is a negative result for the implemented two-round frozen-policy training
-procedure, not an impossibility result for feedback learning.
+This is a negative result for the implemented two-round, epoch-refreshed,
+weak-response-search training procedure. The strong-search means in
+Section~\ref{sec:completion_mechanisms} narrow its interpretation; they do not
+alter the original counts.
 
 Table~\ref{tab:factorial_counts} summarizes all primary directions.
 \begin{table}[ht]
@@ -784,7 +824,7 @@ JUCars & 12/12 & 12/12 & 12/12 & 0/6\\
 MUCars & 12/12 & 10/12 & 12/12 & 0/6\\
 \bottomrule
 \end{tabular}
-\caption{Primary-capacity factorial diagnostics. Counts refer to positive
+\caption{Original weak-search implementation: primary-capacity factorial diagnostics. These counts do not apply to strong-search retraining (Section~\ref{sec:completion_mechanisms}). Counts refer to positive
 expected log-quote inflation. Feedback harms and robust-initialization gains
 are point-estimate directions. Harm intervals are 95\% unadjusted intervals
 excluding zero adversely for the capped primary evaluation. The uncapped
@@ -888,7 +928,7 @@ Figure~\ref{fig:feedback} displays the suppression-acquisition comparisons.
 \end{picture}
 \endgroup
 }
-\caption{Policy feedback increases mean inflation in all twelve suppression-acquisition cells at the primary 10\% capacity. Points are no-feedback minus policy-feedback paired differences; bars are 95\% unadjusted intervals from 1,000 crossed resamples of ten fitting seeds and ten shared batches. Positive differences would favor feedback. All models use the same fixed training records; 1,000 evaluation listings are reused across seeds. The two MUCars mask-objective intervals cross zero. Other scores are retained in the full contrast data.}
+\caption{Under the original weak training-response search, policy feedback increases mean inflation in all twelve suppression-acquisition cells at the primary 10\% capacity. Points are no-feedback minus policy-feedback paired differences; bars are 95\% unadjusted intervals from 1,000 crossed resamples of ten fitting seeds and ten shared batches. Positive differences would favor feedback. All models use the same fixed training records; 1,000 evaluation listings are reused across seeds. The two MUCars mask-objective intervals cross zero. Other scores are retained in the full contrast data.}
 \label{fig:feedback}
 \end{figure}
 
@@ -976,9 +1016,11 @@ jointly rather than inferred from the interaction sign.
 
 \paragraph{Mechanism and practical boundary.}
 The factorial experiment isolates implemented training and allocation choices,
-but does not identify why feedback increased inflation. Frozen acquisition
-scores, the weaker training response search and capacity transfer are possible
-explanations requiring separate interventions. They are not established causes.
+but does not identify a unique cause of its feedback damage.
+Section~\ref{sec:completion_mechanisms} intervenes on response-search strength
+and score-refresh frequency; stronger search removes some damage, while
+capacity transfer is not separately identified. These less-audited development
+interventions qualify the negative result without establishing a sole cause.
 The appropriate practical comparison is the matched no-feedback control with
 the same initial objective, score and capacity. Choosing feedback from a
 positive interaction alone is unsupported. A risk score is also not a universal
@@ -1011,7 +1053,7 @@ MUCars & None/top-$B$ & 0.006511 & 27223.61 & 27372.61 & 0.380 \\
 MUCars & None/minimax & 0.005371 & 27223.61 & 27363.32 & 0.651 \\
 MUCars & Policy/minimax & 0.006390 & 27267.93 & 27441.51 & 0.542 \\
 \bottomrule\end{tabular}
-\caption{Absolute primary-capacity outcomes for the robust initial objective
+\caption{Original weak-search implementation: absolute primary-capacity outcomes for the robust initial objective
 and suppression acquisition, averaged over ten fitting seeds and the same
 1,000 evaluation listings. Inflation is positive expected log-quote inflation;
 MAEs use the source's own currency, without currency pooling. Failures are
@@ -1876,7 +1918,19 @@ was fixed before evaluation. It is an engineering choice, not an estimated
 optimum. Table~\ref{tab:rpl_primary} retains the design value and endpoint;
 Figure~\ref{fig:rpl_tradeoffs} also includes weight 0.1.
 
-At the prespecified $\lambda=1$ sensitivity endpoint, the ratio-of-means
+
+\paragraph{Timestamped grid, not preregistration.}
+The complete path-weight grid, including $\lambda=1$, is present in repository
+commit \href{https://github.com/T0Q0R/secondhand-valuation-research/commit/6643cbe3266f2c1548d987c2bb53e366e19ad3ef}{\texttt{6643cbe}}, created on 14 October 2026 at 21:10:17 (UTC+08).
+Its committed runner exactly matches the source hash in the executed manifest.
+The formal RPL stage required its predecessor to finish, which occurred on
+15 October 2026 at 22:57:51 (UTC+08). Thus the grid was timestamped before
+formal evaluation. This is not an independent preregistration and does not
+show that $\lambda=1$ was selected in advance as a headline endpoint.
+We therefore call it a declared development-grid endpoint and retain all
+weights and their costs, rather than claiming confirmatory selection.
+
+At the declared $\lambda=1$ development-grid endpoint, the ratio-of-means
 inflation reductions from the matched $\lambda=0$, gap-0.5 reference were
 50.93\%, 33.22\% and 18.72\% on synthetic, JUCars and MUCars. Inflation fell
 in all nine source/seed comparisons. Mean honest MAE changed by $+0.99\%$,
@@ -2051,15 +2105,26 @@ mucars / 1 & 0.00541 & 26906.52 & 27070.79 & 0.33 \\
 \label{fig:rpl_tradeoffs}
 \end{figure}
 
-\subsection{Five recent acquisition families on fixed price models}\label{sec:recent_results}
-\noindent\textbf{Takeaway.} Estimator choice and simple strong controls remain
-material after expanding recent-method coverage.
+\subsection{Five task-adapted recent acquisition families on fixed price models}\label{sec:recent_results}
+\noindent\textbf{Takeaway.} These are five task-adapted comparisons, not
+unchanged reproductions of five original methods; they are not audited to the
+same level as the original factorial study. Estimator choice and simple strong
+controls remain material.
 
-ACO, SEFA, GDFS, DIME and explanation-ranked AFA each covered three sources,
-three fitting seeds, two frozen price backends and six capacities, totaling
-540 common-grid cells; ACO additionally retained 36 fixed-neighbor sensitivities.
-Within source/seed/backend/capacity, honest MAE agreed across these methods to
-less than $10^{-6}$, as required when only acquisition changes. ACO's declared
+ACO is a clean-room one-query adaptation. SEFA uses official model code inside
+a changed task interface; GDFS and DIME use the SEFA repository's comparison
+implementations; explanation-ranked AFA uses official network classes with
+adapted ranking generation and training. Original code provenance therefore
+does not make the complete experiment an official reproduction. The
+classification-to-regression, observation, selection and budget differences are
+specified in Appendix~\ref{app:completion_methods}. No claim of reproducing
+or defeating the original papers follows from this comparison.
+
+Each of the five adapters covered three sources, three fitting seeds,
+two frozen price backends and six capacities: 540 common-grid cells.
+ACO additionally retained 36 fixed-neighbor sensitivities. Holding source,
+seed, backend and capacity fixed, honest MAE agreed across methods to less
+than $10^{-6}$, as required when only acquisition changes. ACO's declared
 $k=25$ was used throughout; no evaluation-best neighbor count replaced it.
 Figure~\ref{fig:recent_curves} shows every family's budget curve alongside
 available matched risk/benefit controls. At 10\% capacity with the robust
@@ -2568,7 +2633,9 @@ multiobjective dominance result.
 \noindent\textbf{Takeaway.} The supported contribution is a bounded information
 frontier, an audited recovery-path diagnosis and a targeted regularization
 pilot. The original factorial identifies adverse effects of its implemented
-feedback procedure; stronger-search interventions narrow that interpretation.
+weak-search feedback procedure; less-audited stronger-search interventions
+narrow that interpretation. RPL and recent-family findings remain exploratory
+and have not completed the original four-stage audit chain.
 
 The detailed claim--evidence map is retained in Appendix~\ref{app:audit_map}.
 
@@ -2618,7 +2685,8 @@ even though robust initialization helps on MUCars. Stronger training-response
 search removes some of that harm in matched development controls. RPL directly
 penalizes gain-increasing recovery edges and reduces primary inflation in a
 three-seed pilot, while predictive error, failed queries and nonconvergence
-preclude a universal superiority claim. A three-seed positive-cost sensitivity reverses the synthetic top-$B$ feedback ranking alongside sharply reduced concealment and high query failure, further limiting generalization. The practical implication is to audit public information, recovery
+preclude a universal superiority claim. A three-seed positive-cost sensitivity reverses the synthetic top-$B$ feedback ranking alongside sharply reduced concealment and high query failure, further limiting generalization. The completion-stage interventions and RPL pilot remain below the original
+four-stage audit level. The practical implication is to audit public information, recovery
 semantics and every comparison component, retaining negative results and
 multiobjective trade-offs. This conclusion is conditional on the implemented
 learning and response procedures, not a universal prescription for valuation.

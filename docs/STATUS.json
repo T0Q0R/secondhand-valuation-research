@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-16T10:15:42+08:00",
+  "snapshot_time": "2026-10-16T10:19:46+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,14 +28,14 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "postcompute_evidence_integrated_compiled_reviewed",
-    "pages": 47,
+    "revision_status": "review_boundaries_v1_revised_compiled_checked",
+    "pages": 48,
     "authors_affiliations_omitted": true,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
     "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 inspected",
-    "source_sha256": "c6b0e07900e150ce1995d04537979504f7d6e1ab4e3b4360d86839c89b99482e",
-    "pdf_sha256": "967a7ee03f5ecda7cfc41fe734467b28cc60715aaa61e217c0399b49f4c2a1d8",
+    "source_sha256": "9882831bea3157fabba69d3a1df07f4aabdc5803607ca9719958edd787ee27e1",
+    "pdf_sha256": "0e8cc5fae2bdb45bcf897e77f069b7a6c0184d488f52f87893bdd02d6b699d9d",
     "submission": "not_submitted",
     "formal_submission_ready": false,
     "abstract_words": 208,
@@ -460,8 +460,10 @@
     "delivery": "notes/postcompute-paper-v1/DELIVERY.zh.md"
   },
   "review_boundaries_v1": {
-    "status": "scope_and_timeline_verified_manuscript_revision_pending",
+    "status": "revised_compiled_scope_checked",
     "equivalent_audit_completed": false,
-    "timeline": "notes/review-boundaries-v1/AUDIT_SCOPE_AND_TIMELINE.json"
+    "timeline": "notes/review-boundaries-v1/AUDIT_SCOPE_AND_TIMELINE.json",
+    "response": "notes/review-boundaries-v1/REVIEW_RESPONSE.zh.md",
+    "QA": "notes/review-boundaries-v1/QA.json"
   }
 }
