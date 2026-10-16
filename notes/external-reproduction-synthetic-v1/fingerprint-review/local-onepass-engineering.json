@@ -1,0 +1,22 @@
+{
+  "return_code": 0,
+  "elapsed_seconds": 133.48389410972595,
+  "production_worker_resumed": 70242,
+  "audit_untouched": true,
+  "resource_budget": "Three production workers x2 + audit1 + diagnostic max2 =9; original fourth production worker restored after diagnostic",
+  "archive_sha256": "ce79c7425923535a9a2a6556aa0e2a1152b74dc72da253ce6bc85abbf61b4908",
+  "archive_bytes": 55690704,
+  "worker_sha256": "3abb124df13467901b43aa0dc1e7fbf76a4f5e9ff090b3afdfdd2b2baabd465a",
+  "checks": [
+    "all32 full residual replays match saved parameters",
+    "single/double thread and within-mode repeats match all recorded events",
+    "unobserved controls match traced fit",
+    "original8 model/completion/input hashes unchanged",
+    "same-return comparator positive control passed",
+    "invalid-contract failure retains ZIP/log and releases lock"
+  ],
+  "external_onepass_execution_pending": true,
+  "private_arrays_not_uploaded_to_Git": true,
+  "formal_external_strict_metric_reproduction_still_failed": true,
+  "launcher_note": "Complete local normal path tested; failure packaging tested after adding explicit KeyboardInterrupt handling"
+}

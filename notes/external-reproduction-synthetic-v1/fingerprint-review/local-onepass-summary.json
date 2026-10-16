@@ -1,0 +1,44 @@
+{
+  "status": "computed_diagnostic_cross_machine_comparison_pending",
+  "original_frozen_results_overwritten": false,
+  "strict_tolerance_changed": false,
+  "scope": "Eight saved synthetic backbones, seed13, residual replay only",
+  "comparisons": {
+    "repeatability_threads_2": {
+      "final_parameters_matching": 8,
+      "total_models": 8,
+      "first_differing_trace_event": null
+    },
+    "repeatability_threads_1": {
+      "final_parameters_matching": 8,
+      "total_models": 8,
+      "first_differing_trace_event": null
+    },
+    "two_vs_one_thread": {
+      "final_parameters_matching": 8,
+      "total_models": 8,
+      "first_differing_trace_event": null
+    }
+  },
+  "saved_original_parameter_matches": {
+    "threads-2-repeat-1": 8,
+    "threads-2-repeat-2": 8,
+    "threads-1-repeat-1": 8,
+    "threads-1-repeat-2": 8
+  },
+  "models_per_run": 8,
+  "full_residual_replays": 32,
+  "epochs_per_model": 12,
+  "observer_control_matches": {
+    "threads-2-repeat-1": [
+      true
+    ],
+    "threads-2-repeat-2": [],
+    "threads-1-repeat-1": [
+      true
+    ],
+    "threads-1-repeat-2": []
+  },
+  "elapsed_seconds": 129.8232741355896,
+  "original_checkpoint_hashes_unchanged": true
+}
