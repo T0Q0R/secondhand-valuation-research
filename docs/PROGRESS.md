@@ -397,3 +397,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T10:42:15+08:00：RPL十种子新调度程序及冻结manifest准备完成。完整原训练分区上的两分支工程小测通过：λ0与原训练预测最大误差0；2线程CatBoost推断逐位相同；训练轮次检查点重复调用字节不变。正式12epochs、原六设置/三预算不改，新378单元尚未启动；等待本次远程回读后启动。代码experiments/run_rpl_ten_seed_v2.py，工程凭据notes/core-evidence-v2/rpl-smoke.json。
+
+
+2026-10-16T10:44:12+08:00：RPL十种子扩展PID68433已启动并核验4个计算worker，最多4×2线程，审计侧预算1线程。旧三种子162单元以只读symlink复用；新增378单元正在计算，未完成、未改论文。状态outputs/rpl-ten-seed-runtime-v2/status.json；勿按旧PID启动重复作业。

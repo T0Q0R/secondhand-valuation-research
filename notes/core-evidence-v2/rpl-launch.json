@@ -1,0 +1,36 @@
+{
+  "status": "running_verified",
+  "pid": 68433,
+  "started_at": "2026-10-16T10:42:55.111659+08:00",
+  "max_workers": 4,
+  "threads_per_worker": 2,
+  "nominal_training_threads": 8,
+  "reserved_audit_threads": 1,
+  "script": "experiments/run_rpl_ten_seed_v2.py",
+  "log": "/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/rpl-ten-seed-runtime-v2/execution.log",
+  "observed_active_pids": [
+    68448,
+    68454,
+    68464,
+    68492
+  ],
+  "observed_active_pairs": [
+    [
+      "synthetic",
+      101
+    ],
+    [
+      "synthetic",
+      211
+    ],
+    [
+      "synthetic",
+      307
+    ],
+    [
+      "synthetic",
+      401
+    ]
+  ],
+  "verified_at": "2026-10-16T10:44:12+08:00"
+}
