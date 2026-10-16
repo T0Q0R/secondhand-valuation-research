@@ -1,0 +1,7 @@
+EXTERNAL_CORE_CELL synthetic 0.0 0.0
+EXTERNAL_CORE_CELL synthetic 0.0 0.1
+EXTERNAL_CORE_CELL synthetic 0.0 0.3
+EXTERNAL_CORE_CELL synthetic 1.0 0.0
+EXTERNAL_CORE_CELL synthetic 1.0 0.1
+EXTERNAL_CORE_CELL synthetic 1.0 0.3
+Saved external-training-receipt.json; retain differences and all nonconverged batches.
