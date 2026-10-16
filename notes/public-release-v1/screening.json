@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-16T10:26:25.276553+08:00",
+  "repository": "T0Q0R/secondhand-valuation-research",
+  "head": "8e24de167be17ce1634d5c60fc4da2122e640b70",
+  "commit_count": 107,
+  "counts": {
+    "unique_blobs": 962,
+    "scanned_payloads": 3254,
+    "zip_blobs": 29
+  },
+  "pattern_findings": [],
+  "binary_suffix_counts": {
+    ".npy": 456,
+    ".pdf": 34,
+    ".png": 8
+  },
+  "archive_entries_count": 2292,
+  "method": "All reachable Git blobs, including ZIP members; credential pattern and sensitive filename checks. Heuristic screening, not proof of absence."
+}

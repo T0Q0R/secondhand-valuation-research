@@ -465,5 +465,12 @@
     "timeline": "notes/review-boundaries-v1/AUDIT_SCOPE_AND_TIMELINE.json",
     "response": "notes/review-boundaries-v1/REVIEW_RESPONSE.zh.md",
     "QA": "notes/review-boundaries-v1/QA.json"
+  },
+  "public_release": {
+    "updated_at": "2026-10-16T10:27:53+08:00",
+    "visibility": "private",
+    "status": "waiting_for_github_email_verification",
+    "screening": "notes/public-release-v1/screening.json",
+    "screened_head": "8e24de167be17ce1634d5c60fc4da2122e640b70"
   }
 }
