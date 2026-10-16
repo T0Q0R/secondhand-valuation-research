@@ -97,5 +97,16 @@
     "finite_sample_fwer_certified": false,
     "scope": "separate indexing/summation implementation of all saved crossed resamples, marginal intervals and exploratory max-deviation bands; no inference about new training populations"
   },
-  "scope": "engineering acceptance checks, not whole-study audit completion"
+  "scope": "engineering acceptance checks, not whole-study audit completion",
+  "public_bundle_statistics_check": {
+    "status": "completed",
+    "stage": "smoke",
+    "checked_metric_contrasts": 24,
+    "recomputed_bootstrap_replicates": 4000,
+    "checker_sha256": "007f3cb82d312518ab4761132f39b9d5d6360f909591b8c8204f284be796105b",
+    "analysis_completion_sha256": "1481d26f5c32330fa82b98b7499e374e65eef4ab41dee16201980c5c4a1934aa",
+    "changed_point_negative_control_rejected": true,
+    "finite_sample_fwer_certified": false,
+    "scope": "separate indexing/summation implementation of all saved crossed resamples, marginal intervals and exploratory max-deviation bands; no inference about new training populations"
+  }
 }

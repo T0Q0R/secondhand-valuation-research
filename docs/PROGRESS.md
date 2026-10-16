@@ -412,3 +412,6 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 
 
 2026-10-16T11:04:16+08:00：审计队列运行层修正：公开完整批级配对bootstrap NPZ原字节，并核对上传副本与分析artifact哈希；不再把裁剪输入文件放在同名原artifact下。仅停止审计进程组70396，RPL训练68433未动；审计检查点全部保留，旧运行manifest/status与原因归档notes/core-evidence-v2/runtime-packaging-correction。科学审计/统计代码未改。待远程回读后恢复审计。
+
+
+2026-10-16T11:05:23+08:00：公开审计包补齐全部分析artifact（包括批均值与完整bootstrap NPZ），复制时逐项对哈希；统计checker新增公开目录/receipt入口。公开目录入口复算4000抽样及24对比通过，拒绝破坏点估计。数值算法与科研结果未变，准备从已保存审计检查点续跑。

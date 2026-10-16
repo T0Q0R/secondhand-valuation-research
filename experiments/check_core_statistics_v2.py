@@ -5,9 +5,9 @@ import numpy as np,pandas as pd
 
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-def check(stage):
-    source=ROOT/'outputs/core-evidence-audit-v2/analysis'/stage
-    receipt=json.loads((source/'completion.json').read_text())
+def check(stage,source=None,receipt_name='completion.json'):
+    source=ROOT/'outputs/core-evidence-audit-v2/analysis'/stage if source is None else Path(source).resolve()
+    receipt=json.loads((source/receipt_name).read_text())
     for f,h in receipt['artifacts'].items():assert sha(source/f)==h
     keys=json.loads((source/'contrast_keys.json').read_text())
     z=np.load(source/'paired_tensors_and_draws.npz');x=z['differences'];si=z['seed_draws'];bi=z['batch_draws']
@@ -43,9 +43,11 @@ def check(stage):
     assert rejected
     out=ROOT/'outputs/core-evidence-audit-v2/statistics-check'/stage;out.mkdir(parents=True,exist_ok=True)
     result=dict(status='completed',stage=stage,checked_metric_contrasts=checked,recomputed_bootstrap_replicates=len(si),
-        checker_sha256=sha(Path(__file__)),analysis_completion_sha256=sha(source/'completion.json'),
+        checker_sha256=sha(Path(__file__)),analysis_completion_sha256=sha(source/receipt_name),
         changed_point_negative_control_rejected=rejected,finite_sample_fwer_certified=False,
         scope='separate indexing/summation implementation of all saved crossed resamples, marginal intervals and exploratory max-deviation bands; no inference about new training populations')
     (out/'completion.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--stage',required=True);a=p.parse_args();check(a.stage)
+    p=argparse.ArgumentParser();p.add_argument('--stage',required=True)
+    p.add_argument('--analysis-dir',type=Path);p.add_argument('--analysis-receipt',default='completion.json')
+    a=p.parse_args();check(a.stage,a.analysis_dir,a.analysis_receipt)

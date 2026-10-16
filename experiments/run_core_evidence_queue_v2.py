@@ -91,7 +91,7 @@ def sync_stage(stage,checkout):
         relative=Path('notes/core-evidence-v2/completed-stages')/stage;target=checkout/relative;target.mkdir(parents=True,exist_ok=True)
         for phase in ['fit-audit','outcome-audit','analysis','statistics-check']:
             shutil.copy2(a.OUT/phase/stage/'completion.json',target/(phase+'-completion.json'))
-        for filename in ['audited_cell_summaries.csv','paired_contrasts.csv','multiobjective_means.csv','contrast_keys.json']:
+        for filename in ['audited_cell_summaries.csv','audited_batch_means.csv','paired_contrasts.csv','multiobjective_means.csv','contrast_keys.json']:
             shutil.copy2(a.OUT/'analysis'/stage/filename,target/filename)
         # Preserve exact bytes named in the analysis artifact receipt. These are
         # aggregate paired bootstrap tensors, not listing data/model weights.
@@ -99,6 +99,7 @@ def sync_stage(stage,checkout):
         for p in target.iterdir():
             if p.name in a.read(a.OUT/'analysis'/stage/'completion.json')['artifacts']:
                 assert a.sha(p)==a.read(a.OUT/'analysis'/stage/'completion.json')['artifacts'][p.name]
+        (target/'README.md').write_text('Four-phase computational evidence; human scientific review remains pending. Shared loader/model primitives are disclosed. These are aggregate batch/bootstrap artifacts, not source listings or model weights.\n\nTo independently re-evaluate the paired statistics from a public clone, run:\n\n```sh\npython experiments/check_core_statistics_v2.py --stage '+stage+' --analysis-dir '+str(relative)+' --analysis-receipt analysis-completion.json\n```\n\nThe checker validates every saved analysis artifact hash before reconstructing all resamples. Full fit/outcome execution additionally requires the legitimately reconstructed source data and original model artifacts.\n')
         with zipfile.ZipFile(target/'audit-receipts.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
             # Receipts only: no source listings, prices per listing or model weights.
             for phase in ['fit-audit','outcome-audit']:
