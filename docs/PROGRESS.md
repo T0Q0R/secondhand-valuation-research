@@ -431,3 +431,10 @@ Reviewed methods/evidence from six representative Applied Intelligence papers th
 Windows原生CPU核心训练入口已实现并完成本机工程核查：无Unix文件锁导入、分组函数AST/完整训练评估循环与原入口一致、输入5000/1000哈希一致、36固定依赖Windows CPython3.12 wheel存在；故意错误检查点可阻止训练并自动打包失败日志。尚无Windows实际运行，不表示外机复现通过。原Mac外机严格不匹配继续保留；后台9线程训练/审计不变，论文未改。入口reproduction/windows-core-v1/README.zh.md。
 
 验证：冻结源哈希、分组纯函数AST、head/fit与完整拟合评估循环AST等价性；synthetic check-only准确通过；故意错误检查点终止/日志ZIP/锁释放检查通过；PyPI官方元数据36/36固定包存在win_amd64/CPython3.12兼容wheel，仅证明发布可用性，未替代Windows安装和训练。新增UTF-8/LF序列化及环境记录，未缩小样本、轮次或容差。下一步由另一台Windows执行start.py并回传ZIP；不修改论文。
+
+
+## 2026-10-16T12:02:57+08:00 — 外部Mac模型指纹逐阶段核查
+
+收到并核验另一台Mac只读8模型指纹包：输入/编码/合法状态/树结构叶值/基础预测8/8一致，残差权重和最终预测0/8一致；主依赖版本与Torch构建描述相同，具体首个分歧运算及原因未确定。原严格外机复现仍未通过，原失败与非收敛保留、不放宽阈值；没有新增训练或改论文。私有原包保留仓库外，Git只收脚本、聚合比较和哈希。报告notes/external-reproduction-synthetic-v1/fingerprint-review/FINDINGS.zh.md。
+
+核查payload与逐数组SHA、两个权重各4阶段身份、冻结入口/contract/人群；同包正对照完全一致、损坏payload被拒。最大最终log报价差0.01199054718；λ0/1均发生差异，不能特指RPL正则。下一步可选固定张量的首个前向/梯度/更新配对诊断，未启动额外重训。当前后台训练/审计保持原队列。

@@ -1,0 +1,1144 @@
+{
+  "scope": "Read-only eight saved synthetic price models, one fitting seed; no fitting, no response search, no tolerance changes",
+  "archive_sha256": {
+    "external": "a6d61a9654ed177ce7bf16c3d8ef7ce5b81e73644ee7c737532e1423dfe92c21",
+    "local": "6502e263d25e2c902070865659dbc0298cea30c5f844b4853ffac5265fc2e3c9"
+  },
+  "contract_sha256": "10e34e63738d05ca90f625988e760f10735bca93bfc011220e318d25fc632f21",
+  "diagnostic_runner_sha256": "168fe7fc24b3556d989f3d3fd2f89fef1bd563f25c6ebde5f13820508829b52b",
+  "matched_source_population_bindings": {
+    "contract_sha256": "10e34e63738d05ca90f625988e760f10735bca93bfc011220e318d25fc632f21",
+    "runner_sha256": "0274446cb3432dc1508c157af6bbb17f3c8b7e80d9b1dd47bffdf8a7e85dc4c6",
+    "inputs": {
+      "synthetic": {
+        "training": "5b7e9340d630279da3ff49ea7b8811ecf3c61dff70cd802ce55c68a9964df0aa",
+        "evaluation": "6e578ed63fe2b8f80a2576b049e1a811c51b6df3ed0771a4856335c2682b37c0",
+        "rows": 5000,
+        "evaluation_rows": 1000
+      }
+    },
+    "seed": 13
+  },
+  "environments": {
+    "external": {
+      "platform": "macOS-26.5.1-arm64-arm-64bit",
+      "python": "3.12.6 (v3.12.6:a4a2d2b0d85, Sep  6 2024, 16:08:03) [Clang 13.0.0 (clang-1300.0.29.30)]",
+      "versions": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "torch": "2.14.0",
+        "scikit-learn": "1.9.1",
+        "catboost": "1.2.10"
+      },
+      "torch_build_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=08187d9e0fba026dc8217405802ab5381dc88d90, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.14.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+    },
+    "local": {
+      "platform": "macOS-26.7.1-arm64-arm-64bit",
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "versions": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "torch": "2.14.0",
+        "scikit-learn": "1.9.1",
+        "catboost": "1.2.10"
+      },
+      "torch_build_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=08187d9e0fba026dc8217405802ab5381dc88d90, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.14.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+    }
+  },
+  "torch_build_description_equal": true,
+  "summary": {
+    "models": 8,
+    "training_input_matches": 8,
+    "encoding_hash_matches": 8,
+    "valid_state_hash_matches": 8,
+    "tree_structure_matches": 8,
+    "tree_leaf_exact_matches": 8,
+    "base_prediction_exact_matches": 8,
+    "residual_parameter_hash_matches": 0,
+    "final_prediction_exact_matches": 0,
+    "maximum_final_log_quote_difference": 0.011990547180175781
+  },
+  "models": [
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "deployment",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 10998,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.011990547180175781,
+          "mean_absolute_difference": 0.0015296297940340909
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            16000
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 16000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2751,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 0.04542454332113266,
+          "mean_absolute_difference": 0.002502785965007629
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.00508599728345871,
+          "mean_absolute_difference": 0.0011613667193159927
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 4077,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 0.05461729131639004,
+          "mean_absolute_difference": 0.002299216795747072
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.018317519687116146,
+          "mean_absolute_difference": 0.001259785240108613
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.00515221431851387,
+          "mean_absolute_difference": 0.0007066694870445644
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 0.00017362990183755755,
+          "mean_absolute_difference": 0.00017362990183755755
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-0",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 10995,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.007953643798828125,
+          "mean_absolute_difference": 0.001369011098688299
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            16000
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 16000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2749,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 0.038719385862350464,
+          "mean_absolute_difference": 0.001127135908836466
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.003223240375518799,
+          "mean_absolute_difference": 0.000670976577566762
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 4096,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 0.016861841082572937,
+          "mean_absolute_difference": 0.001064428668172468
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0027902284637093544,
+          "mean_absolute_difference": 0.0006279421395447571
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0020497366786003113,
+          "mean_absolute_difference": 0.0002879657021708226
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 3.772578202188015e-05,
+          "mean_absolute_difference": 3.772578202188015e-05
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-1",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 11000,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0041904449462890625,
+          "mean_absolute_difference": 0.0009860930009321733
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            15888
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 15888,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2749,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 0.008316822350025177,
+          "mean_absolute_difference": 0.0004195578097514319
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0007092654705047607,
+          "mean_absolute_difference": 0.00025718696269905195
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 4096,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 0.007339872419834137,
+          "mean_absolute_difference": 0.00040334187495005835
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0013018026947975159,
+          "mean_absolute_difference": 0.00024595544084604626
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0004981737583875656,
+          "mean_absolute_difference": 0.0001230531051987782
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 0.00011061946861445904,
+          "mean_absolute_difference": 0.00011061946861445904
+        }
+      }
+    },
+    {
+      "method": "path-0-gap-0.5",
+      "stage": "outer-2",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 408,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 9.5367431640625e-07,
+          "mean_absolute_difference": 3.537264737215909e-08
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            16000
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 16000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2395,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 4.976987838745117e-06,
+          "mean_absolute_difference": 3.1495317692366204e-08
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 58,
+          "total_entries": 64,
+          "maximum_absolute_difference": 1.2665987014770508e-07,
+          "mean_absolute_difference": 2.9082002583891153e-08
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 3571,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 3.419816493988037e-06,
+          "mean_absolute_difference": 2.5483579690899205e-08
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 56,
+          "total_entries": 64,
+          "maximum_absolute_difference": 5.029141902923584e-07,
+          "mean_absolute_difference": 2.2861058823764324e-08
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 60,
+          "total_entries": 64,
+          "maximum_absolute_difference": 9.685754776000977e-08,
+          "mean_absolute_difference": 1.092809043257148e-08
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 4.6566128730773926e-09,
+          "mean_absolute_difference": 4.6566128730773926e-09
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "deployment",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 10994,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.009054183959960938,
+          "mean_absolute_difference": 0.0012890396985140713
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            16000
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 16000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2749,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 0.03925514593720436,
+          "mean_absolute_difference": 0.0022515347104156845
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.005419842898845673,
+          "mean_absolute_difference": 0.0009761179899214767
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 4096,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 0.06865601986646652,
+          "mean_absolute_difference": 0.0026422949068365398
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.013327270746231079,
+          "mean_absolute_difference": 0.0013561442177660865
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.018981648609042168,
+          "mean_absolute_difference": 0.0011097113379037182
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 0.0004038931801915169,
+          "mean_absolute_difference": 0.0004038931801915169
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-0",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 10989,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0015125274658203125,
+          "mean_absolute_difference": 0.0002058438387784091
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            16000
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 16000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2739,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 0.0011039208620786667,
+          "mean_absolute_difference": 8.592349106929442e-05
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0003643035888671875,
+          "mean_absolute_difference": 7.243655818456318e-05
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 4096,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 0.0026126503944396973,
+          "mean_absolute_difference": 9.32672208717733e-05
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0004897713661193848,
+          "mean_absolute_difference": 6.963588202779647e-05
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0003009103238582611,
+          "mean_absolute_difference": 3.345794539200142e-05
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 1.0260846465826035e-06,
+          "mean_absolute_difference": 1.0260846465826035e-06
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-1",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 10990,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0036487579345703125,
+          "mean_absolute_difference": 0.0005494885011152787
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            15888
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 15888,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2744,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 0.004189539700746536,
+          "mean_absolute_difference": 0.00016690388689619075
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0007578171789646149,
+          "mean_absolute_difference": 0.00014434138211072423
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 4093,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 0.0032640695571899414,
+          "mean_absolute_difference": 0.00015318941991537827
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0016951151192188263,
+          "mean_absolute_difference": 0.00011948051633225987
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 64,
+          "total_entries": 64,
+          "maximum_absolute_difference": 0.0007963180541992188,
+          "mean_absolute_difference": 8.771126340434421e-05
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 1.584837445989251e-05,
+          "mean_absolute_difference": 1.584837445989251e-05
+        }
+      }
+    },
+    {
+      "method": "path-1-gap-0.5",
+      "stage": "outer-2",
+      "metadata_equal": {
+        "training_inputs": true,
+        "encoding_shape": true,
+        "encoding_sha256": true,
+        "valid_sha256": true,
+        "tree_leaf_counts": true,
+        "tree_borders": true,
+        "tree_leaf_sha256": true,
+        "base_sha256": true,
+        "prediction_sha256": false,
+        "residual_parameter_sha256": false
+      },
+      "arrays": {
+        "base": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "predicted": {
+          "shape": [
+            1000,
+            11
+          ],
+          "dtype": "float64",
+          "exact_equal": false,
+          "changed_entries": 100,
+          "total_entries": 11000,
+          "maximum_absolute_difference": 9.5367431640625e-07,
+          "mean_absolute_difference": 8.66976651278409e-09
+        },
+        "encoded_sample": {
+          "shape": [
+            16,
+            11,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 7568,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "tree_leaves": {
+          "shape": [
+            16000
+          ],
+          "dtype": "float64",
+          "exact_equal": true,
+          "changed_entries": 0,
+          "total_entries": 16000,
+          "maximum_absolute_difference": 0.0,
+          "mean_absolute_difference": 0.0
+        },
+        "residual__0.weight": {
+          "shape": [
+            64,
+            43
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 2228,
+          "total_entries": 2752,
+          "maximum_absolute_difference": 1.043081283569336e-07,
+          "mean_absolute_difference": 1.17893991003701e-08
+        },
+        "residual__0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 59,
+          "total_entries": 64,
+          "maximum_absolute_difference": 5.960464477539063e-08,
+          "mean_absolute_difference": 1.1417796486057341e-08
+        },
+        "residual__2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 3459,
+          "total_entries": 4096,
+          "maximum_absolute_difference": 2.2351741790771484e-07,
+          "mean_absolute_difference": 1.3563785650205773e-08
+        },
+        "residual__2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 54,
+          "total_entries": 64,
+          "maximum_absolute_difference": 7.078051567077637e-08,
+          "mean_absolute_difference": 1.1921656550839543e-08
+        },
+        "residual__4.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 63,
+          "total_entries": 64,
+          "maximum_absolute_difference": 4.0046870708465576e-08,
+          "mean_absolute_difference": 9.23694187804358e-09
+        },
+        "residual__4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "exact_equal": false,
+          "changed_entries": 1,
+          "total_entries": 1,
+          "maximum_absolute_difference": 1.1059455573558807e-09,
+          "mean_absolute_difference": 1.1059455573558807e-09
+        }
+      }
+    }
+  ],
+  "interpretation": "Differences are present in saved residual-network parameters despite matching input, encoding, tree and base-prediction fingerprints. The specific first divergent training operation and its cause are not identified by these final checkpoints. External strict metric reproduction remains failed."
+}

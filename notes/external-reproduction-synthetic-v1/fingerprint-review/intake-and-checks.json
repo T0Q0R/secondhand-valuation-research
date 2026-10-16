@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-16T12:02:57+08:00",
+  "user_confirmed_another_mac_execution": true,
+  "archive": {
+    "bytes": 1345942,
+    "sha256": "a6d61a9654ed177ce7bf16c3d8ef7ce5b81e73644ee7c737532e1423dfe92c21",
+    "private_copy": "../external-reproduction-private-v1/external-rpl-synthetic-diagnostic.zip",
+    "raw_arrays_and_parameters_not_uploaded": true
+  },
+  "members": [
+    "diagnostic.json",
+    "arrays.npz"
+  ],
+  "verification": [
+    "array-payload SHA256",
+    "per-array base/prediction/tree-leaf/residual-parameter SHA256",
+    "frozen contract/source/seed/population match to local diagnostic",
+    "eight distinct expected model stages",
+    "same-archive exact-positive control",
+    "corrupt array-payload digest rejection"
+  ],
+  "training_performed": false,
+  "strict_tolerance_changed": false,
+  "source_diagnostic_sha256": "168fe7fc24b3556d989f3d3fd2f89fef1bd563f25c6ebde5f13820508829b52b"
+}

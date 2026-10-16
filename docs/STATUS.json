@@ -500,14 +500,28 @@
     "nominal_threads": 9
   },
   "external_reproduction_v1": {
-    "status": "same_machine_passed_external_strict_mismatch_unresolved",
+    "status": "external_strict_mismatch_localized_to_saved_residual_parameters_cause_unresolved",
     "cells": 6,
     "elapsed_seconds": 117.56039810180664,
     "intake": "notes/external-reproduction-synthetic-v1/intake-check.json",
-    "timestamp": "2026-10-16T11:43:52+08:00",
+    "timestamp": "2026-10-16T12:02:57+08:00",
     "diagnostic": "notes/external-reproduction-synthetic-v1/diagnostic-review.json",
-    "followup": "reproduction/macos-core-v2/DIAGNOSE.zh.md",
-    "resources_restored": true
+    "followup": "Optional paired first-update diagnostics not run",
+    "resources_restored": true,
+    "user_confirmed_external_machine": true,
+    "fingerprint_review": "notes/external-reproduction-synthetic-v1/fingerprint-review/FINDINGS.zh.md",
+    "fingerprint_summary": {
+      "models": 8,
+      "training_input_matches": 8,
+      "encoding_hash_matches": 8,
+      "valid_state_hash_matches": 8,
+      "tree_structure_matches": 8,
+      "tree_leaf_exact_matches": 8,
+      "base_prediction_exact_matches": 8,
+      "residual_parameter_hash_matches": 0,
+      "final_prediction_exact_matches": 0,
+      "maximum_final_log_quote_difference": 0.011990547180175781
+    }
   },
   "windows_core_v1": {
     "timestamp": "2026-10-16T11:52:30+08:00",

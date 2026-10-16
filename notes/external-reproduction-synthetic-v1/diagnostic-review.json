@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-16T11:43:52+08:00",
-  "status": "same_machine_reconstruction_passed_external_strict_mismatch_unresolved",
+  "checked_at": "2026-10-16T12:02:57+08:00",
+  "status": "saved_residual_parameters_diverge_backbones_exact_specific_training_cause_unresolved",
   "same_machine": {
     "status": "computed_reference_comparison_passed",
     "elapsed_seconds": 216.3073332309723,
@@ -20,7 +20,7 @@
     "external_platform": "macOS-26.5.1-arm64-arm-64bit",
     "listed_library_versions_match": true
   },
-  "cause": "unresolved; environment differences observed, not causally isolated",
+  "cause": "Narrowed to divergent saved residual-network parameters after matching input/encoding/tree/base fingerprints; first divergent training operation and causal environment factor remain unidentified",
   "scope": "one fitting seed, synthetic fixed cohort only; descriptive direction persistence is not statistical or numerical reproduction proof",
   "private_diagnostic_archive": {
     "local_test_generated": true,
@@ -28,7 +28,7 @@
     "sha256": "6502e263d25e2c902070865659dbc0298cea30c5f844b4853ffac5265fc2e3c9",
     "arrays_and_model_parameters_not_uploaded_to_Git": true
   },
-  "followup": "reproduction/macos-core-v2/DIAGNOSE.zh.md",
+  "followup": "Optional fixed-tensor initialization/first-gradient/update diagnostic; not yet run",
   "original_resources_restored": {
     "status": "resumed_original_workers",
     "pids": [
@@ -38,5 +38,19 @@
       72811
     ],
     "at_unix": 1792122095.0609028
-  }
+  },
+  "fingerprint_review": "notes/external-reproduction-synthetic-v1/fingerprint-review/FINDINGS.zh.md",
+  "fingerprint_summary": {
+    "models": 8,
+    "training_input_matches": 8,
+    "encoding_hash_matches": 8,
+    "valid_state_hash_matches": 8,
+    "tree_structure_matches": 8,
+    "tree_leaf_exact_matches": 8,
+    "base_prediction_exact_matches": 8,
+    "residual_parameter_hash_matches": 0,
+    "final_prediction_exact_matches": 0,
+    "maximum_final_log_quote_difference": 0.011990547180175781
+  },
+  "user_confirmed_external_execution": true
 }
