@@ -1,0 +1,233 @@
+{
+  "keys": [
+    {
+      "dataset": "jucars",
+      "budget": 0.0,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.0,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.01,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.01,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.05,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.05,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.2,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.2,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.0,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.0,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.01,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.01,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.05,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.05,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.2,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.2,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.0,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.0,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.01,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.01,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.05,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.05,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.2,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.2,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "masking_risk",
+      "candidate": "sefa4bin_masking_suppression"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "robust_no_feedback",
+      "candidate": "sefa4bin_robust_no_feedback"
+    }
+  ],
+  "metrics": [
+    "mean_positive_log_inflation",
+    "clean_mae",
+    "attack_mae",
+    "failed_query_fraction",
+    "attack_signed_log_bias",
+    "mean_unilateral_inflation_envelope_log"
+  ],
+  "seed_ids": [
+    13,
+    42,
+    2026
+  ]
+}

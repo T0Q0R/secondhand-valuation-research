@@ -500,7 +500,8 @@
     "nominal_threads": 9,
     "four_phase_completed_stages": [
       "rpl",
-      "mechanisms"
+      "mechanisms",
+      "sefa"
     ]
   },
   "external_reproduction_v1": {
