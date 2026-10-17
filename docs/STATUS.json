@@ -499,7 +499,8 @@
     "snapshot_time": "2026-10-16T11:07:28+08:00",
     "nominal_threads": 9,
     "four_phase_completed_stages": [
-      "rpl"
+      "rpl",
+      "mechanisms"
     ]
   },
   "external_reproduction_v1": {

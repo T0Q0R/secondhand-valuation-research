@@ -1,0 +1,161 @@
+{
+  "keys": [
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "batch-strong"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "batch-weak"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "epoch-strong"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "epoch-weak"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "batch-strong"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "batch-weak"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "epoch-strong"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "epoch-weak"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "batch-strong"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "batch-weak"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "epoch-strong"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "epoch-weak"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "batch-strong"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "batch-weak"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "epoch-strong"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "epoch-weak"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "batch-strong"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "batch-weak"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "epoch-strong"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "feedback-off",
+      "candidate": "epoch-weak"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "batch-strong"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "batch-weak"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "epoch-strong"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "feedback-off",
+      "candidate": "epoch-weak"
+    }
+  ],
+  "metrics": [
+    "mean_positive_log_inflation",
+    "clean_mae",
+    "attack_mae",
+    "failed_query_fraction",
+    "attack_signed_log_bias",
+    "mean_unilateral_inflation_envelope_log"
+  ],
+  "seed_ids": [
+    13,
+    42,
+    2026
+  ]
+}

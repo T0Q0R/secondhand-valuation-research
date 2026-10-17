@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "stage": "mechanisms",
+  "checked_metric_contrasts": 144,
+  "recomputed_bootstrap_replicates": 4000,
+  "checker_sha256": "007f3cb82d312518ab4761132f39b9d5d6360f909591b8c8204f284be796105b",
+  "analysis_completion_sha256": "a22e51e49e137ae0c2395434877e9be805e4694d33c8b16e8e93a6105d42da02",
+  "changed_point_negative_control_rejected": true,
+  "finite_sample_fwer_certified": false,
+  "scope": "separate indexing/summation implementation of all saved crossed resamples, marginal intervals and exploratory max-deviation bands; no inference about new training populations"
+}
