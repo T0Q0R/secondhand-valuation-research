@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-17T12:36:36+08:00",
+  "status": "running_verified",
+  "pid": 56329,
+  "stage": "aco",
+  "source_commit": "5871cec6fe25f971f2340cb59e8ab4c0df2238cb",
+  "runtime_status": "outputs/core-evidence-recovery-runtime-v3/status.json",
+  "snapshot": {
+    "status": "auditing",
+    "stage": "aco",
+    "pid": 56329,
+    "active_pids": [
+      56362,
+      56370,
+      56375,
+      56378
+    ],
+    "completed_pairs": 3,
+    "total_pairs": 9,
+    "audit_worker_limit": 8,
+    "threads_per_auditor": 1,
+    "training_threads": 0,
+    "memory_admission_gib": 6,
+    "last_update": 1792211795.061558
+  },
+  "original_failure_preserved": true
+}
