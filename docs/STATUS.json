@@ -613,5 +613,11 @@
     "frozen_runtime_limit_field": 8,
     "runtime_limit_note": "Existing frozen runner still reports8 as compiled ceiling; no queued workers remain, so actual current/future concurrency in this run cannot exceed5. Future launches must honor new6-thread preference.",
     "last_verified_at": "2026-10-17T21:56:18+08:00"
+  },
+  "ten_seed_visual_review_v1": {
+    "status": "result_review_complete_figure_render_pending",
+    "plan": "notes/ten-seed-visual-review-v1/NEXT_STEPS.zh.md",
+    "new_training": false,
+    "manuscript_modified": false
   }
 }

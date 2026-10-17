@@ -1,0 +1,62 @@
+{
+  "status": "descriptive_scientific_review_completed_figure_update_pending",
+  "stage_receipt_sha256": "e28939c91c3a8443626777604ffd5e94104d9c4819d54ce3cc43283742360b46",
+  "primary_effects": [
+    {
+      "dataset": "synthetic",
+      "fitting_seeds": 10,
+      "inflation_reduction_ratio_of_means_pct": 50.41483186484002,
+      "honest_mae_change_ratio_of_means_pct": 0.8190679322965355,
+      "attacked_mae_change_ratio_of_means_pct": -0.9127540922721833,
+      "failed_query_change_pp": 1.0999999999999999,
+      "seeds_with_lower_inflation": 10,
+      "absolute_inflation_improvement": 0.0062676931381225,
+      "marginal_lower": 0.0054005205655097,
+      "marginal_upper": 0.0071456306314468,
+      "exploratory_simultaneous_lower": 0.004644171825339,
+      "exploratory_simultaneous_upper": 0.007891214450906
+    },
+    {
+      "dataset": "jucars",
+      "fitting_seeds": 10,
+      "inflation_reduction_ratio_of_means_pct": 26.580864049539898,
+      "honest_mae_change_ratio_of_means_pct": -0.10247378517916905,
+      "attacked_mae_change_ratio_of_means_pct": -0.016791195251075752,
+      "failed_query_change_pp": 0.4400000000000001,
+      "seeds_with_lower_inflation": 10,
+      "absolute_inflation_improvement": 0.00330575299263,
+      "marginal_lower": 0.0021504456448554,
+      "marginal_upper": 0.0044203872025012,
+      "exploratory_simultaneous_lower": 0.0012088191301091,
+      "exploratory_simultaneous_upper": 0.0054026868551508
+    },
+    {
+      "dataset": "mucars",
+      "fitting_seeds": 10,
+      "inflation_reduction_ratio_of_means_pct": 23.81469675258684,
+      "honest_mae_change_ratio_of_means_pct": -0.7984098548380336,
+      "attacked_mae_change_ratio_of_means_pct": -0.8652258467737428,
+      "failed_query_change_pp": -0.12000000000000001,
+      "seeds_with_lower_inflation": 10,
+      "absolute_inflation_improvement": 0.0015731760978698,
+      "marginal_lower": 0.0010758641028404,
+      "marginal_upper": 0.0021056591343879,
+      "exploratory_simultaneous_lower": 0.0006243365969985,
+      "exploratory_simultaneous_upper": 0.0025220155987411
+    }
+  ],
+  "retained_cells": 540,
+  "paired_rows": 540,
+  "excluded_nonconverged_cells": 0,
+  "cells_with_nonconverged_batches": 51,
+  "nonconverged_batch_replays": 89,
+  "maximum_remaining_unilateral_regret_log": 0.1437206268310547,
+  "uncertainty": "Existing4000 crossed resamples only, fixed fitting/evaluation populations; exploratory, no finite-sample FWER certificate",
+  "ratio_convention": "Headline percentages are ratios of means. Individual-seed plots use paired seed ratios; these are explicitly distinct.",
+  "manuscript_modified": false,
+  "new_training_or_response_search": false,
+  "input_hashes": {
+    "outputs/core-evidence-audit-v2/analysis/rpl10/audited_cell_summaries.csv": "a245dc0a57f91b46fc445c5dc770b08689e83735c1a3fb2a122feeb21dbc5fb0",
+    "outputs/core-evidence-audit-v2/analysis/rpl10/paired_contrasts.csv": "16643c32abdb03c752a40d0ec19fb9aeb16aebba20ce393d299a38bdf22b697a"
+  }
+}
