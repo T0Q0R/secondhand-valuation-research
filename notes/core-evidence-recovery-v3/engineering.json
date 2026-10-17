@@ -1,0 +1,41 @@
+{
+  "status": "engineering_check_passed_full_matrix_pending",
+  "elapsed_seconds": 14.790624141693115,
+  "scope": "synthetic seed13, all1000 evaluation records, two backends, all16 saved cells",
+  "old_failure_reproduced": true,
+  "strict_score_matches": [
+    {
+      "k": 25,
+      "exact_repaired_score_match": true,
+      "old_max_score_difference": 0.006959215829943832,
+      "old_different_finite_scores": 1228
+    },
+    {
+      "k": 10,
+      "exact_repaired_score_match": true,
+      "old_max_score_difference": 0.013789147313423053,
+      "old_different_finite_scores": 382
+    },
+    {
+      "k": 50,
+      "exact_repaired_score_match": true,
+      "old_max_score_difference": 0.003885247049839431,
+      "old_different_finite_scores": 2110
+    }
+  ],
+  "full_pair": {
+    "status": "completed",
+    "stage": "aco",
+    "dataset": "synthetic",
+    "seed": 13,
+    "cells": 16,
+    "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+    "outcome_rows": 16000,
+    "legal_unilateral_deviations": 166736
+  },
+  "production_source_changed": false,
+  "original_results_changed": false,
+  "tolerance_changed": false,
+  "old_checker_sha256": "547d698fde014b8dd3d0b97fab03d414c3cad22d3d5a5f20a9ef2a39f6d2fd21",
+  "repaired_checker_sha256": "7e48d0548c3e26b1fc8877d7ccb16366e108fe335e9eb05fe3c91bae41871aa9"
+}

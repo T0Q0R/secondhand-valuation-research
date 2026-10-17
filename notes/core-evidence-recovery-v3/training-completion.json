@@ -1,0 +1,9 @@
+{
+  "status": "completed_and_corroborated",
+  "cells": 540,
+  "summary_sha256": "2dbfacfcfcc90ffc854e5e28d85a00d36a1fad812700640e063b7b46272aebd4",
+  "manifest_sha256": "10c255c7c853c15c28c28057c216403fe71daee8f3e57a42979bbd864b27b7d4",
+  "smoke_only": false,
+  "runtime_override_receipt": "outputs/rpl-ten-seed-runtime-v2/manifest.json",
+  "maximum_observed_processes": 4
+}

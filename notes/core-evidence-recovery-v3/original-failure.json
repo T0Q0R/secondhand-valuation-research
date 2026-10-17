@@ -1,0 +1,13 @@
+{
+  "status": "failed_preserving_all_checkpoints",
+  "completed_stages": [
+    "rpl",
+    "mechanisms",
+    "sefa",
+    "gdfs",
+    "dime",
+    "efa"
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/run_core_evidence_queue_v2.py\", line 152, in main\n    audit_stage(stage,manifest)\n  File \"/Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/experiments/run_core_evidence_queue_v2.py\", line 61, in audit_stage\n    raise RuntimeError(f'Audit worker failed: {key}; see {rp}')\nRuntimeError: Audit worker failed: ('synthetic', 13); see /Users/tqr/Documents/\u4eba\u5de5\u667a\u80fd/secondhand-ai-valuation/sav-val/outputs/core-evidence-runtime-v2/workers/aco-synthetic-13.json\n",
+  "last_update": 1792186981.611764
+}
