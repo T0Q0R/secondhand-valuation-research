@@ -1,0 +1,99 @@
+{
+  "status": "completed",
+  "stage": "aco",
+  "cells": 144,
+  "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+  "pairs": [
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 166736
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "synthetic",
+      "seed": 42,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 166736
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "synthetic",
+      "seed": 2026,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 166736
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "jucars",
+      "seed": 13,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 163200
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "jucars",
+      "seed": 42,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 163200
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "jucars",
+      "seed": 2026,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 163200
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "mucars",
+      "seed": 13,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 174208
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "mucars",
+      "seed": 42,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 174208
+    },
+    {
+      "status": "completed",
+      "stage": "aco",
+      "dataset": "mucars",
+      "seed": 2026,
+      "cells": 16,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "outcome_rows": 16000,
+      "legal_unilateral_deviations": 174208
+    }
+  ],
+  "scope": "shared data loading/model primitives; independent role reconstruction/head targets or integer allocation/all-legal-report utility re-derivation; not independent full-stack implementation"
+}

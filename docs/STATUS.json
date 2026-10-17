@@ -504,7 +504,8 @@
       "sefa",
       "gdfs",
       "dime",
-      "efa"
+      "efa",
+      "aco"
     ],
     "training_cells": 540,
     "four_phase_completed_unique_cells": 684,
