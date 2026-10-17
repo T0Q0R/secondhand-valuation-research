@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "stage": "rpl10",
+  "checked_metric_contrasts": 216,
+  "recomputed_bootstrap_replicates": 4000,
+  "checker_sha256": "007f3cb82d312518ab4761132f39b9d5d6360f909591b8c8204f284be796105b",
+  "analysis_completion_sha256": "e28939c91c3a8443626777604ffd5e94104d9c4819d54ce3cc43283742360b46",
+  "changed_point_negative_control_rejected": true,
+  "finite_sample_fwer_certified": false,
+  "scope": "separate indexing/summation implementation of all saved crossed resamples, marginal intervals and exploratory max-deviation bands; no inference about new training populations"
+}

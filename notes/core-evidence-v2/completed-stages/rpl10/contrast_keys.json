@@ -1,0 +1,240 @@
+{
+  "keys": [
+    {
+      "dataset": "jucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "jucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "mucars",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.0,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.0,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.1,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.1-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "path-0-gap-0",
+      "candidate": "path-0.5-gap-0"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-0.5-gap-0.5"
+    },
+    {
+      "dataset": "synthetic",
+      "budget": 0.3,
+      "reference": "path-0-gap-0.5",
+      "candidate": "path-1-gap-0.5"
+    }
+  ],
+  "metrics": [
+    "mean_positive_log_inflation",
+    "clean_mae",
+    "attack_mae",
+    "failed_query_fraction",
+    "attack_signed_log_bias",
+    "mean_unilateral_inflation_envelope_log"
+  ],
+  "seed_ids": [
+    13,
+    42,
+    2026,
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701
+  ]
+}

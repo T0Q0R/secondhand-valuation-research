@@ -505,7 +505,8 @@
       "gdfs",
       "dime",
       "efa",
-      "aco"
+      "aco",
+      "rpl10"
     ],
     "training_cells": 540,
     "four_phase_completed_unique_cells": 684,
