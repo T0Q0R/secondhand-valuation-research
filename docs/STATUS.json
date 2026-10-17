@@ -501,7 +501,8 @@
     "four_phase_completed_stages": [
       "rpl",
       "mechanisms",
-      "sefa"
+      "sefa",
+      "gdfs"
     ]
   },
   "external_reproduction_v1": {

@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "stage": "gdfs",
+  "cells": 108,
+  "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+  "pairs": [
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "synthetic",
+      "seed": 13,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 125052
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "synthetic",
+      "seed": 42,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 125052
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "synthetic",
+      "seed": 2026,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 125052
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "jucars",
+      "seed": 13,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 122400
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "jucars",
+      "seed": 42,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 122400
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "jucars",
+      "seed": 2026,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 122400
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "mucars",
+      "seed": 13,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 130656
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "mucars",
+      "seed": 42,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 130656
+    },
+    {
+      "status": "completed",
+      "stage": "gdfs",
+      "dataset": "mucars",
+      "seed": 2026,
+      "cells": 12,
+      "checker_sha256": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+      "fit_model_count": 2,
+      "outcome_rows": 12000,
+      "legal_unilateral_deviations": 130656
+    }
+  ],
+  "scope": "shared data loading/model primitives; independent role reconstruction/head targets or integer allocation/all-legal-report utility re-derivation; not independent full-stack implementation"
+}
