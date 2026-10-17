@@ -1,0 +1,43 @@
+figure,panel,unique_role,fitting_seed_n,unit,source_traceable,all_required_seed_values_retained,statistical_scope_labels_checked,labels_legend_visual_check,alignment,collision,glyph_floor,manual_visual_check
+ten_seed_primary,a,Matched inflation improvement,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_primary,b,Matched inflation improvement,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_primary,c,Matched inflation improvement,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_tradeoffs,a,Honest-error trade-off,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_tradeoffs,b,Honest-error trade-off,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_tradeoffs,c,Honest-error trade-off,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_tradeoffs,d,Attacked-error trade-off,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_tradeoffs,e,Attacked-error trade-off,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+ten_seed_tradeoffs,f,Attacked-error trade-off,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+budget_response,a,Budget and inflation,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+budget_response,b,Budget and inflation,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+budget_response,c,Budget and inflation,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+budget_response,d,Budget and failed-query cost,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+budget_response,e,Budget and failed-query cost,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+budget_response,f,Budget and failed-query cost,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+gap_ablation,a,Matched path/gap control,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+gap_ablation,b,Matched path/gap control,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+gap_ablation,c,Matched path/gap control,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+seed_consistency,a,All paired fitting seeds,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+seed_consistency,b,All paired fitting seeds,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+seed_consistency,c,All paired fitting seeds,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+response_convergence,a,Nonconverged batch rate,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+response_convergence,b,Nonconverged batch rate,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+response_convergence,c,Nonconverged batch rate,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+response_convergence,d,Remaining unilateral regret,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+response_convergence,e,Remaining unilateral regret,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+response_convergence,f,Remaining unilateral regret,10,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+mechanism_search_audited,a,Feedback search/refresh intervention,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+mechanism_search_audited,b,Feedback search/refresh intervention,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+mechanism_search_audited,c,Feedback search/refresh intervention,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+parameter_defaults,a,Gap weight at10%,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+parameter_defaults,b,Gap tolerance at10%,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+parameter_defaults,c,Feedback rounds at10%,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+parameter_defaults,d,Gap weight at30%,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+parameter_defaults,e,Gap tolerance at30%,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+parameter_defaults,f,Feedback rounds at30%,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+implementation_defaults,a,Anchor weight,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+implementation_defaults,b,Attack loss weight,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+implementation_defaults,c,Learning rate,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+implementation_defaults,d,Residual epochs,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+implementation_defaults,e,Head trees,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed
+implementation_defaults,f,Hidden width,3,Fitting seed; fixed shared populations,True,True,True,passed,passed1.5pt,0FAIL0WARN,7.0,passed

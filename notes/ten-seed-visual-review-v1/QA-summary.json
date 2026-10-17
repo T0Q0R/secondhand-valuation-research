@@ -1,0 +1,47 @@
+[
+  {
+    "name": "ten_seed_primary",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "ten_seed_tradeoffs",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "budget_response",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "gap_ablation",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "seed_consistency",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "response_convergence",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "mechanism_search_audited",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "parameter_defaults",
+    "font_exit": 0,
+    "collision_exit": 0
+  },
+  {
+    "name": "implementation_defaults",
+    "font_exit": 0,
+    "collision_exit": 0
+  }
+]

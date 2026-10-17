@@ -1,0 +1,89 @@
+{
+  "figures": [
+    {
+      "name": "ten_seed_primary",
+      "panels": 3,
+      "fitting_seeds": 10,
+      "role": "Primary inference and matched gap control",
+      "caption": "Matched inflation improvement at10% query capacity, reference minus candidate. Each \u03b2=0.5 branch uses \u03bb=0,\u03b2=0.5; the \u03b2=0 branch uses its own zero-weight control. Points are paired means. Thin segments are saved marginal percentile intervals; pale segments are saved exploratory max-deviation bands over216 metric contrasts. Ten fitting seeds share fixed populations and ten evaluation batches. Bands do not certify finite-sample FWER or new-population coverage.",
+      "source_rows": 12,
+      "pdf_sha256": "7a9a5fca730c41b6fca0bc502329a0aca1ac12ebde03a669e13e70b0219632f7"
+    },
+    {
+      "name": "ten_seed_tradeoffs",
+      "panels": 6,
+      "fitting_seeds": 10,
+      "role": "Multiobjective deployment costs",
+      "caption": "Inflation reduction against honest and attacked MAE changes at10% capacity, all paired fitting seeds for \u03bb0.1/0.5/1 and \u03b20.5. Each point uses its own zero-weight seed control. Larger outlined markers are means of seed ratios, not ratios of cohort means. All30 source-seed pairs are retained at each weight. Raw points supply the variability display; no confidence region or independent replications beyond fitting seeds is claimed.",
+      "source_rows": 90,
+      "pdf_sha256": "eaa70f052d95dc874889bbdf893430fd03f593c3b76db3384e6b8da4084bff7c"
+    },
+    {
+      "name": "budget_response",
+      "panels": 6,
+      "fitting_seeds": 10,
+      "role": "Budget boundary and charged-failure costs",
+      "caption": "Actual budget grid0/10/30%, four path weights at \u03b20.5. Lines show seed means and shading the full ten-seed range, which is not a CI. Top panels measure strategic gain, bottom panels failed attempts per all listings, not per query. Zero-query changes must be attributed to the estimator. Straight segments connect evaluated settings only.",
+      "source_rows": 360,
+      "pdf_sha256": "6451b5580e9ed33dad8e176dbdf3b86abd61e909539547810e6b495b31d7bc1c"
+    },
+    {
+      "name": "gap_ablation",
+      "panels": 3,
+      "fitting_seeds": 10,
+      "role": "Control for the existing gap penalty",
+      "caption": "Matched path-by-gap2\u00d72 intervention at10% capacity, ten seeds in each source. Each line connects one seed across four configurations. Dots retain all seed observations and black diamonds are means. This isolates the path term from the existing gap term at the tested weights; it does not assign three separate innovation claims to the earlier switch ablations.",
+      "source_rows": 120,
+      "pdf_sha256": "5261fac9a1378034c1ff417bd80f0f29b765b3948b1906a81006ce065a1977f7"
+    },
+    {
+      "name": "seed_consistency",
+      "panels": 3,
+      "fitting_seeds": 10,
+      "role": "Heterogeneity rather than a mean-only claim",
+      "caption": "Complete seed heterogeneity at10% capacity. Four nonzero path/gap configurations each use the same-gap \u03bb0 control. All ten fitting seeds are shown per source, and positive percentages mean lower inflation. Zero-weight controls are omitted from the heatmap because their paired self-change is identically zero; the full paired source table includes them. Display labels are rounded, retaining one decimal for magnitudes below1%, with unrounded data in CSV.",
+      "source_rows": 120,
+      "pdf_sha256": "589e5a73cc6c210c0817f6d85284fe2287388d4caaa8c5ef3f5d5be7dfff996e"
+    },
+    {
+      "name": "response_convergence",
+      "panels": 6,
+      "fitting_seeds": 10,
+      "role": "Finite-response failure boundary",
+      "caption": "Convergence boundary for all540 RPL cells and six configurations. Top panels show nonconverged batch percentages within each cell; bottom panels the maximum unilateral regret within that cell on a symmetric-log axis with linear threshold0.0001. Curves average ten cell-level values and bands span their full range; they are not CIs. All51 cells containing nonconverged batches remain, including89 such batch replays out of5400. Worst observed regret0.143721log is not hidden by the mean-of-maxima curves.",
+      "source_rows": 540,
+      "pdf_sha256": "18c9a9d193f71b7a25bfb8d11d91a786b543bc8f0b65f12f09a070a896c35da8"
+    },
+    {
+      "name": "mechanism_search_audited",
+      "panels": 3,
+      "fitting_seeds": 3,
+      "role": "Distinguish implementation-dependent feedback effects",
+      "caption": "Training-response search and score refresh relative to the matched feedback-off control at10% capacity. Points are paired mean reference-minus-candidate differences; saved marginal and exploratory simultaneous intervals are shown as in the RPL primary figure. This separate intervention retains three fitting seeds and fixed populations. Stronger search can remove mean damage in some sources, but intervals and multiobjective costs prevent a universal benefit claim.",
+      "source_rows": 12,
+      "pdf_sha256": "8609dad32112ee2d5ff81bb63989165b08c194ea8bfb4975e5bb8d47c317ed6b"
+    },
+    {
+      "name": "parameter_defaults",
+      "panels": 6,
+      "fitting_seeds": 3,
+      "role": "Explain defaults without test-set optimization",
+      "caption": "Existing original-feedback scans of gap weight, tolerance and feedback rounds at10/30% capacity. Vertical dotted lines explicitly mark the declared design values0.5,0.02 and2. Gap-weight and tolerance axes use symmetric-log coordinates with a linear threshold equal to half the smallest positive setting; all actual scan values are ticked. Matching default rows are included from the existing baseline. Means and full ranges use three fitting seeds. These scans do not retune RPL or prove the design values optimal.",
+      "source_rows": 252,
+      "pdf_sha256": "f1cdd3f49aff405164641f8ad6cb6397da56c89e1980d1eb299f4c9afc6c3624"
+    },
+    {
+      "name": "implementation_defaults",
+      "panels": 6,
+      "fitting_seeds": 3,
+      "role": "Complete parameter transparency",
+      "caption": "Existing sensitivity to six implementation settings,10% capacity. Dotted vertical lines mark declared defaults; all evaluated settings are ticked, with learning rate on a logarithmic axis after a strict positivity check. Each seed ratio uses its unchanged matched default, which is included exactly at ratio1. Curves and ranges describe three fitting seeds, not the ten-seed RPL expansion. No default is selected by validation ranking.",
+      "source_rows": 198,
+      "pdf_sha256": "22f5b4c09ac93a6cbaa57635d69a2c03376caecd40d29459e30db308ed4ed60b"
+    }
+  ],
+  "source_sha256": "ed41f6c219b63d78d3d1e40b96acb050777a48948ca38a04b5598e336d8bfdfc",
+  "manuscript_modified": false,
+  "old_figures_overwritten": false,
+  "new_training": false
+}

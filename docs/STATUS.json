@@ -615,9 +615,14 @@
     "last_verified_at": "2026-10-17T21:56:18+08:00"
   },
   "ten_seed_visual_review_v1": {
-    "status": "result_review_complete_figure_render_pending",
+    "status": "nine_figures_rendered_geometry_checked_and_visually_reviewed",
     "plan": "notes/ten-seed-visual-review-v1/NEXT_STEPS.zh.md",
     "new_training": false,
-    "manuscript_modified": false
+    "manuscript_modified": false,
+    "figure_groups": 9,
+    "panels": 42,
+    "delivery": "notes/ten-seed-visual-review-v1/delivery.json",
+    "review_pdf": "paper/figures/ten-seed-v1/figure-review.pdf",
+    "manuscript_figures_integrated": false
   }
 }
