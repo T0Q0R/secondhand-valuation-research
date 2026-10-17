@@ -497,7 +497,10 @@
     "audit_runtime": "outputs/core-evidence-runtime-v2/status.json",
     "rpl_new_completed_snapshot": 129,
     "snapshot_time": "2026-10-16T11:07:28+08:00",
-    "nominal_threads": 9
+    "nominal_threads": 9,
+    "four_phase_completed_stages": [
+      "rpl"
+    ]
   },
   "external_reproduction_v1": {
     "status": "external_onepass_diagnostic_complete_first_observed_gradient_divergence_strict_metric_mismatch_retained",
