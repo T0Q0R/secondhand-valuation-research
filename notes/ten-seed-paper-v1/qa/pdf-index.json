@@ -1,8 +1,8 @@
 {
   "status": "computational_checks_passed_visual_review_separate",
-  "timestamp": "2026-10-17T23:42:22+08:00",
-  "source_sha256": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
-  "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
+  "timestamp": "2026-10-17T23:48:17+08:00",
+  "source_sha256": "0c6427926241396664cf2338d7ca8865c1bfc13cb23b133f8f54bb3672aee13f",
+  "pdf_sha256": "0b0881af4804c43d7fa35adb69969d59e203f6cc76edd8715f7a506df85ef0b9",
   "audited_aggregate_sha256": "a245dc0a57f91b46fc445c5dc770b08689e83735c1a3fb2a122feeb21dbc5fb0",
   "pages": 55,
   "main_pages_including_declarations": 26,
@@ -356,18 +356,10 @@
     }
   ],
   "visual_review": {
-    "contact_sheets": "All55pages inspected across5sheets",
-    "detail_pages": [
-      1,
-      16,
-      17,
-      20,
-      26,
-      27,
-      39,
-      40
-    ],
+    "scope": "Title-page email layout change; first page visually inspected, preceding full55page review retained",
+    "previous_full_review_commit": "df876d89e5fbe3571b5756c5842dafe440b9df98",
+    "email_visible_below_affiliation": true,
     "visible_clipping_or_overlap": false,
-    "submission_artwork_font_compliance": "final column-width/template check pending; some current multi-panel labels approximately6\u20137pt"
+    "submission_artwork_font_compliance": "Final template and column-width check pending"
   }
 }

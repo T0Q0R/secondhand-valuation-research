@@ -1,7 +1,7 @@
 {
   "status": "integrated_builtin_compiled_same_pdf_exported_and_visually_checked",
   "source_before": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
-  "source_after": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
+  "source_after": "0c6427926241396664cf2338d7ca8865c1bfc13cb23b133f8f54bb3672aee13f",
   "abstract_word_count": 228,
   "display_counts": {
     "main_figures": 8,
@@ -54,7 +54,7 @@
   ],
   "main_results_words_before_compression": 5257,
   "main_results_words_after_compression": 2232,
-  "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
+  "pdf_sha256": "0b0881af4804c43d7fa35adb69969d59e203f6cc76edd8715f7a506df85ef0b9",
   "pages": 55,
   "main_pages": 26,
   "appendix_and_references_pages": 29,
@@ -63,5 +63,7 @@
   "qa": "notes/ten-seed-paper-v1/qa/pdf-index.json",
   "delivery": "notes/ten-seed-paper-v1/DELIVERY.zh.md",
   "formal_submission_ready": false,
-  "main_results_words_after_final_edits_approx": 2235
+  "main_results_words_after_final_edits_approx": 2235,
+  "corresponding_email_position": "Separate title-page line below affiliation; author marked with asterisk",
+  "email": "irisyou@njust.edu.cn"
 }

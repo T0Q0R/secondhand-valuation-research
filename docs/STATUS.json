@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-17T23:44:44+08:00",
+  "snapshot_time": "2026-10-17T23:49:04+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -34,8 +34,8 @@
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
     "all_page_visual_review": "Final55-page contacts plus detail pages1/16/17/20/26/27/39/40 checked",
-    "source_sha256": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
-    "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
+    "source_sha256": "0c6427926241396664cf2338d7ca8865c1bfc13cb23b133f8f54bb3672aee13f",
+    "pdf_sha256": "0b0881af4804c43d7fa35adb69969d59e203f6cc76edd8715f7a506df85ef0b9",
     "submission": "not_submitted",
     "formal_submission_ready": false,
     "abstract_words": 228,
@@ -44,7 +44,11 @@
     "appendix_and_references_pages": 29,
     "main_figure_count": 8,
     "appendix_figure_count": 9,
-    "table_count": 18
+    "table_count": 18,
+    "corresponding_author": "Fengqin You",
+    "corresponding_email": "irisyou@njust.edu.cn",
+    "corresponding_email_position": "Title page; separate line below affiliation",
+    "title_page_visual_review": "Email line checked after final saved compilation"
   },
   "figures": {
     "new_count": 4,
@@ -641,8 +645,8 @@
     "delivery": "notes/ten-seed-paper-v1/DELIVERY.zh.md",
     "qa": "notes/ten-seed-paper-v1/qa/pdf-index.json",
     "pages": 55,
-    "source_sha256": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
-    "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
+    "source_sha256": "0c6427926241396664cf2338d7ca8865c1bfc13cb23b133f8f54bb3672aee13f",
+    "pdf_sha256": "0b0881af4804c43d7fa35adb69969d59e203f6cc76edd8715f7a506df85ef0b9",
     "formal_submission_ready": false
   }
 }

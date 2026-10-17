@@ -1,11 +1,12 @@
 When Does Verification Help?
 Recovery-Path Regularization for Strategy-Aware Valuation
 Yuchen Tang
-Fengqin You∗
+Fengqin You*
 Xin Pang
 School of Computer and Artificial Intelligence
 Nanjing University of Science and Technology Zijin College
 Nanjing, China
+*Corresponding author: irisyou@njust.edu.cn
 Abstract
 Recovering withheld information can increase a seller’s predicted price when the valuation
 model is nonmonotone. We study this failure under natural missingness, charged failed queries
@@ -39,5 +40,4 @@ batch-coupled verification policy. The outcome is an advertised price prediction
 transaction price or a transfer mechanism.
 A query need not reduce the incentive created by an incomplete report. Consider an illustrative
 nonmonotone predictor whose quotes are 10 for a truthful record, 12 after two fields are withheld,
-∗Corresponding author: irisyou@njust.edu.cn
 1
