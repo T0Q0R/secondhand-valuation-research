@@ -1,0 +1,53 @@
+qualifications and are not additional independent replications.
+Parameter, cost and historical-
+control results keep their original sample sizes and uncertainty conventions.
+-0.010
+-0.008
+-0.006
+-0.004
+-0.002
+0.000
+Inflation difference (no feedback - policy feedback)
+Synthetic / Mask / Top-B
+Synthetic / Mask / Minimax
+Synthetic / Robust / Top-B
+Synthetic / Robust / Minimax
+JUCars / Mask / Top-B
+JUCars / Mask / Minimax
+JUCars / Robust / Top-B
+JUCars / Robust / Minimax
+MUCars / Mask / Top-B
+MUCars / Mask / Minimax
+MUCars / Robust / Top-B
+MUCars / Robust / Minimax
+Figure 14: Under the original weak training-response search, policy feedback increases mean infla-
+tion in all twelve suppression-acquisition cells at the primary 10% capacity. Points are no-feedback
+minus policy-feedback paired differences; bars are 95% unadjusted intervals from 1,000 crossed
+resamples of ten fitting seeds and ten shared batches. Positive differences would favor feedback.
+All models use the same fixed training records; 1,000 evaluation listings are reused across seeds.
+The two MUCars mask-objective intervals cross zero. Other scores are retained in the full contrast
+data.
+Family
+Comparisons
+Critical value
+Adverse feedback bands
+Feedback inflation
+36
+3.126
+31/36
+Feedback, three outcomes
+108
+3.803
+27/36
+All primary contrasts/metrics
+1,536
+4.882
+20/36
+Table 13: Post-hoc 95% approximate simultaneous sensitivity on the original capped cohorts under
+the original weak training-response search.
+These bands do not cover the strengthened-search
+interventions.
+The last column counts only the 36 inflation feedback contrasts with an upper
+endpoint below zero. It is not a confirmatory family-wise guarantee. All point effects and all three
+family definitions are retained.
+43

@@ -1,0 +1,100 @@
+B
+Fixed-profile cap comparisons
+Table 5 retains all four rule comparisons for each source.
+Table 5: Primary descriptive comparison: robust frozen estimator, 10% capacity.
+Mean worst
+unilateral log-quote gain, equally averaging five fixed peer profiles and three seeds. No confidence
+interval or practical-threshold pass is asserted.
+Source
+Rule
+Original
+Capped
+Reduction (%)
+jucars
+benefit
+0.010473
+0.009736
+7.04
+jucars
+cdm
+0.010389
+0.010041
+3.36
+jucars
+risk
+0.010748
+0.010748
+0.00
+jucars
+suppression
+0.010546
+0.010007
+5.11
+mucars
+benefit
+0.007412
+0.006486
+12.49
+mucars
+cdm
+0.006780
+0.006399
+5.62
+mucars
+risk
+0.006540
+0.006540
+0.00
+mucars
+suppression
+0.007607
+0.006984
+8.18
+synthetic
+benefit
+0.011395
+0.010699
+6.11
+synthetic
+cdm
+0.011560
+0.011244
+2.74
+synthetic
+risk
+0.011423
+0.011423
+0.00
+synthetic
+suppression
+0.012591
+0.012085
+4.01
+C
+Complete original-protocol ten-seed comparisons
+C.1
+synthetic
+Takeaway. Increasing the fitting-seed count preserves the negative synthetic result against the
+original static robust comparator. This section uses ten seeds; preceding cap experiments retain
+three.
+We combine original seeds 13, 42 and 2026 with predetermined seeds 101, 211, 307, 401, 503, 601
+and 701 under the same original protocol. All ten synthetic checkpoints pass the source-binding,
+split, model-receipt and recorded-outcome checks: 620 method/capacity cells and 620,000 listing
+outcomes. These outcome rows are repeated predictions, not independent evaluation examples.
+The design contains 1,000 unique evaluation listings in ten shared batches of 100, with ten fitting-
+seed realizations on fixed training records. JUCars and MUCars are reported separately below; the
+completed union covers all thirty source/seed pairs.
+At 10% capacity, SAV mean positive log-quote inflation is 0.021175 versus 0.012084 for static
+robust without feedback, a 75.23% increase. Table 6 retains all five original contrasts. The benefit-
+head variant is the original feedback-trained variant; it is not the separately tuned ordinary-benefit
+benchmark. This extension does not isolate estimator, acquisition and feedback factors, and it
+must not be presented as the matched factorial experiment.
+For each contrast we construct the ten-seed by ten-batch paired difference matrix. We indepen-
+dently resample seed indices and shared batch indices, retaining their crossed grid and within-cell
+method pairing. These intervals capture empirical fitting-seed and evaluation-batch variation con-
+ditional on the training records; they do not capture training-population uncertainty. Only ten
+batch clusters are available, so nominal coverage is not established.
+No multiplicity correction
+or confirmatory hypothesis-test claim is made. A separate checker reconstructs all five contrasts
+and bootstrap endpoints from raw outcome records using count-weighted resampling, and rejects
+28

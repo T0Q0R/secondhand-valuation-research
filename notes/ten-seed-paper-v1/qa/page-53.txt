@@ -1,0 +1,49 @@
+optimal joint responses. The first ten batches reuse the original prediction/outcome bytes through
+symlinks, with original receipt provenance retained in the extended bindings; only the remaining
+batches are newly evaluated. No model is retrained.
+All 24 real-source feedback inflation point estimates remain adverse. Ten-thousand-draw ex-
+ploratory intervals exclude zero adversely for all twelve JUCars comparisons and ten MUCars
+comparisons; both MUCars masking-objective, suppression-score comparisons span zero. These
+unadjusted intervals weight batches by record counts, including the partial batches. They do not
+add independent training records or make either retrospective source confirmatory. The original
+capped factorial remains the declared primary comparison.
+An exact conditional seed/batch variance decomposition, including weighted partial batches,
+attributes 98.39% and 98.28% to fitting-seed main effects for the uncapped MUCars mask-
+ing/suppression top-B and minimax contrasts. Their capped shares are 90.97% and 87.42%; these
+compare different cohort and weighting designs, not a pure replication-size change. Interval-width
+ratios alone do not identify the components. Under the empirical conditional design, thirty instead
+of ten independent fitting seeds would project standard deviations to approximately 58% of their
+current values, while eliminating only batch resampling noise leaves approximately 99%. These
+are design projections, not newly trained results. The stable small estimates and crossing-zero
+intervals establish neither zero effect nor equivalence; fitting randomness on fixed training records
+also does not quantify training-population uncertainty. Details are in Appendix G.
+Appendix J shows absolute components alongside their shares.
+The accompanying audit-protocol/ artifact provides a machine-readable worked contract, an
+execution protocol and a standard-library validator of six directly bound evidence files. Six invalid-
+contract controls are rejected. It is an explicit post-hoc protocol, not preregistration or a certificate
+of scientific validity or independent end-to-end reproduction.
+K.7
+Recomputed cap responses and multiobjective trade-offs
+Takeaway. The cap’s inflation reductions survive the saved response heuristic in this study, but
+attacked error and failed-query rates can worsen. This is an empirical result, not an extension of
+the fixed-peer theorem.
+We recomputed reports for every source/seed/estimator/capacity/rule cell, using the original
+four starts and up to 20 sweeps, frozen public scores and unchanged mixture weights. The uncapped
+baseline uses the separately corroborated original responses. All 432 new cells and 432,000 listing
+outcomes were replayed by an separate full-sort auditor. It checked 5,300 supported complete-
+rule batch allocations and 5,570,112 legal rule–deviation outcomes. The auditor reconstructs final
+quotations, currency absolute errors, query failures and remaining unilateral regret; it does not
+certify a globally optimal joint response or every search step.
+Appendix J reports the primary robust-estimator comparison.
+Figure 8 displays the two principal trade-off coordinates.
+The consequential finding is the joint cost: attacked MAE increases in 94 of 432 recomputed-
+response cells and failed-query probability increases in 145, while honest MAE stays unchanged.
+Inflation falls in 279 cells and ties in 153; attacked MAE falls in 185 and ties in 153, and query
+failures fall in 4 and tie in 283. All counts remain descriptive. The fixed-peer theorem already
+establishes pointwise cap monotonicity and is not an empirical effectiveness test.
+Here peers’
+responses are recomputed, so cross-profile monotonicity is not supplied by that theorem either.
+The useful question is whether any inflation reduction survives the attacked-error and query-failure
+trade-offs, not how many cells exhibit the cap’s intended quote reduction.
+Thirty-three capped cells contain at least one batch with remaining unilateral regret above the
+53

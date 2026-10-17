@@ -1,0 +1,51 @@
+174 exploratory contrasts, all retained rather than screened for favorable directions. No individual
+unadjusted interval is treated as a confirmatory finding across this family.
+The full experiment completed thirty source–seed pairs and 4,320 cells. The training audit
+reconstructed hash-ranked partitions, matched minibatch orders and 2,068,360 held-out prediction
+rows. It refitted all 420 deployment heads, comparing tree structure and leaf values, and rejected
+altered partitions, permutations and predictions. This audit verifies fit provenance and head targets,
+rather than replaying every optimizer step. The outcome audit checked 4,320,000 recorded outcomes
+and 45,372,960 legal unilateral deviations, including reallocation after each changed report.
+A
+separate statistical checker reconstructed 9,216 metric–contrast rows, validated contrast semantics
+and intervals, and rejected altered interaction signs and interval endpoints. The full four-stage
+completion receipt was issued on 13 October 2026.
+Audit dependency and independent state coverage.
+The historical outcome audit is a
+corroborating re-derivation with shared primitives.
+It imports the separate replay checker and
+shares the production state representation, data loader, prediction and head-scoring APIs. It does
+not independently reimplement those APIs or every training-library operation.
+Its rejection of
+changed outputs therefore does not certify absence of a shared state-transition bug.
+A separate bit-mask oracle now checks state membership, validity, materialized values, public
+missingness and query success/failure without using production state or query logic in the oracle.
+Production StateSpace is only the system under test. All 16 natural masks and maximum-hidden
+values 0 through 4 cover 1,188 fixture field transitions. Direct CSV checks on all 1,374 JUCars
+and 10,672 MUCars validation records cover another 521,164 legal field transitions. Four injected
+enumeration/transition/materialization faults are rejected. Model prediction, scoring, dataset con-
+struction and optimizer libraries remain outside this independent oracle’s scope.
+Table 1 records the declared settings.
+Completion study and ten-seed extension.
+The three-seed development study completed
+1,719 cells, including reused references, across component removals, parameter scans, acquisition
+adapters, search interventions, availability stress and the original RPL pilot. Appendix H retains the
+complete inventory. The subsequent RPL extension kept the six configurations and three budgets
+unchanged, reused the original 162 cells, and added seven fitting seeds per source. Its 540 cells
+cover thirty source–seed pairs. This increases fitting replication, not the number of independent
+training populations or evaluation cohorts. Parameter and availability scans retain their original
+three seeds.
+Completed computational audit and its limits.
+The original 4,320-cell chain remains un-
+changed. A new fit/outcome/analysis/ statistics-check chain covers the 828 claim-bearing original
+extension cells and 378 additional RPL cells, hence 1,206 distinct cells. The audited stages are
+the RPL pilot (162), search interventions (90), SEFA/GDFS/DIME/explanation adapters (432),
+ACO including neighbor sensitivities (144), and the ten-seed RPL extension (540, overlapping the
+pilot by 162). Each stage reconstructs fitting roles and provenance, re-derives all recorded batch
+outcomes and legal unilateral deviations, aggregates comparisons, and separately reconstructs the
+saved statistics. Completion does not independently reimplement shared prediction libraries or
+provide external scientific confirmation.
+The new analyses retain 4,000 paired crossed seed–batch resamples. Marginal percentile in-
+tervals and exploratory studentized maximum-deviation bands condition on the same fixed pop-
+ulations; the RPL family contains 216 metric contrasts. Neither the ten-seed nor the three-seed
+12

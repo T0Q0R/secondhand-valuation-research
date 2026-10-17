@@ -1,0 +1,49 @@
+7.2
+Recovery-path regularization: improvement and costs
+Takeaway. RPL lowers primary mean inflation across all thirty source–seed comparisons at the
+declared unit-weight endpoint. Predictive, query-failure and convergence costs keep this from being
+a dominance claim.
+The ten-seed extension compared path weights 0, 0.1, 0.5, 1 at gap weight β = 0.5, plus path
+weights 0, 0.5 at β = 0, over query capacities 0, 0.1, 0.3. All branches used no policy feedback and
+the same two-round reset schedule. The original 162 cells were reused and 378 added, for 540
+cells. Each positive path-weight branch is compared with its own same-gap zero-path control. RPL
+changes the predictor; it is not a fixed-predictor acquisition comparison.
+The original grid, including λ = 1, was committed before formal evaluation in 6643cbe. This is
+a timestamped development grid, not independent preregistration or proof that the endpoint was
+prespecified as the headline. Weight 0.5 retained the existing gap term’s numerical scale; neither
+0.5 nor 1 is claimed optimal.
+Inflation improvement and uncertainty.
+At 10% capacity and λ = 1, β = 0.5, ratios of mean
+inflation to the matched λ = 0 control fell by 50.41%, 26.58% and 23.81% on synthetic, JUCars and
+MUCars. All ten fitting seeds in each source had lower inflation. The absolute paired reductions
+were 0.006268, 0.003306 and 0.001573 log units. The exploratory simultaneous bands over 216 met-
+ric contrasts were [0.004644, 0.007891], [0.001209, 0.005403] and [0.000624, 0.002522], respectively
+(Figure 1). These conditional bands support the within-design direction without certifying finite-
+sample coverage or new-population generalization. Smaller weights were less uniform: at λ = 0.1,
+only six of ten seeds improved on each real source; at λ = 0.5, nine of ten did so. Appendix I
+retains every seed.
+Predictive and verification costs.
+Table 4 reports absolute outcomes. At the unit endpoint,
+honest MAE changed by +0.82%, −0.10% and −0.80%, while attacked MAE changed by −0.91%,
+−0.02% and −0.87%. Failed attempts as a fraction of all listings changed by +1.10, +0.44 and
+−0.12 percentage points. The synthetic honest error and failed-query increases also excluded zero
+in the exploratory simultaneous bands; real-source MAE changes did not. Figure 2 shows all paired
+seed changes, including unfavorable cases. Its means of seed ratios are distinct from the ratios of
+means reported above. Inflation improvement alone therefore does not determine a deployment
+choice.
+Budget and loss-component boundaries.
+Figure 3 includes zero queries, so estimator changes
+remain separate from gains due to verification. Greater capacity can lower inflation while increas-
+ing charged failed queries.
+The matched path/gap comparison (Figure 4) shows that the path
+intervention is not an alias for the existing gap term at the tested weights. It complements the
+original eight-configuration, three-switch component ablation rather than turning its switches into
+three independent innovations. The original three-seed recovery-edge diagnostic also showed lower
+positive gain increments, which remained strictly positive; those measurements are retained as a
+pilot in Appendix I and are not relabeled as ten-seed evidence.
+Finite-response boundary.
+All 540 cells remain in Figure 5. Fifty-one cells contained noncon-
+verged batches, covering 89 of 5,400 batch replays, with a maximum remaining unilateral regret
+of 0.143721 log units. At the primary unit-weight endpoint, two synthetic seeds each retained one
+nonconverged batch; the maximum regret there was 0.011042. Both real-source endpoint responses
+15

@@ -1,0 +1,58 @@
+−10
+0
+Inflation improvement
+(0.001 log units)
+Epoch weak
+Batch weak
+Epoch strong
+Batch strong
+a
+Synthetic
+−5
+0
+Inflation improvement
+(0.001 log units)
+Epoch weak
+Batch weak
+Epoch strong
+Batch strong
+b
+JUCars
+−1
+0
+Inflation improvement
+(0.001 log units)
+Epoch weak
+Batch weak
+Epoch strong
+Batch strong
+c
+MUCars
+Reference: no feedback. Positive favors feedback. Three fitting seeds, 10% capacity.
+Thin: marginal 95% interval; pale: exploratory simultaneous band. These are not ten-seed results.
+Figure 7: Search-strength and score-refresh interventions relative to matched no-feedback controls,
+at 10% capacity. Points are mean reference-minus-candidate inflation differences; positive values
+favor feedback. Thin segments are marginal 95% crossed-bootstrap intervals and pale segments
+are exploratory simultaneous bands. This intervention retains three fitting seeds and ten shared
+batches; it is separate from the ten-seed RPL extension.
+7.4
+Controlled components and a search-strength intervention
+Takeaway. Stronger training-response search removed some feedback damage; the original negative
+result does not describe every feedback implementation.
+The complete suppression-score/feedback/gap factorial retained all eight combinations, includ-
+ing removal of two or all three switched components (Appendix H). These switches are experimental
+components, not three independently established innovations. Gap removal substantially increased
+mean primary inflation on the real sources, whereas the full three-component configuration was not
+uniformly best.
+The original scoring network was refreshed each epoch, rather than frozen throughout training.
+We crossed epoch versus minibatch score refresh with weak (two sweeps, one start) versus strong
+(20 sweeps, four starts) training-response search. Both retained two six-epoch rounds and matched
+no-feedback references. Figure 7 shows the audited paired improvements and conditional intervals
+at 10% capacity, retaining three fitting seeds. On synthetic, epoch-weak inflation was 0.02075,
+epoch-strong 0.01279, batch-strong 0.01269, and no-feedback 0.01303. Thus strengthening search
+substantially reduced the weak implementation’s damage, and the strong means were slightly below
+the no-feedback reference. Strong JUCars means were also slightly lower than no-feedback, whereas
+all four MUCars feedback means remained higher. Changing score-refresh frequency alone was not
+a consistent remedy. These are conditional mean comparisons, not proof of a uniquely identified
+cause or population-wide feedback benefit.
+22

@@ -1,0 +1,85 @@
+0.0
+0.5
+1.0
+1.5
+Honest MAE change (%)
+0
+10
+20
+30
+40
+50
+Inflation reduction (%)
+a
+Synthetic
+−1.0
+−0.5
+0.0
+0.5
+Honest MAE change (%)
+−20
+0
+20
+40
+Inflation reduction (%)
+b
+JUCars
+−3
+−2
+−1
+0
+1
+Honest MAE change (%)
+0
+10
+20
+30
+Inflation reduction (%)
+c
+MUCars
+−1
+0
+Attacked MAE change (%)
+0
+10
+20
+30
+40
+50
+Inflation reduction (%)
+d
+Synthetic
+−1.0
+−0.5
+0.0
+0.5
+Attacked MAE change (%)
+−20
+0
+20
+40
+Inflation reduction (%)
+e
+JUCars
+−2
+0
+Attacked MAE change (%)
+0
+10
+20
+30
+Inflation reduction (%)
+f
+MUCars
+Small: all 10 paired seed changes; outlined: their mean. Upper-left is favorable.
+10% capacity, β=0.5. Seed ratios differ from the headline ratio of means.
+λ=0.1
+λ=0.5
+λ=1
+Figure 2: Paired seed trade-offs at 10% capacity and β = 0.5. Small markers retain all ten fitting
+seeds per source and positive path weight; outlined markers are their means.
+Horizontal axes
+show honest or attacked MAE changes, while vertical axes show inflation reductions. Upper-left is
+favorable. Each point uses its same-seed control, so these mean seed ratios differ from the headline
+ratios of means. No confidence region is claimed.
+17

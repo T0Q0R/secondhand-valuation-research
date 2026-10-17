@@ -1,0 +1,53 @@
+checks every legal single-seller report against fixed peer reports, reallocating the batch each time.
+A returned profile with small remaining regret is a local deviation diagnostic, not a certificate
+of a globally selected market equilibrium. Predictions do not set a transaction price, and buyer
+preferences and bilateral trade are outside the model.
+3.2
+Predictors, public scores and comparator identity
+Suppression-aware valuation (SAV) combines an augmented price predictor, a suppression acqui-
+sition head and simulated query-feedback training. The original static-robust comparator changes
+the prediction training objective without that feedback procedure.
+Counterfactual deviation-
+constrained mixture verification (CDM) instead fixes the price model and calibrates probabili-
+ties over complete budget-feasible query rules.
+Its calibration objective constrains stored own-
+report/peer-profile rows, not all unseen types. The original library contains twelve rules and five
+calibration peer-profile families; expanding the finite library does not itself establish out-of-sample
+incentive compatibility. These original candidates provide the context for the matched experiment,
+whose newly trained initial-objective factor must not be renamed SAV or static robust.
+For training targets, let qs be a cross-fitted quote under report state s, qs\f the quote after
+recovering field f, qH the honest quote, and y the log advertised price. The three target quantities
+are
+vsup
+sf = [qs −qH]+ −[qs\f −qH]+,
+vben
+sf
+= (qs −y)2 −(qs\f −y)2,
+vrisk
+sf
+= (qs −y)2.
+A common multioutput ExtraTrees head learns these quantities from encoded public inputs [14].
+Honest records and targets construct training labels only; deployment does not directly substitute
+them into the scores. Each policy chooses its highest-scoring publicly eligible field and queries
+only positive scores. Top-B ranks these per-listing scores, using the declared stable tie rule. The
+score-minimax control instead balances positive residual scores through query marginals. It solves
+a score surrogate, not the true unilateral incentive problem.
+3.3
+Evaluation quantities
+For one returned report, let qH be its model’s honest log quote, y the log-transformed advertised
+price, q0 the no-query quote, q1 the quote conditional on the selected query, and p its marginal
+query probability. Here y = log(1 + price) and µ = (1 −p)q0 + pq1. The incentive coordinate is
+[µ −qH]+; it compares the model with itself, rather than with the advertised target. The separate
+realized-positive quantity is (1−p)[q0−qH]++p[q1−qH]+. Honest price error is | exp(qH)−exp(y)|,
+and attacked price error is
+(1 −p)| exp(q0) −exp(y)| + p| exp(q1) −exp(y)|.
+The subtraction of one cancels inside each absolute difference. Taking an absolute error after aver-
+aging the quotes would define a different metric. Failed-query probability is p times the indicator
+that the selected field cannot be recovered; such an attempt still consumes capacity. Signed log
+bias is µ −y, while expected squared log error averages the two squared endpoint errors before
+aggregation.
+Inflation alone admits a degenerate solution.
+A constant-quote model has zero inflation for
+every report, irrespective of its honest or attacked price error. Thus zero inflation is not evidence
+of useful valuation. We treat inflation, attacked MAE and failed-query probability as co-primary
+4

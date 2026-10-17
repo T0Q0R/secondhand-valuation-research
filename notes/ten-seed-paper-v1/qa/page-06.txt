@@ -1,0 +1,53 @@
+What the frontier excludes.
+Let kη = |{i : ∆i > 2η}|. Equation (1) implies T ∗(η, B) = 0 if
+and only if B ≥kη: each strictly positive residual gap needs unit query probability. In particular,
+at B = 0 zero gain requires η ≥1
+2 maxi ∆i. For n identical gaps ∆, the frontier simplifies to
+T ∗(η, B) = (∆−2η)+ (1 −min{B/n, 1}) .
+The lower bound follows because some marginal is at most B/n; equal marginals attain it. Thus
+honest precision, query capacity and strategic gain cannot be specified independently in this alias
+family.
+This is compatible with existing truthful predictors. Natural-versus-strategic missingness ambi-
+guity is explicit in [5], whose Theorems 1 and 2 give minimum-cut optimality and a MAX-ensemble
+characterization for binary classification. A predictor can eliminate withholding gains by chang-
+ing its predictions, while violating the uniform error requirement imposed here. Our lower bound
+restricts that escape route; it does not contradict truthful classification or establish impossibility
+under average MAE alone. History-dependent quote rules satisfy this frontier only when they also
+meet its verification-neutrality and uniform-precision assumptions on the specified family. An arbi-
+trary history cap cannot be placed inside that mechanism class without checking these conditions.
+A two-mode constructed example at B = 1, η = 0 yields 72/17 for the public oracle, 72/13 for
+the best global mixture of eight fixture rules, and 8 for risk ordering. The eight rules are the six
+priority permutations of three items, risk ordering by residual leverage (∆i −2η)+, and no query;
+this fixture library differs from the twelve-rule empirical CDM library in Section 3.2. These are
+artificial linear quote units, not empirical log-price effects. All 32 budget/precision cases passed a
+separate auditor.
+What is tested in the learned-model experiment.
+Equation (1) applies to the single-
+recoverable alias family, verification-neutral quotes and a uniform error constraint. The empirical
+model has four fields, can hide two and is evaluated by average MAE, so these assumptions do not
+establish its empirical optimum or predict a feedback sign. We use the frontier as a scope boundary.
+The recovery analysis instead gives a finite diagnostic on the actual model class: enumerate legal
+partial recoveries and test whether a query raises the quote above both its pre-query and honest
+anchors. Section 7.1 performs that check.
+4.2
+Compact implementability and contextual comparators
+Takeaway. Item-local utility permits an exact compact oracle; enlarging a globally mixed priority
+library need not remove its contextual limitation.
+Let yoif be the probability of querying field f of item i in public report class o. Impose
+yoif ≥0,
+∑
+f
+yoif ≤1,
+∑
+i,f
+yoif ≤B,
+and zero probability on publicly ineligible fields. Every declared unilateral deviation has the aﬀine
+form Gd(y) = bd + ∑
+o,i,f cdoifyoif when its realized utility depends only on its own queried field or
+no query. Coeﬀicients include both truthful and deviated report classes. Compatible latent worlds
+must share the same y variables.
+Proposition 1 (Compact finite oracle). For item-local utilities, nonadaptive queries, unit query
+costs and at most one queried field per item, minimizing max{0, maxd Gd(y)} over the above con-
+straints has the same value as the complete-allocation lottery oracle. Every feasible marginal solution
+is implementable under a hard budget on every draw.
+6

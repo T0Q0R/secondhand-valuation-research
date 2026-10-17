@@ -1,0 +1,51 @@
+H
+Controlled completion protocols and full comparison evidence
+H.1
+Recent-method identity and training boundaries
+The adapters use the same fixed price backends as ACO-1, not each paper’s original predictive task.
+SEFA, GDFS, DIME and explanation-ranked AFA learn acquisition using four training-quantile
+price classes; their scores feed a shared hard-capacity, one-query allocator. This does not make
+them native strategic regressors. Nonquery context is available, natural absence is unrecoverable,
+and deployment scores do not observe a hidden value or its missingness cause. Hidden-mileage
+perturbation checks left the corresponding public-state scores unchanged. Predictive information
+scores and policy probabilities are used as cross-listing priority proxies without a theorem of cross-
+listing cardinal comparability.
+SEFA used its oﬀicial MIT implementation, commit 3af8da2, configurations 1/5/9, 120 epochs
+per trial and their original latent-sampling settings. GDFS and DIME used the comparison im-
+plementations in that repository, retaining their relaxed-one-hot/temperature and entropy-scaled
+value/epsilon-greedy cores. Their configurations 1/5/9 use 80 predictor-pretraining epochs and 15
+epochs per annealing stage. The task adapter starts from legal public reports and trains at most
+two recoveries, uses Adam and stagewise best validation states, and does not reproduce the orig-
+inal learning-rate scheduler. This is a sourced task adaptation, not an unchanged original-author
+reproduction.
+Explanation-ranked AFA used the oﬀicial repository commit d08f39a, its tabular MLP and
+three-layer, four-head GPT, hidden width 128 and embedding width 64. A fitting-partition 250-
+tree CatBoost classifier supplies TreeSHAP rankings; field-value and missing-indicator absolute
+contributions for the training label are summed. Natural missingness and numeric category coding
+are task adaptations. The stages comprise 250 masked-predictor, 200 ranking-supervised and 16
+policy-trajectory epochs, with at most two recoveries per training trajectory and a fixed initial
+action marker at history-free deployment. Learning rates 0.001, 0.0005, 0.0003 form a fixed local
+grid; the last is an additional sensitivity value rather than an original default.
+All four classification adapters select among three configurations using the same training-only
+80:20 split and then refit on all training records.
+SEFA uses its masked validation NLL and
+selected epoch, while the other three use mean pre/post-query NLL and their full fixed schedule.
+Thus selection effort is documented but their validation objectives are not identical. No evaluation
+outcome is used to select a configuration. ACO-1 instead retains the declared training-bank rule
+and fixed neighbor sensitivities described in Appendix E. These differences, the fixed 1,000-record
+completion cohort, and three fitting seeds bound cross-family conclusions.
+H.2
+Full component removals and parameter choice
+S switches suppression rather than ordinary-benefit score training, F switches feedback, and G
+switches the gap penalty. All 23 combinations share the role separation, epoch budget and reset
+schedule.
+The conventional backbone, mask augmentation, prediction/attack-error and anchor
+terms remain when all three switches are removed. Figure 10 therefore is a complete component
+ablation, not a comparison with an untrained or native predictor.
+Core sensitivity varied gap weight over 0, 0.1, 0.25, 0.5, 1, 2, tolerance over 0, 0.01, 0.02, 0.05, 0.1,
+and one/two/four reset-feedback rounds at fixed total 12 residual epochs. The design values 0.5
+and 0.02 are fixed engineering choices on the log-quotation scale, not optimal values estimated from
+these curves. Increases in gap weight reduce inflation means in this grid, but inflation alone cannot
+select a default. Figure 11 retains both evaluated capacities. A further 144 cells vary anchor weight,
+attack-loss weight, learning rate, epochs, action-head tree count and hidden width one at a time
+37

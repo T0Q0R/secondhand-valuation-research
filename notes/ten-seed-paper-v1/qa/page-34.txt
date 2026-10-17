@@ -1,0 +1,53 @@
+G
+Conditional uncertainty and mechanism diagnostics
+G.1
+Exact conditional crossed-bootstrap variance
+Let Y be a paired-difference matrix with S fitting seeds and K batches. Independent bootstrap seed
+weights U and record-normalized batch weights V give U ⊤Y V . Write m = E[V ], C = Cov(V ),
+r = Y m −1 mean(Y m), z = means(Y ) and R = Y −1z⊤−r1⊤.
+The conditional variance
+decomposes as
+∥r∥2
+S2 + z⊤Cz + 1
+S2
+∑
+s
+R⊤
+s CRs.
+These are seed-main, batch-main and interaction terms. Batch-weight moments are calculated by
+conditioning on the multinomial count of the single partial batch, retaining ratio normalization.
+Exhaustive balanced and unequally weighted 2 × 2 resampling independently checks the formula.
+All 48 capped/full real-source feedback decompositions are retained. Capped components use ten
+equal 100-record batches; uncapped MUCars components use 107 batches normalized by record
+counts, including a 72-record tail. Thus the outcome matrix and averaging weights both change.
+For top-B and minimax, batch variances fall by factors 5.73 and 8.04 (not 10.7), while seed-main
+variances change by −13.20% and −9.43%. This is not variance reduction from sample size alone.
+Holding all 107 batches fixed and changing only equal-batch to record-count weights changes the
+seed term by merely −0.16% and +0.11%, respectively; the larger change cannot be attributed to
+tail weighting alone.
+Thirty-seed projections divide seed and interaction terms by three; the batch-noise-free projec-
+tion holds the empirical batch distribution fixed. Neither supplies new training runs, equivalence
+evidence or population coverage.
+G.2
+Concealment identification from saved utility summaries
+For one listing let Ci = ciki be concealment cost, Gi positive expected quote inflation, Ni the
+positive best-legal-utility gain over truth, and ρi remaining unilateral regret. Since truthful utility
+is its honest quote,
+Ci −ρi ≤Gi −Ni ≤Ci.
+Thus max(G −N, 0) bounds mean cost below; adding maxi ρi and capping by 2c bounds it above.
+Uniform-cost hidden-field bounds divide by c; heterogeneous costs in [.01, .03) give bounds using
+.03 and .01, respectively. Dividing by mean heterogeneous cost would not identify mean hidden
+fields. Positive-cost states were not saved; all 20 nonconverged batches remain in the bounds. The
+inequality passes 768 exhaustive toy utility/returned-state checks. The paired zero-cost concealment
+counts use saved states directly. Neither co-occurrence nor this accounting identity identifies a
+causal mediation effect.
+G.3
+Restricted final-record honest-error pilot
+Three frozen robust/no-feedback models per real source (seeds 13, 42 and 2026) enumerate comple-
+tions of transmission, fuel and body condition from their training-encoder vocabularies, including
+missing tokens. Mileage must be observed and fixed; other covariates stay fixed. Unsupported ob-
+served categories and missing mileage abstain. The same original 1,000 records per source are used
+without tuning or retraining. Current records are included in the minima; singleton sets preserve
+their original quotes exactly. Shared-support errors and abstentions are reported separately.
+Figure 9 links the coverage boundary to the concentration of error costs.
+34

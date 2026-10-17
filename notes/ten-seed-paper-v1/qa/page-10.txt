@@ -1,0 +1,51 @@
+6
+Experimental design and corroborating checks
+6.1
+Cohorts and source boundaries
+Takeaway. The evidence concerns advertised-price prediction on fixed retrospective cohorts and
+explicitly modeled seller responses.
+JUCars-2024 version 2 contains Jordanian listings from 2024 and was deposited in 2026
+[1];
+MUCars-2024 version 2 contains Moroccan listings from 2024
+[2]. Both sources are distributed
+under CC BY 4.0. Recorded prices are advertised prices, not completed transaction prices. We eval-
+uate native currencies separately. The synthetic market follows the saved generator rather than an
+empirically identified transaction model. Before the present caps, the processed training/evaluation
+splits contain 4,774/1,374 JUCars records and 39,244/10,672 MUCars records. Identifier hashing
+caps training at 5,000 and evaluation at 1,000 records. Synthetic generation uses fixed seeds 73,101
+and 73,102 for 6,000/1,500 records before the same caps. Fitting seeds vary training randomness,
+not the source cohorts or generator. The hash cap is deterministic and label-independent; all ten
+fitting seeds share exactly the same evaluation records and batch membership. Seed variation re-
+flects fitting randomness only. The validation sources were inspected during development and are
+retrospective, rather than fresh confirmatory tests. The capped cohorts contain ten batches of 100;
+these small cluster counts restrict uncertainty claims.
+Original advertisement identifiers are unavailable; inherited non-price fingerprints provide du-
+plicate control without certifying independent vehicles.
+Targets, identifiers, source indices and
+declared direct reveal aliases are excluded from predictor inputs. Correlated covariates remain,
+so concealment need not remove all information about a field. Naturally absent fields cannot be
+concealed by a seller or successfully recovered by a query.
+6.2
+Matched training and evaluation
+Takeaway. The full controlled experiment and four-stage audit are complete; controlled contrasts
+do not establish a general method advantage.
+The new design crosses two initial training objectives (mask-augmented and robust), three ac-
+quisition scores (suppression, benefit and risk), two policy feedback settings, and two allocators
+(top-B and score-minimax). The initial objective factor is a new controlled intervention, not a
+relabeling of the original SAV and static-robust checkpoints. Each cell uses the same backbone
+architecture, six initial residual epochs and six subsequent epochs in two rounds, with matched
+record orders and head-refresh schedules. No-policy-feedback fits are shared across their six ac-
+quisition/allocation aliases, giving fourteen unique fits for twenty-four cells.
+The implemented
+sequence is:
+1. For each of three outer folds, exclude its records from the complete training loop. Split the
+remaining records into estimator and head-guidance sets, using a guidance fraction of 0.3.
+Fit the augmented backbone and each six-epoch initial residual objective.
+2. Clone each initial model into one no-policy-feedback fit and six score/allocator-specific feed-
+back fits. Run two three-epoch robust-update rounds. Refit the guidance head after each
+round, retaining identical record orders across the matched cells.
+3. At the start of each feedback epoch, compute public acquisition scores and hold them fixed
+during that epoch. Within each minibatch, use the current detached quotes to search seller
+responses, with two sweeps and one start at 10% capacity. Reallocate the batch for every
+candidate report. Update only the residual model using the resulting frozen response and
+10

@@ -1,0 +1,39 @@
+0
+0.005
+0.020
+Hetero.
+Cost scenario
+0.00
+0.25
+0.50
+0.75
+1.00
+a Hidden fields per listing
+No feedback
+Feedback
+0
+0.005
+0.020
+Hetero.
+Cost scenario
+-1.5
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+b Inflation improvement (x1000)
+Seed 13
+Seed 42
+Seed 2026
+Figure 16: Cost deterrence accompanies the local feedback reversal, whose sign varies across fit-
+ting seeds. Synthetic robust/suppression/top-B on the same 1,000 records and three fitting seeds.
+(a) Zero-cost markers are directly observed mean hidden counts. Positive-cost line segments are
+utility/regret identification bounds on the mean count, not confidence intervals; no midpoint esti-
+mate is asserted. (b) Symbols retain all three paired seed effects, measured as no-feedback minus
+feedback inflation; horizontal black strokes are seed means and positive values favor feedback. The
+four categorical scenarios are zero, uniform 0.005, uniform 0.02 and heterogeneous 0.02hi, with
+hi ∈[0.5, 1.5). No interpolation between scenarios or new uncertainty claim is made. All returned
+nonconverged profiles are retained.
+45

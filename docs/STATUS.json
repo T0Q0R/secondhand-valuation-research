@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-16T10:19:46+08:00",
+  "snapshot_time": "2026-10-17T23:44:44+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,18 +28,23 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "review_boundaries_v1_revised_compiled_checked",
-    "pages": 48,
-    "authors_affiliations_omitted": true,
+    "revision_status": "ten_seed_rpl_integrated_compiled_visual_checked",
+    "pages": 55,
+    "authors_affiliations_omitted": false,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 inspected",
-    "source_sha256": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
-    "pdf_sha256": "a26783fbd9738b6c32725f916be3b3179348f2fed7f6380e146f3ec3a043d8c3",
+    "all_page_visual_review": "Final55-page contacts plus detail pages1/16/17/20/26/27/39/40 checked",
+    "source_sha256": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
+    "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
     "submission": "not_submitted",
     "formal_submission_ready": false,
-    "abstract_words": 208,
-    "figure_count": 12
+    "abstract_words": 228,
+    "figure_count": 17,
+    "main_pages_including_declarations": 26,
+    "appendix_and_references_pages": 29,
+    "main_figure_count": 8,
+    "appendix_figure_count": 9,
+    "table_count": 18
   },
   "figures": {
     "new_count": 4,
@@ -50,10 +55,14 @@
     ],
     "collision_qa": "Four originals PASS; six embedded pages extraction-adapted PASS with default thresholds",
     "single_axes": true,
-    "minimum_embedded_label_pt": 8,
-    "total_count": 6,
+    "minimum_embedded_label_pt": "Current9vectorassets7pt at183mm; approx6–7pt in current review layout; final journal-width/prepress check pending",
+    "total_count": 17,
     "alignment": "Three two-panel figures PASS1.5pt; single-panel NOT APPLICABLE",
-    "assets_archive": "notes/results-visual-v5/visualization-assets-v5.zip"
+    "assets_archive": "notes/results-visual-v5/visualization-assets-v5.zip",
+    "current_upgrade_groups": 9,
+    "current_upgrade_panels": 42,
+    "current_upgrade_QA": "notes/ten-seed-visual-review-v1/QA-summary.json",
+    "final_journal_artwork_compliance": false
   },
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
   "goal_complete": false,
@@ -67,12 +76,12 @@
     "current_figure_assets": "notes/results-visual-v5/visual-assets-index.json",
     "new_full_paper_bundle": "not_created_under_experiment_first_instruction"
   },
-  "completion_scope": "scientific revision and calculations delivered; no actual submission or public-release/author/external-full-training claim",
+  "completion_scope": "Ten-seed scientific manuscript and visualization revision delivered; no actual submission, DOI archive, author scientific approval or exact external numeric reproduction claim",
   "remaining_for_actual_submission": [
-    "author responsibility and factual declarations",
-    "institution CAS edition/category and selected template",
-    "public access/licensing/archival release decisions",
-    "external-machine full training reproduction"
+    "Author scientific review and factual declarations",
+    "Final journal template, supplemental split and artwork font size at final column width",
+    "DOI-backed archival release",
+    "Strict external numerical reproducibility unresolved and disclosed"
   ],
   "revision_v2": {
     "status": "implemented_with_declared_scientific_limits",
@@ -602,8 +611,8 @@
     "scheduler_nice": 10,
     "current_compute_workers": 0,
     "threads_per_worker": 1,
-    "current_stage": "completed_scientific_review_pending",
-    "completed_pairs": 25,
+    "current_stage": "all_computations_completed",
+    "completed_pairs": 30,
     "total_pairs": 30,
     "runtime_parent_pid": 56329,
     "no_queued_pairs_at_time_of_change": true,
@@ -612,22 +621,28 @@
     "physical_core_affinity_or_reservation": false,
     "frozen_runtime_limit_field": 8,
     "runtime_limit_note": "Existing frozen runner still reports8 as compiled ceiling; no queued workers remain, so actual current/future concurrency in this run cannot exceed5. Future launches must honor new6-thread preference.",
-    "last_verified_at": "2026-10-17T21:56:18+08:00"
+    "last_verified_at": "2026-10-17T23:44:44+08:00"
   },
   "ten_seed_visual_review_v1": {
     "status": "nine_figures_rendered_geometry_checked_and_visually_reviewed",
     "plan": "notes/ten-seed-visual-review-v1/NEXT_STEPS.zh.md",
     "new_training": false,
-    "manuscript_modified": false,
+    "manuscript_modified": true,
     "figure_groups": 9,
     "panels": 42,
     "delivery": "notes/ten-seed-visual-review-v1/delivery.json",
     "review_pdf": "paper/figures/ten-seed-v1/figure-review.pdf",
-    "manuscript_figures_integrated": false
+    "manuscript_figures_integrated": true
   },
   "ten_seed_paper_v1": {
-    "status": "revision_in_progress_not_compiled",
+    "status": "integrated_builtin_compiled_same_pdf_exported_and_visually_checked",
     "plan": "notes/ten-seed-paper-v1/PLAN.zh.md",
-    "new_training": false
+    "new_training": false,
+    "delivery": "notes/ten-seed-paper-v1/DELIVERY.zh.md",
+    "qa": "notes/ten-seed-paper-v1/qa/pdf-index.json",
+    "pages": 55,
+    "source_sha256": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
+    "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
+    "formal_submission_ready": false
   }
 }

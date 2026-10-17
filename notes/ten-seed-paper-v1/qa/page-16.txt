@@ -1,0 +1,106 @@
+Table 4: Ten-seed RPL means at 10% capacity, β = 0.5. MAE is in source currency; failed queries
+are a percentage of all listings. All seeds and nonconverged responses are retained.
+Source / λ
+Inflation
+Honest MAE
+Attacked MAE
+Failed (%)
+synthetic / 0
+0.01243
+3576.06
+3635.45
+2.51
+synthetic / 0.5
+0.00707
+3595.31
+3600.02
+3.49
+synthetic / 1
+0.00616
+3605.35
+3602.26
+3.61
+jucars / 0
+0.01244
+6966.89
+6957.18
+5.73
+jucars / 0.5
+0.01077
+6948.32
+6941.48
+5.35
+jucars / 1
+0.00913
+6959.75
+6956.01
+6.17
+mucars / 0
+0.00661
+27155.74
+27306.07
+0.43
+mucars / 0.5
+0.00566
+26983.89
+27114.40
+0.39
+mucars / 1
+0.00503
+26938.93
+27069.81
+0.31
+0
+5
+10
+15
+Inflation improvement
+(0.001 log units)
+λ=0.1
+λ=0.5
+λ=1
+λ=0.5; β=0
+a
+Synthetic
+0
+5
+10
+Inflation improvement
+(0.001 log units)
+λ=0.1
+λ=0.5
+λ=1
+λ=0.5; β=0
+b
+JUCars
+0
+2
+4
+6
+Inflation improvement
+(0.001 log units)
+λ=0.1
+λ=0.5
+λ=1
+λ=0.5; β=0
+c
+MUCars
+Positive favors RPL. Thin: marginal 95% interval; pale: exploratory simultaneous band.
+10 fitting seeds × 10 fixed batches; all responses retained.
+Figure 1: Ten-seed paired inflation improvement at 10% capacity.
+Positive values favor RPL.
+Each branch uses its same-gap zero-path control. Thin segments are marginal 95% intervals; pale
+segments are exploratory simultaneous bands over 216 metric contrasts. Ten fitting seeds share fixed
+training/evaluation populations and ten batches. Bands do not establish finite-sample family-wise
+coverage.
+met the stated finite unilateral tolerance. These are outcomes of the declared finite response search,
+not evidence of improvement at an exact market equilibrium.
+7.3
+Five task-adapted recent acquisition families on fixed price models
+Takeaway. These are five task-adapted comparisons, not unchanged reproductions of five original
+methods. Their four-stage computational checks are complete; estimator choice and simple strong
+controls remain material.
+ACO is a clean-room one-query adaptation. SEFA uses oﬀicial model code inside a changed task
+interface; GDFS and DIME use the SEFA repository’s comparison implementations; explanation-
+ranked AFA uses oﬀicial network classes with adapted ranking generation and training. Origi-
+16

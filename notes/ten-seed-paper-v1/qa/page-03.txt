@@ -1,0 +1,49 @@
+2.2
+Verification, randomization and information acquisition
+Estornell et al. minimize incentives through budgeted audits, including threshold and top-k settings
+[4]. Zhang et al. study automated classification mechanisms with partial verification, including ran-
+domized decisions and combinatorial costs [6]. Marginal-probability representations are established
+in security-game optimization [3]. The finite oracle here specializes those tools to public report
+classes and continuous quote recovery, with failed queries charged against capacity. Its complete
+finite coverage is a certificate within the declared world universe, not a guarantee for unseen types.
+Active feature acquisition addresses budgeted information selection [12]; its predictive objective
+differs from the signed unilateral quotation difference audited here.
+Recent acquisition methods include amortized greedy selection (GDFS) [17], discriminative in-
+formation estimation (DIME) [18], stochastic latent encodings (SEFA) [19], and explanation-ranked
+transformer policies [20]. Alongside ACO [12], they broaden acquisition coverage beyond simple
+risk and predictive benefit. Their predictive objectives, sequential budgets and input assumptions
+do not imply control of strategic quotation gain. Our executed adapters and their limitations are
+specified in Appendix H.
+2.3
+Strategic feedback and contextual policy classes
+Performative prediction analyzes retraining when deployment changes the data
+[10]; strategic
+empirical risk minimization differentiates through modeled user responses [11]. Contextual games
+use public side information to condition decisions [7]. Joint score and audit design is also explicit
+in recent audit-risk work [8]. We do not transfer their convergence conditions to our nonconvex,
+finite-round training loop or introduce randomization as a new technique. Instead, we test an epoch-
+refreshed implementation under matched fitting budgets and separately intervene on within-epoch
+score refresh and training response-search strength. Our constructed policy-library separation also
+includes a stronger small context-aware comparator that closes the gap. This prevents a restricted
+library from being mistaken for evidence that dynamic weights or an LP solver are intrinsically
+necessary.
+3
+Problem formulation
+3.1
+Reports, queries and seller utility
+A batch contains n = 100 listings. Listing i has a latent recorded feature vector xi, including four
+optional action fields: mileage, transmission, fuel type and body condition. Let Mi be its naturally
+absent fields. A seller chooses a concealment set si containing at most two available action fields.
+Its public report ri(si) replaces fields in Mi ∪si with missing values. Available values cannot be
+fabricated, changed or recovered from public identifiers. A missingness indicator does not disclose
+membership in Mi.
+The platform observes the whole report batch r = (r1, . . . , rn), locks the reports and chooses
+a possibly randomized allocation. It may query at most one publicly missing field per selected
+listing, with at most B = ⌊bn⌋queries on every realized draw. A query of a concealed recorded
+field recovers that value; a query of a naturally absent field fails. Both spend one unit. A fixed
+itemwise model produces log quotes before and after the selected query. Scores and allocations at
+deployment may use public reports and model outputs, but not the latent recoverability indicator
+or the advertised target.
+Seller utility is the expected log quote minus concealment cost. Main empirical costs are zero; all
+randomization occurs after reports are locked. Evaluation uses finite response search and explicitly
+3

@@ -1,0 +1,61 @@
+descriptive outcomes, with honest MAE as the precision coordinate. The joint outcome vector,
+continuous paired effects and Pareto trade-offs take priority over any single ranking. This reporting
+choice is retrospective; it is not a preregistered change in the original experiment.
+For the unilateral audit, hold peers’ returned reports fixed and enumerate all feasible reports
+of one seller, reallocating the whole batch for each. Writing u(r) for that seller’s expected log
+quote minus concealment cost, the deviation envelope is [maxr u(r)−u(rhonest)]+; remaining regret
+instead subtracts the utility of the returned report. Thus a small regret does not establish a small
+gain over honesty. Main empirical concealment costs are zero. All quantities are aggregated over
+the retained listings; nonconverged responses remain in the analysis. The finite oracle’s constructed
+quote units must not be interpreted as empirical log-price effects.
+4
+Information limits and finite reference mechanisms
+4.1
+Public-information precision frontier
+Takeaway. A finite complete oracle can distinguish a policy-library restriction from the best value
+achievable under the same public information.
+Let o be the complete observable batch signature and AB(o) its feasible complete nonadaptive
+allocations, each spending at most B queries. Allocate probability zoa to action a, sharing the same
+variables across latent worlds with the same signature. For each legal deviation d, let Gd(z) be the
+expected deviated quote minus the truthful quote, with the entire batch reallocated on both sides.
+The finite oracle solves
+min
+z,t t
+s.t.
+Gd(z) ≤t (∀d),
+∑
+a∈AB(o)
+zoa = 1,
+zoa ≥0,
+t ≥0.
+This is exact only for the declared complete finite world/report/action universe. Its numerical
+primal/dual certificate uses tolerance 10−8. It is not a guarantee over unseen types or general
+adaptive query trees.
+For the frontier, we optimize both verification and the itemwise quote function subject to the
+precision constraint; a fixed empirical predictor need not attain the bound. Consider a separate
+alias family with an all-natural-missing world and worlds in which only listing i has a recoverable
+low-value field, lowering its target by ∆i > 0. Withholding it produces the same public batch.
+Require verification-neutral quotes (same final record, same quote), and uniform absolute error at
+most η on all specified honest reports. Set ai = (∆i −2η)+. The attainable worst positive expected
+gain is
+T ∗(η, B) =
+min
+0≤pi≤1, ∑
+i pi≤B max
+i
+ai(1 −pi).
+(1)
+For the nonzero interior case, ∑
+i:ai>0(1 −T ∗/ai)+ = B.
+Proof and boundaries.
+Couple queries by their private random seed on the all-failure transcript.
+Let pi be the probability of querying i. Hard capacity gives ∑
+i pi ≤B. By verification neutrality
+and the fixed itemwise quotation rule, unsuccessful queries do not change the quote. Until i is
+queried, its hidden low-value world has the same transcript; without recovery, the honest-precision
+constraint leaves a quote gap at least ∆i −2η. This proves the lower bound, including adaptive
+policies in this single-recoverable family. Choose quote shifts ei = min(η, ∆i/2) toward one another
+and marginals pi = (1 −T ∗/ai)+. Systematic interval sampling realizes these marginals with at
+most B queries per draw and attains the bound. This does not follow from an average MAE bound.
+It does not imply zero adaptivity benefit for failed-query counts or multi-field worlds.
+5

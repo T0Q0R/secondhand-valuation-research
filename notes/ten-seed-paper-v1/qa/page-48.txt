@@ -1,0 +1,96 @@
+Source
+Price
+Score
+Reduction (%)
+95% interval
+Failure change
+mucars
+robust
+benefit
+13.70
+[0.00087, 0.00128]
+0.060
+mucars
+robust
+risk
+0.13
+[−0.00024, 0.00024]
+-0.000
+mucars
+robust
+suppression
+13.05
+[0.00082, 0.00126]
+0.128
+synthetic
+masking
+benefit
+-47.57
+[−0.02905, −0.01810]
+-1.543
+synthetic
+masking
+risk
+-49.33
+[−0.02998, −0.01744]
+-1.659
+synthetic
+masking
+suppression
+-22.54
+[−0.01618, −0.01067]
+-1.597
+synthetic
+robust
+benefit
+-6.65
+[−0.00193, 0.00038]
+-1.186
+synthetic
+robust
+risk
+-11.36
+[−0.00221, −0.00037]
+-0.928
+synthetic
+robust
+suppression
+2.34
+[−0.00009, 0.00085]
+-0.633
+K
+Additional historical control analyses
+The following analyses retain the full original protocols and numerical evidence summarized in the
+main text. Their original fitting-seed and uncertainty scopes are unchanged.
+K.1
+Matched factorial effects
+Takeaway. Under the original weak training-response search, all 36 primary feedback contrasts
+increase mean inflation. This documents a failure of that implementation, not a general negative
+effect of feedback.
+Which conclusion is primary?
+The paper’s empirical conclusion is that verification and feed-
+back outcomes depend on the learning and response procedures. The 36/36 count, Table 18, and
+the controls in Appendix J establish the well-audited original implementation’s failure pattern.
+They are not the headline claim that feedback is intrinsically harmful.
+The later, four-stage-
+checked search intervention (Section 7.4) largely removes the synthetic/JUCars mean damage with
+stronger training search, while MUCars remains adverse in those means. Both findings must be
+read together; neither identifies weak search as the sole cause nor proves exact-equilibrium benefit.
+Table 2 separates completed computational checks from independent scientific confirmation.
+Inference scope.
+Every source uses ten fitting seeds and ten shared evaluation batches of 100
+listings. The same 1,000 listings are reused across seeds and methods; 4.32 million outcome records
+are therefore not independent listing observations. We report 1,000 crossed seed–batch bootstrap
+draws and their 2.5th and 97.5th percentiles. These unadjusted exploratory intervals condition on
+the fixed training records. They do not cover a new training population or correct for multiple
+comparisons. The primary capacity supplies 174 factor contrasts and 18 additional joint-policy
+contrasts, each evaluated on eight metrics. All six capacities and all contrast components remain in
+the evidence package. Comparisons away from 10% also measure transfer from the fixed training
+capacity.
+Post-hoc simultaneous sensitivity.
+We supplement the original unadjusted intervals with
+20,000 centered crossed bootstrap draws [15]. The family maximum of absolute standardized er-
+rors supplies one common critical value; scales are the conditional standard deviations of the crossed
+bootstrap, not re-estimated inside each draw. Pairing across methods and metrics is retained. We
+report the 36 inflation feedback contrasts, the same contrasts on three co-primary outcomes (108),
+48

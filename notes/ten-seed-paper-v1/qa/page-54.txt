@@ -1,0 +1,43 @@
+convergence tolerance, compared with 34 original cells. The maximum capped regret is 0.204423
+log units. We retain these cases. In the primary robust benefit comparison, one synthetic seed has
+one nonconverged batch, with maximum regret 0.029232; the JUCars and MUCars primary benefit
+batches pass the specified local regret check. Therefore no result is described as a certified market
+equilibrium.
+For the 12 primary source/rule contrasts, we compute unadjusted 95% percentile intervals from
+1,000 paired resamples of the ten shared batches, first averaging the three fixed fitted-seed out-
+comes within each batch. These are conditional evaluation-batch intervals, not training-population
+intervals or 30 independent batch replicates. For benefit, the absolute inflation-reduction intervals
+are [0.000388, 0.001252] (synthetic), [0.001207, 0.001586] (JUCars), and [0.000842, 0.000995] (MU-
+Cars). The JUCars and MUCars point reductions satisfy the original 10% inflation/5% honest-error
+criterion with a positive conditional interval, but that criterion does not constrain attacked error
+or query failures. In particular, JUCars attacked MAE increases by 0.080%.
+Risk had no change in the earlier primary fixed-profile table, but can change under the newly
+computed profiles.
+The comparisons condition on different peer reports, so these findings are
+compatible. The existing fixed-profile theorem must not be used as a common-response or Pareto-
+dominance guarantee.
+References
+[1] N. Thalji. JUCars-2024: A Dataset of Used Car Listings in Jordan. Mendeley Data, version
+2, 2026. doi:10.17632/ddcz486x5t.2.
+[2] E. Tabarnoust, M. Mghari and Y. Zaz. Moroccan Used Cars Dataset (MUCars – 2024). Mende-
+ley Data, version 2, 2024. doi:10.17632/vjrbcb2rrt.2.
+[3] J. Letchford and V. Conitzer. Solving Security Games on Graphs via Marginal Probabilities.
+AAAI, 2013, pp. 591–597. https://doi.org/10.1609/aaai.v27i1.8688.
+[4] A. Estornell, S. Das and Y. Vorobeychik. Incentivizing Truthfulness Through Audits in Strategic
+Classification. Proceedings of the AAAI Conference on Artificial Intelligence, 35(6):5347–5354,
+2021. https://doi.org/10.1609/aaai.v35i6.16674.
+[5] A. K. Krishnaswamy, H. Li, D. Rein, H. Zhang and V. Conitzer. Classification with Strategically
+Withheld Data. Proceedings of the AAAI Conference on Artificial Intelligence, 35(6):5514–5522,
+2021. https://doi.org/10.1609/aaai.v35i6.16694.
+[6] H. Zhang, Y. Cheng and V. Conitzer. Automated Mechanism Design for Classification with
+Partial Verification. Proceedings of the AAAI Conference on Artificial Intelligence, 35(6):5789–
+5796, 2021. https://doi.org/10.1609/aaai.v35i6.16725.
+[7] P. G. Sessa, I. Bogunovic, A. Krause and M. Kamgarpour. Contextual Games:
+Multi-
+Agent Learning with Side Information. NeurIPS, 2020. https://papers.nips.cc/paper/
+2020/file/f9afa97535cf7c8789a1c50a2cd83787-Paper.pdf.
+[8] R. Ebrahimi and M. Franceschetti. Strategic Classification Has a Missing Lever: Audit Risk.
+arXiv:2609.22534v1, 18 September 2026, preprint. https://arxiv.org/abs/2609.22534.
+[9] J. Zhang, X. Liu and X.-B. Li. Predictive Analytics with Strategically Missing Data. INFORMS
+Journal on Computing, 32(4):1143–1156, 2020. https://doi.org/10.1287/ijoc.2019.0947.
+54

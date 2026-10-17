@@ -1,0 +1,25 @@
+reconstruction instructions, aggregate results, figure source data, resampling tensors and audit
+receipts. Third-party software and data retain their own licenses. Large model weights and per-
+listing artifacts remain on the research machine; a DOI-backed archival release has not yet been
+issued.
+External execution and numerical reproducibility.
+An independently operated Mac com-
+pleted the six-cell synthetic/seed-13 training-and-evaluation package. Training/evaluation popula-
+tions and tree backbones matched, but residual-network parameters and aggregate outcomes did
+not meet the original numerical tolerances. Those failures are retained. Subsequent saved-model
+diagnostics reproduced each machine’s own parameters and found the first recorded cross-machine
+difference in first-batch output weight gradients. Hidden intermediate activations were not cap-
+tured, so a specific arithmetic primitive or environment was not causally identified. Effect directions
+at the three tested budgets agreed in this one seed, but that is not numerical equivalence or a multi-
+seed external confirmation. An isolated float64 engineering candidate has not replaced the reported
+float32 experiments and has not established cross-machine performance.
+Use of AI tools.
+OpenAI Codex assisted implementation, experiment orchestration, analysis
+code, literature checks, data-derived figure preparation and manuscript drafting.
+Figures were
+plotted from inspectable saved results, not generated as invented empirical images. Quantitative
+statements are bound to experiment records and the computational checks above. AI tools are not
+authors; the named authors remain responsible for scientific interpretation and final approval. Au-
+thor contributions, funding and competing-interest declarations require author confirmation before
+submission and are not inferred here.
+26

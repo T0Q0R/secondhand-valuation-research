@@ -1,0 +1,90 @@
+0
+0.125
+0.25
+0.5
+1
+Anchor weight
+Default = 0.25
+0.8
+1.0
+1.2
+Inflation / Matched default
+a
+Anchor weight
+0
+0.25
+0.5
+1
+2
+Attack loss weight
+Default = 0.5
+0.8
+0.9
+1.0
+1.1
+1.2
+Inflation / Matched default
+b
+Attack loss weight
+0.0003
+0.001
+0.003
+Learning rate
+Default = 0.001
+0.5
+1.0
+1.5
+Inflation / Matched default
+c
+Learning rate
+6
+12
+24
+Residual epochs
+Default = 12
+0.50
+0.75
+1.00
+1.25
+1.50
+Inflation / Matched default
+d
+Residual epochs
+80
+160
+320
+Head trees
+Default = 160
+0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+Inflation / Matched default
+e
+Head trees
+32
+64
+128
+Hidden width
+Default = 64
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+Inflation / Matched default
+f
+Hidden width
+10% capacity. Dotted lines mark defaults; ticks show all evaluated settings.
+Three-seed means and full ranges, not CIs. All ratios use the same-seed baseline.
+Synthetic
+JUCars
+MUCars
+Figure 12: Six implementation-parameter scans at 10% capacity, retaining three fitting seeds. Every
+ratio uses the same-seed matched default. Dotted lines mark defaults; ticks show all evaluated
+values, and learning rate uses a logarithmic axis. Curves show means and full seed ranges, not
+confidence intervals.
+40

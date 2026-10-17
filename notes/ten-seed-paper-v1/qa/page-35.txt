@@ -1,0 +1,68 @@
+Source
+Support
+Records
+Honest-MAE change
+Mean quote reduction
+JUCars
+Covered
+801
+0
+0
+JUCars
+Missing category
+1
+0
+0
+MUCars
+Covered
+999
+10.49–23.87
+200.21–240.51
+MUCars
+Missing category
+28
+374.24–851.51
+7,143.33–8,581.21
+Table 11: Final-record categorical-envelope pilot. Entries are per-source three-seed ranges, not
+uncertainty intervals; positive MAE changes are worse. Price quantities use source currency units.
+Missing-category rows are subsets of covered rows, not additional observations. JUCars abstains
+on 199 records, MUCars on one, all for missing mileage.
+0
+500
+1000
+Validation listings
+JUCars
+MUCars
+800
+971
+a Coverage among 1,000 listings
+Covered
+n=999
+Natural missing
+n=28
+MUCars evaluation support
+0
+250
+500
+750
+1000
+b Honest-MAE increase (currency)
+Seed 13
+Seed 42
+Seed 2026
+Complete
+Natural missing
+Abstain
+Figure 9:
+The restricted final-record envelope’s honest-error cost is concentrated on natu-
+rally incomplete categorical records.
+(a) Among each source’s original 1,000 listings, com-
+plete/incomplete/abstained counts are 800/1/199 for JUCars and 971/28/1 for MUCars. Com-
+plete means all three declared categorical fields are observed; missing mileage causes abstention.
+Complete covered records have singleton completion sets and exactly zero change. (b) Every MU-
+Cars fitting seed is shown for all 999 covered records and its nested 28-record naturally incomplete
+subset; lines link the two descriptive means for the same frozen model, without interpolation or
+confidence intervals. Positive honest-MAE change is worse; units are MUCars currency. Mileage
+remains observed and fixed. This does not validate the full four-field game or unseen-category
+coverage.
+35

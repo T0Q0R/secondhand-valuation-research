@@ -1,0 +1,50 @@
+A positive interaction can mean less harm.
+For synthetic data with the mask objective and
+suppression acquisition, the feedback–allocation interaction was D = 0.004917, with an unadjusted
+interval [0.002378, 0.007586]. Feedback increased inflation under both allocators: from 0.010871 to
+0.018969 under top-B, and from 0.010638 to 0.013818 under minimax. The positive interaction
+measures the smaller increase under minimax; it does not show that minimax feedback improved
+on its no-feedback control. Across all sources, none of eighteen joint changes from no feedback/top-
+B to policy feedback/minimax passed the point gate. The three favorable MUCars joint point
+estimates were small and their intervals crossed zero. Inflation, honest error, attacked error and
+failed-query effects must therefore be read jointly rather than inferred from the interaction sign.
+Mechanism and practical boundary.
+The factorial experiment isolates implemented training
+and allocation choices, but does not identify a unique cause of its feedback damage. Section 7.4
+intervenes on response-search strength and score-refresh frequency; stronger search removes some
+damage, while capacity transfer is not separately identified. These computationally checked devel-
+opment interventions qualify the negative result without establishing a sole cause. The appropriate
+practical comparison is the matched no-feedback control with the same initial objective, score and
+capacity. Choosing feedback from a positive interaction alone is unsupported. A risk score is also
+not a universal fallback: its feedback-trained cells are among the adverse cases. Performance on a
+new cohort requires renewed multiobjective validation; point Pareto flags in the present cohort are
+descriptive, not probabilistic dominance guarantees.
+Absolute outcomes qualify an inflation-only ranking.
+Appendix J holds the robust initial
+objective and suppression acquisition fixed. Minimax feedback increased JUCars inflation from
+0.010432 to 0.011855 while reducing attacked MAE from 6902.07 to 6899.03 and lowering query
+failures. On MUCars, the same feedback contrast increased both inflation and attacked error. Thus
+improving prediction error need not reduce the seller’s gain over the model’s own honest quote. Of
+the 432 source/capacity/cell settings after aggregating seeds, 37 contained a nonconverged batch;
+eight of these were synthetic primary-capacity settings. The maximum recorded remaining regret
+was 0.177513 log units. All were retained.
+K.2
+Strong controls and the original candidate comparison
+The original SAV study supplies a comparator check rather than a factorial attribution. Its ten-
+seed extension covers 30 source–seed pairs, 1,860 cells and 1.86 million repeated outcomes. At
+10% capacity, SAV inflation was 0.021175 on synthetic data, 0.014988 on JUCars and 0.007340
+on MUCars; the corresponding static-robust values were 0.012084, 0.012082 and 0.006511. The
+static-robust-minus-SAV crossed intervals were [−0.012355, −0.006323], [−0.007025, 0.000777] and
+[−0.001870, 0.000210], respectively. These comparisons do not support consistent SAV superiority;
+intervals including zero also do not establish equivalence.
+Appendix C retains all five original
+comparators for each source, including strong benefit-head controls and weaker masking/no-gap
+variants. These original models must not be substituted for the matched factorial objectives.
+Competitive controls materially change the original-method story. In the audited three-seed
+ordinary-benefit extension, reference-minus-SAV inflation differences are −0.00998 on synthetic and
+−0.00432 on JUCars; their conditional intervals are [−0.01260, −0.00791] and [−0.00598, −0.00285].
+The ACO-1 control also beats SAV on these sources, with SAV-minus-ACO differences 0.00995 and
+0.00431 and intervals [0.00725, 0.01345] and [0.00291, 0.00588]. These are separate original-protocol
+three-seed comparisons, not new ten-seed matched-factorial effects. A universal SAV advantage is
+not reproduced against these strong controls. MUCars remains conditional: ordinary benefit favors
+50

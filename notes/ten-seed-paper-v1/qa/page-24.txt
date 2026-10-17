@@ -1,0 +1,39 @@
+0
+5
+10
+Inflation reduction (%)
+-0.15
+-0.10
+-0.05
+0.00
+0.05
+0.10
+a Attacked-MAE change (%)
+0
+5
+10
+Inflation reduction (%)
+0.0
+0.2
+0.4
+0.6
+0.8
+b Failed-query change (pp)
+Synthetic
+JUCars
+MUCars
+Suppression
+Benefit
+Risk
+CDM
+Figure 8: Inflation reductions under the history cap coexist with predictive-error and query-failure
+costs.
+Both panels show the same twelve primary robust-estimator source/rule means at 10%
+capacity, averaging three fixed fitting seeds on 1,000 shared listings per source.
+Colors denote
+sources and shapes denote query rules. Positive inflation reduction is favorable; positive attacked-
+MAE change (a) and failed-query change (b) are unfavorable. Error changes are within-source
+percentages; failure changes are percentage points per listing. These are descriptive means, without
+confidence intervals; nonconverged responses remain included. The full numerical comparison is in
+Appendix J.
+24

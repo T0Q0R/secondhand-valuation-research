@@ -1,0 +1,67 @@
+{
+  "status": "integrated_builtin_compiled_same_pdf_exported_and_visually_checked",
+  "source_before": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
+  "source_after": "7ff47367b5c201d73e7f54101be93a7981e6c596c7c786559fa7209686ad32ea",
+  "abstract_word_count": 228,
+  "display_counts": {
+    "main_figures": 8,
+    "appendix_figures": 9
+  },
+  "changed_sections": [
+    {
+      "anchor": "\\begin{abstract}",
+      "old_words": 236,
+      "new_words": 232
+    },
+    {
+      "anchor": "The main contribution is a controlled audit",
+      "old_words": 287,
+      "new_words": 181
+    },
+    {
+      "anchor": "\\subsection{Recovery-path regularization: improvement and costs}",
+      "scope_note": "Ten-seed result subsection replaced, other original results subsequently reordered and retained; use whole-results compression measure."
+    },
+    {
+      "anchor": "\\section{Discussion}",
+      "old_words": 362,
+      "new_words": 353
+    },
+    {
+      "anchor": "\\section{Conclusion}",
+      "old_words": 215,
+      "new_words": 106
+    },
+    {
+      "anchor": "\\section*{Data, code and use of AI tools}",
+      "old_words": 221,
+      "new_words": 309
+    }
+  ],
+  "retained_old_theory_and_experiments": true,
+  "external_failure_disclosed": true,
+  "external_figure_includes": true,
+  "manuscript_is_same_file": true,
+  "new_training": false,
+  "historical_results_relocated_with_no_numeric_exclusion": [
+    "Matched factorial effects",
+    "Strong controls and the original candidate comparison",
+    "Allocation changes on frozen models",
+    "Continuous effects and decision-threshold sensitivity",
+    "Positive costs change the conditional feedback ranking",
+    "Full-validation evaluation coverage",
+    "Full cap-response detail"
+  ],
+  "main_results_words_before_compression": 5257,
+  "main_results_words_after_compression": 2232,
+  "pdf_sha256": "b4c0989fdacfd3a9080b3e8ee066ad3be29cf1e5712a4ed5d648cedb4db7c143",
+  "pages": 55,
+  "main_pages": 26,
+  "appendix_and_references_pages": 29,
+  "tables": 18,
+  "references": 20,
+  "qa": "notes/ten-seed-paper-v1/qa/pdf-index.json",
+  "delivery": "notes/ten-seed-paper-v1/DELIVERY.zh.md",
+  "formal_submission_ready": false,
+  "main_results_words_after_final_edits_approx": 2235
+}

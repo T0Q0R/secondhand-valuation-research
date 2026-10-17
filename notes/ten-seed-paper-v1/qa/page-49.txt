@@ -1,0 +1,61 @@
+and all 1,536 primary contrast/metric combinations. A source-wise Bonferroni sensitivity avoids re-
+quiring cross-source independence. Resampling maxima are established multiple-testing tools [16];
+this is a single-step sensitivity analysis, not a transfer of their finite-sample guarantee.
+The adverse feedback count falls from 34 unadjusted intervals to 31, 27 and 20 under these
+three families (Appendix J). Source-wise bands retain 31, 27 and 19. The original 36 adverse point
+estimates remain unchanged. No family certifies that every contrast is harmful. With only ten
+seeds and ten batches, approximate simultaneous bands do not establish finite-sample coverage,
+fresh-cohort confirmation or training-population uncertainty.
+Feedback does not explain a beneficial effect in this design.
+Define a feedback contrast as
+no-policy-feedback loss minus policy-feedback loss, holding the initial objective, score and allocator
+fixed. For positive expected log-quote inflation, all 36 point estimates at 10% were negative; 34
+unadjusted intervals excluded zero in the unfavorable direction. The two intervals crossing zero
+corresponded to MUCars with the mask initial objective and suppression acquisition. No feedback
+contrast passed the point gate of at least 10% inflation reduction with at most 5% honest-MAE
+increase. This is a negative result for the implemented two-round, epoch-refreshed, weak-response-
+search training procedure. The strong-search means in Section 7.4 narrow its interpretation; they
+do not alter the original counts.
+Table 18 summarizes all primary directions.
+Source
+Feedback harms
+Harm intervals
+Robust-init gains
+Joint gates
+Synthetic
+12/12
+12/12
+4/12
+0/6
+JUCars
+12/12
+12/12
+12/12
+0/6
+MUCars
+12/12
+10/12
+12/12
+0/6
+Table 18: Original weak-search implementation: primary-capacity factorial diagnostics.
+These
+counts do not apply to strong-search retraining (Section 7.4). Counts refer to positive expected log-
+quote inflation. Feedback harms and robust-initialization gains are point-estimate directions. Harm
+intervals are 95% unadjusted intervals excluding zero adversely for the capped primary evaluation.
+The uncapped MUCars sensitivity also excludes zero in 10/12 intervals (Section 7.7). A joint gate
+compares no feedback/top-B with policy feedback/minimax under a fixed initial objective and
+score, requiring at least 10% inflation reduction and at most 5% honest-MAE increase. Counts are
+descriptive across correlated contrasts, not independent trials.
+Appendix J displays the suppression-acquisition comparisons.
+Initial-objective effects depend on the source.
+The robust initial objective lowered mean
+inflation in all twelve MUCars conditional contrasts. Reductions ranged from 12.43% to 33.40%, all
+twelve unadjusted intervals excluded zero favorably, and all twelve passed the point gate. Honest
+MAE also decreased in these comparisons. On JUCars, twelve point estimates favored the robust
+objective but only two intervals excluded zero favorably. On synthetic data, only four point es-
+timates favored it, and six intervals excluded zero in the adverse direction. Thus the controlled
+initial-objective factor has a stronger source-dependent signature than a beneficial feedback effect.
+These are newly trained matched models, so they do not retrospectively identify the cause of the
+original SAV/static-robust comparison.
+Appendix J shows the no-feedback suppression comparisons.
+49

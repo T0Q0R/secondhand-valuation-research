@@ -1,0 +1,52 @@
+Proof. Every complete-allocation lottery induces feasible y. Conversely, fix a public class and set
+pi = ∑
+f yif. Arrange consecutive intervals of lengths pi. A private uniform U ∈[0, 1) selects
+half-open intervals containing some U + k, for integer k. Each interval has length at most one and
+the total length is at most B, so at most B items are selected; item i has selection probability pi.
+For pi > 0, conditional on selection, draw its field with probability yif/pi. Thus every field has
+exactly the prescribed marginal and all aﬀine expected deviation payoffs are preserved.
+With O public classes, n items and F fields, this representation uses at most OnF + 1 variables
+rather than one variable per complete allocation.
+It does not remove counterfactual-world or
+report enumeration, preserve arbitrary joint event probabilities, or cover adaptive queries and
+nonunit costs. The history cap is item-local and therefore admits the same reduction. Marginal
+formulations and their implementability limitations are established in security games
+[3]; the
+proposition gives the specific implementation argument needed for this valuation audit, not a claim
+to invent marginal optimization.
+Independent checks match compact and complete-enumeration values on all 32 original market
+fixtures and 24 multi-field aﬀine fixtures.
+One larger algebraic fixture has 100 items, 4 fields,
+8 public classes, 96 payoff rows and budget 10.
+Its compact LP has 3,201 variables, versus
+18,662,296,388,649,543,921 complete allocations per class. All 57 numerical primal/dual certifi-
+cates pass. The repaired sampler has 3,200 exactly checked rational field marginals across 111
+interval pieces; 16,000 numerical draws respect hard capacity. The large full-enumeration solver
+was not run, so this is a representation comparison, not a measured speedup.
+The contextual-comparator result is a limitation of rule information, not an LP-versus-heuristic
+theorem. In the constructed family, a mixture over all context-insensitive priority rules has an
+unbounded capacity-related gap against context-conditioned allocation. A fixed mixture of only
+B + 1 context-aware rules closes that gap exactly. Appendix A gives the construction, proof and
+exact witnesses. Both comparators must be retained when interpreting the finite oracle.
+5
+Recovery paths and a conditional history cap
+5.1
+Signed mechanism decomposition
+Takeaway. Freezing truthful queries cannot separate recovery from capacity in this replay model;
+use a capacity-relaxed public query instead.
+For each fixed peer profile and evaluated mixture, retain its saved maximizing own report s∗.
+Let qH be the truthful quote, qh the unqueried reported quote, qL the quote after the same rule’s
+highest-scoring eligible query with capacity relaxed, and qA the hard-budget quote. Ineligible or
+nonpositive scores still cause no query in the relaxed reference. Then
+E = qh −qH,
+R = E[qL] −qh,
+C = E[qA] −E[qL],
+G = E + R + C.
+All components are signed and evaluated at the same s∗. Mixture expectation precedes report
+maximization. The relaxed query is a diagnostic, not a feasible deployment policy. The original
+truthful-query anchor would give zero recovery: that query targets a naturally absent field, which
+remains absent when another field is withheld. Its remaining term would conflate recovery and
+capacity.
+Across all nine source/seed pairs and both price models at 10% capacity, 360,000 component
+rows were reconstructed separately by complete stable sorting of each hypothetical batch. The
+7

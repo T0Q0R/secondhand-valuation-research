@@ -1,0 +1,45 @@
+audit checked 11,343,240 legal rule–world allocations and rejected four output mutations. Eighty-
+one saved winners differed from freshly computed argmax labels only through floating ties; the
+largest payoff gap was 6.94 × 10−18. Original winners were retained. The initial argmax-identity
+failure is preserved in a separate run.
+In the illustrative 10/12/14 example, E = 2 and R = 2. If the item receives its partial query
+with probability p, then C = −2(1−p) and G = 2+2p. The cap leaves the reported quote at 12 on
+both branches, reducing this gain to 2 rather than making honesty optimal. Positive R can occur:
+hiding two fields and recovering one can move a nonmonotone estimator to an intermediate record
+with a higher quote. This motivates the following developmental mechanism experiment. It is not
+evidence that all original SAV advantages or failures have been causally explained.
+5.2
+History cap and fixed-peer guarantee
+Takeaway.
+Removing quote increases along the realized recovery path gives a conditional
+unilateral-gain guarantee without changing truthful quotes.
+For every realized allocation, use
+qcap(r, a) = min{q(r, ∅), q(r, a)}.
+Apply this operation before averaging over a policy mixture. The underlying public scores, query
+budget, model and mixture weights are fixed.
+Proposition 2. If truthful queries cannot alter the fixed itemwise quote, then for any fixed peer
+profile and any fixed policy mixture the cap preserves the truthful quote and weakly reduces the worst
+expected unilateral gain over legal own reports.
+Proof. Pointwise qcap(s, a) ≤q(s, a), whereas qcap(0, a) = q(0, a) = qH for every realized action.
+Subtracting the same truthful quote, taking expectations and then maximizing over legal s preserves
+the inequality. The null deviation yields zero.
+The mechanism deliberately uses verification history.
+It lies outside the verification-neutral
+class in Equation (1), so it cannot be used to claim a violation of that bound. Equal final records
+can have different prices under the cap. The guarantee concerns fixed peers and scores; a new
+seller-response profile can change allocations and outcomes. Lower quotes need not have lower
+absolute pricing error.
+The full comparison includes both estimators and all six capacities: 108 cases, 5,671,620 legal
+report rows and 2,160,000 entry–method comparisons. A separate auditor reconstructs absolute
+quotes rather than reusing the signed-gain cap calculation. All truthful quotes are unchanged and
+all fixed-profile envelopes weakly decrease within tolerance 10−10. Risk has zero improvement in
+the primary fixed-profile table in Appendix B and is retained as a strong reference. These are
+additional conditional diagnostics, not new ten-seed training experiments.
+5.3
+History dependence and a final-record alternative
+The cap can assign different quotes to identical final records because it retains the pre-query
+quote. Consequently, final-record consistency cannot be claimed. A platform would need to explain
+the history rule, allow correction and review, and evaluate whether verification selection creates
+systematic disparities. We have not measured protected-group effects or established a deployment
+fairness guarantee.
+8

@@ -1,0 +1,50 @@
+SAV by 0.00089, while the ACO comparison spans zero; the largest-cap equal-tuning experiment
+favors SAV on MUCars but reverses on the other sources. Appendix E preserves all fitting, tuning
+and adaptation boundaries. The main implication is to compare strategy-aware valuation with
+competitive predictive acquisition before attributing a gain to strategic feedback.
+K.3
+Allocation changes on frozen models
+Takeaway. Score-minimax allocation can help with a robust price model, but the same intervention
+can worsen inflation with a masking model. It is not a universal replacement for top-B.
+This separate experiment retains the original three seeds and frozen price models. It crosses
+three sources, two price models, three public acquisition scores and two allocators at 10% capacity:
+108 cells and 108,000 outcome rows.
+Seller responses are recomputed for each allocator.
+The
+separate evaluator reconstructs 1,080 method/batch cells, 1,134,324 legal unilateral deviations,
+model outputs, allocations and expected-error arithmetic. A second checker rebuilds all eighteen
+contrasts, five metrics, resampling intervals, decision gates and pointwise dominance flags from the
+raw records. This is an allocation intervention conditional on frozen models, not the full feedback-
+training study.
+Appendix J retains all eighteen contrasts. Only robust-benefit and robust-suppression on MU-
+Cars meet the inherited heuristic point criteria of at least 10% inflation reduction and at most
+5% honest-MAE increase. They reduce inflation by 13.70% and 13.05%, but increase failed-query
+probability by 0.060 and 0.128 percentage points. Honest MAE is unchanged in every contrast
+under these replay semantics. Ten of eighteen contrasts increase inflation; four have a positive
+lower endpoint for the inflation reduction. JUCars robust-benefit improves by 9.985%, which does
+not meet the 10% threshold. No threshold is relaxed after observing this near miss.
+The multiobjective results qualify the apparent gains.
+MUCars robust-benefit and robust-
+suppression also reduce expected attacked MAE by 7.17 and 7.67 source-currency units, but their
+failed-query increases prevent Pareto dominance. JUCars robust-benefit and robust-suppression
+increase attacked MAE by 2.06 and 0.62 units despite reducing inflation. Only JUCars robust-risk
+and synthetic robust-suppression weakly dominate top-B on all four point metrics; neither has an
+inflation interval excluding zero. These point comparisons use a numerical tie tolerance, not a claim
+of practical equivalence.
+Ten top-B response batches fail the convergence criterion (six synthetic masking-benefit and
+four synthetic masking-suppression); their maximum unilateral regret is 0.095752. The minimax
+responses have zero recorded final regret over the enumerated legal unilateral actions. All batches
+are retained. Thus the intervention includes its response-search consequences, and the observed
+reversals cannot be attributed solely to equilibrium allocation quality. The score objective remains a
+surrogate and does not prove general incentive optimality. The completed factorial study evaluates
+whether training feedback changes these conditional effects.
+K.4
+Continuous effects and decision-threshold sensitivity
+The inherited 10% inflation-reduction/5% honest-MAE gate is a heuristic, not an externally vali-
+dated minimum important difference or a preregistration claim. We retain it to avoid retrospective
+threshold selection, report the continuous effects, and vary inflation cutoffs over 0, 5, 10, 15 and
+20% and honest-error allowances over 0, 1, 5 and 10%.
+At a 5% honest-error allowance, the frozen allocation study has 8/18, 4/18, 2/18, 0/18 and
+0/18 passing contrasts across the respective inflation cutoffs. Its JUCars robust-benefit reduction
+is approximately 9.985%, so classifying it below a 10% gate is not a substantive discontinuity in
+51

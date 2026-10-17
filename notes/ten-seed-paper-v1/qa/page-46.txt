@@ -1,0 +1,29 @@
+0
+1
+2
+3
+4
+5
+Conditional variance (x 10^-8)
+Top-B capped
+Top-B uncapped
+Minimax capped
+Minimax uncapped
+90.97%
+98.39%
+87.42%
+98.28%
+Seed-main share shown at right
+Fitting seed
+Evaluation batch
+Interaction
+Figure 17: Fitting randomness dominates the remaining conditional uncertainty after full MU-
+Cars evaluation.
+Bars show absolute seed-main, batch-main and interaction variances for the
+masking/suppression feedback contrast under both allocators; labels give the seed-main share. Ten
+fitting seeds are shared. Capped evaluation uses ten equal 100-record batches; uncapped evaluation
+uses 107 record-weighted batches containing 10,672 listings. Both the outcome matrix and weights
+change, so these are distinct conditional designs, not a pure sample-size experiment. Components
+condition on the fixed training records and fitted models; they do not quantify training-population
+uncertainty or establish equivalence.
+46

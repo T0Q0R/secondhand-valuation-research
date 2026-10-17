@@ -1,0 +1,50 @@
+A
+Contextual policy-library witnesses
+A capacity-related global-mixture gap.
+Consider n > B ≥1, a fixed core C of size B, and
+public contexts j ∈{B + 1, . . . , n}. In context j, potential quote gaps are 2 for core items, 1
+for item j, and ϵ = 1/(B + 2) for every other item. These are linear toy utility units. Use the
+honest-exact missingness-alias worlds from the preceding construction. All items are query-eligible
+in the all-missing report.
+The reference library contains all fixed item-priority orders and a risk rule using these exact
+gaps, but employs one context-independent mixing vector. Every priority rule selects a fixed B-
+subset. Risk always selects the core, because 2 > 1 > ϵ, without relying on a cutoff tie. Thus
+the global mixture has the same query marginals in every context, whereas a publicly conditioned
+mechanism may change them with j.
+Proposition 4 (Global-mixture separation). In this family the optimal worst gains are
+Tglobal = 2(n −B)
+2n −B ,
+Tcontext =
+2
+B + 2.
+Their ratio is (B + 2)(n −B)/(2n −B). Taking n = B2 + B makes the ratio B(B + 2)/(2B + 1),
+which grows without bound with B.
+Proof. A global mixture with value t must satisfy 2(1 −pi) ≤t for each core item and 1 −pi ≤t
+for each other item, using the context in which that item is active.
+Summing gives B ≥n −
+t(B/2 + n −B) and the stated lower bound. It is attained with core marginal 1 −Tglobal/2 and
+other marginal 1 −Tglobal. These sum to B and are implementable as a lottery over B-subsets,
+all represented by fixed priorities. In one public context, the B core items and active item imply
+B ≥B + 1 −t(B/2 + 1). Set core marginal (B + 1)/(B + 2), active-item marginal B/(B + 2) and
+all others zero to attain the bound. The low-gap unqueried items have gain ϵ < Tcontext. Both
+constructions use the preceding hard-budget sampling argument.
+We checked rational primal/lower-bound witnesses on 26 predetermined (n, B) cases and 257,274
+context–item rows. Sixteen small cases also match independently constructed complete-subset LPs
+for both policy classes. At B = 20, n = 420, the ratio is 440/41 ≈10.73. This is a constructed lim-
+itation of global mixing over the specified context-insensitive rule library; it does not establish that
+real-source CDM losses arise from this mechanism or that these bounds are first in the literature.
+A stronger small-library comparator.
+The separation concerns the information used by the
+rules, not fixed mixture weights alone. Add B + 1 deterministic context-aware rules: one queries
+every core item; rule i replaces core item i with the publicly active item. Give the first rule weight
+2/(B+2) and each replacement rule weight 1/(B+2). The weights are fixed across contexts. Every
+draw uses exactly B queries, while each core item’s marginal is (B + 1)/(B + 2) and the active
+item’s marginal is B/(B + 2). Thus this small library attains Tcontext without solving a new LP
+at deployment. The previous lower bound proves its optimality within the constructed family. It
+does not imply an unseen-context guarantee for learned rules on vehicle records.
+An independent exact-arithmetic extension checks all 26 cases, 15,922 context–rule allocations
+and 257,274 context–item losses. Freezing the active item or changing the weights to uniform fails
+the optimum check. Consequently, this family supports a representation limitation of the original
+library, not an intrinsic advantage of dynamically chosen weights or an LP solver. This stronger
+comparator must be retained in subsequent algorithm evaluations.
+27

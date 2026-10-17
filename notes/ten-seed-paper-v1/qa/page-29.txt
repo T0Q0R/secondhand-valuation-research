@@ -1,0 +1,68 @@
+Original comparator
+Comparator minus SAV
+Nominal 95% interval
+Benefit head
+−0.004328
+[−0.007774, −0.001215]
+Static robust
+−0.009091
+[−0.012355, −0.006323]
+Masking benefit
+0.029153
+[0.024928, 0.033582]
+SAV without gap
+0.017007
+[0.014282, 0.019794]
+Pre-audit attacker
+−0.007556
+[−0.010444, −0.004923]
+Table 6: Synthetic, original protocol, ten fitting seeds and 10% capacity. Positive paired inflation
+differences favor SAV. Intervals are exploratory, unadjusted percentile intervals from 1,000 crossed
+seed/batch resamples.
+altered effect direction, interval endpoints and missing-seed inputs.
+C.2
+JUCars and sensitivity to seed variability
+Takeaway. The original-protocol JUCars result does not support a stable SAV advantage, and its
+uncertainty depends materially on including fitting-seed variation.
+Table 7 retains the five primary comparisons. The same ten-seed source-binding and recorded-
+outcome audit covers 620 JUCars method/capacity cells and 620,000 outcome rows, again represent-
+ing 1,000 unique evaluation listings in ten shared batches. All five raw-record contrasts and boot-
+strap endpoints pass independent reconstruction. At 10% capacity, SAV inflation is 0.014988 versus
+0.012082 for static robust, a 24.05% increase. The comparator-minus-SAV difference is −0.002906.
+Its fixed-seed batch-only interval is [−0.003783, −0.002103], whereas the crossed seed/batch inter-
+val is [−0.007025, 0.000777]. The latter includes zero. This is uncertainty about a paired effect,
+not evidence of equivalence or a demonstrated source interaction.
+Original comparator
+Comparator minus SAV
+Nominal 95% interval
+Benefit head
+0.001252
+[−0.000172, 0.002946]
+Static robust
+−0.002906
+[−0.007025, 0.000777]
+Masking benefit
+0.005030
+[0.001649, 0.007985]
+SAV without gap
+0.019588
+[0.016131, 0.023292]
+Pre-audit attacker
+−0.001037
+[−0.002428, 0.000303]
+Table 7: JUCars, original protocol, ten fitting seeds, 10% capacity. Positive differences favor SAV.
+Crossed seed/batch percentile intervals use 1,000 resamples, are exploratory and unadjusted, and
+condition on fixed training records. The limitations stated for the synthetic extension apply.
+C.3
+MUCars completes the source comparison
+Takeaway. The original-protocol MUCars extension does not establish a stable advantage over
+static robust or the original benefit head.
+This comparison differs from the separately tuned
+ordinary-benefit benchmark.
+Table 8 retains the five primary comparisons. The completed three-source union contains thirty
+source/seed pairs, 1,860 method/capacity cells and 1,860,000 repeated outcome rows. Each source
+still contains only 1,000 unique evaluation items. A separate raw-record checker reconstructs all
+fifteen paired contrasts and both bootstrap definitions. At 10% capacity, MUCars SAV inflation is
+0.007340 against 0.006511 for static robust, a 12.73% increase. The crossed interval includes zero;
+this neither establishes superiority nor demonstrates equivalence. Against the original benefit head,
+29

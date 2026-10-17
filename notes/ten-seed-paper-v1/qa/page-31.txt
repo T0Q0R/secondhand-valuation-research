@@ -1,0 +1,62 @@
+We additionally audited all 1,080 saved fixed-profile batch executions at hypothetical radii
+δ = α median(gi : gi > 0). A suﬀicient certificate requires support preservation and every positive
+item’s top-two field gap to exceed 2δ.
+Its bound uses m = mini∈I gi −δ.
+Recovery spans are
+reconstructed for every eligible item, including items not queried by a saved top-B allocation.
+Table 9 records the suﬀicient-certificate counts. Each row has 1,080 batch executions, including both
+α
+Minimax conditions
+Probability bound < 1
+Top-B constant
+0.001
+471
+468
+401
+0.01
+401
+353
+212
+0.05
+267
+245
+53
+0.1
+244
+242
+39
+Table 9: Post-hoc stability certificates at four hypothetical relative score radii. Each row covers the
+same 1,080 dependent fixed-profile batch executions. Counts certify suﬀicient conditions, rather
+than observed perturbation errors or a ranking of performance.
+generating allocators; these are dependent diagnostic cases, not independent statistical replicates.
+Top-B is locally constant when the same support/field conditions and its selection-rank margin
+hold (or all positive items fit). Its certificate is stronger than a nonzero sensitivity bound, so counts
+do not establish an ordering of stability. Failure to certify is not evidence of instability. A separate
+checker reconstructs all 4,320 condition rows and 144 grouped summaries using exact fractions of
+the stored scores and radii; displayed quote bounds remain floating-point approximations. The
+radii are not calibrated prediction errors. These post-hoc diagnostics neither establish performance
+improvement nor explain source effects causally.
+General water-filling sensitivity is established
+literature; priority for this application-specific bound is not claimed.
+E
+Strong additional comparators and adaptation boundaries
+The following controls belong to earlier separately corroborated experiments, not the newly trained
+matched factorial model family. Keeping these identities separate prevents a favorable acquisition
+or tuning result from being attributed to the wrong training intervention.
+E.1
+Ordinary-benefit and equal-allowance controls
+A robust/no-feedback price model with ordinary error-reduction acquisition was evaluated on all
+six budgets and the original three seeds. The independently checked 54-cell extension retained
+identical honest quotes, public scoring, allocations and first-batch exact deviations. At 10% ca-
+pacity, reference inflation was 0.01077, 0.01117 and 0.00778 on synthetic, JUCars and MUCars,
+respectively. Reference-minus-SAV differences were −0.00998, −0.00432 and 0.00089, with con-
+ditional shared-batch intervals [−0.01260, −0.00791], [−0.00598, −0.00285] and [0.00045, 0.00130].
+These intervals averaged the three fitted seeds before resampling batches; they are not the ten-seed
+crossed intervals in the main factorial analysis.
+An additional size/tuning study retained training caps 1,000, 2,500 and 5,000, three fitting
+seeds, three training-internal gap-weight trials and twelve residual epochs for both candidates. Its
+972 parent tuning cells and 324 ordinary-benefit reference cells passed full audits. At the largest
+cap, tuned SAV inflation was 20.41% lower on MUCars but 30.09% higher on synthetic and 27.09%
+higher on JUCars than the separately tuned ordinary-benefit reference. The associated reference-
+minus-SAV intervals were [0.00097, 0.00186], [−0.00682, −0.00204] and [−0.00333, −0.00125]. All
+31

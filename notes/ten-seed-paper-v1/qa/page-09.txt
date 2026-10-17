@@ -1,0 +1,52 @@
+A final-record rule can instead be defined on a declared completion domain Z. Let C(r) contain
+its records extending the observed values of r, and define
+q↓(r) = min
+z∈C(r) q(z).
+If a truthful record belongs to the domain, every concealed or partially recovered report extends
+to that record, and the completion sets are nested. Hence C(rH) ⊆C(r) and q↓(r) ≤q↓(rH). Non-
+negative concealment costs therefore prevent a gain over this rule’s own truthful quote, regardless
+of which admissible partial query is allocated. The rule uses only the final record and its fixed
+domain. This is an order-preserving envelope, not a new general imputation technique; truthful
+withholding predictors are established prior work [5, 9].
+The alternative can lower honest quotes and worsen honest MAE, unlike the history cap’s
+truthful-quote preservation. Its guarantee needs completion-domain coverage and nonempty nested
+sets; unsupported records require abstention or an explicitly uncertified fallback.
+A three-seed
+categorical-domain pilot quantifies one limited honest-error cost: MUCars shared-support MAE
+increases by 10.49–23.87 currency units, concentrated among 28 naturally incomplete records (Ap-
+pendix G). Mileage is observed and fixed, so this is not a tested four-field replacement (Appendix G).
+5.4
+Recovery-path regularization of the public predictor
+Takeaway.
+A training penalty can target the diagnosed recovery failure directly, but a finite
+penalty is not an incentive guarantee.
+Let qθ(s) denote a log quotation and qθ(Hi) its honest-report anchor for training record i. For
+each legal hidden-field recovery edge (s, a) ∈Ei, define
+gi,θ(s) = [qθ(s) −sg(qθ(Hi))]+,
+(2)
+Lpath(θ) =
+1
+∑
+i |Ei|
+∑
+i
+∑
+(s,a)∈Ei
+[gi,θ(T(s, a)) −gi,θ(s)]+.
+(3)
+Here sg stops the anchor gradient within an optimizer step. The objective adds λLpath to the
+matched no-feedback loss; Ei contains recoveries of actually concealed fields, excluding naturally
+unavailable values. The ordinary gap term penalizes a quotation relative to honesty; this term
+additionally penalizes increases in positive gain along intermediate recoveries. Honest values and
+the anchor are training supervision, not deployment inputs. Deployment uses the same public-
+record predictor, without a quotation-history input.
+Proposition 3 (Finite recovery-graph implication). On a fixed finite collection of record graphs,
+if Lpath = 0, positive gain cannot increase along any path composed of their legal recovery edges.
+Proof. Every summand in (3) is nonnegative. A zero finite sum makes each edge increment non-
+positive; chaining these inequalities proves the claim.
+This implication allows positive initial concealment gain. It provides no guarantee on unseen
+records, finite-penalty fits, allocation optimality or honest error. Shared parameters can move the
+anchor between steps despite its stopped gradient. Recovery-path regularization (RPL) is there-
+fore a mechanism-targeted candidate, not a new general monotonicity principle or an established
+replacement for existing strategic-missingness methods.
+9

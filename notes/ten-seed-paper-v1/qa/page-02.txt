@@ -1,0 +1,48 @@
+and 14 after only one is recovered. Successful partial recovery then raises the quote. These illus-
+trative quote units are not empirical measurements. They expose a distinction between obtaining
+information and using the recovered record to reduce a seller’s expected gain. Moreover, changing
+one report can displace another listing from a hard-capacity query set. Information value evaluated
+in isolation does not capture that competition.
+Strategic withholding has established regression and classification treatments [9, 5]. Audits and
+partial-verification mechanism design likewise have established incentive guarantees under their
+respective action and outcome models
+[4, 6]. These results motivate verification, but they do
+not imply that an error-reduction acquisition score, a fixed library of query rules, or a finite-
+round feedback-training implementation will improve continuous valuation after failed-but-charged
+recovery. Ordinary active feature acquisition also targets predictive information rather than this
+strategic quotation objective [12].
+We study two complementary questions. First, how does a uniform honest-precision requirement
+limit the strategic gain that a hard verification budget can remove when natural and strategic
+absence are observationally identical? Second, which implemented training and allocation choices
+actually account for changes in valuation outcomes?
+A finite oracle enforces common decisions for identical public reports. A recovery-path decom-
+position separates the initial report, local recovery and capacity competition. A history-dependent
+cap provides a restricted unilateral-gain guarantee. A matched factorial experiment separates initial
+objective, acquisition score, policy feedback and allocation.
+The central contribution is a recovery-path diagnosis linked to a targeted training intervention.
+Section 4 delimits guarantees under observationally identical missing reports; its restricted theorem
+is not a quantitative prediction for the learned four-field models. Section 5 decomposes the valuation
+effect of recovery, gives a conditional history-cap guarantee, and defines recovery-path regularization
+(RPL).
+The empirical evidence separates initial objective, acquisition score, policy feedback and allo-
+cation. The original factorial identifies a weak-search feedback failure. Matched stronger-search
+interventions qualify that finding, while competitive ordinary-benefit and acquisition-conditioned
+controls prevent a universal claim for the original SAV candidate. The ten-seed RPL extension
+then tests the diagnosed recovery failure directly against same-gap zero-weight controls, includ-
+ing zero-query outcomes and path/gap removals. Its lower inflation coexists with predictive and
+verification costs. The claim-bearing extensions have completed a four-stage computational audit,
+with shared model primitives and conditional uncertainty explicitly disclosed. The resulting contri-
+bution concerns recovery-aware learning and a reusable comparison protocol, without establishing
+universal superiority or actual seller behavior.
+2
+Related work
+2.1
+Strategic withholding and predictive missingness
+Zhang et al. studied strategic missingness in regression through support-margin imputation [9].
+Krishnaswamy et al. characterized truthful classifiers and constructed predictors resistant to feature
+withholding [5]. These works already establish that natural absence and deliberate concealment
+can have the same report. We therefore do not claim that continuous prediction or ambiguous
+missingness defines a new problem. Our analytical question adds a uniform honest-quote error
+constraint and a hard query budget. Removing the incentive by changing predictions may violate
+that precision constraint, which is distinct from average mean absolute error.
+2

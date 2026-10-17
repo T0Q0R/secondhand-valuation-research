@@ -1,0 +1,47 @@
+usefulness. In the matched joint-policy family, the zero-cutoff gate retains 3/18 contrasts, all small
+MUCars gains; 0/18 pass any inflation cutoff of 5% or more. Full grids and unrounded effects are
+supplied. A deployment threshold requires a platform’s error/query-cost preferences, which this
+retrospective study has not elicited.
+K.5
+Positive costs change the conditional feedback ranking
+We recompute responses under per-hidden-field costs 0.005 and 0.02 in log-quote utility units, and
+heterogeneous costs 0.02hi, where a fixed listing hash gives hi ∈[0.5, 1.5). These are stipulated
+post-hoc sensitivities, not measured human effort or monetary sanctions. All 108 positive-cost cells
+retain the robust initial objective and suppression score, three original fitting seeds, both feedback
+settings and both allocators. Four response starts and twenty sweeps are unchanged. Costs enter
+report choice; they are not simply subtracted from saved zero-cost outcomes. Independent algebraic
+replay and every legal unilateral utility corroborate the returned profiles.
+Appendix J shows a ranking reversal on synthetic top-B. Uniform 0.02 and heterogeneous costs
+have lower mean inflation with feedback than without it; the heterogeneous direction is positive
+for all three seeds, while the uniform 0.02 direction is positive for only one. At heterogeneous cost,
+feedback also lowers honest MAE by 4.293 synthetic price units, attacked MAE by 12.198 units
+and failed queries by 0.100 percentage points. This is descriptive mean Pareto improvement within
+that declared subset, not an uncertainty-qualified or universal dominance result. Failure remains
+high in absolute terms (9.4% without and 9.3% with feedback per listing).
+Appendix J separates concealment deterrence from the paired feedback effects.
+The reversal accompanies strong concealment deterrence. At uniform cost 0.02, synthetic top-
+B mean hidden-field counts are bounded by [0.130, 0.165] without feedback and [0.130, 0.181] with
+it, versus directly observed zero-cost means 0.996 and 0.957. These bounds retain nonconverged
+profiles rather than treating the inflation–net-deviation gap as exact cost. The legal net-deviation
+envelope falls by 77.5% and 81.1%, respectively. Failed queries reach 9.47% and 9.40% per listing;
+at 10% capacity, at least 94.7% and 94.0% of actual queries fail. Thus the local ranking reversal
+coexists with suppressed concealment and predominantly unsuccessful verification; it does not iso-
+late improved feedback quality as its cause. Constructively, deterrence moves this subset toward
+ordinary valuation: at both 0.02 cost specifications, feedback no longer worsens mean inflation
+and lowers mean honest error, attacked error and query failure. This is a conditional descriptive
+benefit, not a fully nonstrategic limit: residual concealment remains positive. Appendix G gives
+the utility-based bounds.
+JUCars and MUCars retain adverse mean inflation directions for both allocators under every
+declared cost regime in this subset. Twenty positive-cost seed/cell batches remain nonconverged
+and are retained. Therefore the original 36/36 zero-cost direction describes its evaluated regime,
+not a cost-invariant property of feedback training. The full three-source cost table is in the evidence
+package; no winning cost distribution is substituted for the zero-cost primary experiment.
+K.6
+Full-validation evaluation coverage
+An additional frozen-model evaluation removes both real-source caps: all 1,374 JUCars and 10,672
+MUCars validation records form fourteen and 107 batches, respectively, using the same ten fitting
+seeds. Final batches contain 74 and 72 records, each with capacity seven. All 480 cells, 29,040
+seed/cell batches and 2,891,040 repeated outcomes pass algebraic allocation, bit-transition, metric
+and complete unilateral-utility checks, covering 31,269,840 legal deviations. All returned real-source
+batches meet the finite unilateral-regret tolerance; this does not certify arbitrary actions or globally
+52

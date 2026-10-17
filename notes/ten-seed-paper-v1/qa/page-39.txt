@@ -1,0 +1,109 @@
+0
+0.1
+0.25
+0.5
+1
+2
+Gap weight
+Default = 0.5
+0.01
+0.02
+0.03
+0.04
+Log inflation (10% capacity)
+a
+Gap weight
+0
+0.01
+0.02
+0.05
+0.1
+Gap tolerance
+Default = 0.02
+0.005
+0.010
+0.015
+0.020
+0.025
+0.030
+Log inflation (10% capacity)
+b
+Gap tolerance
+1
+2
+4
+Feedback rounds
+Default = 2
+0.005
+0.010
+0.015
+0.020
+0.025
+0.030
+Log inflation (10% capacity)
+c
+Feedback rounds
+0
+0.1
+0.25
+0.5
+1
+2
+Gap weight
+Default = 0.5
+0.01
+0.02
+0.03
+Log inflation (30% capacity)
+d
+Gap weight
+0
+0.01
+0.02
+0.05
+0.1
+Gap tolerance
+Default = 0.02
+0.005
+0.010
+0.015
+0.020
+0.025
+Log inflation (30% capacity)
+e
+Gap tolerance
+1
+2
+4
+Feedback rounds
+Default = 2
+0.006
+0.008
+0.010
+0.012
+0.014
+Log inflation (30% capacity)
+f
+Feedback rounds
+Dotted: design default. Gap-weight/tolerance axes: symmetric log; all settings are ticked.
+Three-seed means and full ranges, not CIs; this does not establish an optimal default.
+Synthetic
+JUCars
+MUCars
+Figure 11: Core-parameter scans in the original feedback implementation, with three fitting seeds.
+Dotted lines mark design defaults and all evaluated settings are ticked. Gap weight and tolerance
+use symmetric-log coordinates. Means and full ranges are descriptive, not confidence intervals. The
+defaults are engineering choices, not evaluation-selected optima.
+(Figure 12). The defaults are inserted from the exactly matched S1F1G1 branch, not retrained or
+interpolated. All error, failure and convergence metrics remain in the source tables.
+H.3
+Availability-shift stress and source-data coverage
+The availability stress study held fitted models fixed and additionally removed 0, 10% or 30% of orig-
+inally observed query fields using nested stable hashes of listing and field. Targets were unchanged;
+newly missing values could not be recovered.
+Seven mechanisms (four search/refresh variants,
+matched no-feedback, risk and benefit) yielded 189 cells: 63 reused and 126 new evaluations, with
+no refitting. Reports were reoptimized after the shift. This is a controlled availability perturba-
+tion, not a new market, MNAR model or actual-seller validation. Paired metrics, recovery paths
+and all three seed values remain in the evidence files. RPL additionally retained low/middle/high
+39

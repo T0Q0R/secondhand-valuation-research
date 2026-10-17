@@ -1,0 +1,45 @@
+probabilities. The no-policy-feedback control instead searches valid reports with no queries;
+it still receives the same six robust-update epochs.
+4. Predict every excluded fold with its corresponding trained model. Fit the deployment model
+through the same training sequence, then refit its 160-tree deployment heads using the as-
+sembled outer-fold quote targets and the deployment model’s encoded inputs. These heads
+are used for evaluation; the deployment residual model is not updated after this final head
+fit.
+5. Evaluate each fixed deployment model at capacities 0, 1, 5, 10, 20 and 30%, using four
+response starts and at most twenty sweeps. Compute expected quotes and errors analytically
+from the query marginals; retain every final profile and its independently checked unilateral
+regret.
+This protocol does not refit a separate model for each evaluation capacity. Effects away from 10%
+therefore include transfer from the fixed training capacity. Evaluation uses stronger response search
+than training, but finite search still does not certify a global best-response equilibrium.
+For the score-minimax control, an item’s highest positive publicly eligible score is gi. We mini-
+mize maxi gi(1 −pi) subject to 0 ≤pi ≤1 and ∑
+i pi ≤B, then realize the marginals with a private
+systematic draw. This is a score surrogate and an established resource-allocation construction;
+it is not a guarantee about report-dependent unilateral incentives. Every candidate seller report
+therefore triggers a fresh batch allocation in the response calculation.
+For a frozen within-step query marginal p, training uses the expected post-query squared error,
+(1 −p)(q0 −y)2 + p(q1 −y)2 = ((1 −p)q0 + pq1 −y)2 + p(1 −p)(q1 −q0)2.
+Taking squared error after averaging quotes would omit the variance term. The gain penalty instead
+uses the positive part of expected gain, matching the expected-utility objective. Gradients do not
+pass through the discrete report search, field selection or allocation probabilities; this remains a
+frozen-policy training surrogate.
+Writing LH for truthful squared error, LV for mean squared error over valid report states and LA
+for the squared anchor to the backbone’s honest quote, the mask objective is LH +0.25LV +0.25LA.
+The robust objective adds 0.5Lattack + 0.5Lgain, where Lgain = E[(µ −qH −0.02)+] and Lattack
+averages the endpoint squared errors before expectation. The honest anchor in the gain penalty
+is detached. AdamW uses weight decay 10−4 and gradient clipping at norm 5. The residual has
+two width-64 ReLU hidden layers and a scalar output. The subsequent robust update combines
+truthful squared error, a quarter-weighted mean squared error over valid report states, a quarter-
+weighted anchor to the backbone’s truthful quote, and half-weighted expected attacked error and
+gain penalty. The declared weights and twelve-epoch total are common across matched cells. The
+distinction between expected squared error and squared expected quote is necessary for correct
+stochastic replay training; the variance identity itself is not a new mathematical result.
+For attribution, at fixed source, initial objective, acquisition score and capacity, let Lf,a be an
+outcome under feedback setting f and allocator a. We report the interaction
+D = (Lnone,minimax −Lpolicy,minimax) −(Lnone,topB −Lpolicy,topB).
+For loss-like outcomes, positive D means feedback has a larger incremental benefit with minimax.
+Both constituent effects must also be shown: positive D alone does not establish that either feed-
+back policy is beneficial. The fixed analysis contract contains 58 conditional factor contrasts per
+source/capacity, including six feedback–allocation interactions. The primary capacity therefore has
+11

@@ -1,0 +1,47 @@
+8
+Discussion
+Takeaway.
+The contribution is a recovery-aware intervention supported by matched ten-seed
+effects and explicit deployment costs. Verification quality depends on how recovered records enter
+the predictor and response procedure, as well as which information is acquired.
+The information frontier and learned recovery graph address complementary questions. Obser-
+vationally identical missing reports restrict what a budgeted verifier can guarantee, while recovery
+paths reveal how a valid query can increase a learned quotation. RPL translates the latter diagnosis
+into a loss term and reduces inflation in the tested finite-response design. The effect does not re-
+quire new private deployment inputs, but its zero-query component shows that part of the benefit
+comes from changing the estimator. Existing predictive acquisition objectives [12] and strategic
+withholding models [9, 5] therefore remain relevant comparators, rather than being displaced by
+the recovery-path objective.
+Search-strength interventions qualify the earlier negative feedback finding. They show that an
+adverse weak-search implementation need not characterize all feedback procedures; they do not
+isolate one unique causal defect or establish feedback benefit across sources. RPL likewise does not
+dominate all objectives: the synthetic predictor pays higher honest error and failed-query costs. The
+history cap supplies a restricted fixed-peer guarantee, but its history dependence raises consistency
+and appeal issues for equal final records. Deployments should choose among these interventions
+using the joint error, failure and incentive outcomes, not inflation alone.
+The scientific scope remains finite and retrospective. Seller concealment, costs, query success
+and response search are modeled, not observed behavior. The real data are advertised prices from
+two cohorts, not verified transactions. Fitting seeds quantify algorithmic variability on fixed pop-
+ulations and cannot establish uncertainty over new training populations. Nonconverged response
+batches bound equilibrium interpretations. Four-stage computational checks improve traceability
+but share loading and prediction primitives. A separate external run completed, yet failed the
+original numerical tolerances; this limits cross-machine reproducibility rather than being silently
+absorbed into the uncertainty bands. Testing learned recovery effects with actual seller decisions
+and independently controlled numerical environments would address these two remaining trans-
+portability questions.
+9
+Conclusion
+Information recovery does not by itself ensure better valuation incentives. A bounded information
+frontier and observed gain-increasing recovery paths motivate RPL, which lowers primary mean
+inflation across all thirty tested source–seed comparisons at the declared unit-weight endpoint.
+Honest-error, query-failure and response-convergence costs prevent a universal dominance claim.
+Stronger response search also narrows the original negative feedback finding to its implementation.
+Together, these results support diagnosing recovery paths before choosing feedback or regularization
+and retaining prediction and verification costs in the deployment decision. The findings remain
+conditional on the fixed cohorts and modeled finite unilateral responses.
+Statements and declarations
+Data and code availability.
+The source datasets are available under CC BY 4.0 through the
+versioned Mendeley Data records [1, 2]. Prices are advertisements. The public repository, github.
+com/T0Q0R/secondhand-valuation-research, contains project-authored code under MIT, source
+25

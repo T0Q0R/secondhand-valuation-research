@@ -1,0 +1,111 @@
+Table 10: Claim–evidence matrix. Positive comparator-minus-SAV
+differences favor SAV. All listed experiments are complete; bounded
+claims remain separate from general superiority.
+Claim
+Decisive evidence
+Verdict and boundary
+C1. A
+precision–incentive
+frontier is tight.
+Restricted missingness-alias proof
+and 32-case finite oracle.
+Supported in the stated family;
+uniform honest error and
+verification-neutral quotes required.
+C2. Marginals replace
+complete allocation
+lotteries.
+57 compact cases; 56 comparisons
+with complete enumeration.
+Supported for item-local utility, unit
+costs and at most one field per item;
+marginal optimization is established
+prior work.
+C3. The fixed-priority
+library can have an
+unbounded gap.
+26 exact cases; a fixed mixture of
+B + 1 context-aware rules closes
+the constructed gap.
+Supports a restriction on rule
+information; does not establish an
+advantage of dynamic weights or the
+LP solver.
+C4. A
+verification-history cap
+reduces fixed-profile
+incentives.
+Pointwise replay argument and
+exhaustive fixed-profile
+evaluation.
+Supported for fixed peer reports and
+the stated truthful replay; not an
+equilibrium theorem.
+C5. The cap improves
+every measured
+objective after
+recomputed responses.
+432 cells: 94 attacked-error
+increases and 145 failed-query
+increases.
+Not supported. Inflation reductions
+do not imply Pareto dominance.
+C6. SAV consistently
+beats static robust at
+10% capacity.
+Ten-seed paired difference:
+synthetic -0.009091; JUCars
+-0.002906; MUCars -0.000829.
+Not supported. Synthetic is
+unfavorable with an interval
+excluding zero; both real-source
+intervals include zero.
+C7. Score-minimax
+allocation consistently
+improves outcomes.
+108 audited cells; 18
+independently checked contrasts;
+only two pass the point gate,
+while ten worsen inflation.
+Not supported generally. MUCars
+robust gains coexist with failed-query
+increases; the original factorial does
+not show beneficial weak-search
+feedback; stronger-search means
+qualify that result.
+C8. Matched feedback
+training reduces
+inflation.
+4,320 audited cells; at 10%
+capacity, all 36 zero-cost feedback
+points worsen inflation; 31
+adverse bands survive the
+post-hoc 36-contrast sensitivity.
+Not supported for this training
+procedure. Positive costs reverse one
+subset ranking alongside strong
+concealment deterrence. Neither a
+universal feedback failure nor
+confirmatory coverage is established.
+C9. RPL lowers primary
+inflation at the unit
+endpoint.
+Ten fitting seeds per source; all 30
+matched directions favorable,
+with positive exploratory
+simultaneous lower bounds.
+Supported within the fixed
+finite-response design; synthetic
+honest error and failed queries
+increase, and nonconverged responses
+remain.
+C10. Core extensions
+have completed
+computational checks.
+Four-stage chain for 1,206 distinct
+cells, including all 540 RPL
+extension cells.
+Shared primitives and retrospective
+cohorts remain; external exact
+numerical reproduction failed.
+33

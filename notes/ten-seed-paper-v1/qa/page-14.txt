@@ -1,0 +1,70 @@
+Table 2: Computational audit scope.
+Counts overlap where explicitly stated; human scientific
+approval and exact cross-machine reproduction are separate from these checks. Historical failure
+receipts are preserved.
+Evidence
+Completed chain
+Boundary
+Original 4,320 cells
+Fit, outcome, analysis, statistics
+check
+Original implementation; shared
+primitives disclosed
+Claim-bearing
+extensions: 1,206
+distinct cells
+Same four computational phases;
+includes all 540 ten-seed RPL cells
+Conditional exploratory inference;
+not an independent full-stack
+implementation
+Remaining
+completion-study
+support
+Hash bindings, utility checks and
+recorded summaries
+No whole-study four-stage upgrade of
+all 1,719 cells
+families have a finite-sample family-wise coverage certificate. The remaining parameter, compo-
+nent and availability cells are not silently upgraded to the new chain. All failed and nonconverged
+outcomes remain in their respective evidence sets.
+7
+Results
+7.1
+Recovery failures in the learned four-field class
+The recovery-path prediction is observable in the saved models, rather than only in the illustra-
+tive 10/12/14 fixture. We enumerate all legal successful recovery edges in the 14 unique fits per
+source/seed and the original 1,000 evaluation records. An adverse partial recovery requires two
+hidden fields, a post-query quote above the pre-query quote and both at or above the model’s
+honest anchor, using tolerance 10−10. Table 3 reports these finite table properties separately from
+returned response rows.
+Source
+Successful edges
+Adverse partial edges
+Adverse queried rows
+Synthetic
+2,098,600
+82,939
+82
+JUCars
+2,044,000
+67,523
+1,733
+MUCars
+2,212,560
+61,404
+2,829
+Table 3: Recovery-path diagnostic on saved primary-capacity models. Edges use 14 unique fits
+per source/seed; the last column counts returned reports from all 24 cells with positive query
+probability and gain-increasing partial recovery. For randomized allocation these are eligible rows,
+not realized query counts. Each source reuses the same 1,000 records over ten fitting seeds. Counts
+are dependent finite diagnostics, not independent samples or deployment prevalence.
+A MUCars witness has honest, two-hidden and partially recovered log quotes 11.484823,
+11.517865 and 11.546430, respectively. It hides transmission and fuel type, then recovers trans-
+mission. Thus its report component is about 0.033042 and recovery adds about 0.028564. The
+query raises the gain-producing quote in an actual fitted model. This witness is not a measurement
+of human seller behavior. Across 720 primary cells and 720,000 returned-profile rows, the saved
+E + R + C = G identity is also reconstructed. These checks connect the recovery argument to
+the empirical model class, but do not identify why feedback training is harmful or estimate the
+restricted frontier’s real-data optimum.
+14

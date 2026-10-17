@@ -1,0 +1,30 @@
+[10] J. Perdomo, T. Zrnic, C. Mendler-Dünner and M. Hardt. Performative Prediction. ICML,
+PMLR 119:7599–7609, 2020. https://proceedings.mlr.press/v119/perdomo20a.html.
+[11] S. Levanon and N. Rosenfeld. Strategic Classification Made Practical. ICML, PMLR 139:6243–
+6253, 2021. https://proceedings.mlr.press/v139/levanon21a.html.
+[12] M. Valancius, M. Lennon and J. Oliva. Acquisition Conditioned Oracle for Nongreedy Ac-
+tive Feature Acquisition. ICML, PMLR 235:48957–48975, 2024. https://proceedings.mlr.
+press/v235/valancius24a.html.
+[13] L. Prokhorenkova, G. Gusev, A. Vorobev, A. V. Dorogush and A. Gulin. CatBoost:
+Unbiased Boosting with Categorical Features. Advances in Neural Information Process-
+ing Systems 31, 2018. https://proceedings.neurips.cc/paper_files/paper/2018/hash/
+14491b756b3a51daac41c24863285549-Abstract.html.
+[14] P. Geurts, D. Ernst and L. Wehenkel. Extremely Randomized Trees. Machine Learning 63:3–
+42, 2006. https://doi.org/10.1007/s10994-006-6226-1.
+[15] A. B. Owen. The Pigeonhole Bootstrap. The Annals of Applied Statistics 1(2):386–411, 2007.
+https://doi.org/10.1214/07-AOAS122.
+[16] J. P. Romano and M. Wolf. Exact and Approximate Stepdown Methods for Multiple Hy-
+pothesis Testing. Journal of the American Statistical Association 100(469):94–108, 2005.
+https://doi.org/10.1198/016214504000000539.
+[17] I. C. Covert, W. Qiu, M. Lu, N. Y. Kim, N. J. White and S.-I. Lee. Learning to Maxi-
+mize Mutual Information for Dynamic Feature Selection. ICML, PMLR 202:6424–6447, 2023.
+https://proceedings.mlr.press/v202/covert23a.html.
+[18] S. Gadgil, I. Covert and S.-I. Lee. Estimating Conditional Mutual Information for Dynamic
+Feature Selection. ICLR, 2024. https://arxiv.org/abs/2306.03301.
+[19] A. L. I. Norcliffe, C. Lee, F. Imrie, M. van der Schaar and P. Lio. Stochastic Encodings for
+Active Feature Acquisition. ICML, PMLR 267:46784–46814, 2025. https://proceedings.
+mlr.press/v267/norcliffe25a.html.
+[20] O. B. Guney, K. S. Saichandran, K. Elzokm, Z. Zhang and V. B. Kolachalama. Active Feature
+Acquisition via Explainability-driven Ranking. ICML, PMLR 267:20748–20765, 2025. https:
+//proceedings.mlr.press/v267/guney25a.html.
+55

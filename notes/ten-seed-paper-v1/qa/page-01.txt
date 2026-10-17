@@ -1,0 +1,43 @@
+When Does Verification Help?
+Recovery-Path Regularization for Strategy-Aware Valuation
+Yuchen Tang
+Fengqin You∗
+Xin Pang
+School of Computer and Artificial Intelligence
+Nanjing University of Science and Technology Zijin College
+Nanjing, China
+Abstract
+Recovering withheld information can increase a seller’s predicted price when the valuation
+model is nonmonotone. We study this failure under natural missingness, charged failed queries
+and shared verification capacity. A recovery-path decomposition separates information recovery
+from its effect on concealment gains. We introduce recovery-path regularization, which penalizes
+increases in positive concealment gain along legal recovery edges while retaining public-record
+deployment inputs. A restricted information frontier states the limits of verification, rather than
+predicting learned-model performance. In a matched ten-seed study at 10% query capacity, the
+declared unit-weight endpoint reduces mean inflation by 50.41%, 26.58% and 23.81% on syn-
+thetic, JUCars and MUCars relative to same-gap zero-weight controls. All thirty source–seed
+comparisons have the same direction. Synthetic honest mean absolute error rises 0.82% and
+failed queries rise 1.10 percentage points, so lower inflation does not imply multiobjective dom-
+inance. Stronger training-response search also removes some earlier feedback damage, showing
+that the negative feedback result depends on implementation. The claim-bearing extensions
+complete a four-stage computational audit covering 1,206 distinct cells, including the 540-cell
+ten-seed study. Remaining response regret, retrospective cohorts and cross-machine numerical
+differences bound the findings. The supported practice is to diagnose recovery paths and eval-
+uate incentive gains jointly with prediction and verification costs before deploying feedback or
+regularization.
+Keywords: strategic missingness; secondhand valuation; budgeted verification; incentive auditing;
+factorial evaluation
+1
+Introduction
+Secondhand valuation must use incomplete seller-provided descriptions while allowing for deliberate
+withholding.
+A vehicle with no recorded mileage and a vehicle whose mileage was suppressed
+can present the same public report. A platform may request additional evidence, but available
+verification capacity is finite and a naturally absent field may remain unavailable after a paid
+attempt. This study models the resulting interaction between an itemwise price predictor and a
+batch-coupled verification policy. The outcome is an advertised price prediction, rather than a
+transaction price or a transfer mechanism.
+A query need not reduce the incentive created by an incomplete report. Consider an illustrative
+nonmonotone predictor whose quotes are 10 for a truthful record, 12 after two fields are withheld,
+∗Corresponding author: irisyou@njust.edu.cn
+1

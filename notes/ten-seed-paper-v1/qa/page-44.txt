@@ -1,0 +1,81 @@
+-0.003
+0.000
+0.003
+Inflation difference (mask - robust)
+Synthetic / Top-B
+Synthetic / Minimax
+JUCars / Top-B
+JUCars / Minimax
+MUCars / Top-B
+MUCars / Minimax
+Figure 15: Initial-objective effects depend on the source. With suppression acquisition and no policy
+feedback, points are mask-objective minus robust-objective inflation differences at 10% capacity.
+Positive values favor robust initialization. Intervals and repeated-unit definitions match Fig. 14.
+The source labels and row positions encode cohort identity independently of color. These newly
+trained objectives are not aliases for the original SAV/static-robust candidates.
+Source
+Feedback/allocation
+Inflation
+Honest MAE
+Attack MAE
+Failure (%)
+Synthetic
+None/top-B
+0.013101
+3582.47
+3655.51
+2.430
+Synthetic
+None/minimax
+0.012868
+3582.47
+3653.16
+1.886
+Synthetic
+Policy/minimax
+0.013967
+3589.84
+3652.94
+2.641
+JUCars
+None/top-B
+0.011112
+6909.46
+6902.00
+6.330
+JUCars
+None/minimax
+0.010432
+6909.46
+6902.07
+5.688
+JUCars
+Policy/minimax
+0.011855
+6907.68
+6899.03
+5.485
+MUCars
+None/top-B
+0.006511
+27223.61
+27372.61
+0.380
+MUCars
+None/minimax
+0.005371
+27223.61
+27363.32
+0.651
+MUCars
+Policy/minimax
+0.006390
+27267.93
+27441.51
+0.542
+Table 14: Original weak-search implementation: absolute primary-capacity outcomes for the robust
+initial objective and suppression acquisition, averaged over ten fitting seeds and the same 1,000
+evaluation listings. Inflation is positive expected log-quote inflation; MAEs use the source’s own
+currency, without currency pooling. Failures are per listing, rather than conditional on receiving a
+query. These are descriptive means; the effect intervals are in the full paired-contrast data.
+44

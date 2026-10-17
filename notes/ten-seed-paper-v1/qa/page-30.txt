@@ -1,0 +1,61 @@
+SAV inflation is 3.53% higher, also with an interval spanning zero. The large gains against masking
+benefit and SAV without gap remain, illustrating why comparator identity must accompany any
+statement that MUCars favors SAV.
+Original comparator
+Comparator minus SAV
+Nominal 95% interval
+Benefit head
+−0.000250
+[−0.001092, 0.000488]
+Static robust
+−0.000829
+[−0.001870, 0.000210]
+Masking benefit
+0.039742
+[0.036708, 0.042906]
+SAV without gap
+0.015624
+[0.014036, 0.017120]
+Pre-audit attacker
+0.000580
+[−0.000212, 0.001238]
+Table 8: MUCars, original protocol, ten fitting seeds, 10% capacity. Positive differences favor SAV.
+Crossed seed/batch percentile intervals use 1,000 resamples and retain the fixed-training-record,
+exploratory and unadjusted interpretation of the other two source extensions.
+D
+Conditional probability-stability diagnostics
+Takeaway. Randomized allocation admits a conditional sensitivity bound, but small field margins
+and scores near zero limit its applicability. Stability alone does not imply lower strategic inflation.
+Fix the positive-score support I, the queried field of each item, and budget B. For two score
+vectors g, g′ with all supported scores at least m > 0, let δ = ∥g −g′∥∞. Define the score-minimax
+value and canonical marginals
+T(g) =
+min
+0≤p≤1, ∑
+i pi≤B max
+i∈I gi(1 −pi),
+pi(g) = [1 −T(g)/gi]+.
+For B = 0 use zero marginals; for B ≥|I| use unit marginals on I. Then
+|T(g) −T(g′)| ≤δ,
+∥p(g) −p(g′)∥∞≤min{1, 2δ/m}.
+For any fixed feasible allocation, the two objectives differ by at most δ, which proves the value
+bound after minimization. The function h(t, x) = [1 −t/x]+ is separately 1/m-Lipschitz in t and x
+for t ≥0, x ≥m: on its positive branch, t/x2 ≤1/x, and it is continuous at the branch boundary.
+Applying the value bound proves the marginal bound.
+The active allocation set may change;
+positive-score support and queried fields must remain fixed.
+If both pre-query and recovered quotes change by at most ϵ, and the primed recovery span is at
+most R, expected quotes differ by at most ϵ + R min{1, 2δ/m}. If these conditions hold uniformly
+over all own reports at fixed peer reports, costs are unchanged, and truthful quotes are verification-
+neutral, the positive unilateral-gain envelope changes by at most 2ϵ + R min{1, 2δ/m}. This is
+not a guarantee for adapted peer responses, equilibrium selection, training convergence, or a fixed
+realization of the sampling randomness.
+Three examples delimit the claim. With two items and B = 1, swapping scores (1 + δ, 1) and
+(1, 1+δ) changes the first item’s top-B probability by one, but its minimax probability by δ/(2+δ).
+In contrast, swapping (2δ, δ) and (δ, 2δ) changes its minimax probability by 1/3 even as δ tends
+to zero. Finally, one fully queried item with two fields whose scores swap as in the first example
+can have a unit quote jump if the two recovery quotes are zero and one. The score lower bound
+and fixed-field condition therefore cannot simply be removed. An exact-arithmetic checker covers
+2,916 score-pair/budget cases, including 510 active-set changes; 108 production/linear-program
+comparisons agree to floating-point precision. These finite checks supplement the proof.
+30

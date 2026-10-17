@@ -1,0 +1,49 @@
+-0.01
+0.00
+0.01
+0.02
+Inflation minus S1F1G1
+S0F0G0
+S0F0G1
+S0F1G0
+S0F1G1
+S1F0G0
+S1F0G1
+S1F1G0
+S1F1G1
+a
+Synthetic
+0.00
+0.01
+0.02
+Inflation minus S1F1G1
+S0F0G0
+S0F0G1
+S0F1G0
+S0F1G1
+S1F0G0
+S1F0G1
+S1F1G0
+S1F1G1
+b
+JUCars
+0.00
+0.01
+Inflation minus S1F1G1
+S0F0G0
+S0F0G1
+S0F1G0
+S0F1G1
+S1F0G0
+S1F0G1
+S1F1G0
+S1F1G1
+c
+MUCars
+Figure 10: Complete three-component ablation at 10% capacity. Circles retain three paired seed
+differences from S1F1G1 and diamonds show their means.
+Negative differences indicate lower
+inflation than the full switched configuration. S/F/G denote suppression-score, feedback and gap
+switches. Neither number of cells nor number of components is an independent sample size or an
+innovation count. All nonconverged responses remain in the plot.
+38

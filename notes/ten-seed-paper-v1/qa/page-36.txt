@@ -1,0 +1,15 @@
+Each JUCars model evaluates 806 completions; each MUCars model evaluates 1,139. All base-
+line quotes match saved predictions within 5×10−6 in log quote; sampled completions also match the
+production all-state inference route within that tolerance. Predictor primitives are shared. On the
+declared covered domain, the envelope is exactly costless for complete categorical records: 800/801
+JUCars and 971/999 MUCars records have singleton completion sets.
+All quotation and error
+changes are confined to the one and 28 naturally incomplete records, respectively. For the MUCars
+subset, the largest individual quotation reduction is 25.5% of that record’s original predicted quote,
+while mean honest-MAE increases range from 374.24 to 851.51 currency units (Table 11). Quo-
+tation discounts and absolute-error costs have different denominators and must not be conflated.
+The practical trade-off is zero change on complete covered categorical records but potentially sub-
+stantial discounts on naturally incomplete ones. The guarantee covers only the declared categorical
+domain with fixed observed mileage. It does not cover mileage concealment, unseen values or the
+original full four-field game, and this pilot supplies no confirmatory or universal method advantage.
+36
