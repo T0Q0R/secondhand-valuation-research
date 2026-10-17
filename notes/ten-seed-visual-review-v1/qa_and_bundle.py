@@ -28,9 +28,13 @@ def main():
         r=subprocess.run([sys.executable,str(TOOLS/'audit_pdf_text.py'),str(pdf),
             '--min-pt','5','--json'],capture_output=True,text=True)
         (DATA/f'{name}.fonts.json').write_text(r.stdout)
+        # The inspector writes overlays only when findings exist. Clear an old
+        # draft overlay first so a passing final export cannot retain stale marks.
+        overlay=DATA/f'{name}.collision-overlay.pdf'
+        overlay.unlink(missing_ok=True)
         c=subprocess.run([sys.executable,str(TOOLS/'audit_figure_collisions.py'),str(pdf),
             '--json-out',str(DATA/f'{name}.collisions.json'),
-            '--overlay-pdf',str(DATA/f'{name}.collision-overlay.pdf')],capture_output=True,text=True)
+            '--overlay-pdf',str(overlay)],capture_output=True,text=True)
         report.append(dict(name=name,font_exit=r.returncode,collision_exit=c.returncode))
         print(name,'font',r.returncode,'collision',c.returncode,flush=True)
         with pymupdf.open(pdf) as doc:
