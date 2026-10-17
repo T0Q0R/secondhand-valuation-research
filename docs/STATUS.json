@@ -475,7 +475,7 @@
     "project_authored_software_license": "MIT"
   },
   "core_evidence_v2": {
-    "status": "training_complete_remaining_audits_running",
+    "status": "computations_and_all_four_phase_audits_completed_scientific_review_pending",
     "plan": "notes/core-evidence-v2/PLAN.zh.md",
     "old_core_cells": 828,
     "rpl_total_cells": 540,
@@ -487,7 +487,7 @@
     "runtime_status": "outputs/rpl-ten-seed-runtime-v2/status.json",
     "author_facts": "notes/core-evidence-v2/author-facts.json",
     "external_reproduction": "External fresh fitting and one-pass residual diagnostics executed; same-machine repeatability verified, strict cross-machine numerical reproduction failed and retained",
-    "audit_status": "aco_recovery_v3_running_rpl10_follows",
+    "audit_status": "all_eight_stages_completed",
     "unique_audit_target_cells": 1206,
     "audit_runner": "experiments/run_core_evidence_queue_v2.py",
     "external_package": "reproduction/macos-core-v2/README.zh.md",
@@ -509,11 +509,13 @@
       "rpl10"
     ],
     "training_cells": 540,
-    "four_phase_completed_unique_cells": 684,
+    "four_phase_completed_unique_cells": 1206,
     "recovery_runner": "experiments/run_core_evidence_recovery_v3.py",
     "recovery_note": "notes/core-evidence-recovery-v3/RECOVERY.zh.md",
     "recovery_pid": 56329,
-    "recovery_runtime_status": "outputs/core-evidence-recovery-runtime-v3/status.json"
+    "recovery_runtime_status": "outputs/core-evidence-recovery-runtime-v3/status.json",
+    "remaining_queued_computations": 0,
+    "final_verification": "notes/core-evidence-recovery-v3/final-verification.json"
   },
   "external_reproduction_v1": {
     "status": "external_onepass_diagnostic_complete_first_observed_gradient_divergence_strict_metric_mismatch_retained",
@@ -598,9 +600,9 @@
     "user_authorized_max_compute_threads": 6,
     "requested_user_headroom_cores": 4,
     "scheduler_nice": 10,
-    "current_compute_workers": 5,
+    "current_compute_workers": 0,
     "threads_per_worker": 1,
-    "current_stage": "rpl10",
+    "current_stage": "completed_scientific_review_pending",
     "completed_pairs": 25,
     "total_pairs": 30,
     "runtime_parent_pid": 56329,
@@ -609,6 +611,7 @@
     "frozen_source_unchanged": true,
     "physical_core_affinity_or_reservation": false,
     "frozen_runtime_limit_field": 8,
-    "runtime_limit_note": "Existing frozen runner still reports8 as compiled ceiling; no queued workers remain, so actual current/future concurrency in this run cannot exceed5. Future launches must honor new6-thread preference."
+    "runtime_limit_note": "Existing frozen runner still reports8 as compiled ceiling; no queued workers remain, so actual current/future concurrency in this run cannot exceed5. Future launches must honor new6-thread preference.",
+    "last_verified_at": "2026-10-17T21:56:18+08:00"
   }
 }

@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-10-17T21:56:18+08:00",
+  "status": "all_eight_computational_stages_verified_scientific_review_pending",
+  "unique_audited_cells": 1206,
+  "rpl_ten_seed_training_cells": 540,
+  "all_phase_closure_hashes_and_analysis_artifact_hashes_checked": true,
+  "frozen_sources_and_producer_manifest_hashes_checked": true,
+  "stages": [
+    {
+      "stage": "rpl",
+      "closure_sha256": "a686fa069b9394ac086cf72d27ea39aa53aee90269d7c66ed03ab6bcfdafbf2a",
+      "source_manifest_sha256": "4ac286ac26968b8da027e872ab04edd6d13b2b3f1847182cf955068e56c91e96",
+      "completed_at_unix": 1792173175.309721
+    },
+    {
+      "stage": "mechanisms",
+      "closure_sha256": "e50786f3fdb776cb0ffea2043ba2a36d7b07f3ad5314ffdfe4c6ca0d1b0c2491",
+      "source_manifest_sha256": "4ac286ac26968b8da027e872ab04edd6d13b2b3f1847182cf955068e56c91e96",
+      "completed_at_unix": 1792182353.738115
+    },
+    {
+      "stage": "sefa",
+      "closure_sha256": "caf0811cf933876426913b9941543d6d1965f8fbedae3b301f9330d54f21a285",
+      "source_manifest_sha256": "4ac286ac26968b8da027e872ab04edd6d13b2b3f1847182cf955068e56c91e96",
+      "completed_at_unix": 1792186867.310328
+    },
+    {
+      "stage": "gdfs",
+      "closure_sha256": "d825663ba56444d74d3ff03eb410a62ba4219445202f9003e8618d42d47e92c1",
+      "source_manifest_sha256": "4ac286ac26968b8da027e872ab04edd6d13b2b3f1847182cf955068e56c91e96",
+      "completed_at_unix": 1792186905.195234
+    },
+    {
+      "stage": "dime",
+      "closure_sha256": "f7980f6ed9b449622127be63d032b303343b1dd08937aa49b4d601dbc67dd08a",
+      "source_manifest_sha256": "4ac286ac26968b8da027e872ab04edd6d13b2b3f1847182cf955068e56c91e96",
+      "completed_at_unix": 1792186941.1806872
+    },
+    {
+      "stage": "efa",
+      "closure_sha256": "e08c9f26a32561c1dd8370f0f4e220a3cd033d415fa919a7b7639b8519778d10",
+      "source_manifest_sha256": "4ac286ac26968b8da027e872ab04edd6d13b2b3f1847182cf955068e56c91e96",
+      "completed_at_unix": 1792186978.211915
+    },
+    {
+      "stage": "aco",
+      "closure_sha256": "04d555feb4ac5a587dcf069b7092bf087b9038f070837a303dcad86d2247f95f",
+      "source_manifest_sha256": "e2b0190abe2e74ba262b272031cfe9f728057d51e17e09d3dc90b267bbddc1df",
+      "completed_at_unix": 1792211943.1503649
+    },
+    {
+      "stage": "rpl10",
+      "closure_sha256": "b35a75d7e94d54bb39c9a7a2e924ff5eb7bbab3bb937a18ad2dafc5b1da9b339",
+      "source_manifest_sha256": "e2b0190abe2e74ba262b272031cfe9f728057d51e17e09d3dc90b267bbddc1df",
+      "completed_at_unix": 1792242390.4451818
+    }
+  ],
+  "compute_processes_exited": true,
+  "remaining_queued_computations": 0,
+  "last_stage_result_commit": "4cd382aaf5494918c7b7d51f52b355e4e975f2df",
+  "manuscript_modified": false,
+  "original_aco_failure_preserved": true,
+  "remaining_work": [
+    "Scientific interpretation of ten-seed results and trade-offs",
+    "Figure and paper integration and review",
+    "Cross-machine reproduction boundary and archival release"
+  ],
+  "computational_audit_is_not_full_independent_implementation": true
+}
