@@ -591,5 +591,23 @@
     "formal_results_replaced": false,
     "external_user_operation_requested": false,
     "full_experiment_matrix_extended": false
+  },
+  "compute_resource_policy": {
+    "updated_at": "2026-10-17T20:36:00+08:00",
+    "user_authorized_max_compute_threads": 6,
+    "requested_user_headroom_cores": 4,
+    "scheduler_nice": 10,
+    "current_compute_workers": 5,
+    "threads_per_worker": 1,
+    "current_stage": "rpl10",
+    "completed_pairs": 25,
+    "total_pairs": 30,
+    "runtime_parent_pid": 56329,
+    "no_queued_pairs_at_time_of_change": true,
+    "implementation": "Current five remaining single-thread workers already fit new six-thread allowance. Lower parent and existing worker nice priority to10; later analysis inherits parent priority. Persist6-thread maximum for future launches.",
+    "frozen_source_unchanged": true,
+    "physical_core_affinity_or_reservation": false,
+    "frozen_runtime_limit_field": 8,
+    "runtime_limit_note": "Existing frozen runner still reports8 as compiled ceiling; no queued workers remain, so actual current/future concurrency in this run cannot exceed5. Future launches must honor new6-thread preference."
   }
 }
