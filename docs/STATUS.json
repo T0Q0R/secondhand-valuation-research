@@ -624,5 +624,10 @@
     "delivery": "notes/ten-seed-visual-review-v1/delivery.json",
     "review_pdf": "paper/figures/ten-seed-v1/figure-review.pdf",
     "manuscript_figures_integrated": false
+  },
+  "ten_seed_paper_v1": {
+    "status": "revision_in_progress_not_compiled",
+    "plan": "notes/ten-seed-paper-v1/PLAN.zh.md",
+    "new_training": false
   }
 }
