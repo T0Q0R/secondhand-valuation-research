@@ -1,0 +1,89 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0.1
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "expected_cells": 90,
+  "expected_pairs": 9,
+  "rpl_weights": [
+    0,
+    1
+  ],
+  "gap_weight": 0.5,
+  "families": [
+    "aco",
+    "sefa",
+    "gdfs",
+    "dime",
+    "efa"
+  ],
+  "budget": 0.1,
+  "new_fits": 0,
+  "workers": 3,
+  "compute_threads_per_worker": 1,
+  "total_compute_limit": 6,
+  "nice": 10,
+  "dependencies": {
+    "experiments/run_rpl_five_factorial_v1.py": "c5bdd9f73720cc99a8f5900dd00e238800b479e19ed80814874e7396b03c59c7",
+    "experiments/core_evidence_audit_v2.py": "f6f4c9e03f7d879c2caf65ae8637cb87b2d1d8a617e559d53e25cf609b388a6b",
+    "experiments/audit_core_aco_v3.py": "7e48d0548c3e26b1fc8877d7ccb16366e108fe335e9eb05fe3c91bae41871aa9",
+    "experiments/run_completion_ablation_v6.py": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+    "experiments/run_completion_sefa_v6.py": "c4a4b21bcdd2285b57dfab45e46abae437eb7633f32db800e4d64e2c341e8875",
+    "experiments/run_aco_comparator.py": "d26fa3c154b5d1754c9a5b76cbcb52a24bdb253ff7b75164bfe253f9648ecc2c",
+    "experiments/conditional_neighbor_head.py": "5b38485882fe8db0d87d641c392777d9ef67f7f9728b84e49a52d3a810cbf0ed",
+    "experiments/benchmark_public_pipeline.py": "412baa38ce0f55063460b9b26c107d2d98bed8177bc8818db00de7cb1be8733b",
+    "experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "experiments/run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7",
+    "experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8"
+  },
+  "manuscript_sha256": "9f3aff87580a9dd510feaab1e2b4f13b2a0f8283330eb156ba9139dd89ea4b86",
+  "parent_manifest_sha256": "ef6791051bb7e03a37579ef23a6b7c7b58df3027a82179091c2001946d6133a1",
+  "scope": "Retrospective matched price-by-acquisition crossing; three fitting seeds on fixed cohorts; full seed ranges, no confirmatory inference. ACO bank losses recomputed for each price. Neural acquisition unchanged. No training, tuning, new seeds or external-machine runs."
+}
