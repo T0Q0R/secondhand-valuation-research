@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-18T14:25:42+08:00",
+  "snapshot_time": "2026-10-18T19:12:22+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -778,5 +778,16 @@
     "pdf_sha256": "02267e0b10a0ef305bca45b09af73dcf7fed9ec407665c472a2254b4bfd0d297",
     "qa": "notes/rpl-paper-integration-v1/qa.json",
     "updated_at": "2026-10-18T19:03:16+08:00"
+  },
+  "review_improvement_v1": {
+    "time": "2026-10-18T19:12:22+08:00",
+    "status": "protocol_fixed_implementation_pending",
+    "plan": "notes/review-improvement-v1/PLAN.zh.md",
+    "gap_new_fit_count": 360,
+    "gap_new_evaluation_cells": 90,
+    "threads_max": 6,
+    "niceness": 10,
+    "independent_real_cohort_validation": false,
+    "author_factual_declarations": "pending_author_facts"
   }
 }
