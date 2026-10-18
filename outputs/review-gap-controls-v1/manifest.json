@@ -1,0 +1,120 @@
+{
+  "config": {
+    "actions": [
+      "mileage_km",
+      "transmission",
+      "fuel_type",
+      "feat_body_condition"
+    ],
+    "anchor_weight": 0.25,
+    "attack_loss_weight": 0.5,
+    "attacker_restarts": 4,
+    "attacker_sweeps": 20,
+    "batch_size": 100,
+    "bootstrap_repetitions": 1000,
+    "budgets": [
+      0.0,
+      0.1,
+      0.3
+    ],
+    "catboost_iterations": 250,
+    "concealment_cost_log": 0.0,
+    "datasets": [
+      "synthetic",
+      "jucars",
+      "mucars"
+    ],
+    "feedback_rounds": 2,
+    "gap_penalty_weight": 0.5,
+    "gap_tolerance_log": 0.02,
+    "head_fitting_fraction": 0.3,
+    "head_trees": 160,
+    "learning_rate": 0.001,
+    "max_evaluation": 1000,
+    "max_train": 5000,
+    "maximum_hidden": 2,
+    "outer_folds": 3,
+    "output": "outputs/nested-development-v2",
+    "protocol": "sav-val-public-nested-development-v2",
+    "residual_epochs": 12,
+    "residual_hidden_width": 64,
+    "runtime_python": "../.venv-gdfs/bin/python",
+    "seeds": [
+      13,
+      42,
+      2026,
+      101,
+      211,
+      307,
+      401,
+      503,
+      601,
+      701
+    ],
+    "status": "retrospective_crossfit_development",
+    "synthetic_evaluation": 1500,
+    "synthetic_evaluation_seed": 73102,
+    "synthetic_generation_seed": 73101,
+    "synthetic_train": 6000,
+    "training_attacker_sweeps": 2,
+    "training_budget": 0.1
+  },
+  "seeds": [
+    13,
+    42,
+    2026,
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701
+  ],
+  "budgets": [
+    0.1
+  ],
+  "new_betas": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "candidate_grids": {
+    "rpl": [
+      0.0,
+      0.1,
+      0.5,
+      1.0
+    ],
+    "gap": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ]
+  },
+  "selection": {
+    "data": "training three-fold OOF predictions only",
+    "criterion": "minimum mean max legal zero-query positive log gain",
+    "constraint": "OOF honest currency MAE <= 1.05 * common beta.5/lambda0 OOF MAE",
+    "fallback": "minimum honest MAE; constraint failure reported",
+    "ties": "criterion, honest MAE, candidate order"
+  },
+  "expected_new_fits": 360,
+  "expected_new_cells": 90,
+  "dependency_sha256": {
+    "experiments/run_review_gap_controls_v1.py": "5b35f08e59476a81de50a0ab67d0d3daba1608e2a641b2558c2ee5a22b091bec",
+    "experiments/run_rpl_ten_seed_v2.py": "0b1d3898063607da40cef5fb14ecfec9d5f2b18504674d109ae6cc2908ed71d5",
+    "experiments/run_recovery_path_learning_v1.py": "4d859f8347a3b496765953d860921d8da3dd53e9928aee637b73f91b43036548",
+    "experiments/recovery_path_training_v1.py": "c19dad6d140ea3a43a068806e309cc2f6ca1c4a5070cb4ef594cbf167aae38f3",
+    "experiments/run_completion_ablation_v6.py": "27e811c044d2154307cf51ae3a834ac67152638e977a5acc6e5deac181a97a03",
+    "experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "experiments/run_crossfit.py": "ff9eac12543e6865a2b266ccdf9978299d3358bffdf567ec04d41997b5a2b3b7"
+  },
+  "reference_summary_sha256": "2dbfacfcfcc90ffc854e5e28d85a00d36a1fad812700640e063b7b46272aebd4",
+  "reference_manifest_sha256": "10c255c7c853c15c28c28057c216403fe71daee8f3e57a42979bbd864b27b7d4",
+  "protocol_sha256": "3eacd0b1ed672274b69d71a58f0094593178a8a83ce8c96af16f085b83b11803",
+  "baseline_manuscript_sha256": "7de47e0d551bac8ffaaf3d9920eb32bf0af09ad572412bb3ec6fce7f60c8a313",
+  "scope": "retrospective fixed-population comparison, not preregistration or full four-phase audit"
+}

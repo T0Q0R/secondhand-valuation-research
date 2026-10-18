@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "exact_prediction_identity": true,
+  "reference_model_sha256": "213db9089666420fe888d4649cfb91430e258471a3a4f33d993b49725fe01728",
+  "new_model_sha256": "0a2360738b80ef1235b4a49b395586f38f1dd5aacaf64a2ee4f540d5b795e247",
+  "prediction_shape": [
+    1000,
+    11
+  ],
+  "selection_contract_checked": true,
+  "scope": "full single-stage replay at existing lambda.5 plus selection unit checks, not all new fits"
+}
