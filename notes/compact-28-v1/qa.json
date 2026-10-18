@@ -1,8 +1,8 @@
 {
-  "status": "compiled_numeric_bindings_and_visual_review_passed",
-  "timestamp": "2026-10-18T14:13:25+08:00",
-  "source_sha256": "ce3b12373b9a6f655bbd202ccccf2d362f9c2c4ed87c902fe18d5fa07d0ca3be",
-  "pdf_sha256": "cd9243def1153033ea04b1ed4e17c876636d5b38ff1cc94f9c3c1e38b50eb810",
+  "status": "author_addition_compiled_title_page_visual_checked",
+  "timestamp": "2026-10-18T14:23:42+08:00",
+  "source_sha256": "8f58bcf7476256c6d0e0c7d278d1430abf3172438ec439735071a2439a2788e7",
+  "pdf_sha256": "3cde296aefc67df13d9b3a882309c9ca424f7bfc10cb927e46ba36db64c1c2b5",
   "pages": 28,
   "main_pages_including_declarations": 19,
   "appendices_and_references_pages": 9,
@@ -203,21 +203,16 @@
       "opening": "[3] J. Letchford and V. Conitzer. Solving Security Games on Graphs via Marginal Probabilit"
     }
   ],
+  "authors": [
+    "Yuchen Tang",
+    "Fengqin You",
+    "Xin Pang",
+    "Junxiang Gu"
+  ],
   "visual_review": {
-    "contact_sheets": "All28pages reviewed across3sheets",
-    "detail_pages": [
-      1,
-      11,
-      15,
-      19,
-      20,
-      24,
-      25,
-      26,
-      28
-    ],
-    "visible_clipping_or_overlap": false,
-    "two_short_figures_per_page": "Full text width, separate captions and numbers on pages11/24",
-    "submission_artwork_font_compliance": "Current vector sizes retained; final journal-template/column-width check still separate"
+    "scope": "Only fourth name added; title page inspected, previous28page review retained",
+    "prior_full_review_commit": "0038ad36cfa59dc19cf1beeec88e4131663f4569",
+    "title_page_author_order_passed": true,
+    "visible_clipping_or_overlap": false
   }
 }

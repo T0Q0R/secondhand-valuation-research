@@ -12,7 +12,7 @@
 \newcommand{\AuditVector}[1]{\ifdefined\pdfliteral\pdfliteral{#1}\else\special{pdf:bcontent}\special{pdf:literal direct #1}\special{pdf:econtent}\fi}
 \newtheorem{proposition}{Proposition}
 \title{When Does Verification Help?\\Recovery-Path Regularization for Strategy-Aware Valuation}
-\author{Yuchen Tang \quad Fengqin You\textsuperscript{*} \quad Xin Pang\\[.5em]
+\author{Yuchen Tang \quad Fengqin You\textsuperscript{*} \quad Xin Pang \quad Junxiang Gu\\[.5em]
 \small School of Computer and Artificial Intelligence\\
 \small Nanjing University of Science and Technology Zijin College\\
 \small Nanjing, China\\[.4em]

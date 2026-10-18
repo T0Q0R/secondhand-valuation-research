@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-18T14:24:51+08:00",
+  "scope": "User-authorized fourth manuscript author addition only",
+  "author_order": [
+    "Yuchen Tang",
+    "Fengqin You",
+    "Xin Pang",
+    "Junxiang Gu"
+  ],
+  "chinese_new_author": "顾峻祥",
+  "english_name_provisional": "Junxiang Gu",
+  "english_spelling_confirmed_by_person": false,
+  "affiliation_layout": "Existing shared affiliation retained provisionally; new author affiliation not separately confirmed",
+  "corresponding_author": "Fengqin You",
+  "email": "irisyou@njust.edu.cn",
+  "pages": 28,
+  "source_sha256": "8f58bcf7476256c6d0e0c7d278d1430abf3172438ec439735071a2439a2788e7",
+  "pdf_sha256": "3cde296aefc67df13d9b3a882309c9ca424f7bfc10cb927e46ba36db64c1c2b5",
+  "only_source_edit": "Insert \\quad Junxiang Gu after Xin Pang",
+  "builtin_compilation": "success",
+  "new_training": false,
+  "published_software_authorship_changed": false,
+  "published_software_note": "CITATION.cff identifies the existing software archive, not this new manuscript author list; no retroactive software-author attribution inferred",
+  "availability_followup": "Concurrent DOI release d494663 exists; its availability prose update is separate from this author-only request"
+}

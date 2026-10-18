@@ -3,6 +3,7 @@ Recovery-Path Regularization for Strategy-Aware Valuation
 Yuchen Tang
 Fengqin You*
 Xin Pang
+Junxiang Gu
 School of Computer and Artificial Intelligence
 Nanjing University of Science and Technology Zijin College
 Nanjing, China
