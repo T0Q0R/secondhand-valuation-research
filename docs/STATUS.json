@@ -62,7 +62,12 @@
     "author4_affiliation_chinese": "南京理工大学紫金学院计算机与人工智能学院",
     "figures": 11,
     "tables": 8,
-    "author_order_revision": "explicit user corrected order; local source changed; PDF compilation and remote paper pending"
+    "author_order_revision": "corrected in working source/PDF; substantive integration and final QA pending",
+    "author_contributions_confirmed_subset": {
+      "Yuchen Tang": "manuscript writing",
+      "Fengqin You": "advisor supervision",
+      "Junxiang Gu": "manuscript writing guidance"
+    }
   },
   "figures": {
     "new_count": 4,
@@ -781,7 +786,7 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-18T19:20:58+08:00",
+    "time": "2026-10-18T19:36:05+08:00",
     "status": "ten_seed_mechanisms_and_data_checked_gap_training_running",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
@@ -805,6 +810,8 @@
     "mechanism_batch_rows": 1800,
     "diagnostics_qa": "notes/review-improvement-v1/diagnostics-qa.json",
     "gap_cells_snapshot": 12,
-    "declarations": "known writing/supervision contributions recorded; user requested not to pursue funding/COI"
+    "declarations": "known writing/supervision contributions recorded; user requested not to pursue funding/COI",
+    "zenodo_author_order": "published_Tang_You_Gu_Pang_zip_unchanged",
+    "zenodo_author_check": "notes/review-improvement-v1/zenodo-author-verification.json"
   }
 }

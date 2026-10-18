@@ -1,0 +1,15 @@
+{
+  "time": "2026-10-18T11:28:23.447755+00:00",
+  "status": "published",
+  "doi": "10.5281/zenodo.23447567",
+  "creators": [
+    "Tang, Yuchen",
+    "You, Fengqin",
+    "Gu, Junxiang",
+    "Pang, Xin"
+  ],
+  "file_checksum": "md5:b84bd0e4360e0d3eef9f23d64f358b92",
+  "file_size": 3340355,
+  "description": "<p>Version 1.0.0 archives screened research software, software/protocol documentation and aggregate reproducibility evidence for secondhand valuation under strategic missingness and budgeted verification. Immutable source: https://github.com/T0Q0R/secondhand-valuation-research/tree/89ad56e3d217b5d5f94f822c86801b1abc1c9b2f .</p>\n<p>The new matched crossing contains 90 cells: three sources, three common fitting seeds, RPL weights 0 and 1, five task-adapted acquisition families, 10% capacity and gap weight 0.5. All 45 paired inflation comparisons decrease, while all multiobjective costs and 18 nonconverged cells/batches are retained. Independent outcome-algebra checks cover all cells; this is retrospective three-seed evidence, not a confirmatory experiment or a new full four-stage fit/statistical audit.</p>\n<p>The archive also includes a numerical-difference table for the existing six synthetic/seed13 external-machine cells. Strict numerical reproduction failed under the original tolerances and remains failed. No numerical equivalence or universal method superiority is claimed.</p>\n<p>See ARCHIVE_README.md and ARCHIVE_INVENTORY.json for file-level SHA256 hashes, source provenance, exclusions and reproduction dependencies. Input datasets, model weights, listing-level outcomes, binary arrays, manuscripts, scientific figures, third-party papers and historical ZIP bundles are excluded. Original input access routes are described in data/README.md.</p>\n<p>MIT applies to project-authored software and its software documentation under LICENSE_SCOPE.md. Third-party code retains upstream licenses and notices. This record does not extend the MIT grant to source datasets, manuscript text, scientific figures or third-party publications. Aggregate tables and computational receipts are provided as scientific evidence; no new blanket data/content license is asserted.</p>\n<p>Authorship metadata corrected on 18 October 2026: the current author order is Yuchen Tang, Fengqin You (corresponding author), Junxiang Gu, and Xin Pang, all with the same institutional affiliation. This order supersedes earlier citations and author-order corrections. The immutable version 1.0.0 ZIP is unchanged. Later review diagnostics and stronger-gap controls in the repository are not part of this archived ZIP.</p>",
+  "scope": "metadata order corrected; published ZIP unchanged"
+}
