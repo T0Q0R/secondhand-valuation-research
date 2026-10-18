@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "exact_residual_parameters": true,
+  "exact_quotes": true,
+  "exact_training_logs": true,
+  "quote_shape": [
+    1000,
+    11
+  ],
+  "original_stage_seconds": 62.52801513671875,
+  "optimized_stage_seconds": 3.229024887084961,
+  "original_model_sha256": "ccfaf5044be71a121f974a5b64f84de9bc1ac76cb9a00e2d39d3dd6c2a4f1131",
+  "optimized_model_sha256": "b3bc5de5b030c1c822f7523e5f4ec9391e900f2e7b6342c47996233b1c2e6635",
+  "scope": "single complete real-source fit, equal optimizer updates; unused intermediate heads omitted, final OOF head remains"
+}

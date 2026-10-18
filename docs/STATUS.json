@@ -786,8 +786,8 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-18T19:37:32+08:00",
-    "status": "synthetic_gap_checkpoint_checked_real_sources_running",
+    "time": "2026-10-18T19:42:43+08:00",
+    "status": "equivalent_runtime_v2_ready_old_processes_terminal",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
@@ -799,9 +799,9 @@
     "manifest": "outputs/review-gap-controls-v1/manifest.json",
     "epoch_correction": "2 rounds x 6 epochs from frozen residual_epochs=12",
     "engineering": "outputs/review-gap-controls-v1/engineering-check.json",
-    "gap_pid": 16038,
+    "gap_pid": null,
     "gap_session": 3256,
-    "gap_workers": 2,
+    "gap_workers": 3,
     "gap_threads_per_worker": 2,
     "mechanism_session": 28472,
     "mechanism_threads": 1,
@@ -817,6 +817,10 @@
       "synthetic"
     ],
     "gap_new_fit_receipts_checked": 120,
-    "gap_partial_verification": "notes/review-improvement-v1/gap/verification.json"
+    "gap_partial_verification": "notes/review-improvement-v1/gap/verification.json",
+    "gap_old_runtime": "outputs/review-gap-controls-v1",
+    "gap_runtime": "outputs/review-gap-controls-v2",
+    "mechanism_status": "completed",
+    "runtime_equivalence_check": "outputs/review-gap-controls-v2/engineering-check.json"
   }
 }

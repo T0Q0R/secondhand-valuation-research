@@ -1,0 +1,5 @@
+{
+  "status": "rejected_checkpoint_alias_before_training",
+  "reason": "generic engineering-smoke path matched an unrelated v1 synthetic replay; strict inputs assertion rejected it",
+  "correction": "use source/seed-specific new engineering path; production v1 remains untouched"
+}

@@ -1,13 +1,14 @@
 {
-  "status": "running",
-  "cells": 30,
-  "expected_cells": 90,
-  "workers": 2,
-  "threads_per_worker": 2,
-  "pid": 16038,
-  "last_pair": [
-    "synthetic",
-    701
+  "time": "2026-10-18T19:42:43+08:00",
+  "status": "intentionally_superseded_preserving_all_checkpoints",
+  "stopped_pids": [
+    16038,
+    16066,
+    16067
   ],
-  "time": 1792322857.6796281
+  "all_processes_terminal_verified": true,
+  "completed_cells": 30,
+  "new_runtime": "outputs/review-gap-controls-v2",
+  "reason": "exact price-parameter/quote/log replay permits omitting unused intermediate heads; final OOF head unchanged",
+  "engineering_check": "outputs/review-gap-controls-v2/engineering-check.json"
 }
