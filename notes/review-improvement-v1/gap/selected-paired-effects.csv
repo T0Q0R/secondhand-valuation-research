@@ -1,0 +1,7 @@
+source,metric,gap_minus_rpl,low,high,rpl_better_seeds,gap_better_seeds,scope
+synthetic,mean_positive_log_inflation,-0.002129737472534139,-0.002688324012756317,-0.0015142739105224081,0,10,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+synthetic,clean_mae,71.29954712424573,55.4508703882306,88.11585495429713,10,0,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+synthetic,attack_mae,82.23677699472182,68.44212504045713,94.9981067668685,10,0,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+synthetic,failed_query_fraction,-0.022600000000000002,-0.0264,-0.018600000000000002,0,10,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+synthetic,max_remaining_response_regret,-0.0011245727539062399,-0.00333290100097654,0.0,0,2,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+synthetic,nonconverged_batch_fraction,-0.01999999999999998,-0.04999999999999995,0.0,0,2,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness

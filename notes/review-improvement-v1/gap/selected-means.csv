@@ -1,0 +1,3 @@
+source,family,mean_positive_log_inflation,clean_mae,attack_mae,failed_query_fraction,max_remaining_response_regret,nonconverged_batch_fraction
+synthetic,gap,0.004034809875488281,3676.6506142003373,3684.501314198916,0.013500000000000002,0.0,0.0
+synthetic,rpl,0.00616454734802242,3605.3510670760916,3602.2645372041943,0.0361,0.0110416412353515,0.01999999999999998
