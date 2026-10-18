@@ -1,46 +1,29 @@
-\begin{longtable}{lrlrrrr}
-\caption{Absolute matched RPL--acquisition outcomes at 10\% capacity and $\beta=.5$, using the same three fitting seeds. MAE is in each source currency; failed queries are percent of all listings. Native head denotes the original suppression head, not zero acquisition. All nonconverged profiles remain included. Full per-seed ranges and convergence values are in the linked source CSVs.}\label{tab:recent_primary}\\
-\toprule Source & $\lambda$ & Acquisition & Inflation & Honest MAE & Attacked MAE & Failed (\%)\\\midrule\endfirsthead
-\toprule Source & $\lambda$ & Acquisition & Inflation & Honest MAE & Attacked MAE & Failed (\%)\\\midrule\endhead
-synthetic & 0 & Native head & 0.01303 & 3566.27 & 3642.04 & 2.87\\
-synthetic & 0 & ACO & 0.00988 & 3566.27 & 3608.08 & 3.47\\
-synthetic & 0 & SEFA & 0.01019 & 3566.27 & 3601.58 & 3.40\\
-synthetic & 0 & GDFS & 0.01353 & 3566.27 & 3650.50 & 3.27\\
-synthetic & 0 & DIME & 0.01306 & 3566.27 & 3636.75 & 2.27\\
-synthetic & 0 & Expl.-AFA & 0.01388 & 3566.27 & 3655.20 & 3.23\\
+\paragraph{Shared honest errors.}
+For $\lambda=0$ and 1, honest MAE is respectively 3566.27 and 3601.64 (synthetic), 7084.30 and 7070.78 (JUCars), and 27154.31 and 26906.52 (MUCars). Each pair is shared by all six acquisition choices. Table~\ref{tab:recent_primary} gives their remaining absolute outcomes.
+\setlength{\LTcapwidth}{\textwidth}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrrr}
+\caption{Absolute matched outcomes at 10\% capacity, $\beta=.5$, three seeds. Each slash separates $\lambda=0/1$. MAE is in source currency; failed queries are percent of all listings. All nonconverged profiles remain included.}\label{tab:recent_primary}\\
+\toprule Source & Acquisition & Inflation $0/1$ & Attacked MAE $0/1$ & Failed (\%) $0/1$\\\midrule\endfirsthead
+\toprule Source & Acquisition & Inflation $0/1$ & Attacked MAE $0/1$ & Failed (\%) $0/1$\\\midrule\endhead
+synthetic & Native head & 0.01303/0.00639 & 3642.04/3608.84 & 2.87/3.50\\
+synthetic & ACO & 0.00988/0.00537 & 3608.08/3602.35 & 3.47/3.50\\
+synthetic & SEFA & 0.01019/0.00530 & 3601.58/3595.37 & 3.40/3.53\\
+synthetic & GDFS & 0.01353/0.00907 & 3650.50/3622.99 & 3.27/3.20\\
+synthetic & DIME & 0.01306/0.00782 & 3636.75/3612.32 & 2.27/3.50\\
+synthetic & Expl.-AFA & 0.01388/0.00903 & 3655.20/3626.37 & 3.23/3.33\\
 \midrule
-synthetic & 1 & Native head & 0.00639 & 3601.64 & 3608.84 & 3.50\\
-synthetic & 1 & ACO & 0.00537 & 3601.64 & 3602.35 & 3.50\\
-synthetic & 1 & SEFA & 0.00530 & 3601.64 & 3595.37 & 3.53\\
-synthetic & 1 & GDFS & 0.00907 & 3601.64 & 3622.99 & 3.20\\
-synthetic & 1 & DIME & 0.00782 & 3601.64 & 3612.32 & 3.50\\
-synthetic & 1 & Expl.-AFA & 0.00903 & 3601.64 & 3626.37 & 3.33\\
+jucars & Native head & 0.01380/0.00922 & 7078.99/7066.68 & 4.37/5.83\\
+jucars & ACO & 0.01401/0.00952 & 7079.86/7066.35 & 2.23/2.80\\
+jucars & SEFA & 0.01338/0.00929 & 7080.43/7066.00 & 3.83/3.77\\
+jucars & GDFS & 0.01290/0.00878 & 7076.49/7065.10 & 4.73/5.60\\
+jucars & DIME & 0.01396/0.00939 & 7075.43/7064.21 & 4.07/4.73\\
+jucars & Expl.-AFA & 0.01294/0.00880 & 7081.03/7065.39 & 4.20/4.93\\
 \midrule
-jucars & 0 & Native head & 0.01380 & 7084.30 & 7078.99 & 4.37\\
-jucars & 0 & ACO & 0.01401 & 7084.30 & 7079.86 & 2.23\\
-jucars & 0 & SEFA & 0.01338 & 7084.30 & 7080.43 & 3.83\\
-jucars & 0 & GDFS & 0.01290 & 7084.30 & 7076.49 & 4.73\\
-jucars & 0 & DIME & 0.01396 & 7084.30 & 7075.43 & 4.07\\
-jucars & 0 & Expl.-AFA & 0.01294 & 7084.30 & 7081.03 & 4.20\\
-\midrule
-jucars & 1 & Native head & 0.00922 & 7070.78 & 7066.68 & 5.83\\
-jucars & 1 & ACO & 0.00952 & 7070.78 & 7066.35 & 2.80\\
-jucars & 1 & SEFA & 0.00929 & 7070.78 & 7066.00 & 3.77\\
-jucars & 1 & GDFS & 0.00878 & 7070.78 & 7065.10 & 5.60\\
-jucars & 1 & DIME & 0.00939 & 7070.78 & 7064.21 & 4.73\\
-jucars & 1 & Expl.-AFA & 0.00880 & 7070.78 & 7065.39 & 4.93\\
-\midrule
-mucars & 0 & Native head & 0.00666 & 27154.31 & 27363.19 & 0.33\\
-mucars & 0 & ACO & 0.00575 & 27154.31 & 27335.00 & 0.30\\
-mucars & 0 & SEFA & 0.00549 & 27154.31 & 27319.44 & 0.27\\
-mucars & 0 & GDFS & 0.00563 & 27154.31 & 27345.27 & 0.57\\
-mucars & 0 & DIME & 0.00641 & 27154.31 & 27349.46 & 0.60\\
-mucars & 0 & Expl.-AFA & 0.00557 & 27154.31 & 27317.58 & 0.03\\
-\midrule
-mucars & 1 & Native head & 0.00541 & 26906.52 & 27070.79 & 0.33\\
-mucars & 1 & ACO & 0.00460 & 26906.52 & 27068.14 & 0.60\\
-mucars & 1 & SEFA & 0.00425 & 26906.52 & 27019.15 & 0.50\\
-mucars & 1 & GDFS & 0.00419 & 26906.52 & 27057.07 & 0.87\\
-mucars & 1 & DIME & 0.00519 & 26906.52 & 27056.62 & 0.80\\
-mucars & 1 & Expl.-AFA & 0.00432 & 26906.52 & 27035.70 & 0.20\\
+mucars & Native head & 0.00666/0.00541 & 27363.19/27070.79 & 0.33/0.33\\
+mucars & ACO & 0.00575/0.00460 & 27335.00/27068.14 & 0.30/0.60\\
+mucars & SEFA & 0.00549/0.00425 & 27319.44/27019.15 & 0.27/0.50\\
+mucars & GDFS & 0.00563/0.00419 & 27345.27/27057.07 & 0.57/0.87\\
+mucars & DIME & 0.00641/0.00519 & 27349.46/27056.62 & 0.60/0.80\\
+mucars & Expl.-AFA & 0.00557/0.00432 & 27317.58/27035.70 & 0.03/0.20\\
 \bottomrule\end{longtable}

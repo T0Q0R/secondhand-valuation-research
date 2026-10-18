@@ -1,0 +1,10 @@
+{
+  "status": "integrated_compiled_and_visually_checked",
+  "source_sha256": "7de47e0d551bac8ffaaf3d9920eb32bf0af09ad572412bb3ec6fce7f60c8a313",
+  "abstract_space_tokens": 223,
+  "main_table": "tab:rpl_crossing",
+  "original_table_preserved": "legacy-recent-primary-table.tex",
+  "original_figure_preserved": "legacy-recent-budget-figure.tex",
+  "pages": 28,
+  "pdf_sha256": "02267e0b10a0ef305bca45b09af73dcf7fed9ec407665c472a2254b4bfd0d297"
+}

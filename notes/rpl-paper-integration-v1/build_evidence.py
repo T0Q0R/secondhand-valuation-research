@@ -82,7 +82,7 @@ def main():
             inflation_native_rpl=float(native.mean_positive_log_inflation_lambda1),
             change_vs_native_rpl_pct=100*(best.mean_positive_log_inflation_lambda1/native.mean_positive_log_inflation_lambda1-1),
             highest_stacked_inflation=float(g.mean_positive_log_inflation_lambda1.max()),
-            lowest_unregularized_family_inflation=float(g.mean_positive_log_inflation_lambda0.min()),
+            lowest_rpl_off_family_inflation=float(g.mean_positive_log_inflation_lambda0.min()),
             honest_mae_rpl_change_pct=float(native.clean_mae_change_pct)))
     pd.DataFrame(choices).to_csv(OUT/'descriptive-choice-summary.csv',index=False)
     main=[r'\begin{table}[tbp]\centering\small',
@@ -98,16 +98,18 @@ def main():
         if source!=SOURCES[-1]:main.append(r'\midrule')
     main += [r'\bottomrule\end{tabular}',r'\end{table}']
     (OUT/'main-table.tex').write_text('\n'.join(main)+'\n')
-    appendix=[r'\begin{longtable}{lrlrrrr}',
-              r'\caption{Absolute matched RPL--acquisition outcomes at 10\% capacity and $\beta=.5$, using the same three fitting seeds. MAE is in each source currency; failed queries are percent of all listings. Native head denotes the original suppression head, not zero acquisition. All nonconverged profiles remain included. Full per-seed ranges and convergence values are in the linked source CSVs.}\label{tab:recent_primary}\\',
-              r'\toprule Source & $\lambda$ & Acquisition & Inflation & Honest MAE & Attacked MAE & Failed (\%)\\\midrule\endfirsthead',
-              r'\toprule Source & $\lambda$ & Acquisition & Inflation & Honest MAE & Attacked MAE & Failed (\%)\\\midrule\endhead']
+    appendix=[r'\paragraph{Shared honest errors.}',
+              r'For $\lambda=0$ and 1, honest MAE is respectively 3566.27 and 3601.64 (synthetic), 7084.30 and 7070.78 (JUCars), and 27154.31 and 26906.52 (MUCars). Each pair is shared by all six acquisition choices. Table~\ref{tab:recent_primary} gives their remaining absolute outcomes.',
+              r'\setlength{\LTcapwidth}{\textwidth}',r'\setlength{\tabcolsep}{4pt}',
+              r'\begin{longtable}{llrrr}',
+              r'\caption{Absolute matched outcomes at 10\% capacity, $\beta=.5$, three seeds. Each slash separates $\lambda=0/1$. MAE is in source currency; failed queries are percent of all listings. All nonconverged profiles remain included.}\label{tab:recent_primary}\\',
+              r'\toprule Source & Acquisition & Inflation $0/1$ & Attacked MAE $0/1$ & Failed (\%) $0/1$\\\midrule\endfirsthead',
+              r'\toprule Source & Acquisition & Inflation $0/1$ & Attacked MAE $0/1$ & Failed (\%) $0/1$\\\midrule\endhead']
     for source in SOURCES:
-        for weight in [0,1]:
-            for fam in FAMILIES:
-                r=means[(means.dataset==source)&(means.family==fam)].iloc[0]
-                appendix.append(f'{source} & {weight} & {LABELS[fam]} & {r[f"mean_positive_log_inflation_lambda{weight}"]:.5f} & {r[f"clean_mae_lambda{weight}"]:.2f} & {r[f"attack_mae_lambda{weight}"]:.2f} & {100*r[f"failed_query_fraction_lambda{weight}"]:.2f}'+r'\\')
-            appendix.append(r'\midrule')
+        for fam in FAMILIES:
+            r=means[(means.dataset==source)&(means.family==fam)].iloc[0]
+            appendix.append(f'{source} & {LABELS[fam]} & {r.mean_positive_log_inflation_lambda0:.5f}/{r.mean_positive_log_inflation_lambda1:.5f} & {r.attack_mae_lambda0:.2f}/{r.attack_mae_lambda1:.2f} & {100*r.failed_query_fraction_lambda0:.2f}/{100*r.failed_query_fraction_lambda1:.2f}'+r'\\')
+        appendix.append(r'\midrule')
     appendix[-1]=r'\bottomrule\end{longtable}'
     (OUT/'appendix-table.tex').write_text('\n'.join(appendix)+'\n')
     # Compact source/family seed ranges support the descriptive, n=3 presentation.

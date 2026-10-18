@@ -1,0 +1,216 @@
+{
+  "status": "source_bindings_compilation_and_visual_checks_passed",
+  "timestamp": "2026-10-18T19:00:55+08:00",
+  "source_sha256": "7de47e0d551bac8ffaaf3d9920eb32bf0af09ad572412bb3ec6fce7f60c8a313",
+  "pdf_sha256": "02267e0b10a0ef305bca45b09af73dcf7fed9ec407665c472a2254b4bfd0d297",
+  "pages": 28,
+  "body_font_pt": 11,
+  "margin_inches": 1,
+  "figures": 11,
+  "main_comparison_rows": 18,
+  "absolute_paired_table_rows": 18,
+  "all_source_family_outcomes": 36,
+  "tables": 8,
+  "references": 20,
+  "original_core_theory_unchanged": true,
+  "ten_seed_table_unchanged": true,
+  "original_recent_table_and_budget_figure_preserved": true,
+  "surviving_figure_bodies_unchanged": true,
+  "four_authors_retained": true,
+  "duplicate_labels": [],
+  "undefined_refs": [],
+  "overfull_boxes": 0,
+  "underfull_warnings": 4,
+  "crossing_cells": 90,
+  "reused_native_cells": 18,
+  "new_fits": 0,
+  "new_evaluations": 0,
+  "builtin_compilation": "success",
+  "abstract_space_tokens": 223,
+  "pages_for_detail": [
+    1,
+    10,
+    15,
+    19,
+    22,
+    23,
+    28
+  ],
+  "page_info": [
+    {
+      "page": 1,
+      "opening": "When Does Verification Help?\nRecovery-Path Regularization for Strategy-Aware Valuation\nYuc",
+      "figures": []
+    },
+    {
+      "page": 2,
+      "opening": "acquisition instead targets information or error reduction [12]. None directly guarantees ",
+      "figures": []
+    },
+    {
+      "page": 3,
+      "opening": "condition. Its report ri(si) marks Mi \u222asi missing; values cannot be fabricated or recovere",
+      "figures": []
+    },
+    {
+      "page": 4,
+      "opening": "public batch. Quotes are itemwise and verification-neutral: identical final records receiv",
+      "figures": []
+    },
+    {
+      "page": 5,
+      "opening": "18,662,296,388,649,543,921 complete allocations per class. Full enumeration was not run th",
+      "figures": []
+    },
+    {
+      "page": 6,
+      "opening": "qcap(s, a) \u2264q(s, a) while qcap(H, a) = qH. Subtracting qH, averaging and maximizing over l",
+      "figures": []
+    },
+    {
+      "page": 7,
+      "opening": "Setting\nValue\nCatBoost backbone boosting rounds [13]\n250\nResidual hidden width / learning ",
+      "figures": []
+    },
+    {
+      "page": 8,
+      "opening": "Table 2: Computational audit scope.\nCounts overlap where explicitly stated; human scientif",
+      "figures": []
+    },
+    {
+      "page": 9,
+      "opening": "7\nResults\n7.1\nRecovery failures in the learned four-field class\nThe recovery-path predicti",
+      "figures": []
+    },
+    {
+      "page": 10,
+      "opening": "Table 4: Ten-seed RPL means at 10% capacity, \u03b2 = 0.5. MAE is in source currency; failed qu",
+      "figures": []
+    },
+    {
+      "page": 11,
+      "opening": "0\n5\n10\n15\nInflation improvement\n(0.001 log units)\n\u03bb=0.1\n\u03bb=0.5\n\u03bb=1\n\u03bb=0.5; \u03b2=0\na\nSynthetic\n0",
+      "figures": [
+        1,
+        2
+      ]
+    },
+    {
+      "page": 12,
+      "opening": "0.0\n0.5\n1.0\n1.5\nHonest MAE change (%)\n0\n10\n20\n30\n40\n50\nInflation reduction (%)\na\nSynthetic",
+      "figures": [
+        3
+      ]
+    },
+    {
+      "page": 13,
+      "opening": "0\n10%\n30%\nQuery capacity\n0.005\n0.010\n0.015\nPositive log inflation\na\nSynthetic\n0\n10%\n30%\nQu",
+      "figures": [
+        4
+      ]
+    },
+    {
+      "page": 14,
+      "opening": "0\n10%\n30%\nQuery capacity\n0\n20\n40\n60\nNonconverged batches (%)\na\nSynthetic\n0\n10%\n30%\nQuery c",
+      "figures": [
+        5
+      ]
+    },
+    {
+      "page": 15,
+      "opening": "Table 5: Matched RPL\u2013acquisition comparison at 10% capacity and \u03b2 = .5. Each entry average",
+      "figures": []
+    },
+    {
+      "page": 16,
+      "opening": "\u221210\n0\nInflation improvement\n(0.001 log units)\nEpoch weak\nBatch weak\nEpoch strong\nBatch str",
+      "figures": [
+        6
+      ]
+    },
+    {
+      "page": 17,
+      "opening": "weak-search implementation; the stronger-search intervention above changes that interpreta",
+      "figures": []
+    },
+    {
+      "page": 18,
+      "opening": "0\n5\n10\nInflation reduction (%)\n-0.15\n-0.10\n-0.05\n0.00\n0.05\n0.10\na Attacked-MAE change (%)\n",
+      "figures": [
+        7
+      ]
+    },
+    {
+      "page": 19,
+      "opening": "8\nDiscussion and conclusion\nThe information frontier limits guarantees under indistinguish",
+      "figures": []
+    },
+    {
+      "page": 20,
+      "opening": "A\nContextual policy-library witnesses\nTake n > B \u22651, a core C of size B, and public active",
+      "figures": []
+    },
+    {
+      "page": 21,
+      "opening": "Positive-cost mechanism.\nThe 108-cell post-hoc subset uses robust initialization/suppressi",
+      "figures": []
+    },
+    {
+      "page": 22,
+      "opening": "as cross-listing priorities has no cardinal-comparability theorem. Concealed-mileage pertu",
+      "figures": []
+    },
+    {
+      "page": 23,
+      "opening": "Source\nAcquisition\nInflation 0/1 Attacked MAE 0/1 Failed (%) 0/1\njucars\nExpl.-AFA\n0.01294/",
+      "figures": []
+    },
+    {
+      "page": 24,
+      "opening": "-0.01\n0.00\n0.01\n0.02\nInflation minus S1F1G1\nS0F0G0\nS0F0G1\nS0F1G0\nS0F1G1\nS1F0G0\nS1F0G1\nS1F1",
+      "figures": [
+        8,
+        9
+      ]
+    },
+    {
+      "page": 25,
+      "opening": "0\n0.1\n0.25\n0.5\n1\n2\nGap weight\nDefault = 0.5\n0.01\n0.02\n0.03\n0.04\nLog inflation (10% capacit",
+      "figures": [
+        10
+      ]
+    },
+    {
+      "page": 26,
+      "opening": "0\n0.125\n0.25\n0.5\n1\nAnchor weight\nDefault = 0.25\n0.8\n1.0\n1.2\nInflation / Matched default\na\n",
+      "figures": [
+        11
+      ]
+    },
+    {
+      "page": 27,
+      "opening": "Table 8: Compact evidence map. Paths are relative to the public repository.\nEvidence\nPubli",
+      "figures": []
+    },
+    {
+      "page": 28,
+      "opening": "[3] J. Letchford and V. Conitzer. Solving Security Games on Graphs via Marginal Probabilit",
+      "figures": []
+    }
+  ],
+  "visual_review": {
+    "reviewer": "Codex visual inspection",
+    "all_28_pages_contact_checked": true,
+    "detail_pages": [
+      1,
+      10,
+      15,
+      19,
+      22,
+      23,
+      28
+    ],
+    "no_clipping_or_overlap_observed": true
+  },
+  "checked_at": "2026-10-18T19:03:16+08:00"
+}
