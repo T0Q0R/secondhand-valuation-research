@@ -780,8 +780,8 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-18T19:14:48+08:00",
-    "status": "gap_runner_engineering_passed_ready_to_run",
+    "time": "2026-10-18T19:16:57+08:00",
+    "status": "gap_training_and_ten_seed_mechanisms_running",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
@@ -792,6 +792,12 @@
     "runner": "experiments/run_review_gap_controls_v1.py",
     "manifest": "outputs/review-gap-controls-v1/manifest.json",
     "epoch_correction": "2 rounds x 6 epochs from frozen residual_epochs=12",
-    "engineering": "outputs/review-gap-controls-v1/engineering-check.json"
+    "engineering": "outputs/review-gap-controls-v1/engineering-check.json",
+    "gap_pid": 16038,
+    "gap_session": 3256,
+    "gap_workers": 2,
+    "gap_threads_per_worker": 2,
+    "mechanism_session": 28472,
+    "mechanism_threads": 1
   }
 }
