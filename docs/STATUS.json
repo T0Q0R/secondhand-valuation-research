@@ -756,5 +756,13 @@
     "checked_at": "2026-10-18T14:25:54+08:00",
     "paper_pages": 28,
     "name_zh": "顾峻祥"
+  },
+  "rpl_crossing_manuscript_integration": {
+    "status": "evidence_verified_manuscript_revision_in_progress",
+    "crossing_cells": 90,
+    "reused_native_cells": 18,
+    "new_fits": 0,
+    "new_evaluations": 0,
+    "updated_at": "2026-10-18T14:31:32+08:00"
   }
 }

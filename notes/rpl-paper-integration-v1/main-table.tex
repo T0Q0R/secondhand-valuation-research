@@ -1,0 +1,28 @@
+\begin{table}[tbp]\centering\small
+\caption{Matched RPL--acquisition comparison at 10\% capacity and $\beta=.5$. Each entry averages the same three fitting seeds. $I$ is positive log inflation; $\Delta A$ is the attacked-MAE change (percent), and $\Delta F$ the failed-query change (percentage points per listing), from $\lambda=0$ to 1. Native head rows reuse 18 existing cells; the other rows are the new 90-cell $2\times5$ crossing. Negative changes favor the indicated metric.}
+\label{tab:rpl_crossing}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}\toprule
+Source & Acquisition & $I_0\downarrow$ & $I_1\downarrow$ & $\Delta I$ (\%) & $\Delta A$ (\%) & $\Delta F$ (pp)\\\midrule
+Synthetic & Native head & 0.01303 & 0.00639 & -50.93 & -0.91 & +0.63\\
+ & ACO & 0.00988 & 0.00537 & -45.64 & -0.16 & +0.03\\
+ & SEFA & 0.01019 & 0.00530 & -48.00 & -0.17 & +0.13\\
+ & GDFS & 0.01353 & 0.00907 & -32.97 & -0.75 & -0.07\\
+ & DIME & 0.01306 & 0.00782 & -40.11 & -0.67 & +1.23\\
+ & Expl.-AFA & 0.01388 & 0.00903 & -34.89 & -0.79 & +0.10\\
+\midrule
+JUCars & Native head & 0.01380 & 0.00922 & -33.22 & -0.17 & +1.47\\
+ & ACO & 0.01401 & 0.00952 & -32.06 & -0.19 & +0.57\\
+ & SEFA & 0.01338 & 0.00929 & -30.56 & -0.20 & -0.07\\
+ & GDFS & 0.01290 & 0.00878 & -31.95 & -0.16 & +0.87\\
+ & DIME & 0.01396 & 0.00939 & -32.70 & -0.16 & +0.67\\
+ & Expl.-AFA & 0.01294 & 0.00880 & -32.00 & -0.22 & +0.73\\
+\midrule
+MUCars & Native head & 0.00666 & 0.00541 & -18.72 & -1.07 & +0.00\\
+ & ACO & 0.00575 & 0.00460 & -20.11 & -0.98 & +0.30\\
+ & SEFA & 0.00549 & 0.00425 & -22.51 & -1.10 & +0.23\\
+ & GDFS & 0.00563 & 0.00419 & -25.55 & -1.05 & +0.30\\
+ & DIME & 0.00641 & 0.00519 & -18.97 & -1.07 & +0.20\\
+ & Expl.-AFA & 0.00557 & 0.00432 & -22.38 & -1.03 & +0.17\\
+\bottomrule\end{tabular}
+\end{table}
