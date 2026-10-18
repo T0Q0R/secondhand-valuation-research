@@ -1,0 +1,15 @@
+{
+  "status": "running",
+  "cells": 30,
+  "expected_cells": 90,
+  "workers": 3,
+  "threads_per_worker": 2,
+  "pid": 19418,
+  "child_pids": [
+    19429,
+    19430,
+    19431
+  ],
+  "time": "2026-10-18T19:49:26+08:00",
+  "scope": "live observed; completed synthetic pairs reused, real-source training ongoing"
+}

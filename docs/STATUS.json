@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-18T19:12:22+08:00",
+  "snapshot_time": "2026-10-18T19:49:26+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,24 +28,24 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "rpl_five_family_crossing_integrated_28_pages",
-    "pages": 28,
+    "revision_status": "review_improvement_working_draft_gap_pending",
+    "pages": 26,
     "authors_affiliations_omitted": false,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "All28page contact sheets and detail pages1/11/15/19/20/24/25/26/28 checked",
-    "source_sha256": "7de47e0d551bac8ffaaf3d9920eb32bf0af09ad572412bb3ec6fce7f60c8a313",
-    "pdf_sha256": "02267e0b10a0ef305bca45b09af73dcf7fed9ec407665c472a2254b4bfd0d297",
+    "all_page_visual_review": "26main/10supplement pages checked; new gap results still pending",
+    "source_sha256": "fe7c4493064d56d4642f2ca705ab7f11eb4f2683b0276146492066942ed74609",
+    "pdf_sha256": "a156216e79eaef0974724e40b6312ef3b70057bab82f9bae48e546ec39eecee4",
     "submission": "not_submitted",
     "formal_submission_ready": false,
     "abstract_words": 208,
-    "figure_count": 12,
+    "figure_count": 7,
     "main_pages_including_declarations": 19,
     "appendix_and_references_pages": 9,
     "main_figure_count": 8,
     "appendix_figure_count": 4,
-    "table_count": 7,
-    "reference_count": 20,
+    "table_count": 9,
+    "reference_count": 21,
     "corresponding_author": "Fengqin You",
     "corresponding_email": "irisyou@njust.edu.cn",
     "corresponding_email_position": "Title page below affiliation",
@@ -60,13 +60,21 @@
     "author4_affiliation_separately_confirmed": true,
     "title_page_visual_review": "Four names and corresponding email visible;28pages unchanged",
     "author4_affiliation_chinese": "南京理工大学紫金学院计算机与人工智能学院",
-    "figures": 11,
-    "tables": 8,
+    "figures": 7,
+    "tables": 9,
     "author_order_revision": "corrected in working source/PDF; substantive integration and final QA pending",
     "author_contributions_confirmed_subset": {
       "Yuchen Tang": "manuscript writing",
       "Fengqin You": "advisor supervision",
       "Junxiang Gu": "manuscript writing guidance"
+    },
+    "current_QA": "notes/review-improvement-v1/qa-interim.json",
+    "supplement": {
+      "path": "paper/review-supplement-v1/main.pdf",
+      "pages": 10,
+      "source_sha256": "0dcff2b3c060d91fd4fd31de12530312eb6b59296577fa745f1dd5ec59079e98",
+      "pdf_sha256": "f8139dce37c197dd240d172d558d382b6603b56d3c760f7af2ae5758049a35e7",
+      "status": "working_S4_gap_comparison_explicitly_unfinished"
     }
   },
   "figures": {
@@ -786,8 +794,8 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-18T19:42:43+08:00",
-    "status": "equivalent_runtime_v2_ready_old_processes_terminal",
+    "time": "2026-10-18T19:49:26+08:00",
+    "status": "mechanism_data_revisions_compiled_interim_gap_v2_running",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
@@ -799,8 +807,8 @@
     "manifest": "outputs/review-gap-controls-v1/manifest.json",
     "epoch_correction": "2 rounds x 6 epochs from frozen residual_epochs=12",
     "engineering": "outputs/review-gap-controls-v1/engineering-check.json",
-    "gap_pid": null,
-    "gap_session": 3256,
+    "gap_pid": 19418,
+    "gap_session": 55898,
     "gap_workers": 3,
     "gap_threads_per_worker": 2,
     "mechanism_session": 28472,
@@ -821,6 +829,8 @@
     "gap_old_runtime": "outputs/review-gap-controls-v1",
     "gap_runtime": "outputs/review-gap-controls-v2",
     "mechanism_status": "completed",
-    "runtime_equivalence_check": "outputs/review-gap-controls-v2/engineering-check.json"
+    "runtime_equivalence_check": "outputs/review-gap-controls-v2/engineering-check.json",
+    "interim_paper_qa": "notes/review-improvement-v1/qa-interim.json",
+    "final_gap_integration": false
   }
 }

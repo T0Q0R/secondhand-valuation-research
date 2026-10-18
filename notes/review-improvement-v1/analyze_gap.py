@@ -9,10 +9,10 @@ import pandas as pd
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'experiments'))
 import run_completion_ablation_v6 as c
-import run_review_gap_controls_v1 as runner
+import run_review_gap_controls_v2 as runner
 OUT=Path(__file__).parent/'gap'
 REF=ROOT/'outputs/rpl-ten-seed-v2'
-RUN=ROOT/'outputs/review-gap-controls-v1'
+RUN=ROOT/'outputs/review-gap-controls-v2'
 SEEDS=runner.SEEDS
 METRICS=['mean_positive_log_inflation','clean_mae','attack_mae','failed_query_fraction',
          'max_remaining_response_regret','nonconverged_batch_fraction']

@@ -1,0 +1,207 @@
+{
+  "status": "interim_source_numeric_and_visual_checks_passed_gap_running",
+  "timestamp": "2026-10-18T19:46:06+08:00",
+  "documents": [
+    {
+      "name": "main",
+      "source_sha256": "fe7c4493064d56d4642f2ca705ab7f11eb4f2683b0276146492066942ed74609",
+      "pdf_sha256": "a156216e79eaef0974724e40b6312ef3b70057bab82f9bae48e546ec39eecee4",
+      "pages": 26,
+      "overfull": 0,
+      "underfull_warnings": 4,
+      "labels_unique": true,
+      "refs_defined": true,
+      "author_order_verified": [
+        "Yuchen Tang",
+        "Fengqin You",
+        "Junxiang Gu",
+        "Xin Pang"
+      ],
+      "page_info": [
+        {
+          "page": 1,
+          "opening": "When Does Verification Help?\nRecovery-Path Regularization for Strategy-Aware Valuation\nYuchen Tang\nF"
+        },
+        {
+          "page": 2,
+          "opening": "Strategic-missingness regression and classification [10, 6], budgeted audits [4] and partial ver-\nif"
+        },
+        {
+          "page": 3,
+          "opening": "3\nProblem formulation\n3.1\nReports, queries and allocation\nA batch contains n = 100 listings. Listing"
+        },
+        {
+          "page": 4,
+          "opening": "4\nInformation limits and finite comparators\n4.1\nAn attainable precision frontier\nConsider a missingn"
+        },
+        {
+          "page": 5,
+          "opening": "Marginal optimization is established [3]. This specialization uses OnF + 1 variables but does\nnot re"
+        },
+        {
+          "page": 6,
+          "opening": "5.3\nConditional cap and final-record alternative\nA diagnostic history cap uses qcap(r, a) = min{q(r,"
+        },
+        {
+          "page": 7,
+          "opening": "honest anchoring, mask training uses LH +.25LV +.25LA. Robust training adds .5Lattack +.5Lgain,\nwith"
+        },
+        {
+          "page": 8,
+          "opening": "Table 2: Computational audit scope.\nCounts overlap where explicitly stated; human scientific\napprova"
+        },
+        {
+          "page": 9,
+          "opening": "Source\nSuccessful edges\nAdverse partial edges\nAdverse queried rows\nSynthetic\n2,098,600\n82,939\n82\nJUC"
+        },
+        {
+          "page": 10,
+          "opening": "MUCars. Thus zero-query improvements are 98.3% and 97.1% of the real-source 10% improvements;\nthese "
+        },
+        {
+          "page": 11,
+          "opening": "0\n5\n10\n15\nInflation improvement\n(0.001 log units)\n\u03bb=0.1\n\u03bb=0.5\n\u03bb=1\n\u03bb=0.5; \u03b2=0\na\nSynthetic\n0\n5\n10\nInfl"
+        },
+        {
+          "page": 12,
+          "opening": "0.0\n0.5\n1.0\n1.5\nHonest MAE change (%)\n0\n10\n20\n30\n40\n50\nInflation reduction (%)\na\nSynthetic\n\u22121.0\n\u22120.5"
+        },
+        {
+          "page": 13,
+          "opening": "0\n10%\n30%\nQuery capacity\n0.005\n0.010\n0.015\nPositive log inflation\na\nSynthetic\n0\n10%\n30%\nQuery capaci"
+        },
+        {
+          "page": 14,
+          "opening": "0\n10%\n30%\nQuery capacity\n0\n20\n40\n60\nNonconverged batches (%)\na\nSynthetic\n0\n10%\n30%\nQuery capacity\n0\n"
+        },
+        {
+          "page": 15,
+          "opening": "7.3\nMatched RPL and five recent acquisition families\nThe direct comparison crosses \u03bb = 0, 1 with ACO"
+        },
+        {
+          "page": 16,
+          "opening": "Table 6: Matched RPL\u2013acquisition comparison at 10% capacity and \u03b2 = .5. Each entry averages\nthe same"
+        },
+        {
+          "page": 17,
+          "opening": "\u221210\n0\nInflation improvement\n(0.001 log units)\nEpoch weak\nBatch weak\nEpoch strong\nBatch strong\na\nSynt"
+        },
+        {
+          "page": 18,
+          "opening": "and failed-query rates in 145, despite unchanged honest MAE. Figure 7 shows those costs alongside\nin"
+        },
+        {
+          "page": 19,
+          "opening": "1,374 JUCars and 10,672 MUCars validation records. All 24 feedback point directions remained\nadverse"
+        },
+        {
+          "page": 20,
+          "opening": "8\nDiscussion and conclusion\nThe information frontier limits guarantees under indistinguishable repor"
+        },
+        {
+          "page": 21,
+          "opening": "A\nContextual policy-library witnesses\nTake n > B \u22651, a core C of size B, and public active contexts "
+        },
+        {
+          "page": 22,
+          "opening": "Positive-cost mechanism.\nThe 108-cell post-hoc subset uses robust initialization/suppression\nscoring"
+        },
+        {
+          "page": 23,
+          "opening": "as cross-listing priorities has no cardinal-comparability theorem. Concealed-mileage perturbations\nl"
+        },
+        {
+          "page": 24,
+          "opening": "Source\nAcquisition\nInflation 0/1 Attacked MAE 0/1 Failed (%) 0/1\njucars\nExpl.-AFA\n0.01294/0.00880\n70"
+        },
+        {
+          "page": 25,
+          "opening": "Table 9: Compact evidence map. Paths are relative to the public repository.\nEvidence\nPublic location"
+        },
+        {
+          "page": 26,
+          "opening": "[13] M. Valancius, M. Lennon and J. Oliva. Acquisition Conditioned Oracle for Nongreedy Active Fea-\n"
+        }
+      ],
+      "detail_pages": [
+        1,
+        6,
+        9,
+        10,
+        20
+      ]
+    },
+    {
+      "name": "supplement",
+      "source_sha256": "0dcff2b3c060d91fd4fd31de12530312eb6b59296577fa745f1dd5ec59079e98",
+      "pdf_sha256": "f8139dce37c197dd240d172d558d382b6603b56d3c760f7af2ae5758049a35e7",
+      "pages": 10,
+      "overfull": 0,
+      "underfull_warnings": 2,
+      "labels_unique": true,
+      "refs_defined": true,
+      "author_order_verified": [
+        "Yuchen Tang",
+        "Fengqin You",
+        "Junxiang Gu",
+        "Xin Pang"
+      ],
+      "page_info": [
+        {
+          "page": 1,
+          "opening": "Supplement to When Does Verification Help?\nRecovery-Path Regularization for Strategy-Aware Valuation"
+        },
+        {
+          "page": 2,
+          "opening": "of full-source representativeness.\nSplit buckets use the first eight hexadecimal digits of a non-\npr"
+        },
+        {
+          "page": 3,
+          "opening": "Log target is\ny = 10.3 + .23M + .1V \u2212.072A \u2212.20 log(1 + K/50000)\n+ .12C + .08T + .04D + .02P \u2212.061[C"
+        },
+        {
+          "page": 4,
+          "opening": "Table S6: Ten-seed recovery diagnostics: positive-gain violations, raw quote increases and positive\n"
+        },
+        {
+          "page": 5,
+          "opening": "S3\nFixed reports versus reselected responses\nFor each source/seed, retain the \u03bb = 0, 10%-capacity re"
+        },
+        {
+          "page": 6,
+          "opening": "Table S10: Existing external-machine numerical comparison, synthetic seed 13. Each entry is local\nre"
+        },
+        {
+          "page": 7,
+          "opening": "S7\nFull removals, default scans and seed heterogeneity\nThe original component experiment toggles sup"
+        },
+        {
+          "page": 8,
+          "opening": "-0.01\n0.00\n0.01\n0.02\nInflation minus S1F1G1\nS0F0G0\nS0F0G1\nS0F1G0\nS0F1G1\nS1F0G0\nS1F0G1\nS1F1G0\nS1F1G1\n"
+        },
+        {
+          "page": 9,
+          "opening": "0\n0.1\n0.25\n0.5\n1\n2\nGap weight\nDefault = 0.5\n0.01\n0.02\n0.03\n0.04\nLog inflation (10% capacity)\na\nGap w"
+        },
+        {
+          "page": 10,
+          "opening": "0\n0.125\n0.25\n0.5\n1\nAnchor weight\nDefault = 0.25\n0.8\n1.0\n1.2\nInflation / Matched default\na\nAnchor wei"
+        }
+      ],
+      "detail_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "all_11_previous_figure_blocks_preserved": true,
+  "formal_propositions_and_proofs_preserved": true,
+  "previous_main_evidence_tables_preserved": true,
+  "reference_count": 21,
+  "visual_review": "All26main/10supplement pages inspected on contact sheets; detail pages main10/20,supp4/6 inspected; no overlap/clipping; original11figures preserved across documents; S4 explicitly unfinished",
+  "new_gap_results_integrated": false
+}

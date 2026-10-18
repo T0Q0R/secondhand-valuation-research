@@ -1,0 +1,9 @@
+{
+  "child_pid": 19431,
+  "parent_pid": 19418,
+  "state": "resumed_same_process",
+  "time": 1792323926.975106,
+  "reason": "keep <=6 total compute threads while two other 2-thread workers continue",
+  "must_resume_same_pid": true,
+  "resume_time": 1792323974.489856
+}
