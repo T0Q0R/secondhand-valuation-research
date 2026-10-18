@@ -1,0 +1,19 @@
+source,contrast,mean,low,high,scope
+synthetic,zero_query_improvement,0.004275537300109849,0.003922730383872971,0.0046638357543945155,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+synthetic,capacity_10_improvement,0.0062676931381225424,0.005400659496784197,0.007144225950241074,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+synthetic,budget_interaction,0.0019921558380126955,0.001254901239871979,0.002712744417190551,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+synthetic,honest_bias_change,-0.00429014081954956,-0.005822231314182282,-0.0030627295303344714,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+synthetic,attacked_bias_change,-0.010557833957672114,-0.012340209333896632,-0.009032242836952207,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+synthetic,envelope_improvement,0.006266568565368637,0.005399538183212268,0.007144164214134201,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+jucars,zero_query_improvement,0.0032492493152618375,0.0020439973545074413,0.004476501682996744,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+jucars,capacity_10_improvement,0.003305752992630001,0.002133659847974774,0.004493888968229291,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+jucars,budget_interaction,5.650367736816411e-05,-0.0004432377970218653,0.000532076658010482,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+jucars,honest_bias_change,-0.0009522636413574213,-0.009123522721529007,0.00729930246591568,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+jucars,attacked_bias_change,-0.004258016633987424,-0.011882855859994884,0.0036137414956092817,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+jucars,envelope_improvement,0.003305752992630001,0.002133659847974774,0.004493888968229291,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+mucars,zero_query_improvement,0.0015272612571716263,0.0009804311418533287,0.002043961229324336,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+mucars,capacity_10_improvement,0.0015731760978698684,0.0010739996194839428,0.0020841302514076187,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+mucars,budget_interaction,4.591484069824244e-05,-0.0001290053486824026,0.00023312821149826018,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+mucars,honest_bias_change,0.005817829418182373,-0.000503574147224426,0.013894826760292054,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+mucars,attacked_bias_change,0.004244653320312501,-0.001999360933303833,0.012420418701171871,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage
+mucars,envelope_improvement,0.0015731760978698684,0.0010739996194839428,0.0020841302514076187,posthoc marginal percentile crossed-bootstrap; fixed population; no simultaneous coverage

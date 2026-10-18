@@ -1,0 +1,13 @@
+{
+  "status": "running",
+  "cells": 12,
+  "expected_cells": 90,
+  "workers": 2,
+  "threads_per_worker": 2,
+  "pid": 16038,
+  "last_pair": [
+    "synthetic",
+    101
+  ],
+  "time": 1792322400.449367
+}

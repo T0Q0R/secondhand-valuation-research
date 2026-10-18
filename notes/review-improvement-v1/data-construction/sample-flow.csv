@@ -1,0 +1,4 @@
+source,raw,joint_filter_removed,passed_joint_filter,duplicates_removed,retained,train,validation,calibration,test,used_training,used_evaluation
+synthetic,7500,0,7500,0,7500,6000,1500,0,0,5000,1000
+jucars,10921,2117,8804,46,8758,4774,1374,1343,1267,4774,1000
+mucars,101896,28892,73004,1693,71311,39244,10672,10696,10699,5000,1000

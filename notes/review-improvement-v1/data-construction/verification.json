@@ -1,0 +1,83 @@
+{
+  "status": "aggregate_receipts_and_split_hashes_verified",
+  "bindings": [
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/jucars_bvival_manifest.csv",
+      "sha256": "856460ede47e9609f02867b520eba154cc59d87145918d509a58d4f40f516505",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/sealed_labels/test_labels.csv",
+      "sha256": "a98011583b0c8c45387d9cf98088d97cc5c0762cbfd5e0a70b7b5be75185d7c3",
+      "label_access": "bytes hashed only; sealed labels never parsed"
+    },
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/splits/calibration.csv",
+      "sha256": "201d7368eaa50ba98904a2c6051537c44897ce1ca45674fda222691d9edfafda",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/splits/test_features.csv",
+      "sha256": "5b7a19738ee704dea01ef8f2a83d1341b4ef0489232c1115e0c7792acdebe450",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/splits/train.csv",
+      "sha256": "c1f56a13d04b953c448699269966236d2b7e78e039410110327ab1494b8fac2b",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/splits/validation.csv",
+      "sha256": "4d57d04ab0944af11713c67e5c3b1f35d135f4f2314a9a1f5f4b78906541548b",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/jucars_bvival_v1/jucars_bvival_audit.json",
+      "sha256": "5b4a02aa684ddfcf548e3bb67cff40451e099ac1b52c76256fb97e304d898948",
+      "label_access": "historical aggregate receipt"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/mucars_bvival_manifest_features_only.csv",
+      "sha256": "6b78645fcf109c3e35bcffa0c037101ff1adc61f422b9769d68a20cd7ac6308a",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/sealed_labels/test_labels.csv",
+      "sha256": "e6b1621df2d00ce0fc19fa068636884ade267cc034db545a14d151888d24574c",
+      "label_access": "bytes hashed only; sealed labels never parsed"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/splits/calibration.csv",
+      "sha256": "24a6b62ebf8586b275132bb235429c7b7b9e9dae2fb9befbd99a029ba72ed88e",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/splits/test_features.csv",
+      "sha256": "36ad00a345c3e7769ba414bae5920c675ce98ce5a4409c7b3aecec3349aa4b4d",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/splits/train.csv",
+      "sha256": "a8a2231abfdac008a9739c89a5ea3b1ab3518f647b856df501d525f7e46952fa",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/splits/validation.csv",
+      "sha256": "ce27add36fb375f8e86953c5fdc2310addd412274add3ec9c62ad265c3a486a7",
+      "label_access": "feature aggregates / original split binding"
+    },
+    {
+      "path": "experiments/data/processed/mucars_bvival_v1/mucars_bvival_audit.json",
+      "sha256": "f81c2349fd6864f1d1fcaa81bff945980119e74fb75b1057e0fe91cb9c1c4033",
+      "label_access": "historical aggregate receipt"
+    }
+  ],
+  "code_sha256": {
+    "experiments/run_all.py": "e1d6b53a98c5da4de1c3caf6bdee285297aa6671c84bfe15881c6eb5368a181a",
+    "experiments/savval.py": "3d3fb757c1994bac241c01cdd5286ad2e3d07ec189f568a12a44e979df6220b8",
+    "../experiments/build_jucars_bvival_manifest.py": "7cc08205b90d0a8494beec4281bc9bc2dfc27d160455482988d383830075ddd0",
+    "../experiments/build_mucars_bvival_manifest.py": "e93c85dd57da857a0e97d37a8fda137627398afa81e197d5efe11351b6c5764d"
+  },
+  "sealed_test_labels_parsed": false,
+  "note": "joint exclusions obtained from bound historical final+duplicate counts; exclusion flags overlap; no new filtering or modeling"
+}

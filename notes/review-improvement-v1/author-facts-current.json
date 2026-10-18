@@ -1,0 +1,29 @@
+{
+  "authors": [
+    {
+      "name": "Yuchen Tang",
+      "zh": "汤宇晨",
+      "contribution": "manuscript writing"
+    },
+    {
+      "name": "Fengqin You",
+      "zh": "游凤芹",
+      "corresponding": true,
+      "email": "irisyou@njust.edu.cn",
+      "contribution": "supervision as advisor"
+    },
+    {
+      "name": "Junxiang Gu",
+      "zh": "顾峻祥",
+      "contribution": "guidance on manuscript writing"
+    },
+    {
+      "name": "Xin Pang",
+      "zh": "庞鑫",
+      "contribution": "not supplied; do not infer"
+    }
+  ],
+  "affiliation_zh": "南京理工大学紫金学院计算机与人工智能学院",
+  "funding_and_competing_interests": "user requested not to pursue; no absence claim",
+  "evidence": "current explicit user messages, supersedes earlier Pang/Gu ordering"
+}

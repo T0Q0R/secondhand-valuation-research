@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "independent_summary_difference_checks": 6,
+  "models_with_independent_combinatorial_edge_counts": 60,
+  "decomposition_identities": 120,
+  "source": "original 540-cell summary versus new 1800-batch aggregates; independent m^2 edge counts from legal report distributions",
+  "all_new_diagnostics_not_causal": true
+}
