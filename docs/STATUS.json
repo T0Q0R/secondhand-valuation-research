@@ -85,7 +85,6 @@
   "remaining_for_actual_submission": [
     "author responsibility and factual declarations",
     "institution CAS edition/category and selected template",
-    "public access/licensing/archival release decisions",
     "external-machine full training reproduction"
   ],
   "revision_v2": {
@@ -486,7 +485,8 @@
     "status": "verified_anonymous_read_access",
     "verification": "notes/public-release-v1/verification.json",
     "screening": "notes/public-release-v1/screening.json",
-    "project_authored_software_license": "MIT"
+    "project_authored_software_license": "MIT",
+    "archival_doi": "10.5281/zenodo.23447567"
   },
   "core_evidence_v2": {
     "status": "computations_and_all_four_phase_audits_completed_scientific_review_pending",
@@ -506,7 +506,7 @@
     "audit_runner": "experiments/run_core_evidence_queue_v2.py",
     "external_package": "reproduction/macos-core-v2/README.zh.md",
     "manuscript_restructure": "mapped_only_waiting_for_core_results",
-    "doi": "draft_metadata_only_no_DOI_issued",
+    "doi": "published_version_1.0.0:10.5281/zenodo.23447567",
     "audit_pid": 71097,
     "audit_runtime": "outputs/core-evidence-runtime-v2/status.json",
     "rpl_new_completed_snapshot": 129,
@@ -660,8 +660,22 @@
     "new_external_runs": 0
   },
   "doi_archive": {
-    "status": "reserved_not_published",
-    "doi": "10.5281/zenodo.23447567"
+    "status": "published",
+    "doi": "10.5281/zenodo.23447567",
+    "concept_doi": "10.5281/zenodo.23447566",
+    "url": "https://zenodo.org/records/23447567",
+    "version": "1.0.0",
+    "source_commit": "89ad56e3d217b5d5f94f822c86801b1abc1c9b2f",
+    "package_sha256": "9fbb4ca6ec0e8dace7acfc445ecacca76720676ca987df3560ceee69923d98fc",
+    "package_bytes": 3340355,
+    "zenodo_checksum": "md5:b84bd0e4360e0d3eef9f23d64f358b92",
+    "upload_hash_matches": true,
+    "anonymous_public_api_confirmed": true,
+    "publication_date": "2026-10-18",
+    "checked_at": "2026-10-18T14:20:23+08:00",
+    "files": 887,
+    "scope": "Screened software, software documentation and aggregate reproducibility evidence; original data/model weights/manuscripts/figures excluded; software MIT scope retained",
+    "doi_resolves_http_200": true
   },
   "compact_28_v1": {
     "status": "completed_same_manuscript_compiled_and_visual_checked",
@@ -675,5 +689,14 @@
     "separate_rpl90_workflow_changed": false,
     "source_sha256": "ce3b12373b9a6f655bbd202ccccf2d362f9c2c4ed87c902fe18d5fa07d0ca3be",
     "pdf_sha256": "cd9243def1153033ea04b1ed4e17c876636d5b38ff1cc94f9c3c1e38b50eb810"
-  }
+  },
+  "three_item_delivery": {
+    "status": "completed",
+    "rpl_cells": 90,
+    "external_existing_cells": 6,
+    "doi": "10.5281/zenodo.23447567",
+    "manuscript_edited_by_this_task": false,
+    "updated_at": "2026-10-18T14:20:23+08:00"
+  },
+  "last_updated_at": "2026-10-18T14:21:24+08:00"
 }

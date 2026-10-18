@@ -1,0 +1,13 @@
+{
+  "status": "prepared_not_published",
+  "reserved_doi": "10.5281/zenodo.23447567",
+  "source_commit": "89ad56e3d217b5d5f94f822c86801b1abc1c9b2f",
+  "package": "notes/doi-archive-v1/secondhand-valuation-research-v1.0.0.zip",
+  "package_sha256": "9fbb4ca6ec0e8dace7acfc445ecacca76720676ca987df3560ceee69923d98fc",
+  "package_bytes": 3340355,
+  "files": 887,
+  "excluded": 189,
+  "zip_integrity_passed": true,
+  "zenodo_uploaded_md5": "b84bd0e4360e0d3eef9f23d64f358b92",
+  "upload_hash_matches": true
+}

@@ -1,0 +1,17 @@
+{
+  "status": "published",
+  "doi": "10.5281/zenodo.23447567",
+  "concept_doi": "10.5281/zenodo.23447566",
+  "url": "https://zenodo.org/records/23447567",
+  "version": "1.0.0",
+  "source_commit": "89ad56e3d217b5d5f94f822c86801b1abc1c9b2f",
+  "package_sha256": "9fbb4ca6ec0e8dace7acfc445ecacca76720676ca987df3560ceee69923d98fc",
+  "package_bytes": 3340355,
+  "zenodo_checksum": "md5:b84bd0e4360e0d3eef9f23d64f358b92",
+  "upload_hash_matches": true,
+  "anonymous_public_api_confirmed": true,
+  "publication_date": "2026-10-18",
+  "checked_at": "2026-10-18T14:20:23+08:00",
+  "files": 887,
+  "scope": "Screened software, software documentation and aggregate reproducibility evidence; original data/model weights/manuscripts/figures excluded; software MIT scope retained"
+}

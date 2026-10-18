@@ -1,3 +1,5 @@
+Version 1.0.0 software and aggregate reproducibility evidence: [DOI 10.5281/zenodo.23447567](https://doi.org/10.5281/zenodo.23447567). The screened archive includes the 90-cell RPL × five-family crossing and existing six-cell external numerical differences; scope and exclusions are documented in [the archive delivery](notes/doi-archive-v1/DELIVERY.zh.md). Strict external numerical reproduction remains unsuccessful.
+
 # 二手物品估值与预算验证研究
 
 **当前计算运行中（2026-10-16T11:07:28+08:00）**：RPL扩至10种子（新增378单元）；核心四阶段审计目标1206个唯一既有/新增单元。最多8个训练线程加1审计线程；训练后切至最多8单线程审计。详见[当前交付](CURRENT_DELIVERY.md)和[运行入口](notes/core-evidence-v2/current-run.json)。
