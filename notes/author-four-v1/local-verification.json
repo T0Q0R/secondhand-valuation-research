@@ -1,0 +1,19 @@
+{
+  "status": "local_author_order_and_current_pdf_verified",
+  "author_order": [
+    "Yuchen Tang",
+    "Fengqin You",
+    "Xin Pang",
+    "Junxiang Gu"
+  ],
+  "fourth_author_zh": "顾峻祥",
+  "affiliation": "南京理工大学紫金学院计算机与人工智能学院",
+  "user_confirmed_english_and_affiliation": true,
+  "source_sha256": "8f58bcf7476256c6d0e0c7d278d1430abf3172438ec439735071a2439a2788e7",
+  "pdf_sha256": "3cde296aefc67df13d9b3a882309c9ca424f7bfc10cb927e46ba36db64c1c2b5",
+  "pages": 28,
+  "current_source_builtin_compilation": "success",
+  "body_matches_remote_except_author_block": true,
+  "parent": "5b9e8c48b1b2549088eebfdded810c06f218cde1",
+  "updated_at": "2026-10-18T14:25:25+08:00"
+}

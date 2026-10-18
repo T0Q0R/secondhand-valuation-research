@@ -1,0 +1,16 @@
+{
+  "status": "public_metadata_corrected_and_verified",
+  "author_order": [
+    "Tang, Yuchen",
+    "You, Fengqin",
+    "Pang, Xin",
+    "Gu, Junxiang"
+  ],
+  "doi": "10.5281/zenodo.23447567",
+  "version": "1.0.0",
+  "fourth_affiliation": "南京理工大学紫金学院计算机与人工智能学院",
+  "archive_file_checksum_unchanged": "md5:b84bd0e4360e0d3eef9f23d64f358b92",
+  "archive_zip_replaced": false,
+  "source": "https://zenodo.org/api/records/23447567",
+  "checked_at": "2026-10-18T14:25:54+08:00"
+}
