@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-17T23:49:04+08:00",
+  "snapshot_time": "2026-10-18T14:03:47+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -648,5 +648,12 @@
     "source_sha256": "0c6427926241396664cf2338d7ca8865c1bfc13cb23b133f8f54bb3672aee13f",
     "pdf_sha256": "0b0881af4804c43d7fa35adb69969d59e203f6cc76edd8715f7a506df85ef0b9",
     "formal_submission_ready": false
+  },
+  "compact_28_v1": {
+    "status": "in_progress",
+    "target_total_pages": 28,
+    "scope": "same manuscript including appendices and references",
+    "new_training": false,
+    "plan": "notes/compact-28-v1/PLAN.zh.md"
   }
 }
