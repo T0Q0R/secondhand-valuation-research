@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-18T14:24:51+08:00",
+  "snapshot_time": "2026-10-18T14:25:42+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -57,8 +57,9 @@
     ],
     "author4_chinese": "顾峻祥",
     "author4_english_spelling_provisional": true,
-    "author4_affiliation_separately_confirmed": false,
-    "title_page_visual_review": "Four names and corresponding email visible;28pages unchanged"
+    "author4_affiliation_separately_confirmed": true,
+    "title_page_visual_review": "Four names and corresponding email visible;28pages unchanged",
+    "author4_affiliation_chinese": "南京理工大学紫金学院计算机与人工智能学院"
   },
   "figures": {
     "new_count": 4,
@@ -722,7 +723,7 @@
     "chinese_new_author": "顾峻祥",
     "english_name_provisional": "Junxiang Gu",
     "english_spelling_confirmed_by_person": false,
-    "affiliation_layout": "Existing shared affiliation retained provisionally; new author affiliation not separately confirmed",
+    "affiliation_layout": "Same shared affiliation as all other manuscript authors; explicitly confirmed by user",
     "corresponding_author": "Fengqin You",
     "email": "irisyou@njust.edu.cn",
     "pages": 28,
@@ -733,6 +734,9 @@
     "new_training": false,
     "published_software_authorship_changed": false,
     "published_software_note": "CITATION.cff identifies the existing software archive, not this new manuscript author list; no retroactive software-author attribution inferred",
-    "availability_followup": "Concurrent DOI release d494663 exists; its availability prose update is separate from this author-only request"
+    "availability_followup": "Concurrent DOI release d494663 exists; its availability prose update is separate from this author-only request",
+    "affiliation_confirmed_by_user": true,
+    "affiliation_chinese": "南京理工大学紫金学院计算机与人工智能学院",
+    "affiliation_confirmed_at": "2026-10-18T14:25:42+08:00"
   }
 }
