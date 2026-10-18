@@ -1,0 +1,53 @@
+identifiers. Missingness indicators do not distinguish natural absence from concealment. Reports
+are locked before private allocation randomization.
+The platform may query at most one publicly missing field per listing and at most B = ⌊bn⌋
+fields on every draw. A concealed recorded value is recovered; natural absence remains unavailable.
+Both attempts spend capacity. Deployment scores use public records and model outputs, not latent
+recoverability or advertised targets. Seller utility is expected log quote minus concealment cost,
+zero in the main analysis. Response search reallocates the whole batch for each candidate own
+report with peers fixed.
+SAV combines an augmented predictor, suppression scoring and query-feedback training. Static
+robust changes the prediction objective without that feedback. CDM fixes the price model and
+calibrates a mixture of twelve feasible rules on stored report/peer rows from five profile families; it
+has no unseen-type guarantee. The matched factorial below trains new initial-objective fits, rather
+than renaming these original checkpoints.
+Let qs be a cross-fitted report quote, qs\f its quote after recovering f, qH the honest quote and
+y the log target. Acquisition labels are
+vsup
+sf = [qs −qH]+ −[qs\f −qH]+,
+vben
+sf
+= (qs −y)2 −(qs\f −y)2,
+vrisk
+sf
+= (qs −y)2.
+Common ExtraTrees heads [14] learn labels from public encodings; honest records and targets are
+training supervision only. Each policy picks its highest positive eligible field. Top-B ranks item
+scores with stable ties. Score-minimax minimizes maxi gi(1 −pi) over query marginals 0 ≤pi ≤
+1, ∑
+i pi ≤B, where gi is the selected positive score. This is an additive score surrogate, not the
+true report-dependent incentive objective; every changed report therefore triggers reallocation.
+3.2
+Joint outcomes and finite responses
+Write y = log(1+price), let q0, q1 be pre-query and selected-query quotes and p the query marginal.
+With µ = (1 −p)q0 + pq1, inflation is [µ −qH]+. It differs from the realized-positive quantity
+(1 −p)[q0 −qH]+ + p[q1 −qH]+. Honest and attacked MAE are respectively
+|eqH −ey|,
+(1 −p)|eq0 −ey| + p|eq1 −ey|.
+Averaging quotes before absolute error would define another metric. Failed-query probability is p
+times the indicator of unavailable recovery, aggregated per all listings; failure still spends capacity.
+Signed log bias is µ−y. Inflation, attacked MAE and failed queries are co-primary descriptive out-
+comes, with honest MAE measuring precision. This retrospective choice guards against a constant
+predictor, which has zero inflation regardless of pricing error; it is not a preregistered endpoint
+change.
+The unilateral deviation envelope is [maxr u(r) −u(rhonest)]+ with fixed peers and fresh batch
+allocation. Remaining regret subtracts u(rreturned) instead. Small regret does not imply small gain
+over honesty or a globally selected market equilibrium. All returned profiles, including nonconverged
+ones, remain in aggregation.
+4
+Information limits and finite comparators
+4.1
+An attainable precision frontier
+Consider a missingness-alias family: an all-natural-missing world and worlds in which only item i
+has a recoverable low-value field lowering its target by ∆i > 0. Withholding produces the same
+3

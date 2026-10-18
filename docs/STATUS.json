@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-16T10:19:46+08:00",
+  "snapshot_time": "2026-10-18T14:16:19+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,18 +28,27 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "review_boundaries_v1_revised_compiled_checked",
-    "pages": 48,
-    "authors_affiliations_omitted": true,
+    "revision_status": "compact28_inplace_compiled_and_visual_checked",
+    "pages": 28,
+    "authors_affiliations_omitted": false,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "36-page contacts and new figure pages20/22/24/34 inspected",
-    "source_sha256": "e411705f97680aff89719e245e88abb9ca8e0e6318a949a429feef52c7474d38",
-    "pdf_sha256": "a26783fbd9738b6c32725f916be3b3179348f2fed7f6380e146f3ec3a043d8c3",
+    "all_page_visual_review": "All28page contact sheets and detail pages1/11/15/19/20/24/25/26/28 checked",
+    "source_sha256": "ce3b12373b9a6f655bbd202ccccf2d362f9c2c4ed87c902fe18d5fa07d0ca3be",
+    "pdf_sha256": "cd9243def1153033ea04b1ed4e17c876636d5b38ff1cc94f9c3c1e38b50eb810",
     "submission": "not_submitted",
     "formal_submission_ready": false,
     "abstract_words": 208,
-    "figure_count": 12
+    "figure_count": 12,
+    "main_pages_including_declarations": 19,
+    "appendix_and_references_pages": 9,
+    "main_figure_count": 8,
+    "appendix_figure_count": 4,
+    "table_count": 7,
+    "reference_count": 20,
+    "corresponding_author": "Fengqin You",
+    "corresponding_email": "irisyou@njust.edu.cn",
+    "corresponding_email_position": "Title page below affiliation"
   },
   "figures": {
     "new_count": 4,
@@ -51,9 +60,14 @@
     "collision_qa": "Four originals PASS; six embedded pages extraction-adapted PASS with default thresholds",
     "single_axes": true,
     "minimum_embedded_label_pt": 8,
-    "total_count": 6,
+    "total_count": 12,
     "alignment": "Three two-panel figures PASS1.5pt; single-panel NOT APPLICABLE",
-    "assets_archive": "notes/results-visual-v5/visualization-assets-v5.zip"
+    "assets_archive": "notes/results-visual-v5/visualization-assets-v5.zip",
+    "current_main_groups": 8,
+    "current_appendix_groups": 4,
+    "current_manuscript_QA": "notes/compact-28-v1/qa.json",
+    "full_17_figure_archive_commit": "f5da885b4670dba185930237776d2c779954c11b",
+    "final_journal_artwork_compliance": false
   },
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
   "goal_complete": false,
@@ -67,7 +81,7 @@
     "current_figure_assets": "notes/results-visual-v5/visual-assets-index.json",
     "new_full_paper_bundle": "not_created_under_experiment_first_instruction"
   },
-  "completion_scope": "scientific revision and calculations delivered; no actual submission or public-release/author/external-full-training claim",
+  "completion_scope": "28-page manuscript compression delivered; separate RPL90 evaluation retains its own runtime status; not actual submission or external numerical pass",
   "remaining_for_actual_submission": [
     "author responsibility and factual declarations",
     "institution CAS edition/category and selected template",
@@ -628,7 +642,8 @@
   "ten_seed_paper_v1": {
     "status": "revision_in_progress_not_compiled",
     "plan": "notes/ten-seed-paper-v1/PLAN.zh.md",
-    "new_training": false
+    "new_training": false,
+    "historical_manuscript_layout_superseded_by": "compact_28_v1"
   },
   "rpl_five_factorial_v1": {
     "status": "computed_and_independently_outcome_corroborated",
@@ -647,5 +662,18 @@
   "doi_archive": {
     "status": "reserved_not_published",
     "doi": "10.5281/zenodo.23447567"
+  },
+  "compact_28_v1": {
+    "status": "completed_same_manuscript_compiled_and_visual_checked",
+    "target_total_pages": 28,
+    "actual_total_pages": 28,
+    "includes_appendices_and_references": true,
+    "qa": "notes/compact-28-v1/qa.json",
+    "delivery": "notes/compact-28-v1/DELIVERY.zh.md",
+    "archive_commit": "f5da885b4670dba185930237776d2c779954c11b",
+    "new_training": false,
+    "separate_rpl90_workflow_changed": false,
+    "source_sha256": "ce3b12373b9a6f655bbd202ccccf2d362f9c2c4ed87c902fe18d5fa07d0ca3be",
+    "pdf_sha256": "cd9243def1153033ea04b1ed4e17c876636d5b38ff1cc94f9c3c1e38b50eb810"
   }
 }

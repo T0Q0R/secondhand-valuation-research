@@ -1,0 +1,86 @@
+0
+10%
+30%
+Query capacity
+0
+20
+40
+60
+Nonconverged batches (%)
+a
+Synthetic
+0
+10%
+30%
+Query capacity
+0
+2
+4
+6
+8
+10
+Nonconverged batches (%)
+b
+JUCars
+0
+10%
+30%
+Query capacity
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Nonconverged batches (%)
+c
+0 / 1800 batch replays
+nonconverged
+MUCars
+0
+10%
+30%
+Query capacity
+0
+0.0001
+0.001
+0.01
+0.1
+Max regret within cell (log)
+d
+Synthetic
+0
+10%
+30%
+Query capacity
+0
+0.0001
+0.001
+0.01
+Max regret within cell (log)
+e
+JUCars
+0
+10%
+30%
+Query capacity
+0
+0.0001
+Max regret within cell (log)
+f
+Maximum observed
+regret = 0
+MUCars
+All 540 cells retained. Means and full seed ranges; lower panels use a symmetric-log axis.
+Mean of cell maxima is not the worst observed regret; the full worst case remains in the source.
+λ=0
+λ=0.1
+λ=0.5
+λ=1
+λ=0, β=0
+λ=0.5, β=0
+Figure 5: Convergence boundary across all 540 RPL cells and six configurations. Top panels show
+batch nonconvergence rates; bottom panels show the maximum unilateral regret within each cell
+on a symmetric-log axis. Curves are ten-seed means, bands the full seed range. The mean of cell
+maxima is not the worst observed regret. All 51 cells containing nonconverged batches are retained.
+14

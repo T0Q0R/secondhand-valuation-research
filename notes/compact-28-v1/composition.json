@@ -1,0 +1,24 @@
+{
+  "before_prose_tokens": 21328,
+  "after_prose_tokens": 9681,
+  "main_figures": 8,
+  "appendix_figures": 4,
+  "body_font_pt": 11,
+  "margin_inches": 1,
+  "new_training": false,
+  "archive_commit": "f5da885b4670dba185930237776d2c779954c11b",
+  "regex_prose_token_reduction_pct": 54.6089647411853,
+  "count_method": "Regex word tokens after removing figure environments; includes TeX/math/table tokens, not formal English word count",
+  "omitted_figures_preserved_in_repository": [
+    "fig:feedback",
+    "fig:initial_objective",
+    "fig:cost_mechanism",
+    "fig:uncertainty_components",
+    "fig:envelope_boundary"
+  ],
+  "final_pages": 28,
+  "final_figures": 12,
+  "final_tables": 7,
+  "final_references": 20,
+  "whole_text_compression_log": "notes/compact-28-v1/COMPRESSION.zh.md"
+}

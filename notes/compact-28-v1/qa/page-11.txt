@@ -1,0 +1,97 @@
+0
+5
+10
+15
+Inflation improvement
+(0.001 log units)
+λ=0.1
+λ=0.5
+λ=1
+λ=0.5; β=0
+a
+Synthetic
+0
+5
+10
+Inflation improvement
+(0.001 log units)
+λ=0.1
+λ=0.5
+λ=1
+λ=0.5; β=0
+b
+JUCars
+0
+2
+4
+6
+Inflation improvement
+(0.001 log units)
+λ=0.1
+λ=0.5
+λ=1
+λ=0.5; β=0
+c
+MUCars
+Positive favors RPL. Thin: marginal 95% interval; pale: exploratory simultaneous band.
+10 fitting seeds × 10 fixed batches; all responses retained.
+Figure 1: Ten-seed paired inflation improvement at 10% capacity.
+Positive values favor RPL.
+Each branch uses its same-gap zero-path control. Thin segments are marginal 95% intervals; pale
+segments are exploratory simultaneous bands over 216 metric contrasts. Ten fitting seeds share fixed
+training/evaluation populations and ten batches. Bands do not establish finite-sample family-wise
+coverage.
+0 / 0
+0 / .5
+.5 / 0
+.5 / .5
+Path λ / Gap β
+0.005
+0.010
+0.015
+0.020
+0.025
+0.030
+0.035
+Positive log inflation
+a
+Synthetic
+0 / 0
+0 / .5
+.5 / 0
+.5 / .5
+Path λ / Gap β
+0.010
+0.015
+0.020
+0.025
+0.030
+0.035
+0.040
+Positive log inflation
+b
+JUCars
+0 / 0
+0 / .5
+.5 / 0
+.5 / .5
+Path λ / Gap β
+0.0050
+0.0075
+0.0100
+0.0125
+0.0150
+0.0175
+0.0200
+0.0225
+0.0250
+Positive log inflation
+c
+MUCars
+10% capacity. Lines connect the same seed; dots retain all seeds; black diamonds show means.
+Path and gap terms change together only where the label explicitly says so.
+Figure 2: Matched path/gap loss-component comparison at 10% capacity. Each line connects one
+fitting seed across four configurations; dots retain all observations and black diamonds show means.
+The axis lists path weight/gap weight. This tests the path term against matched zero-path controls
+with and without the gap term.
+11

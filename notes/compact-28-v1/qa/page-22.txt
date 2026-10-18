@@ -1,0 +1,194 @@
+They use 80 pretraining epochs and 15 per annealing stage. They start from legal public states,
+train at most two recoveries and do not reproduce the original learning-rate scheduler. Explanation-
+ranked AFA uses oﬀicial network classes (d08f39a): MLP and three-layer/four-head GPT, hidden
+width 128, embedding width 64. A training-only 250-tree classifier supplies summed field/missing-
+indicator TreeSHAP ranks. Its masked prediction, ranking and trajectory stages use 250, 200 and 16
+epochs, respectively, with two recoveries and a fixed initial marker; learning rates .001/.0005/.0003
+form the local grid. All four select three configurations with a training-only 80:20 split, then refit all
+training records. SEFA selects masked validation NLL/epoch; the other three select mean pre/post-
+query NLL and retain full schedules. Selection objectives therefore differ. These are documented
+task adaptations, not oﬀicial end-to-end reproductions.
+ACO-1 is a clean-room regression adaptation. A training-only neighbor bank estimates loss
+changes for sixteen observation patterns, using observed query coordinates and fixed k = 25
+neighbors (fixed sensitivities 10/25/50).
+Unrecoverable bank values give zero benefit.
+Classic
+risk/benefit heads, static robust, CDM and the adapted support-margin control remain com-
+parators.
+The support-margin categorical fallback rates are 75.3%, 87.3% and 65.6% on syn-
+thetic/JUCars/MUCars; its 94,527-case enumeration check does not restore the original guarantee
+on fallback rows. Different cohorts/models prevent an isolated acquisition-effect interpretation.
+Table 6: Five recent families at 10% capacity.
+Means of
+three fitting seeds; M/R denote fixed mask-aware/robust
+price backends. Failed queries are percent of all listings. ACO
+uses k = 25. Adapter boundaries are given above.
+Source
+Backend
+Family
+Inflation
+Honest MAE
+Attacked MAE
+Failed (%)
+synthetic
+M
+ACO
+0.05742
+3504
+4416
+3.07
+synthetic
+M
+DIME
+0.06905
+3504
+4734
+2.17
+synthetic
+M
+Expl.-AFA
+0.08106
+3504
+5081
+2.00
+synthetic
+M
+GDFS
+0.07852
+3504
+5002
+1.90
+synthetic
+M
+SEFA
+0.05958
+3504
+4452
+2.67
+synthetic
+R
+ACO
+0.01081
+3568
+3612
+3.43
+synthetic
+R
+DIME
+0.01328
+3568
+3627
+2.37
+synthetic
+R
+Expl.-AFA
+0.01373
+3568
+3644
+3.30
+synthetic
+R
+GDFS
+0.01341
+3568
+3640
+3.10
+synthetic
+R
+SEFA
+0.01067
+3568
+3602
+3.40
+jucars
+M
+ACO
+0.01779
+6875
+6882
+0.33
+jucars
+M
+DIME
+0.01918
+6875
+6881
+2.47
+jucars
+M
+Expl.-AFA
+0.01915
+6875
+6879
+0.40
+jucars
+M
+GDFS
+0.01912
+6875
+6880
+3.50
+jucars
+M
+SEFA
+0.01858
+6875
+6878
+2.30
+jucars
+R
+ACO
+0.01118
+7082
+7081
+3.07
+jucars
+R
+DIME
+0.01110
+7082
+7078
+4.17
+jucars
+R
+Expl.-AFA
+0.01056
+7082
+7081
+4.43
+jucars
+R
+GDFS
+0.01013
+7082
+7079
+4.83
+jucars
+R
+SEFA
+0.01087
+7082
+7081
+4.37
+mucars
+M
+ACO
+0.03817
+27282
+28083
+0.60
+mucars
+M
+DIME
+0.04634
+27282
+28327
+0.20
+mucars
+M
+Expl.-AFA
+0.03755
+27282
+28144
+0.00
+22

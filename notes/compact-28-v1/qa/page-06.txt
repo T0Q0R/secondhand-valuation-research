@@ -1,0 +1,49 @@
+qcap(s, a) ≤q(s, a) while qcap(H, a) = qH. Subtracting qH, averaging and maximizing over legal
+own reports proves that the worst fixed-peer gain weakly decreases. This is not a guarantee after
+peers recompute responses, nor a guarantee of lower absolute error.
+The cap can quote identical final records differently because it retains history, and lies outside
+the verification-neutral frontier class.
+An alternative is q↓(r) = minz∈C(r) q(z) on a fixed com-
+pletion domain. If completion sets are nonempty and nested and cover the truthful record, then
+C(rH) ⊆C(r) implies q↓(r) ≤q↓(rH), eliminating gains over its own honest quote with nonnegative
+costs. Unlike the history cap, it can reduce honest quotes and worsen MAE. Unsupported records
+need abstention or an uncertified fallback. This envelope is related to established truthful with-
+holding prediction [5, 9]; a restricted empirical cost pilot is reported in Appendix B. Equal-record
+consistency, appeals and possible selection disparities require explicit platform review; we have not
+measured protected-group effects or deployment fairness.
+6
+Experimental design and computational checks
+6.1
+Cohorts and role-separated fitting
+JUCars-2024 v2 contains Jordanian listings from 2024, deposited in 2026 [1]; MUCars-2024 v2
+contains Moroccan 2024 listings [2]. Both use CC BY 4.0 and advertised, not transaction, prices.
+Native currencies are evaluated separately.
+Processed training/validation sizes are 4,774/1,374
+and 39,244/10,672.
+Label-independent identifier hashing caps training at 5,000 and evaluation
+at 1,000. Synthetic seeds 73,101/73,102 generate 6,000/1,500 records before the same caps. All
+fitting seeds share these populations and ten fixed batches of 100. Real cohorts were inspected
+during development; these are retrospective comparisons. Inherited non-price fingerprints control
+duplicates without certifying unique vehicles. Targets, identifiers, source indices and declared reveal
+aliases are excluded; correlated features remain. Naturally missing fields cannot be concealed or
+recovered.
+The original factorial crosses two initial objectives, three acquisition scores, feedback on/off and
+two allocators: 24 cells per source/seed/capacity. Sharing no-feedback fits gives fourteen unique
+fits. Every outer fold is excluded from its entire fitting loop; the remaining records are split into
+estimator and 30% guidance partitions. A CatBoost backbone [13] and residual model receive six
+initial epochs. Models are then cloned into one no-feedback and six score/allocator-specific fits,
+with two three-epoch robust updates and identical minibatch orders. Guidance heads refresh after
+each round. At each feedback epoch’s start, public scores are fixed; within minibatches the current
+detached predictor searches responses with one start and two sweeps at 10% capacity. No-feedback
+uses no-query response search with the same update budget. Deployment heads use assembled
+excluded-fold targets and deployment encodings; the final predictor is not updated after that head
+fit. No model is refitted for another evaluation capacity.
+Writing LH, LV , LA for honest squared error, valid-report mean squared error and backbone-
+honest anchoring, mask training uses LH +.25LV +.25LA. Robust training adds .5Lattack +.5Lgain,
+with Lgain = E[(µ −sg(qH) −.02)+]. The RPL comparisons vary their declared gap/path weights
+under the same no-feedback reset schedule. Endpoint-error training uses
+(1 −p)(q0 −y)2 + p(q1 −y)2 = (µ −y)2 + p(1 −p)(q1 −q0)2,
+not squared error after averaging. Gradients do not pass through report search, field choice or
+allocation. The residual has two width-64 ReLU layers; AdamW uses learning rate .001, weight
+decay 10−4 and gradient clipping at 5. Table 1 collects settings and the separate study scopes.
+6

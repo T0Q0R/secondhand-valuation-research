@@ -1,0 +1,46 @@
+Setting
+Value
+CatBoost backbone boosting rounds [13]
+250
+Residual hidden width / learning rate
+64 / 0.001
+Initial epochs / robust-update epochs
+6 / 6
+Outer folds / guidance fraction
+3 / 0.3
+Acquisition-head trees / maximum depth / minimum leaf
+160 / 12 / 12
+Training budget / response starts / response sweeps
+10% / 1 / 2
+Evaluation response starts / maximum sweeps
+4 / 20
+Batch size / maximum concealed available fields
+100 / 2
+Gain-penalty tolerance / main concealment cost
+0.02 / 0
+Original factorial seeds / bootstrap repetitions
+10 / 1,000
+RPL path weight λ / gap weight β
+0, 0.1, 0.5, 1 / 0.5
+RPL gap-removal path weights / gap
+0, 0.5 / 0
+RPL evaluation query capacities
+0, 0.1, 0.3
+Completion / RPL-extension fitting seeds
+3 / 10
+Core-extension audit resamples
+4,000
+Recent acquisition families / frozen price backends
+5 / 2
+Recent-method prediction bins
+4
+ACO neighbor default / fixed sensitivity values
+25 / 10, 25, 50
+Additional natural-missingness fractions
+0, 0.1, 0.3
+Table 1: Declared settings across experiments. The ten fitting seeds are 13, 42, 2026, 101, 211, 307,
+401, 503, 601 and 701. The backbone and ExtraTrees implementations follow established methods;
+they are not new algorithmic contributions. All capacities share the fixed training budget. Three-
+seed completion experiments use the first three seeds; RPL extends to all ten. The additional
+settings distinguish original-factorial inference from the new audit families.
+7

@@ -1,0 +1,37 @@
+8
+Discussion and conclusion
+The information frontier limits guarantees under indistinguishable reports; observed recovery paths
+diagnose a separate failure of fitted predictors. RPL links that diagnosis to learning and lowers
+inflation at the tested unit-weight endpoint, without private deployment inputs. Its zero-query
+component shows that part of the gain comes from changing the estimator. Synthetic honest-error
+and failed-query increases, together with finite response regret, preclude a universal dominance
+claim.
+Stronger-search interventions restrict the earlier negative feedback result to its weak-search im-
+plementation; they do not identify a unique causal bug or establish feedback benefit across sources.
+The history cap similarly has a useful fixed-peer guarantee but can worsen joint outcomes and
+raises same-record consistency issues. Decisions should therefore use the joint incentive, prediction
+and verification outcomes rather than inflation alone.
+The cohorts are retrospective advertised-price samples. Concealment, costs and response dy-
+namics are modeled, not observed seller behavior; fitting seeds do not sample new training popula-
+tions. Shared audit primitives and nonconverged profiles constrain computational and equilibrium
+interpretations. An independently operated Mac completed six synthetic/seed-13 training cells:
+inputs and tree backbones matched, but residual parameters and outcomes failed the original nu-
+merical tolerances. Later diagnostics locate the first recorded difference in output-layer gradients;
+unrecorded hidden activations prevent causal attribution to a particular primitive. One-seed direc-
+tions agreed, which is not numerical equivalence. An isolated float64 candidate has not replaced
+the formal experiments. Actual seller data and independently controlled numerical environments
+remain necessary transportability tests.
+Statements and declarations
+Data and code.
+Datasets are available under their versioned CC BY 4.0 records [1, 2]. The
+public research repository contains project-authored MIT code, protocols, aggregate results, figure
+data, resampling tensors and receipts; third-party software/data retain their own licenses. Large
+weights and per-listing artifacts remain on the research machine. A DOI-backed archive has not
+yet been issued.
+AI assistance and author responsibility.
+OpenAI Codex assisted implementation, orches-
+tration, analysis, literature checks, data-derived figures and drafting. Figures use saved empirical
+results, not invented images. Authors retain responsibility for interpretation and approval. Contri-
+butions, funding and competing-interest facts require author confirmation before submission and
+are not inferred.
+19

@@ -1,0 +1,89 @@
+0.0
+0.1
+0.2
+0.3
+Query capacity
+0.04
+0.05
+0.06
+0.07
+0.08
+0.09
+Positive log inflation
+a
+Synthetic / Mask-aware
+0.0
+0.1
+0.2
+0.3
+Query capacity
+0.0125
+0.0150
+0.0175
+0.0200
+Positive log inflation
+b
+JUCars / Mask-aware
+0.0
+0.1
+0.2
+0.3
+Query capacity
+0.025
+0.030
+0.035
+0.040
+0.045
+Positive log inflation
+c
+MUCars / Mask-aware
+0.0
+0.1
+0.2
+0.3
+Query capacity
+0.010
+0.012
+0.014
+0.016
+Positive log inflation
+d
+Synthetic / Robust
+0.0
+0.1
+0.2
+0.3
+Query capacity
+0.008
+0.010
+0.012
+Positive log inflation
+e
+JUCars / Robust
+0.0
+0.1
+0.2
+0.3
+Query capacity
+0.005
+0.006
+0.007
+0.008
+0.009
+Positive log inflation
+f
+MUCars / Robust
+ACO (k=25)
+SEFA
+GDFS
+DIME
+Explainability AFA
+Risk
+Benefit
+Figure 6: Five recent acquisition families under shared one-query batch capacity. Lines are means
+over three fitting seeds; shading is the full seed range, not a confidence interval. Rows fix the
+mask-aware or robust price predictor and columns denote sources. ACO uses fixed k = 25. Risk
+and benefit use their available matching mask-aware backend; no matching robust-backend version
+is invented. All nonconverged outcomes remain included. The four classification-based adapters
+use training-only price bins, and every method has explicit task-specific adaptation boundaries.
+15

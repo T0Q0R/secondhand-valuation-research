@@ -1,0 +1,50 @@
+feedback-training implementation will improve continuous quotations after failed-but-charged re-
+covery. Our outcomes are advertised-price predictions and simulated seller responses, not observed
+transactions or a transfer mechanism.
+We link recovery-path diagnosis to a targeted training intervention. First, an information fron-
+tier isolates the limits imposed by uniform honest precision and observationally identical missing
+reports.
+Its restricted family does not predict a learned model’s empirical optimum.
+Second,
+a signed recovery decomposition exposes gain-increasing intermediate records in fitted four-field
+models. Recovery-path regularization (RPL) penalizes those increases without adding private de-
+ployment inputs. Third, matched experiments separate initial objective, acquisition, feedback and
+allocation, then assess RPL with ten fitting seeds, component removals, budget variation and four-
+stage computational checks.
+The evidence supports conditional use.
+At the declared unit-weight endpoint, RPL lowers
+inflation in all thirty source–seed comparisons, but synthetic honest error and query failures rise.
+Stronger training-response search removes some earlier feedback damage, restricting that negative
+finding to its implementation. Competitive simple controls, finite-response regret and cross-machine
+numerical differences further bound the claims. The practical question is therefore which recovery-
+aware intervention improves the joint incentive, prediction and verification outcome for a stated
+setting.
+2
+Related work
+Withholding and verification.
+Support-margin imputation addresses strategic missingness in
+regression [9]; truthful classifiers address withholding in classification [5]. Our precision frontier
+adds a uniform honest-quote constraint to a hard query budget, rather than introducing ambiguous
+missingness as a new problem. Audit and partial-verification mechanisms [4, 6] motivate checking
+reports, while established marginal representations [3] permit compact finite allocation.
+Their
+guarantees remain specific to their mechanism classes.
+Acquisition and strategic feedback.
+ACO [12], amortized greedy selection (GDFS) [17],
+discriminative information estimation (DIME) [18], stochastic latent encodings (SEFA) [19] and
+explanation-ranked acquisition [20] broaden the acquisition comparison beyond risk and predictive
+benefit. We run task adapters, with boundaries in Appendix C; they are not oﬀicial end-to-end
+reproductions. Performative prediction and strategic risk minimization [10, 11] study deployment-
+dependent responses; contextual games and audit-risk design [7, 8] condition decisions on available
+information. We neither transfer their convergence guarantees to our finite nonconvex loop nor
+claim randomization or monotonicity as new principles. The contribution is the recovery-targeted
+loss and its controlled evidence, including search-strength interventions that qualify feedback fail-
+ure.
+3
+Problem formulation
+3.1
+Reports, queries and allocation
+A batch contains n = 100 listings. Listing i has recorded vector xi and natural missingness Mi.
+A seller conceals at most two available fields among mileage, transmission, fuel type and body
+condition. Its report ri(si) marks Mi ∪si missing; values cannot be fabricated or recovered through
+2

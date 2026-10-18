@@ -1,0 +1,86 @@
+Table 4: Ten-seed RPL means at 10% capacity, β = 0.5. MAE is in source currency; failed queries
+are a percentage of all listings. All seeds and nonconverged responses are retained.
+Source / λ
+Inflation
+Honest MAE
+Attacked MAE
+Failed (%)
+synthetic / 0
+0.01243
+3576.06
+3635.45
+2.51
+synthetic / 0.5
+0.00707
+3595.31
+3600.02
+3.49
+synthetic / 1
+0.00616
+3605.35
+3602.26
+3.61
+jucars / 0
+0.01244
+6966.89
+6957.18
+5.73
+jucars / 0.5
+0.01077
+6948.32
+6941.48
+5.35
+jucars / 1
+0.00913
+6959.75
+6956.01
+6.17
+mucars / 0
+0.00661
+27155.74
+27306.07
+0.43
+mucars / 0.5
+0.00566
+26983.89
+27114.40
+0.39
+mucars / 1
+0.00503
+26938.93
+27069.81
+0.31
+in the exploratory simultaneous bands; real-source MAE changes did not. Figure 3 shows all paired
+seed changes, including unfavorable cases. Its means of seed ratios are distinct from the ratios of
+means reported above. Inflation improvement alone therefore does not determine a deployment
+choice.
+Budget boundary.
+Figure 4 includes zero queries, separating estimator changes from verification
+gains. Greater capacity can lower inflation while increasing charged failed queries.
+Finite-response boundary.
+All 540 cells remain in Figure 5. Fifty-one cells contained noncon-
+verged batches, covering 89 of 5,400 batch replays, with a maximum remaining unilateral regret
+of 0.143721 log units. At the primary unit-weight endpoint, two synthetic seeds each retained one
+nonconverged batch; the maximum regret there was 0.011042. Both real-source endpoint responses
+met the stated finite unilateral tolerance. These are outcomes of the declared finite response search,
+not evidence of improvement at an exact market equilibrium.
+7.3
+Five task-adapted recent acquisition families on fixed price models
+ACO is a clean-room one-query adaptation. SEFA uses oﬀicial model code inside a changed task
+interface; GDFS and DIME use the SEFA repository’s comparison implementations; explanation-
+ranked AFA uses oﬀicial network classes with adapted ranking generation and training. Origi-
+nal code provenance therefore does not make the complete experiment an oﬀicial reproduction.
+The classification-to-regression, observation, selection and budget differences are specified in Ap-
+pendix C. No claim of reproducing or defeating the original papers follows from this comparison.
+Each of the five adapters covered three sources, three fitting seeds, two frozen price backends and
+six capacities: 540 common-grid cells. ACO additionally retained 36 fixed-neighbor sensitivities.
+Holding source, seed, backend and capacity fixed, honest MAE agreed across methods to less than
+10−6, as required when only acquisition changes. ACO’s declared k = 25 was used throughout; no
+evaluation-best neighbor count replaced it. Figure 6 shows every family’s budget curve alongside
+available matched risk/benefit controls. At 10% capacity with the robust backend, GDFS had the
+lowest family-mean inflation on JUCars (0.01013), whereas SEFA was lowest on MUCars (0.00660)
+and synthetic (0.01067). No recent family minimized inflation on all three sources. Simple risk
+or benefit remained competitive or better in several mask-aware comparisons.
+Full four-metric
+primary means are in Appendix C; an inflation ranking is not a multiobjective dominance result.
+10

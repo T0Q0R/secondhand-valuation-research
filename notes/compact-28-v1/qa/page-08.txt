@@ -1,0 +1,62 @@
+Table 2: Computational audit scope.
+Counts overlap where explicitly stated; human scientific
+approval and exact cross-machine reproduction are separate from these checks. Historical failure
+receipts are preserved.
+Evidence
+Completed chain
+Boundary
+Original 4,320 cells
+Fit, outcome, analysis, statistics
+check
+Original implementation; shared
+primitives disclosed
+Claim-bearing
+extensions: 1,206
+distinct cells
+Same four computational phases;
+includes all 540 ten-seed RPL cells
+Conditional exploratory inference;
+not an independent full-stack
+implementation
+Remaining
+completion-study
+support
+Hash bindings, utility checks and
+recorded summaries
+No whole-study four-stage upgrade of
+all 1,719 cells
+6.2
+Evaluation, uncertainty and audit scope
+Fixed models are evaluated with four starts and at most twenty response sweeps; quotes/errors
+are integrated analytically over query marginals and every legal unilateral deviation is checked
+with fresh reallocation. The original study has 4,320 cells over thirty source–seed pairs. Its 58
+conditional contrasts per source/capacity produce 174 primary contrasts. Paired crossed seed–batch
+resampling preserves method pairing [15]: the original analysis uses 1,000 resamples, whereas the
+core extensions use 4,000, including exploratory studentized maximum-deviation bands [16] over
+216 RPL metric contrasts. Fixed cohorts, ten clusters and fitting-only randomness prevent a finite-
+sample family-wise or new-training-population guarantee. Interactions are differences of feedback
+effects between allocators; a positive interaction alone does not make feedback beneficial.
+The three-seed completion study has 1,719 cells including references. RPL then reuses its 162
+pilot cells and adds 378 to retain ten seeds, six configurations and three capacities (540 cells).
+Parameter and availability scans remain three-seed. Fit/outcome/analysis/statistics-check phases
+cover the original 4,320 cells and 1,206 distinct claim-bearing extension cells, including all 540 RPL
+cells (Table 2). Stage counts are 162 pilot RPL, 90 search, 432 SEFA/GDFS/DIME/explanation,
+144 ACO and 378 additional RPL cells. The 540-cell RPL audit overlaps the pilot; remaining
+support cells are not upgraded.
+The checks reconstruct fitting roles, recorded outcomes, legal deviations and saved statistics
+but share prediction/loading primitives; they are not an independent full-stack implementation.
+An additional bit-mask oracle checks 1,188 fixture and 521,164 real-record field transitions without
+sharing state/query logic. Historical failures remain recorded, including the corrected ACO audi-
+tor’s float32-versus-float64 distance mismatch. Human scientific approval and external numerical
+reproduction are separate; the latter failed its original tolerances. Appendix E indexes the complete
+protocols, failure receipts and audit limits.
+7
+Results
+7.1
+Recovery failures in the learned four-field class
+The recovery-path prediction is observable in the saved models, rather than only in the illustra-
+tive 10/12/14 fixture. We enumerate all legal successful recovery edges in the 14 unique fits per
+source/seed and the original 1,000 evaluation records. An adverse partial recovery requires two
+hidden fields, a post-query quote above the pre-query quote and both at or above the model’s
+honest anchor, using tolerance 10−10. Table 3 reports these finite table properties separately from
+8

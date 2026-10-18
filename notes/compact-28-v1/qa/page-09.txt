@@ -1,0 +1,57 @@
+returned response rows.
+Source
+Successful edges
+Adverse partial edges
+Adverse queried rows
+Synthetic
+2,098,600
+82,939
+82
+JUCars
+2,044,000
+67,523
+1,733
+MUCars
+2,212,560
+61,404
+2,829
+Table 3: Recovery-path diagnostic on saved primary-capacity models. Edges use 14 unique fits
+per source/seed; the last column counts returned reports from all 24 cells with positive query
+probability and gain-increasing partial recovery. For randomized allocation these are eligible rows,
+not realized query counts. Each source reuses the same 1,000 records over ten fitting seeds. Counts
+are dependent finite diagnostics, not independent samples or deployment prevalence.
+A MUCars witness has honest, two-hidden and partially recovered log quotes 11.484823,
+11.517865 and 11.546430, respectively. It hides transmission and fuel type, then recovers trans-
+mission. Thus its report component is about 0.033042 and recovery adds about 0.028564. The
+query raises the gain-producing quote in an actual fitted model. This witness is not a measurement
+of human seller behavior. Across 720 primary cells and 720,000 returned-profile rows, the saved
+E + R + C = G identity is also reconstructed. These checks connect the recovery argument to
+the empirical model class, but do not identify why feedback training is harmful or estimate the
+restricted frontier’s real-data optimum.
+7.2
+Recovery-path regularization: improvement and costs
+RPL compares λ = 0, .1, .5, 1 at β = .5 and λ = 0, .5 at β = 0, across capacities 0, .1, .3 with the
+same no-feedback reset schedule. Each branch uses its same-gap zero-path control. The declared
+development grid predates formal evaluation; it is not independent preregistration or proof that
+λ = 1 was a prespecified headline. Weight .5 matches the existing gap scale; neither .5 nor 1 is
+claimed optimal.
+Inflation improvement and uncertainty.
+At 10% capacity and λ = 1, β = 0.5, ratios of mean
+inflation to the matched λ = 0 control fell by 50.41%, 26.58% and 23.81% on synthetic, JUCars and
+MUCars. All ten fitting seeds in each source had lower inflation. The absolute paired reductions
+were 0.006268, 0.003306 and 0.001573 log units. The exploratory simultaneous bands over 216 met-
+ric contrasts were [0.004644, 0.007891], [0.001209, 0.005403] and [0.000624, 0.002522], respectively
+(Figure 1). These conditional bands support the within-design direction without certifying finite-
+sample coverage or new-population generalization. Smaller weights were less uniform: at λ = 0.1,
+only six of ten seeds improved on each real source; at λ = 0.5, nine of ten did so. Appendix D
+retains every seed.
+Loss-component boundary.
+The matched path/gap comparison (Figure 2) distinguishes path
+regularization from the existing gap term at the tested weights. Appendix D retains the original
+component ablation and three-seed recovery-edge pilot; neither is relabeled as ten-seed evidence.
+Predictive and verification costs.
+Table 4 reports absolute outcomes. At the unit endpoint,
+honest MAE changed by +0.82%, −0.10% and −0.80%, while attacked MAE changed by −0.91%,
+−0.02% and −0.87%. Failed attempts as a fraction of all listings changed by +1.10, +0.44 and
+−0.12 percentage points. The synthetic honest error and failed-query increases also excluded zero
+9

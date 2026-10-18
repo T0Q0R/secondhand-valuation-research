@@ -1,0 +1,69 @@
+Positive-cost mechanism.
+The 108-cell post-hoc subset uses robust initialization/suppression
+scoring, three seeds, both feedback settings and allocators, with cost .005, .02 or .02hi, hi ∈[.5, 1.5).
+Responses are recomputed, not adjusted by subtracting costs afterward.
+For cost Ci = ciki,
+positive quote gain Gi, positive best-legal-utility gain Ni and remaining regret ρi, Ci −ρi ≤
+Gi−Ni ≤Ci. These bounds, not division by mean heterogeneous cost, identify concealment ranges.
+Twenty nonconverged batches remain. Synthetic top-B cost-.02 hidden-field means are bounded
+by [.130, .165]/[.130, .181] without/with feedback, versus .996/.957 at zero cost; net-deviation en-
+velopes fall 77.5%/81.1%. Failed queries reach 9.47%/9.40% per listing (at least 94.7%/94.0% of
+attempts). High costs move the subset toward ordinary valuation and feedback no longer wors-
+ens mean inflation, but residual concealment stays positive. Uniform-.02 benefit appears in only
+one seed, heterogeneous-cost benefit in all three; real-source directions remain adverse. This sup-
+ports deterrence alongside a local ranking reversal, not causally identified improvement of feedback
+quality.
+Final-record envelope.
+Three robust/no-feedback fits per real source enumerate categorical
+transmission/fuel/condition completions from training vocabularies, with mileage observed and
+fixed. Unsupported categories or missing mileage abstain. Current records are included; singleton
+domains leave quotes unchanged. Of 999 covered MUCars records, 971 have singleton completions
+and zero cost; the 28 naturally incomplete records concentrate its error increase. Of 801 covered
+JUCars records, 800 are singletons and all 801 retain the same quote.
+The largest individual
+MUCars quotation reduction is 25.5% of that record’s original predicted quote. Quote discounts
+and absolute-error costs have different denominators. Thus the restricted envelope is costless on
+complete covered records but can be expensive with natural missingness. Table 5 retains all pilot
+ranges; these are not confidence intervals or a tested four-field replacement.
+Source
+Support
+Records
+Honest-MAE change
+Mean quote reduction
+JUCars
+Covered
+801
+0
+0
+JUCars
+Missing category
+1
+0
+0
+MUCars
+Covered
+999
+10.49–23.87
+200.21–240.51
+MUCars
+Missing category
+28
+374.24–851.51
+7,143.33–8,581.21
+Table 5: Final-record categorical-envelope pilot.
+Entries are per-source three-seed ranges, not
+uncertainty intervals; positive MAE changes are worse. Price quantities use source currency units.
+Missing-category rows are subsets of covered rows, not additional observations. JUCars abstains
+on 199 records, MUCars on one, all for missing mileage.
+C
+Recent-method adaptations and numerical comparison
+All five acquisition families use the same frozen price backends, one-query hard-capacity inter-
+face, public nonquery context and unrecoverable natural absence. The four classification adapters
+train on four price-quantile classes and use acquisition scores as cross-listing priorities; no cardinal
+comparability theorem is asserted. Hidden-mileage perturbations leave their public-state scores
+unchanged. The shared design has three sources, three seeds, two backends and six budgets (540
+cells), plus 36 ACO sensitivities. Table 6 gives every primary family mean.
+SEFA uses oﬀicial MIT code (commit 3af8da2), configurations 1/5/9 and 120 epochs/trial.
+GDFS/DIME use that repository’s comparison implementations: GDFS retains relaxed one-hot
+selection and temperature annealing; DIME retains entropy-scaled values and epsilon-greedy choice.
+21

@@ -1,0 +1,78 @@
+0
+10%
+30%
+Query capacity
+0.005
+0.010
+0.015
+Positive log inflation
+a
+Synthetic
+0
+10%
+30%
+Query capacity
+0.005
+0.010
+0.015
+Positive log inflation
+b
+JUCars
+0
+10%
+30%
+Query capacity
+0.004
+0.005
+0.006
+0.007
+0.008
+Positive log inflation
+c
+MUCars
+0
+10%
+30%
+Query capacity
+0.000
+0.025
+0.050
+0.075
+0.100
+Failed queries / listings
+d
+Synthetic
+0
+10%
+30%
+Query capacity
+0.00
+0.05
+0.10
+0.15
+Failed queries / listings
+e
+JUCars
+0
+10%
+30%
+Query capacity
+0.0000
+0.0025
+0.0050
+0.0075
+0.0100
+Failed queries / listings
+f
+MUCars
+Lines: 10-seed means; shading: full seed range, not a confidence interval.
+β=0.5; zero-query differences are estimator effects.
+λ=0
+λ=0.1
+λ=0.5
+λ=1
+Figure 4: Budget transfer and verification costs at β = 0.5. The measured capacities are 0, 10 and
+30%; straight segments connect evaluated settings only. Lines show ten-seed means and shading
+the full seed range, not a confidence interval. Failed queries use all listings as the denominator.
+Zero-query differences are estimator effects.
+13

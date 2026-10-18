@@ -1,0 +1,40 @@
+weak-search implementation; the stronger-search intervention above changes that interpretation.
+Appendix E indexes all original intervals, interactions and counts.
+The strong-control comparisons also restrict claims for the original SAV candidate. Ordinary-
+benefit and acquisition-conditioned controls had lower inflation in synthetic and JUCars compar-
+isons, and the original ten-seed SAV comparison did not show a universal advantage over static
+robust valuation. These original-protocol comparisons are distinct from the new same-gap RPL con-
+trasts. Likewise, score-minimax allocation passed the descriptive joint gate in only two of eighteen
+primary contrasts, while ten worsened inflation. An advantageous interaction or a more complex
+allocator therefore does not replace a matched no-feedback or simple-acquisition control. Complete
+three-source evidence is retained in Appendix E.
+7.6
+History-cap outcomes and deployment costs
+The history cap’s fixed-peer theorem does not imply a better joint outcome after sellers recompute
+their reports. The 432-cell recomputation kept the original response-search budget, public scores
+and rule weights. Its multiobjective result is consequential: attacked MAE increased in 94 cells
+and failed-query rates in 145, despite unchanged honest MAE. Figure 8 shows those costs alongside
+inflation reductions. Complete per-rule counts and conditional intervals are indexed in Appendix E.
+Thirty-three capped cells retained at least one nonconverged batch and maximum remaining
+regret was 0.204423 log units. No capped result is therefore described as a certified market equi-
+librium. The descriptive 10% inflation / 5% honest-error gate does not constrain attacked error
+or failed queries; threshold sensitivity cannot turn a single-metric improvement into Pareto domi-
+nance. These costs also motivate the final-record alternative and its natural-missingness boundary
+in Section 5.
+7.7
+Applicability beyond the zero-cost capped design
+Positive concealment costs changed some rankings through deterrence. In the synthetic top-B sub-
+set, stipulated costs near 0.02 sharply reduced concealment and moved outcomes toward ordinary
+valuation; feedback no longer worsened the mean inflation in the high-cost specifications. Yet over
+94% of attempted queries failed in the uniform-cost subset, residual concealment remained positive,
+and the real-source directions stayed adverse. This supports a conditional regime change rather
+than a general feedback remedy. The full 108-cell cost design and net-deviation bounds remain in
+Appendices E and B.
+A separate frozen-original-model check removed the real-source evaluation caps, covering all
+1,374 JUCars and 10,672 MUCars validation records. All 24 feedback point directions remained
+adverse. The two MUCars masking/suppression intervals still crossed zero, with fitting-seed vari-
+ability dominating the uncapped conditional variance. The cohort and record-count weighting both
+changed, so this is not a pure sample-size experiment or evidence of zero effect. It does not extend
+the RPL evaluation population: the RPL ten-seed study retains its fixed 1,000 listings per source.
+Complete uncapped counts, weighting and variance decompositions are in Appendices E and B.
+17

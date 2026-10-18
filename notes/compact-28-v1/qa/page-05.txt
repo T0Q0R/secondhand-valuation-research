@@ -1,0 +1,53 @@
+18,662,296,388,649,543,921 complete allocations per class. Full enumeration was not run there,
+so this is a representation count, not measured speedup. At B = 1, η = 0, the two-mode toy
+library (six three-item priorities, risk and no query) differs from empirical CDM’s twelve rules. Its
+72/17 oracle, 72/13 global-mixture and 8 risk values use artificial quote units. Appendix A gives a
+contextual separation and the stronger B + 1-rule comparator that closes it.
+5
+Recovery diagnosis and recovery-path learning
+5.1
+Separating recovery from competition
+For fixed peers and an evaluated mixture, retain its maximizing own report s∗. Let qh be the
+unqueried report quote, qL the quote after the same rule’s highest positive eligible query with
+capacity relaxed, and qA the hard-budget quote. At the same report,
+E = qh −qH,
+R = E[qL] −qh,
+C = E[qA] −E[qL],
+G = E + R + C.
+All terms are signed; mixture expectation precedes report maximization. The relaxed query is
+diagnostic. Reusing the truthful query would target a naturally missing field and confound recovery
+with competition. In the 10/12/14 example, E = R = 2, C = −2(1 −p) and G = 2 +2p: successful
+partial recovery can increase the gain of a nonmonotone predictor.
+5.2
+Recovery-path regularization
+Let Hi be record i’s honest report and Ei its legal edges recovering actually concealed fields; natural
+unavailability is excluded. For quoted log price qθ, define
+gi,θ(s) = [qθ(s) −sg(qθ(Hi))]+,
+(2)
+Lpath(θ) =
+∑
+i
+∑
+(s,a)∈Ei[gi,θ(T(s, a)) −gi,θ(s)]+
+∑
+i |Ei|
+.
+(3)
+RPL adds λLpath to its matched no-feedback loss.
+The existing gap term penalizes gain over
+honesty; this term penalizes an increase in that positive gain along recovery. The honest anchor is
+detached within an optimizer step, although shared parameters can move it between steps. Honest
+values supply training supervision only. Deployment retains the public-record predictor without
+private recoverability or quotation history.
+Proposition 2 (Finite recovery-graph implication). If Lpath = 0 on fixed finite record graphs,
+positive gain cannot increase along any path of their legal recovery edges.
+Proof. Each summand is nonnegative. A zero sum forces every edge increment to be nonpositive;
+chaining these inequalities proves the claim.
+The implication permits positive initial concealment gain and says nothing about unseen records,
+finite-penalty fits, honest error or allocation optimality. It motivates a testable training intervention,
+not a general incentive guarantee.
+5.3
+Conditional cap and final-record alternative
+A diagnostic history cap uses qcap(r, a) = min{q(r, ∅), q(r, a)} before mixture averaging, fixing
+the model, public scores and rule weights. If truthful queries leave qH unchanged, then pointwise
+5

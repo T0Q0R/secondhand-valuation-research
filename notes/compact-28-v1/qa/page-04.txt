@@ -1,0 +1,59 @@
+public batch. Quotes are itemwise and verification-neutral: identical final records receive identical
+quotes. Optimizing both the quote function and verification under uniform honest absolute error
+η, set ai = (∆i −2η)+. The attainable worst positive expected gain is
+T ∗(η, B) =
+min
+0≤pi≤1, ∑
+i pi≤B max
+i
+ai(1 −pi).
+(1)
+For a nonzero interior optimum, ∑
+i:ai>0(1 −T ∗/ai)+ = B.
+Proof and scope.
+Couple policies on the private random seed along the all-failure transcript.
+The probability pi of querying item i has ∑
+i pi ≤B. Until that query, its concealed-low world
+has the same transcript. Uniform precision on both honest worlds leaves a gap at least ∆i −2η;
+verification-neutrality prevents unsuccessful queries changing the quote.
+This proves the lower
+bound, including adaptive policies in this family.
+Shift the two quotes toward one another by
+min(η, ∆i/2) and sample the optimizing marginals under hard capacity to attain it. Thus T ∗= 0
+exactly when B ≥|{i : ∆i > 2η}|; for identical gaps, T ∗= (∆−2η)+(1 −min{B/n, 1}).
+The 2η term comes from satisfying two honest reports with one quotation rule. It does not
+follow from average MAE or contradict truthful classifiers that change predictions without this
+precision constraint [5]. Our learned four-field models violate the frontier’s single-recoverable-field
+and uniform-error assumptions. We therefore use it to delimit guarantees, not to predict empirical
+feedback signs or model optima.
+4.2
+Compact finite oracle
+For each public batch class o, the finite oracle shares one action lottery across all compatible
+latent worlds and minimizes the largest expected unilateral gain, recomputing truthful and deviated
+allocations. For item-local utility, unit-cost nonadaptive queries and at most one field per item, it
+can instead use field marginals yoif satisfying
+yoif ≥0,
+∑
+f
+yoif ≤1,
+∑
+i,f
+yoif ≤B,
+with zero mass on ineligible fields. Every deviation is aﬀine in these shared marginals, including
+both truthful and deviated public classes.
+Proposition 1 (Compact implementability). The marginal and complete-allocation finite oracles
+have the same value in this class, and every feasible marginal solution respects capacity on each
+draw.
+Proof. A complete lottery induces feasible marginals. Conversely set pi = ∑
+f yif and concatenate
+half-open intervals of lengths pi. For uniform U ∈[0, 1) select intervals containing some U + k,
+integer k. Each length is at most one and their total at most integer B, so at most B items are
+selected, with probabilities pi. Given selection, choose field f with probability yif/pi. This realizes
+all marginals and preserves every aﬀine expected payoff.
+Marginal optimization is established [3]. This specialization uses OnF + 1 variables but does
+not remove world/report enumeration, preserve arbitrary joint-event probabilities or cover general
+adaptive/nonunit-cost queries. Certificates cover the declared finite universe only.
+Compact and complete values agree on 32 original and 24 multi-field fixtures; all 57 primal/dual
+certificates pass.
+A larger n = 100, F = 4, O = 8, B = 10 fixture uses 3,201 variables versus
+4

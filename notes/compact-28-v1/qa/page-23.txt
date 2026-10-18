@@ -1,0 +1,93 @@
+Source
+Backend
+Family
+Inflation
+Honest MAE
+Attacked MAE
+Failed (%)
+mucars
+M
+GDFS
+0.04411
+27282
+28246
+0.33
+mucars
+M
+SEFA
+0.03753
+27282
+27933
+0.07
+mucars
+R
+ACO
+0.00716
+27578
+27779
+0.60
+mucars
+R
+DIME
+0.00763
+27578
+27793
+0.40
+mucars
+R
+Expl.-AFA
+0.00677
+27578
+27771
+0.00
+mucars
+R
+GDFS
+0.00697
+27578
+27803
+0.57
+mucars
+R
+SEFA
+0.00660
+27578
+27764
+0.03
+D
+Full removals, default scans and seed heterogeneity
+The original component experiment toggles suppression scoring (S), feedback (F) and gap loss (G).
+All eight configurations retain backbone, augmentation, error and anchoring terms, with equal role
+separation and epoch budgets. Thus removal of two or all three components is evaluated against
+a trained baseline (Figure 9). These switches do not constitute three independently established
+innovations.
+Figure 10 retains all ten fitting seeds and four nonzero path/gap comparisons, each with its
+same-gap zero-path reference. Negative seed effects at smaller weights remain. A separate original
+three-seed recovery-edge pilot found mean positive increments decreasing from .001790 to .000693
+(synthetic), .001648 to .001048 (JUCars) and .000788 to .000450 (MUCars) at λ = 1, β = .5.
+All remained positive: zero path loss was not achieved, and the pilot is not relabeled as ten-seed
+evidence.
+Core scans vary gap weight 0, .1, .25, .5, 1, 2, tolerance 0, .01, .02, .05, .1 and feedback rounds
+1, 2, 4, at 10/30% budgets. Implementation scans vary anchoring, attack weight, learning rate,
+epochs, head trees and width. Figures 11 and 12 explicitly mark every scanned value and engineering
+default; matching default observations are reused exactly, not retrained or selected on evaluation
+outcomes. These three-seed scans do not retune ten-seed RPL or prove an optimum. The separate
+availability stress adds 0/10/30% natural absence to fixed models (189 cells, 63 reused), with seven
+policies and fresh response search but no new fitting; it is a controlled perturbation rather than a
+new market or actual-seller validation.
+E
+Historical controls and reproducibility index
+The public repository preserves the full pre-compression manuscript at commit f5da885, including
+the original 17 figures and 18 tables. Current figure source data, all fitted comparisons and failed
+receipts remain available.
+This compact appendix summarizes secondary controls rather than
+duplicating their full tables; no experiment, negative outcome or nonconverged row was excluded.
+Original comparisons.
+In ten-seed original-protocol comparisons at 10% capacity, comparator-
+minus-SAV inflation differences for static robust are −.009091 (synthetic), −.002906 (JUCars) and
+−.000829 (MUCars). The synthetic interval excludes zero; both real-source intervals cross it. These
+620 cells/source are not the matched factorial. In separately recomputed common-response controls,
+ordinary benefit and ACO beat SAV on synthetic/JUCars; some larger-cap MUCars comparisons
+favor SAV. No evaluation-best tuning cap replaces the declared role. CDM’s finite rows/library
+and adapted support-margin fallbacks also preclude a universal original-method advantage.
+23

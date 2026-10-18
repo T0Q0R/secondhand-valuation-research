@@ -1,0 +1,53 @@
+Table 7: Compact evidence map. Paths are relative to the public repository.
+Evidence
+Public location / scope
+Original factorial
+notes/factorial-final/; 4,320-cell chain
+Core extensions
+notes/core-evidence-v2/completed-stages/; 1,206 unique cells
+RPL ten-seed effects
+notes/ten-seed-visual-review-v1/; all seeds and figure CSVs
+Expanded real cohorts
+notes/revision-review-v2/evaluation/; 480 cells
+Cost/envelope diagnostics
+notes/revision-mechanisms-v3/; source-bound checks
+Strict external mismatch
+notes/external-reproduction-synthetic-v1/; failures retained
+Original and revised figure
+assets
+paper/figures/; vector and raster sources
+Allocation and history cap.
+Among eighteen primary allocator contrasts, score-minimax wors-
+ens inflation in ten; only two pass the descriptive joint gate. Gate cutoffs of 10% inflation reduction
+and 5% honest-error increase are retrospective design thresholds, not utility-identified requirements.
+Continuous effects and threshold grids remain in the record, including JUCars’ unrounded 9.985%
+case. The fixed-profile cap check covers 108 cases and 5,671,620 legal rows; all honest quotes are
+unchanged and envelopes weakly decrease, as predicted. Risk’s primary improvement is zero. After
+recomputing seller responses, 432 cells contain 94 attacked-MAE and 145 failed-query increases; 33
+cells retain nonconverged batches, with maximum regret .204423. The mechanically nonincreasing
+fixed-profile cap is not a new empirical dominance finding.
+Expanded cohorts.
+Removing both original-model real-source caps evaluates all 1,374/10,672
+JUCars/MUCars records: 480 cells, 29,040 batches, 2,891,040 rows and 31,269,840 legal deviations.
+First-ten-batch records and receipts are reused byte-for-byte; new batches use no retraining. Final
+batch sizes 74/72 use budget 7 at 10%. All returned real-source batches meet the finite unilateral
+tolerance, with recorded maximum regret zero. All 24 feedback directions stay adverse, 12 JUCars
+and 10 MUCars unadjusted intervals exclude zero; the two MUCars masking/suppression intervals
+still cross zero. These checks concern frozen original models, not an uncapped RPL population.
+Audit coverage and surviving failures.
+Original fit checks reconstruct 2,068,360 held-out
+rows and refit 420 heads; outcome checks cover 4.32 million rows and 45,372,960 legal deviations;
+statistics reconstruction checks 9,216 metric contrasts. The separate state oracle rejects four in-
+jected transition/materialization faults but does not reimplement datasets, predictors or optimizers.
+The new 1,206-cell chain uses shared primitives too. The initial ACO auditor subtracted float32
+bank/query arrays, while production promotes both to float64 before distances. The separate cor-
+rected auditor reproduces all 144 ACO cells without changing production, results or tolerance;
+the failed receipt is retained. Earlier argmax-identity failures arose from ties (largest payoff gap
+6.94 × 10−18); saved original winners remain. Neither mutation rejection nor computational agree-
+ment is independent scientific approval.
+References
+[1] N. Thalji. JUCars-2024: A Dataset of Used Car Listings in Jordan. Mendeley Data, version 2, 2026.
+doi:10.17632/ddcz486x5t.2.
+[2] E. Tabarnoust, M. Mghari and Y. Zaz. Moroccan Used Cars Dataset (MUCars – 2024). Mendeley Data,
+version 2, 2024. doi:10.17632/vjrbcb2rrt.2.
+27
