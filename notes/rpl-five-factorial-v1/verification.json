@@ -1,0 +1,467 @@
+{
+  "status": "all_90_receipts_and_summaries_bound",
+  "cells": 90,
+  "paired_comparisons": 45,
+  "source_family_comparisons": 15,
+  "outcome_rows": 90000,
+  "legal_unilateral_deviations": 945270,
+  "nonconverged_cells": 18,
+  "nonconverged_batches": 18,
+  "maximum_regret": 0.1491632461547851,
+  "receipts": [
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-0/aco/completion.json",
+      "sha256": "284de0d4d9761decd1be10f7544fb0398b69a61fb924a723a2b55cef208b3a60",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-0/dime/completion.json",
+      "sha256": "0f4088ea7b0d3ae7b9dfe494046c55e7123b6a2de689dfb770c9e85e1cf9617d",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-0/efa/completion.json",
+      "sha256": "dfeb9f2e7728e85607fed4a9bab872d8ba90d01d9b48978356242d98047e568d",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-0/gdfs/completion.json",
+      "sha256": "f3b14497be0672ee2782224852921a236b99399d3575c40840be297e9398dade",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-0/sefa/completion.json",
+      "sha256": "c6ae4e6d602d123518f545abbcf0b09f52d16dd5f9d25f6dcb9752bdce1ecbf0",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-1/aco/completion.json",
+      "sha256": "ce1738ea999adf2ff7f6c05e94c3cc93b42d917e2816b00c11299a812f917d40",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-1/dime/completion.json",
+      "sha256": "8726f1d41a12703d152cbbdd86fbc739267cb033cbe458613a9f05550c849966",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-1/efa/completion.json",
+      "sha256": "06c5117cedcb865d2a99288abd3a0091bcea484e3036eed157a0a6a91ec132bb",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-1/gdfs/completion.json",
+      "sha256": "a48629bd544d0c230ee891e2c850723dfa2d14c1f4f672b4641014016f2df952",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-13/rpl-1/sefa/completion.json",
+      "sha256": "9be1157f0abfa86f412b1f1f2767bee4b72e1584824bd806e6c48f2ee5a85e6a",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-0/aco/completion.json",
+      "sha256": "758de08d6155392e8055a0773564409cbc4521286b275717f9c03754ec9fb403",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-0/dime/completion.json",
+      "sha256": "4f911ef50d77ea28995e1a851f1f407ce7c59fb0cf2141df9ba7081eeba992ce",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-0/efa/completion.json",
+      "sha256": "861f1415582425393ab4995aec5b0d96dcd0a14a8125f35892b8911106e03044",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-0/gdfs/completion.json",
+      "sha256": "f0fc095344b9ad99e69978e3c1186be3ad1db7fae144c28bb3b7bc3c8383febd",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-0/sefa/completion.json",
+      "sha256": "0606a254d4c7265f45c213c8a4fe8914da8f7d7c302776ea7b80a4d5972a01e3",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-1/aco/completion.json",
+      "sha256": "55417576ce97b224ac146708b4a2be4d1e6c3b239e08e4e45c717ac1c32feb39",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-1/dime/completion.json",
+      "sha256": "73d249139045d7118bc00f83c1dacd8cbf23281b7ed1acd1205615cad716dec1",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-1/efa/completion.json",
+      "sha256": "98a8918882edd131b2c8a2e9ca967e9c57829571e0535bf94720f2505acb6985",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-1/gdfs/completion.json",
+      "sha256": "f84c863e803e401639f9dfc0031ca2c65649dcec757fa9ca1a50297b61bf2c70",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-2026/rpl-1/sefa/completion.json",
+      "sha256": "db6ea0de96309b252b308f92488346bb94b3305b3bf7bfaef717d4d42c7487c2",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-0/aco/completion.json",
+      "sha256": "efea51b1980f2727c1bba7ffd3b6d341c8ec6fd4101f23a9dfe831f16be8b6e8",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-0/dime/completion.json",
+      "sha256": "1a81e916e8879289d83d45a91e52b194258d84820eb49fffa273831371248e4c",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-0/efa/completion.json",
+      "sha256": "bf54e7ea12b474a388cb6809ddb2ea6386a42de4550ae926ad7296ec5e00d1f9",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-0/gdfs/completion.json",
+      "sha256": "7a51c9535b3fd80c2c3cb256cd1b0719a70f48346670f3b742a3c9ef355809da",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-0/sefa/completion.json",
+      "sha256": "cb166050e13a78eac23daa5ebf3980e72516f7e16f40944921ae2850b6342a39",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-1/aco/completion.json",
+      "sha256": "5a4233f0935b263cd3097804fb9ea5384663b773afcd176bcbe5e3f81cb76705",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-1/dime/completion.json",
+      "sha256": "67165f6ddbe6791f2b3eece0762719d7f89db594a5ceb0357e5306dd98f1cd69",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-1/efa/completion.json",
+      "sha256": "98764e14bab6cf4be0f4dd7409f84a36b185b77063d8c2426fbd770e6849c8f3",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-1/gdfs/completion.json",
+      "sha256": "ea40ad56a8f6b8dbe90e9daf9516cbc7eb0cf79121d811ecc437951dee023652",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/jucars/seed-42/rpl-1/sefa/completion.json",
+      "sha256": "f11d99fea5f9a90b7b31bf239edf746f6268874a2ff1bef41fbcbddb2453be6e",
+      "reused": false
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-0/aco/completion.json",
+      "sha256": "60d1081bd5b416ab5fe49c6efedfb111bd69c8f4ef0bcc82d09b2b850c1034ca",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-0/dime/completion.json",
+      "sha256": "6674337ae8356d2245f7da68ea41701687115094da5b54c815a1f3023b24a8fa",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-0/efa/completion.json",
+      "sha256": "6bd1c9452d6646517a330f6ca8ee78bc0d9f94ecb68fb47a4a2543e7ca04f6f3",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-0/gdfs/completion.json",
+      "sha256": "376b5cb55fb47ecdecdb8f9fa5f9db3681a06bf4f009f3ff39f851eb01317191",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-0/sefa/completion.json",
+      "sha256": "e5ab5b78636165fd63760463edfa0cdfc5375978af5dfe274f4b5325b7e814e6",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-1/aco/completion.json",
+      "sha256": "90032133082dffb0d250c42039959d46b0e61866bdeaff826a3a73295a8099b0",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-1/dime/completion.json",
+      "sha256": "080d9128d359adf06a39eea51aecf4de960fac65ce491568cec99c132107f61d",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-1/efa/completion.json",
+      "sha256": "abde06fd30daee32651762fa365a67bb116e6922c107fc57e2842fee7c4a3916",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-1/gdfs/completion.json",
+      "sha256": "72ad78a1184b26f43f7ca66791174ef903eb9ae0fde25da295dccbaeb03d6eaf",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-13/rpl-1/sefa/completion.json",
+      "sha256": "291b8f2e60e8046f13b99a7f4f5c5d3f3ca36929057cc1e93ce928fdf8a0f52c",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-0/aco/completion.json",
+      "sha256": "27e3d0e651c6627b7cf362e2c9c9817da9a71527e9f210da2f518d7cd11409a4",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-0/dime/completion.json",
+      "sha256": "0e60d524a8b96ac0beb0a819c1c88e7f5bc1545e5ba894fa71530a5b6883e60e",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-0/efa/completion.json",
+      "sha256": "b33837c2b4d10cf27a87e6cd2abb0d83eeacd49bad4918274a0e73ece31d3a9e",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-0/gdfs/completion.json",
+      "sha256": "f7c1434df8cf57bf1bc277650bdf0eb926a0485d87d6fa6ca5a463534e38ae93",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-0/sefa/completion.json",
+      "sha256": "c91fd0bc1961584a0c7bc246f1c5a822f4fe2901606b19fb488976dddfeb4de1",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-1/aco/completion.json",
+      "sha256": "0db8206af715cc864be859f6b6a39008d3bb5ea961b0710b56c298e0f604a48d",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-1/dime/completion.json",
+      "sha256": "a5c9e21107995af4051ffeb1ddf98ad988d8f8332ba915d5e83d0119e480f359",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-1/efa/completion.json",
+      "sha256": "aa8f6cc4f5131df5e0ba55027f55ccb86214589be69e5180b8cd5535c0ce1068",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-1/gdfs/completion.json",
+      "sha256": "d8a33c08fe4f135efdcc945dafe27ab2a05a4eaf36c5d2ab3c7b2751631ad9d3",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-2026/rpl-1/sefa/completion.json",
+      "sha256": "b00494c8550fd6d9e85e25d4237a680f561d1662a28a08756b5d46904dd4f3b3",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-0/aco/completion.json",
+      "sha256": "7b7f278565c288867c8346aaa63251e13d363b25669584d227718073c1e7353b",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-0/dime/completion.json",
+      "sha256": "f4fb44540479ca8fadae8859de9de1b9ffc70327b712e0b820885a3c054850b2",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-0/efa/completion.json",
+      "sha256": "5e3cab7ae3e7971db5aefbadba71702d3dfb81c92dc1588bb39c2efdf84528b8",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-0/gdfs/completion.json",
+      "sha256": "6a0d1ad249a15e9ff4157d37f57cb0fb7cb3b02eb289eeecebc2cd92d173d9e2",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-0/sefa/completion.json",
+      "sha256": "f80f1e5f6e517458da5f45723dd14595d388f54e3e4a18de6fd3489483447f0f",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-1/aco/completion.json",
+      "sha256": "05568a99b26d2c848d8a9cdc63b716afe8493852edc48bf1ed3715dcd0d5c4f8",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-1/dime/completion.json",
+      "sha256": "9b31dc67a31e56c9da62fa07b5cca26eeeec70c8c3e38227963863231d10e5c0",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-1/efa/completion.json",
+      "sha256": "03b6fc4346d5520d9b080e0dd2adfdb5d4773034491e1aa7503d1bfbd3e1b692",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-1/gdfs/completion.json",
+      "sha256": "31b367dccd92e208f19ae82a8c1217bf51ae7556780e32b72e0062aa753f5981",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/mucars/seed-42/rpl-1/sefa/completion.json",
+      "sha256": "f98ad1814f74e9f4057a81b2b9614d98f438e11bc2cf0e67d56741af90485634",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-0/aco/completion.json",
+      "sha256": "82affe743db03b824087165ba5c705b9210e553d33dd85b54f37aac7dc7d41d0",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-0/dime/completion.json",
+      "sha256": "49bc501c9c543f9b7144e232fa7cc51e5478521c19a0567bb83d46e09be08c44",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-0/efa/completion.json",
+      "sha256": "5c710746ff0d37556369355e18c6a72c4626f75acaa74e372548f4e93bd3daae",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-0/gdfs/completion.json",
+      "sha256": "e414710be052900b0480b00180f7c7d0a3b85f0bcfcafc3a7c0b6bdcf5020405",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-0/sefa/completion.json",
+      "sha256": "ede6bd9a427983627497034ad7843005baa96b28c2d9bd63660b2eebb204437a",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-1/aco/completion.json",
+      "sha256": "5a1752963574f7f7423386198770eae9f4a1ba50c700e7ac945a1c56d77e87bf",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-1/dime/completion.json",
+      "sha256": "cb4765b74dc0d892bff9c575a34f7e009efe9a936314327fe1c4be5b33e08abd",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-1/efa/completion.json",
+      "sha256": "c11d055cbb099d17ed6441a93f4c9f2891c5400528976d37b6d7c4a3a3896aae",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-1/gdfs/completion.json",
+      "sha256": "a337b1b496c158d68b3535792b9532ce2007670a793b4a7861cb4103da705444",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-13/rpl-1/sefa/completion.json",
+      "sha256": "fd7d7c157ee64ad9aed72264a39e194e993121cf189a4b2a65c245b86d3d740b",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-0/aco/completion.json",
+      "sha256": "dcbcd9d3c56c043cad026672712f966ed20f5c025cb54d8922db6c01d510772e",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-0/dime/completion.json",
+      "sha256": "a97ff175524eca4a3b71a9b822cbdcff84d708986d0b7498e4163404fee88612",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-0/efa/completion.json",
+      "sha256": "87fa99dd025164e3ef2522ffb8bb4f62dfac439f93fadad0a1e865ce7bae7d40",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-0/gdfs/completion.json",
+      "sha256": "c0ec4dcaf93b9dafd09c15307ca97c55ea3c6fd0d5ec0f3f9aeee808a05b0fb2",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-0/sefa/completion.json",
+      "sha256": "ce6d47b18dd45a26b228465c7e66798ab286132f035c87f2d2e5801ebfe17995",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-1/aco/completion.json",
+      "sha256": "3f972cacb54e37226d5e5db61a8c957c655c8902fca3b90568c7d0aad591ec8c",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-1/dime/completion.json",
+      "sha256": "8259416b8b0441c92950aed14bdc5451284ea869401d7e5077e8306e79a066b3",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-1/efa/completion.json",
+      "sha256": "bd51609dd69fc7f0458c5e83289b7fd746ad7b0732dcb87399603dc1efdf141d",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-1/gdfs/completion.json",
+      "sha256": "4bec497baa8d36e4fb3bbc19fd316c5f152c7caec8212a375b4f6ccfda552aec",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-2026/rpl-1/sefa/completion.json",
+      "sha256": "b1521d7c64ee6e7e5ccd3637ebee00f500ef8cd6718d04bd9280f3496c9321be",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-0/aco/completion.json",
+      "sha256": "b255c6ec036defc31a02f59882ec9cff45a8029eb1db533bcf67f01a990a274f",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-0/dime/completion.json",
+      "sha256": "edf4456e400ef84bfac730b4481c05a599bf06256fe772aa869088a2221dc4bd",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-0/efa/completion.json",
+      "sha256": "b4853512ca817508d60b1561ade55a0b431104ebbf22b616af790813c44723b2",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-0/gdfs/completion.json",
+      "sha256": "10f198f5838817621c6e7ae722264ba221c481705984a1490de7c27d0fbf0b66",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-0/sefa/completion.json",
+      "sha256": "667550420dafeec5b52e11032857d6c520faf8fbfea7c22c0f6c203b82b707b9",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-1/aco/completion.json",
+      "sha256": "cfc77f372ba27a7471be1b874d3069d3ea001009fb4770e0f3bf3b9d2e4ab5cd",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-1/dime/completion.json",
+      "sha256": "6ee4b1adee85aee33ab6864db373ac7973a65d6081b642489fc4fc84280ca1b3",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-1/efa/completion.json",
+      "sha256": "4f6a6cf499a305bd2e73e26c87517948b945ae4b77490a89b78e1463b308feac",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-1/gdfs/completion.json",
+      "sha256": "0c1590128aa641957338ea359d52045aedce67caf5de5f7996fb19a4eb98ae47",
+      "reused": true
+    },
+    {
+      "path": "outputs/rpl-five-factorial-v3/synthetic/seed-42/rpl-1/sefa/completion.json",
+      "sha256": "409b12c55fb4148da3dc715d024f4a0997afe7a8b26af2b47f87b8657672b293",
+      "reused": true
+    }
+  ],
+  "source_manifest_sha256": "cce5ca5dd088821073e10914a919467ac438ae33c1871aa778b64799809eaa32",
+  "source_completion_sha256": "76323badad4ccca1a0c38de21c15c6ac0662abfcb2180dea5c8d93b52a81f17b",
+  "script_sha256": "237562e0d59bf435c97173cbb797c651bc2765a777b1f3f938e41f930ab4991f",
+  "four_stage_fit_statistical_audit": false
+}

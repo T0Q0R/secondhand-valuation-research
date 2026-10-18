@@ -1,0 +1,17 @@
+{
+  "status": "existing_six_cell_differences_verified",
+  "cells": 6,
+  "metric_comparisons": 36,
+  "source_hashes": {
+    "notes/external-reproduction-synthetic-v1/returned/summary.csv": "1bfbaf11059a0896782cd49c41221ededf2895d70310f553c1d9a01cec6b355a",
+    "notes/external-reproduction-synthetic-v1/returned/external-training-receipt.json": "6cf10a5c5b31ab0e45c894073e5091ae806c3aef9aa7d216d0c12e0d8762eeec",
+    "notes/external-reproduction-synthetic-v1/returned/external-rpl-synthetic.log": "d9e343a657da7217b0361501a63b2d5dfe7669f36f21c989a8c936be37ace862",
+    "notes/external-reproduction-synthetic-v1/returned/reference-comparison.csv": "1b6ce92dfe94964f067adfafd6cfb44b399003ae50762d367e39c82ace7b891d"
+  },
+  "original_metric_atol": 1e-07,
+  "original_metric_rtol": 1e-05,
+  "strict_reproduction_pass": false,
+  "new_fits": 0,
+  "new_external_runs": 0,
+  "script_sha256": "237562e0d59bf435c97173cbb797c651bc2765a777b1f3f938e41f930ab4991f"
+}

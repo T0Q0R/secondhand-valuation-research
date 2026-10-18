@@ -1,0 +1,8 @@
+{
+  "status": "running",
+  "completed_cells": 30,
+  "expected_cells": 90,
+  "workers": 3,
+  "threads_per_worker": 1,
+  "nice": 10
+}

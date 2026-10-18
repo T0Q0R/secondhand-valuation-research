@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Existing external-machine numerical comparison, synthetic seed 13. Each entry is local reference / external value. Strict numerical reproduction failed under the original tolerances.}
+\label{tab:external-numerical}
+\begin{tabular}{rrlll}
+\toprule $\lambda$ & Capacity & Inflation (log) & Honest MAE & Attacked MAE\\\midrule
+0 & 0\% & 0.0175119/0.0178126 & 3585.594/3582.048 & 3720.837/3714.437\\
+0 & 10\% & 0.0148686/0.0153343 & 3585.594/3582.048 & 3688.439/3683.640\\
+0 & 30\% & 0.0128125/0.0131494 & 3585.594/3582.048 & 3665.819/3661.133\\
+1 & 0\% & 0.0121968/0.0119582 & 3615.223/3615.545 & 3676.134/3674.371\\
+1 & 10\% & 0.0068443/0.0065113 & 3615.223/3615.545 & 3634.360/3621.562\\
+1 & 30\% & 0.0041750/0.0041850 & 3615.223/3615.545 & 3616.811/3620.643\\
+\midrule $\lambda$ & Capacity & Failed query (\%) & Maximum regret (log) & Nonconverged batches /10\\\midrule
+0 & 0\% & 0.00/0.00 & 0.0000000/0.0000000 & 0/0\\
+0 & 10\% & 2.70/2.50 & 0.0000000/0.0000000 & 0/0\\
+0 & 30\% & 5.40/5.40 & 0.0000000/0.0000000 & 0/0\\
+1 & 0\% & 0.00/0.00 & 0.0000000/0.0000000 & 0/0\\
+1 & 10\% & 3.80/3.90 & 0.0002041/0.0219727 & 1/1\\
+1 & 30\% & 7.60/7.40 & 0.0020809/0.0142298 & 1/2\\
+\bottomrule\end{tabular}
+\end{table}

@@ -524,3 +524,6 @@ Windows原生CPU核心训练入口已实现并完成本机工程核查：无Unix
 
 
 2026-10-18T14:10:26+08:00：新增RPL×五族90格固定对照，首组10格全量工程核查通过；新独立入口复用模型/神经评分，ACO按RPL模型重建损失，0新拟合。两套独立结果代数通过；完整矩阵运行中，3×1线程/nice10。未修改旧源码/模型/容差/论文，未升级为四阶段审计。方案notes/rpl-five-factorial-v1/PLAN.zh.md；输出outputs/rpl-five-factorial-v1。外机六格差表与DOI归档随后推进。
+
+
+2026-10-18T14:15:28+08:00：RPL×五族90/90格计算及独立结果复算完成，0新拟合，45/45种子配对inflation下降；18格/18批未收敛全部保留，最坏regret=0.149163246。最终v3按原训练ID验人口，v1并行文稿保护和v2错误人数断言的失败/有效检查点保留并迁移。非旧四阶段拟合/统计审计。45配对/15来源族对比/差中差/逐格凭据见notes/rpl-five-factorial-v1。外机六格36项既有数值差表已核验，严格复现仍失败，无新外机运行；见notes/external-reproduction-synthetic-v1/numerical-difference-table-v1。DOI已预留但未发布；论文未由本任务修改。

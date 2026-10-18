@@ -631,12 +631,21 @@
     "new_training": false
   },
   "rpl_five_factorial_v1": {
-    "status": "running",
+    "status": "computed_and_independently_outcome_corroborated",
+    "completed_cells": 90,
     "expected_cells": 90,
     "new_fits": 0,
-    "workers": 3,
-    "threads_per_worker": 1,
-    "nice": 10,
-    "updated_at": "2026-10-18T14:10:26+08:00"
+    "final_output": "outputs/rpl-five-factorial-v3",
+    "four_stage_fit_statistical_audit": false,
+    "updated_at": "2026-10-18T14:15:28+08:00"
+  },
+  "external_numerical_table": {
+    "status": "completed_from_existing_six_cells",
+    "strict_reproduction_pass": false,
+    "new_external_runs": 0
+  },
+  "doi_archive": {
+    "status": "reserved_not_published",
+    "doi": "10.5281/zenodo.23447567"
   }
 }
