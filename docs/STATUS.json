@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-19T08:18:58+08:00",
+  "snapshot_time": "2026-10-19T08:22:33+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -795,7 +795,7 @@
   },
   "review_improvement_v1": {
     "time": "2026-10-19T08:18:58+08:00",
-    "status": "gap90_computed_full_aggregate_and_selection_checks_passed_integration_pending",
+    "status": "gap90_analysis_and_figure_checked_manuscript_integration_pending",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
@@ -837,6 +837,7 @@
     "gap_unique_candidate_cells": 210,
     "gap_selected_cells": 60,
     "gap_verification": "notes/review-improvement-v1/gap/verification.json",
-    "independent_selection_audit": "notes/review-improvement-v1/gap/independent-selection-audit.json"
+    "independent_selection_audit": "notes/review-improvement-v1/gap/independent-selection-audit.json",
+    "gap_figure_qa": "notes/review-improvement-v1/figure-qa.json"
   }
 }

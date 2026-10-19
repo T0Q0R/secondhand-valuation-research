@@ -622,3 +622,10 @@ Windows原生CPU核心训练入口已实现并完成本机工程核查：无Unix
 - 路径：notes/review-improvement-v1/gap/RESULTS.zh.md、verification.json、独立选择检查；不新增训练或外机重跑。
 - 限制：固定回顾性样本；不是新完整四阶段审计，旧DOI ZIP不含本次证据。主稿26页/补充10页尚未最终回填。
 - 下一步：完整权衡图、主文/补充S4/摘要贡献更新和最终QA。
+
+## 2026-10-19T08:22:33+08:00 — 完整强gap权衡图完成
+
+- 完成：210候选格/60选定结果的6面板图，全部十种子散点和候选均值，选定配对效应独立展示；无新训练。
+- 验证：对齐1.5pt通过、最小字形7.5pt、碰撞0FAIL/0WARN、逐面板和整图视觉通过；静态两警告已记录全散点/非TIFF生产文件理由。
+- 成果：paper/figures/review-v1/gap-tradeoffs.pdf、SVG、源CSV、notes/review-improvement-v1/figure-qa.json。
+- 限制：固定记录；图中均值百分比与主表均值比区分。论文尚未回填，下一步正式整合。

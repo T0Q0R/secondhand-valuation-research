@@ -35,12 +35,11 @@ def main():
             key='path_weight' if family=='rpl' else 'beta'
             ax.scatter(q.honest_change_pct,q.inflation_reduction_pct,s=9,c=colors[family],marker=marker,alpha=.16,linewidths=0)
             means=q.groupby(key)[['honest_change_pct','inflation_reduction_pct']].mean().reindex(weights)
-            ax.plot(means.honest_change_pct,means.inflation_reduction_pct,color=colors[family],marker=marker,ms=4,lw=1)
-            for weight,r in means.iloc[1:].iterrows():
-                ax.annotate(('λ ' if family=='rpl' else 'β ')+f'{weight:g}',
-                   (r.honest_change_pct,r.inflation_reduction_pct),
-                   xytext=(-1,7) if family=='rpl' else (3,-12),textcoords='offset points',
-                   color=colors[family],fontsize=7.5,ha='left',va='bottom')
+            ax.plot(means.honest_change_pct,means.inflation_reduction_pct,color=colors[family],lw=1)
+            mean_markers={'rpl':['D','o','^','P'],'gap':['D','s','v','X']}
+            for index,(_,r) in enumerate(means.iloc[1:].iterrows(),1):
+                ax.scatter([r.honest_change_pct],[r.inflation_reduction_pct],
+                   marker=mean_markers[family][index],s=27,c=colors[family],zorder=6)
         ax.scatter([0],[0],c='#333333',marker='D',s=18,zorder=5)
         ax.set_title(label,pad=15);ax.set_xlabel('Honest MAE change (%)')
         ax.axvline(0,color='#cccccc',lw=.5,zorder=0);ax.axhline(0,color='#cccccc',lw=.5,zorder=0)
@@ -67,15 +66,19 @@ def main():
     for index,ax in enumerate(axes.ravel()):
         ax.annotate('abcdef'[index],xy=(0,1),xytext=(-13,12),xycoords='axes fraction',
                     textcoords='offset points',ha='left',va='bottom',fontweight='bold',fontsize=10)
-    handles=[Line2D([],[],color=colors['rpl'],marker='o',lw=1,label='RPL: λ = 0, .1, .5, 1'),
-             Line2D([],[],color=colors['gap'],marker='s',lw=1,label='Gap-only: β = .5, 1, 2, 4')]
-    fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.52,.995),ncol=2,columnspacing=2)
+    handles=[Line2D([],[],color='#333333',marker='D',ls='none',label='Common: λ 0, β .5')]
+    for family,weights,markers in [('rpl',[.1,.5,1],['o','^','P']),('gap',[1,2,4],['s','v','X'])]:
+        for weight,marker in zip(weights,markers):
+            handles.append(Line2D([],[],color=colors[family],marker=marker,ls='none',
+               label=('RPL: λ ' if family=='rpl' else 'Gap-only: β ')+f'{weight:g}'))
+    fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.52,1.0),ncol=4,columnspacing=1.3,fontsize=7.5)
     fig.text(.5,.07,'Top: all ten seeds and candidate means. Bottom: ten paired seeds and mean (black diamond).',ha='center',fontsize=7.5)
     fig.text(.5,.035,'Fixed cohorts, 10% capacity. Full observed scatter; no confidence region or interpolation claim.',ha='center',fontsize=7.5)
     fig.canvas.draw()
     require_matplotlib_panel_alignment(fig,json_out=str(out/'gap-tradeoffs.alignment.json'),
        overlay_svg=str(out/'gap-tradeoffs.alignment.svg'),tolerance_pt=1.5,gutter_tolerance_pt=1.5,strict=True)
-    for extension in ['pdf','svg']:fig.savefig(out/f'gap-tradeoffs.{extension}')
+    fig.savefig(out/'gap-tradeoffs.pdf')
+    fig.savefig(out/'gap-tradeoffs.svg')
     fig.savefig(out/'gap-tradeoffs.png',dpi=600)
     r.to_csv(out/'gap-tradeoffs-grid.csv',index=False);p.to_csv(out/'gap-tradeoffs-paired.csv',index=False)
     plt.close(fig)

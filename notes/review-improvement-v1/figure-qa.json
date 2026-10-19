@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "source": "notes/review-improvement-v1/plot_gap.py",
+  "grid_cells": 210,
+  "selected_rows": 60,
+  "figure_sha256": "c0acaa924cb847beb3d052f2f8fa5c4aed0dea8a577886e895326a4622cafadf",
+  "alignment": "PASS1.5pt",
+  "minimum_glyph_pt": 7.5,
+  "collision_failures": 0,
+  "collision_warnings": 0,
+  "static_preflight": "19 PASS, 2 reviewed warnings, 0 FAIL",
+  "warnings": {
+    "uncertainty": "All ten seeds are shown as full observed scatter; no SD or confidence envelope intended.",
+    "raster": "600dpi PNG preview plus editable vector PDF/SVG; no journal production TIFF claim."
+  },
+  "visual_review": [
+    {
+      "panel": "a",
+      "status": "passed",
+      "role": "full candidate tradeoff: Synthetic",
+      "center": "candidate means",
+      "spread": "all ten fitting seeds; fixed cohorts",
+      "labels": "candidate marker legend; row-specific normalization explicit",
+      "layout": "equal plot areas, 1.5pt alignment gate",
+      "collision": "0 failures/0 warnings"
+    },
+    {
+      "panel": "b",
+      "status": "passed",
+      "role": "full candidate tradeoff: JUCars",
+      "center": "candidate means",
+      "spread": "all ten fitting seeds; fixed cohorts",
+      "labels": "candidate marker legend; row-specific normalization explicit",
+      "layout": "equal plot areas, 1.5pt alignment gate",
+      "collision": "0 failures/0 warnings"
+    },
+    {
+      "panel": "c",
+      "status": "passed",
+      "role": "full candidate tradeoff: MUCars",
+      "center": "candidate means",
+      "spread": "all ten fitting seeds; fixed cohorts",
+      "labels": "candidate marker legend; row-specific normalization explicit",
+      "layout": "equal plot areas, 1.5pt alignment gate",
+      "collision": "0 failures/0 warnings"
+    },
+    {
+      "panel": "d",
+      "status": "passed",
+      "role": "OOF-selected paired difference: Synthetic",
+      "center": "mean of seed percentage changes",
+      "spread": "all ten fitting seeds; fixed cohorts",
+      "labels": "candidate marker legend; row-specific normalization explicit",
+      "layout": "equal plot areas, 1.5pt alignment gate",
+      "collision": "0 failures/0 warnings"
+    },
+    {
+      "panel": "e",
+      "status": "passed",
+      "role": "OOF-selected paired difference: JUCars",
+      "center": "mean of seed percentage changes",
+      "spread": "all ten fitting seeds; fixed cohorts",
+      "labels": "candidate marker legend; row-specific normalization explicit",
+      "layout": "equal plot areas, 1.5pt alignment gate",
+      "collision": "0 failures/0 warnings"
+    },
+    {
+      "panel": "f",
+      "status": "passed",
+      "role": "OOF-selected paired difference: MUCars",
+      "center": "mean of seed percentage changes",
+      "spread": "all ten fitting seeds; fixed cohorts",
+      "labels": "candidate marker legend; row-specific normalization explicit",
+      "layout": "equal plot areas, 1.5pt alignment gate",
+      "collision": "0 failures/0 warnings"
+    }
+  ],
+  "scope": "Grid top: same-seed common baseline. Bottom: same-seed selected RPL. Candidate lines guide reading only; no interpolation/CI claim. Main table will report ratios of means separately."
+}
