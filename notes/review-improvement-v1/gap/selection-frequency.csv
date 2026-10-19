@@ -1,3 +1,8 @@
 source,family,method,seeds
+jucars,gap,path-0-gap-4,10
+jucars,rpl,path-0.5-gap-0.5,2
+jucars,rpl,path-1-gap-0.5,8
+mucars,gap,path-0-gap-4,10
+mucars,rpl,path-1-gap-0.5,10
 synthetic,gap,path-0-gap-4,10
 synthetic,rpl,path-1-gap-0.5,10

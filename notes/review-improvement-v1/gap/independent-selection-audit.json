@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "pairs": 30,
+  "family_choices_checked": 60,
+  "scope": "independent scalar-score choice and constraint audit; no runner imports, no OOF prediction regeneration",
+  "source_sha256": "da66e0d65b09d8c6c56c98dfc14408d51d829b64095b3eb213a4ae4a015069c8",
+  "constraint_fallbacks": 0
+}

@@ -5,3 +5,15 @@ synthetic,attack_mae,82.23677699472182,68.44212504045713,94.9981067668685,10,0,p
 synthetic,failed_query_fraction,-0.022600000000000002,-0.0264,-0.018600000000000002,0,10,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
 synthetic,max_remaining_response_regret,-0.0011245727539062399,-0.00333290100097654,0.0,0,2,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
 synthetic,nonconverged_batch_fraction,-0.01999999999999998,-0.04999999999999995,0.0,0,2,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+jucars,mean_positive_log_inflation,-0.006153727436065629,-0.007312036575078902,-0.005145998828411067,0,10,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+jucars,clean_mae,-89.60912665014739,-131.12818920694238,-48.568190470205685,1,9,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+jucars,attack_mae,-86.83358286667536,-126.6520460486398,-47.13248494297312,1,9,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+jucars,failed_query_fraction,-0.0366,-0.0578,-0.013199999999999998,2,7,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+jucars,max_remaining_response_regret,0.0,0.0,0.0,0,0,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+jucars,nonconverged_batch_fraction,0.0,0.0,0.0,0,0,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+mucars,mean_positive_log_inflation,-0.0015213905334472244,-0.0020275279760360383,-0.0010097139286994405,0,10,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+mucars,clean_mae,-611.8197107422275,-878.8072564358197,-344.7120805626288,1,9,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+mucars,attack_mae,-691.2008947254119,-939.5482839198727,-435.53596147654497,1,9,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+mucars,failed_query_fraction,-0.0025,-0.0038,-0.0013000000000000002,0,9,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+mucars,max_remaining_response_regret,0.0,0.0,0.0,0,0,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness
+mucars,nonconverged_batch_fraction,0.0,0.0,0.0,0,0,posthoc marginal fitting-seed bootstrap; fixed evaluation records; selection includes training randomness

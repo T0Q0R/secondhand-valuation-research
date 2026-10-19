@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-18T19:49:26+08:00",
+  "snapshot_time": "2026-10-19T08:18:58+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,7 +28,7 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "review_improvement_working_draft_gap_pending",
+    "revision_status": "working_draft_full_gap_results_not_integrated",
     "pages": 26,
     "authors_affiliations_omitted": false,
     "builtin_compilation": "success",
@@ -794,21 +794,21 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-18T19:49:26+08:00",
-    "status": "mechanism_data_revisions_compiled_interim_gap_v2_running",
+    "time": "2026-10-19T08:18:58+08:00",
+    "status": "gap90_computed_full_aggregate_and_selection_checks_passed_integration_pending",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
     "threads_max": 6,
     "niceness": 10,
     "independent_real_cohort_validation": false,
-    "author_factual_declarations": "pending_author_facts",
-    "runner": "experiments/run_review_gap_controls_v1.py",
-    "manifest": "outputs/review-gap-controls-v1/manifest.json",
+    "author_factual_declarations": "user_requested_not_to_pursue_funding_or_COI",
+    "runner": "experiments/run_review_gap_controls_v2.py",
+    "manifest": "outputs/review-gap-controls-v2/manifest.json",
     "epoch_correction": "2 rounds x 6 epochs from frozen residual_epochs=12",
     "engineering": "outputs/review-gap-controls-v1/engineering-check.json",
-    "gap_pid": 19418,
-    "gap_session": 55898,
+    "gap_pid": null,
+    "gap_session": null,
     "gap_workers": 3,
     "gap_threads_per_worker": 2,
     "mechanism_session": 28472,
@@ -817,20 +817,26 @@
     "mechanism_outcome_cells": 180,
     "mechanism_batch_rows": 1800,
     "diagnostics_qa": "notes/review-improvement-v1/diagnostics-qa.json",
-    "gap_cells_snapshot": 30,
+    "gap_cells_snapshot": 90,
     "declarations": "known writing/supervision contributions recorded; user requested not to pursue funding/COI",
     "zenodo_author_order": "published_Tang_You_Gu_Pang_zip_unchanged",
     "zenodo_author_check": "notes/review-improvement-v1/zenodo-author-verification.json",
     "gap_completed_sources": [
-      "synthetic"
+      "synthetic",
+      "jucars",
+      "mucars"
     ],
-    "gap_new_fit_receipts_checked": 120,
+    "gap_new_fit_receipts_checked": 360,
     "gap_partial_verification": "notes/review-improvement-v1/gap/verification.json",
     "gap_old_runtime": "outputs/review-gap-controls-v1",
     "gap_runtime": "outputs/review-gap-controls-v2",
     "mechanism_status": "completed",
     "runtime_equivalence_check": "outputs/review-gap-controls-v2/engineering-check.json",
     "interim_paper_qa": "notes/review-improvement-v1/qa-interim.json",
-    "final_gap_integration": false
+    "final_gap_integration": false,
+    "gap_unique_candidate_cells": 210,
+    "gap_selected_cells": 60,
+    "gap_verification": "notes/review-improvement-v1/gap/verification.json",
+    "independent_selection_audit": "notes/review-improvement-v1/gap/independent-selection-audit.json"
   }
 }
