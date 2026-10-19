@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-19T08:28:30+08:00",
+  "snapshot_time": "2026-10-19T08:31:30+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,7 +28,7 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "review_improvement_integrated_checked_bundle_pending",
+    "revision_status": "review_improvement_delivered_with_scientific_limits",
     "pages": 27,
     "authors_affiliations_omitted": false,
     "builtin_compilation": "success",
@@ -97,7 +97,7 @@
     "final_journal_artwork_compliance": false
   },
   "evidence": "notes/factorial-final/EVIDENCE_INDEX.json",
-  "goal_complete": false,
+  "goal_complete": true,
   "delivery": {
     "archive": "paper/revision-delivery-v4.zip",
     "bytes": 648810,
@@ -106,9 +106,11 @@
     "scope": "v3 supporting scientific evidence retained; current source/PDF and v4 bounded wording/accounting/price-normalization checks; no raw listings/weights/new training/public release",
     "status": "v4_archive_historical_current_source_has_v5_figures",
     "current_figure_assets": "notes/results-visual-v5/visual-assets-index.json",
-    "new_full_paper_bundle": "not_created_under_experiment_first_instruction"
+    "new_full_paper_bundle": "not_created_under_experiment_first_instruction",
+    "current_review_bundle": "paper/review-improvement-delivery-v1.zip",
+    "current_review_manifest": "notes/review-improvement-v1/delivery-manifest.json"
   },
-  "completion_scope": "Full review-driven scientific revision integrated and checked; current delivery bundle pending. Not external numerical pass or actual submission.",
+  "completion_scope": "Current review-driven revision and exact paper/aggregate delivery complete. Does not assert external numerical equivalence, independent new-market validation, journal-format acceptance or actual submission.",
   "remaining_for_actual_submission": [
     "author responsibility and factual declarations",
     "institution CAS edition/category and selected template",
@@ -794,8 +796,8 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-19T08:28:30+08:00",
-    "status": "full_gap_manuscript_integrated_compiled_and_visually_checked_bundle_pending",
+    "time": "2026-10-19T08:31:30+08:00",
+    "status": "delivered_with_explicit_scientific_limits",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
@@ -841,6 +843,15 @@
     "gap_figure_qa": "notes/review-improvement-v1/figure-qa.json",
     "qa": "notes/review-improvement-v1/qa.json",
     "review_response": "notes/review-improvement-v1/REVIEW_RESPONSE.zh.md",
-    "scalar_receipts": "notes/review-improvement-v1/gap/scalar-receipts-index.json"
-  }
+    "scalar_receipts": "notes/review-improvement-v1/gap/scalar-receipts-index.json",
+    "current_scientific_revision_complete": true,
+    "delivery": "notes/review-improvement-v1/delivery-manifest.json",
+    "delivery_archive": "paper/review-improvement-delivery-v1.zip",
+    "delivery_sha256": "777f2cd4a63852aa0f4d060c1d55f6949496fb20ce67d8f91770e44391426856",
+    "integration_commit": "d212cb4567c483f8affddf1b485c9b79dbfb1b31",
+    "remaining_in_current_revision": [],
+    "running_processes": [],
+    "queued_computations": 0
+  },
+  "goal_completion_scope": "Current authorized review-driven improvement deliverable; actual submission is separate."
 }
