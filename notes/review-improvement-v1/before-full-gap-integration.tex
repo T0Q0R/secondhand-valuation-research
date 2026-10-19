@@ -1,0 +1,1260 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,graphicx,array,hyperref}
+\usepackage{xcolor}
+\hypersetup{hidelinks}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\floatpagefraction}{0.35}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.08}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\newcommand{\AuditVector}[1]{\ifdefined\pdfliteral\pdfliteral{#1}\else\special{pdf:bcontent}\special{pdf:literal direct #1}\special{pdf:econtent}\fi}
+\newtheorem{proposition}{Proposition}
+\title{When Does Verification Help?\\Recovery-Path Regularization for Strategy-Aware Valuation}
+\author{Yuchen Tang \quad Fengqin You\textsuperscript{*} \quad Junxiang Gu \quad Xin Pang\\[.5em]
+\small School of Computer and Artificial Intelligence\\
+\small Nanjing University of Science and Technology Zijin College\\
+\small Nanjing, China\\[.4em]
+\small \textsuperscript{*}Corresponding author: \href{mailto:irisyou@njust.edu.cn}{\texttt{irisyou@njust.edu.cn}}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Recovering withheld information can increase a seller's predicted price when the valuation model is nonmonotone. We study this failure under natural missingness, charged failed queries and shared verification capacity. A recovery-path decomposition separates information recovery from its effect on concealment gains. We introduce recovery-path regularization, which penalizes increases in positive concealment gain along legal recovery edges while retaining public-record deployment inputs. A restricted information frontier states the limits of verification, rather than predicting learned-model performance. In a matched ten-seed study at 10\% query capacity, the declared unit-weight endpoint reduces mean inflation by 50.41\%, 26.58\% and 23.81\% on synthetic, JUCars and MUCars relative to same-gap zero-weight controls. All thirty source--seed comparisons have the same direction. Synthetic honest mean absolute error rises 0.82\% and failed queries rise 1.10 percentage points, so lower inflation does not imply multiobjective dominance. Stronger training-response search also removes some earlier feedback damage, showing that the negative feedback result depends on implementation. On the real sources, most improvement is already present without queries, limiting a recovery-mechanism interpretation. A separate three-seed, 90-cell crossing lowers inflation in all 45 paired comparisons when RPL is combined with five task-adapted acquisition families. Four-stage checks cover 1,206 earlier extension cells; the crossing has independent outcome checks. Remaining response regret, retrospective cohorts and cross-machine numerical differences bound the findings. These retrospective fixed-cohort results support a proof of concept for evaluating concealment gains jointly with prediction and verification costs.
+\end{abstract}
+
+\noindent\textbf{Keywords:} strategic missingness; secondhand valuation; budgeted verification; incentive auditing; factorial evaluation
+
+\section{Introduction}\label{sec:introduction}
+Secondhand valuation combines incomplete seller reports with scarce
+verification. Natural absence and deliberate withholding can produce the same
+public record; an attempted query may fail while still consuming capacity.
+Even successful recovery need not improve incentives. A nonmonotone predictor
+can quote 10 for an honest record, 12 after two fields are hidden, and 14 after
+one is recovered. These illustrative quote units expose the distinction
+between recovering information and reducing the seller's gain. Shared batch
+capacity adds another dependence: changing one report can displace another
+listing from the query set.
+
+Strategic-missingness regression and classification~\cite{smi,withheld},
+budgeted audits~\cite{audits} and partial verification~\cite{partial} provide
+established approaches under their respective outcome models. Predictive
+feature acquisition instead targets information or error reduction~\cite{activeoracle}.
+None directly guarantees that a finite feedback-training implementation will
+improve continuous quotations after failed-but-charged recovery. Our outcomes
+are advertised-price predictions and simulated seller responses, not observed
+transactions or a transfer mechanism.
+
+We link recovery-path diagnosis to a targeted training intervention.
+First, an information frontier isolates the limits imposed by uniform honest
+precision and observationally identical missing reports. Its restricted family
+does not predict a learned model's empirical optimum. Second, a signed
+recovery decomposition exposes gain-increasing intermediate records in fitted
+four-field models. Recovery-path regularization (RPL) penalizes those increases
+without adding private deployment inputs. Third, matched experiments separate
+initial objective, acquisition, feedback and allocation. We assess RPL with
+ten fitting seeds and a separate 90-cell crossing with five recent acquisition
+families, including native-head references and prediction/query costs.
+Component removals, budget variation and computational checks bound both studies.
+
+The evidence supports conditional use. At the declared unit-weight endpoint,
+RPL lowers inflation in all thirty source--seed comparisons, but synthetic
+honest error and query failures rise. Stronger training-response search removes
+some earlier feedback damage, restricting that negative finding to its
+implementation. Competitive simple controls, finite-response regret and
+cross-machine numerical differences further bound the claims. The practical
+question is therefore which recovery-aware intervention improves the joint
+incentive, prediction and verification outcome for a stated setting.
+
+\section{Related work}\label{sec:related}
+\paragraph{Withholding and verification.}
+Support-margin imputation addresses strategic missingness in regression~\cite{smi};
+truthful classifiers address withholding in classification~\cite{withheld}.
+Our precision frontier adds a uniform honest-quote constraint to a hard query
+budget, rather than introducing ambiguous missingness as a new problem.
+Audit and partial-verification mechanisms~\cite{audits,partial} motivate
+checking reports, while established marginal representations~\cite{marginals}
+permit compact finite allocation. Their guarantees remain specific to their
+mechanism classes.
+
+Monotonicity regularization and certification predate RPL~\cite{certmonotone}.
+Where that approach regularizes input-coordinate derivatives and certifies
+monotonicity, RPL applies a soft constraint to finite recovery edges of
+honesty-relative positive gain. It offers no global monotonicity certificate.
+The contribution is this recovery-graph instantiation and its empirical
+trade-offs, not a new regularization principle or a truthfulness proof.
+
+\paragraph{Acquisition and strategic feedback.}
+ACO~\cite{activeoracle}, amortized greedy selection (GDFS)~\cite{gdfs},
+discriminative information estimation (DIME)~\cite{dime}, stochastic latent
+encodings (SEFA)~\cite{sefa} and explanation-ranked acquisition~\cite{explainafa}
+broaden the acquisition comparison beyond risk and predictive benefit.
+We run task adapters, with boundaries in Appendix~\ref{app:completion_methods};
+they are not official end-to-end reproductions. Performative prediction and
+strategic risk minimization~\cite{performative,serm} study deployment-dependent
+responses; contextual games and audit-risk design~\cite{contextual,auditrisk}
+condition decisions on available information. We neither transfer their
+convergence guarantees to our finite nonconvex loop nor claim randomization
+or monotonicity as new principles. The contribution is the recovery-targeted
+loss and its controlled evidence, including search-strength interventions
+that qualify feedback failure.
+
+\section{Problem formulation}\label{sec:problem}
+\subsection{Reports, queries and allocation}
+A batch contains $n=100$ listings. Listing $i$ has recorded vector $x_i$ and
+natural missingness $M_i$. A seller conceals at most two available fields
+among mileage, transmission, fuel type and body condition. Its report $r_i(s_i)$
+marks $M_i\cup s_i$ missing; values cannot be fabricated or recovered through
+identifiers. Missingness indicators do not distinguish natural absence from
+concealment. Reports are locked before private allocation randomization.
+
+The platform may query at most one publicly missing field per listing and
+at most $B=\lfloor bn\rfloor$ fields on every draw. A concealed recorded
+value is recovered; natural absence remains unavailable. Both attempts spend
+capacity. Deployment scores use public records and model outputs, not latent
+recoverability or advertised targets. Seller utility is expected log quote
+minus concealment cost, zero in the main analysis. Response search reallocates
+the whole batch for each candidate own report with peers fixed.
+
+SAV combines an augmented predictor, suppression scoring and query-feedback
+training. Static robust changes the prediction objective without that feedback.
+CDM fixes the price model and calibrates a mixture of twelve feasible rules
+on stored report/peer rows from five profile families; it has no unseen-type
+guarantee. The matched factorial below trains new initial-objective fits,
+rather than renaming these original checkpoints.
+
+Let $q_s$ be a cross-fitted report quote, $q_{s\setminus f}$ its quote after
+recovering $f$, $q^H$ the honest quote and $y$ the log target. Acquisition labels are
+\[
+ v^{\rm sup}_{sf}=[q_s-q^H]_+-[q_{s\setminus f}-q^H]_+,\quad
+ v^{\rm ben}_{sf}=(q_s-y)^2-(q_{s\setminus f}-y)^2,\quad
+ v^{\rm risk}_{sf}=(q_s-y)^2.
+\]
+Common ExtraTrees heads~\cite{extratrees} learn labels from public encodings;
+honest records and targets are training supervision only. Each policy picks
+its highest positive eligible field. Top-$B$ ranks item scores with stable
+ties. Score-minimax minimizes $\max_i g_i(1-p_i)$ over query marginals
+$0\le p_i\le1,\sum_i p_i\le B$, where $g_i$ is the selected positive score.
+This is an additive score surrogate, not the true report-dependent incentive
+objective; every changed report therefore triggers reallocation.
+
+\subsection{Joint outcomes and finite responses}
+Write $y=\log(1+\mathrm{price})$, let $q_0,q_1$ be pre-query and selected-query
+quotes and $p$ the query marginal. With $\mu=(1-p)q_0+pq_1$, inflation is
+$[\mu-q^H]_+$. A relative reduction of this metric is neither the same percentage price reduction nor observed overpayment avoided. It differs from the realized-positive quantity
+$(1-p)[q_0-q^H]_++p[q_1-q^H]_+$. Honest and attacked MAE are respectively
+\[
+ |e^{q^H}-e^y|,\qquad (1-p)|e^{q_0}-e^y|+p|e^{q_1}-e^y|.
+\]
+Averaging quotes before absolute error would define another metric. Failed-query
+probability is $p$ times the indicator of unavailable recovery, aggregated
+\emph{per all listings}; failure still spends capacity. Signed log bias is
+$\mu-y$. Inflation, attacked MAE and failed queries are co-primary descriptive
+outcomes, with honest MAE measuring precision. This retrospective choice guards
+against a constant predictor, which has zero inflation regardless of pricing
+error; it is not a preregistered endpoint change.
+
+The unilateral deviation envelope is
+$[\max_r u(r)-u(r_{\rm honest})]_+$ with fixed peers and fresh batch allocation.
+Remaining regret subtracts $u(r_{\rm returned})$ instead. Small regret does
+not imply small gain over honesty or a globally selected market equilibrium.
+All returned profiles, including nonconverged ones, remain in aggregation.
+
+\section{Information limits and finite comparators}\label{sec:information}
+\subsection{An attainable precision frontier}
+Consider a missingness-alias family: an all-natural-missing world and worlds
+in which only item $i$ has a recoverable low-value field lowering its target
+by $\Delta_i>0$. Withholding produces the same public batch. Quotes are
+itemwise and verification-neutral: identical final records receive identical
+quotes. Optimizing both the quote function and verification under uniform
+honest absolute error $\eta$, set $a_i=(\Delta_i-2\eta)_+$. The attainable
+worst positive expected gain is
+\begin{equation}
+ T^*(\eta,B)=\min_{0\le p_i\le1,\ \sum_i p_i\le B}\max_i a_i(1-p_i).
+ \label{eq:frontier}
+\end{equation}
+For a nonzero interior optimum, $\sum_{i:a_i>0}(1-T^*/a_i)_+=B$.
+
+\paragraph{Proof and scope.}
+Couple policies on the private random seed along the all-failure transcript.
+The probability $p_i$ of querying item $i$ has $\sum_i p_i\le B$.
+Until that query, its concealed-low world has the same transcript. Uniform
+precision on both honest worlds leaves a gap at least $\Delta_i-2\eta$;
+verification-neutrality prevents unsuccessful queries changing the quote.
+This proves the lower bound, including adaptive policies in this family.
+Shift the two quotes toward one another by
+$\min(\eta,\Delta_i/2)$ and sample the optimizing marginals under hard
+capacity to attain it. Thus $T^*=0$ exactly when
+$B\ge|\{i:\Delta_i>2\eta\}|$; for identical gaps,
+$T^*=(\Delta-2\eta)_+(1-\min\{B/n,1\})$.
+
+The $2\eta$ term comes from satisfying two honest reports with one quotation
+rule. It does not follow from average MAE or contradict truthful classifiers
+that change predictions without this precision constraint~\cite{withheld}.
+Our learned four-field models violate the frontier's single-recoverable-field
+and uniform-error assumptions. We therefore use it to delimit guarantees,
+not to predict empirical feedback signs or model optima.
+
+\subsection{Compact finite oracle}
+For each public batch class $o$, the finite oracle shares one action lottery
+across all compatible latent worlds and minimizes the largest expected
+unilateral gain, recomputing truthful and deviated allocations. For item-local
+utility, unit-cost nonadaptive queries and at most one field per item, it can
+instead use field marginals $y_{oif}$ satisfying
+\[
+ y_{oif}\ge0,\qquad \sum_f y_{oif}\le1,\qquad
+ \sum_{i,f}y_{oif}\le B,
+\]
+with zero mass on ineligible fields. Every deviation is affine in these shared
+marginals, including both truthful and deviated public classes.
+
+\begin{proposition}[Compact implementability]\label{prop:compact}
+The marginal and complete-allocation finite oracles have the same value in
+this class, and every feasible marginal solution respects capacity on each draw.
+\end{proposition}
+\begin{proof}
+A complete lottery induces feasible marginals. Conversely set
+$p_i=\sum_f y_{if}$ and concatenate half-open intervals of lengths $p_i$.
+For uniform $U\in[0,1)$ select intervals containing some $U+k$, integer $k$.
+Each length is at most one and their total at most integer $B$, so at most
+$B$ items are selected, with probabilities $p_i$. Given selection, choose
+field $f$ with probability $y_{if}/p_i$. This realizes all marginals and
+preserves every affine expected payoff.
+\end{proof}
+Marginal optimization is established~\cite{marginals}. This specialization
+uses $OnF+1$ variables but does not remove world/report enumeration, preserve
+arbitrary joint-event probabilities or cover general adaptive/nonunit-cost
+queries. Certificates cover the declared finite universe only.
+
+Compact and complete values agree on 32 original and 24 multi-field fixtures;
+all 57 primal/dual certificates pass. A larger $n=100,F=4,O=8,B=10$ fixture
+uses 3,201 variables versus 18,662,296,388,649,543,921 complete allocations per
+class. Full enumeration was not run there, so this is a representation count,
+not measured speedup. At $B=1,\eta=0$, the two-mode toy library (six three-item priorities,
+risk and no query) differs from empirical CDM's twelve rules. Its $72/17$
+oracle, $72/13$ global-mixture and 8 risk values use artificial quote units.
+Appendix~\ref{app:library} gives a contextual separation and the stronger
+$B+1$-rule comparator that closes it.
+
+\section{Recovery diagnosis and recovery-path learning}\label{sec:recovery}
+\subsection{Separating recovery from competition}
+For fixed peers and an evaluated mixture, retain its maximizing own report
+$s^*$. Let $q_h$ be the unqueried report quote, $q_L$ the quote after the
+same rule's highest positive eligible query with capacity relaxed, and $q_A$
+the hard-budget quote. At the same report,
+\[
+ E=q_h-q^H,\quad R=\mathbb E[q_L]-q_h,\quad
+ C=\mathbb E[q_A]-\mathbb E[q_L],\quad G=E+R+C.
+\]
+All terms are signed; mixture expectation precedes report maximization.
+The relaxed query is diagnostic. Reusing the truthful query would target a
+naturally missing field and confound recovery with competition. In the
+10/12/14 example, $E=R=2$, $C=-2(1-p)$ and $G=2+2p$: successful partial
+recovery can increase the gain of a nonmonotone predictor.
+
+\subsection{Recovery-path regularization}\label{sec:rpl_method}
+Let $H_i$ be record $i$'s honest report and $\mathcal E_i$ its legal edges
+recovering actually concealed fields; natural unavailability is excluded.
+For quoted log price $q_\theta$, define
+\begin{align}
+ g_{i,\theta}(s)&=[q_\theta(s)-\operatorname{sg}(q_\theta(H_i))]_+,\\
+ L_{\rm path}(\theta)&=\frac{\sum_i\sum_{(s,a)\in\mathcal E_i}
+ [g_{i,\theta}(T(s,a))-g_{i,\theta}(s)]_+}
+ {\sum_i|\mathcal E_i|}.\label{eq:rpl}
+\end{align}
+RPL adds $\lambda L_{\rm path}$ to its matched no-feedback loss. The existing
+gap term penalizes gain over honesty; this term penalizes an \emph{increase}
+in that positive gain along recovery. The honest anchor is detached within
+an optimizer step, although shared parameters can move it between steps.
+Honest values supply training supervision only. Deployment retains the
+public-record predictor without private recoverability or quotation history.
+
+\begin{proposition}[Finite recovery-graph implication]\label{prop:rpl}
+If $L_{\rm path}=0$ on fixed finite record graphs, positive gain cannot increase
+along any path of their legal recovery edges.
+\end{proposition}
+\begin{proof}
+Each summand is nonnegative. A zero sum forces every edge increment to be
+nonpositive; chaining these inequalities proves the claim.
+\end{proof}
+The implication permits positive initial concealment gain and says nothing
+about unseen records, finite-penalty fits, honest error or allocation optimality.
+Because $g_{i,\theta}(H_i)=0$, an edge ending at honesty has zero penalty regardless of its starting gain. The constraint acts on intermediate partial-recovery states. It motivates a recovery-graph-inspired regularizer, not a general incentive guarantee.
+
+\subsection{Conditional cap and final-record alternative}
+A diagnostic history cap uses
+$q_{\rm cap}(r,a)=\min\{q(r,\varnothing),q(r,a)\}$ before mixture averaging,
+fixing the model, public scores and rule weights. If truthful queries leave
+$q^H$ unchanged, then pointwise $q_{\rm cap}(s,a)\le q(s,a)$ while
+$q_{\rm cap}(H,a)=q^H$. Subtracting $q^H$, averaging and maximizing over
+legal own reports proves that the worst fixed-peer gain weakly decreases.
+This is not a guarantee after peers recompute responses, nor a guarantee of
+lower absolute error.
+
+The cap can quote identical final records differently because it retains
+history, and lies outside the verification-neutral frontier class.
+An alternative is $q_{\downarrow}(r)=\min_{z\in\mathcal C(r)}q(z)$ on a
+fixed completion domain. If completion sets are nonempty and nested and
+cover the truthful record, then
+$\mathcal C(r^H)\subseteq\mathcal C(r)$ implies
+$q_{\downarrow}(r)\le q_{\downarrow}(r^H)$, eliminating gains over its own
+honest quote with nonnegative costs. Unlike the history cap, it can reduce
+honest quotes and worsen MAE. Unsupported records need abstention or an
+uncertified fallback. This envelope is related to established truthful
+withholding prediction~\cite{withheld,smi}; a restricted empirical cost pilot
+is reported in Appendix~\ref{app:diagnostics}. Equal-record consistency,
+appeals and possible selection disparities require explicit platform review;
+we have not measured protected-group effects or deployment fairness.
+
+\section{Experimental design and computational checks}\label{sec:experiment_setup}
+\subsection{Cohorts and role-separated fitting}
+JUCars-2024 v2 contains Jordanian listings from 2024, deposited in
+2026~\cite{jucarsdata}; MUCars-2024 v2 contains Moroccan 2024 listings~\cite{mucarsdata}.
+Both use CC BY 4.0 and advertised, not transaction, prices. Native currencies
+are evaluated separately. Processed training/validation sizes are
+4,774/1,374 and 39,244/10,672. Label-independent identifier hashing caps
+training at 5,000 and evaluation at 1,000. Synthetic seeds 73,101/73,102
+generate 6,000/1,500 records before the same caps. All fitting seeds share
+these populations and ten fixed batches of 100. Real cohorts were inspected
+during development; these are retrospective comparisons. Inherited non-price
+fingerprints control duplicates without certifying unique vehicles. Targets,
+identifiers, source indices and declared reveal aliases are excluded; correlated
+features remain. Fields unavailable in the source record are stipulated to be unrecoverable in the simulation; their real missingness causes are not identified. They cannot be additionally concealed. Supplement S1 reports the complete sample flow, field mappings, missingness and synthetic generator.
+
+The original factorial crosses two initial objectives, three acquisition
+scores, feedback on/off and two allocators: 24 cells per source/seed/capacity.
+Sharing no-feedback fits gives fourteen unique fits. Every outer fold is
+excluded from its entire fitting loop; the remaining records are split into
+estimator and 30\% guidance partitions. A 250-round CatBoost backbone~\cite{catboost} is fitted with valid-mask augmentation. Residual branches start from this same backbone without a fitted neural residual. Original feedback branches use two six-epoch updates; the original static no-feedback branch uses one twelve-epoch call. Matched RPL and stronger-gap branches use two six-epoch updates with identical minibatch orders and optimizer resets. Supplement S1 distinguishes the experiment families. Guidance heads refresh after
+each round. At each feedback epoch's start, public scores are fixed; within
+minibatches the current detached predictor searches responses with one start
+and two sweeps at 10\% capacity. No-feedback uses no-query response search
+with the same update budget. Deployment heads use assembled excluded-fold
+targets and deployment encodings; the final predictor is not updated after
+that head fit. No model is refitted for another evaluation capacity.
+
+Writing $L_H,L_V,L_A$ for honest squared error, valid-report mean squared
+error and backbone-honest anchoring, mask training uses
+$L_H+.25L_V+.25L_A$. Robust training adds
+$.5L_{\rm attack}+.5L_{\rm gain}$, with
+$L_{\rm gain}=\mathbb E[(\mu-\operatorname{sg}(q^H)-.02)_+]$.
+The RPL comparisons vary their declared gap/path weights under the same
+no-feedback reset schedule. Endpoint-error training uses
+\[
+ (1-p)(q_0-y)^2+p(q_1-y)^2
+ =(\mu-y)^2+p(1-p)(q_1-q_0)^2,
+\]
+not squared error after averaging. Gradients do not pass through report search,
+field choice or allocation. The residual has two width-64 ReLU layers; AdamW
+uses learning rate .001, weight decay $10^{-4}$ and gradient clipping at 5.
+Table~\ref{tab:settings} collects settings and the separate study scopes.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{lr}\toprule
+Setting & Value\\\midrule
+CatBoost backbone boosting rounds ~\cite{catboost} & 250\\
+Residual hidden width / learning rate & 64 / 0.001\\
+RPL residual epochs / optimizer-reset rounds & 12 / 2\\
+Outer folds / guidance fraction & 3 / 0.3\\
+Acquisition-head trees / maximum depth / minimum leaf & 160 / 12 / 12\\
+Training budget / response starts / response sweeps & 10\% / 1 / 2\\
+Evaluation response starts / maximum sweeps & 4 / 20\\
+Batch size / maximum concealed available fields & 100 / 2\\
+Gain-penalty tolerance / main concealment cost & 0.02 / 0\\
+Original factorial seeds / bootstrap repetitions & 10 / 1,000\\
+RPL path weight $\lambda$ / gap weight $\beta$ & $0,0.1,0.5,1$ / $0.5$\\
+RPL gap-removal path weights / gap & $0,0.5$ / $0$\\
+RPL evaluation query capacities & $0,0.1,0.3$\\
+Completion / RPL-extension fitting seeds & 3 / 10\\
+Core-extension audit resamples & 4,000\\
+Recent acquisition families / frozen price backends & 5 / 2\\
+Recent-method prediction bins & 4\\
+ACO neighbor default / fixed sensitivity values & 25 / 10, 25, 50\\
+Additional natural-missingness fractions & $0,0.1,0.3$\\\bottomrule
+\end{tabular}
+\caption{Declared settings across experiments. The ten fitting seeds are
+13, 42, 2026, 101, 211, 307, 401, 503, 601 and 701. The backbone and
+ExtraTrees implementations follow established methods; they are not new
+algorithmic contributions. All capacities share the fixed training budget. Three-seed completion experiments use the first three seeds; RPL extends to all ten. The additional settings distinguish original-factorial inference from the new audit families.}
+\label{tab:settings}\end{table}
+\subsection{Evaluation, uncertainty and audit scope}
+Fixed models are evaluated with four starts and at most twenty response sweeps;
+quotes/errors are integrated analytically over query marginals and every legal
+unilateral deviation is checked with fresh reallocation. The original study
+has 4,320 cells over thirty source--seed pairs. Its 58 conditional contrasts
+per source/capacity produce 174 primary contrasts. Paired crossed seed--batch
+resampling preserves method pairing~\cite{pigeonhole}: the original analysis
+uses 1,000 resamples, whereas the core extensions use 4,000, including
+exploratory studentized maximum-deviation bands~\cite{romanowolf} over 216
+RPL metric contrasts. Fixed cohorts, ten clusters and fitting-only randomness
+prevent a finite-sample family-wise or new-training-population guarantee.
+Interactions are differences of feedback effects between allocators; a positive
+interaction alone does not make feedback beneficial.
+
+The three-seed completion study has 1,719 cells including references. RPL then
+reuses its 162 pilot cells and adds 378 to retain ten seeds, six configurations
+and three capacities (540 cells). Parameter and availability scans remain
+three-seed. Fit/outcome/analysis/statistics-check phases cover the original
+4,320 cells and 1,206 distinct claim-bearing extension cells, including all
+540 RPL cells (Table~\ref{tab:audit_levels}). Stage counts are 162 pilot RPL, 90 search, 432 SEFA/GDFS/DIME/explanation,
+144 ACO and 378 additional RPL cells. The 540-cell RPL audit overlaps the
+pilot; remaining support cells are not upgraded. A separate matched
+RPL--acquisition crossing adds 90 cells with independent integer-allocation,
+all-legal-deviation and outcome-summary checks. Its 18 native-head reference
+cells are reused from the core; the new crossing has no four-stage
+fit/statistics-audit upgrade.
+
+The checks reconstruct fitting roles, recorded outcomes, legal deviations
+and saved statistics but share prediction/loading primitives; they are not
+an independent full-stack implementation. An additional bit-mask oracle
+checks 1,188 fixture and 521,164 real-record field transitions without sharing
+state/query logic. Historical failures remain recorded, including the corrected
+ACO auditor's float32-versus-float64 distance mismatch. Human scientific
+approval and external numerical reproduction are separate; the latter failed
+its original tolerances. Appendix~\ref{app:evidence} indexes the complete
+protocols, failure receipts and audit limits.
+
+\begin{table}[tbp]\centering\small
+\caption{Computational audit scope. Counts overlap where explicitly stated;
+human scientific approval and exact cross-machine reproduction are separate
+from these checks. Historical failure receipts are preserved.}
+\label{tab:audit_levels}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.23\textwidth}>{\raggedright\arraybackslash}p{.32\textwidth}>{\raggedright\arraybackslash}p{.35\textwidth}}\toprule
+Evidence & Completed chain & Boundary\\\midrule
+Original 4,320 cells & Fit, outcome, analysis, statistics check & Original implementation; shared primitives disclosed\\
+Claim-bearing extensions: 1,206 distinct cells & Same four computational phases; includes all 540 ten-seed RPL cells & Conditional exploratory inference; not an independent full-stack implementation\\
+Matched RPL--acquisition crossing: 90 cells & Independent allocation/deviation/outcome checks; 18 native references reused & Three-seed descriptive effects; no new four-stage fit/statistics chain\\
+Remaining completion-study support & Hash bindings, utility checks and recorded summaries & No whole-study four-stage upgrade of all 1,719 cells\\\bottomrule
+\end{tabular}\end{table}
+\section{Results}\label{sec:results}
+\subsection{Recovery failures in the learned four-field class}\label{sec:empirical_recovery}
+The recovery-path prediction is observable in the saved models, rather than
+only in the illustrative 10/12/14 fixture. We enumerate all legal successful
+recovery edges in the 14 unique fits per source/seed and the original 1,000
+evaluation records. An adverse partial recovery requires two hidden fields,
+a post-query quote above the pre-query quote and both at or above the model's
+honest anchor, using tolerance $10^{-10}$. Table~\ref{tab:recovery_diagnostic}
+reports these finite table properties separately from returned response rows.
+\begin{table}[htbp]\centering\small
+\begin{tabular}{lrrr}\toprule
+Source & Successful edges & Adverse partial edges & Adverse queried rows\\\midrule
+Synthetic & 2,098,600 & 82,939 & 82 \\
+JUCars & 2,044,000 & 67,523 & 1,733 \\
+MUCars & 2,212,560 & 61,404 & 2,829 \\
+\bottomrule\end{tabular}
+\caption{Recovery-path diagnostic on saved primary-capacity models. Edges use
+14 unique fits per source/seed; the last column counts returned reports from
+all 24 cells with positive query probability and gain-increasing partial recovery.
+For randomized allocation these are eligible rows, not realized query counts.
+Each source reuses the same 1,000 records over ten fitting seeds. Counts are
+dependent finite diagnostics, not independent samples or deployment prevalence.}
+\label{tab:recovery_diagnostic}\end{table}
+
+A MUCars witness has honest, two-hidden and partially recovered log quotes
+11.484823, 11.517865 and 11.546430, respectively. It hides transmission and
+fuel type, then recovers transmission. Thus its report component is about
+0.033042 and recovery adds about 0.028564. The query raises the gain-producing
+quote in an actual fitted model. This witness is not a measurement of human
+seller behavior. Across 720 primary cells and 720,000 returned-profile rows,
+the saved $E+R+C=G$ identity is also reconstructed. These checks connect the
+recovery argument to the empirical model class, but do not identify why
+feedback training is harmful or estimate the restricted frontier's real-data
+optimum.
+
+\subsection{Recovery-path regularization: improvement and costs}\label{sec:rpl_results}
+RPL compares $\lambda=0,.1,.5,1$ at $\beta=.5$ and
+$\lambda=0,.5$ at $\beta=0$, across capacities $0,.1,.3$ with the same
+no-feedback reset schedule. Each branch uses its same-gap zero-path control.
+The \href{https://github.com/T0Q0R/secondhand-valuation-research/commit/6643cbe3266f2c1548d987c2bb53e366e19ad3ef}{declared development grid}
+predates formal evaluation; it is not independent preregistration or proof
+that $\lambda=1$ was a prespecified headline. Weight .5 matches the existing
+gap scale; neither .5 nor 1 is claimed optimal.
+
+\paragraph{Inflation improvement and uncertainty.}
+At 10\% capacity and $\lambda=1,\beta=0.5$, ratios of mean inflation to the
+matched $\lambda=0$ control fell by 50.41\%, 26.58\% and 23.81\% on synthetic,
+JUCars and MUCars. All ten fitting seeds in each source had lower inflation.
+The absolute paired reductions were 0.006268, 0.003306 and 0.001573 log units.
+The exploratory simultaneous bands over 216 metric contrasts were
+$[0.004644,0.007891]$, $[0.001209,0.005403]$ and
+$[0.000624,0.002522]$, respectively (Figure~\ref{fig:rpl_primary}). These
+conditional bands support the within-design direction without certifying
+finite-sample coverage or new-population generalization. Smaller weights were
+less uniform: at $\lambda=0.1$, only six of ten seeds improved on each real
+source; at $\lambda=0.5$, nine of ten did so. Supplement~S7
+retains every seed.
+
+\paragraph{Loss-component boundary.}
+The matched path/gap comparison (Figure~\ref{fig:rpl_gap}) distinguishes
+path regularization from the existing gap term at the tested weights.
+Supplement~S7 retains the original component ablation and
+three-seed recovery-edge pilot; neither is relabeled as ten-seed evidence.
+
+\paragraph{Predictive and verification costs.}
+Table~\ref{tab:rpl_primary} reports absolute outcomes. At the unit endpoint,
+honest MAE changed by $+0.82\%$, $-0.10\%$ and $-0.80\%$, while attacked MAE
+changed by $-0.91\%$, $-0.02\%$ and $-0.87\%$. Failed attempts as a fraction of all listings
+changed by $+1.10$, $+0.44$ and $-0.12$ percentage points. The synthetic honest
+error and failed-query increases also excluded zero in the exploratory
+simultaneous bands; real-source MAE changes did not. Figure~\ref{fig:rpl_tradeoffs}
+shows all paired seed changes, including unfavorable cases. Its means of seed
+ratios are distinct from the ratios of means reported above. Inflation
+improvement alone therefore does not determine a deployment choice. For JUCars at $\lambda=1$, actual queries cover 10\% of listings: 6.17\% of all listings have failed attempts, or 61.7\% of attempted queries; successful queries cover 3.83\%.
+
+\paragraph{Budget boundary.}
+Figure~\ref{fig:rpl_budget} includes zero queries. The paired improvement
+at zero versus 10\% capacity is .004276/.006268 on synthetic,
+.003249/.003306 on JUCars and .001527/.001573 on MUCars. Thus zero-query
+improvements are 98.3\% and 97.1\% of the real-source 10\% improvements;
+these ratios are descriptive, not causal shares. The paired budget
+interactions are .001992, .000057 and .000046. Post-hoc marginal crossed
+bootstrap intervals include zero for both real sources (Supplement S2).
+The real-source results establish an estimator improvement at the tested
+gap weight, without identifying an additional verification mechanism.
+
+\paragraph{Recovery geometry and quote shifts.}
+Table~\ref{tab:ten_seed_mechanism} extends the recovery-edge diagnostic to
+all ten fitting seeds. Positive-gain violations decrease on average, while
+raw quote-raising edge rates rise slightly on synthetic and JUCars. These
+are different targets. On MUCars, honest signed log bias rises from .029095
+to .034913 and attacked bias from .035701 to .039946, despite lower MAE;
+their paired bias-change intervals include zero. A moving honest quote can
+change relative inflation. Fixed-report $E/R/C$ decompositions and
+endogenously reselected reports are separately reported in Supplement S3;
+they do not uniquely identify a causal mediator.
+
+\begin{table}[htbp]\centering\small
+\caption{Ten-seed recovery geometry at $\beta=.5$, before/after $\lambda=1$.
+Rates and positive increment means use all legal concealed-field recovery
+edges, including zero increments; units are log price.}
+\label{tab:ten_seed_mechanism}
+\begin{tabular}{lrr}\toprule
+Source & Positive-gain violation (\%) & Mean positive increment\\\midrule
+Synthetic & 15.79/5.03 & .001648/.000663\\
+JUCars & 7.08/4.76 & .001498/.001032\\
+MUCars & 5.27/2.60 & .000743/.000393\\
+\bottomrule\end{tabular}
+\end{table}
+
+\paragraph{Finite-response boundary.}
+All 540 cells remain in Figure~\ref{fig:rpl_convergence}. Fifty-one cells
+contained nonconverged batches, covering 89 of 5,400 batch replays, with a
+maximum remaining unilateral regret of 0.143721 log units. At the primary
+unit-weight endpoint, two synthetic seeds each retained one nonconverged batch;
+the maximum regret there was 0.011042. Both real-source endpoint responses
+met the stated finite unilateral tolerance. These are outcomes of the declared
+finite response search, not evidence of improvement at an exact market
+equilibrium. Replacing primary synthetic inflation by the fixed-peer unilateral envelope changes its paired reduction from .006267693 to .006266569, a difference of $1.125\times10^{-6}$; this cannot explain the mean effect.
+
+\begin{table}[tbp]\centering\small
+\caption{Ten-seed RPL means at 10\% capacity, $\beta=0.5$. MAE is in source
+currency; failed queries are a percentage of all listings. All seeds and
+nonconverged responses are retained.}\label{tab:rpl_primary}
+\begin{tabular}{lrrrr}\toprule
+Source / $\lambda$ & Inflation & Honest MAE & Attacked MAE & Failed (\%)\\\midrule
+synthetic / 0 & 0.01243 & 3576.06 & 3635.45 & 2.51 \\
+synthetic / 0.5 & 0.00707 & 3595.31 & 3600.02 & 3.49 \\
+synthetic / 1 & 0.00616 & 3605.35 & 3602.26 & 3.61 \\
+jucars / 0 & 0.01244 & 6966.89 & 6957.18 & 5.73 \\
+jucars / 0.5 & 0.01077 & 6948.32 & 6941.48 & 5.35 \\
+jucars / 1 & 0.00913 & 6959.75 & 6956.01 & 6.17 \\
+mucars / 0 & 0.00661 & 27155.74 & 27306.07 & 0.43 \\
+mucars / 0.5 & 0.00566 & 26983.89 & 27114.40 & 0.39 \\
+mucars / 1 & 0.00503 & 26938.93 & 27069.81 & 0.31 \\
+\bottomrule\end{tabular}\end{table}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/ten-seed-v1/ten_seed_primary.pdf}
+\caption{Ten-seed paired inflation improvement at 10\% capacity. Positive values favor RPL. Each branch uses its same-gap zero-path control. Thin segments are marginal 95\% intervals; pale segments are exploratory simultaneous bands over 216 metric contrasts. Ten fitting seeds share fixed training/evaluation populations and ten batches. Bands do not establish finite-sample family-wise coverage.}
+\label{fig:rpl_primary}
+
+\vspace{.5em}
+
+\centering
+\includegraphics[width=\textwidth]{figures/ten-seed-v1/gap_ablation.pdf}
+\caption{Matched path/gap loss-component comparison at 10\% capacity. Each line connects one fitting seed across four configurations; dots retain all observations and black diamonds show means. The axis lists path weight/gap weight. This tests the path term against matched zero-path controls with and without the gap term.}
+\label{fig:rpl_gap}
+\end{figure}
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ten-seed-v1/ten_seed_tradeoffs.pdf}
+\caption{Paired seed trade-offs at 10\% capacity and $\beta=0.5$. Small markers retain all ten fitting seeds per source and positive path weight; outlined markers are their means. Horizontal axes show honest or attacked MAE changes, while vertical axes show inflation reductions. Upper-left is favorable. Each point uses its same-seed control, so these mean seed ratios differ from the headline ratios of means. No confidence region is claimed.}
+\label{fig:rpl_tradeoffs}
+\end{figure}
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ten-seed-v1/budget_response.pdf}
+\caption{Budget transfer and verification costs at $\beta=0.5$. The measured capacities are 0, 10 and 30\%; straight segments connect evaluated settings only. Lines show ten-seed means and shading the full seed range, not a confidence interval. Failed queries use all listings as the denominator. Zero-query differences are estimator effects.}
+\label{fig:rpl_budget}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ten-seed-v1/response_convergence.pdf}
+\caption{Convergence boundary across all 540 RPL cells and six configurations. Top panels show batch nonconvergence rates; bottom panels show the maximum unilateral regret within each cell on a symmetric-log axis. Curves are ten-seed means, bands the full seed range. The mean of cell maxima is not the worst observed regret. All 51 cells containing nonconverged batches are retained.}
+\label{fig:rpl_convergence}
+\end{figure}
+
+
+\subsection{Matched RPL and five recent acquisition families}\label{sec:recent_results}
+The direct comparison crosses $\lambda=0,1$ with ACO, SEFA, GDFS, DIME
+and explanation-ranked AFA at $\beta=.5$ and 10\% capacity: three sources
+and the same three fitting seeds give 90 cells. Both predictors use the
+same no-feedback training schedule and cohorts. The four neural acquisition
+tables remain frozen; ACO's training-bank losses are recomputed under each
+predictor, with $k=25$ fixed. No policy is selected or refitted on evaluation
+outcomes. These are task adaptations, with code/observation/selection
+boundaries in Appendix~\ref{app:completion_methods}, not official end-to-end
+reproductions of the original papers.
+
+\paragraph{Does RPL help each acquisition family?}
+Table~\ref{tab:rpl_crossing} shows both predictor settings and matched costs.
+Adding RPL lowers inflation in all 45 source--family--seed pairs. Ratios of
+family means fall by 32.97--48.00\% on synthetic, 30.56--32.70\% on JUCars
+and 18.97--25.55\% on MUCars. Within each source, even the largest
+RPL-on family mean is below the smallest RPL-off family mean. Thus the
+inflation gain persists across these acquisition choices in the fixed design.
+
+\paragraph{Does stacking improve on the native RPL pipeline?}
+Eighteen existing matched cells retain the original suppression head
+(\emph{native head}); it still performs acquisition. At $\lambda=1$,
+SEFA has the lowest observed inflation mean on synthetic and GDFS on both
+real sources, respectively 17.07\%, 4.76\% and 22.47\% below native-head
+RPL. These retrospective minima are not selected deployment defaults.
+Stacking is not uniformly better than native-head RPL: synthetic GDFS
+gives 0.00907 versus the native head's 0.00639. The best complete pipeline
+therefore depends on the acquisition family and objective.
+
+\paragraph{Costs and evidence boundary.}
+Across the matched three-seed predictors, honest MAE changes by
+$+0.99\%,-0.19\%,-0.91\%$ on synthetic/JUCars/MUCars, independently of
+acquisition. All five-family attacked-MAE means decrease, while failed-query
+changes range from $-0.07$ to $+1.23$ percentage points per listing.
+All 18 nonconverged batches among the 900 crossing batches remain included;
+maximum remaining regret is 0.14916 log units. This is three-seed development
+evidence on shared cohorts; seed ranges are not confidence intervals or the
+ten-seed study. Appendix~\ref{app:completion_methods} gives absolute error
+and failure means; source CSVs retain every seed and convergence value.
+
+\begin{table}[tbp]\centering\small
+\caption{Matched RPL--acquisition comparison at 10\% capacity and $\beta=.5$. Each entry averages the same three fitting seeds. $I$ is positive log inflation; $\Delta A$ is the attacked-MAE change (percent), and $\Delta F$ the failed-query change (percentage points per listing), from $\lambda=0$ to 1. Native head rows reuse 18 existing cells; the other rows are the new 90-cell $2\times5$ crossing. Negative changes favor the indicated metric.}
+\label{tab:rpl_crossing}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}\toprule
+Source & Acquisition & $I_0\downarrow$ & $I_1\downarrow$ & $\Delta I$ (\%) & $\Delta A$ (\%) & $\Delta F$ (pp)\\\midrule
+Synthetic & Native head & 0.01303 & 0.00639 & -50.93 & -0.91 & +0.63\\
+ & ACO & 0.00988 & 0.00537 & -45.64 & -0.16 & +0.03\\
+ & SEFA & 0.01019 & 0.00530 & -48.00 & -0.17 & +0.13\\
+ & GDFS & 0.01353 & 0.00907 & -32.97 & -0.75 & -0.07\\
+ & DIME & 0.01306 & 0.00782 & -40.11 & -0.67 & +1.23\\
+ & Expl.-AFA & 0.01388 & 0.00903 & -34.89 & -0.79 & +0.10\\
+\midrule
+JUCars & Native head & 0.01380 & 0.00922 & -33.22 & -0.17 & +1.47\\
+ & ACO & 0.01401 & 0.00952 & -32.06 & -0.19 & +0.57\\
+ & SEFA & 0.01338 & 0.00929 & -30.56 & -0.20 & -0.07\\
+ & GDFS & 0.01290 & 0.00878 & -31.95 & -0.16 & +0.87\\
+ & DIME & 0.01396 & 0.00939 & -32.70 & -0.16 & +0.67\\
+ & Expl.-AFA & 0.01294 & 0.00880 & -32.00 & -0.22 & +0.73\\
+\midrule
+MUCars & Native head & 0.00666 & 0.00541 & -18.72 & -1.07 & +0.00\\
+ & ACO & 0.00575 & 0.00460 & -20.11 & -0.98 & +0.30\\
+ & SEFA & 0.00549 & 0.00425 & -22.51 & -1.10 & +0.23\\
+ & GDFS & 0.00563 & 0.00419 & -25.55 & -1.05 & +0.30\\
+ & DIME & 0.00641 & 0.00519 & -18.97 & -1.07 & +0.20\\
+ & Expl.-AFA & 0.00557 & 0.00432 & -22.38 & -1.03 & +0.17\\
+\bottomrule\end{tabular}
+\end{table}
+
+
+\subsection{Controlled components and a search-strength intervention}\label{sec:completion_mechanisms}
+The complete suppression-score/feedback/gap factorial retained all eight
+combinations, including removal of two or all three switched components
+(Supplement~S7). These switches are experimental
+components, not three independently established innovations. Gap removal
+substantially increased mean primary inflation on the real sources, whereas
+the full three-component configuration was not uniformly best.
+
+The original scoring network was refreshed each epoch, rather than frozen
+throughout training. We crossed epoch versus minibatch score refresh with weak
+(two sweeps, one start) versus strong (20 sweeps, four starts) training-response
+search. Both retained two six-epoch rounds and matched no-feedback references.
+Figure~\ref{fig:completion_mechanism} shows the audited paired improvements and conditional intervals at 10\% capacity, retaining three fitting seeds. On synthetic, epoch-weak inflation was 0.02075,
+epoch-strong 0.01279, batch-strong 0.01269, and no-feedback 0.01303. Thus
+strengthening search substantially reduced the weak implementation's damage,
+and the strong means were slightly below the no-feedback reference. Strong
+JUCars means were also slightly lower than no-feedback, whereas all four
+MUCars feedback means remained higher. Changing score-refresh frequency alone
+was not a consistent remedy. These are conditional mean comparisons, not
+proof of a uniquely identified cause or population-wide feedback benefit.
+
+
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ten-seed-v1/mechanism_search_audited.pdf}
+\caption{Search-strength and score-refresh interventions relative to matched no-feedback controls, at 10\% capacity. Points are mean reference-minus-candidate inflation differences; positive values favor feedback. Thin segments are marginal 95\% crossed-bootstrap intervals and pale segments are exploratory simultaneous bands. This intervention retains three fitting seeds and ten shared batches; it is separate from the ten-seed RPL extension.}
+\label{fig:completion_mechanism}
+\end{figure}
+
+\subsection{Historical feedback and allocation controls}\label{sec:factorial_results}
+The original factorial had adverse mean inflation directions in all 36
+primary feedback contrasts. Under post-hoc exploratory simultaneous families,
+31 adverse intervals remained for the inflation-only family, 27 for three
+co-primary outcomes, and 20 for all 1,536 primary metric contrasts. No family
+established that every feedback contrast was harmful. These results describe
+the original weak-search implementation; the stronger-search intervention
+above changes that interpretation. Appendix~\ref{app:evidence}
+indexes all original intervals, interactions and counts.
+
+The strong-control comparisons also restrict claims for the original SAV
+candidate. Ordinary-benefit and acquisition-conditioned controls had lower
+inflation in synthetic and JUCars comparisons, and the original ten-seed SAV
+comparison did not show a universal advantage over static robust valuation.
+These original-protocol comparisons are distinct from the new same-gap RPL
+contrasts. Likewise, score-minimax allocation passed the descriptive joint
+gate in only two of eighteen primary contrasts, while ten worsened inflation.
+An advantageous interaction or a more complex allocator therefore does not
+replace a matched no-feedback or simple-acquisition control. Complete
+three-source evidence is retained in Appendix~\ref{app:evidence}.
+
+\subsection{History-cap outcomes and deployment costs}
+The history cap's fixed-peer theorem does not imply a better joint outcome
+after sellers recompute their reports. The 432-cell recomputation kept the
+original response-search budget, public scores and rule weights. Its
+multiobjective result is consequential: attacked MAE increased in 94 cells
+and failed-query rates in 145, despite unchanged honest MAE. Figure~\ref{fig:cap_tradeoffs}
+shows those costs alongside inflation reductions. Complete per-rule counts
+and conditional intervals are indexed in Appendix~\ref{app:evidence}.
+
+Thirty-three capped cells retained at least one nonconverged batch and maximum
+remaining regret was 0.204423 log units. No capped result is therefore
+described as a certified market equilibrium. The descriptive 10\% inflation /
+5\% honest-error gate does not constrain attacked error or failed queries;
+threshold sensitivity cannot turn a single-metric improvement into Pareto
+dominance. These costs also motivate the final-record alternative and its
+natural-missingness boundary in Section~\ref{sec:recovery}.
+
+\begin{figure}[htbp]\centering
+\begingroup
+\setlength{\unitlength}{1bp}
+\begin{picture}(453.6000,252.0000)
+\put(0,0){\AuditVector{q 0.5000 w 0.0000 0.0000 0.0000 RG 1.0000 1.0000 1.0000 rg [] 0 d 0.0000 0.0000 453.6000 252.0000 re f Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.0000 0.0000 0.0000 RG 1.0000 1.0000 1.0000 rg [] 0 d 45.3600 70.5600 172.0552 136.0800 re f Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 70.5600 m 45.3600 67.0600 l B Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 106.8083 70.5600 m 106.8083 67.0600 l B Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 168.2565 70.5600 m 168.2565 67.0600 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 45.3600 84.1680 m 217.4152 84.1680 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 84.1680 m 41.8600 84.1680 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 45.3600 106.8480 m 217.4152 106.8480 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 106.8480 m 41.8600 106.8480 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 45.3600 129.5280 m 217.4152 129.5280 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 129.5280 m 41.8600 129.5280 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 45.3600 152.2080 m 217.4152 152.2080 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 152.2080 m 41.8600 152.2080 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 45.3600 174.8880 m 217.4152 174.8880 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 174.8880 m 41.8600 174.8880 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 45.3600 197.5680 m 217.4152 197.5680 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 45.3600 197.5680 m 41.8600 197.5680 l B Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.4863 0.5098 0.5333 RG [ 2.96 1.28 ] 0 d 45.3600 152.2080 m 217.4152 152.2080 l S Q}}
+\put(0,0){\AuditVector{q 0.7000 w 0.0000 0.0000 0.0000 RG [] 0 d 45.3600 70.5600 m 45.3600 206.6400 l S Q}}
+\put(0,0){\AuditVector{q 0.7000 w 0.0000 0.0000 0.0000 RG [] 0 d 45.3600 70.5600 m 217.4152 70.5600 l S Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 195.0715 185.4632 6.3246 6.3246 re B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 140.0900 155.7996 m 144.5621 160.2717 l 140.0900 164.7438 l 135.6178 160.2717 l 140.0900 155.7996 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 52.8574 156.3254 m 49.6951 150.0009 l 56.0197 150.0009 l 52.8574 156.3254 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 164.5729 180.6699 m 165.4116 180.6699 166.2160 181.0031 166.8090 181.5961 c 167.4020 182.1891 167.7352 182.9936 167.7352 183.8322 c 167.7352 184.6709 167.4020 185.4753 166.8090 186.0683 c 166.2160 186.6613 165.4116 186.9945 164.5729 186.9945 c 163.7343 186.9945 162.9299 186.6613 162.3369 186.0683 c 161.7439 185.4753 161.4107 184.6709 161.4107 183.8322 c 161.4107 182.9936 161.7439 182.1891 162.3369 181.5961 c 162.9299 181.0031 163.7343 180.6699 164.5729 180.6699 c B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 186.6741 135.5734 6.3246 6.3246 re B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 103.8736 138.9088 m 108.3457 143.3809 l 103.8736 147.8531 l 99.4015 143.3809 l 103.8736 138.9088 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 58.9738 157.5998 m 55.8115 151.2753 l 62.1360 151.2753 l 58.9738 157.5998 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 139.0437 131.6824 m 139.8824 131.6824 140.6868 132.0155 141.2798 132.6086 c 141.8728 133.2016 142.2060 134.0060 142.2060 134.8446 c 142.2060 135.6833 141.8728 136.4877 141.2798 137.0807 c 140.6868 137.6737 139.8824 138.0069 139.0437 138.0069 c 138.2051 138.0069 137.4007 137.6737 136.8077 137.0807 c 136.2146 136.4877 135.8815 135.6833 135.8815 134.8446 c 135.8815 134.0060 136.2146 133.2016 136.8077 132.6086 c 137.4007 132.0155 138.2051 131.6824 139.0437 131.6824 c B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 137.0632 82.2949 6.3246 6.3246 re B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 58.5405 110.9378 m 63.0126 115.4099 l 58.5405 119.8821 l 54.0683 115.4099 l 58.5405 110.9378 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 90.7737 99.8400 m 87.6114 93.5154 l 93.9359 93.5154 l 90.7737 99.8400 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 104.5834 113.1336 m 105.4220 113.1336 106.2264 113.4668 106.8194 114.0598 c 107.4124 114.6528 107.7456 115.4572 107.7456 116.2959 c 107.7456 117.1346 107.4124 117.9390 106.8194 118.5320 c 106.2264 119.1250 105.4220 119.4582 104.5834 119.4582 c 103.7447 119.4582 102.9403 119.1250 102.3473 118.5320 c 101.7543 117.9390 101.4211 117.1346 101.4211 116.2959 c 101.4211 115.4572 101.7543 114.6528 102.3473 114.0598 c 102.9403 113.4668 103.7447 113.1336 104.5834 113.1336 c B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.0000 0.0000 0.0000 RG 1.0000 1.0000 1.0000 rg [] 0 d 272.4728 70.5600 172.0552 136.0800 re f Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 272.4728 70.5600 m 272.4728 67.0600 l B Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 333.9211 70.5600 m 333.9211 67.0600 l B Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 395.3694 70.5600 m 395.3694 67.0600 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 272.4728 79.0650 m 444.5280 79.0650 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 272.4728 79.0650 m 268.9728 79.0650 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 272.4728 107.4150 m 444.5280 107.4150 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 272.4728 107.4150 m 268.9728 107.4150 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 272.4728 135.7650 m 444.5280 135.7650 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 272.4728 135.7650 m 268.9728 135.7650 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 272.4728 164.1150 m 444.5280 164.1150 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 272.4728 164.1150 m 268.9728 164.1150 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 0.9020 0.9098 0.9216 RG [] 0 d 272.4728 192.4650 m 444.5280 192.4650 l S Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.0000 0.0000 0.0000 RG 0.0000 0.0000 0.0000 rg [] 0 d 272.4728 192.4650 m 268.9728 192.4650 l B Q}}
+\put(0,0){\AuditVector{q 0.8000 w 0.4863 0.5098 0.5333 RG [ 2.96 1.28 ] 0 d 272.4728 79.0650 m 444.5280 79.0650 l S Q}}
+\put(0,0){\AuditVector{q 0.7000 w 0.0000 0.0000 0.0000 RG [] 0 d 272.4728 70.5600 m 272.4728 206.6400 l S Q}}
+\put(0,0){\AuditVector{q 0.7000 w 0.0000 0.0000 0.0000 RG [] 0 d 272.4728 70.5600 m 444.5280 70.5600 l S Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 422.1844 189.3027 6.3246 6.3246 re B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 367.2028 117.1179 m 371.6749 121.5900 l 367.2028 126.0621 l 362.7307 121.5900 l 367.2028 117.1179 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 279.9702 82.2273 m 276.8080 75.9027 l 283.1325 75.9027 l 279.9702 82.2273 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.7451 0.4392 0.1725 rg [] 0 d 391.6858 123.1527 m 392.5244 123.1527 393.3288 123.4859 393.9218 124.0789 c 394.5149 124.6719 394.8481 125.4764 394.8481 126.3150 c 394.8481 127.1536 394.5149 127.9581 393.9218 128.5511 c 393.3288 129.1441 392.5244 129.4773 391.6858 129.4773 c 390.8471 129.4773 390.0427 129.1441 389.4497 128.5511 c 388.8567 127.9581 388.5235 127.1536 388.5235 126.3150 c 388.5235 125.4764 388.8567 124.6719 389.4497 124.0789 c 390.0427 123.4859 390.8471 123.1527 391.6858 123.1527 c B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 413.7869 104.2527 6.3246 6.3246 re B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 330.9864 84.0429 m 335.4586 88.5150 l 330.9864 92.9871 l 326.5143 88.5150 l 330.9864 84.0429 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 286.0866 86.9523 m 282.9243 80.6277 l 289.2489 80.6277 l 286.0866 86.9523 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.3137 0.5098 0.4510 rg [] 0 d 366.1566 94.8027 m 366.9952 94.8027 367.7996 95.1359 368.3926 95.7289 c 368.9856 96.3219 369.3188 97.1263 369.3188 97.9650 c 369.3188 98.8036 368.9856 99.6081 368.3926 100.2011 c 367.7996 100.7941 366.9952 101.1273 366.1566 101.1273 c 365.3179 101.1273 364.5135 100.7941 363.9205 100.2011 c 363.3275 99.6081 362.9943 98.8036 362.9943 97.9650 c 362.9943 97.1263 363.3275 96.3219 363.9205 95.7289 c 364.5135 95.1359 365.3179 94.8027 366.1566 94.8027 c B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 364.1760 142.0527 6.3246 6.3246 re B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 285.6533 97.2843 m 290.1254 101.7564 l 285.6533 106.2285 l 281.1812 101.7564 l 285.6533 97.2843 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 317.8865 101.1273 m 314.7242 94.8027 l 321.0488 94.8027 l 317.8865 101.1273 l B Q}}
+\put(0,0){\AuditVector{q 0.5000 w 1.0000 1.0000 1.0000 RG 0.2549 0.4118 0.5412 rg [] 0 d 331.6962 132.6027 m 332.5349 132.6027 333.3393 132.9359 333.9323 133.5289 c 334.5253 134.1219 334.8585 134.9264 334.8585 135.7650 c 334.8585 136.6037 334.5253 137.4081 333.9323 138.0011 c 333.3393 138.5941 332.5349 138.9273 331.6962 138.9273 c 330.8575 138.9273 330.0531 138.5941 329.4601 138.0011 c 328.8671 137.4081 328.5339 136.6037 328.5339 135.7650 c 328.5339 134.9264 328.8671 134.1219 329.4601 133.5289 c 330.0531 132.9359 330.8575 132.6027 331.6962 132.6027 c B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.2549 0.4118 0.5412 RG 0.2549 0.4118 0.5412 rg [] 0 d 114.4313 23.4419 m 115.2269 23.4419 115.9900 23.7580 116.5526 24.3206 c 117.1152 24.8831 117.4313 25.6463 117.4313 26.4419 c 117.4313 27.2375 117.1152 28.0006 116.5526 28.5632 c 115.9900 29.1258 115.2269 29.4419 114.4313 29.4419 c 113.6356 29.4419 112.8725 29.1258 112.3099 28.5632 c 111.7474 28.0006 111.4313 27.2375 111.4313 26.4419 c 111.4313 25.6463 111.7474 24.8831 112.3099 24.3206 c 112.8725 23.7580 113.6356 23.4419 114.4313 23.4419 c B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.7451 0.4392 0.1725 RG 0.7451 0.4392 0.1725 rg [] 0 d 114.4313 11.4419 m 115.2269 11.4419 115.9900 11.7580 116.5526 12.3206 c 117.1152 12.8831 117.4313 13.6463 117.4313 14.4419 c 117.4313 15.2375 117.1152 16.0006 116.5526 16.5632 c 115.9900 17.1258 115.2269 17.4419 114.4313 17.4419 c 113.6356 17.4419 112.8725 17.1258 112.3099 16.5632 c 111.7474 16.0006 111.4313 15.2375 111.4313 14.4419 c 111.4313 13.6463 111.7474 12.8831 112.3099 12.3206 c 112.8725 11.7580 113.6356 11.4419 114.4313 11.4419 c B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.3137 0.5098 0.4510 RG 0.3137 0.5098 0.4510 rg [] 0 d 181.4281 23.4419 m 182.2237 23.4419 182.9869 23.7580 183.5494 24.3206 c 184.1120 24.8831 184.4281 25.6463 184.4281 26.4419 c 184.4281 27.2375 184.1120 28.0006 183.5494 28.5632 c 182.9869 29.1258 182.2237 29.4419 181.4281 29.4419 c 180.6325 29.4419 179.8694 29.1258 179.3068 28.5632 c 178.7442 28.0006 178.4281 27.2375 178.4281 26.4419 c 178.4281 25.6463 178.7442 24.8831 179.3068 24.3206 c 179.8694 23.7580 180.6325 23.4419 181.4281 23.4419 c B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.2000 0.2000 0.2000 RG 0.2000 0.2000 0.2000 rg [] 0 d 181.4281 11.4419 m 182.2237 11.4419 182.9869 11.7580 183.5494 12.3206 c 184.1120 12.8831 184.4281 13.6463 184.4281 14.4419 c 184.4281 15.2375 184.1120 16.0006 183.5494 16.5632 c 182.9869 17.1258 182.2237 17.4419 181.4281 17.4419 c 180.6325 17.4419 179.8694 17.1258 179.3068 16.5632 c 178.7442 16.0006 178.4281 15.2375 178.4281 14.4419 c 178.4281 13.6463 178.7442 12.8831 179.3068 12.3206 c 179.8694 11.7580 180.6325 11.4419 181.4281 11.4419 c B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.2000 0.2000 0.2000 RG 0.2000 0.2000 0.2000 rg [] 0 d 256.5187 23.4419 6.0000 6.0000 re B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.2000 0.2000 0.2000 RG 0.2000 0.2000 0.2000 rg [] 0 d 259.5187 17.4419 m 256.5187 11.4419 l 262.5187 11.4419 l 259.5187 17.4419 l B Q}}
+\put(0,0){\AuditVector{q 1.0000 w 0.2000 0.2000 0.2000 RG 0.2000 0.2000 0.2000 rg [] 0 d 317.3125 22.1992 m 321.5551 26.4419 l 317.3125 30.6845 l 313.0699 26.4419 l 317.3125 22.1992 l B Q}}
+\put(42.5006,56.7221){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0}}
+\put(103.9489,56.7221){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}5}}
+\put(162.5378,56.7221){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}10}}
+\put(81.0282,43.7162){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}Inflation reduction (\%)}}
+\put(10.7975,80.7491){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}-0.15}}
+\put(10.7975,103.4290){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}-0.10}}
+\put(10.7975,126.1091){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}-0.05}}
+\put(18.3444,148.7890){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.00}}
+\put(18.3444,171.4691){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.05}}
+\put(18.3444,194.1490){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.10}}
+\put(45.3600,221.6400){\makebox(0,0)[bl]{\fontsize{10.0000}{12.0000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}a  Attacked-MAE change (\%)}}
+\put(269.6135,56.7221){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0}}
+\put(331.0617,56.7221){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}5}}
+\put(389.6506,56.7221){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}10}}
+\put(308.1411,43.7162){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}Inflation reduction (\%)}}
+\put(251.1759,75.6461){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.0}}
+\put(251.1759,103.9961){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.2}}
+\put(251.1759,132.3461){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.4}}
+\put(251.1759,160.6961){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.6}}
+\put(251.1759,189.0461){\makebox(0,0)[bl]{\fontsize{9.0000}{10.8000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}0.8}}
+\put(272.4728,221.6400){\makebox(0,0)[bl]{\fontsize{10.0000}{12.0000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}b  Failed-query change (pp)}}
+\put(125.6312,23.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}Synthetic}}
+\put(125.6312,11.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}JUCars}}
+\put(192.6281,23.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}MUCars}}
+\put(192.6281,11.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}Suppression}}
+\put(270.7188,23.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}Benefit}}
+\put(270.7188,11.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}Risk}}
+\put(328.5125,23.6419){\makebox(0,0)[bl]{\fontsize{8.0000}{9.6000}\fontfamily{lmss}\selectfont \color[rgb]{0.0000,0.0000,0.0000}CDM}}
+\end{picture}
+\endgroup
+
+\caption{Inflation reductions under the history cap coexist with predictive-error and query-failure costs. Both panels show the same twelve primary robust-estimator source/rule means at 10\% capacity, averaging three fixed fitting seeds on 1,000 shared listings per source. Colors denote sources and shapes denote query rules. Positive inflation reduction is favorable; positive attacked-MAE change (a) and failed-query change (b) are unfavorable. Error changes are within-source percentages; failure changes are percentage points per listing. These are descriptive means, without confidence intervals; nonconverged responses remain included. The full numerical comparison is indexed in Appendix~\ref{app:evidence}.}
+\label{fig:cap_tradeoffs}
+\end{figure}
+
+\subsection{Applicability beyond the zero-cost capped design}\label{sec:full_validation}
+Positive concealment costs changed some rankings through deterrence.
+In the synthetic top-$B$ subset, stipulated costs near 0.02 sharply reduced
+concealment and moved outcomes toward ordinary valuation; feedback no longer
+worsened the mean inflation in the high-cost specifications. Yet over 94\%
+of attempted queries failed in the uniform-cost subset, residual concealment
+remained positive, and the real-source directions stayed adverse. This
+supports a conditional regime change rather than a general feedback remedy.
+The full 108-cell cost design and net-deviation bounds remain in
+Appendices~\ref{app:evidence} and~\ref{app:diagnostics}.
+
+A separate frozen-original-model check removed the real-source evaluation
+caps, covering all 1,374 JUCars and 10,672 MUCars validation records. All 24
+feedback point directions remained adverse. The two MUCars masking/suppression
+intervals still crossed zero, with fitting-seed variability dominating the
+uncapped conditional variance. The cohort and record-count weighting both
+changed, so this is not a pure sample-size experiment or evidence of zero
+effect. It does not extend the RPL evaluation population: the RPL ten-seed
+study retains its fixed 1,000 listings per source. Complete uncapped counts,
+weighting and variance decompositions are in
+Appendices~\ref{app:evidence} and~\ref{app:diagnostics}.
+
+\clearpage
+\section{Discussion and conclusion}\label{sec:discussion}\label{sec:conclusion}
+The information frontier limits guarantees under indistinguishable reports;
+observed recovery paths diagnose a separate failure of fitted predictors.
+RPL links that diagnosis to learning and lowers inflation at the tested
+unit-weight endpoint, without private deployment inputs. Its zero-query
+component accounts descriptively for nearly all real-source improvement.
+The evidence supports recovery-graph-inspired regularization; it does not
+identify recovery as the main causal source of that improvement.
+Synthetic honest-error and failed-query increases, together with finite
+response regret, preclude a universal dominance claim. The matched crossing
+supports RPL as a complement to acquisition at the tested weights and cohorts.
+Native-head counterexamples and error/failure costs keep the deployment
+decision specific to the complete predictor--policy pair.
+
+Stronger-search interventions restrict the earlier negative feedback result
+to its weak-search implementation; they do not identify a unique causal bug
+or establish feedback benefit across sources. The history cap similarly has
+a useful fixed-peer guarantee but can worsen joint outcomes and raises
+same-record consistency issues. Decisions should therefore use the joint
+incentive, prediction and verification outcomes rather than inflation alone.
+
+The cohorts are retrospective advertised-price samples. Concealment, costs
+and response dynamics are modeled, not observed seller behavior; fitting
+seeds do not sample new training populations. Shared audit primitives and
+nonconverged profiles constrain computational and equilibrium interpretations.
+An independently operated Mac completed six synthetic/seed-13 training cells:
+inputs and tree backbones matched, but residual parameters and outcomes failed
+the original numerical tolerances. Later diagnostics locate the first recorded
+difference in output-layer gradients; unrecorded hidden activations prevent
+causal attribution to a particular primitive. One-seed directions agreed,
+which is not numerical equivalence. At 10\% capacity, the local/external paired inflation reductions are 53.97/57.54\%, but maximum residual regret for $\lambda=1$ changes from .000204 to .021973. Supplement S5 reports all six cells under the original failed tolerance verdict. An isolated float64 candidate has not
+replaced the formal experiments. Actual seller data and independently
+controlled numerical environments remain necessary transportability tests.
+
+\section*{Statements and declarations}
+\paragraph{Data and code.}
+Datasets are available under their versioned CC BY 4.0 records~\cite{jucarsdata,mucarsdata}.
+The public \href{https://github.com/T0Q0R/secondhand-valuation-research}{research repository}
+contains project-authored MIT code, protocols, aggregate results, figure data,
+resampling tensors and receipts; third-party software/data retain their own
+licenses. Large weights and per-listing artifacts remain on the research
+machine. Software and aggregate evidence through source commit \texttt{89ad56e} are archived at
+\href{https://doi.org/10.5281/zenodo.23447567}{DOI 10.5281/zenodo.23447567}.
+The later review diagnostics and stronger-gap comparison are subsequent repository evidence, not additions to that immutable ZIP. Supplement S6 maps versions and artifacts.
+
+\paragraph{AI assistance and author responsibility.}
+OpenAI Codex assisted implementation, orchestration, analysis, literature
+checks, data-derived figures and drafting. Figures use saved empirical
+results, not invented images. Authors retain responsibility for interpretation
+and approval. Yuchen Tang drafted the manuscript. Fengqin You provided supervision as advisor, and Junxiang Gu provided guidance on manuscript writing.
+
+\clearpage
+\appendix
+\section{Contextual policy-library witnesses}\label{app:library}
+Take $n>B\ge1$, a core $C$ of size $B$, and public active contexts
+$j\in\{B+1,\ldots,n\}$. Gaps in linear toy units are 2 for core items,
+1 for $j$, and $\epsilon=1/(B+2)$ for other items, using honest-exact
+missingness-alias worlds. The library includes every context-insensitive
+priority order and exact-gap risk ordering, but shares one mixing vector.
+Each priority chooses a fixed $B$-subset; risk always chooses the core.
+
+\begin{proposition}[Global-mixture separation]
+The optimal values are
+\[
+ T_{\rm global}=\frac{2(n-B)}{2n-B},\qquad
+ T_{\rm context}=\frac{2}{B+2}.
+\]
+For $n=B^2+B$, their ratio $B(B+2)/(2B+1)$ is unbounded in $B$.
+\end{proposition}
+\begin{proof}
+A global value $t$ requires $2(1-p_i)\le t$ on core items and
+$1-p_i\le t$ on every potentially active item. Summing yields
+$B\ge n-t(B/2+n-B)$. Core marginals $1-T_{\rm global}/2$ and other
+marginals $1-T_{\rm global}$ attain equality through fixed-priority lotteries.
+For one context, $B\ge B+1-t(B/2+1)$; core marginals $(B+1)/(B+2)$,
+active marginal $B/(B+2)$ and others zero attain its bound, with
+$\epsilon<T_{\rm context}$. Proposition~\ref{prop:compact} implements both.
+\end{proof}
+A stronger fixed library closes the gap: one rule queries the core and each
+of $B$ others replaces one core item by the active item. Fixed weights
+$2/(B+2)$ on the core rule and $1/(B+2)$ on each replacement yield exactly
+these contextual marginals. Thus the separation concerns rule information,
+not dynamic weights or the intrinsic necessity of an LP solver.
+
+Exact witnesses cover 26 $(n,B)$ cases, 257,274 context--item losses and
+15,922 context--rule allocations; sixteen small cases match independent
+complete-subset LPs. At $B=20,n=420$, the ratio is $440/41$. Freezing the
+active item or using uniform rule weights fails the optimum check. These
+constructed results neither explain real-source CDM loss nor guarantee
+unseen-context behavior.
+
+\section{Mechanism and uncertainty boundaries}\label{app:diagnostics}
+\paragraph{Conditional uncertainty.}
+For paired differences $Y$ with $S$ fitting seeds, independent bootstrap seed weights
+$U$ and normalized batch weights $V$ give $U^\top YV$. Set
+$m=\mathbb E[V]$, $C=\operatorname{Cov}(V)$,
+$r=Ym-\mathbf1\operatorname{mean}(Ym)$, $z=\operatorname{mean}_sY$ and
+$R=Y-\mathbf1z^\top-r\mathbf1^\top$. The exact conditional variance is
+\[
+ \|r\|^2/S^2+z^\top Cz+S^{-2}\sum_sR_s^\top CR_s.
+\]
+The seed, batch and interaction terms were independently checked on balanced
+and unequal $2\times2$ cases. All 48 real-source decompositions remain in
+the repository. Capped analysis uses ten equal batches; uncapped MUCars uses
+107 record-weighted batches including a 72-record tail. The outcome matrix
+and weighting both change: batch terms fall by 5.73/8.04 for top-$B$/minimax,
+while seed terms change by $-13.20\%/-9.43\%$. Within all 107 batches, changing
+only equal-batch to record-count weights changes the seed term by
+$-0.16\%/+0.11\%$. Thus neither expanded coverage nor its variance shares
+are a pure sample-size experiment. Over 98\% fitting-related shares describe
+the uncapped design only (capped: 87--91\%); no equivalence or zero-effect
+claim follows from intervals crossing zero.
+
+\paragraph{Positive-cost mechanism.}
+The 108-cell post-hoc subset uses robust initialization/suppression scoring,
+three seeds, both feedback settings and allocators, with cost .005, .02 or
+$.02h_i$, $h_i\in[.5,1.5)$. Responses are recomputed, not adjusted by
+subtracting costs afterward. For cost $C_i=c_i k_i$, positive quote gain
+$G_i$, positive best-legal-utility gain $N_i$ and remaining regret $\rho_i$,
+$C_i-\rho_i\le G_i-N_i\le C_i$. These bounds, not division by mean
+heterogeneous cost, identify concealment ranges. Twenty nonconverged batches
+remain. Synthetic top-$B$ cost-.02 hidden-field means are bounded by
+$[.130,.165]/[.130,.181]$ without/with feedback, versus .996/.957 at zero cost;
+net-deviation envelopes fall 77.5\%/81.1\%. Failed queries reach 9.47\%/9.40\%
+per listing (at least 94.7\%/94.0\% of attempts). High costs move the subset
+toward ordinary valuation and feedback no longer worsens mean inflation,
+but residual concealment stays positive. Uniform-.02 benefit appears in only
+one seed, heterogeneous-cost benefit in all three; real-source directions
+remain adverse. This supports deterrence alongside a local ranking reversal,
+not causally identified improvement of feedback quality.
+
+\paragraph{Final-record envelope.}
+Three robust/no-feedback fits per real source enumerate categorical
+transmission/fuel/condition completions from training vocabularies, with
+mileage observed and fixed. Unsupported categories or missing mileage abstain.
+Current records are included; singleton domains leave quotes unchanged.
+Of 999 covered MUCars records, 971 have singleton completions and zero cost;
+the 28 naturally incomplete records concentrate its error increase. Of 801
+covered JUCars records, 800 are singletons and all 801 retain the same quote.
+The largest individual MUCars quotation reduction is 25.5\% of that
+record's original predicted quote. Quote discounts and absolute-error costs
+have different denominators. Thus the restricted envelope is costless on
+complete covered records but can be expensive with natural missingness. Table~\ref{tab:final_record_pilot} retains all pilot ranges;
+these are not confidence intervals or a tested four-field replacement.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{llrrr}\toprule
+Source & Support & Records & Honest-MAE change & Mean quote reduction\\\midrule
+JUCars & Covered & 801 & 0 & 0\\
+JUCars & Missing category & 1 & 0 & 0\\
+MUCars & Covered & 999 & 10.49--23.87 & 200.21--240.51\\
+MUCars & Missing category & 28 & 374.24--851.51 & 7,143.33--8,581.21\\
+\bottomrule\end{tabular}
+\caption{Final-record categorical-envelope pilot. Entries are per-source
+three-seed ranges, not uncertainty intervals; positive MAE changes are worse.
+Price quantities use source currency units. Missing-category rows are subsets
+of covered rows, not additional observations. JUCars abstains on 199 records,
+MUCars on one, all for missing mileage.}\label{tab:final_record_pilot}
+\end{table}
+\section{Recent-method adaptations and numerical comparison}\label{app:completion_methods}
+The matched comparison in Table~\ref{tab:recent_primary} uses the same
+three sources, fitting seeds 13/42/2026, evaluation records, batch ordering,
+gap weight .5, no-feedback schedule and 10\% capacity for both RPL settings.
+Its 90 cells add no fits: four neural acquisition tables reuse their frozen
+training-only choices, while ACO reconstructs all sixteen guidance-bank
+observation losses under each predictor. The native suppression heads reuse
+18 previously audited cells with identical predictor/evaluation hashes and
+listing order. Their three-seed means are distinct from the ten-seed means
+in Table~\ref{tab:rpl_primary}. Per-seed outcomes, full ranges and
+convergence values are at \path{notes/rpl-paper-integration-v1/}.
+
+All adapters share a one-query hard cap, public nonquery context and
+unrecoverable natural absence. The four classification adapters train on
+four price-quantile classes; using their scores as cross-listing priorities
+has no cardinal-comparability theorem. Concealed-mileage perturbations leave
+the relevant public-state scores unchanged. The earlier two fixed-backend,
+six-budget study (540 cells plus 36 ACO sensitivities) remains in
+\path{outputs/recent-five-analysis-v1/}; its budget curves are preserved at
+\path{paper/figures/postcompute-v1/recent_budget_curves.pdf}. The present
+table answers the matched RPL/stacking question instead.
+
+SEFA uses official MIT code (commit \texttt{3af8da2}), configurations 1/5/9
+and 120 epochs/trial. GDFS/DIME use that repository's comparison
+implementations: GDFS retains relaxed one-hot selection and temperature
+annealing; DIME retains entropy-scaled values and epsilon-greedy choice.
+They use 80 pretraining epochs and 15 per annealing stage. They start from legal public states, train at most two
+recoveries and do not reproduce the original learning-rate scheduler.
+Explanation-ranked AFA uses official network classes (\texttt{d08f39a}):
+MLP and three-layer/four-head GPT, hidden width 128, embedding width 64.
+A training-only 250-tree classifier supplies summed field/missing-indicator
+TreeSHAP ranks. Its masked prediction, ranking and trajectory stages use 250, 200 and 16
+epochs, respectively, with two recoveries and a fixed initial marker;
+learning rates .001/.0005/.0003 form the local grid. All four select three
+configurations with a training-only 80:20 split, then refit all training
+records. SEFA selects masked validation NLL/epoch; the other three select
+mean pre/post-query NLL and retain full schedules. Selection objectives
+therefore differ. These are documented task adaptations, not official
+end-to-end reproductions.
+
+ACO-1 is a clean-room regression adaptation. A training-only neighbor bank
+estimates loss changes for sixteen observation patterns, using observed query
+coordinates and fixed $k=25$ neighbors (fixed sensitivities 10/25/50).
+Unrecoverable bank values give zero benefit. Classic risk/benefit heads,
+static robust, CDM and the adapted support-margin control remain comparators.
+The support-margin categorical fallback rates are 75.3\%, 87.3\% and 65.6\%
+on synthetic/JUCars/MUCars; its 94,527-case enumeration check does not restore
+the original guarantee on fallback rows. These support-margin comparisons do not isolate acquisition effects.
+
+\paragraph{Shared honest errors.}
+For $\lambda=0$ and 1, honest MAE is respectively 3566.27 and 3601.64 (synthetic), 7084.30 and 7070.78 (JUCars), and 27154.31 and 26906.52 (MUCars). Each pair is shared by all six acquisition choices. Table~\ref{tab:recent_primary} gives their remaining absolute outcomes.
+\setlength{\LTcapwidth}{\textwidth}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrrr}
+\caption{Absolute matched outcomes at 10\% capacity, $\beta=.5$, three seeds. Each slash separates $\lambda=0/1$. MAE is in source currency; failed queries are percent of all listings. All nonconverged profiles remain included.}\label{tab:recent_primary}\\
+\toprule Source & Acquisition & Inflation $0/1$ & Attacked MAE $0/1$ & Failed (\%) $0/1$\\\midrule\endfirsthead
+\toprule Source & Acquisition & Inflation $0/1$ & Attacked MAE $0/1$ & Failed (\%) $0/1$\\\midrule\endhead
+synthetic & Native head & 0.01303/0.00639 & 3642.04/3608.84 & 2.87/3.50\\
+synthetic & ACO & 0.00988/0.00537 & 3608.08/3602.35 & 3.47/3.50\\
+synthetic & SEFA & 0.01019/0.00530 & 3601.58/3595.37 & 3.40/3.53\\
+synthetic & GDFS & 0.01353/0.00907 & 3650.50/3622.99 & 3.27/3.20\\
+synthetic & DIME & 0.01306/0.00782 & 3636.75/3612.32 & 2.27/3.50\\
+synthetic & Expl.-AFA & 0.01388/0.00903 & 3655.20/3626.37 & 3.23/3.33\\
+\midrule
+jucars & Native head & 0.01380/0.00922 & 7078.99/7066.68 & 4.37/5.83\\
+jucars & ACO & 0.01401/0.00952 & 7079.86/7066.35 & 2.23/2.80\\
+jucars & SEFA & 0.01338/0.00929 & 7080.43/7066.00 & 3.83/3.77\\
+jucars & GDFS & 0.01290/0.00878 & 7076.49/7065.10 & 4.73/5.60\\
+jucars & DIME & 0.01396/0.00939 & 7075.43/7064.21 & 4.07/4.73\\
+jucars & Expl.-AFA & 0.01294/0.00880 & 7081.03/7065.39 & 4.20/4.93\\
+\midrule
+mucars & Native head & 0.00666/0.00541 & 27363.19/27070.79 & 0.33/0.33\\
+mucars & ACO & 0.00575/0.00460 & 27335.00/27068.14 & 0.30/0.60\\
+mucars & SEFA & 0.00549/0.00425 & 27319.44/27019.15 & 0.27/0.50\\
+mucars & GDFS & 0.00563/0.00419 & 27345.27/27057.07 & 0.57/0.87\\
+mucars & DIME & 0.00641/0.00519 & 27349.46/27056.62 & 0.60/0.80\\
+mucars & Expl.-AFA & 0.00557/0.00432 & 27317.58/27035.70 & 0.03/0.20\\
+\bottomrule\end{longtable}
+\section{Historical controls and reproducibility index}\label{app:evidence}
+The public repository preserves the full pre-compression manuscript at
+\href{https://github.com/T0Q0R/secondhand-valuation-research/tree/f5da885b4670dba185930237776d2c779954c11b}{commit \texttt{f5da885}},
+including the original 17 figures and 18 tables. Current figure source data,
+all fitted comparisons and failed receipts remain available. This compact
+appendix summarizes secondary controls rather than duplicating their full
+tables; no experiment, negative outcome or nonconverged row was excluded.
+
+\paragraph{Original comparisons.}
+In ten-seed original-protocol comparisons at 10\% capacity, comparator-minus-SAV
+inflation differences for static robust are $-.009091$ (synthetic),
+$-.002906$ (JUCars) and $-.000829$ (MUCars). The synthetic interval excludes
+zero; both real-source intervals cross it. These 620 cells/source are not
+the matched factorial. In separately recomputed common-response controls,
+ordinary benefit and ACO beat SAV on synthetic/JUCars; some larger-cap
+MUCars comparisons favor SAV. No evaluation-best tuning cap replaces the
+declared role. CDM's finite rows/library and adapted support-margin fallbacks
+also preclude a universal original-method advantage.
+
+\paragraph{Allocation and history cap.}
+Among eighteen primary allocator contrasts, score-minimax worsens inflation
+in ten; only two pass the descriptive joint gate. Gate cutoffs of 10\%
+inflation reduction and 5\% honest-error increase are retrospective design
+thresholds, not utility-identified requirements. Continuous effects and
+threshold grids remain in the record, including JUCars' unrounded 9.985\%
+case. The fixed-profile cap check covers 108 cases and 5,671,620 legal rows;
+all honest quotes are unchanged and envelopes weakly decrease, as predicted.
+Risk's primary improvement is zero. After recomputing seller responses,
+432 cells contain 94 attacked-MAE and 145 failed-query increases; 33 cells
+retain nonconverged batches, with maximum regret .204423. The mechanically
+nonincreasing fixed-profile cap is not a new empirical dominance finding.
+
+\paragraph{Expanded cohorts.}
+Removing both original-model real-source caps evaluates all 1,374/10,672
+JUCars/MUCars records: 480 cells, 29,040 batches, 2,891,040 rows and
+31,269,840 legal deviations. First-ten-batch records and receipts are reused
+byte-for-byte; new batches use no retraining. Final batch sizes 74/72 use
+budget 7 at 10\%. All returned real-source batches meet the finite unilateral
+tolerance, with recorded maximum regret zero. All 24 feedback directions stay
+adverse, 12 JUCars and 10 MUCars unadjusted intervals exclude zero; the two
+MUCars masking/suppression intervals still cross zero. These checks concern
+frozen original models, not an uncapped RPL population.
+
+\paragraph{Audit coverage and surviving failures.}
+Original fit checks reconstruct 2,068,360 held-out rows and refit 420 heads;
+outcome checks cover 4.32 million rows and 45,372,960 legal deviations;
+statistics reconstruction checks 9,216 metric contrasts. The separate state
+oracle rejects four injected transition/materialization faults but does not
+reimplement datasets, predictors or optimizers. The new 1,206-cell chain uses
+shared primitives too. The initial ACO auditor subtracted float32 bank/query
+arrays, while production promotes both to float64 before distances. The
+separate corrected auditor reproduces all 144 ACO cells without changing
+production, results or tolerance; the failed receipt is retained. Earlier
+argmax-identity failures arose from ties (largest payoff gap
+$6.94\times10^{-18}$); saved original winners remain. Neither mutation
+rejection nor computational agreement is independent scientific approval.
+
+\begin{table}[tbp]\centering\small
+\caption{Compact evidence map. Paths are relative to the public repository.}
+\label{tab:claims}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.27\textwidth}>{\raggedright\arraybackslash}p{.65\textwidth}}\toprule
+Evidence & Public location / scope\\\midrule
+Original factorial & \path{notes/factorial-final/}; 4,320-cell chain\\
+Core extensions & \path{notes/core-evidence-v2/completed-stages/}; 1,206 unique cells\\
+RPL ten-seed effects & \path{notes/ten-seed-visual-review-v1/}; all seeds and figure CSVs\\
+RPL--acquisition comparison & \path{notes/rpl-paper-integration-v1/}; 90 crossed + 18 reused cells\\
+Expanded real cohorts & \path{notes/revision-review-v2/evaluation/}; 480 cells\\
+Cost/envelope diagnostics & \path{notes/revision-mechanisms-v3/}; source-bound checks\\
+Strict external mismatch & \path{notes/external-reproduction-synthetic-v1/}; failures retained\\
+Original and revised figure assets & \path{paper/figures/}; vector and raster sources\\\bottomrule
+\end{tabular}\end{table}
+
+\begingroup\small
+\begin{thebibliography}{99}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+\bibitem{jucarsdata} N. Thalji.
+JUCars-2024: A Dataset of Used Car Listings in Jordan.
+Mendeley Data, version 2, 2026. doi:10.17632/ddcz486x5t.2.
+\bibitem{mucarsdata} E. Tabarnoust, M. Mghari and Y. Zaz.
+Moroccan Used Cars Dataset (MUCars -- 2024).
+Mendeley Data, version 2, 2024. doi:10.17632/vjrbcb2rrt.2.
+\bibitem{marginals} J. Letchford and V. Conitzer.
+\emph{Solving Security Games on Graphs via Marginal Probabilities}.
+AAAI, 2013, pp. 591--597. \url{https://doi.org/10.1609/aaai.v27i1.8688}.
+\bibitem{audits} A. Estornell, S. Das and Y. Vorobeychik.
+\emph{Incentivizing Truthfulness Through Audits in Strategic Classification}.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+35(6):5347--5354, 2021. \url{https://doi.org/10.1609/aaai.v35i6.16674}.
+\bibitem{certmonotone} X. Liu, X. Han, N. Zhang and Q. Liu.
+\emph{Certified Monotonic Neural Networks}.
+Advances in Neural Information Processing Systems, 2020.
+\url{https://arxiv.org/abs/2011.10219}.
+\bibitem{withheld} A. K. Krishnaswamy, H. Li, D. Rein, H. Zhang and V. Conitzer.
+\emph{Classification with Strategically Withheld Data}.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+35(6):5514--5522, 2021. \url{https://doi.org/10.1609/aaai.v35i6.16694}.
+\bibitem{partial} H. Zhang, Y. Cheng and V. Conitzer.
+\emph{Automated Mechanism Design for Classification with Partial Verification}.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+35(6):5789--5796, 2021.
+\url{https://doi.org/10.1609/aaai.v35i6.16725}.
+\bibitem{contextual} P. G. Sessa, I. Bogunovic, A. Krause and M. Kamgarpour.
+\emph{Contextual Games: Multi-Agent Learning with Side Information}.
+NeurIPS, 2020.
+\url{https://papers.nips.cc/paper/2020/file/f9afa97535cf7c8789a1c50a2cd83787-Paper.pdf}.
+\bibitem{auditrisk} R. Ebrahimi and M. Franceschetti.
+\emph{Strategic Classification Has a Missing Lever: Audit Risk}.
+arXiv:2609.22534v1, 18 September 2026, preprint.
+\url{https://arxiv.org/abs/2609.22534}.
+\bibitem{smi} J. Zhang, X. Liu and X.-B. Li.
+\emph{Predictive Analytics with Strategically Missing Data}.
+INFORMS Journal on Computing, 32(4):1143--1156, 2020.
+\url{https://doi.org/10.1287/ijoc.2019.0947}.
+\bibitem{performative} J. Perdomo, T. Zrnic, C. Mendler-D\"unner and M. Hardt.
+\emph{Performative Prediction}. ICML, PMLR 119:7599--7609, 2020.
+\url{https://proceedings.mlr.press/v119/perdomo20a.html}.
+\bibitem{serm} S. Levanon and N. Rosenfeld.
+\emph{Strategic Classification Made Practical}. ICML, PMLR 139:6243--6253, 2021.
+\url{https://proceedings.mlr.press/v139/levanon21a.html}.
+\bibitem{activeoracle} M. Valancius, M. Lennon and J. Oliva.
+Acquisition Conditioned Oracle for Nongreedy Active Feature Acquisition.
+ICML, PMLR 235:48957--48975, 2024.
+\url{https://proceedings.mlr.press/v235/valancius24a.html}.
+\bibitem{catboost} L. Prokhorenkova, G. Gusev, A. Vorobev, A. V. Dorogush and A. Gulin.
+CatBoost: Unbiased Boosting with Categorical Features.
+Advances in Neural Information Processing Systems 31, 2018.
+\url{https://proceedings.neurips.cc/paper_files/paper/2018/hash/14491b756b3a51daac41c24863285549-Abstract.html}.
+\bibitem{extratrees} P. Geurts, D. Ernst and L. Wehenkel.
+Extremely Randomized Trees. Machine Learning 63:3--42, 2006.
+\url{https://doi.org/10.1007/s10994-006-6226-1}.
+\bibitem{pigeonhole} A. B. Owen. The Pigeonhole Bootstrap.
+The Annals of Applied Statistics 1(2):386--411, 2007.
+\url{https://doi.org/10.1214/07-AOAS122}.
+\bibitem{romanowolf} J. P. Romano and M. Wolf. Exact and Approximate Stepdown
+Methods for Multiple Hypothesis Testing. Journal of the American Statistical
+Association 100(469):94--108, 2005.
+\url{https://doi.org/10.1198/016214504000000539}.
+
+\bibitem{gdfs} I. C. Covert, W. Qiu, M. Lu, N. Y. Kim, N. J. White and S.-I. Lee.
+Learning to Maximize Mutual Information for Dynamic Feature Selection.
+ICML, PMLR 202:6424--6447, 2023.
+\url{https://proceedings.mlr.press/v202/covert23a.html}.
+\bibitem{dime} S. Gadgil, I. Covert and S.-I. Lee.
+Estimating Conditional Mutual Information for Dynamic Feature Selection.
+ICLR, 2024. \url{https://arxiv.org/abs/2306.03301}.
+\bibitem{sefa} A. L. I. Norcliffe, C. Lee, F. Imrie, M. van der Schaar and P. Lio.
+Stochastic Encodings for Active Feature Acquisition.
+ICML, PMLR 267:46784--46814, 2025.
+\url{https://proceedings.mlr.press/v267/norcliffe25a.html}.
+\bibitem{explainafa} O. B. Guney, K. S. Saichandran, K. Elzokm, Z. Zhang and V. B. Kolachalama.
+Active Feature Acquisition via Explainability-driven Ranking.
+ICML, PMLR 267:20748--20765, 2025.
+\url{https://proceedings.mlr.press/v267/guney25a.html}.
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-10-19T08:22:33+08:00",
+  "snapshot_time": "2026-10-19T08:28:30+08:00",
   "timezone": "Asia/Shanghai",
   "full_factorial": {
     "source_seed_pairs": 30,
@@ -28,23 +28,23 @@
   },
   "manuscript": {
     "integrated_scientific_manuscript_complete": true,
-    "revision_status": "working_draft_full_gap_results_not_integrated",
-    "pages": 26,
+    "revision_status": "review_improvement_integrated_checked_bundle_pending",
+    "pages": 27,
     "authors_affiliations_omitted": false,
     "builtin_compilation": "success",
     "same_manuscript_pdf_export": "success",
-    "all_page_visual_review": "26main/10supplement pages checked; new gap results still pending",
-    "source_sha256": "fe7c4493064d56d4642f2ca705ab7f11eb4f2683b0276146492066942ed74609",
-    "pdf_sha256": "a156216e79eaef0974724e40b6312ef3b70057bab82f9bae48e546ec39eecee4",
+    "all_page_visual_review": "27 main + 13 supplement pages passed; new controls integrated",
+    "source_sha256": "5341944140f63d30eccd479845a0e42abecb04d9de8fc32b4b3a347456b9a746",
+    "pdf_sha256": "ea7398dae86baf5c99132a35375336cdfb68f40fae388766e74ce418daa6b66e",
     "submission": "not_submitted",
     "formal_submission_ready": false,
-    "abstract_words": 208,
+    "abstract_words": 203,
     "figure_count": 7,
-    "main_pages_including_declarations": 19,
-    "appendix_and_references_pages": 9,
+    "main_pages_including_declarations": 21,
+    "appendix_and_references_pages": 6,
     "main_figure_count": 8,
     "appendix_figure_count": 4,
-    "table_count": 9,
+    "table_count": 10,
     "reference_count": 21,
     "corresponding_author": "Fengqin You",
     "corresponding_email": "irisyou@njust.edu.cn",
@@ -62,19 +62,19 @@
     "author4_affiliation_chinese": "南京理工大学紫金学院计算机与人工智能学院",
     "figures": 7,
     "tables": 9,
-    "author_order_revision": "corrected in working source/PDF; substantive integration and final QA pending",
+    "author_order_revision": "Tang/You/Gu/Pang verified in final source and title pages",
     "author_contributions_confirmed_subset": {
       "Yuchen Tang": "manuscript writing",
       "Fengqin You": "advisor supervision",
       "Junxiang Gu": "manuscript writing guidance"
     },
-    "current_QA": "notes/review-improvement-v1/qa-interim.json",
+    "current_QA": "notes/review-improvement-v1/qa.json",
     "supplement": {
       "path": "paper/review-supplement-v1/main.pdf",
-      "pages": 10,
-      "source_sha256": "0dcff2b3c060d91fd4fd31de12530312eb6b59296577fa745f1dd5ec59079e98",
-      "pdf_sha256": "f8139dce37c197dd240d172d558d382b6603b56d3c760f7af2ae5758049a35e7",
-      "status": "working_S4_gap_comparison_explicitly_unfinished"
+      "pages": 13,
+      "source_sha256": "8a7292cdb33933ca52be933346f4ab3f14fd50634faa2143e6d8513339809693",
+      "pdf_sha256": "eadfddbbaf5d5ca3112ba6a13bd508c69ee4bcf1413fe2babeec256495d7dc18",
+      "status": "full_S4_integrated_and_checked"
     }
   },
   "figures": {
@@ -108,7 +108,7 @@
     "current_figure_assets": "notes/results-visual-v5/visual-assets-index.json",
     "new_full_paper_bundle": "not_created_under_experiment_first_instruction"
   },
-  "completion_scope": "28-page manuscript compression delivered; separate RPL90 evaluation retains its own runtime status; not actual submission or external numerical pass",
+  "completion_scope": "Full review-driven scientific revision integrated and checked; current delivery bundle pending. Not external numerical pass or actual submission.",
   "remaining_for_actual_submission": [
     "author responsibility and factual declarations",
     "institution CAS edition/category and selected template",
@@ -794,8 +794,8 @@
     "updated_at": "2026-10-18T19:03:16+08:00"
   },
   "review_improvement_v1": {
-    "time": "2026-10-19T08:18:58+08:00",
-    "status": "gap90_analysis_and_figure_checked_manuscript_integration_pending",
+    "time": "2026-10-19T08:28:30+08:00",
+    "status": "full_gap_manuscript_integrated_compiled_and_visually_checked_bundle_pending",
     "plan": "notes/review-improvement-v1/PLAN.zh.md",
     "gap_new_fit_count": 360,
     "gap_new_evaluation_cells": 90,
@@ -833,11 +833,14 @@
     "mechanism_status": "completed",
     "runtime_equivalence_check": "outputs/review-gap-controls-v2/engineering-check.json",
     "interim_paper_qa": "notes/review-improvement-v1/qa-interim.json",
-    "final_gap_integration": false,
+    "final_gap_integration": true,
     "gap_unique_candidate_cells": 210,
     "gap_selected_cells": 60,
     "gap_verification": "notes/review-improvement-v1/gap/verification.json",
     "independent_selection_audit": "notes/review-improvement-v1/gap/independent-selection-audit.json",
-    "gap_figure_qa": "notes/review-improvement-v1/figure-qa.json"
+    "gap_figure_qa": "notes/review-improvement-v1/figure-qa.json",
+    "qa": "notes/review-improvement-v1/qa.json",
+    "review_response": "notes/review-improvement-v1/REVIEW_RESPONSE.zh.md",
+    "scalar_receipts": "notes/review-improvement-v1/gap/scalar-receipts-index.json"
   }
 }

@@ -1,0 +1,236 @@
+{
+  "status": "source_numeric_and_visual_checks_passed",
+  "timestamp": "2026-10-19T08:26:53+08:00",
+  "documents": [
+    {
+      "name": "main",
+      "source_sha256": "5341944140f63d30eccd479845a0e42abecb04d9de8fc32b4b3a347456b9a746",
+      "pdf_sha256": "ea7398dae86baf5c99132a35375336cdfb68f40fae388766e74ce418daa6b66e",
+      "pages": 27,
+      "overfull": 0,
+      "underfull_warnings": 4,
+      "labels_unique": true,
+      "refs_defined": true,
+      "author_order_verified": [
+        "Yuchen Tang",
+        "Fengqin You",
+        "Junxiang Gu",
+        "Xin Pang"
+      ],
+      "page_info": [
+        {
+          "page": 1,
+          "opening": "When Does Verification Help?\nRecovery-Path Regularization for Strategy-Aware Valuation\nYuchen Tang\nF"
+        },
+        {
+          "page": 2,
+          "opening": "that a finite feedback-training implementation will improve continuous quotations after failed-but-\n"
+        },
+        {
+          "page": 3,
+          "opening": "3\nProblem formulation\n3.1\nReports, queries and allocation\nA batch contains n = 100 listings. Listing"
+        },
+        {
+          "page": 4,
+          "opening": "4\nInformation limits and finite comparators\n4.1\nAn attainable precision frontier\nConsider a missingn"
+        },
+        {
+          "page": 5,
+          "opening": "Marginal optimization is established [3]. This specialization uses OnF + 1 variables but does\nnot re"
+        },
+        {
+          "page": 6,
+          "opening": "5.3\nConditional cap and final-record alternative\nA diagnostic history cap uses qcap(r, a) = min{q(r,"
+        },
+        {
+          "page": 7,
+          "opening": "honest anchoring, mask training uses LH +.25LV +.25LA. Robust training adds .5Lattack +.5Lgain,\nwith"
+        },
+        {
+          "page": 8,
+          "opening": "Table 2: Computational audit scope.\nCounts overlap where explicitly stated; human scientific\napprova"
+        },
+        {
+          "page": 9,
+          "opening": "7\nResults\n7.1\nRecovery failures in the learned four-field class\nThe recovery-path prediction is obse"
+        },
+        {
+          "page": 10,
+          "opening": "Loss-component boundary.\nThe matched path/gap comparison (Figure 2) distinguishes path\nregularizatio"
+        },
+        {
+          "page": 11,
+          "opening": ".001527/.001573 on MUCars. Thus zero-query improvements are 98.3% and 97.1% of the real-\nsource 10% "
+        },
+        {
+          "page": 12,
+          "opening": "0\n5\n10\n15\nInflation improvement\n(0.001 log units)\n\u03bb=0.1\n\u03bb=0.5\n\u03bb=1\n\u03bb=0.5; \u03b2=0\na\nSynthetic\n0\n5\n10\nInfl"
+        },
+        {
+          "page": 13,
+          "opening": "0.0\n0.5\n1.0\n1.5\nHonest MAE change (%)\n0\n10\n20\n30\n40\n50\nInflation reduction (%)\na\nSynthetic\n\u22121.0\n\u22120.5"
+        },
+        {
+          "page": 14,
+          "opening": "0\n10%\n30%\nQuery capacity\n0.005\n0.010\n0.015\nPositive log inflation\na\nSynthetic\n0\n10%\n30%\nQuery capaci"
+        },
+        {
+          "page": 15,
+          "opening": "0\n10%\n30%\nQuery capacity\n0\n20\n40\n60\nNonconverged batches (%)\na\nSynthetic\n0\n10%\n30%\nQuery capacity\n0\n"
+        },
+        {
+          "page": 16,
+          "opening": "7.3\nMatched RPL and five recent acquisition families\nThe direct comparison crosses \u03bb = 0, 1 with ACO"
+        },
+        {
+          "page": 17,
+          "opening": "Table 7: Matched RPL\u2013acquisition comparison at 10% capacity and \u03b2 = .5. Each entry averages\nthe same"
+        },
+        {
+          "page": 18,
+          "opening": "\u221210\n0\nInflation improvement\n(0.001 log units)\nEpoch weak\nBatch weak\nEpoch strong\nBatch strong\na\nSynt"
+        },
+        {
+          "page": 19,
+          "opening": "and failed-query rates in 145, despite unchanged honest MAE. Figure 7 shows those costs alongside\nin"
+        },
+        {
+          "page": 20,
+          "opening": "1,374 JUCars and 10,672 MUCars validation records. All 24 feedback point directions remained\nadverse"
+        },
+        {
+          "page": 21,
+          "opening": "8\nDiscussion and conclusion\nThe information frontier limits guarantees under indistinguishable repor"
+        },
+        {
+          "page": 22,
+          "opening": "A\nContextual policy-library witnesses\nTake n > B \u22651, a core C of size B, and public active contexts "
+        },
+        {
+          "page": 23,
+          "opening": "Positive-cost mechanism.\nThe 108-cell post-hoc subset uses robust initialization/suppression\nscoring"
+        },
+        {
+          "page": 24,
+          "opening": "as cross-listing priorities has no cardinal-comparability theorem. Concealed-mileage perturbations\nl"
+        },
+        {
+          "page": 25,
+          "opening": "Source\nAcquisition\nInflation 0/1 Attacked MAE 0/1 Failed (%) 0/1\njucars\nExpl.-AFA\n0.01294/0.00880\n70"
+        },
+        {
+          "page": 26,
+          "opening": "Table 10: Compact evidence map. Paths are relative to the public repository.\nEvidence\nPublic locatio"
+        },
+        {
+          "page": 27,
+          "opening": "[13] M. Valancius, M. Lennon and J. Oliva. Acquisition Conditioned Oracle for Nongreedy Active Fea-\n"
+        }
+      ],
+      "detail_pages": [
+        1,
+        2,
+        6,
+        8,
+        10,
+        11,
+        21
+      ]
+    },
+    {
+      "name": "supplement",
+      "source_sha256": "8a7292cdb33933ca52be933346f4ab3f14fd50634faa2143e6d8513339809693",
+      "pdf_sha256": "eadfddbbaf5d5ca3112ba6a13bd508c69ee4bcf1413fe2babeec256495d7dc18",
+      "pages": 13,
+      "overfull": 0,
+      "underfull_warnings": 2,
+      "labels_unique": true,
+      "refs_defined": true,
+      "author_order_verified": [
+        "Yuchen Tang",
+        "Fengqin You",
+        "Junxiang Gu",
+        "Xin Pang"
+      ],
+      "page_info": [
+        {
+          "page": 1,
+          "opening": "Supplement to When Does Verification Help?\nRecovery-Path Regularization for Strategy-Aware Valuation"
+        },
+        {
+          "page": 2,
+          "opening": "of full-source representativeness.\nSplit buckets use the first eight hexadecimal digits of a non-\npr"
+        },
+        {
+          "page": 3,
+          "opening": "Log target is\ny = 10.3 + .23M + .1V \u2212.072A \u2212.20 log(1 + K/50000)\n+ .12C + .08T + .04D + .02P \u2212.061[C"
+        },
+        {
+          "page": 4,
+          "opening": "Table S6: Ten-seed recovery diagnostics: positive-gain violations, raw quote increases and positive\n"
+        },
+        {
+          "page": 5,
+          "opening": "S3\nFixed reports versus reselected responses\nFor each source/seed, retain the \u03bb = 0, 10%-capacity re"
+        },
+        {
+          "page": 6,
+          "opening": "cohorts had been used in development, so this is not independent confirmation or an expanded-\npopula"
+        },
+        {
+          "page": 7,
+          "opening": "selection rule. They include selection\u2019s observed training randomness, but do not cover the develop-"
+        },
+        {
+          "page": 8,
+          "opening": "0\n2\n4\nHonest MAE change (%)\n\u221225\n0\n25\n50\n75\nInflation reduction (%)\na\nSynthetic\n\u22122\n0\n2\nHonest MAE cha"
+        },
+        {
+          "page": 9,
+          "opening": "Table S12: Existing external-machine numerical comparison, synthetic seed 13. Each entry is local\nre"
+        },
+        {
+          "page": 10,
+          "opening": "\u2022 Current artifact hashes: notes/review-improvement-v1/qa.json. They bind saved files;\nthey do not e"
+        },
+        {
+          "page": 11,
+          "opening": "-0.01\n0.00\n0.01\n0.02\nInflation minus S1F1G1\nS0F0G0\nS0F0G1\nS0F1G0\nS0F1G1\nS1F0G0\nS1F0G1\nS1F1G0\nS1F1G1\n"
+        },
+        {
+          "page": 12,
+          "opening": "0\n0.1\n0.25\n0.5\n1\n2\nGap weight\nDefault = 0.5\n0.01\n0.02\n0.03\n0.04\nLog inflation (10% capacity)\na\nGap w"
+        },
+        {
+          "page": 13,
+          "opening": "0\n0.125\n0.25\n0.5\n1\nAnchor weight\nDefault = 0.25\n0.8\n1.0\n1.2\nInflation / Matched default\na\nAnchor wei"
+        }
+      ],
+      "detail_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "all_11_previous_figure_blocks_preserved": true,
+  "formal_propositions_and_proofs_preserved": true,
+  "previous_main_evidence_tables_preserved": true,
+  "reference_count": 21,
+  "visual_review": "All 27 main and 13 supplement pages reviewed using current contact sheets; detailed title, audit table, selected comparison, full grid, paired intervals, embedded figure, declarations and external table inspected. No overlaps or clipping.",
+  "new_gap_results_integrated": true,
+  "new_selected_table_rows_checked": 6,
+  "new_full_grid_table_rows_checked": 21,
+  "builtin_compilation": {
+    "main": "success after one stale-project retry",
+    "supplement": "success"
+  },
+  "same_source_export": "Tectonic successful for both documents",
+  "limitations": "4 inherited main bibliography Underfull warnings and 2 supplement Underfull warnings; no Overfull or undefined references. No journal production/template or author scientific approval claim."
+}

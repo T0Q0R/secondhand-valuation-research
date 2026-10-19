@@ -38,6 +38,39 @@ def main():
     if not args.interim:
         assert r'\label{tab:stronger_gap}' in s
         assert json.loads((N/'gap/verification.json').read_text())['status']=='all_candidates_and_selection_checked'
+        assert json.loads((N/'gap/independent-selection-audit.json').read_text())['status']=='passed'
+        selected=pd.read_csv(N/'gap/selected-means.csv')
+        grid=pd.read_csv(N/'gap/all-candidate-means.csv')
+        names={'Synthetic':'synthetic','JUCars':'jucars','MUCars':'mucars'}
+        def tab(text,label):
+            return next(m.group() for m in re.finditer(r'\\begin\{table\}.*?\\end\{table\}',text,re.S) if r'\label{'+label+'}' in m.group())
+        def close(actual,expected,tol):assert abs(float(actual)-expected)<=tol+1e-10
+        observed=[]
+        for line in tab(s,'tab:stronger_gap').splitlines():
+            if not line.startswith(tuple(names)):continue
+            cells=[v.strip().replace('\\','') for v in line.split('&')]
+            source_name=names[cells[0]];family={'RPL':'rpl','Gap-only':'gap'}[cells[1]]
+            expected=selected[(selected.source==source_name)&(selected.family==family)].iloc[0]
+            for value,key,tol,scale in zip(cells[2:],['mean_positive_log_inflation','clean_mae','attack_mae','failed_query_fraction'],[.0000005,.005,.005,.005],[1,1,1,100]):
+                close(value,expected[key]*scale,tol)
+            observed.append((source_name,family))
+        assert len(observed)==len(set(observed))==6
+        observed=[]
+        for line in tab(supplement,'tab:gap_all').splitlines():
+            if not line.startswith(tuple(names)):continue
+            cells=[v.strip().replace('\\','') for v in line.split('&')]
+            source_name=names[cells[0]];weight=float(cells[1]);beta=float(cells[2])
+            expected=grid[(grid.source==source_name)&(grid.path_weight==weight)&(grid.beta==beta)].iloc[0]
+            for value,key,tol,scale in zip(cells[3:],['mean_positive_log_inflation','clean_mae','attack_mae','failed_query_fraction','max_remaining_response_regret','nonconverged_batch_fraction'],[.0000005,.005,.005,.005,.0000005,.05],[1,1,1,100,1,100]):
+                close(value,expected[key]*scale,tol)
+            observed.append((source_name,weight,beta))
+        assert len(observed)==len(set(observed))==21
+        for source_name in names.values():
+            q=selected[selected.source==source_name].set_index('family')
+            reduction=100*(1-q.loc['gap','mean_positive_log_inflation']/q.loc['rpl','mean_positive_log_inflation'])
+            assert f'{reduction:.2f}'+r'\%' in s
+        assert sha(ROOT/'paper/figures/review-v1/gap-tradeoffs.pdf')==sha(ROOT/'paper/review-supplement-v1/images/figures/review-v1/gap-tradeoffs.pdf')
+        assert json.loads((N/'figure-qa.json').read_text())['status']=='passed'
     qa=N/('qa-interim' if args.interim else 'qa');qa.mkdir(exist_ok=True)
     reports=[]
     for name,path in [('main',source),('supplement',ROOT/'paper/review-supplement-v1/main.tex')]:
@@ -54,7 +87,7 @@ def main():
         for i,page in enumerate(doc):
             ptext=page.get_text();(qa/f'{name}-{i+1:02d}.txt').write_text(ptext)
             assert '\ufffd' not in ptext
-            if any(v in ptext for v in ['15.79/5.03','98.3%','61.7%','Table S','stronger-gap','corresponding','Version and evidence']):details.add(i+1)
+            if any(v in ptext for v in ['15.79/5.03','98.3%','61.7%','Table S','stronger-gap','corresponding','Version and evidence','0.004035','0.003558','0.003511','Complete candidate']):details.add(i+1)
             page_info.append(dict(page=i+1,opening=ptext[:100]))
         for start in range(0,len(doc),12):
             board=fitz.open();page=board.new_page(width=1000,height=1050)
@@ -72,7 +105,9 @@ def main():
        timestamp=datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(timespec='seconds'),
        documents=reports,all_11_previous_figure_blocks_preserved=True,formal_propositions_and_proofs_preserved=True,
        previous_main_evidence_tables_preserved=True,reference_count=len(citations),visual_review='pending',
-       new_gap_results_integrated=not args.interim)
+       new_gap_results_integrated=not args.interim,
+       new_selected_table_rows_checked=0 if args.interim else 6,
+       new_full_grid_table_rows_checked=0 if args.interim else 21)
     (N/('qa-interim.json' if args.interim else 'qa.json')).write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='documents'},indent=2))
     print([(r['name'],r['pages']) for r in reports])

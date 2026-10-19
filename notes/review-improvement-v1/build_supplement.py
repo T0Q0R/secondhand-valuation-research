@@ -282,6 +282,12 @@ confirmed by the authors: Tang, You (corresponding), Gu, Pang.
 \item Mechanisms and cohort construction: commit \texttt{00eb579};
 \path{notes/review-improvement-v1/}. Sixty models and 180 existing outcome
 cells are newly diagnosed, not newly trained.
+\item Equivalent no-feedback optimization: commit \texttt{7d870c2};
+\path{experiments/run_review_gap_controls_v2.py}. The v1 checkpoints remain
+bound and reusable; the engineering equivalence check precedes continuation.
+\item Complete stronger-gap analysis and independent selection check:
+commit \texttt{c7a577a}; all 90 new cells, 360 fit records and 210 candidates.
+The complete trade-off figure and its rendered checks are in \texttt{2638dee}.
 \item Current artifact hashes: \path{notes/review-improvement-v1/qa.json}.
 They bind saved files; they do not establish scientific validity.
 \end{itemize}

@@ -235,7 +235,147 @@ decrease under RPL; a reduction in total positive gain must not be relabeled
 as a direct reduction of that component.
 
 \section{Matched stronger-gap comparison}
-The new matched comparison is still running; no scientific result is asserted in this working supplement.
+\paragraph{Protocol and training-only selection.}
+The fixed protocol precedes the new fits. RPL uses
+$\lambda\in\{0,.1,.5,1\},\beta=.5$; gap-only uses
+$\beta\in\{.5,1,2,4\},\lambda=0$. The common $(0,.5)$ point is shared:
+seven unique candidates per source/seed, or 210 evaluations. Ninety new
+gap cells require 360 residual fits (three outer folds and deployment),
+reusing existing tree backbones. The other 120 candidate cells reuse the
+ten-seed RPL experiment at 10\% capacity. All models use the same no-feedback
+schedule, folds, minibatch orders, optimizer resets and final OOF head
+construction. Matching candidate counts and update schedules does not imply
+equal wall-clock cost. An engineering optimization omits unused intermediate
+guidance heads in no-feedback training, retaining the final OOF head;
+a complete JUCars/seed-13 fold replay matched residual parameters,
+all 1,000-by-11 quotes and training logs exactly.
+
+For each source/seed/family, choose the smallest training OOF mean maximum
+legal no-query positive log gain, subject to OOF honest currency MAE at most
+1.05 times the common $(0,.5)$ reference. Ties use honest MAE then candidate
+order. With no feasible candidate, choose smallest honest MAE, then gain,
+then order, and mark constraint failure. The scalar scores and selection
+receipts are fixed before evaluation; no evaluation metric enters selection.
+All sixty choices meet the constraint, with no fallback. Gap-only selects
+$\beta=4$ thirty times. RPL selects $\lambda=1$ for ten synthetic, eight
+JUCars and ten MUCars seeds; JUCars seeds with the other two choices select
+$\lambda=.5$. OOF feasibility need not imply the same constraint on unseen
+populations. The original cohorts had been used in development, so this is
+not independent confirmation or an expanded-population test.
+
+\paragraph{All candidates and numerical response quality.}
+Table~\ref{tab:gap_all} retains the complete grid, including failed queries
+and finite-response quality. $\rho_{\max}$ is the worst observed regret over
+all ten seeds and all batches, not a mean of seed maxima; NC is the percentage
+of all seed--batch responses that did not meet the response criterion.
+All ninety new gap cells have zero remaining regret and zero nonconverged
+batches. Reused RPL candidates retain eight nonconverged batches: seven
+synthetic and one JUCars, with worst regret .023513. Among selected RPL
+models only two synthetic batches remain nonconverged (2/100, worst .011042);
+selected real-source RPL responses have zero regret. No failed batch or
+unfavorable candidate is removed.
+\begin{table}[htbp]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Complete ten-seed means at 10\% capacity. $I$ is positive log inflation;
+$H,A$ are honest/attacked MAE in source currency; $F$ is failed attempts per
+all listings (percent), and NC is percent of seed--batches. The shared
+$(\lambda,\beta)=(0,.5)$ baseline appears once per source.}
+\label{tab:gap_all}
+\begin{tabular}{lrrrrrrrr}\toprule
+Source & $\lambda$ & $\beta$ & $I$ & $H$ & $A$ & $F$ & $\rho_{\max}$ & NC\\\midrule
+Synthetic & 0 & 0.5 & 0.012432 & 3576.06 & 3635.45 & 2.51 & 0.000000 & 0.0\\
+Synthetic & 0.1 & 0.5 & 0.010076 & 3580.52 & 3616.78 & 2.93 & 0.023513 & 4.0\\
+Synthetic & 0.5 & 0.5 & 0.007069 & 3595.31 & 3600.02 & 3.49 & 0.015078 & 1.0\\
+Synthetic & 1 & 0.5 & 0.006165 & 3605.35 & 3602.26 & 3.61 & 0.011042 & 2.0\\
+Synthetic & 0 & 1 & 0.008331 & 3610.44 & 3625.83 & 2.18 & 0.000000 & 0.0\\
+Synthetic & 0 & 2 & 0.005580 & 3645.26 & 3652.65 & 1.40 & 0.000000 & 0.0\\
+Synthetic & 0 & 4 & 0.004035 & 3676.65 & 3684.50 & 1.35 & 0.000000 & 0.0\\
+\midrule
+JUCars & 0 & 0.5 & 0.012437 & 6966.89 & 6957.18 & 5.73 & 0.000000 & 0.0\\
+JUCars & 0.1 & 0.5 & 0.012242 & 6962.10 & 6952.73 & 5.58 & 0.020806 & 1.0\\
+JUCars & 0.5 & 0.5 & 0.010766 & 6948.32 & 6941.48 & 5.35 & 0.000000 & 0.0\\
+JUCars & 1 & 0.5 & 0.009131 & 6959.75 & 6956.01 & 6.17 & 0.000000 & 0.0\\
+JUCars & 0 & 1 & 0.008373 & 6963.12 & 6955.09 & 6.15 & 0.000000 & 0.0\\
+JUCars & 0 & 2 & 0.005721 & 6903.66 & 6900.21 & 4.43 & 0.000000 & 0.0\\
+JUCars & 0 & 4 & 0.003558 & 6863.28 & 6860.92 & 1.84 & 0.000000 & 0.0\\
+\midrule
+MUCars & 0 & 0.5 & 0.006606 & 27155.74 & 27306.07 & 0.43 & 0.000000 & 0.0\\
+MUCars & 0.1 & 0.5 & 0.006408 & 27038.17 & 27162.76 & 0.48 & 0.000000 & 0.0\\
+MUCars & 0.5 & 0.5 & 0.005657 & 26983.89 & 27114.40 & 0.39 & 0.000000 & 0.0\\
+MUCars & 1 & 0.5 & 0.005033 & 26938.93 & 27069.81 & 0.31 & 0.000000 & 0.0\\
+MUCars & 0 & 1 & 0.005012 & 26897.69 & 26992.66 & 0.46 & 0.000000 & 0.0\\
+MUCars & 0 & 2 & 0.004220 & 26710.03 & 26808.55 & 0.46 & 0.000000 & 0.0\\
+MUCars & 0 & 4 & 0.003511 & 26327.11 & 26378.61 & 0.06 & 0.000000 & 0.0\\
+\bottomrule\end{tabular}\end{table}
+\paragraph{Selected comparison and uncertainty.}
+Gap-only has lower positive log inflation in 30/30 paired seeds.
+Selected means are reported in the main table. Its source-level honest
+MAE changes relative to selected RPL are $+1.98\%,-1.29\%,-2.27\%$
+(ratios of source means). Both honest and attacked MAE improve in 9/10
+paired seeds on each real source, but worsen in all ten synthetic seeds.
+Average failures decrease on all three sources. These are distinct outcomes,
+not evidence of a scalar welfare optimum. The largest weights are boundary
+points of the tested grids, not validated optima or recommended defaults.
+
+Table~\ref{tab:gap_paired} independently resamples ten paired fitting seeds
+10,000 times (analysis RNG seed 20261019). Marginal percentile intervals are
+post-hoc, conditional on fixed records and the chosen selection rule. They
+include selection's observed training randomness, but do not cover the
+development process, new populations or simultaneous multiple comparisons.
+No independent confirmation claim follows from excluding zero.
+\begin{table}[htbp]\centering\small
+\caption{Paired selected gap-minus-RPL mean differences and marginal 95\%
+intervals. Negative values favor gap-only. Error differences use source
+currency; inflation differences are log units.}
+\label{tab:gap_paired}
+\begin{tabular}{llrr}\toprule
+Source & Outcome & Mean difference & Marginal interval\\\midrule
+Synthetic & Inflation & -0.002130 & [-0.002688, -0.001514]\\
+Synthetic & Honest MAE & 71.30 & [55.45, 88.12]\\
+Synthetic & Attacked MAE & 82.24 & [68.44, 95.00]\\
+\midrule
+JUCars & Inflation & -0.006154 & [-0.007312, -0.005146]\\
+JUCars & Honest MAE & -89.61 & [-131.13, -48.57]\\
+JUCars & Attacked MAE & -86.83 & [-126.65, -47.13]\\
+\midrule
+MUCars & Inflation & -0.001521 & [-0.002028, -0.001010]\\
+MUCars & Honest MAE & -611.82 & [-878.81, -344.71]\\
+MUCars & Attacked MAE & -691.20 & [-939.55, -435.54]\\
+\bottomrule\end{tabular}\end{table}
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{figures/review-v1/gap-tradeoffs.pdf}
+\caption{Complete candidate and selected trade-offs at 10\% capacity.
+(a--c) All seven unique candidates over ten fitting seeds. Pale points are
+individual fits; colored symbols are means of same-seed percentage changes
+relative to the common $(\lambda,\beta)=(0,.5)$ control. The common point
+coincides at the origin; connecting lines only guide the candidate order.
+Higher inflation reduction and lower honest-error change are favorable.
+(d--f) Ten same-seed percentage changes from selected RPL to selected gap-only;
+black diamonds are their means. Lower values on both axes are favorable.
+These means of seed ratios differ from the ratios of source means in the
+main text. Full observed scatter represents fitting variation, with no
+confidence region or population extrapolation. Synthetic trades lower
+inflation for higher error; the real-source means improve on both axes.}
+\label{fig:stronger_gap_tradeoffs}
+\end{figure}
+\paragraph{Evidence and interpretation.}
+Model, checkpoint, outcome and training-selection hashes bind the comparisons;
+new-cell inflation and both MAE metrics are independently reaggregated from
+saved outcomes. All 360 fit-stage records retain the two six-epoch updates
+and declared gap/path settings. A separate implementation imports no runner
+and independently checks the candidate sets, constraints and sixty choices
+from saved OOF scalar scores; it does not regenerate OOF predictions.
+This is a bounded computational check, not a new complete four-stage audit.
+The complete grid, scores, selected cells and paired contrasts are released
+under \path{notes/review-improvement-v1/gap/}. Scalar receipts are archived
+separately, excluding weights, arrays and listing-level outcomes.
+
+The comparison does not support practical superiority of RPL over a tuned
+gap penalty on these cohorts. It also does not test stronger-gap combinations
+with the five acquisition families: that separate 90-cell crossing holds
+$\beta=.5$ and tests a different question. The graph loss remains a concrete
+recovery-targeted formulation; its incremental benefit beyond stronger
+gap regularization is unestablished under the present selection protocol.
 
 \section{Numerical portability and retained failure}
 An independently operated Mac completed the original six synthetic/seed-13
@@ -300,6 +440,12 @@ confirmed by the authors: Tang, You (corresponding), Gu, Pang.
 \item Mechanisms and cohort construction: commit \texttt{00eb579};
 \path{notes/review-improvement-v1/}. Sixty models and 180 existing outcome
 cells are newly diagnosed, not newly trained.
+\item Equivalent no-feedback optimization: commit \texttt{7d870c2};
+\path{experiments/run_review_gap_controls_v2.py}. The v1 checkpoints remain
+bound and reusable; the engineering equivalence check precedes continuation.
+\item Complete stronger-gap analysis and independent selection check:
+commit \texttt{c7a577a}; all 90 new cells, 360 fit records and 210 candidates.
+The complete trade-off figure and its rendered checks are in \texttt{2638dee}.
 \item Current artifact hashes: \path{notes/review-improvement-v1/qa.json}.
 They bind saved files; they do not establish scientific validity.
 \end{itemize}

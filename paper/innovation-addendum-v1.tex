@@ -21,7 +21,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Recovering withheld information can increase a seller's predicted price when the valuation model is nonmonotone. We study this failure under natural missingness, charged failed queries and shared verification capacity. A recovery-path decomposition separates information recovery from its effect on concealment gains. We introduce recovery-path regularization, which penalizes increases in positive concealment gain along legal recovery edges while retaining public-record deployment inputs. A restricted information frontier states the limits of verification, rather than predicting learned-model performance. In a matched ten-seed study at 10\% query capacity, the declared unit-weight endpoint reduces mean inflation by 50.41\%, 26.58\% and 23.81\% on synthetic, JUCars and MUCars relative to same-gap zero-weight controls. All thirty source--seed comparisons have the same direction. Synthetic honest mean absolute error rises 0.82\% and failed queries rise 1.10 percentage points, so lower inflation does not imply multiobjective dominance. Stronger training-response search also removes some earlier feedback damage, showing that the negative feedback result depends on implementation. On the real sources, most improvement is already present without queries, limiting a recovery-mechanism interpretation. A separate three-seed, 90-cell crossing lowers inflation in all 45 paired comparisons when RPL is combined with five task-adapted acquisition families. Four-stage checks cover 1,206 earlier extension cells; the crossing has independent outcome checks. Remaining response regret, retrospective cohorts and cross-machine numerical differences bound the findings. These retrospective fixed-cohort results support a proof of concept for evaluating concealment gains jointly with prediction and verification costs.
+Recovering withheld information can increase a seller's predicted price when the valuation model is nonmonotone. We study this failure under natural missingness, charged failed queries and shared verification capacity. A recovery-path decomposition motivates a regularizer that penalizes increases in positive concealment gain along legal recovery edges. At 10\% query capacity, ten-seed unit-weight RPL reduces mean positive log inflation by 50.41\%, 26.58\% and 23.81\% on synthetic, JUCars and MUCars relative to same-gap zero-path controls. These improvements do not establish the advantage of the path loss. With equal four-candidate training-only selection, stronger gap-only regularization has lower inflation in all thirty source--seed pairs: source means are 34.55\%, 63.37\% and 30.23\% lower than selected RPL. Its honest error is higher on synthetic but lower on both real sources. Most real-source RPL improvement is already present without queries, limiting a verification-mechanism interpretation. A separate three-seed, 90-cell crossing lowers inflation in all 45 pairs when RPL is combined with five task-adapted acquisition families at fixed gap weight. Stronger response search also qualifies earlier feedback-failure results. Retrospective cohorts, finite-response regret and failed strict cross-machine numerical reproduction bound these findings. The contribution is a recovery-graph formulation and controlled evidence of its benefits and limits, rather than a generally superior valuation method.
 \end{abstract}
 
 \noindent\textbf{Keywords:} strategic missingness; secondhand valuation; budgeted verification; incentive auditing; factorial evaluation
@@ -56,16 +56,19 @@ without adding private deployment inputs. Third, matched experiments separate
 initial objective, acquisition, feedback and allocation. We assess RPL with
 ten fitting seeds and a separate 90-cell crossing with five recent acquisition
 families, including native-head references and prediction/query costs.
-Component removals, budget variation and computational checks bound both studies.
+A matched stronger-gap control gives each family four candidates and uses only
+training-fold predictions for selection. Component removals, budget variation
+and computational checks bound these studies.
 
-The evidence supports conditional use. At the declared unit-weight endpoint,
-RPL lowers inflation in all thirty source--seed comparisons, but synthetic
-honest error and query failures rise. Stronger training-response search removes
-some earlier feedback damage, restricting that negative finding to its
-implementation. Competitive simple controls, finite-response regret and
-cross-machine numerical differences further bound the claims. The practical
-question is therefore which recovery-aware intervention improves the joint
-incentive, prediction and verification outcome for a stated setting.
+The stronger control changes the practical conclusion. RPL improves on the
+fixed-gap reference, but training-selected gap-only regularization has lower
+inflation in all thirty source--seed pairs and lower mean honest and attacked
+error on both real sources. Synthetic results retain a prediction--incentive
+trade-off. Most real-source RPL improvement is already present without queries.
+Thus the recovery graph provides a useful diagnostic and training target,
+while the present experiments do not justify choosing RPL over a tuned gap
+penalty. A deployment choice must compare the complete predictor--policy pair
+on incentives, prediction and verification costs.
 
 \section{Related work}\label{sec:related}
 \paragraph{Withholding and verification.}
@@ -366,6 +369,7 @@ Original factorial seeds / bootstrap repetitions & 10 / 1,000\\
 RPL path weight $\lambda$ / gap weight $\beta$ & $0,0.1,0.5,1$ / $0.5$\\
 RPL gap-removal path weights / gap & $0,0.5$ / $0$\\
 RPL evaluation query capacities & $0,0.1,0.3$\\
+Stronger-gap candidates / evaluation capacity & $0.5,1,2,4$ / $0.1$\\
 Completion / RPL-extension fitting seeds & 3 / 10\\
 Core-extension audit resamples & 4,000\\
 Recent acquisition families / frozen price backends & 5 / 2\\
@@ -403,7 +407,13 @@ pilot; remaining support cells are not upgraded. A separate matched
 RPL--acquisition crossing adds 90 cells with independent integer-allocation,
 all-legal-deviation and outcome-summary checks. Its 18 native-head reference
 cells are reused from the core; the new crossing has no four-stage
-fit/statistics-audit upgrade.
+fit/statistics-audit upgrade. The stronger-gap control adds 90 evaluations
+and 360 residual fitting stages (three outer folds plus deployment for each
+source/seed/weight); tree backbones are reused. Together with 120 reused RPL
+candidate evaluations, it yields 210 unique candidates and 60 selected rows.
+Model/fit/checkpoint/outcome/selection bindings and independent metric
+reaggregation are checked; a separate scalar-score implementation checks
+all sixty training-only choices. This is not a new full four-stage chain.
 
 The checks reconstruct fitting roles, recorded outcomes, legal deviations
 and saved statistics but share prediction/loading primitives; they are not
@@ -425,6 +435,7 @@ Evidence & Completed chain & Boundary\\\midrule
 Original 4,320 cells & Fit, outcome, analysis, statistics check & Original implementation; shared primitives disclosed\\
 Claim-bearing extensions: 1,206 distinct cells & Same four computational phases; includes all 540 ten-seed RPL cells & Conditional exploratory inference; not an independent full-stack implementation\\
 Matched RPL--acquisition crossing: 90 cells & Independent allocation/deviation/outcome checks; 18 native references reused & Three-seed descriptive effects; no new four-stage fit/statistics chain\\
+Matched stronger-gap control: 90 new cells, 360 fit stages & Fit/checkpoint/outcome bindings, independent metric reaggregation and scalar selection check; 120 candidates reused & Training-only retrospective selection; no new complete four-stage chain\\
 Remaining completion-study support & Hash bindings, utility checks and recorded summaries & No whole-study four-stage upgrade of all 1,719 cells\\\bottomrule
 \end{tabular}\end{table}
 \section{Results}\label{sec:results}
@@ -491,7 +502,47 @@ path regularization from the existing gap term at the tested weights.
 Supplement~S7 retains the original component ablation and
 three-seed recovery-edge pilot; neither is relabeled as ten-seed evidence.
 
-\paragraph{Predictive and verification costs.}
+\paragraph{Matched stronger-gap control.}
+To test whether the path term adds value beyond a stronger existing penalty,
+we compare RPL $(\lambda\in\{0,.1,.5,1\},\beta=.5)$ with gap-only
+$(\beta\in\{.5,1,2,4\},\lambda=0)$. Folds, tree backbones, residual updates,
+no-feedback response search and final head construction are matched.
+For each source/seed/family, training-only three-fold out-of-fold (OOF)
+predictions select the smallest mean maximum legal no-query positive gain,
+subject to honest currency MAE at most 1.05 times the common reference.
+The rule was fixed before new training and reads no evaluation outcomes;
+it is a retrospective comparison on previously studied populations.
+
+All sixty selected models meet the OOF constraint. Gap-only selects $\beta=4$
+in all thirty pairs; RPL selects $\lambda=1$ in 28 and $.5$ in two JUCars pairs.
+Gap-only inflation is lower in all thirty pairs, with ratios of source means
+34.55\%, 63.37\% and 30.23\% below selected RPL
+(Table~\ref{tab:stronger_gap}). Its mean honest MAE changes by $+1.98\%$,
+$-1.29\%$ and $-2.27\%$; attacked MAE and failed-query means also favor
+gap-only on both real sources. Honest and attacked error improve in nine of
+ten seeds on each real source, whereas both errors increase in all synthetic
+seeds. These results support a synthetic trade-off and reject a claim of
+general empirical superiority of RPL over the tested stronger-gap control.
+Supplement S4 reports every candidate, paired intervals, selection details
+and the complete trade-off figure. Neither largest weight is an established
+optimum; both lie at the boundary of their respective finite grids.
+
+\begin{table}[htbp]\centering\small
+\caption{Matched training-only selection at 10\% capacity. Each family has four candidates; each row averages ten selected fitting-seed outcomes. Inflation is positive log gain, MAE is in source currency, and failures are percent of all listings. These are selected families, not the fixed endpoints in Table~\ref{tab:rpl_primary}.}
+\label{tab:stronger_gap}
+\begin{tabular}{llrrrr}\toprule
+Source & Family & Inflation & Honest MAE & Attacked MAE & Failed (\%)\\\midrule
+Synthetic & RPL & 0.006165 & 3605.35 & 3602.26 & 3.61\\
+Synthetic & Gap-only & 0.004035 & 3676.65 & 3684.50 & 1.35\\
+\midrule
+JUCars & RPL & 0.009712 & 6952.89 & 6947.75 & 5.50\\
+JUCars & Gap-only & 0.003558 & 6863.28 & 6860.92 & 1.84\\
+\midrule
+MUCars & RPL & 0.005033 & 26938.93 & 27069.81 & 0.31\\
+MUCars & Gap-only & 0.003511 & 26327.11 & 26378.61 & 0.06\\
+\bottomrule\end{tabular}\end{table}
+
+\paragraph{Fixed-gap predictive and verification costs.}
 Table~\ref{tab:rpl_primary} reports absolute outcomes. At the unit endpoint,
 honest MAE changed by $+0.82\%$, $-0.10\%$ and $-0.80\%$, while attacked MAE
 changed by $-0.91\%$, $-0.02\%$ and $-0.87\%$. Failed attempts as a fraction of all listings
@@ -502,7 +553,7 @@ shows all paired seed changes, including unfavorable cases. Its means of seed
 ratios are distinct from the ratios of means reported above. Inflation
 improvement alone therefore does not determine a deployment choice. For JUCars at $\lambda=1$, actual queries cover 10\% of listings: 6.17\% of all listings have failed attempts, or 61.7\% of attempted queries; successful queries cover 3.83\%.
 
-\paragraph{Budget boundary.}
+\paragraph{Fixed-gap budget boundary.}
 Figure~\ref{fig:rpl_budget} includes zero queries. The paired improvement
 at zero versus 10\% capacity is .004276/.006268 on synthetic,
 .003249/.003306 on JUCars and .001527/.001573 on MUCars. Thus zero-query
@@ -874,11 +925,17 @@ unit-weight endpoint, without private deployment inputs. Its zero-query
 component accounts descriptively for nearly all real-source improvement.
 The evidence supports recovery-graph-inspired regularization; it does not
 identify recovery as the main causal source of that improvement.
-Synthetic honest-error and failed-query increases, together with finite
-response regret, preclude a universal dominance claim. The matched crossing
+The stronger-gap comparison further limits the method claim: with matched
+four-candidate training-only selection, gap-only lowers inflation in all
+thirty pairs and lowers mean honest/attacked error on both real sources.
+On synthetic, it trades higher prediction error for lower inflation. The
+path loss is therefore an interpretable recovery-graph intervention whose
+incremental practical advantage over a tuned gap penalty is not established.
+The matched crossing
 supports RPL as a complement to acquisition at the tested weights and cohorts.
 Native-head counterexamples and error/failure costs keep the deployment
-decision specific to the complete predictor--policy pair.
+decision specific to the complete predictor--policy pair. That crossing
+keeps $\beta=.5$ and does not test stronger-gap stacking with the five families.
 
 Stronger-search interventions restrict the earlier negative feedback result
 to its weak-search implementation; they do not identify a unique causal bug
@@ -913,9 +970,9 @@ The later review diagnostics and stronger-gap comparison are subsequent reposito
 
 \paragraph{AI assistance and author responsibility.}
 OpenAI Codex assisted implementation, orchestration, analysis, literature
-checks, data-derived figures and drafting. Figures use saved empirical
-results, not invented images. Authors retain responsibility for interpretation
-and approval. Yuchen Tang drafted the manuscript. Fengqin You provided supervision as advisor, and Junxiang Gu provided guidance on manuscript writing.
+checks, figures and drafting. Figures use saved empirical results. Authors
+retain responsibility for interpretation and approval. Yuchen Tang wrote the
+manuscript; Fengqin You supervised as advisor; Junxiang Gu guided manuscript writing.
 
 \clearpage
 \appendix
